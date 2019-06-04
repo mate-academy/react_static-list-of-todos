@@ -1,10 +1,10 @@
 import React from 'react';
-import User from './User.js';
-import { users } from './users.js';
+import User from './User';
 import './TodoItem.css';
+import { mapOfUsersTodos } from './TodoList';
 
 const TodoItem = props => {
-  const currentUser = users.find(user => user.id === props.id);
+  const currentUser = mapOfUsersTodos.get(props.id);
 
   return (
     <div className='todo-item'>

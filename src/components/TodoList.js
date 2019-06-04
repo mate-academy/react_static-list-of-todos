@@ -1,5 +1,6 @@
 import React from 'react';
 import { todos } from './todos.js';
+import { users } from './users.js';
 import TodoItem from './TodoItem.js';
 
 const TodoList = () => {
@@ -14,3 +15,8 @@ const TodoList = () => {
 };
 
 export default TodoList;
+
+export const mapOfUsersTodos = new Map();
+todos.forEach(todo => {
+  mapOfUsersTodos.set(todo.id, users.find(user => user.id === todo.userId));
+});
