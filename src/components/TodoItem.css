@@ -1,0 +1,37 @@
+.todo-item {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 20px auto;
+  flex-direction: column;
+  width: 400px;
+  background: linear-gradient(#333, #eee);
+  color: #fff;
+  box-shadow: 0 0 10px 1px grey;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.todo-item > * {
+  text-align: center;
+}
+
+.todo-item:hover {
+  transform: scale(1.1);
+  background: linear-gradient(#e66465, #9198e5);
+}
+
+.todo-item__line {
+  height: 4px;
+  background-color: white;
+  transition: 1s ease;
+  border-radius: 2px;
+  transform: scaleX(0);
+  opacity: 0;
+}
+
+.todo-item:hover .todo-item__line {
+  transform: scaleX(1);
+  opacity: 1;
+}
