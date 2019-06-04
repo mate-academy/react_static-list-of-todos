@@ -1,4 +1,4 @@
- const todos = [
+export const todos = [
     {
         "userId": 1,
         "id": 1,
@@ -1200,5 +1200,3 @@
         "completed": false
     }
 ];
-
-export default todos;
