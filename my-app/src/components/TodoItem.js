@@ -1,13 +1,12 @@
 import React from 'react';
 
-function Todoitem(props) {
-  return (
-    <div>
-        <table>
-            <
-        </table>
-    </div> 
+function TodoItem(props) {
+   return (
+    <tr className={props.completed === 'completed' ? 'green' : 'red'}> 
+      <td>{props.title}</td>
+      <td>{props.completed}</td>
+    </tr>
   );
 }
 
-export default Todoitem;
+export default TodoItem;

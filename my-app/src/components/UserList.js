@@ -1,9 +1,6 @@
-
 import React from 'react';
 import User from './User';
 import './UserList.css';
-
-
 
 function UserList(props) {
   const usersList = [];
@@ -11,8 +8,7 @@ function UserList(props) {
     usersList.push(
     <User name = {eachUser.name} phone = {eachUser.phone} key={eachUser.id}/>
     );
-    console.log(eachUser.id);
-  }
+ }
   return (
     <div>
      {usersList}

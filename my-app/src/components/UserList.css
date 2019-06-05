@@ -2,3 +2,27 @@ h2 {
   background-color: #eee;
   text-align: center;
 }
+
+ table, td,th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+    margin: 0 auto;
+}
+
+th, td {
+    padding: 5px 30px;
+}
+
+.green {
+  background-color: rgb(155, 226, 148);
+}
+
+.red {
+  background-color: rgb(238, 194, 194);
+}
+
+
+
