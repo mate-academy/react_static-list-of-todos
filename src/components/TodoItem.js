@@ -3,9 +3,8 @@ import User from './User';
 import { users } from '../users';
 import './TodoItem.css';
 
-
 function TodoItem(props) {
-  const owner = users.find((user) => user.id === props.userId).name;
+  const owner = users.find(user => user.id === props.userId).name;
 
   return (
     <tr key={props.title}>

@@ -3,7 +3,6 @@ import {todos} from '../todos';
 import TodoItem from './TodoItem';
 import './TodoList.css';
 
-
 function TodoList() {
   const todoList = [];
 
