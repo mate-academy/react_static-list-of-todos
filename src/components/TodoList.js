@@ -1,7 +1,7 @@
 import React from 'react';
 import TodoItem from './TodoItem';
-import {users} from '../state/users.js';
-import {todos} from '../state/todos.js';
+import { users } from '../state/users';
+import { todos } from '../state/todos';
 
 export default function TodoList() {
     const userMap = users.reduce((acc, user) => ({...acc, [user.id]: user,}), {});
