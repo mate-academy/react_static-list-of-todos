@@ -4,20 +4,16 @@ import User from "./User.js"
 
 function TodoList(props) {
   return (
-    <td>
-      <table>
-        <tr>
-          <th>Id</th>
-          <th>Title</th>
-          <th>Competed</th>
-        </tr>
-        {props.todoList.map((value, index) => {
-          return (
-            <TodoItem todo={value} />
-          );
-        })}
-      </table>
-    </td>
+  <>
+    {props.todoList.map((value, index) => {
+      return (
+      <tr>
+       <TodoItem todo={value} />
+       <User user={props.userList[props.userList.findIndex((user) => user.id === value.userId)]}/>
+      </tr>
+      );
+    })}
+  </>
   );
 }
 

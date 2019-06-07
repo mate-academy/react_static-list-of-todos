@@ -1,8 +1,9 @@
 import React from 'react';
 
 function User(props) {
+	console.log(props);
   return (
-    <tr>
+    <>
       <td>
         {props.user.name}
       </td>
@@ -12,7 +13,7 @@ function User(props) {
       <td>
         {props.user.email}
       </td>
-    </tr>
+    </>
   );
 }
 

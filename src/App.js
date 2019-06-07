@@ -3,19 +3,21 @@ import './App.css';
 import { todos } from "./todos.js";
 import { users } from "./users.js";
 import TodoList from "./TodoList.js";
-import UserList from "./UserList.js";
 
 function App() {
 
   return (
     <table>
-      <tr>
-        <th> TODO </th>
-        <th> User </th>
-      </tr>
-
-      <TodoList todoList={todos} />
-      <UserList todoList={todos} userList={users} />
+        <tr>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Competed</th>
+		  <th>Username</th>
+		  <th>Email</th>
+		  <th>Name</th>
+        </tr>
+      
+		<TodoList todoList={todos} userList={users} />
 
     </table>
   );
