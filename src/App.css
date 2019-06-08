@@ -1,0 +1,12 @@
+body {
+  background: #edd;
+}
+
+h1 {
+  color: peru;
+  text-align: center;
+  box-shadow: 0 0 3px #000;
+  text-shadow: 1px 0 3px darkgoldenrod;
+  font-stretch: expanded;
+  font-weight: bold;
+}
