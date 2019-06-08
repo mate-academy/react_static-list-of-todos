@@ -5,8 +5,6 @@ import User from './User';
 
 export default function TodoItem(props) {
   const listOfUsers = users.find(user => user.id === props.userId);
-  console.log(listOfUsers);
-  
 
   return (
     <tr>

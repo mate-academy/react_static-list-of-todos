@@ -12,7 +12,6 @@ export default function TodoList() {
       key = {todoItem.title}
     />)
   }
-  console.log(listOfToDos);
   
   return (
     <table className = "table">
