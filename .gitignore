@@ -1,0 +1,48 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+README.md
+
+.public/manifest.json
+.public/manifest.json
+.build/asset-manifest.json
+.build/index.html
+.build/precache-manifest.0e114484232fe849b57c3ac3a51dbb11.js
+.build/static/css/main.c244cbac.chunk.css
+.build/static/css/main.c244cbac.chunk.css.map
+.build/static/js/2.3310f33a.chunk.js
+.build/static/js/main.b9322a74.chunk.js
+.build/static/js/main.b9322a74.chunk.js.map
+.build/static/js/runtime~main.d653cc00.js
+.build/static/js/runtime~main.d653cc00.js.map
+
+.package-lock.json
+.package.json
+
+.public/favicon.ico
+.build/favicon.ico
+
+.src/serviceWorker.js
+
+
