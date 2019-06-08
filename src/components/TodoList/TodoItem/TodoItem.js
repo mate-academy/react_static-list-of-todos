@@ -1,52 +1,50 @@
-import React from 'react';
+import React, { Component } from 'react';
 import User from '../User/User';
 import './TodoItem.css';
 
-class TodoItem extends React.Component {
+class TodoItem extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      completed: props.completed,
-    };
-    this.title = props.title;
-    this.userInfo = props.userInfo;
-    this._stateChanged = this._stateChanged.bind(this);
+
+    this._handleChange = this._handleChange.bind(this);
   }
 
-  _stateChanged() {
-    this.setState({
-      completed: !this.state.completed,
-    });
+  _handleChange() {
+    this.props.onToggleCompleted(this.props.id);
   }
 
   render() {
+    const { title, completed, userInfo } = this.props;
+
     return (
       <section
-        className={this.state.completed ? 'list-item green' : 'list-item red'
-      }>
-        <div className='item-subsection main-content'>
+        className={completed ? 'list-item green' : 'list-item red'}
+      >
+        <div className="item-subsection main-content">
           <label
-            htmlFor='state-checkbox'
-            className={this.state.completed
-              ? 'todo-state item-subsection green'
-              : 'todo-state item-subsection red'
-            }>
+            htmlFor="state-checkbox"
+            className={
+              completed
+                ? 'todo-state item-subsection green'
+                : 'todo-state item-subsection red'
+            }
+          >
             <input
-              type='checkbox'
-              name='state-checkbox'
-              id='state-checkbox'
-              checked={this.state.completed}
-              onChange={this._stateChanged}
+              type="checkbox"
+              name="state-checkbox"
+              id="state-checkbox"
+              checked={completed}
+              onChange={this._handleChange}
             />
             {
-              this.state.completed
+              completed
                 ? 'Done'
                 : 'In process'
             }
           </label>
-          <div className='todo-title  item-subsection'>{this.title}</div>
+          <div className="todo-title  item-subsection">{title}</div>
         </div>
-        <User userInfo={this.userInfo}/>
+        <User userInfo={userInfo} />
       </section>
     );
   }

@@ -1,63 +1,63 @@
-import React from 'react';
+import React, { Component } from 'react';
 import UserDetails from './UserDetails/UserDetails';
 import './User.css';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 
-export default class User extends React.Component {
+export default class User extends Component {
   constructor(props) {
     super(props);
     this.state = {
       detailed: false,
-      showingLogin: false,
+      showingLogin: false
     };
-    this.email = 'mailto:' + props.userInfo.email;
-    this.name = props.userInfo.name;
-    this.username = props.userInfo.username;
-    this.website = 'https://' + props.userInfo.website;
-    this.phone = props.userInfo.phone;
-    this.companyName = props.userInfo.company.name;
 
-    this._detalizeClicked = this._detalizeClicked.bind(this);
+    this._toggleDetails = this._toggleDetails.bind(this);
     this._showLogin = this._showLogin.bind(this);
     this._hideLogin = this._hideLogin.bind(this);
   }
 
-  _detalizeClicked() {
-    this.setState({
-      detailed: !this.state.detailed,
-    })
+  _toggleDetails() {
+    this.setState(prevState => ({
+      detailed: !prevState.detailed
+    }));
   }
 
   _showLogin() {
     this.setState({
-      showingLogin: true,
+      showingLogin: true
     });
   }
 
   _hideLogin() {
     this.setState({
-      showingLogin: false,
+      showingLogin: false
     });
   }
 
   render() {
-    const details = this.state.detailed
+    const { detailed, showingLogin } = this.state;
+    const { name, username, phone, companyName } = this.props.userInfo;
+    let { email, website } = this.props;
+    const details = detailed
       ? (
         <div className="login">
           <UserDetails
-            website = {this.website}
-            phone = {this.phone}
-            companyName = {this.companyName}
+            website={website}
+            phone={phone}
+            companyName={companyName}
           />
         </div>
       ) : '';
-    const login = this.state.showingLogin
-      ? (<div className='login'>Write to user {this.username}</div>)
+    const login = showingLogin
+      ? (<div className="login">Write to user {username}</div>)
       : '';
 
+    if (!(/^mailto:\.+/.test(email))) { email = `mailto:${email}` };
+    if (!(/^https:\/\/\.+/.test(website))) { website = `https://${website}` };
+
     return (
-      <div className='info-user'>
-        <div className='info-header'>
+      <div className="info-user">
+        <div className="info-header">
           {/*<CSSTransitionGroup*/}
           {/*  transitionName={ {*/}
           {/*    enter: 'detalizer',*/}
@@ -68,17 +68,19 @@ export default class User extends React.Component {
           {/*  transitionEnterTimeout={300}*/}
           {/*  transitionLeaveTimeout={300}*/}
           {/*>*/}
-            <span className='detalizer' onClick={this._detalizeClicked}>
-              {this.state.detailed ? '--' : '+'}
-            </span>
+          <span className="detalizer" onClick={this._toggleDetails}>
+            {detailed ? '--' : '+'}
+          </span>
           {/*</CSSTransitionGroup>*/}
           <a
-            href={this.email}
+            href={email}
             onMouseOver={this._showLogin}
             onMouseLeave={this._hideLogin}
-          >{this.name}</a>
+          >
+            {name}
+          </a>
           <CSSTransitionGroup
-            transitionName='detailed'
+            transitionName="detailed"
             transitionEnterTimeout={800}
             transitionLeaveTimeout={500}
           >

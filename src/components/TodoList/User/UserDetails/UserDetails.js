@@ -2,16 +2,18 @@ import React from 'react';
 import './UserDetails.css';
 
 export default function UserDetails(props) {
+  const { website, phone, companyName } = props;
+
   return (
     <div className="info-details">
       <ul>
         <li>
-          User website: <a href={props.website}>
-            {props.website}
+          User website: <a href={website}>
+            {website}
           </a>
         </li>
-        <li>Phone: {props.phone}</li>
-        <li>Company: "{props.companyName}"</li>
+        <li>Phone: {phone}</li>
+        <li>Company: "{companyName}"</li>
       </ul>
     </div>
   );
