@@ -3,13 +3,13 @@ import User from './User';
 import './TodoItem.css';
 
 function TodoItem(props) {
-
+    const {title, user} = props;
     return (
-        <div className='todo-item'>
-            <div className='task'>
-                {props.title}
+        <div className="todo-item">
+            <div className="task">
+                {title}
             </div>
-            <User  user = {props.user}/>
+            <User  user={user}/>
         </div>
     );
 }

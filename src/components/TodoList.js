@@ -1,7 +1,7 @@
 import React from 'react';
 import TodoItem from './TodoItem';
-import {todos} from '../todos';
-import {users} from '../users';
+import { todos } from '../todos';
+import { users } from '../users';
 
 function TodoList() {
     const usersObj = users.reduce((accumulator, currentValue) => {
@@ -10,7 +10,7 @@ function TodoList() {
     },{});
 
     const todosComponents = todos.map(todoItem => {
-        return <TodoItem title = {todoItem.title} user = {usersObj[todoItem.userId]} key = {todoItem.id}/>
+        return <TodoItem title={todoItem.title} user={usersObj[todoItem.userId]} key={todoItem.id}/>
     });
     return todosComponents;
 }
