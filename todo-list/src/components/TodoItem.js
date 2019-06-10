@@ -7,4 +7,3 @@ return (
 }
 
 export default TodoItem;
-
