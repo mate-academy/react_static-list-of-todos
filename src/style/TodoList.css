@@ -1,0 +1,9 @@
+article {
+  border: 1px solid black;
+  margin-bottom: 20px;
+  background-color: rgb(207, 207, 207);
+}
+
+.author {
+  font-weight: bold;
+}
