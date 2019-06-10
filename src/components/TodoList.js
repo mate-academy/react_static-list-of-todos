@@ -16,11 +16,8 @@ function TodoList() {
         break;
       }
     }
-    let completed = 'not completed';
-    if (todoItem.completed) {
-      completed = 'completed';
-    }
-        
+    let completed = todoItem.completed ? 'completed' : 'not completed';
+           
     todosComponents.push(
       <TodoItem id = {todoItem.id}
         title = {todoItem.title}
