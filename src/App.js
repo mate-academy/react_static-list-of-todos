@@ -14,7 +14,7 @@ function App() {
           <th>Completed</th>
 	<th>Username</th>
 	<th>Email</th>
-		  <th>Name</th>
+	<th>Name</th>
         </tr>
       
 		<TodoList todoList={todos} userList={users} />
