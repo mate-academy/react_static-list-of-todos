@@ -13,7 +13,7 @@ function App() {
           <th>Title</th>
           <th>Completed</th>
 	<th>Username</th>
-		  <th>Email</th>
+	<th>Email</th>
 		  <th>Name</th>
         </tr>
       
