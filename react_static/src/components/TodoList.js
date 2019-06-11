@@ -5,27 +5,17 @@ import TodoItem from './TodoItem'
 import User from './User'
 
 function TodoList() {
-  const rows = [];
-   for (let item of todos) {
-      for (let user of users) {
-        if (item.userId === user.id) {
-          rows.push(
-            <tr>
-              <TodoItem title={item.title}/>
-              <User name={user.name} email={user.email}/>
-              <td>{item.completed.toString()}</td>
-            </tr>
-          )
-          break; 
-        }
-      }
-    }
+  const todoList = [];
+  todos.forEach(todoItem => {
+    const user = users.find(user => user.id == todoItem.userId);
+    todoList.push(<TodoItem user={user} title={todoItem.title} completed={todoItem.completed} key={todoItem.title}/>)
+  })
   return (
-    <table>
-      <tbody>
-        {rows}
-      </tbody>
-    </table>
+   <table>
+     <tbody>
+       {todoList}
+     </tbody>
+   </table>
   )
 }
 

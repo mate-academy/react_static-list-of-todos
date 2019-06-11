@@ -1,10 +1,18 @@
 import React from 'react';
+import User from './User';
 
 function TodoItem(props) {
+  const user = props.user;
   return (
-    <td>
-      {props.title}
-    </td>
+    <tr>
+      <td>
+        {props.title}
+      </td>
+      <User name={user.name} email={user.email}/>
+      <td>
+        {props.completed.toString()}
+      </td>
+    </tr>
   )
 }
 
