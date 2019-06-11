@@ -1,0 +1,13 @@
+.th-todos {
+  margin: 0 130px 0 250px;
+}
+
+.th-name {
+  margin-right: -10px;
+}
+
+ .th-todos,
+ .th-name,
+ .th-status {
+  font-weight: bold;
+}

@@ -1,0 +1,14 @@
+.todo {
+  margin-bottom: 20px;
+}
+
+.title {
+  display: inline-block;
+  width: 550px;
+}
+
+span {
+  margin: 10px;
+  display: inline-block;
+  width: 200px;
+}
