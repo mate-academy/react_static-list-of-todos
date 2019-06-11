@@ -11,7 +11,7 @@ function App() {
         <tr>
           <th>Id</th>
           <th>Title</th>
-          <th>Competed</th>
+          <th>Completed</th>
 		  <th>Username</th>
 		  <th>Email</th>
 		  <th>Name</th>
