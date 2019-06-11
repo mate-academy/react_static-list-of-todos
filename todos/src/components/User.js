@@ -1,17 +1,9 @@
-import React, {Component} from 'react';
-import {users} from '../users';
+import React from 'react';
 
-class User extends Component {
-  constructor(props) {
-    super(props);
-    this.user = users.find(user => user.id === this.props.userId);
-  }
-
-  render() {
-    return (
-      <td><a href="mailto:{this.user.email}">{this.user.name}</a></td>
-    );
-  }
+function User(props) {
+  return (
+    <td><a href="mailto:{props.email}">{props.name}</a></td>
+  );
 }
 
 export default User;
