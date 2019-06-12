@@ -1,20 +1,21 @@
 import React from 'react';
 import { todos } from './todos.js';
-import { users } from './users.js';
-import TodoItem from './todoItem.js';
+import TodoItem from './TodoItem.js';
 
-function TodoList() {
-  const todoList = [];
-  for (const itemTodo of todos) {
-    const userName = users.find(user => user.id === itemTodo.userId).name;
-    const status = itemTodo.completed ? 'Done' : 'Not yet';
-    todoList.push(
-      <TodoItem title={itemTodo.title} user={userName} status={status} key={itemTodo.title} />
+
+function Todolist() {
+  const allTodoItems = [];
+
+  todos.map(item => {
+    allTodoItems.push(
+      <TodoItem currentTodo={item} key={item.id} />
     );
-  }
-  
-  return todoList;
+  });
+
+  return (
+    allTodoItems
+  )
 }
 
-export default TodoList;
+export default Todolist;
 
