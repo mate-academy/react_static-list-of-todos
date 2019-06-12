@@ -1,12 +1,21 @@
 import React from 'react';
+import User from './User.js';
 
 function TodoItem(props) {
-  return(
-    <div className="todo-item">
-      <h2>{props.title}</h2>
-      <p>{props.user}</p>
-      <p>{props.status}</p>
-    </div>
+  const {
+   title: todoTitle,
+   completed: status,
+   userId: ownerId
+  } = props.currentTodo;
+ 
+  const todoItemStatus = status === true ? 'true' : 'false';
+  
+  return (
+    <article>
+      <h2>{todoTitle}</h2>
+      <User todoOwnerId={ownerId} />
+      <h4>{todoItemStatus}</h4>
+    </article>
   );
 }
 
