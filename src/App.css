@@ -1,0 +1,11 @@
+table {
+  margin: 0 auto;
+  text-align: center;
+}
+
+thead {
+  background-color: black;
+  font-size: 19px;
+  font-weight: bold;
+  color: white;
+}
