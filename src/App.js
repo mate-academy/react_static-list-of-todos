@@ -6,21 +6,7 @@ import TodoList from "./TodoList.js";
 
 function App() {
 
-  return (
-    <table>
-        <tr>
-          <th>Id</th>
-          <th>Title</th>
-          <th>Completed</th>
-	<th>Username</th>
-	<th>Email</th>
-	<th>Name</th>
-        </tr>
-      
-		<TodoList todoList={todos} userList={users} />
-
-    </table>
-  );
+  return <TodoList todoList={todos} userList={users} />;
 }
 
 export default App;
