@@ -1,8 +1,12 @@
 import React from 'react';
+import User from "./User";
 
 function TodoItem(props) {
   return (
-    <td>{props.item}</td>
+    <tr>
+      <td>{props.item}</td>
+      <User username={props.username}/>
+    </tr>
   );
 }
 

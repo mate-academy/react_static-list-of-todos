@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Users(props) {
+function User(props) {
   return (
     <td>{props.username}</td>
   );
 }
 
-export default Users;
+export default User;
