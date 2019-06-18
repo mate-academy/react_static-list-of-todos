@@ -1,3 +1,5 @@
+https://gitkurmax.github.io/react_static-list-of-todos/
+
 # React static list of TODOs
 
 By using [todos.js](todos.js) and [users.js](users.js) as modules to your React application, create and display a list of all the TODO items. Alongside each item display information about the user it belongs to.
