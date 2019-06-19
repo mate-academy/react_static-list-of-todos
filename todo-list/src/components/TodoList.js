@@ -4,12 +4,10 @@ import {todos} from '../todos';
 import {users} from '../users';
 
 function TodoList() {
-  let listOfComponents = todos.map((e) => {
-    let user = users.find((u) => {
-      return u.id === e.userId;
-    });
+  const listOfComponents = todos.map(element => {
+    const user = users.find(user => user.id === element.userId);
     return (
-        <TodoItem key={e.id} item={e.title} username={user.name}/>
+      <TodoItem key={element.id} item={element.title} username={user.name}/>
     );
   });
 
