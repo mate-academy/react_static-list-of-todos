@@ -12,7 +12,7 @@ export default class TodoList extends React.Component {
 
   render() {
     for (let item of todos) {
-      const user = users.find(u => u.id === item.userId);
+      const user = users.find(user => user.id === item.userId);
       this.todoList.push(
         <TodoItem
           title={item.title}
