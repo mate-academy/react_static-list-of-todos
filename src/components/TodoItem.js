@@ -6,7 +6,7 @@ const TodoItem = (props) => {
     <tr>
       <td><a href={'#' + props.userName} onClick={() => props.showUserData(props.userId)}> {props.userName} </a></td>
       <td>{props.title}</td>
-      <td>{props.status ? 'true' : 'false'}</td>
+      <td>{props.status}</td>
     </tr>
   )
 }

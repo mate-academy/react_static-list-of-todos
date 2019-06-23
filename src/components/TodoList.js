@@ -21,7 +21,8 @@ class TodoList extends React.Component {
         name: users
           .filter(user => user.id === el.userId)
           .map(user => user.name)
-          .join('')
+          .join(''),
+        completed: el.completed ? 'completed' : 'in progres',
       }
     });
     return data;
