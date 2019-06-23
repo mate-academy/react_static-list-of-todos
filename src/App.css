@@ -1,3 +1,15 @@
+table {
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px 0;
+}
+
+tr {
+    border: 2px solid black;
+}
+
 .bold {
     font-weight: bold;
     font-size: 20px;
@@ -17,5 +29,6 @@ a {
 }
 
 a:hover {
-    color: grey;
+    color: chocolate;
+    font-weight: bold;
 }
