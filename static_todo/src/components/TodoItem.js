@@ -1,10 +1,15 @@
 import React from 'react';
+import './TodoItem.css';
 
 function TodoItem(props) {
+    const {title, completed} = props
     return (
-        <div>
-            {`${props.title}  ${props.completed ? "yes" : "no"}`}
-        </div>
+        <>
+            <div className={completed ? "yes" : "no"}>{title}</div>
+            <div className="status"> {`${props.completed ? "yes" : "no"}`}</div>
+
+        </>
+
     );
 }
 
