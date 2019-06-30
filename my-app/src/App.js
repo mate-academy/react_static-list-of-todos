@@ -5,7 +5,7 @@ import {users} from './users';
 import './App.css';
 
 function App() {
-  return <TodoList todos={todos} users={users}/>;
+  return <TodoList todos={todos} users={users} />;
 }
 
 export default App;
