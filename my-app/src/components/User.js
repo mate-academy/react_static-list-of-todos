@@ -6,7 +6,6 @@ class User extends Component {
       <td>
         {this.props.user.name}
       </td>
-
     );
   }
 }
