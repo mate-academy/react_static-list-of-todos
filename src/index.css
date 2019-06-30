@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: lemonchiffon;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.7fr;
+  justify-content: center;
+  gap: 10px;
+}
+
+.todo-list-item {
+  position: relative;
+  padding: 10px 30px;
+  background: #171821;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  box-shadow: 7px 7px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.todo-list-item * {
+  margin: 5px;
+}
+
+.todo-item-input {
+  display: none;
+}
+
+.todo-item-title:before {
+  position: absolute;
+  top: 18px;
+  left: 10px;
+  display: block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.todo-item-input:checked + .todo-item-title:before {
+  background-color: brown;
+  border: 1px solid white;
+}
+
+.user-website-link {
+  color: white;
+}
