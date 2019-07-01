@@ -6,9 +6,10 @@ function TodoItem(props) {
       <input 
         type="checkbox" 
         checked={props.item.completed === true || false}
-        className="todo-item-input"
+        className="todo-item__input"
       />
-      <span className="todo-item-title">{props.item.title}</span>
+
+      <span className="todo-item__title">{props.item.title}</span>
       <hr></hr>
       <p>{props.user.username}</p>
     </div>

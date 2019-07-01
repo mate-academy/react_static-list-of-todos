@@ -6,8 +6,8 @@ function User(props) {
       <p>Name: {props.user.name}</p>
       <p>Email: {props.user.email}</p>
       <p>Phone: {props.user.phone}</p>
-      <p>Website: 
-        <a className="user-website-link" href={props.user.website}>
+      <p className="user__website">Website: 
+        <a className="user__website-link" href={props.user.website}>
           {props.user.website}
         </a>
       </p>
