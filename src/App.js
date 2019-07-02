@@ -1,10 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import './App.css';
 
 import todos from './api/todos';
 import users from './api/users';
+
+import TodoList from './components/TodoList';
 
 function getUser(userId) {
   return users.find(user => user.id === userId);
@@ -15,64 +16,30 @@ const todosWithUser = todos.map(todo => ({
   user: getUser(todo.userId),
 }));
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Static list of todos</h1>
-      <TodoList todos={todosWithUser} />
-    </div>
-  );
-}
+class App extends React.Component {
+  state = {
+    count: 0,
+    todos: todosWithUser
+  };
 
-TodoList.propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+  handleClick = () => {
+    this.setState({
+      count: this.state.count + 1,
+    });
+  };
 
-function TodoList(props) {
-  return (
-    <ul>
-      {props.todos.map(todo => (
-        <TodoItem todo={todo} />
-      ))}
-    </ul>
-  );
-}
+  render() {
+    return (
+      <div className="App">
+        <h1 onClick={this.handleClick}>
+          Static list of todos
+          {this.state.count}
+        </h1>
 
-TodoItem.propTypes = {
-  todo: PropTypes.shape({
-    completed: PropTypes.bool,
-    title: PropTypes.string,
-    user: PropTypes.object,
-    id: PropTypes.number,
-  }).isRequired,
-};
-
-function TodoItem({ todo }) {
-  return (
-    <li>
-      <label htmlFor={`todo-status-${todo.id}`}>
-        <input
-          type="checkbox"
-          id={`todo-status-${todo.id}`}
-          checked={todo.completed}
-        />
-
-        {todo.title}
-      </label>
-
-      <User user={todo.user} />
-    </li>
-  );
-}
-
-User.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string,
-  }).isRequired,
-};
-
-function User(props) {
-  return <div>{props.user.name}</div>;
+        <TodoList todos={todosWithUser} />
+      </div>
+    );
+  }
 }
 
 export default App;
