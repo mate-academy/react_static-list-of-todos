@@ -11,7 +11,7 @@ const listOfTodos = todos.map(todo => {
   }
 })
 
-function TodoList(props) {
+function TodoList() {
   const list = listOfTodos.map(todo =>
     <div className="todo-list__item">
       <TodoItem
