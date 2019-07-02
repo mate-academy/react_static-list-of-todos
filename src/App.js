@@ -29,11 +29,14 @@ class App extends React.Component {
   };
 
   render() {
+    const { test } = this.props;
+
     return (
       <div className="App">
         <h1 onClick={this.handleClick}>
           Static list of todos
           {this.state.count}
+          {this.props.test}
         </h1>
 
         <TodoList todos={todosWithUser} />
