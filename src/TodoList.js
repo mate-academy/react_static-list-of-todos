@@ -12,10 +12,12 @@ const listOfTodos = todos.map(todo => {
 })
 
 function TodoList(props) {
-  console.log(props);
   const list = listOfTodos.map(todo =>
     <div className="todo-list__item">
-      <TodoItem key={todo.id} item={todo} user={todo.user}/>
+      <TodoItem
+        key={todo.id}
+        item={todo}
+        user={todo.user}/>
       <User user={todo.user}/>
     </div>
   )
