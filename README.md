@@ -1,6 +1,6 @@
 # React static list of TODOs
 
-### Demo link
+## Demo link
 
 Add link here: `[DEMO LINK](https://<your_account>.github.io/<repo_name>/)`
 
@@ -16,14 +16,14 @@ Create and use three components: `TodoList` (for the whole list), `TodoItem` (fo
 - Fork the repository with task
 - Clone forked repository 
     ```bash
-    git clone git@github.com:<user_name>>/<task_repository>.git
+    git clone git@github.com:<user_name>/<task_repository>.git
     ```
 - Run `npm install` to install dependencies.
 - Then develop
 
 ## Development mode 
 
-- Run `npm run start` to start development server on `http://localhost:3000`
+- Run `npm start` to start development server on `http://localhost:3000`
     When you run server the command line window will no longer be available for 
     writing commands until you stop server (`ctrl + c`). All other commands you 
     need to run in new command line window.
