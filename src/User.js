@@ -1,14 +1,15 @@
 import React from 'react';
 
 function User(props) {
+  const { name, email, phone, website } = props.user;
   return (
     <div className="user">
-      <p>Name: {props.user.name}</p>
-      <p>Email: {props.user.email}</p>
-      <p>Phone: {props.user.phone}</p>
-      <p className="user__website">Website: 
-        <a className="user__website-link" href={props.user.website}>
-          {props.user.website}
+      <p>Name: {name}</p>
+      <p>Email: {email}</p>
+      <p>Phone: {phone}</p>
+      <p className="user__website">Website:
+        <a className="user__website-link" href={website}>
+          {website}
         </a>
       </p>
     </div>

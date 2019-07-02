@@ -3,14 +3,14 @@ import React from 'react';
 function TodoItem(props) {
   return (
     <div className="todo-item">
-      <input 
-        type="checkbox" 
-        checked={props.item.completed === true || false}
+      <input
+        type="checkbox"
+        checked={props.item.completed}
         className="todo-item__input"
       />
 
       <span className="todo-item__title">{props.item.title}</span>
-      <hr></hr>
+      <hr />
       <p>{props.user.username}</p>
     </div>
   );
