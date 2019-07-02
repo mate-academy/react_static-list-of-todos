@@ -17,7 +17,7 @@ module.exports = {
     'no-console': 'off',
     "no-param-reassign": 0,
 
-    "react/prop-types": 0,
     "no-shadow": ["error", { "builtinGlobals": false }],
+    "react/destructuring-assignment": 0,
   }
 };
