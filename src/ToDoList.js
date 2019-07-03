@@ -6,17 +6,14 @@ import users from './api/users';
 import ToDoItem from './ToDoItem';
 
 function ToDoList() {
-  const tasks = todos.map(element => (
+  const list = todos.map(item => (
     <ToDoItem
-      key={element.id}
-      id={element.id}
-      title={element.title}
-      completed={element.completed}
-      user={users.find(user => user.id === element.userId)}
+      item={item}
+      user={users.find(user => user.id === item.userId)}
     />
   ));
 
-  return tasks;
+  return list;
 }
 
 export default ToDoList;

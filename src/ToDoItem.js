@@ -7,11 +7,11 @@ function ToDoItem(props) {
   return (
     <div className="todos-item">
       <h2>TODOS</h2>
-      <p>ID:{props.id}</p>
-      <p>Title:{props.title}</p>
+      <p>ID:{props.item.id}</p>
+      <p>Title:{props.item.title}</p>
       <p>
         Completed:
-        <input type="checkbox" defaultChecked={props.completed} />
+        <input type="checkbox" defaultChecked={props.item.completed} />
       </p>
       <User user={props.user} />
     </div>
@@ -19,7 +19,7 @@ function ToDoItem(props) {
 }
 
 ToDoItem.propTypes = {
-  id: PropTypes.number.isRequired,
+  item: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
   user: PropTypes.shape({
