@@ -16,9 +16,7 @@ function ToDoList() {
     />
   ));
 
-  return (
-    tasks
-  );
+  return tasks;
 }
 
 export default ToDoList;

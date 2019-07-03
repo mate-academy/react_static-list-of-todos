@@ -6,20 +6,12 @@ import User from './User';
 function ToDoItem(props) {
   return (
     <div className="todos-item">
-      <h2>
-        TODOS
-      </h2>
-      <p>
-        ID:
-        {props.id}
-      </p>
-      <p>
-        Title:
-        {props.title}
-      </p>
+      <h2>TODOS</h2>
+      <p>ID:{props.id}</p>
+      <p>Title:{props.title}</p>
       <p>
         Completed:
-        <input type="checkbox" checked={props.completed} />
+        <input type="checkbox" defaultChecked={props.completed} />
       </p>
       <User user={props.user} />
     </div>

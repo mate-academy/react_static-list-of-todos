@@ -4,21 +4,10 @@ import PropTypes from 'prop-types';
 function User(props) {
   return (
     <div className="user-info">
-      <h2>
-        USER INFO
-      </h2>
-      <h3>
-        Name:
-        {props.user.name}
-      </h3>
-      <h3>
-        Email:
-        {props.user.email}
-      </h3>
-      <h3>
-        Phone:
-        {props.user.phone}
-      </h3>
+      <h2>USER INFO</h2>
+      <h3>Name:{props.user.name}</h3>
+      <h3>Email:{props.user.email}</h3>
+      <h3>Phone:{props.user.phone}</h3>
     </div>
   );
 }
