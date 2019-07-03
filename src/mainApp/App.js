@@ -46,7 +46,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Static list of todos</h1>
-        <ToDoList toDoItems={this.state.todos} />
+        <ToDoList sortBy={this.sortAndSetField} toDoItems={this.state.todos} />
       </div>
     );
   }

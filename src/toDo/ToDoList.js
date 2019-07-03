@@ -4,14 +4,14 @@ import ToDoItem from "../toDo/ToDoItem";
 import User from "../user/User";
 import "../toDo/TableStyle.css";
 
-const ToDoList = ({ toDoItems, onSort }) => {
+const ToDoList = ({ toDoItems, sortBy }) => {
   return (
     <table className="table">
       <thead>
         <tr>
           <th
             onClick={() => {
-              onSort("completed");
+              sortBy("completed");
             }}
             className="table-border pointer"
           >
@@ -19,7 +19,7 @@ const ToDoList = ({ toDoItems, onSort }) => {
           </th>
           <th
             onClick={() => {
-              onSort("title");
+              sortBy("title");
             }}
             className="table-border pointer"
           >
@@ -27,7 +27,7 @@ const ToDoList = ({ toDoItems, onSort }) => {
           </th>
           <th
             onClick={() => {
-              onSort("user");
+              sortBy("user");
             }}
             className="table-border pointer"
           >
