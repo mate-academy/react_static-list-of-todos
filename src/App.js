@@ -19,27 +19,24 @@ const todosWithUser = todos.map(todo => ({
 class App extends React.Component {
   state = {
     count: 0,
-    todos: todosWithUser
+    todos: todosWithUser,
   };
 
   handleClick = () => {
-    this.setState({
-      count: this.state.count + 1,
-    });
+    this.setState(prevState => ({
+      count: prevState.count + 1,
+    }));
   };
 
   render() {
-    const { test } = this.props;
-
     return (
       <div className="App">
-        <h1 onClick={this.handleClick}>
+        <h1>
           Static list of todos
           {this.state.count}
-          {this.props.test}
         </h1>
 
-        <TodoList todos={todosWithUser} />
+        <TodoList todos={this.state.todos} />
       </div>
     );
   }
