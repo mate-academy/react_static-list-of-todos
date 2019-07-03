@@ -1,3 +1,19 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
 .App {
   text-align: center;
+}
+
+.sidebar {
+  padding: 0;
+  width: 50%;
+  float: left;
+}
+
+ul li {
+  text-align: left;
+  list-style: none;
 }
