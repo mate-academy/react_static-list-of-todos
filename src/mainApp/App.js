@@ -3,6 +3,11 @@ import React from "react";
 import todos from "../api/todos";
 import users from "../api/users";
 import ToDoList from "../toDo/ToDoList";
+import {
+  SORT_ORDER_TITLE,
+  SORT_ORDER_COMPLETED,
+  SORT_ORDER_USER
+} from "../helper/Helper";
 import "../mainApp/App.css";
 
 class App extends React.Component {
@@ -26,9 +31,9 @@ class App extends React.Component {
 
   sortToDos = sortField => {
     const callbackMap = {
-      title: (a, b) => a.title.localeCompare(b.title),
-      user: (a, b) => a.user.name.localeCompare(b.user.name),
-      completed: (a, b) => a.completed - b.completed
+      [SORT_ORDER_TITLE]: (a, b) => a.title.localeCompare(b.title),
+      [SORT_ORDER_USER]: (a, b) => a.user.name.localeCompare(b.user.name),
+      [SORT_ORDER_COMPLETED]: (a, b) => a.completed - b.completed
     };
 
     const callback = callbackMap[sortField] || callbackMap.title;

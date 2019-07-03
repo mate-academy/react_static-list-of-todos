@@ -2,6 +2,11 @@ import React from "react";
 
 import ToDoItem from "../toDo/ToDoItem";
 import User from "../user/User";
+import {
+  SORT_ORDER_TITLE,
+  SORT_ORDER_COMPLETED,
+  SORT_ORDER_USER
+} from "../helper/Helper";
 import "../toDo/TableStyle.css";
 
 const ToDoList = ({ toDoItems, sortBy }) => {
@@ -11,7 +16,7 @@ const ToDoList = ({ toDoItems, sortBy }) => {
         <tr>
           <th
             onClick={() => {
-              sortBy("completed");
+              sortBy(SORT_ORDER_COMPLETED);
             }}
             className="table-border pointer"
           >
@@ -19,7 +24,7 @@ const ToDoList = ({ toDoItems, sortBy }) => {
           </th>
           <th
             onClick={() => {
-              sortBy("title");
+              sortBy(SORT_ORDER_TITLE);
             }}
             className="table-border pointer"
           >
@@ -27,7 +32,7 @@ const ToDoList = ({ toDoItems, sortBy }) => {
           </th>
           <th
             onClick={() => {
-              sortBy("user");
+              sortBy(SORT_ORDER_USER);
             }}
             className="table-border pointer"
           >
