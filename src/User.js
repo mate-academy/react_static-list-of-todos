@@ -1,7 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-const User = ({user}) => (
+const User = ({ user }) => (
   <ul className="todo-item__user">
     <li>
       Name:

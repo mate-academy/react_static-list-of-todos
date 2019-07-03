@@ -1,7 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-const TodoItem = ({item}) => (
+const TodoItem = ({ item }) => (
   <div className="todo-item__info">
     <label htmlFor={item.id}>
       <input
