@@ -48,9 +48,7 @@ class App extends React.Component {
   };
 
   sortAndSetField = sortField => {
-    this.setState({ sortField }, () => {
-      this.setState({ todos: this.sortToDos(sortField) });
-    });
+    this.setState({ sortField, todos: this.sortToDos(sortField) });
   };
 
   render() {
