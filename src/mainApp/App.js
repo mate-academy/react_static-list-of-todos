@@ -37,16 +37,16 @@ class App extends React.Component {
   };
 
   sortAndSetField = sortField => {
-    this.setState({ sortField }, () =>
-      this.setState({ todos: this.sortToDos(sortField) })
-    );
+    this.setState({ sortField }, () => {
+      this.setState({ todos: this.sortToDos(sortField) });
+    });
   };
 
   render() {
     return (
       <div className="App">
         <h1>Static list of todos</h1>
-        <ToDoList onSort={this.sortAndSetField} toDoItems={this.state.todos} />
+        <ToDoList toDoItems={this.state.todos} />
       </div>
     );
   }

@@ -9,13 +9,28 @@ const ToDoList = ({ toDoItems, onSort }) => {
     <table className="table">
       <thead>
         <tr>
-          <th onClick={onSort("completed")} className="table-border pointer">
+          <th
+            onClick={() => {
+              onSort("completed");
+            }}
+            className="table-border pointer"
+          >
             Is completed
           </th>
-          <th onClick={onSort("title")} className="table-border pointer">
+          <th
+            onClick={() => {
+              onSort("title");
+            }}
+            className="table-border pointer"
+          >
             ToDo item
           </th>
-          <th onClick={onSort("user")} className="table-border pointer">
+          <th
+            onClick={() => {
+              onSort("user");
+            }}
+            className="table-border pointer"
+          >
             User
           </th>
         </tr>
