@@ -16,11 +16,27 @@ class App extends React.Component {
       <div className="App">
         <h1>Todos {this.state.selectedTodoId}</h1>
 
+        <ul>
+          {this.state.todosFromServer.map(todo => (
+            <li
+              key={todo.id}
+              onClick={() => {
+                this.setState({
+                  selectedTodoId: todo.id
+                });
+              }}
+            >
+              {todo.title}
+              <input type="text" />
+            </li>
+          ))}
+        </ul>
+
         <TodoList
           items={this.state.todosFromServer}
           onTodoSelected={(todoId) => {
             this.setState({
-              selectedTodoId: todoId
+              selectedTodoId: todoId,
             });
           }}
         />
@@ -30,8 +46,6 @@ class App extends React.Component {
 }
 
 function TodoList(props) {
-  console.log('render');
-
   return (
     <ul>
       {props.items.map(todo => (
