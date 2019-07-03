@@ -1,31 +1,31 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-const User = props => (
+const User = ({user}) => (
   <ul className="todo-item__user">
     <li>
       Name:
-      {props.user.name}
+      {user.name}
     </li>
     <li>
       Username:
-      {props.user.username}
+      {user.username}
     </li>
     <li>
       Email:
-      {props.user.email}
+      {user.email}
     </li>
     <li>
       Website:
-      <a href={props.user.website}>{props.user.website}</a>
+      <a href={user.website}>{user.website}</a>
     </li>
     <li>
       Address:
-      {props.user.address.city}
+      {user.address.city}
     </li>
     <li>
       Company:
-      {props.user.company.name}
+      {user.company.name}
     </li>
   </ul>
 );

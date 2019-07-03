@@ -1,17 +1,17 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-const TodoItem = props => (
+const TodoItem = ({item}) => (
   <div className="todo-item__info">
-    <label htmlFor={props.item.id}>
+    <label htmlFor={item.id}>
       <input
-        id={props.item.id}
+        id={item.id}
         type="checkbox"
-        checked={props.item.completed ? 'checked' : false}
+        checked={item.completed ? 'checked' : false}
         className="todo-item__completed"
       />
     </label>
-    <h3>{props.item.title}</h3>
+    <h3>{item.title}</h3>
   </div>
 );
 
