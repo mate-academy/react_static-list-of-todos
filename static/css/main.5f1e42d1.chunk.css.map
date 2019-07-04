@@ -1,0 +1,1 @@
+{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,MACE,WAAY,CACZ,aAAc,CACd,uBAAwB,CACxB,iBAAkB,CAClB,+BAAgC,CAChC,uBACF","file":"main.5f1e42d1.chunk.css","sourcesContent":[".todo {\n  width: 300px;\n  margin: 0 auto;\n  background-color: silver;\n  border-radius: 2px;\n  box-shadow: 0 10px 6px -6px #777;\n  border: 1px solid silver;\n}\n"]}
