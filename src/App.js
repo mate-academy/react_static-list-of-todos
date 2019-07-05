@@ -1,15 +1,13 @@
 import React from 'react';
 import './App.css';
-
-import todos from './api/todos';
-import TodoList from "./component/TodoList";
+import users from './api/users';
+import UserList from './component/UserList';
 
 function App() {
   return (
     <div className="App">
-      <h1>Static list of todos</h1>
-
-<TodoList data = {todos}/>
+      <h1>TO-DO LIST</h1>
+      <UserList users={users} />
 
     </div>
   );

@@ -1,18 +1,56 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.user{
+.App {
   text-align: center;
-  display: block;
-  max-width: 800px;
+  background: linear-gradient(deeppink, pink);
+  width: 100%;
+  height: 100%;
+  margin: 0;
   padding: 20px;
-  border: 2px dashed blueviolet;
-  background: aliceblue;
+  box-sizing: border-box;
+}
+
+.App h1 {
+  color: white;
+  margin: 20px;
+}
+
+.user_block {
+  display: flex;
+  max-width: 900px;
+  padding: 10px;
+  background: aquamarine;
+  margin: 10px auto;
   border-radius: 20px;
-  display: block;
-  margin: 20px auto;
+  justify-content: space-around;
+}
 
+.todos_block {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  border: 1px solid brown;
+  padding: 10px;
+}
 
+.user_todo_block {
+  display: flex;
+  text-align: left;
+}
 
+.user_todo_block input {
+  margin: 0 10px;
+}
+
+.user_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user_location {
+  margin: 20px 0;
 }

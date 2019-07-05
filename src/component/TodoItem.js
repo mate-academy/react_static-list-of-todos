@@ -1,22 +1,23 @@
-import React from 'react'
-import users from '../api/users'
-import User from "./User";
-import '../App.css'
+import React from 'react';
+import '../App.css';
+import PropTypes from 'prop-types';
 
 function TodoItem(props) {
-  const user = users.find(u=> u.id === props.todo.userId)
-  return(
-<div className={'user'}>
-  <input type={"checkbox"} checked={props.todo.completed}/>
-  <p>
-    Work: {props.todo.title}
-  </p>
-  <User user={user}/>
-</div>
+  return (
 
-  )
+    <div className="user_todo_block">
+      <input type="checkbox" checked={props.todos.completed} />
+      <p>{props.todos.title}</p>
+    </div>
 
-
+  );
 }
 
-export default TodoItem
+TodoItem.propTypes = {
+  todos: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string,
+    completed: PropTypes.bool,
+  })).isRequired,
+};
+
+export default TodoItem;
