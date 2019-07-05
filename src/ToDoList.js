@@ -8,6 +8,7 @@ import ToDoItem from './ToDoItem';
 function ToDoList() {
   const list = todos.map(item => (
     <ToDoItem
+      key={item.id}
       item={item}
       user={users.find(user => user.id === item.userId)}
     />

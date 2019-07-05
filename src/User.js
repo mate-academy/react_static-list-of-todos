@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function User(props) {
+function User({ user }) {
   return (
     <div className="user-info">
       <h2>USER INFO</h2>
-      <h3>Name:{props.user.name}</h3>
-      <h3>Email:{props.user.email}</h3>
-      <h3>Phone:{props.user.phone}</h3>
+      <h3>Name:{user.name}</h3>
+      <h3>Email:{user.email}</h3>
+      <h3>Phone:{user.phone}</h3>
     </div>
   );
 }
