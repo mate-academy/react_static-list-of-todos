@@ -1,3 +1,18 @@
 .App {
   text-align: center;
 }
+
+.user{
+  text-align: center;
+  display: block;
+  max-width: 800px;
+  padding: 20px;
+  border: 2px dashed blueviolet;
+  background: aliceblue;
+  border-radius: 20px;
+  display: block;
+  margin: 20px auto;
+
+
+
+}
