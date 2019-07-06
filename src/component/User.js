@@ -3,46 +3,53 @@ import '../App.css';
 import PropTypes from 'prop-types';
 import todos from '../api/todos';
 import TodoList from './TodoList';
+import { todoItemShape } from './TodoItem';
 
 function User(props) {
-  const todo = todos.filter(t => t.userId === props.data.id);
+  const userTodos = todos.filter(t => t.userId === props.user.id);
 
   return (
     <div className="user_block">
       <div className="user_info">
-        <h2>{props.data.name}</h2>
-        <h3>{props.data.email}</h3>
+        <h2>{props.user.name}</h2>
+        <h3>{props.user.email}</h3>
 
         <div className="user_location">
           <p>
             <strong>Street:</strong>
             {' '}
-            {props.data.address.street}
+            {props.user.address.street}
           </p>
-          <p>{props.data.address.suite}</p>
+          <p>{props.user.address.suite}</p>
           <p>
             <strong>City:</strong>
             {' '}
-            {props.data.address.city}
+            {props.user.address.city}
           </p>
         </div>
       </div>
 
-      <TodoList todos={todo} />
+      <TodoList todos={userTodos} />
 
     </div>
   );
 }
-User.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string,
-    id: PropTypes.number,
-    userId: PropTypes.number,
-    email: PropTypes.string,
+
+const userShape = PropTypes.shape({
+  userTodos: PropTypes.arrayOf(todoItemShape),
+  name: PropTypes.string,
+  id: PropTypes.number,
+  email: PropTypes.string,
+  address: PropTypes.shape({
     street: PropTypes.string,
     suite: PropTypes.string,
     city: PropTypes.string,
-  })).isRequired,
+  }),
+});
+
+User.propTypes = {
+  user: userShape.isRequired,
 };
 
 export default User;
+export { userShape };
