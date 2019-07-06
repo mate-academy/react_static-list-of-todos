@@ -4,19 +4,28 @@ import './App.css';
 import todos from './api/todos';
 import users from './api/users';
 
+import TodoList from './components/TodoList';
+
 function App() {
   return (
     <div className="App">
-      <h1>Static list of todos</h1>
-      <p>
-        <span>Todos: </span>
-        {todos.length}
-      </p>
+      <header>
+        <h1>Static list of todos</h1>
+        <div className="HeaderCounters">
+          <span>
+            Todos:
+            {todos.length}
+          </span>
+          <span>
+            Users:
+            {users.length}
+          </span>
+        </div>
+      </header>
 
-      <p>
-        <span>Users: </span>
-        {users.length}
-      </p>
+      <div>
+        <TodoList />
+      </div>
     </div>
   );
 }

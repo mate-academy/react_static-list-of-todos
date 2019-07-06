@@ -1,3 +1,73 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #bdbdbd;
+}
+
+header h1 {
+  margin-left: 20px;
+}
+
+.HeaderCounters {
+  margin-right: 20px;
+}
+
+.HeaderCounters span {
+  margin-left: 10px;
+}
+
+.TodoList {
+  margin: 20px 20px 0 20px;
+}
+
+.TodoItem {
+  display: flex;
+  width: 100%;
+  border: 1px solid #bdbdbd;
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+
+.ItemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.User {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  margin: 0 10px;
+  justify-content: space-between;
+}
+
+.User p {
+  margin: 0 5px;
+}
+
+@media (min-width: 1px) and (max-width: 890px) {
+  .User {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1px) and (max-width: 590px) {
+  .User {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1px) and (max-width: 350px) {
+  .User {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+
