@@ -2,7 +2,7 @@
 
 ## Demo link
 
-Add link here: `[DEMO LINK](https://pokatunzp.github.io/react_static-list-of-todos/)`
+Add link here: [DEMO LINK](https://pokatunzp.github.io/react_static-list-of-todos/)
 
 
 ## Task
