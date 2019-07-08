@@ -12,22 +12,16 @@ import React from 'react';
 
 
 const getTodos = async () => {
-  const url = 'https://jsonplaceholder.typicode.com/todos';
-
-  const response = await fetch(url);
+  const response = await fetch('https://jsonplaceholder.typicode.com/todos');
   const todos = await response.json();
 
   return todos;
 };
 
 
-const getUsers = async () => {
-  const url = 'https://jsonplaceholder.typicode.com/users';
-
-  const response = await fetch(url);
-  const users = await response.json();
-
-  return users;
+const getUsers = () => {
+  return fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json());
 };
 
 class App extends React.Component {
