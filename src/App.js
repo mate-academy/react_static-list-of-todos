@@ -5,12 +5,10 @@ import todos from './api/todos';
 import users from './api/users';
 import TodoList from './TodoList';
 
-const todosWithUser = todos.map((item) => {
-  return {
-    ...item,
-    user: users.find(user => user.id === item.userId),
-  };
-});
+const todosWithUser = todos.map(item => ({
+  ...item,
+  user: users.find(user => user.id === item.userId),
+}));
 
 const App = () => (
   <div className="App">
