@@ -1,42 +1,45 @@
 import React from 'react';
 
-const todosFromServer = [
-  { id: 1, title: '111111' },
-  { id: 2, title: '222222' },
-  { id: 3, title: '333333' },
-];
+// const xhr = new XMLHttpRequest();
+//
+// xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos', true);
+//
+// xhr.addEventListener('load', () => {
+//   console.log('response');
+// });
+//
+// xhr.send();
+
+
+const getTodos = async () => {
+  const url = 'https://jsonplaceholder.typicode.com/todos';
+
+  const response = await fetch(url);
+  const todos = await response.json();
+
+  return todos;
+};
+
+
+const getUsers = async () => {
+  const url = 'https://jsonplaceholder.typicode.com/users';
+
+  const response = await fetch(url);
+  const users = await response.json();
+
+  return users;
+};
 
 class App extends React.Component {
-  state = {
-    todos: [],
-    isLoaded: false,
-    isLoading: false,
-  };
-
-  handleClick = () => {
-    this.setState({
-      isLoading: true,
-    });
-
-    setTimeout(() => {
-      this.setState({
-        todos: todosFromServer,
-        isLoaded: true,
-        isLoading: false,
-      });
-    }, 2000);
-  };
+  async componentDidMount() {
+    const todos = await getTodos();
+    const users = await getUsers();
+  }
 
   render() {
     return (
       <main>
-        { this.state.isLoaded ? (
-          <h1>Todos {this.state.todos.length}</h1>
-        ) : (
-          <button onClick={this.handleClick}>
-            {this.state.isLoading ? 'Loading...' : 'Load' }
-          </button>
-        )}
+        <h1>Hello</h1>
       </main>
     );
   }
