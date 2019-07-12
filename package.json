@@ -13,7 +13,7 @@
     "react-scripts": "3.0.1"
   },
   "devDependencies": {
-    "@mate-academy/eslint-config": "*",
+    "@mate-academy/eslint-config-react": "*",
     "@mate-academy/stylelint-config": "*",
     "babel-eslint": "10.0.1",
     "eslint": "^5.16.0",
@@ -23,7 +23,9 @@
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-react": "^7.14.2",
     "gh-pages": "^2.0.1",
-    "stylelint": "^10.0.0"
+    "stylelint": "^10.0.0",
+    "husky": "^3.0.0",
+    "lint-staged": "^9.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,17 +40,14 @@
     "extends": "react-app"
   },
   "lint-staged": {
-    "linters": {
-      "*.css": [
-        "stylelint",
-        "git add"
-      ],
-      "*.js": [
-        "eslint",
-        "git add"
-      ]
-    },
-    "ignore": []
+    "*.css": [
+      "stylelint",
+      "git add"
+    ],
+    "*.js": [
+      "eslint",
+      "git add"
+    ]
   },
   "browserslist": {
     "production": [
@@ -61,5 +60,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
