@@ -15,17 +15,11 @@
   "devDependencies": {
     "@mate-academy/eslint-config-react": "*",
     "@mate-academy/stylelint-config": "*",
-    "babel-eslint": "10.0.1",
     "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.1",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-react": "^7.14.2",
     "gh-pages": "^2.0.1",
-    "stylelint": "^10.0.0",
-    "husky": "^3.0.0",
-    "lint-staged": "^9.2.0"
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
+    "stylelint": "^10.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
