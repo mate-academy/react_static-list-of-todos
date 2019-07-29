@@ -17,7 +17,7 @@ const todosWithUser = todos.map((todo) => {
 
 const App = () => (
 <div className="App">
-  <h1>Static list of todos</h1>      
+  <h1>Static list of todos Roman's</h1>      
   <TodoList todos={todosWithUser} />
 </div>
 ); 
