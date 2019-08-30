@@ -13,7 +13,12 @@ Create and use three components: `TodoList` (for the whole list), `TodoItem` (fo
 
 1. Create a function `getTodosWithUsers(todos, users)` returning an array of todos with a `user` property added to each todo. Place it in `App.js`
 2. Create a component `<TodoList todos={preparedTodos} />` displaying the list of todos
-3. Create a component `<TodoItem todo={todo} />` displaying an individual todo in the list
+3. Create a component `TodoItem` displaying an individual todo in the list
+   ```
+   {todos.map(todo => (
+     <TodoItem todo={todo} key={todo.id} />
+   ))}
+   ```
 4. Create a component `<User user={todo.user} />` displaying a user name with some styling and use it in `<TodoItem />` 
 
 ## Workflow
