@@ -2,21 +2,14 @@ import React from 'react';
 import './App.css';
 
 import todos from './api/todos';
-import users from './api/users';
+import TodoItem from './TodoItem';
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Static list of todos</h1>
-      <p>
-        <span>Todos: </span>
-        {todos.length}
-      </p>
+  const todoItems = todos.map(todo => <TodoItem key={todo.id} todo={todo} />);
 
-      <p>
-        <span>Users: </span>
-        {users.length}
-      </p>
+  return (
+    <div>
+      {todoItems}
     </div>
   );
 }
