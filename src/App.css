@@ -1,3 +1,67 @@
 .App {
-  text-align: center;
+  text-align: left;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list__item {
+  font-family: "Trebuchet MS", "Lucida Sans";
+  padding: 7px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-left: 10px solid #f05d22;
+  box-shadow: 2px -2px 5px 0 rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  letter-spacing: 2px;
+  transition: 0.3s all linear;
+}
+
+.list__item p {
+  margin: 8px;
+}
+
+.list__item:nth-child(2n+1) {
+  border-color: #8bc63e;
+}
+
+.list__item:nth-child(3n+1) {
+  border-color: #fcba30;
+}
+
+.list__item:nth-child(4n+1) {
+  border-color: #1ccfc9;
+}
+
+.list__item:nth-child(5n+1) {
+  border-color: #493224;
+}
+
+.list__item:hover {
+  border-left: 10px solid transparent;
+}
+
+.list__item:nth-child(2n+1):hover {
+  border-right: 10px solid #f05d22;
+}
+
+.list__item:nth-child(3n+1):hover {
+  border-right: 10px solid #8bc63e;
+}
+
+.list__item:nth-child(4n+1):hover {
+  border-right: 10px solid #fcba30;
+}
+
+.list__item:nth-child(5n+1):hover {
+  border-right: 10px solid #1ccfc9;
+}
+
+.list__label {
+  display: block;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
 }
