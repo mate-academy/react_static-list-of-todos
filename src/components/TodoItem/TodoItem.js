@@ -1,12 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import User from '../User/User';
 
-function TodoItem(props) {
+function TodoItem({ todo }) {
   const {
     title, completed, user, id,
-  } = props.todo;
+  } = todo;
 
-  // console.log(props);
+  // console.log(todo);
 
   return (
     <div className="todoList__item">
@@ -18,5 +19,14 @@ function TodoItem(props) {
     </div>
   );
 }
+
+TodoItem.propTypes = {
+  todo: PropTypes.shape({
+    title: PropTypes.string,
+    completed: PropTypes.bool,
+    id: PropTypes.number,
+    user: PropTypes.object,
+  }).isRequired,
+};
 
 export default TodoItem;
