@@ -1,3 +1,29 @@
-.App {
-  text-align: center;
+h3 {
+  margin: 0 20px;
+}
+
+.todo-list__main {
+  width: 320px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #242424;
+}
+
+.todo-list__item {
+  background-color: #8ccbff;
+}
+
+.todo-item__info {
+  display: flex;
+  padding-top: 10px;
+}
+
+.todo-item__user {
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+a {
+  color: #242424;
 }
