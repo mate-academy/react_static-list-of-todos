@@ -1,0 +1,32 @@
+.body {
+  font-family: "Muli", serif;
+  margin: 0 auto;
+  padding: 0 80px 0 50px;
+
+  background-color: #f9f9f9;
+  background-image:linear-gradient(#4C596C, transparent 1px);
+  background-size: 1.5em 1.5em;
+  box-shadow: 1px 1px 2px rgba(0,0,0,.2), -1px -1px 2px rgba(0,0,0,.2);
+}
+
+.body:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 4px;
+  border-left: 4px double #F54318;
+  position: relative;
+  left: 40px;
+  }
+
+@media screen and (max-width: 1100px) {
+  .body {
+    padding: 0 70px 0 55px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .body {
+    padding: 0;
+  }
+}
