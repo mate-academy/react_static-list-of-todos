@@ -19,7 +19,6 @@
   left: 40px;
   }
 
-<<<<<<< HEAD
   .text-red {
     color: red !important;
   }
@@ -28,8 +27,6 @@
     color: green !important;
   }
 
-=======
->>>>>>> ea9ec5278998edbb3bae925f5874b0ff3c26ba11
 @media screen and (max-width: 1100px) {
   .body {
     padding: 0 70px 0 55px;
@@ -41,8 +38,6 @@
     padding: 0;
   }
 }
-<<<<<<< HEAD
-
 
 * {
   margin: 0;
@@ -101,19 +96,21 @@ ul li:nth-child(5n) a{
   top:-10px;
 }
 
+.todo-card {
+  transition: box-shadow 400ms linear, transform 400ms linear;
+}
 
-ul li a:hover,
-ul li a:focus{
+.todo-card:hover,
+.todo-card:focus{
   -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
   -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
   box-shadow:10px 10px 7px rgba(0,0,0,.7);
-  -webkit-transform: scale(1.25);
-  -moz-transform: scale(1.25);
-  -o-transform: scale(1.25);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
   position:relative;
   z-index:5;
   text-decoration: none;
-  color:
 }
 
 ul li a{
@@ -149,5 +146,3 @@ ul li:nth-child(3n) a{
   top: -5px;
   background: #ccf;
 }
-=======
->>>>>>> ea9ec5278998edbb3bae925f5874b0ff3c26ba11

@@ -5,8 +5,8 @@ import './TodoItem.css';
 
 function TodoItem(props) {
   return (
-    <li className="todo__list">
-      <a href="http://localhost:3000/">
+    <li className="todo__list todo-card">
+      <a href="http://localhost:3000/" className="todo-card">
         <h2>{props.todo.title}</h2>
         <p className="todo-list__completed">
           completed:
