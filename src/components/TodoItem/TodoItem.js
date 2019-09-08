@@ -5,42 +5,26 @@ import './TodoItem.css';
 
 function TodoItem(props) {
   return (
-    <div
-      className={`todo-list__item card border-${props.todo.completed
-        === false
-        ? 'danger'
-        : 'success'} mb-3`}
-    >
-      <div className="card-header">
-        <span className="todo-list__title">
-          Todo:
-        </span>
-        <span className="todo-list_indent">
-          {props.todo.title}
-        </span>
-      </div>
-      <div>
+    <li className="todo__list">
+      <a href="http://localhost:3000/">
+        <h2>{props.todo.title}</h2>
+        <p className="todo-list__completed">
+          completed:
+          <span className={`todo-list_indent
+        ${props.todo.completed
+          === false
+      ? 'text-red'
+      : 'text-green'}`}
+          >
+            {props.todo.completed === false ? '\u2A2F' : '\u2713'}
+          </span>
+        </p>
 
-      </div>
-      <p className={`todo-list__completed card-title text-${props.todo.completed
-        === false
-        ? 'danger'
-        : 'success'}`}
-      >
-        completed:
-        <span className="todo-list_indent">
-          {props.todo.completed === false ? 'false' : 'true'}
-        </span>
-      </p>
-
-      <div className={`todo-list__user text-${props.todo.completed
-        === false
-        ? 'danger'
-        : 'success'}`}
-      >
-        <User data={props.todo.user} />
-      </div>
-    </div>
+        <div className="todo-list__user">
+          <User data={props.todo.user} />
+        </div>
+      </a>
+    </li>
   );
 }
 

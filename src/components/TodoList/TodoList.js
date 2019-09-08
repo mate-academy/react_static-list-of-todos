@@ -9,11 +9,11 @@ function TodoList(props) {
       <p>
         <span className="todo-title">Todos: </span>
       </p>
-      <div className="todo-list">
+      <ul className="todo-list__items">
         {props.todos.map(todo => (
           <TodoItem todo={todo} key={todo.id} />
         ))}
-      </div>
+      </ul>
     </>
   );
 }
