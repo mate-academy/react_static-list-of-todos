@@ -1,0 +1,32 @@
+.list-group-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.todo-list__item {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  font-size: 1.25rem;
+}
+
+.todo-list__item-name {
+  margin-left: 1.25rem;
+  cursor: pointer;
+  user-select: none;
+  color: steelblue;
+}
+
+.todo-list__item-id,
+.todo-list__item-user,
+.todo-list__item-name {
+  line-height: 35px;
+}
+
+.todo-list__item-user {
+  margin-left: 1.25em;
+}
+
+.todo-list__item.done .todo-list__item-name {
+  color: black;
+  text-decoration: line-through;
+}
