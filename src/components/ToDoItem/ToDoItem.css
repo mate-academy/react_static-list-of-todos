@@ -1,0 +1,24 @@
+.todoitem {
+  border: 1px solid blue;
+  width: 250px;
+  height: 300px;
+  border-radius: 50px;
+  background-color: cornflowerblue;
+}
+
+.completed {
+  background-color: cadetblue;
+}
+
+.todoitem-list__item-article {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.todoitem-list {
+  text-align: left;
+}
+
+.item {
+  list-style-type: none;
+}
