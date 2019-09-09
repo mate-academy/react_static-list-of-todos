@@ -1,16 +1,11 @@
 import PropTypes from 'prop-types';
 
-export const TodoListProps = {
-  todos: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string,
-      completed: PropTypes.bool,
-      id: PropTypes.number,
-      user: PropTypes.shape({
-        name: PropTypes.string,
-      }).isRequired,
-    }).isRequired,
-  ).isRequired,
+const userShape = PropTypes.shape({
+  name: PropTypes.string,
+}).isRequired;
+
+export const UserProps = {
+  user: userShape,
 };
 
 export const TodoItemProps = {
@@ -18,14 +13,17 @@ export const TodoItemProps = {
     title: PropTypes.string,
     completed: PropTypes.bool,
     id: PropTypes.number,
-    user: PropTypes.shape({
-      name: PropTypes.string,
-    }).isRequired,
+    user: userShape,
   }).isRequired,
 };
 
-export const UserProps = {
-  user: PropTypes.shape({
-    name: PropTypes.string,
-  }).isRequired,
+export const TodoListProps = {
+  todos: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      completed: PropTypes.bool,
+      id: PropTypes.number,
+      user: userShape,
+    }).isRequired,
+  ).isRequired,
 };
