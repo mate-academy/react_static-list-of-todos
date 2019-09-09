@@ -4,10 +4,8 @@
 }
 
 .user__responsible {
-  display: flex;
+  display: block;
   position: relative;
-  flex-wrap: wrap;
-  font-size: 20px;
 }
 
 .user__responsible::before {
@@ -21,10 +19,8 @@
 }
 
 .user__email {
-  display: flex;
+  display: block;
   position: relative;
-  flex-wrap: wrap;
-  font-size: 20px;
 }
 
 .user__email::before {

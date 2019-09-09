@@ -1,10 +1,8 @@
 .todo-list__completed {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
   position: relative;
   padding: 15px 45px;
   margin: 0;
-  font-size: 20px;
 }
 
 .todo-list__completed::before {
