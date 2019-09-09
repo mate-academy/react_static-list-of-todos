@@ -8,8 +8,8 @@ const TodoItem = ({ todo }) => {
 
   return (
     <div className="todoItem">
-      <p>{id}</p>
-      <p>{title}</p>
+      <p className="TodoItem__title">{id}</p>
+      <p className="TodoItem__main-title">{title}</p>
       <UserComponent user={user} />
     </div>
   );

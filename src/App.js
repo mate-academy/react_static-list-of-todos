@@ -4,7 +4,7 @@ import './App.css';
 import todos from './api/todos';
 import users from './api/users';
 
-import TodoList from './Components/TodoItem/TodoItem';
+import TodoList from './Components/TodoList/TodoList';
 
 function getTodosWithUsers(todo, usersList) {
   return todo.map(item => (
@@ -24,7 +24,7 @@ function App() {
         <h1 className="App-title">
           Static list of todos
         </h1>
-        <p className="todos todos__count">
+        <p className="todos-count">
           <span className="todos__title">Todos: </span>
           {todos.length}
         </p>
@@ -34,9 +34,7 @@ function App() {
           {users.length}
         </p>
       </div>
-      <section className="todos todos__container">
-        <TodoList todos={preparedTodos} />
-      </section>
+      <TodoList todos={preparedTodos} />
     </>
   );
 }
