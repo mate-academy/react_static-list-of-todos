@@ -27,7 +27,7 @@ const shape = PropTypes.shape({
     phone: PropTypes.string,
     email: PropTypes.string,
   }),
-}).isRequired;
+});
 
 TodoItem.propTypes = {
   todo: shape.isRequired,
