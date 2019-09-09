@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function User({ user }) {
+const User = ({ user }) => {
   const { name, phone, email } = user;
 
   return (
@@ -11,7 +11,7 @@ function User({ user }) {
       <p>{email}</p>
     </>
   );
-}
+};
 
 User.propTypes = {
   user: PropTypes.shape({

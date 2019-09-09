@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import User from '../User/User';
 
-function TodoItem({ todo }) {
+const TodoItem = ({ todo }) => {
   const {
     title, completed, user, id,
   } = todo;
@@ -16,7 +16,7 @@ function TodoItem({ todo }) {
       <p>--------------------------------------</p>
     </div>
   );
-}
+};
 
 const shape = PropTypes.shape({
   title: PropTypes.string,

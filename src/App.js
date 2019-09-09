@@ -12,7 +12,7 @@ function getTodosWithUsers(todosList, usersList) {
   }));
 }
 
-function App() {
+const App = () => {
   const preparedTodos = getTodosWithUsers(todos, users);
 
   return (
@@ -20,6 +20,6 @@ function App() {
       <TodoList todos={preparedTodos} />
     </div>
   );
-}
+};
 
 export default App;

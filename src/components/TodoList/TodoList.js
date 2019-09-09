@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import TodoItem from '../TodoItem/TodoItem';
 import './TodoList.css';
 
-function TodoList({ todos }) {
-  return todos.map(todo => <TodoItem todo={todo} key={todo.id} />);
-}
+const TodoList = ({ todos }) => todos.map(todo => <TodoItem todo={todo} key={todo.id} />);
 
 const shape = PropTypes.shape({
   id: PropTypes.number.isRequired,
