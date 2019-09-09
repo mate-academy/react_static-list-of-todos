@@ -1,3 +1,8 @@
-.App {
+body {
   text-align: center;
+  background-color: seashell;
+}
+
+h1 {
+  font-size: 3em;
 }
