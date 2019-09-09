@@ -57,3 +57,4 @@ Create and use three components: `TodoList` (for the whole list), `TodoItem` (fo
 You should be writing code in `src/` directory.
 
 -[DEMO Link](https://igaryok.github.io/react_static-list-of-todos/)
+-[PR](https://github.com/mate-academy/react_static-list-of-todos/pull/70)
