@@ -6,15 +6,13 @@ import './TodoItem.css';
 function TodoItem(props) {
   return (
     <li className="todo__list todo-card">
-      <a href="http://localhost:3000/" className="todo-card">
+      <a href="https://trello.com" className="todo-card">
         <h2>{props.todo.title}</h2>
         <p className="todo-list__completed">
           completed:
-          <span className={`todo-list_indent
-        ${props.todo.completed
-          === false
-      ? 'text-red'
-      : 'text-green'}`}
+          <span className={`todo-list_indent ${props.todo.completed === false
+            ? 'text-red'
+            : 'text-green'}`}
           >
             {props.todo.completed === false ? '\u2A2F' : '\u2713'}
           </span>

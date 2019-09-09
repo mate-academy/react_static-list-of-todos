@@ -5,14 +5,14 @@ import './App.css';
 import todos from './api/todos';
 import users from './api/users';
 
-function getTodosWithUsers(todos, users) {
-  return todos.reduce((acum, todo) =>
-    acum.concat({
-      ...todo,
-      user: users
-        .find(user => user.id === todo.userId),
-    })
-  , []);
+const usersMap = users
+  .reduce((acum, user) => ({ ...acum, [user.id]: user }), {});
+
+function getTodosWithUsers(todosArray) {
+  return todosArray.map(todo => ({
+    ...todo,
+    user: usersMap[todo.userId],
+  }));
 }
 
 const preparedTodos = getTodosWithUsers(todos, users);

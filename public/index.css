@@ -114,6 +114,7 @@ ul li:nth-child(5n) a{
 }
 
 ul li a{
+  font-size: 25px;
   text-decoration:none;
   color:#000;
   background:#ffc;
