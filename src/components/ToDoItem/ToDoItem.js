@@ -7,7 +7,7 @@ function ToDoItem({ todo }) {
   if (todo.completed) {
     return (
       <div className="card text-white bg-success mb-3">
-        <h2 className="card-header">{ todo.title }</h2>
+        <h2 className="card-header">{todo.title}</h2>
         <p className="cardbody">
           { todo.completed ? '\u2714' : '\u2718' }
         </p>
@@ -18,7 +18,7 @@ function ToDoItem({ todo }) {
 
   return (
     <div className="card bg-light mb-3">
-      <h2 className="card-header">{ todo.title }</h2>
+      <h2 className="card-header">{todo.title}</h2>
       <p className="cardbody">
         { todo.completed ? '\u2714' : '\u2718' }
       </p>

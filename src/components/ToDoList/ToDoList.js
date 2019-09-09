@@ -5,7 +5,7 @@ import './ToDoList.css';
 
 function ToDoList({ todos }) {
   return (
-    <div className="todo-list" id="myDiv">
+    <div className="todo-list">
       {todos.map(item => <ToDoItem todo={item} key={item.id} />)}
     </div>
   );

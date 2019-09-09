@@ -7,19 +7,19 @@ function User({ user }) {
   return (
     <div className="user">
       <p className="user__text">
-        { user.name }
+        {user.name}
       </p>
 
       <p>
-        <a className="user__text" href="#">{ user.username }</a>
+        <a className="user__text" href="#">{user.username}</a>
       </p>
 
       <p>
-        <a className="user__text" href="mailto:">{ user.email }</a>
+        <a className="user__text" href="mailto:">{user.email}</a>
       </p>
 
       <p>
-        <a className="user__text" href="tel:">{ user.phone }</a>
+        <a className="user__text" href="tel:">{user.phone}</a>
       </p>
     </div>
   );
