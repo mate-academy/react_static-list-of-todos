@@ -3,10 +3,12 @@ import './TodoList.css'
 import TodoItem from '../TodoItem/TodoItem';
 
 function TodoList(props) {
+  const { todos } = props;
+
   return (
     <div className="container">
       <div className="todo-list row">
-        {props.todos.map(todo => (
+        {todos.map(todo => (
           <TodoItem todo={todo} key={todo.id} />
         ))}
       </div>
