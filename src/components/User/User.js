@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './User.scss';
 
-const User = ({ user }) => {
-  const { name, username, email } = user;
+const User = ({ name, username, email }) => {
   const userName = name.split(' ');
   const userFirstName = userName.splice(0, 1);
 
@@ -18,11 +17,8 @@ const User = ({ user }) => {
 };
 
 User.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string,
-    phone: PropTypes.string,
-    email: PropTypes.string,
-  }).isRequired,
+  name: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
 };
-
 export default User;

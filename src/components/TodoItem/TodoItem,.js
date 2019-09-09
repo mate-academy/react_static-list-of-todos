@@ -10,7 +10,7 @@ const TodoItem = ({ todo, key }) => {
     <div className="todo-item" key={key}>
       <h2 className="todo-item__title">{title}</h2>
       <p className="todo-item__check">{completed ? '\u2713' : ''}</p>
-      <User user={user} />
+      <User {...user} />
     </div>
   );
 };
