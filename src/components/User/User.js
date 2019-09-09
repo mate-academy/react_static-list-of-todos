@@ -2,19 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './User.css';
 
-function User(props) {
+function User({ user }) {
   return (
     <div className="user">
       <p className="user__responsible">
         responsible:
         <span className="user_indent">
-          {props.data.name}
+          {user.name}
         </span>
       </p>
       <p className="user__email">
         contact:
         <span className="user_indent">
-          {props.data.email}
+          {user.email}
         </span>
       </p>
     </div>
@@ -22,7 +22,7 @@ function User(props) {
 }
 
 User.propTypes = {
-  data: PropTypes.shape({
+  user: PropTypes.shape({
     name: PropTypes.string,
     email: PropTypes.string,
   }).isRequired,
