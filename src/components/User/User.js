@@ -22,7 +22,10 @@ function User(props) {
 }
 
 User.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    name: PropTypes.string,
+    email: PropTypes.string,
+  }).isRequired,
 };
 
 export default User;

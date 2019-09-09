@@ -19,7 +19,15 @@ function TodoList(props) {
 }
 
 TodoList.propTypes = {
-  todos: PropTypes.array.isRequired,
+  todos: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      todo: PropTypes.shape({
+        title: PropTypes.string,
+        completed: PropTypes.string,
+      }).isRequired,
+    }).isRequired,
+  ).isRequired,
 };
 
 export default TodoList;
