@@ -7,9 +7,9 @@ import users from './api/users';
 import './App.css';
 
 function getTodosWithUsers(todosList, usersList) {
-  return todosList.map(item => ({
-    ...item,
-    user: usersList.find(user => user.id === item.userId),
+  return todosList.map(todo => ({
+    ...todo,
+    user: usersList.find(user => user.id === todo.userId),
   }));
 }
 
