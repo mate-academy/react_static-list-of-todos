@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import './TodoItem.scss';
 import User from '../User/User';
 
-const TodoItem = ({ todo, key }) => {
-  const { title, completed, user } = todo;
-
+function TodoItem({
+  key, title, completed, user,
+}) {
   return (
     <div className="todo-item" key={key}>
       <h2 className="todo-item__title">{title}</h2>
@@ -13,15 +13,17 @@ const TodoItem = ({ todo, key }) => {
       <User {...user} />
     </div>
   );
-};
+}
 
 TodoItem.propTypes = {
-  todo: PropTypes.shape({
-    title: PropTypes.string,
-    completed: PropTypes.bool,
-    user: PropTypes.object,
-  }).isRequired,
   key: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
+  user: PropTypes.objectOf({
+    name: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default TodoItem;

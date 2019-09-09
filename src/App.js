@@ -16,11 +16,10 @@ function App() {
 }
 
 function getTodosWithUsers(todoArr, userArr) {
-  return todoArr.map(todo => (
-    {
-      ...todo,
-      user: userArr.find(item => item.id === todo.userId),
-    }));
+  return todoArr.map(todo => ({
+    ...todo,
+    user: userArr.find(item => item.id === todo.userId),
+  }));
 }
 
 export default App;
