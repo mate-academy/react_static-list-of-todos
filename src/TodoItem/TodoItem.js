@@ -16,9 +16,11 @@ function TodoItem({ todo }) {
 
 TodoItem.propTypes = {
   todo: PropTypes.shape({
-    id: PropTypes.number,
-    title: PropTypes.string,
-    user: PropTypes.object,
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    user: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+    }).isRequired,
   }).isRequired,
 };
 

@@ -9,7 +9,7 @@ function User({ user }) {
 
 User.propTypes = {
   user: PropTypes.shape({
-    name: PropTypes.string,
+    name: PropTypes.string.isRequired,
   }).isRequired,
 };
 

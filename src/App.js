@@ -1,6 +1,8 @@
 import React from 'react';
 import TodoList from './TodoList/TodoList';
-import getTodosWithUsers from './common/getTodosWithUsers';
+import TodoCounter from './Counters/TodoCounter';
+import UserCounter from './Counters/UserCounter';
+import getTodosWithUsers from './utils/getTodosWithUsers';
 
 import './App.css';
 
@@ -13,24 +15,8 @@ function App() {
   return (
     <div className="App">
       <h1>Static list of todos</h1>
-      <p>
-        <button type="button" className="btn btn-primary">
-          <span className="mr-2">Todos</span>
-          <span className="badge badge-light">
-            {todos.length}
-          </span>
-        </button>
-      </p>
-
-      <p>
-        <button type="button" className="btn btn-secondary">
-          <span className="mr-2">Users</span>
-          <span className="badge badge-light">
-            {users.length}
-          </span>
-        </button>
-      </p>
-
+      <TodoCounter todos={todos} />
+      <UserCounter users={users} />
       <div className="container">
         <div className="todo-list">
           <TodoList todos={preparedTodos} />
