@@ -7,13 +7,10 @@ import users from './api/users';
 import TodoList from "./components/TodoList/TodoList"
 
 const getTodosWithUsers = (todos, users) => {
-  return todos.reduce((acc, todo) =>
-    acc.concat({
-      ...todo,
-      user: users
-        .find(user => user.id === todo.userId),
-    })
-  , []);
+  return todos.map(todo => ({
+    ...todo,
+    user: users.find(user => user.id === todo.userId),
+  }));
 }
 
 const preparedTodos = getTodosWithUsers(todos, users);

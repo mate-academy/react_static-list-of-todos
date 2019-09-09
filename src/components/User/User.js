@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { UserProps } from '../constants/PropTypes'
 import './User.css';
 
 function User({ data }) {
@@ -15,11 +15,6 @@ function User({ data }) {
   );
 }
 
-User.propTypes = {
-  data: PropTypes.shape({
-    name: PropTypes.string,
-    email: PropTypes.string,
-  }).isRequired,
-};
+User.propTypes = UserProps;
 
 export default User;
