@@ -1,8 +1,7 @@
 import React from 'react';
 import './Header.css';
 
-const Header = ({ usersCount, todosCount }) => {
-  return (
+const Header = ({ usersCount, todosCount }) => (
     <div className="container mb-5">
       <div className="row">
         <header className="col text-center">
@@ -19,6 +18,5 @@ const Header = ({ usersCount, todosCount }) => {
       </div>
     </div>
   );
-}
 
 export default Header;

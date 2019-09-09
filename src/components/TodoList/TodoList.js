@@ -2,10 +2,7 @@ import React from 'react';
 import './TodoList.css'
 import TodoItem from '../TodoItem/TodoItem';
 
-function TodoList(props) {
-  const { todos } = props;
-
-  return (
+const TodoList = ({ todos }) => (
     <div className="container">
       <div className="todo-list row">
         {todos.map(todo => (
@@ -14,6 +11,5 @@ function TodoList(props) {
       </div>
     </div>
   );
-}
 
 export default TodoList;
