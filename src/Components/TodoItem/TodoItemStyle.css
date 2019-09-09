@@ -1,4 +1,4 @@
-.todoItem {
+.todo-item {
   box-sizing: border-box;
   font-size: 22px;
   color: rgb(234, 79, 152);
@@ -12,12 +12,12 @@
   margin: 0 auto 30px;
 }
 
-.TodoItem__title {
+.todo-item__title {
   text-align: center;
   margin: 10px 0;
   color: rgb(25, 1, 22);
 }
 
-.TodoItem__main-title {
+.todo-item__main-title {
   text-align: center;
 }

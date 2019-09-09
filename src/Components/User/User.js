@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { UserComponentProps } from '../PropTypes/PropTypes';
 import './User.css';
 
 const UserComponent = ({ user }) => {
@@ -18,23 +18,16 @@ const UserComponent = ({ user }) => {
       <p className="user__email">
         {email}
       </p>
-      <p className="user__detais">
+      <p className="user__phone">
         {phone}
-        <br />
+      </p>
+      <p className="user__website">
         {website}
       </p>
     </div>
   );
 };
 
-UserComponent.propTypes = {
-  user: PropTypes.shape({
-    username: PropTypes.string,
-    name: PropTypes.string,
-    email: PropTypes.string,
-    phone: PropTypes.string,
-    website: PropTypes.string,
-  }).isRequired,
-};
+UserComponent.propTypes = UserComponentProps;
 
 export default UserComponent;
