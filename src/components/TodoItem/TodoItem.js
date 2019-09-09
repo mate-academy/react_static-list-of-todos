@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { TodoItemProps } from '../constants/PropTypes'
 import User from '../User/User';
 import './TodoItem.css';
 
@@ -15,17 +15,7 @@ function TodoItem({ todo }) {
   );
 }
 
-TodoItem.propTypes = {
-  todo: PropTypes.shape({
-    title: PropTypes.string,
-    completed: PropTypes.bool,
-    id: PropTypes.number,
-    user: PropTypes.shape({
-      name: PropTypes.string,
-      email: PropTypes.string,
-    }).isRequired,
-  }).isRequired,
-};
+TodoItem.propTypes = TodoItemProps;
 
 
 export default TodoItem;
