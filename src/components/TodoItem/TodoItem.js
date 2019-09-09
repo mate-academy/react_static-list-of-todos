@@ -3,9 +3,9 @@ import User from '../User/User';
 import './TodoItem.css';
 import { TodoItemPropTypes } from '../../constants/proptypes';
 
-function TodoItem(props) {
+function TodoItem({ todo }) {
   return (
-    <li className={!props.todo.completed ? 'todo-item' : 'todo-item completed'}>
+    <li className={!todo.completed ? 'todo-item' : 'todo-item completed'}>
       <div className="drawing-pin">
         <img
           className="drawing-pin__img"
@@ -14,10 +14,10 @@ function TodoItem(props) {
         />
       </div>
       <h1 className="item-title">
-        {props.todo.title}
+        {todo.title}
       </h1>
       <div className="item-user">
-        <User user={props.todo.user} />
+        <User user={todo.user} />
       </div>
     </li>
   );

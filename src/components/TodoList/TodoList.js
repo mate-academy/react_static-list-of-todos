@@ -3,12 +3,12 @@ import TodoItem from '../TodoItem/TodoItem';
 import './TodoList.css';
 import { TodoListPropTypes } from '../../constants/proptypes';
 
-function TodoList(props) {
+function TodoList({ todos }) {
   return (
     <>
       <h1 className="header">Static list of todos</h1>
       <ul className="todo-list">
-        {props.todos.map(todo => (
+        {todos.map(todo => (
           <TodoItem todo={todo} key={todo.id} />
         ))}
       </ul>

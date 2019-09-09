@@ -2,17 +2,17 @@ import React from 'react';
 import './User.css';
 import { UserPropTypes } from '../../constants/proptypes';
 
-function User(props) {
+function User({ user }) {
   return (
     <>
       <p className="user-name">
-        {props.user.name}
+        {user.name}
       </p>
       <p className="user-mail">
-        {props.user.email}
+        {user.email}
       </p>
       <p className="user-website">
-        {props.user.website}
+        {user.website}
       </p>
     </>
   );
