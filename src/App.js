@@ -16,7 +16,7 @@ function App() {
   const preparedTodos = getTodosWithUsers(todos, users);
 
   return (
-    <div className="App todoList">
+    <div className="App todo-list">
       <TodoList todos={preparedTodos} />
     </div>
   );

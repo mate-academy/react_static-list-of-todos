@@ -4,15 +4,7 @@ import TodoItem from '../TodoItem/TodoItem';
 import './TodoList.css';
 
 function TodoList({ todos }) {
-  // console.log(todos);
-
-  return (
-    <>
-      {todos.map(todo => (
-        <TodoItem todo={todo} key={todo.id} />
-      ))}
-    </>
-  );
+  return todos.map(todo => <TodoItem todo={todo} key={todo.id} />);
 }
 
 TodoList.propTypes = {
