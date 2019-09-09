@@ -8,11 +8,10 @@ const usersMap = users
   .reduce((acc, user) => ({ ...acc, [user.id]: user }), {});
 
 function getToDos(toDosArr) {
-  return toDosArr.map(todo => (
-    {
-      ...todo,
-      user: usersMap[todo.userId],
-    }));
+  return toDosArr.map(todo => ({
+    ...todo,
+    user: usersMap[todo.userId],
+  }));
 }
 
 function App() {
