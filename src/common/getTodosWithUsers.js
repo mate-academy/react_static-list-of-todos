@@ -1,8 +1,9 @@
 function getTodosWithUsers(todos, users) {
-  return users.map(user => todos.filter(todo => (
-    user.id === todo.userId
-      ? Object.assign(todo, { user })
-      : 0))).flat(1);
+  return todos.map(todo => (
+    {
+      ...todo,
+      user: users.find(user => user.id === todo.userId),
+    }));
 }
 
 export default getTodosWithUsers;
