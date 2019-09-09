@@ -8,7 +8,7 @@ function TodoItem({ todo }) {
   } = todo;
 
   return (
-    <div className="todo-list__item">
+    <div className="todoList__item">
       <h2>{id}</h2>
       <h4>{title}</h4>
       <input type="checkbox" checked={completed} />

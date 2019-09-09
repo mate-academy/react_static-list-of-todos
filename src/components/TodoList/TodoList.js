@@ -7,8 +7,13 @@ function TodoList({ todos }) {
   return todos.map(todo => <TodoItem todo={todo} key={todo.id} />);
 }
 
+const shape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+});
+
 TodoList.propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.object).isRequired,
+  todos: PropTypes.arrayOf(shape).isRequired,
 };
 
 export default TodoList;

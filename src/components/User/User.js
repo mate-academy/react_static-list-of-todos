@@ -13,14 +13,12 @@ function User({ user }) {
   );
 }
 
-const shape = PropTypes.shape({
-  name: PropTypes.string,
-  phone: PropTypes.string,
-  email: PropTypes.string,
-}).isRequired;
-
 User.propTypes = {
-  user: shape.isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default User;
