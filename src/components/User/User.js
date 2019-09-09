@@ -1,18 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
+import { UserProps } from '../../constants/proptypes';
 import './User.css';
 
 const User = ({ user }) => (
-  <>
-    <span className="todo-list__item-user">{user.name}</span>
-  </>
+  <span className="todo-list-item__user">{user.name}</span>
 );
 
-User.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string,
-  }).isRequired,
-};
+User.propTypes = UserProps;
 
 export default User;

@@ -1,38 +1,29 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import User from '../User/User';
+import { TodoItemProps } from '../../constants/proptypes';
 
 import './TodoItem.css';
 
 const TodoItem = ({ todo }) => {
   const {
-    title, completed, user, id,
+    title, completed = false, user, id,
   } = todo;
 
-  let classNames = 'todo-list__item';
+  let classNames;
 
-  if (completed) {
-    classNames += ' done';
-  }
+  classNames = !completed
+    ? classNames = 'todo-list-item'
+    : classNames = 'todo-list-item todo-list-item--done';
 
   return (
     <span className={classNames}>
-      <span className="todo-list__item-id">{id}</span>
+      <span className="todo-list-item__id">{id}</span>
       <User user={user} />
-      <span className="todo-list__item-name">{title}</span>
+      <span className="todo-list-item__name">{title}</span>
     </span>
   );
 };
 
-TodoItem.propTypes = {
-  todo: PropTypes.shape({
-    title: PropTypes.string,
-    completed: PropTypes.bool,
-    id: PropTypes.number,
-    user: PropTypes.shape({
-      name: PropTypes.string,
-    }).isRequired,
-  }).isRequired,
-};
+TodoItem.propTypes = TodoItemProps;
 
 export default TodoItem;

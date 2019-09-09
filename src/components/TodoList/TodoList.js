@@ -1,8 +1,6 @@
 import React from 'react';
-
-import PropTypes from 'prop-types';
-
 import TodoItem from '../TodoItem/TodoItem';
+import { TodoListProps } from '../../constants/proptypes';
 
 import './TodoList.css';
 
@@ -16,8 +14,6 @@ const TodoList = ({ todos }) => (
   </ul>
 );
 
-TodoList.propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+TodoList.propTypes = TodoListProps;
 
 export default TodoList;
