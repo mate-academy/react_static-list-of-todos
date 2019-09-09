@@ -1,0 +1,41 @@
+.header {
+  text-align: center;
+  font-family: Merienda, sans-serif;
+  font-size: 55px;
+  background: #ffc;
+  position: relative;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  box-shadow: -10px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+.header::before {
+  content: "";
+  background: url(../../images/Drawing-Pin.png) no-repeat;
+  background-size: cover;
+  height: 45px;
+  width: 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.header::after {
+  content: "";
+  background: url(../../images/Drawing-Pin.png) no-repeat;
+  background-size: cover;
+  height: 45px;
+  width: 60px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.todo-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
