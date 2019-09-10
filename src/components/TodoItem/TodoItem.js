@@ -10,7 +10,6 @@ function TodoItem(props) {
     <div className="todo-item">
       <h2>{todo.title}</h2>
       <p>{todo.completed ? 'Completed' : 'Not completed'}</p>
-
       <User user={todo.user} />
     </div>
   );
