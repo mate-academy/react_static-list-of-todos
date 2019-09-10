@@ -12,21 +12,19 @@ function todosWithUser(listTasks, listUsers) {
 
 const fullList = todosWithUser(todos, users);
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Static list of todos</h1>
-      <p>
-        <span>Todos:</span>
-        {fullList.length}
-      </p>
-      <TodoList todos={fullList} />
-      <p>
-        <span>Users: </span>
-        {users.length}
-      </p>
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <h1>Static list of todos</h1>
+    <p>
+      <span>Todos: </span>
+      {fullList.length}
+    </p>
+    <TodoList todos={fullList} />
+    <p>
+      <span>Users: </span>
+      {users.length}
+    </p>
+  </div>
+);
 
 export default App;
