@@ -13,7 +13,6 @@ const User = ({ user }) => {
     <div className="user">
       <p className="user__name">{name}</p>
       <p className="user__username">{username}</p>
-
       <div className="user__details">
         <span className="user__phone">{phone}</span>
         <a href=":mail" className="user__email">{email}</a>

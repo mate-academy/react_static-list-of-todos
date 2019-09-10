@@ -5,15 +5,7 @@ import todos from './api/todos';
 import users from './api/users';
 
 import TodoList from './components/TodoList/TodoList';
-
-function getTodosWithUsers(todoss, usersList) {
-  return todoss.map(item => (
-    {
-      ...item,
-      user: usersList.find(user => user.id === item.userId),
-    }
-  ));
-}
+import { getTodosWithUsers } from './api/data';
 
 const preparedTodos = getTodosWithUsers(todos, users);
 
