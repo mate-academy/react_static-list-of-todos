@@ -6,7 +6,7 @@ import { Users } from '../User/User';
 
 export const TodoItem = ({ todo }) => (
   <div className="card" style={{ width: '18rem'}}>
-    <h5 className="task">{ todo.title }</h5>
+    <h3 className="task">{ todo.title }</h3>
     <Users user={todo.user} />
     <h6 className="card-subtitle mb-2 text-muted">
       { todo.completed ? '\u2714' : '\u2718' }

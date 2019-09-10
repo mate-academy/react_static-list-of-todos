@@ -11,23 +11,20 @@ function getTodosWithUsers(todos, users) {
   }));
 }
 
-function App() {
-  const preparedTodos = getTodosWithUsers(todos, users);
+const preparedTodos = getTodosWithUsers(todos, users);
 
-  return (
-    <div className="main">
-      <h1>Static list of todos</h1>
-      <p>
-        <span>Todos: </span>
-        {todos.length}
-      </p>
-      <p>
-        <span>Users: </span>
-        {users.length}
-      </p>
-      <TodoList todos={preparedTodos} />
-    </div>
-  );
-}
+const App = () => (
+  <div className="main">
+    <h1>Static list of todos</h1>
+    <p>
+      <span>Todos: </span>
+      {todos.length}
+      <br />
+      <span>Users: </span>
+      {users.length}
+    </p>
+    <TodoList todos={preparedTodos} />
+  </div>
+);
 
 export default App;
