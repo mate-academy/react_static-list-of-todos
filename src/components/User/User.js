@@ -6,11 +6,7 @@ function User({ name, email }) {
   return (
     <>
       <span className="li-user">User</span>
-      &nbsp;:&nbsp;
-      {name}
-      (
-      {email}
-      )
+      {` : ${name} (${email})`}
     </>
   );
 }

@@ -6,16 +6,13 @@ import users from './api/users';
 import TodoList from './components/TodoList/TodoList';
 
 function todosWithUser(listTasks, listUsers) {
-  return listTasks.map((item) => {
-    const getUser = listUsers.find(person => person.id === item.userId);
-
-    return { ...item, user: getUser };
-  });
+  return listTasks.map(item => (
+    { ...item, user: listUsers.find(person => person.id === item.userId) }));
 }
 
-function App() {
-  const fullList = todosWithUser(todos, users);
+const fullList = todosWithUser(todos, users);
 
+function App() {
   return (
     <div className="App">
       <h1>Static list of todos</h1>

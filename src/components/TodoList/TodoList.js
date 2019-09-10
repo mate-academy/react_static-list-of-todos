@@ -10,8 +10,6 @@ function TodoList(props) {
   );
 }
 
-export default TodoList;
-
 const shape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   userId: PropTypes.number.isRequired,
@@ -23,3 +21,5 @@ const shape = PropTypes.shape({
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(shape).isRequired,
 };
+
+export default TodoList;
