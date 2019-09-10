@@ -6,7 +6,6 @@ const userShape = PropTypes.shape({
   email: PropTypes.string,
 }).isRequired;
 
-
 export const TodoListProps = {
   todos: PropTypes.arrayOf(
     PropTypes.shape({
