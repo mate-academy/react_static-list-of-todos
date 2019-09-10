@@ -27,16 +27,16 @@ function TodoItem({ todo }) {
 }
 
 const shape = PropTypes.shape({
-  title: PropTypes.string,
-  completed: PropTypes.bool,
-  user: PropTypes.shape({
-    name: PropTypes.string,
-    email: PropTypes.string,
-  }).isRequired,
+  name: PropTypes.string,
+  email: PropTypes.string,
 });
 
 TodoItem.propTypes = {
-  todo: shape.isRequired,
+  todo: PropTypes.shape({
+    title: PropTypes.string,
+    completed: PropTypes.bool,
+    user: shape.isRequired,
+  }).isRequired,
 };
 
 export default TodoItem;
