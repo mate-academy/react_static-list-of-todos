@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import User from '../User/User';
+import './TodoItem.css';
 
 function TodoItem({ todo }) {
   return (
