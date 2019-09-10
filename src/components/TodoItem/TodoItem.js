@@ -8,7 +8,7 @@ const TodoItem = ({
 }) => (
   <div className="todo-item" key={key}>
     <h2 className="todo-item__title">{title}</h2>
-    <p className="todo-item__check">{completed ? '\u2714 completed' : `\u2716 no complited`}</p>
+    <p className="todo-item__check">{completed ? '\u2714 completed' : `\u2716 not complited`}</p>
     <User {...user} />
   </div>
 );

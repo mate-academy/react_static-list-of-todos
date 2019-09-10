@@ -7,10 +7,10 @@ const User = ({
 }) => (
   <div className="user">
     <p className="user__name">{name}</p>
-    <p className="user__title">{username}</p>
-    <p className="user__title">{email}</p>
-    <p className="user__title">{phone}</p>
-    <p className="user__title">{website}</p>
+    <p className="user__text">{username}</p>
+    <p className="user__text">{email}</p>
+    <p className="user__text">{phone}</p>
+    <p className="user__text">{website}</p>
   </div>
 );
 
