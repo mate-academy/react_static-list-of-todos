@@ -1,5 +1,6 @@
 import React from 'react';
 import './TodoList.css';
+import PropTypes from 'prop-types';
 import TodoItem from '../TodoItem/TodoItem';
 
 const TodoList = ({ todos }) => (
@@ -8,5 +9,9 @@ const TodoList = ({ todos }) => (
       <TodoItem todo={todo} key={todo.id} />))}
   </div>
 );
+
+TodoList.propTypes = {
+  todos: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 export default TodoList;
