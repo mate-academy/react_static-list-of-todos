@@ -5,7 +5,7 @@ import User from '../User/User';
 
 function ToDoItem({ todo }) {
   return (
-    <div className={todo.completed ? 'todoitem' : 'todoitem completed'}>
+    <div className={todo.completed ? 'todoitem completed' : 'todoitem'}>
       <ul className="todoitem-list">
         <li className="todoitem-list__item-title item">{todo.title}</li>
         <li className="todoitem-list__item-status item">

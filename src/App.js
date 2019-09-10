@@ -4,9 +4,9 @@ import todos from './api/todos';
 import users from './api/users';
 import ToDoList from './Components/ToDoList/ToDoList';
 
-function App() {
-  const preparedTodos = getTodosWithUsers(todos, users);
+const preparedTodos = getTodosWithUsers(todos, users);
 
+function App() {
   return (
     <div className="App">
       <h1>Static list of todos</h1>

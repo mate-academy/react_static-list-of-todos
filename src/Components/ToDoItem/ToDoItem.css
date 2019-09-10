@@ -21,4 +21,9 @@
 
 .item {
   list-style-type: none;
+  text-align: center;
+}
+
+.todoitem-list {
+  padding: 0;
 }
