@@ -11,7 +11,6 @@ function ToDoItem({ todo }) {
         <li className="todoitem-list__item-status item">
           {todo.completed ? '\u2714' : '\u2717'}
         </li>
-        <li className="todoitem-list__item-id item">{todo.id}</li>
       </ul>
       <User user={todo.user} />
     </div>

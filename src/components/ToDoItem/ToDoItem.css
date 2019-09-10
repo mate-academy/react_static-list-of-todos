@@ -8,6 +8,7 @@
 
 .completed {
   background-color: cadetblue;
+  margin-bottom: 20px;
 }
 
 .todoitem-list__item-article {
@@ -21,4 +22,9 @@
 
 .item {
   list-style-type: none;
+}
+
+.todoitem-list__item-status {
+  text-align: right;
+  margin-right: 30px;
 }
