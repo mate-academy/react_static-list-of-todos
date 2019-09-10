@@ -1,23 +1,15 @@
 import React from 'react';
 import './App.css';
 
-import todos from './api/todos';
-import users from './api/users';
+import todosWithUsers from './api/getTodosWithUsers';
+import TodoList from './component/TodoList/TodoList';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Static list of todos</h1>
-      <p>
-        <span>Todos: </span>
-        {todos.length}
-      </p>
-
-      <p>
-        <span>Users: </span>
-        {users.length}
-      </p>
-    </div>
+    <>
+      <h1 className="app__title">Static list of todos</h1>
+      <TodoList todos={todosWithUsers} />
+    </>
   );
 }
 
