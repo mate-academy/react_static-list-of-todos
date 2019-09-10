@@ -7,7 +7,10 @@ import TodoList from './components/TodoList/TodoList';
 
 function App() {
   return (
-    <TodoList todos={todos} users={users} />
+    <>
+      <h1 className="App">Static list of todos</h1>
+      <TodoList todos={todos} users={users} />
+    </>
   );
 }
 
