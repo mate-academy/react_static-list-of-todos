@@ -10,6 +10,7 @@ function ToDoItem({ todo }) {
         <li className="todoitem-list__item-article item">{todo.title}</li>
         <li className="todoitem-list__item-status item">
           {todo.completed ? '\u2714' : '\u2717'}
+          {todo.id}
         </li>
       </ul>
       <User user={todo.user} />
