@@ -6,7 +6,14 @@ import users from './api/users';
 import TodoList from './components/TodoList/TodoList';
 import Header from './components/Header/Header';
 
-function App() {
+const getTodosWithUsers = (todos, users) => (
+  todos.map(todo => ({
+    ...todo,
+    user: users.find(user => user.id === todo.userId),
+  }))
+)
+
+const App = () => {
   const preparedTodos = getTodosWithUsers(todos, users);
 
   return (
@@ -15,13 +22,6 @@ function App() {
       <TodoList todos={preparedTodos} />
     </>
   );
-}
-
-function getTodosWithUsers(todos, users) {
-  return todos.map(todo => ({
-      ...todo,
-      user: users.find(user => user.id === todo.userId),
-    }));
 }
 
 export default App;
