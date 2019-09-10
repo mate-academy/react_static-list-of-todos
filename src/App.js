@@ -3,22 +3,15 @@ import './App.css';
 
 import todos from './api/todos';
 import users from './api/users';
+import TodoList from './components/TodoList/TodoList';
+import { getTodosWithUsers } from './getTodos';
 
 function App() {
-  return todos.map((todo) => {
-    const todoUser = users.find(user => user.id === todo.userId);
+  const preparedTodos = getTodosWithUsers(todos, users);
 
-    return (
-      <div className="todo-item">
-        <h2>{todo.title}</h2>
-        <p>{todo.completed ? 'Completed' : 'Not completed'}</p>
-        <div className="user-info">
-          <span>{todoUser.name}</span>
-          <a href={`mailto:${todoUser.email}`}>{todoUser.email}</a>
-        </div>
-      </div>
-    );
-  });
+  return (
+    <TodoList todos={preparedTodos} />
+  );
 }
 
 export default App;
