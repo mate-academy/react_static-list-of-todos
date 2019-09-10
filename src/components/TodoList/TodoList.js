@@ -18,16 +18,18 @@ function TodoList({ todos }) {
   );
 }
 
-TodoList.propTypes = {
-  todos: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string,
-      todo: PropTypes.shape({
-        title: PropTypes.string,
-        completed: PropTypes.string,
-      }).isRequired,
+const shape = PropTypes.arrayOf(
+  PropTypes.shape({
+    id: PropTypes.string,
+    todo: PropTypes.shape({
+      title: PropTypes.string,
+      completed: PropTypes.string,
     }).isRequired,
-  ).isRequired,
+  }).isRequired,
+);
+
+TodoList.propTypes = {
+  todos: shape.isRequired,
 };
 
 export default TodoList;

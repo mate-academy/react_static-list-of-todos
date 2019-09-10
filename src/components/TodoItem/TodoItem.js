@@ -26,15 +26,17 @@ function TodoItem({ todo }) {
   );
 }
 
-TodoItem.propTypes = {
-  todo: PropTypes.shape({
-    title: PropTypes.string,
-    completed: PropTypes.bool,
-    user: PropTypes.shape({
-      name: PropTypes.string,
-      email: PropTypes.string,
-    }).isRequired,
+const shape = PropTypes.shape({
+  title: PropTypes.string,
+  completed: PropTypes.bool,
+  user: PropTypes.shape({
+    name: PropTypes.string,
+    email: PropTypes.string,
   }).isRequired,
+});
+
+TodoItem.propTypes = {
+  todo: shape.isRequired,
 };
 
 export default TodoItem;
