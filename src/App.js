@@ -11,9 +11,9 @@ function getTodosWithUsers(todosList, usersList) {
   }));
 }
 
-function App() {
-  const preparedTodos = getTodosWithUsers(todos, users);
+const preparedTodos = getTodosWithUsers(todos, users);
 
+function App() {
   return (
     <div>
       <TodoList todos={preparedTodos} />
