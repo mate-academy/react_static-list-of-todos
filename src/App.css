@@ -1,3 +1,9 @@
 .App {
+  margin-top: 10px;
   text-align: center;
+}
+
+.App__title {
+  color: black;
+  margin-bottom: 5px;
 }
