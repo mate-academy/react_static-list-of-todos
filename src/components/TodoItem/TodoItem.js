@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import './TodoItem.css';
 import User from '../User/User';
 
-function TodoItem(props) {
-  const { completed, user } = props.todo;
+function TodoItem({ todo }) {
+  const { completed, title, user } = todo;
   const classItem = completed
     ? 'list-group-item disabled'
     : 'list-group-item';
@@ -12,7 +12,7 @@ function TodoItem(props) {
   return (
     <li className={classItem}>
       <span className="li-task">Task:&nbsp;</span>
-      {props.todo.title}
+      {title}
       &nbsp;|&nbsp;
       <User {...user} />
     </li>
