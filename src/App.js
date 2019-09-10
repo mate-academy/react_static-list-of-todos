@@ -5,20 +5,20 @@ import todos from './api/todos';
 import users from './api/users';
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Static list of todos</h1>
-      <p>
-        <span>Todos: </span>
-        {todos.length}
-      </p>
+  return todos.map((todo) => {
+    const todoUser = users.find(user => user.id === todo.userId);
 
-      <p>
-        <span>Users: </span>
-        {users.length}
-      </p>
-    </div>
-  );
+    return (
+      <div className="todo-item">
+        <h2>{todo.title}</h2>
+        <p>{todo.completed ? 'Completed' : 'Not completed'}</p>
+        <div className="user-info">
+          <span>{todoUser.name}</span>
+          <a href={`mailto:${todoUser.email}`}>{todoUser.email}</a>
+        </div>
+      </div>
+    );
+  });
 }
 
 export default App;
