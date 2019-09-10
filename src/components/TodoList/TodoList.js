@@ -2,13 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TodoItem from '../TodoItem/TodoItem';
 
-function TodoList(props) {
-  return (
-    <ul className="list-group">
-      {props.todos.map(item => <TodoItem todo={item} />)}
-    </ul>
-  );
-}
+const TodoList = props => (
+  <ul className="list-group">
+    {props.todos.map(item => <TodoItem todo={item} />)}
+  </ul>
+);
 
 const shape = PropTypes.shape({
   id: PropTypes.number.isRequired,

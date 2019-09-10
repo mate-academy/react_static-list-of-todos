@@ -2,14 +2,12 @@ import React from 'react';
 import './User.css';
 import PropTypes from 'prop-types';
 
-function User({ name, email }) {
-  return (
-    <>
-      <span className="li-user">User</span>
-      {` : ${name} (${email})`}
-    </>
-  );
-}
+const User = ({ name, email }) => (
+  <>
+    <span className="li-user">User</span>
+    {` : ${name} (${email})`}
+  </>
+);
 
 export default User;
 

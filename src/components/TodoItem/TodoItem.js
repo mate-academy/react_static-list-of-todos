@@ -4,18 +4,17 @@ import './TodoItem.css';
 import User from '../User/User';
 
 function TodoItem(props) {
-  let classItem = 'list-group-item';
-
-  if (props.todo.completed) {
-    classItem = `${classItem} disabled`;
-  }
+  const { completed, user } = props.todo;
+  const classItem = completed
+    ? 'list-group-item disabled'
+    : 'list-group-item';
 
   return (
     <li className={classItem}>
       <span className="li-task">Task:&nbsp;</span>
       {props.todo.title}
       &nbsp;|&nbsp;
-      <User {...props.todo.user} />
+      <User {...user} />
     </li>
   );
 }
