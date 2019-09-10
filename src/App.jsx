@@ -13,9 +13,9 @@ function getTodoWithUser(todosArr, usersArr) {
   }));
 }
 
-function App() {
-  const preparedTodos = getTodoWithUser(todos, users);
+const preparedTodos = getTodoWithUser(todos, users);
 
+function App() {
   return (
     <div className="App">
       <h1>Static list of todos</h1>
