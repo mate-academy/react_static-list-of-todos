@@ -2,18 +2,10 @@ import React from 'react';
 import TodoItem from '../TodoItem/TodoItem';
 import './TodoList.css';
 
-function TodoList(props) {
-  const { todos, users } = props;
-
+function TodoList({ todos }) {
   return (
     <div className="todos-list">
-      {todos.map((todo) => {
-        const todoUser = users.find(user => user.id === todo.userId);
-
-        return (
-          <TodoItem todo={todo} user={todoUser} />
-        );
-      })}
+      {todos.map(item => <TodoItem todo={item} key={item.id} />)}
     </div>
   );
 }

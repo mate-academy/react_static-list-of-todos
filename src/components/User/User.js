@@ -1,8 +1,6 @@
 import React from 'react';
 
-function User(props) {
-  const { user } = props;
-
+function User({ user }) {
   return (
     <div className="user-info">
       <p>
