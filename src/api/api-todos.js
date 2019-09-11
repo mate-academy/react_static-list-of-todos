@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-const apitodos = [
+const todos = [
   {
     userId: 1,
     id: 1,
@@ -1203,4 +1203,4 @@ const apitodos = [
   },
 ];
 
-export default apitodos;
+export default todos;

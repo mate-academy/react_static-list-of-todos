@@ -1,6 +1,6 @@
 import React from 'react';
-import apiusers from '../../api/Apiusers';
-import apitodos from '../../api/Apitodos';
+import apiusers from '../../api/api-users';
+import apitodos from '../../api/api-todos';
 import './Header.css';
 
 const Header = () => (
@@ -8,6 +8,7 @@ const Header = () => (
     <h1 className="app-title">
       Static list of todos
     </h1>
+
     <p className="todos-count">
       <span className="todos__title">Todos: </span>
       {apitodos.length}
