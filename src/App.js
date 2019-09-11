@@ -5,17 +5,17 @@ import todos from './api/todos';
 import users from './api/users';
 
 function App() {
-  const todosUser = todosWithUsers(todos, users);
+  const todosWithUsers = getTodosWithUsers(todos, users);
 
   return (
     <div className="App">
       <h1>Static list of todos</h1>
-      <TodoList todos={todosUser} />
+      <TodoList todos={todosWithUsers} />
     </div>
   );
 }
 
-function todosWithUsers(todosArr, usersArr) {
+function getTodosWithUsers(todosArr, usersArr) {
   return todosArr.map(todo => ({
     ...todo,
     user: usersArr.find(elem => elem.id === todo.userId),

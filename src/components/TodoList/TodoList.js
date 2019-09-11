@@ -9,8 +9,15 @@ const TodoList = ({ todos }) => (
   </div>
 );
 
+const todoListShape = PropTypes.shape({
+  userid: PropTypes.number,
+  id: PropTypes.number,
+  title: PropTypes.string,
+  completed: PropTypes.bool,
+});
+
 TodoList.propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.shape).isRequired,
+  todos: PropTypes.arrayOf(PropTypes.shape(todoListShape)).isRequired,
 };
 
 export default TodoList;
