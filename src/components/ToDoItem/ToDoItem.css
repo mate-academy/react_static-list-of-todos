@@ -1,4 +1,4 @@
-.todoitem {
+.todo-item {
   border: 1px solid blue;
   width: 250px;
   height: 300px;
@@ -6,7 +6,7 @@
   background-color: cornflowerblue;
 }
 
-.todoitem:hover {
+.todo-item:hover {
   background-color: deepskyblue;
 }
 
@@ -19,14 +19,14 @@
   margin-bottom: 10px;
 }
 
-.todoitem-list__item-article {
+.todo-item-list__item-article {
   font-size: 12px;
   font-weight: bold;
   margin-bottom: 40px;
   height: 50px;
 }
 
-.todoitem-list {
+.todo-item-list {
   text-align: left;
 }
 
@@ -34,7 +34,7 @@
   list-style-type: none;
 }
 
-.todoitem-list__item-status {
+.todo-item-list__item-status {
   text-align: right;
   margin-right: 30px;
 }

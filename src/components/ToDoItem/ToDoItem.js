@@ -5,13 +5,13 @@ import User from '../User/User';
 
 function ToDoItem({ todo }) {
   return (
-    <div className={todo.completed ? 'todoitem' : 'todoitem completed'}>
-      <ul className="todoitem-list">
-        <li className="todoitem-list__item-status item">
+    <div className={todo.completed ? 'todo-item' : 'todo-item completed'}>
+      <ul className="todo-item-list">
+        <li className="todo-item-list__item-status item">
           {todo.completed ? '\u2714' : '\u2717'}
           {todo.id}
         </li>
-        <li className="todoitem-list__item-article item">{todo.title}</li>
+        <li className="todo-item-list__item-article item">{todo.title}</li>
       </ul>
       <User user={todo.user} />
     </div>
