@@ -1,0 +1,21 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid maroon;
+  border-radius: 10px;
+  background-color: khaki;
+
+  &__name {
+    text-align: center;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: 600;
+    color: maroon;
+  }
+
+  &__text {
+    font-size: 1em;
+    letter-spacing: 1px;
+  }
+}
