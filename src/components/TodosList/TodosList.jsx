@@ -5,11 +5,9 @@ import { TodoListProps } from '../../constants/PropTypes';
 
 function TodosList({ todos }) {
   return (
-    <>
-      {todos.map(todo => (
-        <Todo key={todo.id} todo={todo} />
-      ))}
-    </>
+    {todos.map(todo => (
+      <Todo key={todo.id} todo={todo} />
+    ))}
   );
 }
 
