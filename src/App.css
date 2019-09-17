@@ -2,3 +2,9 @@
   text-align: center;
   display: flex;
 }
+
+h1 {
+  margin: 0;
+  text-align: center;
+  background-color: antiquewhite;
+}
