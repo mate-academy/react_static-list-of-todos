@@ -5,8 +5,10 @@ import todos from '../../api/todos';
 import users from '../../api/users';
 
 const todosWithUser = [];
+
 todos.forEach((todo) => {
   const todoWithUser = { ...todo };
+
   todoWithUser.user = users.find(user => user.id === todo.userId);
   todosWithUser.push(todoWithUser);
 });
