@@ -15,9 +15,8 @@ function getToDosWithUsers(todoList, usersList) {
 }
 
 const toDoUsersList = getToDosWithUsers(todos, users);
-console.dir(toDoUsersList)
-function App() {
 
+function App() {
   return (
     <div className = "App ui grid centered">
       <ToDoList todos = { toDoUsersList }/>
