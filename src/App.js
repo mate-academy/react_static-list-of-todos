@@ -14,12 +14,10 @@ function getToDosWithUsers(todoList, usersList) {
   );
 }
 
-const toDoUsersList = getToDosWithUsers(todos, users);
-
 function App() {
   return (
     <div className = "App ui grid centered">
-      <ToDoList todos = { toDoUsersList }/>
+      <ToDoList todos = { getToDosWithUsers(todos, users) }/>
     </div>
   );
 }
