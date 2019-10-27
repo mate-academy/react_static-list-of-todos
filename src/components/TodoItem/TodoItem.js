@@ -10,7 +10,7 @@ const TodoItem = ({ title, user, isCompleted }) => (
     {isCompleted ? (
       <Table.Cell positive>
         <Icon name="checkmark" />
-        Approved
+        Completed
       </Table.Cell>
     ) : (
       <Table.Cell negative>
@@ -25,7 +25,9 @@ const TodoItem = ({ title, user, isCompleted }) => (
 TodoItem.propTypes = {
   title: PropTypes.string.isRequired,
   isCompleted: PropTypes.bool.isRequired,
-  user: PropTypes.object.isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default TodoItem;
