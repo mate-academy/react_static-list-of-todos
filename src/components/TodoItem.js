@@ -9,7 +9,7 @@ function TodoItem({ todo }) {
       <User user={todo.user} />
       <Table.Cell positive={todo.completed} negative={!todo.completed}>
         <Icon name={`${todo.completed ? 'checkmark' : 'close'}`} />
-       Requires call
+        { todo.completed ? `Completed` : `Not completed` }
       </Table.Cell>
     </Table.Row>
   );

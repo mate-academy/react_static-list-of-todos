@@ -55,3 +55,5 @@ Create and use three components: `TodoList` (for the whole list), `TodoItem` (fo
 - `build/` - directory for built pages
 
 You should be writing code in `src/` directory.
+
+DEMO LINK --- https://dmitriymush.github.io/react_static-list-of-todos/
