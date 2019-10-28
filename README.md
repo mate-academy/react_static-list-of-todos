@@ -2,7 +2,7 @@
 
 ## Demo link
 
-MY_LINK: `[DEMO LINK](https://karpyshynroman.github.io/react_static-list-of-todos/)`
+[Link](https://karpyshynroman.github.io/react_static-list-of-todos/ ) <br>
 
 
 ## Task 
