@@ -1,6 +1,7 @@
 import React from 'react';
 import User from '../User/User';
-import { Icon } from 'semantic-ui-react';
+import MarkTrue from '../mark/MarkTrue';
+import MarkFalse from '../mark/MarkFalse';
 
 function ToDoItem({ todo }) {
   return (
@@ -8,8 +9,7 @@ function ToDoItem({ todo }) {
       <td>{ todo.title }</td>
       <User user={todo.user} />
       <td>
-        {todo.completed ? <Icon color='green' name='checkmark' /> : <Icon color='red' name='close' />}
-        { todo.completed ? `Completed` : `Not completed` }
+        {todo.completed ? <MarkTrue /> : <MarkFalse />}
       </td>
     </tr>
   );
