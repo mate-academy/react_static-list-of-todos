@@ -1,3 +1,8 @@
 .App {
   text-align: center;
 }
+
+a:hover {
+  color: cadetblue;
+  transition: color 0.5s;
+}
