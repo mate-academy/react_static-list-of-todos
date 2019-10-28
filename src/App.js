@@ -3,8 +3,20 @@ import './App.css';
 
 import todos from './api/todos';
 import users from './api/users';
+import TodoList from './components/TodoList/TodoList';
+
+function getTodosWithUsers(todosList, usersList) {
+  todosList.forEach((todo) => {
+    // eslint-disable-next-line no-param-reassign
+    todo.user = usersList.find(user => user.id === todo.userId);
+  });
+
+  return todosList;
+}
 
 function App() {
+  const todosWithUsers = getTodosWithUsers(todos, users);
+
   return (
     <div className="App">
       <h1>Static list of todos</h1>
@@ -17,6 +29,7 @@ function App() {
         <span>Users: </span>
         {users.length}
       </p>
+      <TodoList todos={todosWithUsers} />
     </div>
   );
 }
