@@ -6,6 +6,7 @@ const TodoItem = ({ todo }) => (
   <tr>
     <td>{todo.title}</td>
     <User user={todo.user} />
+
     {todo.completed ? (
       <td positive>
         Approved
