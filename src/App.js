@@ -18,9 +18,7 @@ function App() {
   const preparedTodos = getTodosWithUsers(todos, users);
 
   return (
-    <>
-      <TodoList todos={preparedTodos} />
-    </>
+    <TodoList todos={preparedTodos} />
   );
 }
 
