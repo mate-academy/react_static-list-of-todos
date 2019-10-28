@@ -23,7 +23,14 @@ const TodoTable = () => (
       </Table.Row>
     </Table.Header>
     <Table.Body>
-      {todosWithUser.map(todo => <TodoItem title={todo.title} isCompleted={todo.completed} user={todo.user} />)}
+      {todosWithUser.map(todo => (
+        <TodoItem
+          key={todo.id}
+          title={todo.title}
+          isCompleted={todo.completed}
+          user={todo.user}
+        />
+      ))}
     </Table.Body>
   </Table>
 );

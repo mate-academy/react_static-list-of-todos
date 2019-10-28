@@ -17,8 +17,7 @@ const TodoItem = ({ title, user, isCompleted }) => (
         <Icon name="close" />
         In procces
       </Table.Cell>
-    )
-    }
+    )}
   </tr>
 );
 
