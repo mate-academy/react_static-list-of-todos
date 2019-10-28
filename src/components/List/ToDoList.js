@@ -14,10 +14,10 @@ function ToDoList({ todos }) {
             Title
           </th>
           <th className="text-info">
-            Status
+            Name
           </th>
           <th className="text-info">
-            Name
+            Status
           </th>
         </tr>
         </thead>
