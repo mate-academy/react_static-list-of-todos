@@ -2,7 +2,7 @@
 
 ## Demo link
 
-Add link here: `[DEMO LINK](https://<your_account>.github.io/<repo_name>/)`
+[Link](https://karpyshynroman.github.io/react_static-list-of-todos/ ) <br>
 
 
 ## Task 
