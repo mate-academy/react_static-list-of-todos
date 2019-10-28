@@ -15,7 +15,7 @@ function ToDoItem({todo}) {
         </td>
         <td>
           {todo.completed ? (<span className="text-success">Completed</span>)
-            : <span className="text-danger">In Progress</span>}
+            : (<span className="text-danger">In Progress</span>)}
         </td>
       </tr>
 

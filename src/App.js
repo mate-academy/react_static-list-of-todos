@@ -15,7 +15,7 @@ function getTodosWithUsers(todoList, userList) {
 
 function App() {
   const preparedTodos = getTodosWithUsers(todos, users);
-
+  console.log(preparedTodos);
   return (
     <div className="App">
       <ToDoList todos={preparedTodos} />
