@@ -2,7 +2,7 @@ import React from 'react';
 import "./TodoList.css";
 import TodoItem from '../todoitem/TodoItem';
 
-const TodoList = (props) => {
+const TodoList = ({todos}) => {
   return (
     <table class="ui celled table">
       <thead>
@@ -12,7 +12,7 @@ const TodoList = (props) => {
         <th>Status</th>
       </thead>
       <tbody>
-        {props.todos.map((todo) => <TodoItem todo={todo} />)};
+        {todos.map((todo) => <TodoItem todo={todo} key={todo.id} />)};
       </tbody>
     </table>
   )

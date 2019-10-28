@@ -1,15 +1,26 @@
 import React from 'react';
 import User from '../user/User';
 
-function TodoItem(props) {
+function TodoItem({todo}) {
+  const {title, completed, user: {email, name}} = todo;
+  const tdClassName = completed ? (
+      'positive'
+    ) : (
+      'negative'
+    );
+
+  const completedIcon = completed ? (
+    <i className="icon checkmark"></i>
+  ) : (
+    <i className="icon close"></i>
+  );
+
   return (
     <tr>
-      <td>{props.todo.title}</td>
-      <td><User user={props.todo.user} /></td>
-      <td>{props.todo.user.email}</td>
-      <td className={props.todo.completed ? 'positive' : 'negative'}>
-        {props.todo.completed ? <i className="icon checkmark"></i>
-          :<i className="icon close"></i>}{props.todo.completed.toString()}</td>
+      <td>{title}</td>
+      <td><User name={name} /></td>
+      <td>{email}</td>
+      <td className= {tdClassName}>{completedIcon}{completed.toString()}</td>
     </tr>
   )
 }

@@ -6,11 +6,13 @@ import users from './api/users';
 
 import TodoList from './components/todolist/TodoList';
 
-function getTodosWithUsers(todosArr, usersArr) {
-  todosArr.forEach(todo => todo.user = usersArr
-    .find(user => todo.userId === user.id));
+function getTodosWithUsers(todos, users) {
 
-  return todosArr;
+  return todos.map(todo => {
+    const userObj = users.find(user => todo.userId === user.id);
+    todo.user = userObj;
+    return todo;
+  });
 }
 
 function App() {
