@@ -2,8 +2,7 @@ import React from 'react';
 import User from '../User/User';
 import './todoitem.css';
 
-function Todoitem(props) {
-  const {todo, userTodo} = props;
+function Todoitem( {todo, userTodo} ) {
   return (
     <div className="todo-item">
       <h3>{todo.title}</h3>
