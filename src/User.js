@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 function User({ user }) {
   return (
-    <>
+    <td className="cell">
       {user.name}
-    </>
+    </td>
   );
 }
 
