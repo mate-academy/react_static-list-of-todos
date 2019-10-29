@@ -3,21 +3,25 @@ import './App.css';
 
 import todos from './api/todos';
 import users from './api/users';
+import getTodosWithUsers from './getTodosWithUsers';
+import GetTabeleTR from './GetTabeleTR';
+
+getTodosWithUsers(todos, users);
 
 function App() {
   return (
-    <div className="App">
-      <h1>Static list of todos</h1>
-      <p>
-        <span>Todos: </span>
-        {todos.length}
-      </p>
-
-      <p>
-        <span>Users: </span>
-        {users.length}
-      </p>
-    </div>
+    <table className="App">
+      <thead>
+        <tr>
+          <th>TODO item</th>
+          <th>Status</th>
+          <th>User</th>
+        </tr>
+      </thead>
+      <tbody>
+      <GetTabeleTR props={todos} />
+      </tbody>
+    </table>
   );
 }
 
