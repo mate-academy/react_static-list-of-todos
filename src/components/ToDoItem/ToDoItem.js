@@ -1,7 +1,5 @@
 import React from 'react';
 import User from '../User/User';
-import MarkTrue from '../mark/MarkTrue';
-import MarkFalse from '../mark/MarkFalse';
 
 function ToDoItem({ todo }) {
   return (
