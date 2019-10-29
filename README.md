@@ -2,7 +2,7 @@
 
 ## Demo link
 
-Add link here: `[DEMO LINK](https://<your_account>.github.io/<repo_name>/)`
+[DEMO LINK](https://olesyamogil.github.io/react_static-list-of-todos)
 
 
 ## Task 
@@ -55,3 +55,4 @@ Create and use three components: `TodoList` (for the whole list), `TodoItem` (fo
 - `build/` - directory for built pages
 
 You should be writing code in `src/` directory.
+
