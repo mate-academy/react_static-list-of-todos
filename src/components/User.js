@@ -1,9 +1,9 @@
 import React from 'react';
 
-function User(props) {
+function User({ name }) {
   return (
     <>
-      {props.name.name}
+      {name.name}
     </>
   );
 }

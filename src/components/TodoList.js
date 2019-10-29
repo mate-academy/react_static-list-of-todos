@@ -11,7 +11,7 @@ function TodoList({ todos }) {
           <th>Completeness</th>
         </thead>
         <tbody>
-          {todos.map(todo => <TodoItem todo={todo} />)}
+          {todos.map(todo => <TodoItem todo={todo} key={todo.id} />)}
         </tbody>
       </table>
     </div>
