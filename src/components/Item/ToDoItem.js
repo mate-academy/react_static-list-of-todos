@@ -1,21 +1,24 @@
 import React from 'react';
 import ToDoUser from '../User/ToDoUser';
 
-function ToDoItem({todo}) {
+function ToDoItem({ todo }) {
+  const {
+    id, title, user, completed,
+  } = todo;
   return (
       <tr>
         <td>
-          {todo.id}
+          {id}
         </td>
         <td>
-          {todo.title}
+          {title}
         </td>
         <td>
-          <ToDoUser user={todo.user} />
+          <ToDoUser user={user} />
         </td>
         <td>
-          {todo.completed ? (<span className="text-success">Completed</span>)
-            : (<span className="text-danger">In Progress</span>)}
+          {completed ? (<span>&#128077;</span>)
+            : (<span>&#9940;</span>)}
         </td>
       </tr>
 
