@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TodoItem from '../todoItem/TodoItem';
 
-function TodoList(props) {
+function TodoList({ todos }) {
   return (
     <table className="ui celled table">
       <thead>
@@ -13,7 +13,7 @@ function TodoList(props) {
         </tr>
       </thead>
       <tbody>
-        {props.todos.map(todo => <TodoItem todo={todo} />)}
+        {todos.map(todo => <TodoItem todo={todo} />)}
       </tbody>
     </table>
   );

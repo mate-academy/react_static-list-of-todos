@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function User(props) {
+function User({ name }) {
   return (
     <>
-      {props.name.name}
+      {name.name}
     </>
   );
 }
