@@ -2,10 +2,8 @@ import React from 'react';
 import TodoItem from '../TodoItem/TodoItem';
 import './TodoList.css';
 
-function TodoList(props) {
-  // eslint-disable-next-line react/prop-types
-  const { todos } = props;
-
+// eslint-disable-next-line react/prop-types
+function TodoList({ todos }) {
   return (
     <table className="todo-list">
       <thead className="todo-list-head">
