@@ -1,7 +1,7 @@
 import React from 'react';
 import TodoItem from './TodoItem';
 
-function TodoList(props) {
+function TodoList({ todos }) {
   return (
     <div id="wrapper">
       <table className="todo ui celled table">
@@ -11,7 +11,7 @@ function TodoList(props) {
           <th>Completeness</th>
         </thead>
         <tbody>
-          {props.todos.map(todo => <TodoItem todo={todo} />)}
+          {todos.map(todo => <TodoItem todo={todo} />)}
         </tbody>
       </table>
     </div>
