@@ -6,14 +6,10 @@ import users from './api/users';
 import TodoList from './components/TodoList/TodoList';
 
 function getTodosWithUsers(todosList, usersList) {
-  const todosWithUsers = [...todosList];
-
-  todosWithUsers.forEach((todo) => {
-    // eslint-disable-next-line no-param-reassign
-    todo.user = usersList.find(user => user.id === todo.userId);
-  });
-
-  return todosWithUsers;
+  return todosList.map(todo => ({
+    ...todo,
+    user: usersList.find(user => user.id === todo.userId),
+  }));
 }
 
 function App() {
