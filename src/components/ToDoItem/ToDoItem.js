@@ -9,9 +9,10 @@ function ToDoItem({ todo }) {
       <td>{ todo.title }</td>
       <User user={todo.user} />
       <td>
-        {todo.completed ? 
+        {todo.completed ? (
           <Icon color='green' name='checkmark' />
-          : <Icon color='red' name='close' />}
+          ) : ( <Icon color='red' name='close' />}
+          )
       </td>
     </tr>
   );
