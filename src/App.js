@@ -10,7 +10,11 @@ function getTodosWithUsers() {
   const map = new Map();
 
   users.forEach((user) => {
-    map.set(user.id, user);
+    const shortUser = {};
+
+    shortUser.email = user.email;
+    shortUser.name = user.name;
+    map.set(user.id, shortUser);
   });
 
   return todos.map((todo) => {
