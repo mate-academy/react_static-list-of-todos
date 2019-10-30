@@ -1,0 +1,24 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th {
+  text-align: left;
+  padding: 10px;
+  height: 20px;
+  border: 1px solid black;
+}
+
+th {
+  background: #A1B9D5;
+}
+
+.correct {
+  background: #C0DFD0;
+}
+
+.incorrect {
+  background: #F9D1D1;
+}
+/*# sourceMappingURL=table.css.map */
