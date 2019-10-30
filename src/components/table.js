@@ -3,7 +3,6 @@ import './table.css';
 import todos from '../api/todos';
 import users from '../api/users';
 
-
 /* const data = () => {
  return todos.map((item) => {
    return {
@@ -34,7 +33,6 @@ console.log(data());  */
 } */
 
 const data = () => {
-
   const arrData = [];
 
     for (let item of todos) {
@@ -71,6 +69,6 @@ const Table = () => {
         </tbody>
     </table>
   )
-}
+};
 
 export default Table;
