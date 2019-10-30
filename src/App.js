@@ -14,9 +14,7 @@ function getTodosWithUsers(todoList, userList) {
 
 function App() {
   return (
-    <>
-      <TodoList todos={getTodosWithUsers(todos, users)} />
-    </>
+    <TodoList todos={getTodosWithUsers(todos, users)} />
   );
 }
 
