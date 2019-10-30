@@ -1,11 +1,11 @@
 import React from 'react';
 import User from '../User/User';
 
-function TodoItem({ todo }) {
+function TodoItem({ todo: { title, completed } }) {
   return (
     <tr>
-      <td>{todo.title}</td>
-      <td>{todo.completed ? 'Completed' : 'Working'}</td>
+      <td>{title}</td>
+      <td>{completed ? 'Completed' : 'Working'}</td>
       <td>
         <User user={todo.user} />
       </td>
