@@ -8,22 +8,17 @@ import users from './api/users';
 import TodoList from './components/todoList/TodoList';
 
 function getTodosWithUsers() {
-  return todos.map((todo) => {
-    const todoWithUsers = todo;
-
-    todoWithUsers.user = users.find(user => user.id === todo.userId);
-
-    return todoWithUsers;
-  });
+  return todos.map(todo => ({
+    ...todo,
+    user: users.find(user => user.id === todo.userId),
+  }));
 }
 
 const preparedTodos = getTodosWithUsers();
 
 function App() {
   return (
-    <>
-      <TodoList todos={preparedTodos} />
-    </>
+    <TodoList todos={preparedTodos} />
   );
 }
 
