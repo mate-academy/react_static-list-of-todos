@@ -10,8 +10,8 @@ function ToDoItem({ todo }) {
         {todo.completed ? (
           <Icon color='green' name='checkmark' />
           ) : ( 
-          <Icon color='red' name='close' />}
-          )
+          <Icon color='red' name='close' />)
+          }
       </td>
     </tr>
   );
