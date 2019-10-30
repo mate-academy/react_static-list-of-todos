@@ -7,9 +7,9 @@ import ToDoList from './components/ToDoList/ToDoList';
 
 function getToDosWithUsers(todoList, usersList) {
   return todoList.map(todo => {
-    return (
+    return 
       { ...todo,
-        user: usersList.find(user => user.id === todo.userId) })
+        user: usersList.find(user => user.id === todo.userId)}
       }
   );
 }
