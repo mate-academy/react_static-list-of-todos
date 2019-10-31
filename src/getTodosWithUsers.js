@@ -2,13 +2,11 @@ import './App.css';
 
 function getTodosWithUsers(todos, users) {
 
-  for (let user of users) {
-    for (let todo of todos) {
-      if (user.id === todo.userId) {
-        todo.user = user;
-      }
-    }
-  }
-}
+  return todos.map((todo) => {
+    const currentUser = users.find(user => user.id === todo.userId);
+    todo.user = currentUser;
 
+    return todo;
+  });
+}
 export default getTodosWithUsers;

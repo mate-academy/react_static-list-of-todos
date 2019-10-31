@@ -6,8 +6,6 @@ import users from './api/users';
 import getTodosWithUsers from './getTodosWithUsers';
 import GetTabeleTR from './GetTabeleTR';
 
-getTodosWithUsers(todos, users);
-
 function App() {
   return (
     <table className="App">
@@ -19,7 +17,7 @@ function App() {
         </tr>
       </thead>
       <tbody>
-      <GetTabeleTR props={todos} />
+      <GetTabeleTR props={getTodosWithUsers(todos, users)} />
       </tbody>
     </table>
   );
