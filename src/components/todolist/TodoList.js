@@ -13,7 +13,6 @@ function TodoList({ todos }) {
       </thead>
       <tbody>
         {todos.map(todo => <TodoItem todo={todo} />)}
-        ;
       </tbody>
     </table>
   );
