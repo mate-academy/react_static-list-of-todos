@@ -4,7 +4,7 @@ import todos from '../../api/todos';
 import users from '../../api/users';
 import TodoRow from '../TodoRow/TodoRow';
 
-function getTodosWithUsers(todos, users) {
+const getTodosWithUsers = function(todos, users) {
   return (
     todos.map(todo => <TodoRow
     todo={todo}
