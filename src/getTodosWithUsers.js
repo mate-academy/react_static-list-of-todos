@@ -4,9 +4,10 @@ function getTodosWithUsers(todos, users) {
 
   return todos.map((todo) => {
     const currentUser = users.find(user => user.id === todo.userId);
-    todo.user = currentUser;
+    let userMutated = todo;
+    userMutated.user = currentUser;
 
-    return todo;
+    return userMutated;
   });
 }
 export default getTodosWithUsers;
