@@ -4,6 +4,18 @@ import './App.css';
 import todos from './api/todos';
 import users from './api/users';
 
+import TodoList from './components/todolist/TodoList';
+
+function getTodosWithUsers() {
+  const map = new Map();
+
+  users.forEach((user) => {
+    map.set(user.id, user);
+  });
+
+  return todos.map(todo => ({ ...todo, user: map.get(todo.userId) }));
+}
+
 function App() {
   return (
     <div className="App">
@@ -12,11 +24,13 @@ function App() {
         <span>Todos: </span>
         {todos.length}
       </p>
-
       <p>
-        <span>Users: </span>
-        {users.length}
+        <span>
+          Users:
+          {users.length}
+        </span>
       </p>
+      <TodoList todos={getTodosWithUsers()} />
     </div>
   );
 }
