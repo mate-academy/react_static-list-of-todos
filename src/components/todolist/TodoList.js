@@ -12,7 +12,7 @@ function TodoList({ todos }) {
         <th>Status</th>
       </thead>
       <tbody>
-        {todos.map(todo => <TodoItem todo={todo} />)}
+        {todos.map(todo => <TodoItem todo={todo} key={todo.id} />)}
       </tbody>
     </table>
   );
