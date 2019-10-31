@@ -10,20 +10,10 @@ function getTodosWithUsers() {
   const map = new Map();
 
   users.forEach((user) => {
-    const shortUser = {};
-
-    shortUser.email = user.email;
-    shortUser.name = user.name;
-    map.set(user.id, shortUser);
+    map.set(user.id, user);
   });
 
-  return todos.map((todo) => {
-    const result = Object.create(todo);
-
-    result.user = map.get(todo.userId);
-
-    return result;
-  });
+  return todos.map(todo => ({ ...todo, user: map.get(todo.userId) }));
 }
 
 function App() {
