@@ -5,7 +5,7 @@ import TodoItem from './TodoItem';
 
 function TodoList(props) {
   return (
-    <table>
+    <table align="center">
       <thead>
         <tr>
           <th>title</th>
@@ -15,7 +15,7 @@ function TodoList(props) {
       </thead>
       <tbody>
         {
-          props.todos.map(item => (<TodoItem todo={item} key={item.id} />))
+          props.todos.map(item => <TodoItem todo={item} key={item.id} />)
         }
       </tbody>
     </table>
