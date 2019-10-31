@@ -5,11 +5,11 @@ import todos from './api/todos';
 import users from './api/users';
 import TodoList from './components/todoList';
 
-function getTodoWithUsers(sodot, sresu) {
-  return sodot.map((todo) => {
+function getTodoWithUsers() {
+  return todos.map((todo) => {
     const todoUsers = {
       ...todo,
-      user: sresu.find(user => user.id === todo.userId),
+      user: users.find(user => user.id === todo.userId),
     };
 
     return todoUsers;
