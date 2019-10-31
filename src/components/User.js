@@ -1,7 +1,7 @@
 import React from 'react';
 
-function User({ name }) {
-  return name.name;
+function User({ user }) {
+  return <td>{user.name}</td>;
 }
 
 export default User;

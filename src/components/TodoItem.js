@@ -5,7 +5,7 @@ function TodoItem({ todo: { user, title, completed } }) {
   return (
     <tr className={completed ? 'positive' : 'negative'}>
       <td>{title}</td>
-      <td><User name={user} /></td>
+      <User user={user} />
       <td>{completed ? 'Completed' : 'Failed'}</td>
     </tr>
   );
