@@ -13,6 +13,8 @@ function getTodosWithUsers() {
   }));
 }
 
+const TodosWithUsers = getTodosWithUsers();
+
 function App() {
   return (
     <>
@@ -30,7 +32,7 @@ function App() {
           {users.length}
         </p>
       </div>
-      <TodoList todos={getTodosWithUsers()} />
+      <TodoList todos={TodosWithUsers} />
     </>
   );
 }
