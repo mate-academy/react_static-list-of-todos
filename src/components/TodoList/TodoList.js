@@ -6,9 +6,9 @@ import TodoRow from '../TodoRow/TodoRow';
 
 const getTodosWithUsers = () => (
   todos.map((todo) => {
-    const user = users.find(member => todo.userId === member.id);
+    todo.user = users.find(member => todo.userId === member.id);
 
-    return <TodoRow todo={todo} user={user} />;
+    return <TodoRow todo={todo} />;
   })
 );
 

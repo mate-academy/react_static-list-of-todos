@@ -5,10 +5,10 @@ import TodoItem from '../TodoItem/TodoItem';
 import TodoUser from '../TodoUser/TodoUser';
 import TodoResult from '../TodoResult/TodoResult';
 
-const TodoRow = ({ todo, user }) => (
+const TodoRow = ({ todo }) => (
   <tr className="todo__row">
     <TodoItem item={todo.title} />
-    <TodoUser user={user.name} email={user.email} />
+    <TodoUser user={todo.user.name} email={todo.user.email} />
     <TodoResult result={todo.completed} />
   </tr>
 );
@@ -19,10 +19,8 @@ TodoRow.propTypes = {
     id: PropTypes.number.isRequired,
     userId: PropTypes.number.isRequired,
     completed: PropTypes.bool.isRequired,
-  }).isRequired,
-  user: PropTypes.shape({
-    email: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
+    user: PropTypes.objectOf(PropTypes.string.isRequired,)
+      .isRequired,
   }).isRequired,
 };
 
