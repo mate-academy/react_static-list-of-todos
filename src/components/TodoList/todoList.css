@@ -1,0 +1,28 @@
+.todo {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.todo__row {
+  width: 100%;
+}
+
+.todo__cell {
+  text-align: left;
+  padding: 10px;
+  height: 20px;
+  border: 1px solid black;
+}
+
+.todo__cell_upper {
+  background: #A1B9D5;
+}
+
+.correct {
+  background: #C0DFD0;
+}
+
+.incorrect {
+  background: #F9D1D1;
+}
+/*# sourceMappingURL=todoList.css.map */
