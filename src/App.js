@@ -9,7 +9,7 @@ import TodoList from './TodoList';
 function getTodosWithUsers(todosList, usersList) {
   return todosList.map(todo => ({
     ...todo,
-    user: usersList.find(user => user.id === todo.userId),
+    user: usersList.find(person => person.id === todo.userId),
   }));
 }
 
