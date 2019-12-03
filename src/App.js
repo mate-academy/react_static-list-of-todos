@@ -2,20 +2,16 @@
 
 import React from 'react';
 import './App.css';
-import TodoItem from './components/TodoItem';
+import TodoList from './components/TodoList';
 
 import todos from './api/todos';
 import users from './api/users';
 
 function App() {
-  const todosWithUsers = getTodosWithUsers(todos, users);
-
   return (
     <>
       <h1>List of todos</h1>
-      <ul>
-        {todosWithUsers.map(todo => <TodoItem todo={todo} key={todo.id} />)}
-      </ul>
+      <TodoList todos={getTodosWithUsers(todos, users)} />
     </>
   );
 }
