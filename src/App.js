@@ -4,7 +4,16 @@ import './App.css';
 import todos from './api/todos';
 import users from './api/users';
 
+import TodoList from './TodoList';
+
 function App() {
+  const todoArr = [...todos];
+  const todosWithUsers = todoArr.map((todo) => {
+    const user = users.find(person => person.id === todo.userId);
+
+    return { ...todo, user };
+  });
+
   return (
     <div className="App">
       <h1>Static list of todos</h1>
@@ -13,10 +22,7 @@ function App() {
         {todos.length}
       </p>
 
-      <p>
-        <span>Users: </span>
-        {users.length}
-      </p>
+      <TodoList todos={todosWithUsers} />
     </div>
   );
 }
