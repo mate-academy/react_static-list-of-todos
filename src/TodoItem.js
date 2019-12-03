@@ -3,11 +3,10 @@ import PropTypes from 'prop-types';
 import User from './User';
 
 const TodoItem = ({ todo }) => (
-
   <tr>
     <td>{todo.id}</td>
     <td>{todo.title}</td>
-    <td>{todo.completed ? 'true' : 'false'}</td>
+    <td>{todo.completed ? 'finished' : 'not finished'}</td>
     <td><User user={todo.user} /></td>
   </tr>
 );
