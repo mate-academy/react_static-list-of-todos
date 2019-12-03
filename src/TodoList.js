@@ -4,7 +4,7 @@ import TodoItem from './TodoItem';
 
 const TodoList = props => (
   <dl>
-    {props.todos.map(todo => (
+    {todos.map(todo => (
       <TodoItem todo={todo} key={todo.id} />
     ))}
   </dl>
