@@ -1,3 +1,15 @@
 .App {
   text-align: center;
 }
+
+.table {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+  background-color: rgb(194, 166, 175);
+}
+
+td {
+  background-color: white;
+  text-align: left;
+}
