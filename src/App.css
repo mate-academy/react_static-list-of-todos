@@ -4,7 +4,6 @@
 
 .table {
   margin: auto;
-  padding: 5px;
   border: 3px solid #95cef0;
   border-collapse: collapse;
 }
@@ -16,7 +15,6 @@
 
 .table__heading {
   background-color: #95cef0;
-  border-bottom: 3px solid #95cef0;
 }
 
 .table__item {
