@@ -16,7 +16,6 @@ const App = () => {
   return (
     <div className="App">
       <h1>Static list of todos</h1>
-      <span>Todos: </span>
       <TodoList list={getTodosWithUsers(todos, users)} />
     </div>
   );
