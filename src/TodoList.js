@@ -5,14 +5,7 @@ import TodoItem from './TodoItem';
 const TodoList = props => (
   <table>
     <thead>
-      <tr style={
-        {
-          backgroundColor: '#8e8ee3',
-          fontWeight: 'bold',
-          height: '15vh',
-        }
-      }
-      >
+      <tr className="head">
         <td>ID</td>
         <td>Title</td>
         <td>User name</td>

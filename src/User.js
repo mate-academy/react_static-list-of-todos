@@ -1,7 +1,10 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
-function User(param) {
-  return <td>{param.user.name}</td>;
+function User({ user }) {
+  return <td>{user.name}</td>;
 }
+
+User.propTypes = { user: PropTypes.objectOf(PropTypes.any).isRequired };
 
 export default User;
