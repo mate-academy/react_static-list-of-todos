@@ -13,7 +13,7 @@
   background-color: lavenderblush;
 }
 
-.tr:hover {
+.td:hover {
   background-color: lightcoral;
   cursor: pointer;
 }

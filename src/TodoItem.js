@@ -4,9 +4,9 @@ import Users from './Users';
 
 const TodoItem = ({ todo }) => (
   <tr>
-    <td className="tr">{todo.id}</td>
-    <td className="tr">{todo.title}</td>
-    <td className="tr">
+    <td className="td">{todo.id}</td>
+    <td className="td">{todo.title}</td>
+    <td className="td">
       <Users user={todo.user} />
     </td>
   </tr>
