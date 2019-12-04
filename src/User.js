@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function User({ email, name }) {
+function User({ user }) {
   return (
-    <a href={`mailto:${email}`}>{name}</a>
+    <a href={`mailto:${user.email}`}>{user.name}</a>
   );
 }
 
 User.propTypes = {
-  email: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    email: PropTypes.string,
+    name: PropTypes.string,
+  }).isRequired,
 };
 
 export default User;

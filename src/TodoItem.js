@@ -6,7 +6,7 @@ const TodoItem = ({ todo }) => (
   <tr>
     <td>{todo.id}</td>
     <td>{todo.title}</td>
-    <td><User email={todo.user.email} name={todo.user.name} /></td>
+    <td><User userData={todo.user} /></td>
     <td>{todo.completed ? 'Done' : 'In progress'}</td>
   </tr>
 );
