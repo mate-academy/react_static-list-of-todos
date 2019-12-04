@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TodoItem from './TodoItem';
 
-const TodoList = props => (
+const TodoList = ({ todos }) => (
   <ol>
-    {props.todos.map(todo => (
+    {todos.map(todo => (
       <TodoItem todo={todo} key={todo.id} />
     ))}
   </ol>

@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Users = props => (
+const Users = ({ user }) => (
   <p className="user-name">
     Assigned to:
     {' '}
-    {props.user.name}
+    {user.name}
   </p>
 );
 

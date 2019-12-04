@@ -2,20 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import User from './User';
 
-const TodoItem = (props) => {
+const TodoItem = ({ todo }) => {
   let result = '';
   let resultColor = '';
 
-  result = props.todo.completed ? 'Completed' : 'Not Completed';
-  resultColor = props.todo.completed ? 'result-done' : 'result-not-done';
+  result = todo.completed ? 'Completed' : 'Not Completed';
+  resultColor = todo.completed ? 'result-done' : 'result-not-done';
 
   return (
     <li className="list-item">
-      {props.todo.title}
+      {todo.title}
       <p className={resultColor}>
         {result}
       </p>
-      <User user={props.todo.user} />
+      <User user={todo.user} />
     </li>
   );
 };
