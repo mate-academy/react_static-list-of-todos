@@ -5,7 +5,7 @@ const ToDoList = ({ todos }) => (
   <table>
     <thead>
       <tr>
-        <th>ToDoList</th>
+        <th>Title</th>
         <th>User</th>
         <th>State</th>
       </tr>

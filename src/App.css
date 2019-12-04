@@ -1,4 +1,6 @@
-.App {
+.App,
+h1,
+td {
   text-align: center;
 }
 
@@ -13,10 +15,6 @@ tbody tr {
 
 tbody td:nth-child(3) {
   padding-left: 10px;
-}
-
-td {
-  text-align: center;
 }
 
 th {

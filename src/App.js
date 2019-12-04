@@ -18,7 +18,10 @@ function getTodosWithUsers(todosArr, usersArr) {
 
 function App() {
   return (
-    <ToDoList todos={preparedTodos} />
+    <>
+      <h1>To Do List</h1>
+      <ToDoList todos={preparedTodos} />
+    </>
   );
 }
 
