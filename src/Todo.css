@@ -1,0 +1,14 @@
+table {
+  text-align: center;
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+th {
+  color: blue;
+  border-bottom: 2px solid black;
+}
+
+tr {
+  border: 1px solid black;
+}
