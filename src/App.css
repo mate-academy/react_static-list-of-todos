@@ -1,3 +1,23 @@
-.App {
+.App__title {
   text-align: center;
+}
+
+.app__element {
+  font-size: 20px;
+}
+
+.app__title {
+  font-weight: 600;
+  color: blue;
+}
+
+.app__completed {
+  text-transform: uppercase;
+  color: brown;
+}
+
+.app__name {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 24px;
 }
