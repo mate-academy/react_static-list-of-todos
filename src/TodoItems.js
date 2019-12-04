@@ -2,28 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import User from './Users';
 
-function TodoItem(props) {
+function TodoItem({ todo }) {
   return (
     <tbody>
       <tr>
-        {/* eslint-disable-next-line react/prop-types */}
-        <td>{props.todo.id}</td>
-        {/* eslint-disable-next-line react/prop-types */}
-        <td>{props.todo.title}</td>
-        {/* eslint-disable-next-line react/prop-types */}
-        <td>{props.todo.completed ? 'Done' : 'Unfulfilled'}</td>
-        {/* eslint-disable-next-line react/prop-types */}
-        <User person={props.todo.user} />
+        <td>{todo.id}</td>
+        <td>{todo.title}</td>
+        <td>{todo.completed ? 'Done' : 'Unfulfilled'}</td>
+        <User person={todo.user} />
       </tr>
     </tbody>
   );
 }
 
-TodoItem.prototype = {
-  id: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  completed: PropTypes.bool,
-  user: PropTypes.string.isRequired,
-};
+TodoItem.propTypes = { todo: PropTypes.objectOf(PropTypes.any).isRequired };
 
 export default TodoItem;

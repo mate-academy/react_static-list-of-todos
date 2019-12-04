@@ -13,10 +13,10 @@ function App() {
 }
 
 function getTodosWithUsers(todo, user) {
-  return todo.map(i => (
+  return todo.map(item => (
     {
-      ...i,
-      user: user.find(person => person.id === i.userId),
+      ...item,
+      user: user.find(person => person.id === item.userId),
     }
   ));
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import './Todo.css';
+import PropTypes from 'prop-types';
 import TodoItem from './TodoItems';
 
-// eslint-disable-next-line react/prop-types
-function TodoList({ todos }) {
+function Todo({ todos }) {
   return (
     <table>
       <thead>
@@ -14,10 +14,12 @@ function TodoList({ todos }) {
           <th>User</th>
         </tr>
       </thead>
-      {todos.map(i => (<TodoItem todo={i} key={i.id} />
+      {todos.map(item => (<TodoItem todo={item} key={item.id} />
       ))}
     </table>
   );
 }
 
-export default TodoList;
+Todo.propTypes = { todos: PropTypes.objectOf(PropTypes.string).isRequired };
+
+export default Todo;

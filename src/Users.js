@@ -1,12 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function User(props) {
+function User({ person }) {
   return (
     <td>
-      {/* eslint-disable-next-line react/prop-types */}
-      {props.person.name}
+      {person.name}
     </td>
   );
 }
+
+User.propTypes = { person: PropTypes.objectOf(PropTypes.any).isRequired };
 
 export default User;
