@@ -1,3 +1,26 @@
 .App {
   text-align: center;
 }
+
+table {
+  width: 100%;
+  border-spacing: 2px;
+}
+
+th,
+td {
+  padding: 3px;
+}
+
+table tr:nth-child(even) {
+  background-color: rgb(217, 227, 252);
+}
+
+table tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+table th {
+  color: white;
+  background-color: navy;
+}
