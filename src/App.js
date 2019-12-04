@@ -5,13 +5,11 @@ import users from './api/users';
 import './style.css';
 import TodoList from './components/todoList/todoList';
 
-function getTodoWithUsers(todoItems, userItems) {
-  return todoItems.map(item => (
-    {
-      ...item,
-      user: userItems.find(person => person.id === item.userId),
-    }));
-}
+const getTodoWithUsers = (todoItems, userItems) => todoItems.map(item => (
+  {
+    ...item,
+    user: userItems.find(person => person.id === item.userId),
+  }));
 
 function App() {
   return (
