@@ -17,10 +17,10 @@ function getTodosWithUsers(todo, people) {
   });
 }
 
-export const todosUsers = getTodosWithUsers(todos, users);
-
 function App() {
-  return <TodoList />;
+  return (
+    <TodoList todosUsers={getTodosWithUsers(todos, users)} />
+  );
 }
 
 export default App;
