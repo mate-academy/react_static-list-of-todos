@@ -1,3 +1,29 @@
 .App {
   text-align: center;
 }
+
+table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+tbody tr {
+  border-bottom: 1px solid grey;
+}
+
+tbody td:nth-child(3) {
+  padding-left: 10px;
+}
+
+td {
+  text-align: center;
+}
+
+th {
+  padding: 5px;
+}
+
+thead tr {
+  background-color: #ffd700;
+  color: white;
+}

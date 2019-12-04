@@ -1,7 +1,7 @@
 import React from 'react';
 
-const User = ({ user: { username } }) => (
-  <td style={{ textAlign: 'center' }}>
+const User = ({ userData: { username } }) => (
+  <td>
     {username}
   </td>
 );

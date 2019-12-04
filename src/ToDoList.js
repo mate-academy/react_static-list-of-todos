@@ -2,10 +2,10 @@ import React from 'react';
 import TodoItem from './ToDoItem';
 
 const ToDoList = ({ todos }) => (
-  <table style={{ margin: 'auto', borderCollapse: 'collapse' }}>
+  <table>
     <thead>
-      <tr style={{ backgroundColor: '#FFD700', color: 'white' }}>
-        <th style={{ padding: '5px' }}>ToDoList</th>
+      <tr>
+        <th>ToDoList</th>
         <th>User</th>
         <th>State</th>
       </tr>

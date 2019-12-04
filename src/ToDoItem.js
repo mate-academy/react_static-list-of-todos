@@ -2,12 +2,12 @@ import React from 'react';
 import User from './User';
 
 const ToDoItem = ({ todo: { title, user, completed } }) => (
-  <tr style={{ borderBottom: '1px solid grey' }}>
+  <tr>
     <td style={{ backgroundColor: completed ? '#ADFF2F' : '#FFA07A' }}>
       {title}
     </td>
-    <User user={user} />
-    <td style={{ paddingLeft: '10px', color: completed ? 'green' : 'red' }}>
+    <User userData={user} />
+    <td style={{ color: completed ? 'green' : 'red' }}>
       {completed ? 'Done' : 'inProgress'}
     </td>
   </tr>
