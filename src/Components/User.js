@@ -1,7 +1,7 @@
-/* eslint-disable */
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const User = ({user}) => (  // eslint-disable-line
+const User = ({ user }) => (
   <>
     <ul>
       USER INFO:
@@ -36,5 +36,15 @@ const User = ({user}) => (  // eslint-disable-line
     </ul>
   </>
 );
+
+User.propTypes = { user: PropTypes.objectOf(PropTypes) };
+User.defaultProps = {
+  user: {
+    name: 'no name',
+    website: 'no website',
+    address: { zipcode: 'no address zipcode' },
+    company: { name: 'no company name' },
+  },
+};
 
 export default User;

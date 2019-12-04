@@ -37,6 +37,10 @@
     "*.css": [
       "stylelint",
       "git add"
+    ],
+    "*.js": [
+      "eslint",
+      "git add"
     ]
   },
   "browserslist": {

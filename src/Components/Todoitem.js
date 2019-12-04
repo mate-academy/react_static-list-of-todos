@@ -1,29 +1,18 @@
-/* eslint-disable */
 import React from 'react';
+import PropTypes from 'prop-types';
 import User from './User';
 
-const Todoitem = ({todo}) => {  // eslint-disable-line
+const Todoitem = ({ todo }) => {
   const completedStyle = () => {
-    const {completed} = todo;
+    const { completed } = todo;
 
     return completed === false
-      ? <span style={{color: `red`}}>not completed</span>
-      : <span style={{color: `green`}}>completed</span>;
+      ? <span style={{ color: `red` }}>not completed</span>
+      : <span style={{ color: `green` }}>completed</span>;
   };
 
   return (
-    <div style={{
-      padding: `5px`,
-      borderRadius: `5px`,
-      boxShadow: `1px 1px grey`,
-      float: `left`,
-      width: `32%`,
-      height: `25vw`,
-      fontSize: `1.5vw`,
-      backgroundColor: `#c9c3c3`,
-      margin: `2px 2px`,
-    }}
-    >
+    <div className="todo-item">
       <span>
         #:
         {todo.id}
@@ -31,13 +20,21 @@ const Todoitem = ({todo}) => {  // eslint-disable-line
       <h4>
         TODOS:
         {todo.title}
-        <br/>
+        <br />
         STATUS:
         {completedStyle()}
       </h4>
-      <User user={todo.user}/>
+      <User user={todo.user} />
     </div>
   );
+};
+
+Todoitem.propTypes = { todo: PropTypes.objectOf(PropTypes) };
+Todoitem.defaultProps = {
+  todo: {
+    id: 'no id',
+    title: 'no title',
+  },
 };
 
 export default Todoitem;
