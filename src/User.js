@@ -1,3 +1,3 @@
-const User = props => props.user.name;
+const User = ({ user }) => user.name;
 
 export default User;
