@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+.todo-item {
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 1px 1px grey;
+  float: left;
+  width: 32%;
+  height: 25vw;
+  font-size: 1.5vw;
+  background-color: #c9c3c3;
+  margin: 2px;
+}

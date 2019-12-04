@@ -1,5 +1,4 @@
-/* eslint-disable max-len */
-
+/* eslint-disable */
 const todos = [
   {
     userId: 1,
