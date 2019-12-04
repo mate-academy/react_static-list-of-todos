@@ -1,3 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+}
+
+table {
+  position: relative;
+  width: 80vw;
+  margin: auto;
+  border: 1px solid red;
+  border-radius: 1em;
+  overflow: hidden;
+  border-collapse: collapse;
 }
