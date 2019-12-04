@@ -5,13 +5,11 @@ import users from './api/users';
 import './style.css';
 import TodoList from './components/todoList/todoList';
 
-function getTodoWithUsers(todo, user) {
-  return todo.map(todoItem => (
+function getTodoWithUsers(todoItems, userItems) {
+  return todoItems.map(item => (
     {
-      ...todoItem,
-      user: user
-        .filter(userItem => userItem.id === todo.userId),
-
+      ...item,
+      user: userItems.find(person => person.id === item.userId),
     }));
 }
 
@@ -21,13 +19,9 @@ function App() {
       <div className="App">
         <h1>Static list of todos</h1>
       </div>
-      <TodoList todos={getTodoWithUsers(todos, users)} />
+      <TodoList todoList={getTodoWithUsers(todos, users)} />
     </>
   );
 }
-
-// todoList
-// todoItem
-// user
 
 export default App;

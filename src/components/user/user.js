@@ -1,11 +1,13 @@
-// import React from 'react';
-// import users from '../../api/users';
-// import todos from '../../api/todos';
-//
-// // function User() {
-// //   return (
-// //
-// //   );
-// // }
-//
-// export default User;
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const User = ({ person }) => <td>{person.name}</td>;
+
+User.propTypes
+  = {
+    person: PropTypes
+      .oneOfType([PropTypes.object])
+      .isRequired,
+  };
+
+export default User;

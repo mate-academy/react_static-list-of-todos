@@ -1,34 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import User from '../user/user';
 
-import users from '../../api/users';
-import todos from '../../api/todos';
+const TodoItem = ({ todo }) => (
+  <tr>
+    <td>{todo.id}</td>
+    <td>{todo.title}</td>
 
-function TodoItem() {
-  const todo = [...todos];
+    <User person={todo.user} />
 
-  return (
-    <tbody>
-      {todo.map(item => (
-        <tr>
-          <td>{item.id}</td>
-          <td>{item.title}</td>
-          <td>
-            {users
-              .filter(user => user.id === item.userId)
-              .map(person => person.name)}
-          </td>
-          <td>
-            {item.completed === true ? 'completed' : 'no completed'}
-          </td>
-          <td>
-            {users
-              .filter(user => user.id === item.userId)
-              .map(person => person.email)}
-          </td>
-        </tr>
-      ))}
-    </tbody>
-  );
-}
+    <td>{todo.completed === true ? 'completed' : 'no completed'}</td>
+  </tr>
+);
+
+TodoItem.propTypes
+  = {
+    todo: PropTypes
+      .oneOfType([PropTypes.object])
+      .isRequired,
+  };
 
 export default TodoItem;
