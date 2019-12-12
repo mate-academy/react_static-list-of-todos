@@ -1,7 +1,7 @@
 # React static list of TODOs
 
 ## Demo link
-Add link here: `[DEMO LINK](https://<your_account>.github.io/<repo_name>/)`
+Add link here: `[DEMO LINK](https://<your_account>.github.io/react_static-list-of-todos/)`
 
 ## Task
 By using [todos.js](./src/api/todos.js) and [users.js](./src/api/users.js) as
