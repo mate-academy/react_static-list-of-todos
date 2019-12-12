@@ -4,19 +4,20 @@
 Add link here: `[DEMO LINK](https://<your_account>.github.io/<repo_name>/)`
 
 ## Task
-By using [todos.js](./src/api/todos.js) and [users.js](./src/api/users.js) as modules to your React application, create and display a list of all the TODO items. Alongside each item display information about the user it belongs to.
+By using [todos.js](./src/api/todos.js) and [users.js](./src/api/users.js) as
+modules to your React application, create and display a list of all the TODO
+items. Alongside each item display information about the user it belongs to.
 
-Create and use three components: `TodoList` (for the whole list), `TodoItem` (for a single TODO item), and `User` (for displaying information about a user). `TodoList` should display a list of `TodoItem`s; each `TodoItem` must display the basic info about an item as well as the `User` the item belongs to. You can choose yourself what exact information you want to present and how.
+Create and use three components: `TodoList` (for the whole list), `TodoItem`
+(for a single TODO item), and `User` (for displaying information about a user).
+`TodoList` should display a list of `TodoItem`s; each `TodoItem` must display
+the basic info about an item as well as the `User` the item belongs to. You can
+choose yourself what exact information you want to present and how.
 
 1. Create a `preparedTodos` array of `todos` with a `user` property added to each `todo`. Place it in the `App.js`
-2. Create a component `<TodoList todos={preparedTodos} />` displaying the list of preparedTodos
-3. Create a component `TodoItem` displaying an individual todo in the list
-    ```jsx harmony
-    {todos.map(todo => (
-      <TodoItem todo={todo} key={todo.id} />
-    ))}
-    ```
-4. Create a component `<User user={todo.user} />` displaying a user name with some styling and use it in `<TodoItem />`
+2. Create a component `TodoList` accepting an array of `preparedTodos` and displaying them as a list.
+3. Create a component `TodoItem` accepting a `todo` object and displaying its name and `completed` status
+4. Create a component `User` accepting a `user` object and displaying its name with some styling. Use it inside `TodoItem`
 
 ## Workflow
 - Fork the repository with task
