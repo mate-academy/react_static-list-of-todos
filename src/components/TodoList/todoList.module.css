@@ -10,10 +10,10 @@ th {
 }
 
 tr:nth-child(2n) {
-  background-color: beige;
+  background-color: #f5f5dc;
 }
 
-.task {
+.tasks {
   padding-left: 20px;
   text-align: left;
 }
