@@ -1,3 +1,18 @@
 .App {
   text-align: center;
 }
+
+table {
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
+th {
+  border: 1px solid gray;
+  padding: 10px 20px;
+}
+
+.header {
+  background: green;
+  color: white;
+}
