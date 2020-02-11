@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './User.css';
 
 const User = ({ user }) => (
   <>
     <br />
-    <span>
+    <span className="user-name">
       {user.name}
     </span>
   </>

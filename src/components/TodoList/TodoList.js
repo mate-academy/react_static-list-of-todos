@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Todo from '../Todo/Todo';
+import './TodoList.css';
 
 const TodoList = ({ todos }) => (
-  <ul>
+  <ul className="todo-list">
     {todos.map(todo => (
       <li key={todo.id}>
         <Todo todo={todo} />
