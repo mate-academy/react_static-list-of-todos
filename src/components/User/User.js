@@ -2,26 +2,14 @@ import React from 'react';
 import './User.css';
 import PropTypes from 'prop-types';
 
-export const User = ({ userId, users }) => (
-  <td className="todo-td">{users.find(user => user.id === userId).name}</td>
+export const User = ({ userName }) => (
+  <td className="todo-td">{userName}</td>
 );
 
 User.propTypes = {
-  userId: PropTypes.number,
-  users: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string,
-      id: PropTypes.number,
-    }),
-  ),
+  userName: PropTypes.string,
 };
 
 User.defaultProps = {
-  userId: PropTypes.number,
-  users: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string,
-      id: PropTypes.number,
-    }),
-  ),
+  userName: PropTypes.string,
 };

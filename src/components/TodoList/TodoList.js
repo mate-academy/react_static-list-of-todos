@@ -28,7 +28,10 @@ export const TodoList = ({ todos, users }) => (
             title={todo.title}
             completed={todo.completed}
           />
-          <User userId={todo.userId} users={users} />
+          <User
+            userId={todo.userId}
+            userName={users.find(user => user.id === todo.userId).name}
+          />
         </tr>
       ))}
     </tbody>
