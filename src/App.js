@@ -9,7 +9,7 @@ function App() {
   const todoWithUser = todos.map(todo => (
     {
       ...todo,
-      user: users.filter(user => user.id === todo.userId),
+      user: [users.find(user => user.id === todo.userId)],
     }
   ));
 
