@@ -15,14 +15,14 @@ const TodoList = (props) => {
         </tr>
       </thead>
       <tbody>
-        {preparedArr.map(obj => <Todo todoObj={obj} />)}
+        {preparedArr.map(obj => <Todo key={obj.id} todoObj={obj} />)}
       </tbody>
     </table>
   );
 };
 
 TodoList.propTypes = {
-  preparedArr: PropTypes.arrayOf.isRequired,
+  preparedArr: PropTypes.arrayOf(PropTypes.shape).isRequired,
 };
 
 export default TodoList;
