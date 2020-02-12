@@ -1,19 +1,24 @@
-table {
-  font-family: Arial, Helvetica, sans-serif;
+*{
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial;
+  color: #490047;
   text-align: center;
-  margin: 0 auto;
 }
 
-th {  
-  padding: 20px 10px;
-  background-color: #ceffff;
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-tr:nth-child(2n) {
-  background-color: #f5f5dc;
-}
-
-.tasks {
-  padding-left: 20px;
-  text-align: left;
+.card-item {
+  margin: 10px;
+  padding: 10px;
+  background-color: #e299ff;
+  width: 300px;
+  height: 200px;
+  text-align: center;
 }

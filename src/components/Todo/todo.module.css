@@ -1,0 +1,11 @@
+.title {
+  font-weight: 800;
+}
+
+.completed {
+  color: #07aa45;
+}
+
+.notCompleted {
+  color: #9e0505;
+}
