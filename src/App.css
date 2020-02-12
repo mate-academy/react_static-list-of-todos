@@ -1,3 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #222;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+}
+
 .App {
   text-align: center;
+
 }
