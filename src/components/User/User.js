@@ -4,9 +4,7 @@ import '../../App.css';
 
 function User({ user }) {
   return (
-
     <td className="tableCell">{user.name}</td>
-
   );
 }
 
