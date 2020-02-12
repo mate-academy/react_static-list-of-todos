@@ -1,3 +1,46 @@
 .App {
   text-align: center;
+  font-size: 20px;
+  font-family: monospace;
+}
+
+h1 {
+  font-size: 44px;
+  font-family: "DejaVu Sans", serif;
+}
+
+table {
+  margin: 10px auto;
+}
+
+thead tr {
+  color: white;
+  text-transform: uppercase;
+}
+
+th {
+  padding: 10px;
+
+  background: grey;
+  border-radius: 10px;
+  border: 2px solid darkgray;
+}
+
+tbody td {
+  padding: 10px;
+
+  border: 2px solid darkgray;
+  border-radius: 10px;
+}
+
+tbody tr:hover {
+  background: yellow;
+}
+
+tbody td.yes {
+  background: green;
+}
+
+tbody td.no {
+  background: red;
 }
