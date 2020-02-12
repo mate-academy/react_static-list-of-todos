@@ -1,3 +1,17 @@
 .App {
   text-align: center;
 }
+
+.tableWrapper {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+.tableTitle {
+  background-color: #62989e;
+}
+
+.tableCell {
+  border: 2px solid #192729;
+  padding: 4px 8px;
+}
