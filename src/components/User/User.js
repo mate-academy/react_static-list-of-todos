@@ -3,12 +3,9 @@ import PropTypes from 'prop-types';
 import './User.css';
 
 const User = ({ user }) => (
-  <>
-    <br />
-    <span className="user-name">
-      {user.name}
-    </span>
-  </>
+  <span className="user-name">
+    {user.name}
+  </span>
 );
 
 User.propTypes = {
