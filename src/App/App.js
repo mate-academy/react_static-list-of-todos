@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import { List } from './api/List';
+import { List } from '../api/List';
 
-import todos from './api/todos';
-import users from './api/users';
+import todos from '../api/todos';
+import users from '../api/users';
 
 function App() {
   const todoWithUser = todos.map(todo => (
