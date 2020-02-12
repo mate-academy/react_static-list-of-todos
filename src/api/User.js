@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function User(props) {
+export function User(props) {
   const { name } = props;
 
   return (
@@ -10,7 +10,5 @@ function User(props) {
 }
 
 User.propTypes = {
-  name: PropTypes.arrayOf(PropTypes.string).isRequired,
+  name: PropTypes.string.isRequired,
 };
-
-export default User;

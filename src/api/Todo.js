@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import User from './User';
+import { User } from './User';
 
-function Todo(props) {
-  const { item, elem } = props;
+export function Todo(props) {
+  const { preparedTodos } = props;
 
   function checkStatus(status) {
     return status ? 'true' : 'false';
@@ -15,25 +15,23 @@ function Todo(props) {
 
   return (
     <>
-      <User name={Object.keys(elem)} />
+      <User name={preparedTodos.user[0].name} />
 
       <td>
-        {item.title}
+        {preparedTodos.title}
       </td>
 
-      <td className={addClass(item.completed)}>
-        {checkStatus(item.completed)}
+      <td className={addClass(preparedTodos.completed)}>
+        {checkStatus(preparedTodos.completed)}
       </td>
     </>
   );
 }
 
 Todo.propTypes = {
-  item: PropTypes.shape({
+  preparedTodos: PropTypes.shape({
     title: PropTypes.string,
     completed: PropTypes.bool,
+    user: PropTypes.arrayOf(PropTypes.shape).isRequired,
   }).isRequired,
-  elem: PropTypes.shape().isRequired,
 };
-
-export default Todo;

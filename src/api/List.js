@@ -1,14 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TodoList from './TodoList';
+import { TodoList } from './TodoList';
 
-function List(props) {
-  const { todos, users } = props;
-  const preparedTodos = users.map(user => (
-    {
-      [user.name]: todos.filter(item => item.userId === user.id),
-    }
-  ));
+export function List(props) {
+  const { todoWithUser } = props;
 
   return (
     <table>
@@ -21,15 +16,12 @@ function List(props) {
       </thead>
 
       <tbody>
-        <TodoList preparedTodos={preparedTodos} />
+        <TodoList preparedTodos={todoWithUser} />
       </tbody>
     </table>
   );
 }
 
 List.propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.shape).isRequired,
-  users: PropTypes.arrayOf(PropTypes.shape).isRequired,
+  todoWithUser: PropTypes.arrayOf(PropTypes.shape).isRequired,
 };
-
-export default List;
