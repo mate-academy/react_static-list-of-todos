@@ -6,10 +6,10 @@ const TodoList = ({ todos }) => (
   <table>
     <thead>
       <tr className="header">
-        <th>ID</th>
-        <th>TITLE</th>
-        <th>COMPLETED</th>
-        <th>USER</th>
+        <th>id</th>
+        <th>title</th>
+        <th>completed</th>
+        <th>user</th>
       </tr>
     </thead>
     <tbody>
@@ -21,7 +21,7 @@ const TodoList = ({ todos }) => (
 );
 
 TodoList.propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.any).isRequired,
+  todos: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default TodoList;

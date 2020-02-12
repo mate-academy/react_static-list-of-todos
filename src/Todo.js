@@ -16,7 +16,7 @@ Todo.propTypes = {
     title: PropTypes.string.isRequired,
     completed: PropTypes.bool.isRequired,
     id: PropTypes.number.isRequired,
-    user: PropTypes.string.isRequired,
+    user: PropTypes.object.isRequired,
   }).isRequired,
 };
 

@@ -15,4 +15,5 @@ th {
 .header {
   background: green;
   color: white;
+  text-transform: uppercase;
 }
