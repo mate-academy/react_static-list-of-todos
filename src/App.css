@@ -1,3 +1,33 @@
 .App {
   text-align: center;
 }
+
+table {
+  margin: 0 auto;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  border: 2px solid #8992b1;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 5px;
+  border: 2px solid #8992b1;
+}
+
+tr {
+  border: 2px solid #8992b1;
+}
+
+td {
+  padding: 5px;
+  border: 2px solid #8992b1;
+}
+
+td:nth-child(2) {
+  text-align: left;
+  width: 600px;
+}
+
+td:last-child {
+  width: 100px;
+}
