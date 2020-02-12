@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TodoList } from './TodoList';
 
-export function List(props) {
-  const { todoWithUser } = props;
-
+export function List({ todoWithUser }) {
   return (
     <table>
       <thead>

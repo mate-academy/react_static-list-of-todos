@@ -2,13 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { User } from './User';
 
-export function Todo(props) {
-  const { preparedTodos } = props;
-
-  function checkStatus(status) {
-    return status ? 'true' : 'false';
-  }
-
+export function Todo({ preparedTodos }) {
   function addClass(status) {
     return status ? 'valid' : 'inValid';
   }
@@ -22,7 +16,7 @@ export function Todo(props) {
       </td>
 
       <td className={addClass(preparedTodos.completed)}>
-        {checkStatus(preparedTodos.completed)}
+        {preparedTodos.completed ? 'true' : 'false'}
       </td>
     </>
   );
@@ -32,6 +26,8 @@ Todo.propTypes = {
   preparedTodos: PropTypes.shape({
     title: PropTypes.string,
     completed: PropTypes.bool,
-    user: PropTypes.arrayOf(PropTypes.shape).isRequired,
+    user: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.name,
+    })).isRequired,
   }).isRequired,
 };

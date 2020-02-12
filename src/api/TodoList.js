@@ -11,7 +11,6 @@ export function TodoList(props) {
         <Todo preparedTodos={elem} />
       </tr>
     ))
-
   );
 }
 

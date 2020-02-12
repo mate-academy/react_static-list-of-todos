@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function User(props) {
-  const { name } = props;
-
+export function User({ name }) {
   return (
     <td>{name}</td>
   );
