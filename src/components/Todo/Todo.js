@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './todo.module.css';
+import './todo.css';
 
 const Todo = ({ id, title, completed }) => (
   <>
-    <p className={styles.title}>{`${id} ${title}`}</p>
+    <p className="title">{`${id} ${title}`}</p>
     {completed
-      ? (<p className={styles.completed}>Yes</p>)
-      : (<p className={styles.notCompleted}>No</p>)}
+      ? (<p className="completed">Yes</p>)
+      : (<p className="notCompleted">No</p>)}
   </>
 );
 
