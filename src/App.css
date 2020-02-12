@@ -1,3 +1,11 @@
 .App {
   text-align: center;
 }
+
+.main-table {
+  margin: 0 auto;
+}
+
+.main-table tr {
+  border-bottom: 2px aqua solid;
+}
