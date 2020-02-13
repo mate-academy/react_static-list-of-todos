@@ -1,21 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { User } from './User';
+import { User } from '../User/User';
 
 export function Todo({ preparedTodos }) {
-  function addClass(status) {
-    return status ? 'valid' : 'inValid';
-  }
-
   return (
     <>
-      <User name={preparedTodos.user[0].name} />
+      <User name={preparedTodos.user.name} />
 
       <td>
         {preparedTodos.title}
       </td>
 
-      <td className={addClass(preparedTodos.completed)}>
+      <td className={preparedTodos.completed ? 'valid' : 'inValid'}>
         {preparedTodos.completed ? 'true' : 'false'}
       </td>
     </>
@@ -26,8 +22,8 @@ Todo.propTypes = {
   preparedTodos: PropTypes.shape({
     title: PropTypes.string,
     completed: PropTypes.bool,
-    user: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.name,
-    })).isRequired,
+    user: PropTypes.shape({
+      name: PropTypes.string,
+    }).isRequired,
   }).isRequired,
 };

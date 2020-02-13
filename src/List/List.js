@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TodoList } from './TodoList';
+import { TodoList } from '../TodoList/TodoList';
 
 export function List({ todoWithUser }) {
   return (
