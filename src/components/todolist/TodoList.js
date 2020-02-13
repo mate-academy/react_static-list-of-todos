@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import TodoItem from './TodoItems';
+import TodoItem from '../todoitem/TodoItems';
 
 const TodoList = ({ todos }) => (
 
