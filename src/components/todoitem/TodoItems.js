@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import User from '../user/User';
+import User from '../User/User';
 
 const TodoItem = ({ todo }) => (
   <tr>
