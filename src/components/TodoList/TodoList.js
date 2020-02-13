@@ -14,7 +14,7 @@ export const TodoList = (props) => {
         <th>Title</th>
         <th>Status</th>
       </tr>
-      {todos.map(todo => <Todo todo={todo} />)}
+      {todos.map(todo => <Todo key={todo.id} todo={todo} />)}
     </table>
   );
 };
