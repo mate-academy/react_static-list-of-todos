@@ -8,7 +8,9 @@ export function Todo({ id, title, completed, user }) {
       <td>{id}</td>
       <td>{title}</td>
       <td>{completed ? 'OK' : 'KO'}</td>
-      <td><User {...user} /></td>
+      <td>
+        <User {...user} />
+      </td>
     </tr>
   );
 }
