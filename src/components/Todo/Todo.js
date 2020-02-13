@@ -13,7 +13,7 @@ export function Todo({ preparedTodos }) {
         {title}
       </td>
 
-      <td className={completed ? 'valid' : 'inValid'}>
+      <td>
         {completed ? 'true' : 'false'}
       </td>
     </>
