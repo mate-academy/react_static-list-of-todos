@@ -10,9 +10,9 @@ export const TodoList = (props) => {
   return (
     <table className="todoTable">
       <tr>
-        <th>NAME</th>
-        <th>TITLE</th>
-        <th>STATUS</th>
+        <th>Name</th>
+        <th>Title</th>
+        <th>Status</th>
       </tr>
       {todos.map(todo => <Todo todo={todo} />)}
     </table>
