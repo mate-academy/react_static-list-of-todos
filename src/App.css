@@ -1,3 +1,31 @@
 .App {
   text-align: center;
+  background: radial-gradient(#204575, #000 99%);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 25px 0;
+  color: #f0f3ff;
+}
+
+h1 {
+  margin-bottom: 45px;
+  color: #fcc203;
+  position: relative;
+}
+
+table {
+  margin: 0 auto;
+  border: 3px double #e9edff;
+  border-collapse: collapse;
+}
+
+th {
+  border: 2px solid #e9edff;
+  padding: 8px;
+  color: #fcc203;
+  font-size: 20px;
+}
+
+td {
+  border: 2px solid #e9edff;
+  padding: 8px;
 }
