@@ -65,18 +65,6 @@ TodoList.propTypes = {
 };
 
 TodoList.defaultProps = {
-  todos: PropTypes.arrayOf(
-    PropTypes.shape({
-      completed: false,
-      id: 0,
-      userId: 0,
-      title: '',
-    }),
-  ),
-  users: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: '',
-      id: 0,
-    }),
-  ),
+  todos: [],
+  users: [],
 };
