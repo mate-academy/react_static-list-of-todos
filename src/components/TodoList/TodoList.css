@@ -1,0 +1,11 @@
+td,
+th {
+  border: 2px solid gray;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+.todoTable {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
