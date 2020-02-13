@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { User } from '../User/User';
 import './Todo.css';
 
-export function Todo({ todo }) {
+export function Todo({ todo: { title, user, completed } }) {
   return (
     <>
-      <p className="todo__title">{todo.title}</p>
-      <User user={todo.user} />
-      <p className="todo__status">{todo.completed ? 'OK' : '-'}</p>
+      <p className="todo__title">{title}</p>
+      <User user={user} />
+      <p className="todo__status">{completed ? 'OK' : '-'}</p>
     </>
   );
 }
