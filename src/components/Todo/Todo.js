@@ -3,13 +3,19 @@ import PropTypes from 'prop-types';
 
 import { User } from '../User/User';
 
-export const Todo = ({ name, status, user }) => (
-  <User user={user} status={status} name={name} />
+export const Todo = ({ id, completed, user, title }) => (
+  <User
+    user={user}
+    status={completed}
+    title={title}
+    id={id}
+  />
 );
 
 Todo.propTypes = {
-  name: PropTypes.string.isRequired,
-  status: PropTypes.bool.isRequired,
+  title: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
+  id: PropTypes.number.isRequired,
   user: PropTypes.shape({
     name: PropTypes.string,
   }).isRequired,

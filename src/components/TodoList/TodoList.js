@@ -8,6 +8,7 @@ export const TodoList = ({ todos }) => (
   <table>
     <thead>
       <tr>
+        <th>#</th>
         <th>Name</th>
         <th>Title</th>
         <th>Status</th>
@@ -15,12 +16,7 @@ export const TodoList = ({ todos }) => (
     </thead>
     <tbody>
       {todos.map(todo => (
-        <Todo
-          key={todo.id}
-          name={todo.title}
-          status={todo.completed}
-          user={todo.user}
-        />
+        <Todo key={todo.id} {...todo} />
       ))}
     </tbody>
   </table>
@@ -28,7 +24,6 @@ export const TodoList = ({ todos }) => (
 
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(PropTypes.shape({
-    userId: PropTypes.number,
     id: PropTypes.number,
     title: PropTypes.string,
     completed: PropTypes.bool,
