@@ -6,7 +6,7 @@ const TodoItem = ({ todo }) => (
   <tr>
     <td>{todo.id}</td>
     <td>{todo.title}</td>
-    <td>{todo.completed ? 'ready' : 'not ready'}</td>
+    <td className="state">{todo.completed ? 'ready' : 'not ready'}</td>
     <td><User user={todo.user} /></td>
   </tr>
 );

@@ -6,6 +6,10 @@
   margin: auto;
 }
 
+.state {
+  font-weight: 600;
+}
+
 thead th {
   border: 2px solid #000;
 }
