@@ -2,13 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import User from '../User/User';
 
-const Todo = ({ todo }) => (
-  <tr>
-    <td className="cell"><User todo={todo.user} /></td>
-    <td className="cell">{todo.title}</td>
-    <td className="cell">{`${todo.completed}`}</td>
-  </tr>
-);
+const Todo = ({ todo }) => {
+  const { user, title, completed } = todo;
+
+  return (
+    <tr>
+      <td className="cell"><User todo={user} /></td>
+      <td className="cell">{title}</td>
+      <td className="cell">{`${completed}`}</td>
+    </tr>
+  );
+};
 
 Todo.propTypes = {
   todo: PropTypes.shape({
