@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './User.css';
 
-const User = ({ info }) => (
-  <span className="person">{info.name}</span>
+const User = ({ user }) => (
+  <span className="person">{user.name}</span>
 );
 
 User.propTypes = {
-  info: PropTypes.shape({
+  user: PropTypes.shape({
     name: PropTypes.string.isRequired,
   }).isRequired,
 };

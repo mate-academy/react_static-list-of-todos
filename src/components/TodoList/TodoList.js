@@ -4,13 +4,13 @@ import User from '../User/User';
 import Todo from '../Todo/Todo';
 import './Todolist.css';
 
-function TodoList({ data }) {
+function TodoList({ todoList }) {
   return (
     <ul className="list">
-      {data.map(todo => (
+      {todoList.map(todo => (
         <li key={todo.id}>
-          <Todo elem={todo} />
-          <User info={todo.user} />
+          <Todo todo={todo} />
+          <User user={todo.user} />
         </li>
       ))}
     </ul>
@@ -18,11 +18,11 @@ function TodoList({ data }) {
 }
 
 TodoList.defaultProps = {
-  data: [],
+  todoList: [],
 };
 
 TodoList.propTypes = {
-  data: PropTypes.arrayOf(
+  todoList: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       completed: PropTypes.bool.isRequired,
