@@ -17,5 +17,3 @@ Todo.propTypes = {
     completed: PropTypes.bool.isRequired,
   }).isRequired,
 };
-
-export default Todo;
