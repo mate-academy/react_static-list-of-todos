@@ -5,7 +5,7 @@ import todos from './api/todos';
 import users from './api/users';
 import TodoList from './TodoList/TodoList';
 
-function App() {
+const App = () => {
   const preparedTodos = todos.map(todo => ({
     ...todo,
     user: users.find(user => todo.userId === user.id),
@@ -14,9 +14,9 @@ function App() {
   return (
     <div className="App">
       <h1>TODO LIST</h1>
-      <TodoList items={preparedTodos} />
+      <TodoList todos={preparedTodos} />
     </div>
   );
-}
+};
 
 export default App;

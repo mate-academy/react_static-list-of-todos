@@ -5,19 +5,19 @@ import './TodoList.css';
 import Todo from '../Todo/Todo';
 import User from '../User/User';
 
-const TodoList = ({ items }) => (
+const TodoList = ({ todos }) => (
   <ul>
-    {items.map(item => (
-      <li className="card" key={item.id}>
-        <Todo {...item} />
-        <User {...item.user} />
+    {todos.map(todo => (
+      <li className="card" key={todo.id}>
+        <Todo {...todo} />
+        <User {...todo.user} />
       </li>
     ))}
   </ul>
 );
 
 TodoList.propTypes = {
-  items: PropTypes.arrayOf(
+  todos: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,

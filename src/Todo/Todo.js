@@ -7,9 +7,9 @@ const Todo = ({ id, title, completed }) => (
     <p className="id">{`ID: ${id}`}</p>
     <p className="title">{`TODO: ${title}`}</p>
 
-    { completed
+    {completed
       ? <p className="solved">finished</p>
-      : <p className="unsolved">unfinished</p> }
+      : <p className="unsolved">unfinished</p>}
   </>
 );
 
