@@ -1,0 +1,25 @@
+.id {
+  font-size: 18px;
+  color: green;
+  font-weight: bold;
+  margin: 0;
+}
+
+.title {
+  color: #ab7aff;
+  font-style: italic;
+}
+
+.solved {
+  color: green;
+}
+
+.unsolved {
+  color: red;
+}
+
+.solved,
+.unsolved {
+  font-weight: bold;
+  text-decoration: underline;
+}
