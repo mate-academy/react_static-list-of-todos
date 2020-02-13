@@ -16,7 +16,7 @@ const Todo = ({ todo }) => {
 
 Todo.propTypes = {
   todo: PropTypes.shape({
-    user: PropTypes.string,
+    user: PropTypes.object,
     title: PropTypes.string,
     completed: PropTypes.string,
   }).isRequired,
