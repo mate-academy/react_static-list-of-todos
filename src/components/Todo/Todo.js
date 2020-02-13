@@ -26,5 +26,5 @@ export const Todo = ({ title, completed }) => (
 
 Todo.propTypes = {
   title: PropTypes.string.isRequired,
-  completed: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
 };
