@@ -8,8 +8,6 @@ const TodoItem = ({ todo }) => (
     <td>{todo.title}</td>
     <td className="state">{todo.completed ? 'ready' : 'not ready'}</td>
     <td><User user={todo.user} /></td>
-    <td><User user={todo.user} /></td>
-    <td><User user={todo.user} /></td>
   </tr>
 );
 
