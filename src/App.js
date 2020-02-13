@@ -8,7 +8,7 @@ import TodoList from './components/TodoList/TodoList';
 const preparedTodos = todos.map(item => (
   {
     ...item,
-    user: users[item.userId - 1],
+    user: users.find(person => person.id === item.userId),
   }));
 
 function App() {
