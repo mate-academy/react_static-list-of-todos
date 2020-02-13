@@ -10,6 +10,10 @@
   font-weight: 600;
 }
 
+th {
+  text-transform: uppercase;
+}
+
 thead th {
   border: 2px solid #000;
 }

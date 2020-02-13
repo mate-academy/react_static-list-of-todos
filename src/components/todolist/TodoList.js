@@ -7,10 +7,10 @@ const TodoList = ({ todos }) => (
   <table className="container">
     <thead>
       <tr>
-        <th>ID</th>
-        <th>TITLE</th>
-        <th>STATUS</th>
-        <th>USER</th>
+        <th>id</th>
+        <th>title</th>
+        <th>status</th>
+        <th>user</th>
       </tr>
     </thead>
     <tbody>
