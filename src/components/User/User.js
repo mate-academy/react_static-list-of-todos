@@ -11,5 +11,5 @@ User.propTypes = {
 };
 
 User.defaultProps = {
-  userName: PropTypes.string,
+  userName: '',
 };

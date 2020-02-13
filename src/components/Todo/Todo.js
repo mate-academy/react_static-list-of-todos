@@ -21,7 +21,7 @@ Todo.propTypes = {
 };
 
 Todo.defaultProps = {
-  completed: PropTypes.bool,
-  title: PropTypes.string,
-  itemID: PropTypes.number,
+  completed: false,
+  title: '',
+  itemID: 0,
 };
