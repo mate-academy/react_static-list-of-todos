@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import User from './User';
+import User from '../User/User';
 
 function ToDo({ todo }) {
   const { id, title, completed, user } = todo;
@@ -9,7 +9,9 @@ function ToDo({ todo }) {
     <tr>
       <td>{id}</td>
       <td>{title}</td>
-      <td className={completed ? 'yes' : 'no'}>{completed ? 'YES' : 'NO'}</td>
+      <td className={completed ? 'yes' : 'no'}>
+        {completed ? 'YES' : 'NO'}
+      </td>
       <User user={user} />
     </tr>
   );
