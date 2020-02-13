@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Todo } from '../Todo/Todo';
 
-export const TodoList = ({ preparedArr }) => (
+export const TodoList = ({ todoList }) => (
   <table>
     <thead>
       <tr>
@@ -12,11 +12,18 @@ export const TodoList = ({ preparedArr }) => (
       </tr>
     </thead>
     <tbody>
-      {preparedArr.map(obj => <Todo key={obj.id} object={obj} />)}
+      {todoList.map(todo => <Todo key={todo.id} todo={todo} />)}
     </tbody>
   </table>
 );
 
 TodoList.propTypes = {
-  preparedArr: PropTypes.arrayOf(PropTypes.shape).isRequired,
+  todoList: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
+    user: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+    }).isRequired,
+  })).isRequired,
 };

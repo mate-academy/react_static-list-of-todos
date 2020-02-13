@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const User = ({ userObject }) => (
-  <td>{userObject.name}</td>
+export const User = ({ user }) => (
+  <td>{user.name}</td>
 );
 
 User.propTypes = {
-  userObject: PropTypes.shape({
+  user: PropTypes.shape({
     name: PropTypes.string.isRequired,
   }).isRequired,
 };

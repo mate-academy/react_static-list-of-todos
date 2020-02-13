@@ -13,7 +13,7 @@ const preparedTodos = todos.map(todo => ({
 function App() {
   return (
     <div className="App">
-      <TodoList preparedArr={preparedTodos} />
+      <TodoList todoList={preparedTodos} />
     </div>
   );
 }
