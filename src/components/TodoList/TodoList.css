@@ -1,0 +1,20 @@
+.todo-list {
+  max-width: 900px;
+  margin: 100px auto;
+}
+
+.todo-item {
+  background: #fab25d;
+  font-size: 16px;
+  line-height: 40px;
+  color: #000;
+}
+
+.todo-item--ready {
+  background: #61afaf;
+}
+
+.todo-head {
+  font-size: 20px;
+  padding: 10px;
+}
