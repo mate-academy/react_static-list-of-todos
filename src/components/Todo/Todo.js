@@ -3,16 +3,18 @@ import PropTypes from 'prop-types';
 import { User } from '../User/User';
 
 export function Todo({ preparedTodos }) {
+  const { user, title, completed } = preparedTodos;
+
   return (
     <>
-      <User name={preparedTodos.user.name} />
+      <User name={user.name} />
 
       <td>
-        {preparedTodos.title}
+        {title}
       </td>
 
-      <td className={preparedTodos.completed ? 'valid' : 'inValid'}>
-        {preparedTodos.completed ? 'true' : 'false'}
+      <td className={completed ? 'valid' : 'inValid'}>
+        {completed ? 'true' : 'false'}
       </td>
     </>
   );
