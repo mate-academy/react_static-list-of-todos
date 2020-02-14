@@ -13,19 +13,13 @@ export const TodoList = ({ todos }) => (
       </tr>
     </thead>
     <tbody>
-      {todos.map(todo => <Todo key={todo.id} {...todo} />)}
+      {todos.map(todo => <Todo key={todo.id} todo={todo} />)}
     </tbody>
   </table>
 );
 
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      completed: PropTypes.bool.isRequired,
-      user: PropTypes.shape({
-        name: PropTypes.string.isRequired,
-      }).isRequired,
-    }),
+    PropTypes.object,
   ).isRequired,
 };
