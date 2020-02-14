@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './TodoList.css';
 import { Todo } from '../Todo/Todo';
 
-export const TodoList = ({ todo }) => (
+export const TodoList = ({ todoLists }) => (
   <table className="todo-list">
     <thead>
       <tr className="todo-list__header">
@@ -14,13 +14,13 @@ export const TodoList = ({ todo }) => (
       </tr>
     </thead>
     <tbody>
-      {todo.map(object => <Todo todoInfo={object} />)}
+      {todoLists.map(object => <Todo todoInfo={object} key={object.id} />)}
     </tbody>
   </table>
 );
 
 TodoList.propTypes = {
-  todo: PropTypes.shape(
+  todoLists: PropTypes.arrayOf(
     PropTypes.object,
   ).isRequired,
 };
