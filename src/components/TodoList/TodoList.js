@@ -20,6 +20,13 @@ export const TodoList = ({ todos }) => (
 
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(
-    PropTypes.object,
+    PropTypes.shape({
+      id: PropTypes.string,
+      title: PropTypes.string,
+      completed: PropTypes.bool,
+      user: PropTypes.shape({
+        name: PropTypes.string,
+      }),
+    }).isRequired,
   ).isRequired,
 };
