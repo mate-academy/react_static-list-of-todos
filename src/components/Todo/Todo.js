@@ -8,19 +8,14 @@ export const Todo = ({ title, completed }) => (
       <strong>Title</strong>
       { `: ${title}` }
     </p>
-    {completed
-      ? (
-        <p className="status">
-          <strong>Status:</strong>
-          <span className="status--true"> True</span>
-        </p>
-      )
-      : (
-        <p className="status">
-          <strong>Status:</strong>
-          <span className="status--false"> False</span>
-        </p>
-      )}
+
+    <p className="status">
+      <strong>Status: </strong>
+      {completed
+        ? (<span className="status--true">True</span>)
+        : (<span className="status--false"> False</span>)}
+    </p>
+
   </>
 );
 
