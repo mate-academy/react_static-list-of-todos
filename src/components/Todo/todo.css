@@ -1,0 +1,12 @@
+.list {
+  text-align: left;
+}
+
+.todo {
+  display: inline;
+}
+
+.todo-status {
+  font-style: italic;
+  font-weight: 600;
+}
