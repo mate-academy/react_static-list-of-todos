@@ -1,3 +1,10 @@
 .App {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 40px;
+  background-color: aliceblue;
+}
+
+body {
+  padding: 30px;
 }
