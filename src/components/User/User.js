@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './user.css';
 
-export const User = (user) => {
+export const User = ({ user }) => {
   const { name } = user;
 
   return (
