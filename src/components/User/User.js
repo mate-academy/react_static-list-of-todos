@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './user.css';
 
-export const User = (props) => {
-  const { user: { name } } = props;
+export const User = (user) => {
+  const { name } = user;
 
   return (
-    <span className="userName">{name}</span>
+    <span className="user__name">{name}</span>
   );
 };
 

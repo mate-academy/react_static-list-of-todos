@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { User } from '../User/User';
 import './todo.css';
 
-export const Todo = (props) => {
-  const { todo: { title, completed, user } } = props;
+export const Todo = ({ todo }) => {
+  const { title, completed, user } = todo;
 
   return (
     <dl className="list">
@@ -25,6 +25,8 @@ Todo.propTypes = {
   todo: PropTypes.shape({
     title: PropTypes.string.isRequired,
     completed: PropTypes.bool.isRequired,
-    user: PropTypes.shape().isRequired,
+    user: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+    }).isRequired,
   }).isRequired,
 };
