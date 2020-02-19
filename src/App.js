@@ -9,7 +9,11 @@ function App() {
   const preparedTodos = todos.map((todo) => {
     const temp = { ...todo };
 
-    temp.user = users.filter(user => user.id === todo.userId);
+    //temp.user = users.filter(user => user.id === todo.userId);
+    /*users.filter(item => {
+      if(item.id === todo.userId) temp.user = item;
+      return ;
+    });*/ //проверить, как-то так
 
     return temp;
   });
