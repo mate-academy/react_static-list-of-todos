@@ -2,8 +2,7 @@ import React from 'react';
 import User from '../User/User';
 
 function Todo({ todo }) {
-  const { title, completed } = todo;
-  const { user } = todo;
+  const { title, completed, user } = todo;
 
   return (
     <div className="col s4">

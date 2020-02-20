@@ -1,8 +1,8 @@
 import React from 'react';
 
 function User({ user }) {
-  const { name, email } = user[0];
-  const { city } = user[0].address;
+  const { name, email } = user;
+  const { city } = user.address;
 
   return (
     <div>
