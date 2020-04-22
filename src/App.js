@@ -12,8 +12,8 @@ function App() {
   }));
 
   return (
-    <div className="App">
-      <h1>Static list of todos</h1>
+    <div className="App todo">
+      <h1 className="todo__header">Static list of todos</h1>
       <TodoList todo={preparedTodos} />
     </div>
   );

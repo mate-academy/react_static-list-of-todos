@@ -4,9 +4,9 @@ import Todo from './Todo';
 
 function TodoList({ todo }) {
   return (
-    <ul>
+    <ul className="todo__list">
       {todo.map(item => (
-        <li key={item.id}>
+        <li className="todo__item" key={item.id}>
           <Todo todo={item} />
         </li>
       ))}

@@ -6,8 +6,8 @@ function Todo({ todo: { user, title, completed } }) {
   return (
     <>
       <User user={user} />
-      <p>{completed ? 'Done' : 'Not ready'}</p>
-      <p>
+      <p className="todo__complete">{completed ? 'Done' : 'Not ready'}</p>
+      <p className="todo__title">
         {title}
       </p>
     </>

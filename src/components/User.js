@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function User({ user: { name } }) {
   return (
-    <p>{name}</p>
+    <p className="todo__name">{name}</p>
   );
 }
 
