@@ -33,3 +33,12 @@ body {
   background-color: #f4a548;
   color: #fff;
 }
+
+.todo__complete {
+  background-color: green;
+  color: #fff;
+}
+
+.todo__complete--not {
+  background-color: red;
+}
