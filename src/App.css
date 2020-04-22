@@ -1,3 +1,44 @@
+body {
+  margin: 0;
+}
+
 .App {
+  margin: 0 auto;
   text-align: center;
+}
+
+.todo__list {
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  list-style: none;
+
+  margin: 0 auto;
+}
+
+.todo__header {
+  margin: 0 0 20px;
+}
+
+.todo__item {
+  margin: 0;
+  padding: 5px;
+  border: 2px solid #f4a548;
+
+  transition: 0.5s ease-in-out;
+}
+
+.todo__item:hover {
+  background-color: #f4a548;
+  color: #fff;
+}
+
+.todo__complete {
+  background-color: green;
+  color: #fff;
+}
+
+.todo__complete--not {
+  background-color: red;
 }
