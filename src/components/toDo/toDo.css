@@ -1,0 +1,10 @@
+.size {
+  margin: 0;
+}
+
+.indentation {
+  margin-bottom: 8px;
+  font-family: "Droid Serif", serif;
+  font-size: 15px;
+  color: red;
+}
