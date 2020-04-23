@@ -3,6 +3,15 @@ import './App.css';
 
 import todos from './api/todos';
 import users from './api/users';
+import TodoList from './components/TodoList';
+
+const preparedTodos = todos.map((item) => {
+  const tempObj = { ...item };
+
+  tempObj.user = users.find(user => (user.id === tempObj.userId));
+
+  return tempObj;
+});
 
 function App() {
   return (
@@ -12,7 +21,7 @@ function App() {
         <span>Todos: </span>
         {todos.length}
       </p>
-
+      <TodoList preparedTodos={preparedTodos} />
       <p>
         <span>Users: </span>
         {users.length}
