@@ -1,0 +1,12 @@
+.user {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 6px;
+  transition: transform 0.5s;
+  color: blue;
+}
+
+.user:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
