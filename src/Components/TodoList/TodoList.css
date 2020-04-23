@@ -1,0 +1,25 @@
+.todo__list {
+  margin: 0 20px;
+  padding: 0;
+}
+
+.todo__item {
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  text-align: left;
+  list-style: none;
+  color: rgba(255, 165, 0, 1);
+  background-color: rgba(255, 165, 0, 0.2);
+  border: 1px solid rgba(255, 165, 0, 1);
+  border-radius: 4px;
+}
+
+.todo__item--done {
+  color: rgba(0, 128, 0, 1);
+  background-color: rgba(0, 128, 0, 0.2);
+  border-color: rgba(0, 128, 0, 1);
+}
+
+.todo__item-title {
+  text-transform: capitalize;
+}
