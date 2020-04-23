@@ -1,0 +1,12 @@
+.article,
+.names {
+  display: inline;
+}
+
+.article {
+  color: black;
+}
+
+.names {
+  color: blue;
+}
