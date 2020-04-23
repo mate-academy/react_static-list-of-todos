@@ -1,3 +1,8 @@
-.App {
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.static-list__title {
   text-align: center;
 }

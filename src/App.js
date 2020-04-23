@@ -4,21 +4,18 @@ import './App.css';
 import todos from './api/todos';
 import users from './api/users';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Static list of todos</h1>
-      <p>
-        <span>Todos: </span>
-        {todos.length}
-      </p>
+import TodoList from './components/TodoList/TodoList';
+import { getTodosWithUsers } from './api/data';
 
-      <p>
-        <span>Users: </span>
-        {users.length}
-      </p>
+const preparedTodos = getTodosWithUsers(todos, users);
+
+const App = () => (
+  <>
+    <h1 className="static-list__title">Static List of Todos</h1>
+    <div className="container">
+      <TodoList todos={preparedTodos} />
     </div>
-  );
-}
+  </>
+);
 
 export default App;
