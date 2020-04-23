@@ -1,3 +1,52 @@
+body {
+  background-color: white;
+
+}
+
 .App {
   text-align: center;
+}
+
+.item__list {
+  width: 90vw;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+}
+
+.item__item {
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 30px;
+  margin: 3px;
+  background-color: #031736;
+}
+
+.user__name {
+  font-weight: bolder;
+}
+
+.item__completion_true {
+  background-color: #03546f;
+  padding: 5px;
+}
+
+.item__completion_false {
+  background-color: #c35451;
+  padding: 5px;
+  animation: flickingOnFalse 1s infinite;
+}
+
+@keyframes flickingOnFalse {
+  0% {
+    background-color: #03546f;
+  }
+  50% {
+    background-color: #c30200;
+  }
+  100% {
+    background-color: #03546f;
+  }
 }
