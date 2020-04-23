@@ -1,3 +1,33 @@
 .App {
   text-align: center;
 }
+
+table {
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  border: 2px solid blue;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 5px;
+  border: 2px solid blue;
+}
+
+tr {
+  border: 2px solid blue;
+}
+
+td {
+  padding: 5px;
+  border: 2px solid blue;
+}
+
+td:nth-child(3) {
+  text-align: left;
+  width: 50vw;
+}
+
+td:last-child {
+  width: 100px;
+}
