@@ -1,0 +1,39 @@
+.todo__item {
+  position: relative;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  height: 200px;
+  box-shadow: 0 6px 6px rgba(0,0,0,0.2);
+  transition: box-shadow 300ms;
+}
+
+.todo__item:hover {
+  cursor: pointer;
+  box-shadow: 0 15px 15px rgba(0,0,0,0.2);
+}
+
+.todo__item-title {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: grey;
+}
+
+.todo__item-completed {
+  position: absolute;
+  font-size: 22px;
+  font-weight: 600;
+  bottom: 30px;
+  right: 30px;
+}
+
+.todo__item-completed--done {
+  color: #00cf91;
+}
+
+.todo__item-completed--inprocess {
+  color: #fe634e;
+}
