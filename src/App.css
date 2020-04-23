@@ -1,3 +1,64 @@
+.body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+}
+
+.header__text {
+  margin-bottom: 10px;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.todo__item {
+  width: 150px;
+  height: 140px;
+  margin: 0 10px 10px 0;
+  border: 1px solid black;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.todo__item:hover .completed__todo {
+  background-color: rgb(88, 182, 88);
+  color: wheat;
+}
+
+.todo__item:hover .not-completed__todo {
+  background-color: rgb(255, 121, 121);
+  color: wheat;
+}
+
+.user__name {
+  margin: 10px 0;
+}
+
+.status {
+  margin: 10px;
+}
+
+.completed__todo {
+  margin: 0 auto 10px;
+  width: 75px;
+  border-radius: 5px;
+  background-color: green;
+  color: wheat;
+}
+
+.not-completed__todo {
+  margin: 0 auto 10px;
+  width: 90px;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
 }
