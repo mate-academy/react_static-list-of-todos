@@ -1,0 +1,23 @@
+.todo__item {
+  border: 1px solid rgb(243, 157, 157);
+  border-radius: 10px;
+  background-color: rgb(243, 157, 157);
+}
+
+.todo__item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.todo__item--true {
+  border: 1px solid rgb(194, 240, 194);
+  background-color: rgb(194, 240, 194);
+}
+
+.todo__item--true .todo__user-name {
+  color: green;
+}
+
+.todo__title {
+  text-transform: uppercase;
+  font-size: 15px;
+}
