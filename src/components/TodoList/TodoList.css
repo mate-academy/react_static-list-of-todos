@@ -1,0 +1,11 @@
+.todos {
+  max-width: 250px;
+  list-style: none;
+  margin: auto;
+}
+
+.todo {
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
