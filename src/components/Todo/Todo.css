@@ -1,0 +1,17 @@
+.title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.status {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.status--false {
+  color: red;
+}
+
+.status--true {
+  color: limegreen;
+}
