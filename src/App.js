@@ -24,14 +24,6 @@ function App() {
   return (
     <div className="app">
       <h1 className="app__title">Static list of todos</h1>
-      <p className="app__statistic">
-        <span>Todos: </span>
-        {todos.length}
-      </p>
-      <p className="app__statistic">
-        <span>Users: </span>
-        {users.length}
-      </p>
       <div className="todo">
         <TodoList todoList={preparedTodos} />
       </div>

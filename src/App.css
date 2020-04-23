@@ -9,9 +9,10 @@ body {
 }
 
 .app {
+  padding-top: 50px;
   min-width: 1200px;
   margin: 0 auto;
-  width: calc(100% - 100px);
+  width: calc(100% - 60%);
 }
 
 .app__statistic {
