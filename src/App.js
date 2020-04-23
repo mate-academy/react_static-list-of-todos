@@ -3,20 +3,21 @@ import './App.css';
 
 import todos from './api/todos';
 import users from './api/users';
+import TodoList from './components/TodoList/TodoList';
+
+const preparedTodos = todos.map(toDo => (
+  {
+    ...toDo,
+    user: users.find(user => toDo.userId === user.id),
+  }
+));
 
 function App() {
   return (
     <div className="App">
       <h1>Static list of todos</h1>
-      <p>
-        <span>Todos: </span>
-        {todos.length}
-      </p>
 
-      <p>
-        <span>Users: </span>
-        {users.length}
-      </p>
+      <TodoList list={preparedTodos} />
     </div>
   );
 }
