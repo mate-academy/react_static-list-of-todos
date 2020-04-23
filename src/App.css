@@ -1,3 +1,7 @@
-.App {
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.todo {
   text-align: center;
 }
