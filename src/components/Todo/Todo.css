@@ -1,0 +1,9 @@
+.item__status_active {
+  font-weight: bold;
+  background-color: red;
+}
+
+.item__status {
+  font-weight: bold;
+  background-color: green;
+}
