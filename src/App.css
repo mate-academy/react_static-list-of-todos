@@ -1,3 +1,31 @@
-.App {
+.header {
   text-align: center;
+}
+
+.todo__list {
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  grid-gap: 30px;
+  justify-content: center;
+}
+
+.todo {
+  height: 150px;
+  padding: 0 15px;
+  border: 1px solid red;
+  border-radius: 20px;
+  background-color: #f0e68c;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.todo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.todo__completed {
+  color: black;
+  border: 1px solid green;
+  background-color: #8ccb5e;
 }
