@@ -1,3 +1,49 @@
+body {
+  margin: 0;
+  background: lightskyblue;
+}
+
 .App {
   text-align: center;
+}
+
+.todo__head {
+  font-style: italic;
+}
+
+.todo__list {
+  list-style: none;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(5, 200px);
+  justify-content: center;
+}
+
+.todo__item {
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background: lightblue;
+  height: 150px;
+  border: 2px solid black;
+}
+
+.todo__text {
+  margin: 0;
+}
+
+.todo__completed {
+  margin: 0;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  background: lightgray;
+
+}
+
+.todo__user {
+  margin: 0;
 }
