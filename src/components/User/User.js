@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './User.scss';
 
 const User = ({ name }) => (
-  <h2 className="name">
+  <h2 className="user">
     Person:
     {' '}
     {name}

@@ -5,7 +5,7 @@
 
 ## Task
 By using [todos.js](./src/api/todos.js) and [users.js](./src/api/users.js) as
-modules to your React application, create and display a list of all the TODO
+modules to your React application, create and display a list of all the  TODO
 items. Alongside each item display information about the user it belongs to.
 
 1. Create a `preparedTodos` array of `todos` with a `user` property added to each `todo`. Place it in the `App.js`
