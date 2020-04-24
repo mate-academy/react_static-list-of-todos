@@ -1,0 +1,19 @@
+.item {
+  list-style: none;
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: red solid 1px;
+}
+.item.done{
+  background-color: rgb(250, 237, 57);
+}
+
+.item.notReady{
+  background-color: rgb(247, 88, 59);
+}
+
+.title {
+  color: rgb(95, 92, 92);
+}
