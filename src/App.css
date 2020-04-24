@@ -1,3 +1,51 @@
+p {
+  margin: 0;
+}
+
 .App {
   text-align: center;
+}
+
+body {
+  background-color: rgb(250, 203, 142);
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 50px;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  margin: 40px 0;
+  list-style: none;
+  background-color: #f6f6f6;
+  box-shadow: 0 0 10px 4px rgb(246, 237, 186);
+  height: 150px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.1);
+}
+
+.card_number {
+  position: absolute;
+  top: -40px;
+  left: 20px;
+  background-color: rgb(246, 237, 186);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+}
+
+i {
+  padding-left: 5px;
 }
