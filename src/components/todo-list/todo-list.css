@@ -1,0 +1,6 @@
+.todo-list {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1020px;
+  margin: auto;
+}

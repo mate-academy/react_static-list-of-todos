@@ -1,0 +1,15 @@
+.card-desc {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.name {
+  min-width: 85px;
+  font-size: 0.8em;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.option {
+  font-size: 1.2em;
+}
