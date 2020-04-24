@@ -1,8 +1,13 @@
 import React from 'react';
 import './App.css';
-
+import TodoList from './Components/TodoList/TodoList';
 import todos from './api/todos';
 import users from './api/users';
+
+const preparedTodos = todos.map(task => ({
+  ...task,
+  user: users.find(person => person.id === task.userId),
+}));
 
 function App() {
   return (
@@ -17,6 +22,7 @@ function App() {
         <span>Users: </span>
         {users.length}
       </p>
+      <TodoList tasks={preparedTodos} />
     </div>
   );
 }
