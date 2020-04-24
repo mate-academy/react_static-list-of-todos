@@ -7,7 +7,7 @@ import users from './api/users';
 
 const preparedTodos = todos.map(item => ({
   ...item,
-  user: users[item.userId - 1],
+  user: users.find(user => user.id === item.userId),
 }));
 
 const App = () => (

@@ -22,9 +22,9 @@
 }
 
 .todo__completed--success {
-  background-color: #008660;
+  background-color: #04a038;
 }
 
 .todo__completed--danger {
-  background-color: #e20a70;
+  background-color: #e20a0a;
 }
