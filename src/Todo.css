@@ -1,0 +1,24 @@
+.list__item {
+  list-style: none;
+  background-color: #6CC5CA;
+  width: 350px;
+  height: 150px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: all 0.2s;
+}
+
+.status-true {
+  color: green;
+  font-weight: bold;
+}
+
+.status-false {
+  color: rgb(253, 80, 49);
+  font-weight: bold;
+}
+
+.list__item:hover {
+  cursor: pointer;
+  box-shadow: 0 0 17px 0 rgba(0,0,0,0.75);
+}
