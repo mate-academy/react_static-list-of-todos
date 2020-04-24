@@ -16,8 +16,6 @@ function TodoList({ todoList }) {
   );
 }
 
-export default TodoList;
-
 TodoList.propTypes = {
   todoList: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
@@ -26,3 +24,5 @@ TodoList.propTypes = {
     user: PropTypes.object.isRequired,
   })).isRequired,
 };
+
+export default TodoList;

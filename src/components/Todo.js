@@ -29,8 +29,6 @@ function Todo({ title, completed, user }) {
   );
 }
 
-export default Todo;
-
 Todo.propTypes = {
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
@@ -41,3 +39,5 @@ Todo.propTypes = {
     email: PropTypes.bool.isRequired,
   })).isRequired,
 };
+
+export default Todo;
