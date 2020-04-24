@@ -6,7 +6,7 @@ import './App.css';
 import todos from './api/todos';
 import users from './api/users';
 
-const getTodosWithUsers = () => todos.map(todo => ({
+const preparedTodos = todos.map(todo => ({
   ...todo,
   user: users.find(user => user.id === todo.userId),
 }));
@@ -16,7 +16,7 @@ const App = () => (
     <Header as="h1" color="olive">
       Static list of todos
     </Header>
-    <TodoList list={getTodosWithUsers()} />
+    <TodoList list={preparedTodos} />
   </Segment>
 );
 
