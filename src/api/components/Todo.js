@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import User from './User';
 
 const Todo = ({ id, user, title, completed }) => (
-  <React.Fragment>
+  <li>
     <span className="card_number">{id}</span>
     <User user={user} />
     <p>
@@ -11,17 +11,19 @@ const Todo = ({ id, user, title, completed }) => (
       <i>{title}</i>
     </p>
     <p>
-      <strong>Complite:</strong>
+      <strong>Complete:</strong>
       <i>{completed.toString()}</i>
     </p>
-  </React.Fragment>
+  </li>
 );
 
 Todo.propTypes = {
   id: PropTypes.number.isRequired,
-  user: PropTypes.arrayOf(PropTypes.object).isRequired,
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Todo;

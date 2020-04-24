@@ -4,13 +4,12 @@ import todos from './api/todos';
 import users from './api/users';
 import TodoList from './api/components/TodoList';
 
-const preparedTodos = todos.map((item) => {
-  const personTodoList = { ...item };
-
-  personTodoList.user = users.find(person => (person.id === item.userId));
-
-  return personTodoList;
-});
+const preparedTodos = todos.map(item => (
+  {
+    ...item,
+    user: users.find(person => (person.id === item.userId)),
+  }
+));
 
 function App() {
   return (
