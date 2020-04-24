@@ -4,13 +4,15 @@ import User from '../user/User';
 
 const Todo = ({ userInfo: { title, completed, user } }) => (
   <>
-    <h4>
-      Title:
-      {' '}
-      {title}
-    </h4>
-    {completed ? <p>Status: completed</p> : <p>Status: not completed</p>}
-    <User userPersonalInfo={user} />
+    <li className="list__userInfo">
+      <h4>
+        Title:
+        {' '}
+        {title}
+      </h4>
+      {completed ? <p>Status: completed</p> : <p>Status: not completed</p>}
+      <User userPersonalInfo={user} />
+    </li>
   </>
 );
 

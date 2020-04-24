@@ -6,9 +6,7 @@ import './TodoList.css';
 const TodoList = ({ usersInfo }) => (
   <ul className="list">
     {usersInfo.map(oneOfUsersInfo => (
-      <li className="list__userInfo" key={oneOfUsersInfo.id}>
-        <Todo userInfo={oneOfUsersInfo} />
-      </li>
+      <Todo userInfo={oneOfUsersInfo} key={oneOfUsersInfo.id} />
     ))}
   </ul>
 );
