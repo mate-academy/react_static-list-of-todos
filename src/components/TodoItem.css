@@ -1,0 +1,18 @@
+.user__completed-true {
+  background-color: rgb(62, 247, 247);
+  padding: 0 20px;
+
+}
+
+.user__completed-false {
+  background-color: rgb(228, 80, 183);
+  padding: 0 20px;
+}
+
+.user__website {
+  font-size: 25px;
+}
+
+.user__email {
+  font-size: 25px;
+}

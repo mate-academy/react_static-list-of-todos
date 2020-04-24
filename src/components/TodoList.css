@@ -1,0 +1,7 @@
+.todo__list {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-gap: 150px;
+  justify-content: center;
+
+}
