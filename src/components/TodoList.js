@@ -14,11 +14,13 @@ const TodoList = ({ list }) => (
       </Table.Row>
     </Table.Header>
     <Table.Body>
-      {list.map(todo => <Todo key={todo.id} todo={todo} />)}
+      {list.map(todo => <Todo key={todo.id} {...todo} />)}
     </Table.Body>
   </Table>
 );
 
-TodoList.propTypes = { list: PropTypes.arrayOf(PropTypes.object).isRequired };
+TodoList.propTypes = {
+  list: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 export default TodoList;

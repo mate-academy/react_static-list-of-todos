@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { Icon, Table } from 'semantic-ui-react';
 import User from './User';
 
-const TodoItem = ({ todo }) => (
+const TodoItem = ({ id, user, completed, title }) => (
   <Table.Row warning>
-    <Table.Cell>{todo.id}</Table.Cell>
-    <User user={todo.user} />
-    <TodoCell compl={todo.completed} />
-    <Table.Cell textAlign="left">{todo.title}</Table.Cell>
+    <Table.Cell>{id}</Table.Cell>
+    <User {...user} />
+    <TodoCell compl={completed} />
+    <Table.Cell textAlign="left">{title}</Table.Cell>
   </Table.Row>
 );
 
@@ -23,13 +23,19 @@ const TodoCell = ({ compl }) => (
 );
 
 TodoItem.propTypes = {
-  todo: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    user: PropTypes.object.isRequired,
-    title: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired,
-  }).isRequired,
+  id: PropTypes.number.isRequired,
+  user: PropTypes.objectOf(
+    PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+      PropTypes.object,
+    ]),
+  ).isRequired,
+  title: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
 };
-TodoCell.propTypes = { compl: PropTypes.bool.isRequired };
+TodoCell.propTypes = {
+  compl: PropTypes.bool.isRequired,
+};
 
 export default TodoItem;

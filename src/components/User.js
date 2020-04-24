@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Table } from 'semantic-ui-react';
 
-const User = ({ user }) => <Table.Cell>{user.name}</Table.Cell>;
+const User = ({ name }) => <Table.Cell>{name}</Table.Cell>;
 
-User.propTypes = { user: PropTypes.objectOf(PropTypes.any).isRequired };
+User.propTypes = {
+  name: PropTypes.string.isRequired,
+};
 
 export default User;
