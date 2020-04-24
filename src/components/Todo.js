@@ -1,6 +1,7 @@
 import React from 'react';
 import './Todo.css';
 import PropTypes from 'prop-types';
+import User from './User';
 
 const doneElement = (
   <span className="todo__item-completed--done">
@@ -15,17 +16,15 @@ const inProcessElement = (
 
 function Todo({ title, completed, user }) {
   return (
-    <>
+    <li className="todo__item">
       <h2 className="todo__item-title">
         {title}
       </h2>
-      <span className="todo__item-name">
-        {user.name}
-      </span>
+      <User {...user} />
       <div className="todo__item-completed">
         {completed ? doneElement : inProcessElement}
       </div>
-    </>
+    </li>
   );
 }
 
