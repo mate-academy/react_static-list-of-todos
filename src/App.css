@@ -1,3 +1,21 @@
-.App {
+body {
+  margin: 0;
+  padding-top: 50px;
+}
+
+h1 {
   text-align: center;
+}
+
+.info-label {
+  display: flex;
+  max-width: 800px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.count {
+  font-size: 24px;
+  font-weight: 600;
+  color: #78c2ad;
 }

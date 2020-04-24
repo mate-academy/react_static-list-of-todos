@@ -1,0 +1,12 @@
+.card {
+  flex: 0 0 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+}
+
+.card-id {
+  font-size: 24px;
+  font-weight: 600;
+}
