@@ -1,0 +1,13 @@
+.item__status_active {
+  display: inline;
+  align-items: center;
+  font-weight: bold;
+  background-color: rgba(248, 134, 92);
+}
+
+.item__status {
+  display: inline;
+  align-items: center;
+  font-weight: bold;
+  background-color: rgb(116, 245, 144);
+}
