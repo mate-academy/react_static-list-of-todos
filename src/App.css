@@ -1,3 +1,20 @@
 .App {
   text-align: center;
 }
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #ff5f64;
+  margin: 20px auto;
+}
+
+.item--true {
+  background-color: #54ff4b;
+}
