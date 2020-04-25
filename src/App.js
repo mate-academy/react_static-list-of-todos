@@ -1,9 +1,8 @@
 import React from 'react';
 import './App.css';
-
 import todos from './api/todos';
 import users from './api/users';
-import { CoverItem } from './CoverItem';
+import { TodoList } from './TodoList';
 
 const preparedTodos = todos.map(tod => ({
   ...tod,
@@ -14,9 +13,7 @@ function App() {
   return (
     <div className="App">
       <h1>Static list of todos</h1>
-      <ul className="list">
-        {preparedTodos.map(item => <CoverItem {...item} key={item.id} />)}
-      </ul>
+      <TodoList preparedTodos={preparedTodos} key={preparedTodos.id} />
     </div>
   );
 }
