@@ -1,0 +1,9 @@
+.completed {
+  color: #16817a;
+  font-weight: 500;
+}
+
+.inProcess {
+  color: #fa744f;
+  font-weight: 500;
+}
