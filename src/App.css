@@ -1,3 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;600&display=swap");
+
 .App {
   text-align: center;
+  color: #024249;
+  font-family: "Roboto Slab", serif;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.singleCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  height: 150px;
+  padding: 40px 20px;
+  margin: 10px;
+  border: 4px solid #f79071;
+  background-color: rgba(247, 144, 113, 0.1);
+  border-radius: 25%;
+  color: #024249;
+  transition: 300ms transform, 300ms border-color;
+}
+
+.singleCard:hover {
+  border-color: #024249;
+  transform: scale(1.05);
+}
+
+.bold {
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.completed {
+  color: #16817a;
+  font-weight: 500;
+}
+
+.inProcess {
+  color: #fa744f;
+  font-weight: 500;
 }
