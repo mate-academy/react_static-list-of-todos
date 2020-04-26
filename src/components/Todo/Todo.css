@@ -1,0 +1,19 @@
+.title {
+  margin: 6px;
+  color: dimgrey;
+  font-size: 18px;
+  font-style: italic;
+  height: 40px;
+}
+
+.in_progress {
+  color: indianred;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.completed {
+  color: forestgreen;
+  font-size: 15px;
+  font-weight: bold;
+}

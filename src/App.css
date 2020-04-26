@@ -1,3 +1,10 @@
 .App {
   text-align: center;
+  margin: 20px auto;
+
+}
+
+.App > h1 {
+  color: cadetblue;
+  font-style: italic;
 }
