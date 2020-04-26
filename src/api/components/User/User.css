@@ -1,0 +1,9 @@
+.card__item-username {
+  font-weight: 780;
+  color: rgb(59, 165, 226);
+}
+
+.card__item-nickname {
+  font-weight: 780;
+  color: rgb(224, 163, 30);
+}
