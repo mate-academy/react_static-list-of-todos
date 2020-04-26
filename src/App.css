@@ -1,3 +1,48 @@
+.body {
+  margin: 0;
+}
+
 .App {
   text-align: center;
+}
+
+.todo__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+}
+
+.todo__item {
+  border: 3px solid #5baf31;
+  border-radius: 25%;
+  background-color: chartreuse;
+}
+
+.todo__name {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.todo__task {
+  font-size: 20px;
+  background-color: rgb(224, 247, 16);
+  border-radius: 15%;
+}
+
+.todo__complete {
+  font-size: 18px;
+}
+
+.todo__done {
+  display: inline;
+  background-color: rgb(4, 138, 4);
+  border-radius: 15%;
+}
+
+.todo__not {
+  display: inline;
+  background-color: rgb(245, 38, 38);
+  border-radius: 15%;
 }
