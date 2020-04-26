@@ -1,0 +1,25 @@
+.list__item {
+  width: 300px;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  border-radius: 5%;
+  box-shadow: 0 5px 10px rgba(175, 171, 171, 0.5);
+
+}
+
+.list__item-completion {
+  font-size: small;
+  font-weight: 600;
+  color: rgb(32, 179, 32);
+}
+
+.list__item-completion-none {
+  font-size: small;
+  font-weight: 600;
+  color: rgb(255, 0, 0);
+}
+
+.list__item-title {
+  font-size: 16px;
+  font-style: italic;
+}
