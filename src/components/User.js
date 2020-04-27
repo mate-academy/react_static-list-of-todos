@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const User = ({ name, id }) => (
-  <div className="todo_user-name" id={id}>
-    Users name:
+  <div id={id}>
+    <span className="todo_user-text">Users name: &nbsp;</span>
     {name}
   </div>
 );

@@ -10,12 +10,16 @@ const TodoItem = ({ title, completed, user }) => (
   }
   >
     <User {...user} />
-    <div className="todo_title">
-      Todos:
+    <div>
+      <span className="todo_title-text">
+        Todos: &nbsp;
+      </span>
       {title}
     </div>
-    <div>
-      {completed}
+    <div className="todo_status">
+      {completed
+        ? 'True'
+        : 'False'}
     </div>
   </li>
 );

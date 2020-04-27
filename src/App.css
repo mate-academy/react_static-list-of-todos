@@ -4,26 +4,30 @@
 
 .todo_item {
   list-style: none;
-  background-color: rgba(255, 0, 0, 0.32);
+  background-color: rgba(255, 0, 0, 0.28);
   border: 1px solid red;
+  color: red;
   border-radius: 20px;
-  height: 120px;
-  padding: 15px;
+  height: 110px;
+  padding: 10px;
   box-sizing: border-box;
 }
 
 .todo_item-done {
   border: 1px solid green;
-  background-color: rgba(0, 255, 0, 0.32);
+  background-color: rgba(0, 255, 0, 0.28);
+  color: green;
 }
 
 .todo_list {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(3, 1fr);
-
+  justify-content: start;
 }
 
-.todo_title-text {
-  font-weight: normal;
+.todo_user-text,
+.todo_title-text,
+.todo_status {
+  font-weight: bold;
 }
