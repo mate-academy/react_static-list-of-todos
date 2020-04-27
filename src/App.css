@@ -1,3 +1,29 @@
 .App {
   text-align: center;
 }
+
+.todo_item {
+  list-style: none;
+  background-color: rgba(255, 0, 0, 0.32);
+  border: 1px solid red;
+  border-radius: 20px;
+  height: 120px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.todo_item-done {
+  border: 1px solid green;
+  background-color: rgba(0, 255, 0, 0.32);
+}
+
+.todo_list {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+
+}
+
+.todo_title-text {
+  font-weight: normal;
+}
