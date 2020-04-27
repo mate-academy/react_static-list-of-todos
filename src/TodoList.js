@@ -1,22 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import User from './User';
-import Status from './Status';
-import Title from './Title';
+import Todo from './Todo';
 
-const GreateList = ({ items }) => (
-  <>
+const TodoList = ({ items }) => (
+  <ol>
     {items.map(item => (
       <li key={item.id}>
-        <Title item={item} />
-        <Status item={item} />
+        <Todo item={item} />
         <User item={item} />
       </li>
     ))}
-  </>
+  </ol>
 );
 
-GreateList.propTypes = {
+TodoList.propTypes = {
   items: PropTypes.shape({
     map: PropTypes.func.isRequired,
     title: PropTypes.string.isRequired,
@@ -25,4 +23,4 @@ GreateList.propTypes = {
   }).isRequired,
 };
 
-export default GreateList;
+export default TodoList;

@@ -4,18 +4,11 @@ import PropTypes from 'prop-types';
 const Status = ({ item }) => {
   const { completed } = item;
 
-  if (!completed) {
-    return (
-      <p className="not__completed">
-        not completed
-      </p>
-    );
-  }
-
   return (
-    <p className="completed">
-      completed
-    </p>
+    <>
+      {completed ? <p className="completed">completed</p>
+        : <p className="not__completed">not completed</p>}
+    </>
   );
 };
 

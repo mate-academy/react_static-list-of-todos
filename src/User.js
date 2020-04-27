@@ -4,18 +4,11 @@ import PropTypes from 'prop-types';
 const User = ({ item }) => {
   const { user } = item;
 
-  if (user === undefined) {
-    return (
-      <p className="name__isnotDefined">
-        Name is not defined
-      </p>
-    );
-  }
-
   return (
-    <p className="name">
-      {user.name}
-    </p>
+    <>
+      {user ? <p className="name">{user.name}</p>
+        : <p className="name__isnotDefined">Name is not defined</p>}
+    </>
   );
 };
 
