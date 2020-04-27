@@ -3,13 +3,10 @@ import PropTypes from 'prop-types';
 import { User } from './User';
 
 export const Todo = ({ title, completed, user }) => (
-  <>
-    <tr>
-      <td className={completed ? 'completed' : 'in-progress'}>{title}</td>
-
-      <User name={user.name} />
-    </tr>
-  </>
+  <tr>
+    <td className={completed ? 'completed' : 'in-progress'}>{title}</td>
+    <User name={user.name} />
+  </tr>
 );
 
 Todo.propTypes = {
