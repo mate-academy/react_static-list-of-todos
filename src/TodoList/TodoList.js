@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import Todo from '../Todo/Todo';
 
 const TodoList = ({ prepTodos }) => (
-  <div className="cards">
+  <ul className="cards">
     {prepTodos.map(todo => (
-      <div className="singleCard" key={todo.id}>
+      <li className="singleCard" key={todo.id}>
         <Todo todo={todo} />
-      </div>
+      </li>
     ))}
-  </div>
+  </ul>
 );
 
 TodoList.propTypes = {
