@@ -6,12 +6,12 @@ import './todoList.css';
 function TodoList(props) {
   const todoItems = props.todoList.map(t => {
     return (
-      <TodoListItem todoItem={t} users={props.userList} />
+      <TodoListItem key={t.id} todoItem={t} />
     )
   });
 
   return (
-    <ul className="list">
+    <ul  className="list">
       {todoItems}
     </ul>
   )

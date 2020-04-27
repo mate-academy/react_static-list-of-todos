@@ -6,6 +6,10 @@ import todos from './api/todos';
 import users from './api/users';
 
 function App() {
+  let preparedTodos = todos.map(t => {
+      t.user = users.find(u => u.id === t.userId);
+      return t;
+    });
 
   return (
     <div className="App">
@@ -14,7 +18,7 @@ function App() {
         <span>Todos: </span>
         {todos.length}
       </p>
-      <TodoList todoList={todos} userList={users}/>
+      <TodoList todoList={preparedTodos}/>
     </div>
   );
 }

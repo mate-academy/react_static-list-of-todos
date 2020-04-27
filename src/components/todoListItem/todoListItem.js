@@ -3,24 +3,31 @@ import PropTypes from 'prop-types';
 import './todoListItem.css';
 
 function TodoListItem(props) {
-   const t = props.todoItem;
-  const user = props.users.find(u => {
-    return t.userId === u.id;
-  });
-  let liClass = `item ${(t.completed ? "done" : "notReady")}`;
+
+  const t = props.todoItem || null;
+
+  let liClass = `item ${(t?.completed ? "done" : "notReady")}`;
+  let title = t?.title;
+  let completed = t?.completed;
+  let user = t?.user;
+
   return (
-    <li key={t.id} className={liClass}>
-      <p>{t.title}</p>
+    <li className={liClass}>
+      <p>{title}</p>
       <h1 className="title">{user.name}</h1>
-      <p className={(t.completed ? "done" : "notReady")}></p>
+      <p className={(completed ? "done" : "notReady")}>
+      {(completed ? "ready" : "not ready")}
+      </p>
     </li>
   )
 }
 
 TodoListItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired,
+  todoItem: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    user: PropTypes.object.isRequired,
+    completed: PropTypes.bool.isRequired,
+  }).isRequired
 };
 
 export default TodoListItem;
