@@ -1,3 +1,45 @@
-.App {
+body {
+  margin: 0;
+  background-color: #f0e6ef;
+}
+
+.todo__header {
+  margin: 20px;
   text-align: center;
+}
+
+.todo__list {
+  width: 1500px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+
+  margin: 0 auto;
+  padding: 0;
+}
+
+.todo__item {
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid #9c89b8;
+  background-color: #efc3e6;
+  border-radius: 7px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.todo__item:hover {
+  transform: scale(1.1);
+}
+
+.todo__completed {
+  background-color: rgb(189, 255, 200);
+  border-radius: 7px;
+}
+
+.todo__completed--not {
+  background-color: rgb(255, 140, 163);
+  border-radius: 7px;
 }
