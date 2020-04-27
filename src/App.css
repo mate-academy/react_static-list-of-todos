@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;600;900&display=swap");
+@import "./TodoList/TodoList.css";
+@import "./Todo/Todo.css";
+@import "./User/User.css";
+
 .App {
   text-align: center;
+  color: #024249;
+  font-family: "Roboto Slab", serif;
+}
+
+.bold {
+  font-weight: 600;
+  font-size: 1.1em;
 }
