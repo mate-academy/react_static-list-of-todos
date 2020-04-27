@@ -5,15 +5,17 @@ import User from './User';
 function Todo({ todo: { title, completed, user } }) {
   return (
     <>
-      <p className="todo__title">
-        {title}
-      </p>
+      <li className="todo__item">
+        <p className="todo__title">
+          {title}
+        </p>
 
-      {completed
-        ? <p className="todo__completed">Done</p>
-        : <p className="todo__completed--not">Not done</p>}
+        {completed
+          ? <p className="todo__completed">Done</p>
+          : <p className="todo__completed--not">Not done</p>}
 
-      <User user={user} />
+        <User user={user} />
+      </li>
     </>
   );
 }
