@@ -2,21 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import User from './User';
 
-const Todo = ({ user, title, completed }) => (
-  <li>
-    <User user={user} />
-    <p>
-      To-do:
-      {' '}
-      {title}
-    </p>
-    <p>
-      Complete:
-      {' '}
-      {completed.toString()}
-    </p>
-  </li>
-);
+const Todo = ({ user, title, completed }) => {
+  const toDo = `To-do: ${title}`;
+  const complete = `Complete: ${completed.toString()}`;
+
+  return (
+    <li>
+      <User user={user} />
+      <p>{toDo}</p>
+      <p>{complete}</p>
+    </li>
+  );
+};
 
 Todo.propTypes = {
   title: PropTypes.string.isRequired,

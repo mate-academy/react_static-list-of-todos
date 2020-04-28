@@ -1,14 +1,11 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 
 function User({ user }) {
+  const userName = `${user.name}`;
+
   return (
-    <p>
-      User:
-      {' '}
-      {user.name}
-    </p>
+    <p>{userName}</p>
   );
 }
 
