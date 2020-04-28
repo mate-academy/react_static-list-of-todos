@@ -1,3 +1,21 @@
 .App {
   text-align: center;
 }
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  list-style: none;
+  background-color: yellowgreen;
+  height: 150px;
+  border-radius: 15px;
+}
