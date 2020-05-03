@@ -1,3 +1,37 @@
 .App {
   text-align: center;
 }
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: #ffecc7;
+  margin: 5px;
+  width: 300px;
+}
+
+.card__number {
+  border: 1px solid black;
+  background-color: #fdd998;
+  border-radius: 50%;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.todo__done {
+  color: green;
+}
+
+.todo__notDone {
+  color: red;
+}
+
+.user__name {
+  font-size: 20px;
+}
