@@ -1,3 +1,35 @@
 .App {
   text-align: center;
 }
+
+.todos {
+  width: 1500px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+
+  margin: 0 auto;
+  padding: 0;
+}
+
+.element {
+  margin: 20px;
+  padding: 0;
+  background-color: #c3d5ef;
+  width: 600px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.element:hover {
+  transform: scale(1.1);
+}
+
+.completed {
+  background-color: rgb(189, 255, 200);
+}
+
+.inProgress {
+  background-color: rgb(255, 140, 163);
+}
