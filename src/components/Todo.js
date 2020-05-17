@@ -8,8 +8,8 @@ const TodoItem = ({ id, user, completed, title }) => (
   <Table.Row warning>
     <Table.Cell>{id}</Table.Cell>
     <User {...user} />
-    <TodoCellCompleted compl={completed} />
     <Table.Cell textAlign="left">{title}</Table.Cell>
+    <TodoCellCompleted compl={completed} />
   </Table.Row>
 );
 

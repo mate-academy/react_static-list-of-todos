@@ -9,8 +9,8 @@ const TodoList = ({ list }) => (
       <Table.Row>
         <Table.HeaderCell>Id</Table.HeaderCell>
         <Table.HeaderCell>Person</Table.HeaderCell>
-        <Table.HeaderCell>Completed</Table.HeaderCell>
         <Table.HeaderCell>Description</Table.HeaderCell>
+        <Table.HeaderCell>Completed</Table.HeaderCell>
       </Table.Row>
     </Table.Header>
     <Table.Body>
