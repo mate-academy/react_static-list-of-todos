@@ -13,7 +13,7 @@ const Todo = props => (
       <input
         className="todo__completed"
         type="checkbox"
-        checked={props.completed && true}
+        checked={props.completed}
         readOnly
       />
       <span className="todo__title">
