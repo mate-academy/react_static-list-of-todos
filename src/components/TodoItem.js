@@ -26,9 +26,6 @@ const TodoItem = function(props) {
 
 TodoItem.propTypes = {
   singleTodo: PropTypes.arrayOf(PropTypes.object).isRequired,
-  // props.singleTodo[1]: PropTypes.string.isRequired,
-  // props.singleTodo[2]: PropTypes.string.isRequired,
-  // props.singleTodo[3]: PropTypes.string.isRequired,
 };
 
 export default TodoItem;
