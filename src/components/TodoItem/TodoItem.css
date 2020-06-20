@@ -1,6 +1,7 @@
 
 li {
   color: rgb(46, 43, 43);
+  border: 1px solid rgb(46, 43, 43);
   margin: 10px;
   padding: 20px;
   display: block;

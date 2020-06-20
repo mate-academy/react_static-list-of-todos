@@ -18,7 +18,6 @@ TodoItem.propTypes = {
   name: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
   id: PropTypes.number.isRequired,
-
 };
 
 export default TodoItem;
