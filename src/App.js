@@ -1,21 +1,23 @@
-/* eslint-disable no-console */
 import React from 'react';
 import './App.css';
-import TodoList from './components/TodoList';
+import TodoList from './components/TodoList/TodoList';
 
 import todos from './api/todos';
 import users from './api/users';
 
-function findUserTodo(userId, name) {
+function findTodo(userId, name) {
   const userTodos = todos.filter(user => user.userId === userId);
-  const todoForUser = userTodos
-    .map(user => [name, user.title, user.completed, user.id]);
 
-  return todoForUser;
+  return userTodos.map(user => ({
+    name,
+    title: user.title,
+    completed: user.completed,
+    id: user.id,
+  }));
 }
 
-const almostPreparedTodos = users.map(user => findUserTodo(user.id, user.name));
-const preparedTodos = almostPreparedTodos.flat();
+const preparedTodos = users
+  .map(user => findTodo(user.id, user.name)).flat();
 
 function App() {
   return (
@@ -24,9 +26,7 @@ function App() {
       <p>
         <span>Todos: </span>
       </p>
-      <ul>
-        <TodoList list={preparedTodos} />
-      </ul>
+      <TodoList list={preparedTodos} />
       <p>
         <span>Users: </span>
         {users.length}
