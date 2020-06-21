@@ -1,0 +1,10 @@
+
+.completed {
+  background-color: green;
+  border-radius: 0.5rem;
+}
+
+.not-completed {
+  background-color: tomato;
+  border-radius: 0.5rem;
+}
