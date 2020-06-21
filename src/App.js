@@ -8,12 +8,10 @@ import { preparedTodosList } from './component/preparedTodosList';
 
 const preparedList = preparedTodosList(todos, users);
 
-function App() {
-  return (
-    <div className="App">
-      <TodoList preparedTodos={preparedList} />
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <TodoList preparedTodos={preparedList} />
+  </div>
+);
 
 export default App;
