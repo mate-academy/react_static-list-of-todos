@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { ShapeTodoItem } from '../Shapes';
 import './TodoItem.css';
 
 const TodoItem = ({ name, title, completed, id }) => (
@@ -13,11 +13,6 @@ const TodoItem = ({ name, title, completed, id }) => (
   </li>
 );
 
-TodoItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired,
-  id: PropTypes.number.isRequired,
-};
+TodoItem.propTypes = ShapeTodoItem.isRequired;
 
 export default TodoItem;

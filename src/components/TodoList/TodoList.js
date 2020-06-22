@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
-import PropTypes from 'prop-types';
 import React from 'react';
+import { ShapeTodoList } from '../Shapes';
 import TodoItem from '../TodoItem/TodoItem';
 import './TodoList.css';
 
@@ -8,13 +8,10 @@ const TodoList = props => (
   <ul>
     {
       props.list.map(singleTodo => (
-        <TodoItem {...singleTodo} />
-      ))
+        <TodoItem key={singleTodo.id} {...singleTodo} />))
     }
   </ul>
 );
 
-TodoList.propTypes = {
-  list: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+TodoList.propTypes = ShapeTodoList.isRequired;
 export default TodoList;

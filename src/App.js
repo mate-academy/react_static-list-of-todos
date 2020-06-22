@@ -16,8 +16,7 @@ function findTodo(userId, name) {
   }));
 }
 
-const preparedTodos = users
-  .map(user => findTodo(user.id, user.name)).flat();
+const preparedTodos = users.map(user => findTodo(user.id, user.name)).flat();
 
 function App() {
   return (
