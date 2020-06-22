@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { User } from './User';
 import './Todo.css';
+import { User } from './User';
+import { ShapeTodo } from '../Shapes/ShapeTodo';
 
 export const Todo = ({ todoItem }) => (
   <li className="todo-list__item">
@@ -18,6 +18,4 @@ export const Todo = ({ todoItem }) => (
   </li>
 );
 
-Todo.propTypes = {
-  todoItem: PropTypes.objectOf(Object).isRequired,
-};
+Todo.propTypes = ShapeTodo.isRequired;

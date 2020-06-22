@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Todo } from '../todo/Todo';
 import './TodoList.css';
+import { Todo } from '../todo/Todo';
+import { ShapeTodo } from '../Shapes/ShapeTodo';
 
 export const TodoList = ({ preparedTodos }) => (
   <ul className="todo-list">
@@ -12,5 +13,5 @@ export const TodoList = ({ preparedTodos }) => (
 );
 
 TodoList.propTypes = {
-  preparedTodos: PropTypes.arrayOf(Object).isRequired,
+  preparedTodos: PropTypes.arrayOf(ShapeTodo).isRequired,
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { ShapeUser } from '../Shapes/ShapeUser';
 
 export const User = ({ user }) => (
   <span className="todo__user-name">
@@ -7,6 +7,4 @@ export const User = ({ user }) => (
   </span>
 );
 
-User.propTypes = {
-  user: PropTypes.objectOf(Object).isRequired,
-};
+User.propTypes = ShapeUser.isRequired;
