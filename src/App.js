@@ -4,14 +4,9 @@ import './App.css';
 import todos from './api/todos';
 import users from './api/users';
 import { TodoList } from './components/TodoList/TodoList';
+import { prepareTodos } from './utilities/prepareTodos';
 
-const preparedTodos = [...todos].map((todo) => {
-  const matchedUser = users.find(user => user.id === todo.userId);
-
-  return {
-    ...todo, user: { ...matchedUser },
-  };
-});
+const preparedTodos = prepareTodos(todos, users);
 
 function App() {
   return (

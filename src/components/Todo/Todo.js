@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { User } from '../User/User';
 import styles from './Todo.module.css';
+import { todoShape } from '../shapes/TodoShape';
 
 export const Todo = props => (
   <div className={props.todo.completed
@@ -18,9 +18,5 @@ export const Todo = props => (
 );
 
 Todo.propTypes = {
-  todo: PropTypes.shape({
-    title: PropTypes.string,
-    completed: PropTypes.bool,
-    user: PropTypes.objectOf,
-  }).isRequired,
+  todo: todoShape.isRequired,
 };
