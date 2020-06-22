@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Todo from '../Todo/Todo';
 import User from '../User/User';
+import { todoShapes, userShapes, companyShapes }
+  from '../../api/preparedTodosShapes';
 
 const PreparedTodos = ({ preparedTodos }) => (
   <table className="table">
@@ -30,12 +32,10 @@ const PreparedTodos = ({ preparedTodos }) => (
 );
 
 PreparedTodos.propTypes = {
-  preparedTodos: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number,
-    userId: PropTypes.number,
-    user: PropTypes.object,
-    completed: PropTypes.bool,
-    title: PropTypes.string,
-  })).isRequired,
+  preparedTodos: PropTypes.arrayOf(
+    todoShapes,
+    userShapes,
+    companyShapes,
+  ).isRequired,
 };
 export default PreparedTodos;

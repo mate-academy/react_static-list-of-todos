@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes, { string, number, bool } from 'prop-types';
+import { todoShapes } from '../../api/preparedTodosShapes';
 
 const Todo = ({ todo }) => (
   <>
@@ -9,12 +9,7 @@ const Todo = ({ todo }) => (
 );
 
 Todo.propTypes = {
-  todo: PropTypes.shape({
-    title: string,
-    userId: number,
-    id: number,
-    completed: bool,
-  }).isRequired,
+  todo: todoShapes.isRequired,
 };
 
 export default Todo;

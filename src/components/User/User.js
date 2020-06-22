@@ -1,14 +1,10 @@
 import React from 'react';
-import PropTypes, { string } from 'prop-types';
+import { userShapes } from '../../api/preparedTodosShapes';
 
 const User = ({ user }) => (
   <td>{user.name}</td>
 );
 
-User.propTypes = {
-  user: PropTypes.shape({
-    name: string,
-  }).isRequired,
-};
+User.propTypes = userShapes;
 
 export default User;
