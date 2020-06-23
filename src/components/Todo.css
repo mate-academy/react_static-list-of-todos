@@ -1,0 +1,9 @@
+.todo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.todo__item {
+  width: 200px;
+}
