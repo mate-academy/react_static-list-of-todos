@@ -3,6 +3,12 @@ import './App.css';
 
 import todos from './api/todos';
 import users from './api/users';
+import { ToDoList } from './components/ToDoList/ToDolist';
+
+const preparedToDos = todos.map(todo => ({
+  ...todo,
+  user: users.find(user => user.id === todo.userId),
+}));
 
 function App() {
   return (
@@ -17,6 +23,19 @@ function App() {
         <span>Users: </span>
         {users.length}
       </p>
+      <table className="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>ToDo</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ToDoList key="todolist" todos={preparedToDos} />
+        </tbody>
+      </table>
     </div>
   );
 }
