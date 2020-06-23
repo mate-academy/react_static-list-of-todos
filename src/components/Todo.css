@@ -1,9 +1,19 @@
 .todo {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
+  justify-items: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .todo__item {
-  width: 200px;
+  width: 400px;
+  margin: 25px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid black;
 }

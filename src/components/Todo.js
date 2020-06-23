@@ -4,15 +4,14 @@ import './Todo.css';
 
 export const Todo = ({ user, id, title, completed }) => (
   <div className="todo__item">
-    <h3>{`${id}. ${title}`}</h3>
-    <small>
+    <small style={{ color: completed ? 'green' : 'red' }}>
       {completed ? 'done' : 'not done'}
     </small>
-    <span>
+    <p><b>{`${id}. ${title}`}</b></p>
+    <small>
       <br />
-      For:
-      {user.name}
-    </span>
+      {`For: ${user.name}`}
+    </small>
   </div>
 );
 
