@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-
 import todos from './api/todos';
 import users from './api/users';
+import preparedTodos from './api/preparedTodos';
+import TodoList from './components/TodoList';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <span>Users: </span>
         {users.length}
       </p>
+      <TodoList preparedTodos={preparedTodos} />
     </div>
   );
 }
