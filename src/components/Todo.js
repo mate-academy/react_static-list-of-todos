@@ -4,10 +4,10 @@ import './Todo.css';
 
 export const Todo = ({ user, id, title, completed }) => (
   <div className="todo__item">
-    <small style={{ color: completed ? 'green' : 'red' }}>
+    <small style={{ color: completed ? 'yellowgreen' : 'coral' }}>
       {completed ? 'done' : 'not done'}
     </small>
-    <p><b>{`${id}. ${title}`}</b></p>
+    <p>{`${id}. ${title}`}</p>
     <small>
       <br />
       {`For: ${user.name}`}
@@ -15,9 +15,11 @@ export const Todo = ({ user, id, title, completed }) => (
   </div>
 );
 
-Todo.propTypes = {
+export const TodoShape = PropTypes.shape({
+  user: PropTypes.objectOf(PropTypes.string).isRequired,
+  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
-  user: PropTypes.objectOf(PropTypes.string).isRequired,
-  id: PropTypes.string.isRequired,
-};
+});
+
+Todo.propTypes = { ...TodoShape };

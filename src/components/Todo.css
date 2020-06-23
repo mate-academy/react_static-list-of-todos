@@ -1,19 +1,29 @@
 .todo {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center; */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: rgb(53, 53, 53);
 }
 
 .todo__item {
-  width: 400px;
-  margin: 25px;
-  padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 2px solid black;
+
+  width: 300px;
+  margin: 25px;
+  padding: 25px;
+
+  background-color: rgb(247, 247, 255);
+  border: 1px solid rgb(53, 53, 53);
+
+  transition: transform 0.2s ease-in-out;
+}
+
+.todo__item:hover {
+  transform: scale(1.1);
 }
