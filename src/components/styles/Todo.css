@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 10px;
+  color: #34302d;
+  font-weight: bold;
+  height: 200px;
+  border-radius: 10%;
+  font-family: Arial, sans-serif;
+}
+
+.container__paragraph {
+  text-align: center;
+}
