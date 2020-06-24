@@ -3,7 +3,7 @@ import './App.css';
 
 import todos from './api/todos';
 import users from './api/users';
-import TodoList from './components/TodoList';
+import TodoList from './components/TodoList/TodoList';
 
 function getTodosWithUsers(todoList, userList) {
   return todoList.map(todo => ({
