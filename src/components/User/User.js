@@ -6,7 +6,6 @@ export const User = ({ user }) => (
   <p className="person">
     {user.name}
   </p>
-
 );
 
 User.propTypes = UserTypes;
