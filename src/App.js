@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.css';
-import './components/css/User.css';
-import './components/css/Todo.css';
-import { TodoList } from './components/js/TodoList';
+import { TodoList } from './components/TodoList/TodoList';
 
 import todos from './api/todos';
 import users from './api/users';
