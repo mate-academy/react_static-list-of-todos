@@ -1,18 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Todo from './Todo';
-import './styles/TodoList.css';
+import Todo from '../Todo/Todo';
+import './TodoList.css';
+import { fullShape } from '../Shapes/FullShape';
 
 const TodoList = ({ preparedTodos }) => (
-  <div className="list">
+  <ul className="list">
     {preparedTodos.map(preparedTodo => (
       <Todo {...preparedTodo} key={preparedTodo.id} />
     ))}
-  </div>
+  </ul>
 );
 
 TodoList.propTypes = {
-  preparedTodos: PropTypes.arrayOf(PropTypes.object).isRequired,
+  preparedTodos: PropTypes.arrayOf(fullShape).isRequired,
 };
 
 export default TodoList;
