@@ -1,40 +1,38 @@
 import PropTypes from 'prop-types';
 
-const geoShape = PropTypes.shape({
+const GeoShape = PropTypes.shape({
   lat: PropTypes.string,
   lng: PropTypes.string,
 });
 
-const addressShape = PropTypes.shape({
+export const AddressShape = PropTypes.shape({
   street: PropTypes.string,
   suite: PropTypes.string,
   city: PropTypes.string,
   zipcode: PropTypes.string,
-  geo: geoShape,
+  geo: GeoShape,
 });
 
-const companyShape = PropTypes.shape({
+export const CompanyShape = PropTypes.shape({
   name: PropTypes.string,
   catchPhrase: PropTypes.string,
   bs: PropTypes.string,
 });
 
-const userShape = PropTypes.shape({
+export const UserShape = PropTypes.shape({
   id: PropTypes.number,
   name: PropTypes.string,
   username: PropTypes.string,
   email: PropTypes.string,
-  address: addressShape,
+  address: AddressShape,
   phone: PropTypes.string,
   website: PropTypes.string,
-  company: companyShape,
+  company: CompanyShape,
 });
 
-const todoShape = PropTypes.shape({
+export const TodoShape = PropTypes.shape({
   userId: PropTypes.number,
   id: PropTypes.number,
   title: PropTypes.string,
   completed: PropTypes.bool,
 });
-
-export { userShape, todoShape };

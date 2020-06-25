@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { todoShape } from '../../shapes';
+import { TodoShape } from '../../shapes';
 import './TodoList.css';
 import { Todo } from '../Todo/Todo';
 
@@ -13,5 +13,5 @@ export const TodoList = ({ list }) => (
 );
 
 TodoList.propTypes = {
-  list: PropTypes.arrayOf(todoShape).isRequired,
+  list: PropTypes.arrayOf(TodoShape).isRequired,
 };
