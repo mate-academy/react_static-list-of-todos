@@ -8,7 +8,10 @@ import './TodoList.css';
 export const TodoList = ({ todos }) => (
   <div className="todo">
     {todos.map(todo => (
-      <Todo key={todo.id} {...todo} />
+      <>
+        <Todo key={todo.id} {...todo} />
+        <hr />
+      </>
     ))}
   </div>
 );

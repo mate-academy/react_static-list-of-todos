@@ -28,6 +28,7 @@ function App() {
         <div className="head__item">User name</div>
         <div className="head__item">Status</div>
       </div>
+      <hr />
       <TodoList todos={preparedTodos} />
     </div>
   );
