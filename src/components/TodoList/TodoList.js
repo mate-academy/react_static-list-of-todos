@@ -1,8 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Todo } from '../Todo/Todo';
+import { ShapeTodo } from '../Shapes';
 
-const TodoList = ({ todos }) => (
+export const TodoList = ({ todos }) => (
   <ul className="container">
     {todos.map(item => (
       <li className="item">
@@ -16,7 +16,5 @@ const TodoList = ({ todos }) => (
 );
 
 TodoList.propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.object).isRequired,
+  todos: ShapeTodo.isRequired,
 };
-
-export { TodoList };

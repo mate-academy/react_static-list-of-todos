@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { ShapeUser } from '../Shapes';
 
-const User = ({ userInfo }) => (
+export const User = ({ userInfo }) => (
   <p>
     {` Name: ${userInfo.name}`}
     <br />
@@ -10,10 +10,5 @@ const User = ({ userInfo }) => (
 );
 
 User.propTypes = {
-  userInfo: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-  }).isRequired,
+  userInfo: ShapeUser.isRequired,
 };
-
-export { User };

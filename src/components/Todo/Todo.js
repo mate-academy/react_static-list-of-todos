@@ -1,18 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { User } from '../User/User';
+import { ShapeTodo } from '../Shapes';
 
-const Todo = ({ todo }) => (
+export const Todo = ({ todo }) => (
   <p>
     {todo.completed
       ? (
-        <span className="done">
+        <span className="item--done">
           DONE
           <span role="img" aria-label="done">✅</span>
         </span>
       )
       : (
-        <span className="undone">
+        <span className="item--undone">
           UNDONE
           <span role="img" aria-label="undone">😧</span>
         </span>
@@ -22,13 +22,5 @@ const Todo = ({ todo }) => (
 );
 
 Todo.propTypes = {
-  todo: PropTypes.shape({
-    userId: PropTypes.number.isRequired,
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string,
-    completed: PropTypes.bool.isRequired,
-    user: PropTypes.object.isRequired,
-  }).isRequired,
+  todo: ShapeTodo.isRequired,
 };
-
-export { Todo };
