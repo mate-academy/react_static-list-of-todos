@@ -7,14 +7,10 @@ import users from './api/users';
 import { TodoList } from './components/TodoList';
 
 const compiledList = (todosList, usersList) => (
-  todosList.map((todo) => {
-    const user = usersList.find(person => person.id === todo.userId);
-
-    return {
-      ...todo, user,
-    };
-  })
-);
+  todosList.map(todo => ({
+    ...todo,
+    user: usersList.find(person => person.id === todo.userId),
+  })));
 
 const preparedList = compiledList(todos, users);
 

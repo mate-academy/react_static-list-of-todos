@@ -5,7 +5,7 @@ import { Todo, TodoShape } from './Todo';
 export const TodoList = ({ todos }) => (
   <div className="todo">
     {todos.map(todo => (
-      <Todo {...todo} />
+      <Todo {...todo} key={todo.id} />
     ))}
   </div>
 );
