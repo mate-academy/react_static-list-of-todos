@@ -4,9 +4,9 @@ import User from '../User/User';
 
 const Todo = ({ title, completed, user }) => (
   <>
-    <User user={user} />
-    <td>{title}</td>
-    <td>{completed ? 'Done' : 'Not yet'}</td>
+    <User className="box__cell" user={user} />
+    <td className="box__cell">{title}</td>
+    <td className="box__cell">{completed ? 'Done' : 'Not yet'}</td>
   </>
 );
 
