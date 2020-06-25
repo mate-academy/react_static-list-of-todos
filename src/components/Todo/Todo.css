@@ -1,0 +1,13 @@
+.todo__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo__item_title {
+  text-align: start;
+  width: 300px;
+}
+
+.todo__item_status {
+  width: 300px;
+}
