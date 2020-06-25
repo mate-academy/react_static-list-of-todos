@@ -15,8 +15,18 @@ export const Todo = ({ user, id, title, completed }) => (
   </div>
 );
 
+const UserShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  address: PropTypes.objectOf(PropTypes.string).isRequired,
+  phone: PropTypes.string.isRequired,
+  website: PropTypes.string.isRequired,
+  company: PropTypes.objectOf(PropTypes.string).isRequired,
+});
+
 export const TodoShape = PropTypes.shape({
-  user: PropTypes.objectOf(PropTypes.string).isRequired,
+  user: UserShape,
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
