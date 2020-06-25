@@ -2,19 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { User } from './User';
 
-const Todo = unit => (
+const Todo = ({ completed, title, user }) => (
   <li className="list">
     <div>
       <input
         type="checkbox"
-        checked={unit.completed}
+        checked={completed}
         readOnly
       />
       <span className="text">
-        {unit.title[0].toUpperCase() + unit.title.substring(1)}
+        {title[0].toUpperCase() + title.slice(1)}
       </span>
     </div>
-    <User {...unit.user} />
+    <User {...user} />
   </li>
 );
 
@@ -23,5 +23,7 @@ export { Todo };
 Todo.propTypes = {
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
-  user: PropTypes.objectOf(PropTypes.any).isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
 };
