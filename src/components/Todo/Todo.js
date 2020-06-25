@@ -14,7 +14,7 @@ export const Todo = ({ title, user, completed }) => (
       {
         completed
           ? <input type="checkbox" checked />
-          : <input type="checkbox" />
+          : <input type="checkbox" disabled />
       }
     </div>
   </div>
