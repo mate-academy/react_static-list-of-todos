@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { User } from '../User/User';
 import './Todo.css';
 
-export const Todo = props => (
+export const Todo = ({ id, title, completed, user }) => (
   <div className="card">
-    <p>{props.id}</p>
-    {props.title}
-    <p>{`${props.completed ? 'done' : 'not done'}`}</p>
-    <User {...props.name} />
+    <p>{id}</p>
+    {title}
+    <p>{`${completed ? 'done' : 'not done'}`}</p>
+    <User {...user} />
   </div>
 );
 
@@ -16,5 +16,5 @@ Todo.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
-  name: PropTypes.objectOf(PropTypes.any).isRequired,
+  user: PropTypes.objectOf(PropTypes.any).isRequired,
 };
