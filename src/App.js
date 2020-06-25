@@ -4,7 +4,7 @@ import './App.css';
 import todos from './api/todos';
 import users from './api/users';
 import { TodoList } from './components/TodoList/TodoList';
-import { readyTodosList } from './components/readyTodosList';
+import { readyTodosList } from './components/ReadyTodosList';
 
 const readyList = readyTodosList(todos, users);
 
