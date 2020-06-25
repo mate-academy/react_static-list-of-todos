@@ -1,10 +1,10 @@
 import React from 'react';
-import { userShape } from '../shapes/UserShape';
+import { UserShape } from '../shapes/UserShape';
 
-export const User = props => (
-  <p>{props.user.name}</p>
+export const User = ({ user }) => (
+  <p>{user.name}</p>
 );
 
 User.propTypes = {
-  user: userShape.isRequired,
+  user: UserShape.isRequired,
 };
