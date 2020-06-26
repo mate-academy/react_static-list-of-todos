@@ -3,8 +3,9 @@ import users from './users';
 
 const preparedTodos = todos.map((todo) => {
   const todoCopy = { ...todo };
+  const matchedUser = users.find(user => user.id === todoCopy.userId);
 
-  todoCopy.user = users.find(user => user.id === todoCopy.userId).name;
+  todoCopy.user = matchedUser ? matchedUser.name : '';
 
   return todoCopy;
 });

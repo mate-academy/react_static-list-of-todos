@@ -5,7 +5,7 @@ import { TodoShape } from './TodoShape';
 
 const TodoList = ({ preparedTodos }) => (
   <ul className="list">
-    {preparedTodos.map(item => <Todo todo={item} />)}
+    {preparedTodos.map(item => <Todo key={item.id} todo={item} />)}
   </ul>
 );
 
