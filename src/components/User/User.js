@@ -3,7 +3,7 @@ import { ShapeUser } from '../Shapes';
 
 export const User = ({ userInfo }) => (
   <p>
-    {` Name: ${userInfo.name}`}
+    {`Name: ${userInfo.name}`}
     <br />
     {`Email: ${userInfo.email}`}
   </p>
