@@ -1,15 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { ShapeTodoList } from '../Shapes';
 import TodoItem from '../TodoItem/TodoItem';
 
-const Todo = props => (
+const TodoList = props => (
   <ul>
-    {props.list.map(todo => <TodoItem key={todo.id} {...todo} />)}
+    {props.list.map(todo => <TodoItem key={todo.id} todoItem={todo} />)}
   </ul>
 );
 
-Todo.propTypes = {
-  list: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+TodoList.propTypes = ShapeTodoList.isRequired;
 
-export default Todo;
+export default TodoList;

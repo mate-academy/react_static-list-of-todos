@@ -1,14 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { ShapeTodoItem } from '../Shapes';
 import User from '../User/User';
 import './TodoItem.css';
 
-const TodoItem = props => (
+const TodoItem = ({ todoItem }) => (
   <li>
     <div className="todo__item">
       <div>
         {
-          props.completed
+          todoItem.completed
             ? (
               <span
                 className="todo__status todo__status--completed"
@@ -20,16 +20,12 @@ const TodoItem = props => (
             )
         }
       </div>
-      <div className="todo__title">{props.title}</div>
-      <User {...props.user} />
+      <div className="todo__title">{todoItem.title}</div>
+      <User user={todoItem.user} />
     </div>
   </li>
 );
 
-TodoItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  user: PropTypes.objectOf(PropTypes.any).isRequired,
-  completed: PropTypes.bool.isRequired,
-};
+TodoItem.propTypes = ShapeTodoItem.isRequired;
 
 export default TodoItem;
