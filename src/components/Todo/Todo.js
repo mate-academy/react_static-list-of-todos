@@ -2,17 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Todo.css';
 import User from '../User/User';
-import { userShape } from '../Shapes/UserShape';
+import { UserShape } from '../Shapes/UserShape';
 
-const Todo = props => (
-  <li className="container" style={changeColor(props.completed)}>
+const Todo = ({ title, completed, user }) => (
+  <li className="container" style={changeColor(completed)}>
     <p className="container__paragraph">
-      {props.title}
+      {title}
     </p>
     <p className="container__state">
-      {changeState(props.completed)}
+      {changeState(completed)}
     </p>
-    <User {...props.user} />
+    <User {...user} />
   </li>
 );
 
@@ -31,7 +31,7 @@ const changeState = status => (
 Todo.propTypes = {
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
-  user: userShape.isRequired,
+  user: UserShape.isRequired,
 };
 
 export default Todo;

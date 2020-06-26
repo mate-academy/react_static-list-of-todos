@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Todo from '../Todo/Todo';
 import './TodoList.css';
-import { fullShape } from '../Shapes/FullShape';
+import { FullShape } from '../Shapes/FullShape';
 
 const TodoList = ({ preparedTodos }) => (
   <ul className="list">
@@ -13,7 +13,7 @@ const TodoList = ({ preparedTodos }) => (
 );
 
 TodoList.propTypes = {
-  preparedTodos: PropTypes.arrayOf(fullShape).isRequired,
+  preparedTodos: PropTypes.arrayOf(FullShape).isRequired,
 };
 
 export default TodoList;

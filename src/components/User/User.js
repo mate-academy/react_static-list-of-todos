@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const User = props => (
-  <p>{props.name.toUpperCase()}</p>
+const User = ({ name }) => (
+  <p>{name.toUpperCase()}</p>
 );
 
 User.propTypes = {

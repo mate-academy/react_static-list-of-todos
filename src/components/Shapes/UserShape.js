@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import { companyShape } from './CompanyShape';
-import { addressShape } from './AddressShape';
+import { CompanyShape } from './CompanyShape';
+import { AddressShape } from './AddressShape';
 
-export const userShape = PropTypes.shape({
-  address: addressShape,
-  company: companyShape,
+export const UserShape = PropTypes.shape({
+  address: AddressShape,
+  company: CompanyShape,
   email: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   phone: PropTypes.string.isRequired,
