@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './TodoList.css';
 import { Todo } from './Todo';
+import { tasksShape } from './Shapes';
 
 export const TodoList = ({ tasks }) => (
   <div className="todo-grid">
@@ -14,5 +15,5 @@ export const TodoList = ({ tasks }) => (
 );
 
 TodoList.propTypes = {
-  tasks: PropTypes.arrayOf(PropTypes.object).isRequired,
+  tasks: PropTypes.arrayOf(tasksShape).isRequired,
 };

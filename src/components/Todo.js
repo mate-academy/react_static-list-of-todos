@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import users from '../api/users';
-// import { todoShape } from './variables';
+import { findManager } from './utils/utils';
 
 export const Todo = (
   { userId, title, completed },
 ) => {
-  const manager = users.filter(user => user.id === userId)[0];
+  const manager = findManager(users, userId);
 
   return (
     <>
@@ -44,13 +44,4 @@ Todo.propTypes = {
   userId: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
-  users: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    phone: PropTypes.string.isRequired,
-    website: PropTypes.string.isRequired,
-    company: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-    }),
-  }).isRequired,
 };
