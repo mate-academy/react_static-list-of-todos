@@ -7,15 +7,15 @@ export const Todo = ({ title, completed, user }) => (
   <>
     <span className="todo-list__key">Name</span>
     :&nbsp;
-    <span style={{ 'font-style': 'italic' }}>{title}</span>
+    <span style={{ fontStyle: 'italic' }}>{title}</span>
     <br />
     <span className="todo-list__key">Status</span>
     :&nbsp;
-    {(
+    {
       completed
         ? (<span style={{ color: 'green' }}>completed</span>)
         : (<span style={{ color: 'red' }}>not completed</span>)
-    )}
+    }
     <br />
     <span className="todo-list__key">User</span>
     :&nbsp;
@@ -26,5 +26,12 @@ export const Todo = ({ title, completed, user }) => (
 Todo.propTypes = {
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
-  user: PropTypes.objectOf(PropTypes.any).isRequired,
+  user: PropTypes.objectOf(PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.number.isRequired,
+    PropTypes.objectOf(PropTypes.oneOfType([
+      PropTypes.string.isRequired,
+      PropTypes.objectOf(PropTypes.string),
+    ])).isRequired,
+  ])).isRequired,
 };
