@@ -6,12 +6,27 @@ const companyShapes = PropTypes.shape({
   bs: PropTypes.string,
 });
 
+const userGeo = PropTypes.shape({
+  lat: PropTypes.string,
+  lng: PropTypes.string,
+});
+
+const userAdressShape = PropTypes.shape({
+  street: PropTypes.string,
+  suite: PropTypes.string,
+  city: PropTypes.string,
+  zipcode: PropTypes.string,
+  geo: PropTypes.shape({
+    userGeo,
+  }),
+});
+
 const userShapes = PropTypes.shape({
   id: PropTypes.number,
   name: PropTypes.string,
   username: PropTypes.string,
   email: PropTypes.string,
-  adress: PropTypes.shape(),
+  adress: userAdressShape,
   phone: PropTypes.string,
   website: PropTypes.string,
   company: companyShapes,
@@ -24,4 +39,9 @@ const todoShapes = PropTypes.shape({
   completed: PropTypes.bool,
 });
 
-export { todoShapes, userShapes, companyShapes };
+const preparedTodosShape = PropTypes.shape({
+  todoShapes,
+  user: userShapes,
+});
+
+export { todoShapes, userShapes, preparedTodosShape };

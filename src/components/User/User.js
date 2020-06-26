@@ -5,6 +5,6 @@ const User = ({ user }) => (
   <td>{user.name}</td>
 );
 
-User.propTypes = userShapes;
+User.propTypes = userShapes.isRequired;
 
 export default User;

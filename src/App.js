@@ -6,13 +6,10 @@ import users from './api/users';
 
 import PreparedTodos from './components/PreparedTodos/PreparedTodos';
 
-const preparedTodos = todos
-  .map(todo => (
-    {
-      ...todo,
-      user: users.find(person => person.id === todo.userId),
-    }
-  ));
+const preparedTodos = todos.map(todo => ({
+  ...todo,
+  user: users.find(person => person.id === todo.userId),
+}));
 
 function App() {
   return (
