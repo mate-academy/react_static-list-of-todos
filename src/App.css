@@ -1,3 +1,26 @@
 .App {
   text-align: center;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 20px;
+}
+
+.item {
+  color: white;
+  width: 200px;
+  background-color: grey;
+  border-radius: 15px;
+}
+
+.item--done {
+  color: white;
+  background-color: green;
+}
+
+.item--undone {
+  color: white;
+  background-color: red;
+}
