@@ -1,0 +1,11 @@
+﻿.App__item {
+  margin-bottom: 10px;
+}
+
+.App__item:first-child {
+  margin-top: 10px;
+}
+
+.App__item:last-child {
+  margin-bottom: 0;
+}
