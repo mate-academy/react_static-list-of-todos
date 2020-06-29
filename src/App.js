@@ -7,7 +7,8 @@ import { TodoList } from './components/TodoList';
 
 function App() {
   const preparedTodos = todos.map(el => ({
-    todo: { ...el }, user: { ...users[el.userId - 1] },
+    ...el,
+    user: { ...users[el.userId - 1] },
   }));
 
   return (

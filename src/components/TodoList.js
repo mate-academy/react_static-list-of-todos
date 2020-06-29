@@ -5,9 +5,9 @@ import { Todo } from './Todo';
 
 export const TodoList = ({ preparedTodos }) => (
   <ul>
-    {preparedTodos.map(x => (
+    {preparedTodos.map(todo => (
       <li>
-        <Todo todo={x} />
+        <Todo todo={todo} />
       </li>
     ))}
   </ul>

@@ -5,9 +5,9 @@ import { User } from './User/User';
 
 export const Todo = ({ todo }) => (
   <p>
-    {todo.todo.title}
+    {todo.title}
     , Completed:
-    {` ${todo.todo.completed.toString()}`}
+    {` ${todo.completed.toString()}`}
     ,
     <User user={todo.user} />
   </p>
