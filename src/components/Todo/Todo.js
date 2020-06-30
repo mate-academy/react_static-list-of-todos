@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { User } from '../User/User';
+import { todoShape } from './todoShape';
 import './Todo.css';
 
 export const Todo = ({ title, completed, user }) => (
@@ -23,15 +23,4 @@ export const Todo = ({ title, completed, user }) => (
   </>
 );
 
-Todo.propTypes = {
-  title: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired,
-  user: PropTypes.objectOf(PropTypes.oneOfType([
-    PropTypes.string.isRequired,
-    PropTypes.number.isRequired,
-    PropTypes.objectOf(PropTypes.oneOfType([
-      PropTypes.string.isRequired,
-      PropTypes.objectOf(PropTypes.string),
-    ])).isRequired,
-  ])).isRequired,
-};
+Todo.propTypes = todoShape;
