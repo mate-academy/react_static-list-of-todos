@@ -4,9 +4,9 @@ import todos from './api/todos';
 import users from './api/users';
 import TodoList from './components/TodoList';
 
-const searchId = elem => ({
-  ...elem,
-  user: users.find(user => user.id === elem.userId),
+const searchId = currentTodo => ({
+  ...currentTodo,
+  user: users.find(user => user.id === currentTodo.userId),
 });
 
 const preparedTodos = todos.map(todo => searchId(todo));

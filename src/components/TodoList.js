@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Todo, ShapeUser } from './Todo';
+import { Todo } from './Todo';
+import { ShapeUser } from './Shapes';
 
 const TodoList = ({ preparedTodos }) => (
   <>
