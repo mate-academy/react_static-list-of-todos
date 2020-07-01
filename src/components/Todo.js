@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import { User } from './User/User';
 
 export const Todo = ({ todo }) => (
-  <p>
+  <div>
     {todo.title}
     , Completed:
     {` ${todo.completed.toString()}`}
     ,
     <User user={todo.user} />
-  </p>
+  </div>
 );
 
 Todo.propTypes = {

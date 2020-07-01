@@ -6,7 +6,7 @@ import { Todo } from './Todo';
 export const TodoList = ({ preparedTodos }) => (
   <ul>
     {preparedTodos.map(todo => (
-      <li>
+      <li key={todo.id}>
         <Todo todo={todo} />
       </li>
     ))}

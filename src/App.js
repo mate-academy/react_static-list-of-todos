@@ -14,9 +14,9 @@ function App() {
   return (
     <div className="App">
       <h1>Static list of todos</h1>
-      <p>
+      <div>
         <TodoList preparedTodos={preparedTodos} />
-      </p>
+      </div>
     </div>
   );
 }

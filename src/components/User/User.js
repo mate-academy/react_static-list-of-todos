@@ -8,5 +8,4 @@ export const User = ({ user }) => (
 
 User.propTypes = {
   user: PropTypes.instanceOf(Object).isRequired,
-  name: PropTypes.string.isRequired,
 };
