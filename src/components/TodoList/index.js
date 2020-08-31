@@ -6,13 +6,18 @@ import './TodoList.css';
 function TodoList({ prepearedTodos }) {
   return (
     <ul className="todoList">
-      {prepearedTodos.map(el => <Todo key={Math.random() * 10} todo={el} />)}
+      {prepearedTodos.map(el => <Todo key={el.id} todo={el} />)}
     </ul>
   );
 }
 
 TodoList.propTypes = {
-  prepearedTodos: PropTypes.arrayOf(PropTypes.object).isRequired,
+  prepearedTodos: PropTypes.arrayOf(PropTypes.shape({
+    userId: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
+  })).isRequired,
 };
 
 export default TodoList;
