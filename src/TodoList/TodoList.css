@@ -1,0 +1,17 @@
+.todoList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 500px);
+  column-gap: 10px;
+  row-gap: 10px;
+  justify-content: center;
+  align-content: center;
+  list-style: none;
+  background-color: plum;
+}
+
+.todoList__item {
+  font-size: 24px;
+  border: 3px solid blueviolet;
+  border-radius: 25px;
+  background-color: lightyellow;
+}
