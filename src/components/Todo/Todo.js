@@ -16,6 +16,6 @@ export const Todo = ({ id, title, completed, name }) => (
 Todo.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  title: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
 };
