@@ -1,0 +1,20 @@
+.TodoList {
+  padding: 5px;
+  display: flex;
+  width: 1000px;
+  background-color: darkslategray;
+  color: beige;
+  text-align: left;
+}
+
+.TodoList__N {
+  width: 5%;
+}
+
+.TodoList__name {
+  width: 25%;
+}
+
+.TodoList__todo {
+  width: 65%;
+}

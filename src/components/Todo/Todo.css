@@ -1,0 +1,24 @@
+.Todo {
+  padding: 2px 5px;
+  display: flex;
+  width: 1000px;
+  color: darkslategray;
+  text-align: left;
+  border-bottom: solid 1px darkslategray;
+}
+  
+.Todo__N {
+  width: 5%;
+}
+  
+.Todo__name {
+  width: 25%;
+}
+  
+.Todo__todo {
+  width: 65%;
+}
+
+.Todo__done {
+  padding-left: 12px;
+}
