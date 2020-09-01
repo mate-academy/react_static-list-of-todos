@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const User = props => (
+export const User = ({ name }) => (
   <>
-    <h3>{props.name}</h3>
+    <h3>{name}</h3>
   </>
 );
 

@@ -20,9 +20,5 @@ Todo.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
-  user: PropTypes.objectOf(PropTypes.string),
-};
-
-Todo.defaultProps = {
-  user: [],
+  user: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
