@@ -7,7 +7,7 @@ export const Todo = ({ id, title, completed, user }) => (
   <section className="card">
     <p>{id}</p>
     <User {...user} />
-    {title}
+    <p>{title}</p>
     <p>
       {completed
         ? <p className="active">Done</p>
