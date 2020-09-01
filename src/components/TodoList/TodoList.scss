@@ -17,5 +17,11 @@
     align-items: center;
 
     border: 1px solid black;
+    transition: transform 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.07);
+    }
   }
 }
