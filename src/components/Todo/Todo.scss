@@ -1,6 +1,7 @@
 .todo-item {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: 400px repeat(2, 200px);
+  justify-content: space-between;
   align-items: center;
   list-style: none;
   color: #fff;
@@ -9,7 +10,6 @@
 }
 
 .todo-item > * {
-  width: 330px;
   margin: 0;
   padding: 20px;
 }
