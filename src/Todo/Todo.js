@@ -4,23 +4,25 @@ import { User } from '../User';
 
 import './Todo.css';
 
-export const Todo = ({ todo }) => (
+export const Todo = ({ title, completed, author }) => (
   <>
     <p>
       {'Task: '}
-      <strong>{todo.title}</strong>
+      <strong>{title}</strong>
     </p>
     <div className="info">
       {'Status: '}
-      {todo.completed
+      {completed
         ? <span className="completed">done</span>
         : <span className="notCompleted">in progress</span>}
       {' '}
-      <User user={todo.author} />
+      <User {...author} />
     </div>
   </>
 );
 
 Todo.propTypes = {
-  todo: PropTypes.objectOf(PropTypes.string).isRequired,
-};
+  title: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
+  author: PropTypes.object.isRequired,
+}.isRequired;

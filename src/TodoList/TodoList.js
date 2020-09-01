@@ -8,16 +8,12 @@ export const TodoList = ({ preparedTodos }) => (
   <ul className="todoList">
     {preparedTodos.map(item => (
       <li key={item.id} className="todoList__item">
-        <Todo todo={item} />
+        <Todo {...item} />
       </li>
     ))}
   </ul>
 );
 
 TodoList.propTypes = {
-  preparedTodos: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired,
-  })).isRequired,
+  preparedTodos: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

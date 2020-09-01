@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './User.css';
 
-export const User = ({ user }) => (
+export const User = ({ name }) => (
   <p className="user">
-    Author:
-    {user.name}
+    {'Author: '}
+    {name}
   </p>
 );
 
 User.propTypes = {
-  user: PropTypes.objectOf(PropTypes.string).isRequired,
+  name: PropTypes.string.isRequired,
 };
