@@ -1,1 +1,32 @@
-// styles go here
+body {
+  text-align: center;
+}
+
+.list {
+  padding: 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.todo {
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+  list-style: none;
+  background-color: lightgray;
+  border-radius: 5px;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: lightsteelblue;
+  }
+}
+
+.done {
+  background-color: lightgreen;
+}
+
+.user {
+  font-weight: bold;
+  font-style: italic;
+}
