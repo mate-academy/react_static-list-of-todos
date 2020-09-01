@@ -1,0 +1,18 @@
+.todo {
+  min-width: 360px;
+  max-width: 500px;
+  margin: auto;
+  padding: 25px;
+
+  &__title {
+    font-weight: bold;
+
+    &_completed::before {
+      content: "DONE";
+      position: relative;
+      color: green;
+      left: -25px;
+      top:0;
+    }
+  }
+}
