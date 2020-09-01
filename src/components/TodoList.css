@@ -1,0 +1,20 @@
+.list {
+  background-color: #2c2e2d;
+  margin: 0;
+
+  display: grid;
+  grid-template-rows: repeat(200, 200px);
+  list-style-type: none;
+  padding: 0;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 5px 40px;
+  margin-top: 40px;
+
+  font-size: 15px;
+  background-color: #2c2e2d;
+  color: #3f5950;
+}

@@ -1,3 +1,14 @@
+body {
+  margin: 0;
+}
+
+html {
+  background-color: #32473f;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+
 .App {
   text-align: center;
 }
