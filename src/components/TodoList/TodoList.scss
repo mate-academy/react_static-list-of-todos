@@ -1,0 +1,16 @@
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  margin: 15px;
+  padding: 15px;
+}
+
+.Todo-completed {
+  border: 5px solid green;
+}
+
+.Todo-inprogress {
+  border: 5px solid red;
+}
