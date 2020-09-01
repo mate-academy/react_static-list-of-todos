@@ -1,1 +1,47 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  color: #2e2e2e;
+}
+
+body {
+  background-color: #f6f8f9;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  margin: 0;
+}
+
+.App {
+  margin: 0 auto;
+  width: 1000px;
+
+  @media (max-width: 1000px) {
+    width: 90%;
+  }
+}
+
+.stats {
+  display: flex;
+  margin-bottom: 15px;
+
+  &__todos {
+    margin-right: 10px;
+  }
+}

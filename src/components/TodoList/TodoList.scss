@@ -1,0 +1,22 @@
+$sidesPadding: 30px;
+
+.todos-list {
+  position: relative;
+  line-height: 1.5rem;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: $sidesPadding;
+  padding-right: $sidesPadding;
+  margin-bottom: 15px;
+
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 1px 1px 5px 1px #e8e8e8;
+}
