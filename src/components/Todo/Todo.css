@@ -1,0 +1,13 @@
+.todo {
+  padding: 16px 16px 16px 60px;
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
