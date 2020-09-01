@@ -1,0 +1,30 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(243, 242, 165);
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  margin: 10px;
+  transition: 1s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card__true {
+  height: 15px;
+  width: 15px;
+  border: 1px solid black;
+  background-color: green;
+}
+
+.card__false {
+  height: 15px;
+  width: 15px;
+  border: 1px solid black;
+  background-color: red;
+}
