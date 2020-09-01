@@ -6,14 +6,12 @@ import users from './api/users';
 
 import { Todo } from './components/Todo/Todo';
 
-const preparedTodos = todos.map(todo => ({
-  name: users[todo.userId - 1].name,
-  username: users[todo.userId - 1].username,
-  email: users[todo.userId - 1].email,
-  title: todo.title,
-  completed: todo.completed,
-  id: todo.id,
-}));
+const preparedTodos = todos.map(todo => (
+  {
+    ...users.find(current => current.id === todo.userId),
+    ...todo,
+  }
+));
 
 function App() {
   return (
@@ -22,7 +20,7 @@ function App() {
       <div className="todolist">
         {preparedTodos.map(todo => (
           <Todo
-            data={todo}
+            {...todo}
             key={todo.id}
           />
         ))}
