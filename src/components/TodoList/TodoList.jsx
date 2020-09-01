@@ -13,5 +13,10 @@ export function TodoList({ todos }) {
 }
 
 TodoList.propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.object).isRequired,
+  todos: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    completed: PropTypes.bool.isRequired,
+    title: PropTypes.string.isRequired,
+    user: PropTypes.objectOf(PropTypes.string).isRequired,
+  })).isRequired,
 };
