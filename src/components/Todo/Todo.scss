@@ -1,0 +1,15 @@
+.todo-item {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  list-style: none;
+  color: #fff;
+  background-color: #484848;
+  border: 1px solid grey;
+}
+
+.todo-item > * {
+  width: 330px;
+  margin: 0;
+  padding: 20px;
+}
