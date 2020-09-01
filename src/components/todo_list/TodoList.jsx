@@ -7,7 +7,7 @@ const TodoList = props => (
   <div className="todos">
     <ul className="todos_list users">
         {props.preparedTodos.map(todo =>
-          <li className={"user " + (todo.completed ? "greenBox" : "redBox")}>
+          <li className={"user " + (todo.completed ? "done" : "inProcess")}>
             <Todo {...todo} key={todo.id}/>
           </li>
         )};
