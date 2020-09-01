@@ -25,7 +25,7 @@ Todo.propTypes = {
   todo: PropTypes.shape({
     title: PropTypes.string.isRequired,
     completed: PropTypes.bool.isRequired,
-    person: PropTypes.string.isRequired,
+    person: PropTypes.object.isRequired,
   }),
 };
 
