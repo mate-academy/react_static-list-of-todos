@@ -1,5 +1,4 @@
-.redBox,
-.greenBox {
+.user {
   border: 1px solid black;
   cursor: pointer;
   padding: 20px;

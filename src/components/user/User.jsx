@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const User = ({name}) => (
   <h3 className="user__name">
-    {name},
+    {name}
   </h3>
 )
 

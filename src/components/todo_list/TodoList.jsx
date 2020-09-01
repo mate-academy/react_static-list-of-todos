@@ -6,7 +6,11 @@ import Todo from '../todo/Todo';
 const TodoList = props => (
   <div className="todos">
     <ul className="todos_list users">
-      {props.preparedTodos.map(todo => <Todo {...todo} key={todo.id}/>)};
+        {props.preparedTodos.map(todo =>
+          <li className={"user " + (todo.completed ? "greenBox" : "redBox")}>
+            <Todo {...todo} key={todo.id}/>
+          </li>
+        )};
     </ul>
   </div>
 );

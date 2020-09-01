@@ -6,16 +6,14 @@ import User from '../user/User';
 function Todo({id, title, completed, user}) {
   return (
     <>
-      <li className={completed ? "greenBox" : "redBox"}>
-        <span>{id}</span>
-        <User {...user}/>
-        <p className="user__task">
-          {title}
-        </p>
-        <p className="user__status">
-          {completed ? `Done` : `In process`}
-        </p>
-      </li>
+      <span>{id}</span>
+      <User {...user}/>
+      <p className="user__task">
+        {title}
+      </p>
+      <p className="user__status">
+        {completed ? `Done` : `In process`}
+      </p>
     </>
   );
 }
