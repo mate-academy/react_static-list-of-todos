@@ -1,0 +1,16 @@
+ul,
+li {
+  list-style: none;
+}
+
+.todos {
+  background-color: rgba(53, 2, 11, 0.54);
+  padding: 20px 0;
+}
+
+.todos_list {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  gap: 50px 50px;
+  justify-content: center;
+}
