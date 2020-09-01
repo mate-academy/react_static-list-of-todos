@@ -1,0 +1,23 @@
+.list {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.list li {
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.completed {
+  background-color: #dbffd9;
+}
+
+.uncompleted {
+  background-color: #ffe8ec;
+}
+
+p {
+  margin: 20px;
+}
