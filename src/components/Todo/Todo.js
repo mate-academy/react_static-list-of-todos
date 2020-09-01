@@ -4,18 +4,6 @@ import PropTypes from 'prop-types';
 
 import { User } from '../User';
 
-function checkCompleted(value) {
-  if (value) {
-    return (
-      <div className="is-complited">&#10003;</div>
-    );
-  }
-
-  return (
-    <div className="is-not-complited" />
-  );
-}
-
 export const Todo = ({
   title,
   completed,
@@ -23,7 +11,7 @@ export const Todo = ({
 }) => (
   <>
     <div className="todo-info">
-      {checkCompleted(completed)}
+      <div className={completed ? 'completed' : 'active'} />
       <p className="title">{title}</p>
     </div>
 

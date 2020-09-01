@@ -7,16 +7,24 @@
   }
 }
 
-.is-complited,
-.is-not-complited {
+.completed,
+.active {
+  // border: 1px solid;
   width: 20px;
   margin-right: 20px;
 }
 
-.is-complited {
-  font-size: 25px;
-  font-weight: bold;
-  color: green;
+.completed {
+
+  &::after {
+    content: "✓";
+    display: block;
+    position: relative;
+
+    font-size: 25px;
+    font-weight: bold;
+    color: green;
+  }
 }
 
 .user-info {

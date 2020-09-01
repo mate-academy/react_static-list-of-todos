@@ -44,4 +44,12 @@ p {
   &__todos {
     margin-right: 10px;
   }
+
+  &__title {
+    font-style: italic;
+  }
+
+  &__value {
+    font-weight: bold;
+  }
 }

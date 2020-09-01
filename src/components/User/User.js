@@ -9,7 +9,7 @@ export const User = ({
   <span>
     {'for '}
     <span className="user-name">
-      <i>{name}</i>
+      {name}
     </span>
   </span>
 );

@@ -20,13 +20,13 @@ function App() {
 
       <div className="stats">
         <p className="stats__todos">
-          <span><i>Todos: </i></span>
-          <b>{todos.length}</b>
+          <span className="stats__title">Todos: </span>
+          <span className="stats__value">{todos.length}</span>
         </p>
 
         <p className="stats__users">
-          <span><i>Users: </i></span>
-          <b>{users.length}</b>
+          <span className="stats__title">Users: </span>
+          <span className="stats__value">{users.length}</span>
         </p>
       </div>
 
