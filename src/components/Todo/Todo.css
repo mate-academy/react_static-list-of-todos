@@ -5,10 +5,10 @@
   border-radius: 10%;
 }
 
-.done {
+.active {
   color: green;
 }
 
-.not__done {
+.disable {
   color: red;
 }

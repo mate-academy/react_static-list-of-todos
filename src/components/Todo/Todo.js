@@ -1,7 +1,7 @@
 import React from 'react';
 import './Todo.css';
 import PropTypes from 'prop-types';
-import { User } from '../User/User';
+import { User } from '../User';
 
 export const Todo = ({ id, title, completed, user }) => (
   <section className="card">
@@ -10,8 +10,8 @@ export const Todo = ({ id, title, completed, user }) => (
     {title}
     <p>
       {completed
-        ? <p className="done">Done</p>
-        : <p className="not__done">Not done</p>}
+        ? <p className="active">Done</p>
+        : <p className="disable">Not done</p>}
     </p>
   </section>
 );
