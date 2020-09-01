@@ -14,11 +14,11 @@ function App() {
     <div className="App">
       <h1>Static list of todos</h1>
       <p>
-        Todos:
+        <span>Todos:</span>
         {todos.length}
       </p>
       <p>
-        Users:
+        <span>Users:</span>
         {users.length}
       </p>
       <TodoList todos={preparedTodos} />
