@@ -1,0 +1,17 @@
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid #121235;
+  border-radius: 10px;
+  color: #121235;
+
+  &--completed {
+    background: #7ad7a7;
+  }
+
+  &--in-progress {
+    background: #d0a3d4;
+  }
+}
