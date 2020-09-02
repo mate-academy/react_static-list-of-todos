@@ -7,10 +7,10 @@ export const Todo = ({
   completed,
   user,
 }) => {
-  const isCompleted = completed ? 'Todo-completed' : 'Todo-inprogress';
+  const isCompleted = completed ? 'todo-completed' : 'todo-inprogress';
 
   return (
-    <li className={`Todo ${isCompleted}`}>
+    <li className={`todo ${isCompleted}`}>
       <User {...user} />
       <p>
         {title}
