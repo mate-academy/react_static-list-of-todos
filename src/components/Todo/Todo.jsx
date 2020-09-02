@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 import { User } from '../User/User';
 import './Todo.scss';
 
@@ -7,21 +8,22 @@ export const Todo = ({
   title,
   completed,
   user,
-}) => {
-  const isCompleted = completed ? 'todo-completed' : 'todo-inprogress';
-
-  return (
-    <>
-      <User {...user} />
-      <p>
-        {title}
-      </p>
-      <p className={isCompleted}>
-        {completed ? 'done' : 'in progress'}
-      </p>
-    </>
-  );
-};
+}) => (
+  <>
+    <User {...user} />
+    <p>
+      {title}
+    </p>
+    <p
+      className={cn({
+        'todo-completed': completed,
+        'todo-inprogress': !completed,
+      })}
+    >
+      {completed ? 'done' : 'in progress'}
+    </p>
+  </>
+);
 
 Todo.propTypes = {
   title: PropTypes.string.isRequired,
