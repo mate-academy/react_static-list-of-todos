@@ -1,23 +1,23 @@
 import React from 'react';
 import './App.scss';
+import TodoList from './components/TodoList';
 
 import todos from './api/todos';
 import users from './api/users';
 
+export const preparedTodos = todos.map(elem => ({
+  ...elem,
+  user: users.find(user => user.id === elem.userId),
+}));
+
 function App() {
   return (
-    <div className="App">
+    <>
       <h1>Static list of todos</h1>
-      <p>
-        <span>Todos: </span>
-        {todos.length}
-      </p>
-
-      <p>
-        <span>Users: </span>
-        {users.length}
-      </p>
-    </div>
+      <div className="App">
+        <TodoList todos={preparedTodos} />
+      </div>
+    </>
   );
 }
 
