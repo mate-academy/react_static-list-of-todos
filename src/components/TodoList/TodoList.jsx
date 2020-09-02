@@ -7,10 +7,12 @@ export const TodoList = ({ preparedTodos }) => (
   <ul>
     {
       preparedTodos.map(todo => (
-        <Todo
+        <li
+          className="todo"
           key={todo.id}
-          {...todo}
-        />
+        >
+          <Todo {...todo} />
+        </li>
       ))
     }
   </ul>
