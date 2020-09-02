@@ -23,16 +23,12 @@ function App() {
   );
 }
 
-const preparedTodos = todos.map(todo => users.reduce((acc, user) => {
-  let obj = acc;
+const preparedTodos = todos.map((todo) => {
+  const obj = { ...todo };
 
-  if (todo.userId === user.id) {
-    obj = {
-      ...todo, user,
-    };
-  }
+  obj.user = users.find(user => todo.userId === user.id);
 
   return obj;
-}, {}));
+});
 
 export default App;
