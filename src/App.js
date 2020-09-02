@@ -4,6 +4,13 @@ import todos from './api/todos';
 import users from './api/users';
 import { TodoList } from './components/TodoList/TodoList';
 
+const prepTodos = todos.map(todo => ({
+  ...todo,
+  name: users.find(
+    user => (user.id === todo.userId),
+  ).name,
+}));
+
 function App() {
   return (
     <div className="App">
@@ -17,7 +24,7 @@ function App() {
         <span>Users: </span>
         {users.length}
       </p>
-      <TodoList />
+      <TodoList todos={prepTodos} />
 
     </div>
   );
