@@ -10,9 +10,9 @@ export const TodoList = ({ todos }) => (
           key={todo.id}
           className={(todo.completed)
             ? 'todo completed '
-            : 'todo not_complited'}
+            : 'todo not_completed'}
         >
-          <Todo todo={todo} />
+          <Todo {...todo} />
         </li>
       ))}
     </ul>
