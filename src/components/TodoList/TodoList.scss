@@ -1,4 +1,4 @@
-.Todo {
+.todo {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,10 +7,10 @@
   padding: 15px;
 }
 
-.Todo-completed {
+.todo-completed {
   border: 5px solid green;
 }
 
-.Todo-inprogress {
+.todo-inprogress {
   border: 5px solid red;
 }
