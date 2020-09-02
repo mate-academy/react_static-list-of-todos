@@ -9,7 +9,6 @@ const preparedTodos = todos.map(todo => ({
   title: todo.title,
   completed: todo.completed,
   user: users.find(user => user.id === todo.userId),
-  username: users.find(user => user.id === todo.userId).username,
 }));
 
 export const App = () => (

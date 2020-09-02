@@ -13,7 +13,6 @@ export const TodoList = ({ list }) => (
       <p>Status</p>
     </li>
     <ul className="list">
-
       {list.map(item => <Todo key={item.id} {...item} />)}
     </ul>
   </>

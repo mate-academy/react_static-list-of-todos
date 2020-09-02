@@ -10,7 +10,7 @@ export const Todo = ({ id, title, completed, user, username }) => (
       .
     </span>
     <span><User {...user} /></span>
-    <span>{username}</span>
+    <span>{user.username}</span>
     <span>{title}</span>
     <span>{completed ? 'complited' : 'not complited'}</span>
   </li>
