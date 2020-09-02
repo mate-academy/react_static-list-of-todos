@@ -1,0 +1,27 @@
+.todo-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &__item {
+    margin-top: 5px;
+    padding: 25px;
+    border-radius: 2px;
+    background-color: #d3efff;
+    display: flex;
+    justify-content: space-between;
+
+    &-header {
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    &-done {
+      opacity: 0.6;
+    }
+  }
+
+  &__task {
+    text-transform: capitalize;
+  }
+}
