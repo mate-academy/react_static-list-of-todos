@@ -1,0 +1,17 @@
+.todoList {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.todoList__item {
+  position: relative;
+  padding: 5px;
+  list-style: none;
+  border: 1px solid;
+  border-radius: 20px;
+  text-align: center;
+}

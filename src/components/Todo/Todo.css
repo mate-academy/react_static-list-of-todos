@@ -1,0 +1,18 @@
+.todo__completed {
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.todo__completed-done {
+  background-image: url("done.png");
+}
+
+.todo__completed-notDone {
+  background-image: url("notDone.png");
+}
