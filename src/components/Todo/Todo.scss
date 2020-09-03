@@ -1,0 +1,27 @@
+.todo {
+  font-weight: normal;
+
+  li{
+    padding: 5px 10px;
+  }
+
+  &__prefix {
+    font-weight: bold;
+  }
+
+  &__stage {
+    $stagePrefix: &;
+    border-radius: 5px;
+
+    &--done {
+      background-color: greenyellow;
+    }
+
+    &--pending {
+      color: white;
+      background-color: lightcoral;
+    }
+  }
+}
+
+

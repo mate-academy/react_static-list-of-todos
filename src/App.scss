@@ -1,1 +1,28 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+body {
+  margin: 0;
+  background: #DDD;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.App {
+  padding: 50px;
+}
