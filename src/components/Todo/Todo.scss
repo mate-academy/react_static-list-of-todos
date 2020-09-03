@@ -12,14 +12,12 @@
   &__stage {
     $stagePrefix: &;
     border-radius: 5px;
+    color: white;
+    background-color: lightcoral;
 
     &--done {
+      color: #000;
       background-color: greenyellow;
-    }
-
-    &--pending {
-      color: white;
-      background-color: lightcoral;
     }
   }
 }
