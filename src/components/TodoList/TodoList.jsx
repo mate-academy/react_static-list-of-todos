@@ -6,8 +6,8 @@ import './TodoList.scss';
 const TodoList = ({ todos }) => (
   <ul className="todo__list">
     {todos.map(todo => (
-      <li>
-        <Todo key={todo.id} {...todo} />
+      <li key={todo.id}>
+        <Todo  {...todo} />
       </li>
     ))}
   </ul>
