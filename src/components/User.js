@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function User({
-  name,
-}) {
+function User({ name }) {
   return (
     <p className="username">{name}</p>
   );

@@ -7,7 +7,7 @@ function TodoList({
 }) {
   return (
     todos.map(elem => (
-      <Todo {...elem} />
+      <Todo key={elem} {...elem} />
     ))
   );
 }
