@@ -7,9 +7,9 @@ export const Todo = ({ user, title, completed }) => (
   <>
     <h2>{title}</h2>
     <User user={user} />
-    {completed
-      ? <span className="completed">Done</span>
-      : <span className="uncompleted">Undone</span>}
+    <span className={completed ? 'completed' : 'uncompleted'}>
+      {completed ? 'Done' : 'Undone'}
+    </span>
   </>
 );
 
