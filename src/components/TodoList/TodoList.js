@@ -3,26 +3,26 @@ import PropTypes from 'prop-types';
 
 import { Todo } from '../Todo';
 
-import './TodoList.css';
+import './TodoList.scss';
 
-export const TodoList = ({ dataList }) => (
+export const TodoList = ({ todos }) => (
   <ul className="todoList">
-    {dataList.map(item => (
+    {todos.map(todo => (
       <li
-        key={item.id}
+        key={todo.id}
         className="todoList__item"
       >
-        <Todo {...item} />
+        <Todo {...todo} />
       </li>
     ))}
   </ul>
 );
 
 TodoList.propTypes = {
-  dataList: PropTypes.arrayOf(PropTypes.shape({
+  todos: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
     completed: PropTypes.bool.isRequired,
     id: PropTypes.number.isRequired,
-    userTodo: PropTypes.objectOf(PropTypes.string).isRequired,
+    userTodo: PropTypes.objectOf(PropTypes.any).isRequired,
   })).isRequired,
 };

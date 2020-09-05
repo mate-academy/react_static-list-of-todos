@@ -6,18 +6,14 @@ import todos from './api/todos';
 import users from './api/users';
 
 const preparedTodos = todos
-  .map((todo) => {
-    const userTodo = users.find(user => user.id === todo.userId);
-
-    return {
-      ...todo,
-      userTodo,
-    };
-  });
+  .map(todo => ({
+    ...todo,
+    userTodo: users.find(user => user.id === todo.userId),
+  }));
 
 function App() {
   return (
-    <TodoList dataList={preparedTodos} />
+    <TodoList todos={preparedTodos} />
   );
 }
 
