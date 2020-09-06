@@ -1,0 +1,22 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    margin-bottom: .5em;
+    border: 3px solid;
+    border-left-width: 30px;
+    padding: .6em;
+    border-radius: 4px;
+  }
+
+  .green-border {
+    border-color:#33CC33;
+  }
+
+  .red-border {
+    border-color: #FF0000;
+  }
+}
