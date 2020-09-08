@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const User = ({ user }) => (
+export const User = ({ name }) => (
   <>
     <h2>User:</h2>
-    <em>{user.name}</em>
+    <em>{name}</em>
   </>
 );
 
 User.propTypes = {
-  user: PropTypes.objectOf.isRequired,
+  name: PropTypes.string.isRequired,
 };

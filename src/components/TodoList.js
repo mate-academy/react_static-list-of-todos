@@ -17,9 +17,9 @@ export const TodoList = ({ preparedTodos }) => (
 );
 
 TodoList.propTypes = {
-  preparedTodos: PropTypes.arrayOf(
-    PropTypes.object.isRequired,
-  ),
+  preparedTodos: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+  })),
 };
 
 TodoList.defaultProps = {
