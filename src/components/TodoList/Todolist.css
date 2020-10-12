@@ -1,0 +1,15 @@
+.list {
+  width: 100%;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+  display: flex;
+  background-color: #f6f6f7;
+  padding: 10px 15px;
+  width: 70%;
+  margin: 15px auto;
+  border-radius: 4px;
+  border: 1px solid gray;
+}

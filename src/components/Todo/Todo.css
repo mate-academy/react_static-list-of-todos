@@ -1,0 +1,22 @@
+.title {
+  display: inline-block;
+  margin: 0;
+  padding-right: 20px;
+  color: rgb(68, 68, 68);
+}
+
+.complete {
+  color: green;
+}
+
+.complete::after {
+  content: " \2705";
+}
+
+.incomplete {
+  color: red;
+}
+
+.incomplete::after {
+  content: " \274C";
+}
