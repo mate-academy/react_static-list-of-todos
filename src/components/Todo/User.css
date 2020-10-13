@@ -1,0 +1,27 @@
+.todo {
+  margin-left: 10px;
+  border-radius: 20px;
+  display: flex;
+}
+
+.todo p {
+  padding-left: 10px;
+  width: 33%;
+}
+
+.todo:hover {
+  box-shadow: 5px 5px 5px gray;
+}
+
+.complete,
+.not-complete {
+  transition: background-color 150ms;
+}
+
+.complete:hover {
+  background-color: green;
+}
+
+.not-complete:hover {
+  background-color: yellow;
+}
