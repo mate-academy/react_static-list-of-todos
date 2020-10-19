@@ -1,1 +1,32 @@
-// styles go here
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Segoe UI", sans-serif;
+  color: #808080;
+}
+
+body,
+ul,
+input,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  padding: 20px 80px;
+  background-color: #ccc;
+}
+
+.App h1 {
+  margin-bottom: 30px;
+
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 32px;
+}

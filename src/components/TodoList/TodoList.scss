@@ -1,0 +1,56 @@
+.row {
+  display: flex;
+  align-items: center;
+
+  padding: 25px 30px 25px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+
+  transition: background-color 0.4s;
+}
+
+.row:hover {
+  background-color: #f2f2f2;
+}
+
+.row div {
+  flex-basis: 40%;
+
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.row .status {
+  flex-basis: 10%;
+  margin-right: 35px;
+
+  text-align: center;
+}
+
+.row input {
+  width: 40px;
+  height: 40px;
+}
+
+.row input:checked {
+  filter: hue-rotate(240deg);
+}
+
+.row:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+.header {
+  border-radius: 10px 10px 0 0;
+}
+
+.header div {
+  text-transform: uppercase;
+}
+
+.row .description {
+  padding-right: 80px;
+
+  font-size: 23px;
+  color: #3973ac;
+}
