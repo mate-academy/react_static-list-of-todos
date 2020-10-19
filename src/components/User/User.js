@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const User = ({ name }) => (
-  <div className="user-name mb-1">
-    {name}
+  <div className="mb-1">
+    <b>{name}</b>
   </div>
 );
 

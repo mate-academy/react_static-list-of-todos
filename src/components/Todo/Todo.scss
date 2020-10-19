@@ -3,13 +3,21 @@
 }
 
 .todo {
+  align-items: center;
+
   &__title {
     font-weight: 600;
     font-size: 20px;
   }
 
+  &__status-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
   &__status {
     display: block;
+    margin: 0;
     width: 300px;
     padding: 20px 10px;
     text-align: center;

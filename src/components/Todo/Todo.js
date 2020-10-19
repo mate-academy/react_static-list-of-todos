@@ -16,12 +16,15 @@ export const Todo = ({ title, user, completed }) => (
       <p className="todo__title">
         {title}
       </p>
+      <i>User:</i>
       <User {...user} />
     </div>
-    {completed
-      ? <p className="todo__status todo__status--true">Done</p>
-      : <p className="todo__status todo__status--false">Not done yet</p>
-    }
+    <div todo__status-wrapper>
+      {completed
+        ? <p className="todo__status todo__status--true">Done</p>
+        : <p className="todo__status todo__status--false">Not done yet</p>
+      }
+    </div>
   </div>
 );
 
