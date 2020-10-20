@@ -1,27 +1,27 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import './TodoList.scss';
+import './ListRow.scss';
 
+import { TodoShape } from '../shapes/TodoShapes';
 import { User } from '../User';
 
 export const TodoList = ({ todos }) => (
   <ul>
-    <li className="row header">
-      <div className="status">status</div>
+    <li className="ListRow ListRow--header">
+      <div className="ListRow__status-col">status</div>
       <div>task</div>
       <div>user</div>
     </li>
     {
       todos.map(todo => (
-        <li key={todo.id} className="row">
+        <li key={todo.id} className="ListRow">
           <input
             type="checkbox"
             checked={todo.completed}
             readOnly
-            className="status"
+            className="ListRow__input"
           />
 
-          <div className="description">
+          <div className="ListRow__description">
             {todo.title}
           </div>
 
@@ -32,6 +32,4 @@ export const TodoList = ({ todos }) => (
   </ul>
 );
 
-TodoList.propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+TodoList.propTypes = TodoShape;
