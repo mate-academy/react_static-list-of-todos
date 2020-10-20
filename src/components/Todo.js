@@ -1,0 +1,25 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { User } from './User';
+
+export const Todo = ({ title, completed, user }) => (
+  <div className="App__task">
+    <div className="App__title">
+      {title}
+    </div>
+
+    <div className="App__status">
+      {completed ? `done` : `not done`}
+    </div>
+
+    <User {...user} />
+  </div>
+);
+
+Todo.propTypes = {
+  title: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
+};
