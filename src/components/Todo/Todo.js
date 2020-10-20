@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { User } from '../User';
 import './Todo.scss';
+import { TodoShape } from '../../shapes/TodoShape';
 
 export const Todo = ({ title, user, completed }) => (
   <div className="
@@ -19,7 +19,7 @@ export const Todo = ({ title, user, completed }) => (
       <i>User:</i>
       <User {...user} />
     </div>
-    <div todo__status-wrapper>
+    <div className="todo__status-wrapper">
       {completed
         ? <p className="todo__status todo__status--true">Done</p>
         : <p className="todo__status todo__status--false">Not done yet</p>
@@ -28,18 +28,4 @@ export const Todo = ({ title, user, completed }) => (
   </div>
 );
 
-Todo.propTypes = {
-  title: PropTypes.string.isRequired,
-  user: PropTypes.objectOf(
-    PropTypes.shape = {
-      userId: PropTypes.number.isRequired,
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      completed: PropTypes.bool.isRequired,
-      user: PropTypes.shape = {
-        name: PropTypes.string.isRequired,
-      }.isRequired,
-    },
-  ).isRequired,
-  completed: PropTypes.bool.isRequired,
-};
+Todo.propTypes = TodoShape;
