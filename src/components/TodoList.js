@@ -5,9 +5,11 @@ import { TodoShape } from '../shapes/TodoShape';
 
 export const TodoList = ({ src }) => (
   <>
-    {src.map(task => (
-      <Todo {...task} key={task.id} />
-    ))}
+    {
+      src.map(task => (
+        <Todo {...task} key={task.id} />
+      ))
+    }
   </>
 );
 
