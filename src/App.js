@@ -24,16 +24,12 @@ function App() {
       </h1>
       <p className="lead" style={{ textAlign: 'center' }}>
         <span>
-          <b>Todos:</b>
-          {' '}
+          <b>Todos: </b>
           {todos.length}
-          {' '}
-          |
-          {' '}
+          {' | '}
         </span>
         <span>
-          <b>Users:</b>
-          {' '}
+          <b>Users: </b>
           {users.length}
         </span>
       </p>
