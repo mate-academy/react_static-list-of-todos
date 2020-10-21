@@ -8,8 +8,6 @@ users.forEach((user) => {
 });
 
 export const preparedTodos = [...todos]
-  .map((todo) => {
-    todo.user = usersMap[todo.userId];
-
-    return todo;
-  });
+  .map(todo => ({
+    ...todo, user: usersMap[todo.userId],
+  }));

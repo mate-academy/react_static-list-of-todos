@@ -1,6 +1,6 @@
 import React from 'react';
 import { User } from '../User';
-import { TodoShape } from '../shapes/Todo';
+import { TodoShape } from '../shapes/TodoShape';
 
 export const Todo = ({ title, completed, user }) => (
   <>
