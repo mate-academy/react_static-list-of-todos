@@ -4,7 +4,7 @@ import { TodoShape } from '../shapes/TodoShape';
 import './Todo.scss';
 
 export const Todo = ({ title, completed, user }) => (
-  <div className="Todo">
+  <div className="TodoList__Todo Todo">
     <h3 className="Todo__title">
       {'Task: '}
       {title}
