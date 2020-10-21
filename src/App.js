@@ -1,8 +1,22 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { preparedTodos } from './api/preparedTodos';
+import todos from './api/todos';
+import users from './api/users';
+
 import { TodoList } from './components/TodoList';
+
+const usersMap = {};
+
+users.forEach((user) => {
+  usersMap[user.id] = { ...user };
+});
+
+const preparedTodos = [...todos]
+  .map(todo => ({
+    ...todo,
+    user: usersMap[todo.userId],
+  }));
 
 function App() {
   return (
