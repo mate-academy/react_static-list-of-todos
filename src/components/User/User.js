@@ -22,7 +22,7 @@ export const User = ({ name, taskStatus, email }) => (
       aria-expanded="false"
       style={{ fontSize: '10px' }}
     >
-      OVNER INFO
+      OWNER INFO
     </button>
     <div
       className="dropdown-menu rounded-bottom rounded-lg"
