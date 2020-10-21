@@ -7,12 +7,7 @@ import './TodoList.css';
 export const TodoList = ({ todos }) => (
   <ul className="dodos list-group">
     {todos.map(todo => (
-      <li
-        key={todo.id}
-        className="dodos__item list-group-item list-group-item-action"
-      >
-        <Todo {...todo} />
-      </li>
+      <Todo {...todo} key={todo.id} />
     ))}
   </ul>
 );

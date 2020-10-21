@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { UserShape } from './User';
+import { UserShape } from './UserShape';
 
 export const TodoShape = PropTypes.shape({
   title: PropTypes.string.isRequired,
