@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Todo from './Todo';
+import TodoListShape from './shapes/TodoListShape';
 
 function TodoList({ todo }) {
   return (
@@ -13,10 +13,6 @@ function TodoList({ todo }) {
   );
 }
 
-TodoList.propTypes = {
-  todo: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-  })).isRequired,
-};
+TodoList.propTypes = TodoListShape;
 
 export default TodoList;

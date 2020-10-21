@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { ListGroupItem } from 'react-bootstrap';
 import User from './User';
+import { TodoShape } from './shapes/TodoShape';
 
 function Todo({ todo: { title, completed, user } }) {
   return (
@@ -21,12 +21,6 @@ function Todo({ todo: { title, completed, user } }) {
   );
 }
 
-Todo.propTypes = {
-  todo: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired,
-    user: PropTypes.object.isRequired,
-  }).isRequired,
-};
+Todo.propTypes = TodoShape;
 
 export default Todo;
