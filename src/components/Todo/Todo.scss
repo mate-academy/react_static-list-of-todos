@@ -1,0 +1,34 @@
+.todoList {
+  display: flex;
+  margin-bottom: 5px;
+  justify-content: space-around;
+  align-items: center;
+
+  border: 3px solid black;
+  background: gray;
+
+  &__title {
+    font-size: 19px;
+  }
+
+  &__user {
+    font-size: 20px;
+  }
+}
+
+.completed {
+  font-size: 20px;
+
+  &__true {
+    padding: 25px 40px;
+
+    background: green;
+  }
+
+  &__false {
+    padding: 25px;
+
+    background-color: red;
+  }
+  
+}
