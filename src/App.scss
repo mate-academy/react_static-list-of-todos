@@ -1,1 +1,24 @@
-// styles go here
+body {
+  background-color: #cecece;
+}
+
+.App {
+  max-width: 75vw;
+  margin: auto;
+  padding: 20px;
+  background-color: #cebebe;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 22px;
+
+  &__heading {
+    font-size: 30px;
+    letter-spacing: 0.2rem;
+    text-align: center;
+  }
+
+  &__info {
+    display: inline-block;
+    margin: 50px;
+    font-style: italic;
+  }
+}
