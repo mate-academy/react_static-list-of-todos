@@ -1,0 +1,58 @@
+.ListRow {
+  display: flex;
+  align-items: center;
+
+  padding: 25px 30px 25px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+
+  font-weight: 500;
+  font-size: 20px;
+
+  transition: background-color 0.4s;
+
+  & * {
+    flex-basis: 42%;
+  }
+
+  &__status-col {
+    flex-basis: 10%;
+    margin-right: 35px;
+
+    text-align: center;
+  }
+
+  &__input {
+    flex-basis: 10%;
+    margin-right: 35px;
+
+    width: 40px;
+    height: 40px;
+
+    text-align: center;
+
+    &:checked {
+      filter: hue-rotate(240deg);
+    }
+  }
+
+  &:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+
+  &__description {
+    padding-right: 80px;
+
+    font-size: 23px;
+    color: #3973ac;
+  }
+
+  &--header {
+    border-radius: 10px 10px 0 0;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    background-color: #f2f2f2;
+  }
+}
