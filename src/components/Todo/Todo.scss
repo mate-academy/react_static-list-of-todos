@@ -1,0 +1,41 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  margin: 40px;
+
+  background-color: rgb(207, 204, 250);
+  border-radius: 10px;
+
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 7px 14px 25px -5px rgba(61, 61, 61, 0.46);
+  }
+
+  &__title {
+    display: block;
+    max-width: 40%;
+    margin: 0;
+
+    font-size: 28px;
+  }
+
+  &__status {
+    display: block;
+    padding: 20px;
+
+    border-radius: 10px;
+    font-size: 18px;
+    color: white;
+
+    &--done {
+      background-color: rgb(44, 185, 1);
+    }
+
+    &--not-done {
+      background-color: rgb(185, 1, 1);
+    }
+  }
+}
