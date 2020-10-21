@@ -3,8 +3,8 @@ import { TodoShape } from '../shapes/TodoShape';
 
 import { User } from '../User';
 
-export const Todo = ({ completed, title, user }) => (
-  <>
+export const Todo = ({ id, completed, title, user }) => (
+  <li key={id} className="ListRow">
     <input
       type="checkbox"
       checked={completed}
@@ -17,7 +17,7 @@ export const Todo = ({ completed, title, user }) => (
     </div>
 
     <User {...user} />
-  </>
+  </li>
 );
 
 Todo.propTypes = TodoShape;

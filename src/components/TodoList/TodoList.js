@@ -13,9 +13,7 @@ export const TodoList = ({ todos }) => (
     </li>
     {
       todos.map(todo => (
-        <li key={todo.id} className="ListRow">
-          <Todo {...todo} />
-        </li>
+        <Todo {...todo} />
       ))
     }
   </ul>
