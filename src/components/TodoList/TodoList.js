@@ -1,8 +1,8 @@
 import React from 'react';
 import './ListRow.scss';
 
-import { TodoShape } from '../shapes/TodoShapes';
-import { User } from '../User';
+import { TodoListShape } from '../shapes/TodoListShape';
+import { Todo } from '../Todo';
 
 export const TodoList = ({ todos }) => (
   <ul>
@@ -14,22 +14,11 @@ export const TodoList = ({ todos }) => (
     {
       todos.map(todo => (
         <li key={todo.id} className="ListRow">
-          <input
-            type="checkbox"
-            checked={todo.completed}
-            readOnly
-            className="ListRow__input"
-          />
-
-          <div className="ListRow__description">
-            {todo.title}
-          </div>
-
-          <User {...todo.user} />
+          <Todo {...todo} />
         </li>
       ))
     }
   </ul>
 );
 
-TodoList.propTypes = TodoShape;
+TodoList.propTypes = TodoListShape;

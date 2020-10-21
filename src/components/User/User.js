@@ -4,7 +4,7 @@ import { UserShape } from '../shapes/UserShape';
 import './User.scss';
 
 export const User = ({ name, username, email, phone, website }) => {
-  const [detailsShown, setDetailsShown] = useState(true);
+  const [isDetailsShown, setIsDetailsShown] = useState(true);
 
   return (
     <div className="User">
@@ -15,14 +15,14 @@ export const User = ({ name, username, email, phone, website }) => {
         <button
           type="button"
           className="User__btn"
-          onClick={() => setDetailsShown(!detailsShown)}
+          onClick={() => setIsDetailsShown(!isDetailsShown)}
         >
           Details
         </button>
 
         <div
           className="User__details"
-          hidden={detailsShown}
+          hidden={isDetailsShown}
         >
           <p>
             <span className="User__info-text">user name:</span>
