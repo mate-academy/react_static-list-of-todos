@@ -3,7 +3,15 @@ import { User } from './User/User';
 import { TodoShape } from './shapes/TodoShape';
 
 export const Todo = ({ title, completed, user }) => (
-  <li>
+  // <li>
+  <li
+    className="
+      list-group-item
+      list-group-item-action
+      rounded-pill
+      dropdown my-1
+    "
+  >
     <User
       taskStatus={completed}
       {...user}
@@ -14,6 +22,7 @@ export const Todo = ({ title, completed, user }) => (
     {' '}
     {typeof completed}
   </li>
+  // </li>
 );
 
 Todo.propTypes = TodoShape;

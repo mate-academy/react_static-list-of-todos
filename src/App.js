@@ -18,17 +18,28 @@ const preparedTodos = todos
 
 function App() {
   return (
-    <div className="App">
-      <h1>Static list of todos</h1>
-      <p>
-        <span>Todos: </span>
-        {todos.length}
+    <div className="App mx-auto jumbotron" style={{ width: '75%' }}>
+      <h1 className="display-4" style={{ textAlign: 'center' }}>
+        Static list of todos
+      </h1>
+      <p className="lead" style={{ textAlign: 'center' }}>
+        <span>
+          <b>Todos:</b>
+          {' '}
+          {todos.length}
+          {' '}
+          |
+          {' '}
+        </span>
+        <span>
+          <b>Users:</b>
+          {' '}
+          {users.length}
+        </span>
       </p>
 
-      <p>
-        <span>Users: </span>
-        {users.length}
-      </p>
+      <p style={{ textAlign: 'center' }} />
+      <hr className="my-4" />
       <TodoList tasks={preparedTodos} />
     </div>
   );
