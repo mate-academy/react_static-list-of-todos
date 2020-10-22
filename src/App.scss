@@ -1,1 +1,17 @@
-// styles go here
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: 'Trebuchet MS', sans-serif;
+
+  &__header {
+    font-size: 34px;
+    color: rgb(0, 27, 179);
+  }
+
+  &__statistic {
+    margin: 0;
+    font-size: 20px;
+  }
+}
