@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import './User.scss';
 
 export const User = ({ name }) => (
-  <p className="users__name">
+  <div className="users__name">
     {name}
-  </p>
+  </div>
 );
 
 User.propTypes = {

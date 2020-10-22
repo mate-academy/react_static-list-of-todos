@@ -6,9 +6,9 @@ export const TodoList = ({ arrayOfTodos }) => (
   <>
     {arrayOfTodos.map(item => (
       <div key={item.id}>
-        <p>
+        <div>
           <Todo {...item} />
-        </p>
+        </div>
       </div>
     ))}
   </>
@@ -17,7 +17,7 @@ export const TodoList = ({ arrayOfTodos }) => (
 TodoList.propTypes = {
   arrayOfTodos: PropTypes.arrayOf(
     PropTypes.shape({
-      item: PropTypes.string.isRequired,
+      item: PropTypes.string,
     }),
   ).isRequired,
 };
