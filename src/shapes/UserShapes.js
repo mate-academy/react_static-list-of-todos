@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
 
-export const UserNameShapes = PropTypes.shape({
+export const UserShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
 }).isRequired;

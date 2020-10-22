@@ -1,21 +1,20 @@
 import React from 'react';
-import { Status } from '../Status';
-import { UserName } from '../UserName';
-import { Title } from '../Title';
-import { TodoListShapes } from '../../shapes/TodoListShapes';
+
+import { ToDo } from '../ToDo';
+
+import { TodoListShape } from '../../shapes/TodoListShapes';
 
 export function TodoList({ todos }) {
   return (
     <tbody>
       {todos.map(({ id, title, completed, user }) => (
         <tr key={id}>
-          <Title title={title} />
-          <UserName user={user} />
-          <Status completed={completed} />
+          <td>{title}</td>
+          <ToDo user={user} completed={completed} />
         </tr>
       ))}
     </tbody>
   );
 }
 
-TodoList.propTypes = TodoListShapes;
+TodoList.propTypes = TodoListShape;
