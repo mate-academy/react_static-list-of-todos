@@ -1,9 +1,11 @@
 import React from 'react';
+
 import { User } from '../User';
 import { ToDoShape } from '../shapes/ToDoShape';
+import './ToDo.scss';
 
 export const ToDo = ({ completed, title, user }) => (
-  <li className="todo">
+  <>
     <input
       type="checkbox"
       checked={completed}
@@ -14,7 +16,7 @@ export const ToDo = ({ completed, title, user }) => (
       {title}
     </p>
     <User {...user} />
-  </li>
+  </>
 );
 
 ToDo.propTypes = ToDoShape;

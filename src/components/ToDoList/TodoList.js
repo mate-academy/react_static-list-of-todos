@@ -7,7 +7,9 @@ import { ToDoShape } from '../shapes/ToDoShape';
 export const ToDoList = ({ todos }) => (
   <ul className="App__list">
     {todos.map(todo => (
-      <ToDo {...todo} key={todo.id} />
+      <li className="ToDo" key={todo.id}>
+        <ToDo {...todo} />
+      </li>
     ))}
   </ul>
 );
