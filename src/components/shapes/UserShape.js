@@ -1,5 +1,5 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 export const UserShape = {
-  name: propTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };

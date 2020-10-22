@@ -1,6 +1,6 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { TodoShape } from './TodoShape';
 
 export const TodoListShape = {
-  todos: propTypes.arrayOf(TodoShape),
+  todos: PropTypes.arrayOf(TodoShape),
 };
