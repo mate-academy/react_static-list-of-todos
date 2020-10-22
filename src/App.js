@@ -5,15 +5,12 @@ import './App.scss';
 import todos from './api/todos';
 import users from './api/users';
 
-const preparedTodos = todos
+const preparedTodos = [...todos]
   .map(
-    (todo) => {
-      const todoCopy = todo;
-
-      todoCopy.user = users.find(({ id }) => id === todo.userId);
-
-      return todoCopy;
-    },
+    todo => ({
+      ...todo,
+      user: users.find(({ id }) => id === todo.userId),
+    }),
   );
 
 function App() {
