@@ -1,5 +1,5 @@
 import React from 'react';
-import { TodoListShape } from '../../shapes/TodoListShape';
+import { UserShape } from '../../shapes/UserShape';
 
 import './User.scss';
 
@@ -13,4 +13,4 @@ export const User = ({ user, completed }) => (
   </h5>
 );
 
-User.propTypes = TodoListShape;
+User.propTypes = UserShape.isRequired;
