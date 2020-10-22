@@ -23,7 +23,9 @@ function App() {
         <span>Users: </span>
         {users.length}
       </p>
-      <TodoList preparedTodos={preparedTodos} />
+      <div>
+        <TodoList preparedTodos={preparedTodos} />
+      </div>
     </div>
   );
 }

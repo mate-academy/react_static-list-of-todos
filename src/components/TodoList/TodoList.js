@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Todo from '../Todo/Todo';
+import TodoShape from '../../shapes/TodoShape';
 
 const TodoList = ({ preparedTodos }) => (
   preparedTodos.map(todo => (
@@ -9,7 +10,7 @@ const TodoList = ({ preparedTodos }) => (
 );
 
 TodoList.propTypes = {
-  preparedTodos: PropTypes.arrayOf(PropTypes.object).isRequired,
+  preparedTodos: PropTypes.arrayOf(TodoShape).isRequired,
 };
 
 export default TodoList;

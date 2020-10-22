@@ -1,19 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import User from '../User/User';
+import TodoShape from '../../shapes/TodoShape';
 import './Todo.scss';
 
 const Todo = ({ title, user, completed }) => (
   <section className="card">
     <div className="card__info">
       <p className="card__task">
-        Task:
-        {' '}
-        {title}
+        {`Task: ${title}`}
       </p>
       <p className="card__user">
-        User:
-        {' '}
+        {`User: `}
         <User name={user.name} />
       </p>
     </div>
@@ -32,12 +29,6 @@ const Todo = ({ title, user, completed }) => (
   </section>
 );
 
-Todo.propTypes = {
-  title: PropTypes.string.isRequired,
-  user: PropTypes.objectOf(PropTypes.shape({
-    name: PropTypes.string,
-  })).isRequired,
-  completed: PropTypes.bool.isRequired,
-};
+Todo.propTypes = TodoShape;
 
 export default Todo;

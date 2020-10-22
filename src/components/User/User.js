@@ -1,14 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import UserShape from '../../shapes/UserShape';
 
 const User = ({ name }) => (
-  <>
+  <span>
     {name}
-  </>
+  </span>
 );
 
-User.propTypes = {
-  name: PropTypes.string.isRequired,
-};
+User.propTypes = UserShape;
 
 export default User;
