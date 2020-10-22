@@ -30,13 +30,13 @@ export const Todo = ({ user, title, completed }) => (
       <div className="todo__info">
         <div
           className={
-            completed === true
+            completed
               ? 'todo__icon'
               : 'todo__icon todo__icon--not-completed'
           }
         />
         <div>
-          {completed === true ? 'Completed' : 'Not completed'}
+          {completed ? 'Completed' : 'Not completed'}
         </div>
       </div>
     </div>
