@@ -9,8 +9,7 @@ export function TodoList({ todos }) {
     <tbody>
       {todos.map(({ id, title, completed, user }) => (
         <tr key={id}>
-          <td>{title}</td>
-          <ToDo user={user} completed={completed} />
+          <ToDo user={user} completed={completed} title={title} />
         </tr>
       ))}
     </tbody>
