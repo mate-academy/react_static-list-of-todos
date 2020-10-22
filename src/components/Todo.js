@@ -5,7 +5,7 @@ import { TodoShape } from '../shapes/TodoShape';
 export const Todo = ({ title, completed, user }) => (
   <div className="App__list-item">
     <div>
-      <span className="App__title">Task:&nbsp;</span>
+      <span className="App__title">{'Task: '}</span>
       {title}
     </div>
 
