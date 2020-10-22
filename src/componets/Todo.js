@@ -3,7 +3,7 @@ import { ListGroupItem } from 'react-bootstrap';
 import User from './User';
 import { TodoShape } from './shapes/TodoShape';
 
-function Todo({ todo: { title, completed, user } }) {
+function Todo({ title, completed, user }) {
   return (
     <>
       <ListGroupItem className="my-3 bg-dark text-light">

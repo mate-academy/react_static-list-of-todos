@@ -1,7 +1,4 @@
 import PropTypes from 'prop-types';
+import { TodoShape } from './TodoShape';
 
-const TodoListShape = PropTypes.arrayOf(PropTypes.shape({
-  id: PropTypes.number.isRequired,
-})).isRequired;
-
-export default TodoListShape;
+export const TodoListShape = PropTypes.arrayOf(TodoShape).isRequired;

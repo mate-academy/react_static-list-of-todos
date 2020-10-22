@@ -17,7 +17,7 @@ function App() {
     <Container>
       <div className="todo__container">
         <h1 className="todo__header">Static list of todos</h1>
-        <TodoList todo={preparedTodos} />
+        <TodoList todos={preparedTodos} />
       </div>
     </Container>
   );

@@ -3,7 +3,7 @@ import { UserShape } from './shapes/UserShape';
 
 function User({ user: { name } }) {
   return (
-    <p className="todo__name">{name}</p>
+    <p className="user__name">{name}</p>
   );
 }
 
