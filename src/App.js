@@ -7,12 +7,12 @@ import TodoList from './componets/TodoList';
 import todos from './api/todos';
 import users from './api/users';
 
-function App() {
-  const preparedTodos = todos.map(item => ({
-    ...item,
-    user: users.find(user => user.id === item.userId),
-  }));
+const preparedTodos = todos.map(item => ({
+  ...item,
+  user: users.find(user => user.id === item.userId),
+}));
 
+function App() {
   return (
     <Container>
       <div className="todo__container">
