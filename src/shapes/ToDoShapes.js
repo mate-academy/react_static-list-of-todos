@@ -4,5 +4,5 @@ import { UserShape } from './UserShapes';
 export const ToDoShape = PropTypes.shape({
   completed: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired,
-  user: UserShape,
+  user: PropTypes.shape(UserShape).isRequired,
 }).isRequired;

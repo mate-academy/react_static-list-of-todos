@@ -1,8 +1,8 @@
 import React from 'react';
 import { UserShape } from '../../shapes/UserShapes';
 
-export function User({ name }) {
-  return <td>{name}</td>;
+export function User({ user }) {
+  return <td>{user.name}</td>;
 }
 
 User.propTypes = UserShape;
