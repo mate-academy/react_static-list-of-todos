@@ -10,9 +10,9 @@ export const TodoList = ({ todoList }) => (
     {
       todoList.map(todo => (
         <li
-          className={
-            todo.completed
-              ? 'list__item item list--completed' : 'list__item item'
+          className={todo.completed
+            ? 'list__item item item--completed'
+            : 'list__item item'
           }
           key={todo.id}
         >
