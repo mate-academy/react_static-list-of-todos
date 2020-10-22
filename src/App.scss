@@ -1,1 +1,50 @@
-// styles go here
+body {
+  background-color: hsl(60, 0%, 57%)
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+
+  font-family: Helvetica, sans-serif;
+
+
+  &__list-item {
+    width: 35vw;
+    margin: 10px;
+    padding: 10px;
+
+    border: 2px solid rgb(197, 193, 193);
+    border-radius: 10px;
+
+    font-size: 18px;
+    background-color: rgb(214, 214, 214);
+  }
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__status {
+    text-align: right;
+  }
+
+  &__completed {
+    color: green;
+    font-weight: 700;
+    
+  }
+  &__uncompleted {
+    color: red;
+    
+  }
+  
+  &__user-name {
+    padding: 10px 0;
+  }
+}
+
+
