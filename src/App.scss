@@ -1,1 +1,13 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 24px;
+}
+
+.App {
+  color: #30539c;
+  background-color: #f0f2f5;
+  box-shadow: 1px 0 5px #30539c;
+}
