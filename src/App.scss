@@ -1,1 +1,12 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color: grey;
+}
+
+.App {
+  width: 800px;
+  margin: 0 auto;
+}

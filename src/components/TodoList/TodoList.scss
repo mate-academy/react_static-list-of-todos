@@ -1,0 +1,17 @@
+.todoList {
+  &__row {
+    height: 50px;
+    background-color: pink;
+
+    &--title {
+      background-color: grey;
+      color: pink;
+      text-transform: uppercase;
+      text-align: left;
+    }
+  }
+
+  &__cell {
+    padding: 0 10px;
+  }
+}
