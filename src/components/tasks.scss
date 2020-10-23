@@ -1,0 +1,22 @@
+.tasks {
+  display: flex;
+  justify-content: center;
+
+  &__card {
+    box-sizing: content-box;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    width: 500px;
+
+    border: 5px double olive;
+    border-radius: 10px;
+    list-style: none;
+
+    box-shadow:10px 10px 15px brown;
+    background-color: rgb(228, 219, 168);
+
+    & > p {
+      margin-left: 300px;
+    }
+  }
+}
