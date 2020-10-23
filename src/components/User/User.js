@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './User.scss';
-import { userProptype } from '../propTypes/userProptype';
+import { UserShape } from '../propTypes/UserShape';
 
 export const User = ({ name }) => (
   <div className="users__name">
@@ -9,4 +9,4 @@ export const User = ({ name }) => (
   </div>
 );
 
-User.propTypes = userProptype;
+User.propTypes = UserShape;
