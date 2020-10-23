@@ -1,5 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import User from './User';
+import propTypesTodoShape from './propTypesTodoShape/propTypeTodoListShape';
 
 const Todo = ({ todo }) => (
   <>
@@ -8,15 +9,10 @@ const Todo = ({ todo }) => (
       ? (<span className="progress progress__complete">Done</span>)
       : (<span className="progress progress__not-complete">Not done</span>)
     }
+    <User user={todo.user} />
   </>
 );
 
-Todo.propTypes = {
-  todo: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired,
-  }).isRequired,
-};
+Todo.propTypes = propTypesTodoShape;
 
 export default Todo;
