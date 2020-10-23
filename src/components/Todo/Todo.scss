@@ -1,0 +1,28 @@
+.todo__item {
+  display: grid;
+  grid-template-columns: 5fr 2fr 2fr;
+  width: 900px;
+  height: 60px;
+  margin: 5px 0;
+  padding: 0 20px;
+
+  font-weight: bold;
+  line-height: 60px;
+  color: #fff;
+
+  background-color: rgb(202, 158, 253);
+  border-radius: 20px;
+  box-shadow: 0 0 6px rgba(75, 74, 74, 0.4);
+  transition: 0.3s;
+
+  & :nth-child(2) {
+    padding-left: 20px;
+
+    font-style: italic;
+    color: rgb(169, 227, 245);
+  }
+
+  &:hover {
+    background-color: rgb(173, 145, 206);
+  }
+}
