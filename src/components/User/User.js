@@ -2,12 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './User.scss';
 import classNames from 'classnames';
+import { UserShape } from '../../shapes/UserShape';
 
 export const User = ({ user }) => (
   <>
     <strong className={
-      classNames('userName',
-        { userName__done: user.completed })}
+      classNames(
+        'userName',
+        { userName__done: user.completed },
+      )}
     >
       {user.name}
     </strong>
@@ -15,8 +18,5 @@ export const User = ({ user }) => (
 );
 
 User.propTypes = {
-  user: PropTypes.objectOf({
-    completed: PropTypes.bool.isRequired,
-    name: PropTypes.string.isRequired,
-  }).isRequired,
+  user: PropTypes.objectOf(UserShape).isRequired,
 };
