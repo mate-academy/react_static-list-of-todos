@@ -4,6 +4,8 @@ import { User } from '../User/User';
 import './Todo.scss';
 import { TodoShape } from '../../shapes/TodoShape';
 
+const x = 2;
+
 export const Todo = ({ id, user, title, completed }) => (
   <>
     <div className="todo__Number">{id}</div>
@@ -12,7 +14,7 @@ export const Todo = ({ id, user, title, completed }) => (
       completed,
     }}
     />
-    <div className="todo__Title">{title}</div>
+    <div className="todo__Title">{title + x}</div>
     <strong className={
       classNames(
         'status',
