@@ -1,6 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import './User.scss';
+import { userProptype } from '../propTypes/userProptype';
 
 export const User = ({ name }) => (
   <div className="users__name">
@@ -8,6 +9,4 @@ export const User = ({ name }) => (
   </div>
 );
 
-User.propTypes = {
-  name: PropTypes.string.isRequired,
-};
+User.propTypes = userProptype;
