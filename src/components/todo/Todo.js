@@ -1,5 +1,5 @@
 import React from 'react';
-import { User } from '../user/User';
+import { User } from '../user';
 import { TodoShape } from '../shapes/TodoShape';
 
 export const Todo = ({ id, title, completed, user }) => (
