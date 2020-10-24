@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-const propTypeTodoUserShape = {
+const propTypeUserShape = {
   user: PropTypes.shape({
     name: PropTypes.string.isRequired,
   }).isRequired,
 };
 
-export default propTypeTodoUserShape;
+export default propTypeUserShape;

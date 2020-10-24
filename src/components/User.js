@@ -1,10 +1,10 @@
 import React from 'react';
-import propTypeTodoUserShape from './propTypesTodoShape/propTypeTodoUserShape';
+import propTypeUserShape from './propTypesTodoShape/propTypeUserShape';
 
 const User = ({ user }) => (
   <span className="user">{user.name}</span>
 );
 
-User.propTypes = propTypeTodoUserShape;
+User.propTypes = propTypeUserShape;
 
 export default User;

@@ -1,15 +1,14 @@
 import PropTypes from 'prop-types';
+import propTypeUserShape from './propTypeUserShape';
 
-const propTypesTodoShape = {
+const propTypeTodoShape = {
   todoList: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       completed: PropTypes.bool.isRequired,
-      user: PropTypes.shape({
-        name: PropTypes.string.isRequired,
-      }).isRequired,
+      user: propTypeUserShape,
     }),
   ),
 };
 
-export default propTypesTodoShape;
+export default propTypeTodoShape;
