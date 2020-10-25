@@ -1,11 +1,6 @@
 import PropTypes from 'prop-types';
+import { TodoShape } from './TodoShape';
 
 export const TodoListShape = {
-  preparedTodos: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired,
-    user: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-    }),
-  })),
+  todos: PropTypes.arrayOf(TodoShape).isRequired,
 };

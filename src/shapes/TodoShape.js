@@ -1,11 +1,8 @@
 import PropTypes from 'prop-types';
+import { UserShape } from './UserShape';
 
-export const TodoShape = {
-  todo: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired,
-    user: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-    }),
-  }),
-};
+export const TodoShape = PropTypes.shape({
+  title: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
+  user: UserShape.isRequired,
+}).isRequired;

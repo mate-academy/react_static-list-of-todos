@@ -3,12 +3,19 @@ import { User } from '../User';
 import './Todo.scss';
 import { TodoShape } from '../../shapes/TodoShape';
 
-export const Todo = ({ todo }) => (
-  <>
-    <td className="todo__cell">{todo.title}</td>
-    <td className="todo__cell">{todo.completed ? 'Yes' : 'No'}</td>
-    <td className="todo__cell"><User name={todo.user.name} /></td>
-  </>
+export const Todo = ({ title, completed, user }) => (
+  <li className="todo">
+    <User {...user} />
+    <div className="todo__container">
+      <div>
+        Task:
+        {title}
+      </div>
+      {completed
+        ? <div className="todo__completed todo__completed--yes">Completed</div>
+        : <div className="todo__completed todo__completed--no">In process</div>}
+    </div>
+  </li>
 );
 
 Todo.propTypes = TodoShape;
