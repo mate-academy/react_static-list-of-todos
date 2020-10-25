@@ -6,19 +6,34 @@ body {
   margin: 0;
 }
 
+.title {
+  text-align: center;
+  padding: 20px;
+}
+
 .app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
   &__task {
     display: flex;
     justify-content:  space-between;
-    margin: 20px;
-    border: 2px solid black;
+    padding: 30px;
   }
 
   &__title {
-    width: 250px;
+    cursor: pointer;
+    width: 320px;
+    transition:  transform 0.5s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__completed {
+    color: green;
+  }
+  
+  &__not-completed {
+    color: red;
   }
 }
+

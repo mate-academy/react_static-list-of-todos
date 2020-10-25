@@ -4,11 +4,11 @@ import { Todo } from '../Todo';
 import './TodoList.scss';
 
 export const TodoList = ({ todos }) => (
-  <div className="todo__list">
+  <ul className="todo__list list-group">
     {todos.map(todo => (
       <Todo key={todo.id} {...todo} />
     ))}
-  </div>
+  </ul>
 );
 
 TodoList.propTypes = TodoListShape;

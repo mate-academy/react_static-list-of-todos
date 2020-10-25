@@ -3,17 +3,25 @@ import { TodoShape } from '../shapes/TodoShape';
 import { User } from '../User';
 
 export const Todo = ({ title, user, completed }) => (
-  <div className="app__task">
-    <div className="app__title">
+
+  <li className="app__task list-group-item">
+    <User {...user} />
+
+    <div className="app__title blockquote">
+      Task:
       {title}
     </div>
 
-    <div className="app__completed">
-      {completed ? 'completed' : 'not completed'}
+    <div className={completed
+      ? 'app__completed'
+      : 'app__not-completed'}
+    >
+      Status:
+      <strong>
+        {completed ? 'completed' : 'not completed'}
+      </strong>
     </div>
-
-    <User {...user} />
-  </div>
+  </li>
 );
 
 Todo.propTypes = TodoShape;
