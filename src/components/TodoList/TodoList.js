@@ -10,13 +10,13 @@ const TodoList = ({ todoList }) => (
 );
 
 TodoList.propTypes = {
-  todoList: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
+  todoList: PropTypes.arrayOf(PropTypes.shape = {
+    title: PropTypes.number.isRequired,
     user: PropTypes.shape({
       name: PropTypes.string.isRequired,
     }).isRequired,
     completed: PropTypes.bool.isRequired,
-  })).isRequired,
+  }).isRequired,
 };
 
 export { TodoList };

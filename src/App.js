@@ -8,7 +8,7 @@ import './App.scss';
 
 function App() {
   const preparedTodos = todos.map((todo) => {
-    const user = users.find(u => todo.userId === u.id);
+    const user = users.find(person => todo.userId === person.id);
 
     return {
       ...todo,
