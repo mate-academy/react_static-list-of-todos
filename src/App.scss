@@ -1,1 +1,25 @@
-// styles go here
+body {
+  box-sizing: border-box;
+  background-color: #009688;
+}
+
+body,
+ul,
+li,
+p {
+  margin: 0;
+}
+
+.app {
+  background-image: url("./images/justDoIt.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  &__header {
+    text-align: center;
+
+    color: black;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+}

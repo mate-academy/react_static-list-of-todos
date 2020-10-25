@@ -1,0 +1,50 @@
+.todo {
+  margin: 10px 0;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  background-color: #80cbc4cc;
+  border: 2px solid #00695c;
+  border-radius: 10px;
+
+  transition: 300ms;
+  
+  &:hover {
+    background-color: transparent;
+    color: white;
+  }
+
+  &__task {
+    padding: 10px 0;
+
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  &__status {
+    padding: 20px;
+    width: 100%;
+    max-width: 250px;
+    align-self: center;
+
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #004d40 ;
+    background-color: #ffb74d;
+
+    border: 2px solid #00695c;
+    border-radius: 10px;
+
+    &--completed {
+      background-color: #1de9b6;
+    }
+  }
+}
+
+span {
+  font-size: 18px;
+  font-style: italic;
+}
