@@ -1,0 +1,25 @@
+.todoList__item {
+  background: #f2f2df;
+  margin: 5px;
+}
+
+.todoList__user {
+  font-size: 25px;
+  font-style: bold;
+  background-color: #597a68;
+  color: black;
+}
+
+.todoList__completed__true {
+  background-color: #7a9787;
+  border: 1px solid #2c3735;
+  padding: 2px;
+  width: 100px;
+}
+
+.todoList__completed__false {
+  background-color: #da5f43;
+  border-radius: 1px;
+  width: 130px;
+  padding: 2px;
+}

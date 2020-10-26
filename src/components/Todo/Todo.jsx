@@ -1,25 +1,23 @@
 import React from 'react';
 import { TodoShape } from '../../shapes/TodoShapes';
 import { User } from '../User';
+import './Todo.scss';
 
 export const Todo = ({ title, user, completed }) => (
-  <div className="todoList">
-    <p className="todoList__title">
+  <>
+    <li className="todoList__title todoList__item">
       {title}
-    </p>
-    <p>
-      User:
-      <span className="todoList__user">
-        <User {...user} />
-      </span>
-    </p>
-    <div className="completed">
+    </li>
+    <li className="todoList__user todoList__item">
+      <User {...user} />
+    </li>
+    <li className="todoList__completed">
       {completed
-        ? <p className="completed__true">completed</p>
-        : <p className="completed__false">Not completed</p>
+        ? <p className="todoList__completed__true">completed</p>
+        : <p className="todoList__completed__false">Not completed</p>
       }
-    </div>
-  </div>
+    </li>
+  </>
 );
 
 Todo.propTypes = TodoShape;
