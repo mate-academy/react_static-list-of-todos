@@ -7,18 +7,15 @@ const Todo = ({ title, user, completed }) => (
     <td><User name={user.name} scope="row" /></td>
     <td>{title}</td>
     <td>
-      {completed
-        ? (
-          <div className="bg-success">
-            Completed
-          </div>
-        )
-        : (
-          <div className="bg-danger">
-            Not Completed
-          </div>
-        )
-      }
+      {completed ? (
+        <div className="bg-success">
+          Completed
+        </div>
+      ) : (
+        <div className="bg-danger">
+          Not Completed
+        </div>
+      ) }
     </td>
   </tr>
 );
