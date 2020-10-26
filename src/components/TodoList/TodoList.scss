@@ -1,0 +1,20 @@
+.todo-item {
+  margin-bottom: 5px;
+  list-style: none;
+  border-radius: 15px;
+}
+
+.completed {
+  background-color: rgb(248, 191, 4);
+}
+
+.not_completed {
+  background-color: gray;
+  text-decoration: line-through;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
