@@ -1,5 +1,5 @@
 import React from 'react';
-import { TodoShape } from '../../shapes';
+import { TodoShape } from './TodoShape';
 import { User } from '../User';
 import './Todo.css';
 

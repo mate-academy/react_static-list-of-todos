@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserShape } from '../../shapes';
+import { UserShape } from './UserShape';
 
 export const User = ({ name }) => (
   <div>

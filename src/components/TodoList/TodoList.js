@@ -1,5 +1,5 @@
 import React from 'react';
-import { TodoListShape } from '../../shapes';
+import { TodoListShape } from './TodoListShape';
 import { Todo } from '../Todo';
 
 export const TodoList = ({ todos }) => (
