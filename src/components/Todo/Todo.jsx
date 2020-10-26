@@ -15,8 +15,8 @@ export const Todo = ({ title, user, completed }) => (
     </p>
     <div className="completed">
       {completed
-        ? <p className="completed__true">Done</p>
-        : <p className="completed__false">Not done</p>
+        ? <p className="completed__true">completed</p>
+        : <p className="completed__false">Not completed</p>
       }
     </div>
   </div>
