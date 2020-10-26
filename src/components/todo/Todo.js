@@ -3,15 +3,15 @@ import { User } from '../user';
 import { TodoShape } from '../shapes/TodoShape';
 
 export const Todo = ({ id, title, completed, user }) => (
-  <li key={id} className="ListItem">
+  <li key={id} className="list__item item">
     <input
       type="checkbox"
       checked={completed}
       readOnly
-      className="ListItem__input"
+      className="item__input"
     />
 
-    <div className="ListItem__description">
+    <div className="item__description">
       {title}
     </div>
 

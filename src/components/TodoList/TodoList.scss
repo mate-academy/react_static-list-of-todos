@@ -1,4 +1,4 @@
-.ListItem {
+.list__item {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,6 +15,12 @@
 
   transition: background-color 0.4s;
 
+  &:hover {
+    background-color: rgb(10, 241, 229);
+  }
+}
+
+.item {
   &__input {
     flex-basis: 10%;
     margin-right: 35px;
@@ -34,9 +40,5 @@
 
     font-size: 16px;
     color: rgb(255, 255, 255);
-  }
-
-  &:hover {
-    background-color: rgb(10, 241, 229);
   }
 }
