@@ -1,6 +1,6 @@
 import React from 'react';
 import Todo from './Todo';
-import propTypeTodoShape from './propTypesTodoShape/propTypeTodoShape';
+import TodoShape from './propTypesTodoShape/TodoShape';
 
 const TodoList = ({ todoList }) => (
   <ul className="list">
@@ -12,7 +12,7 @@ const TodoList = ({ todoList }) => (
   </ul>
 );
 
-TodoList.propTypes = propTypeTodoShape;
+TodoList.propTypes = TodoShape;
 
 TodoList.defaultProps = {
   todoList: [],

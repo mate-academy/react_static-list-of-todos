@@ -1,18 +1,18 @@
 body {
-    background-color: black;
-    color: wheat;
-    font-family:  Arial, sans-serif;
+  background-color: black;
+  color: wheat;
+  font-family:  Arial, sans-serif;
 }
 
 .progress {
   margin-right: 50px;
 
   &__complete {
-      color: green;
+    color: green;
   }
 
   &__not-complete {
-      color: red;
+    color: red;
   }
 }
 

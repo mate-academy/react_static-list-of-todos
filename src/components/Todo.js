@@ -1,6 +1,6 @@
 import React from 'react';
 import User from './User';
-import propTypeTodoShape from './propTypesTodoShape/propTypeTodoShape';
+import TodoShape from './propTypesTodoShape/TodoShape';
 
 const Todo = ({ todo }) => (
   <>
@@ -13,6 +13,6 @@ const Todo = ({ todo }) => (
   </>
 );
 
-Todo.propTypes = propTypeTodoShape;
+Todo.propTypes = TodoShape;
 
 export default Todo;
