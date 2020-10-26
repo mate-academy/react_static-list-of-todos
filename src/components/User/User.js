@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './User.scss';
 import { UserShape } from '../propTypes/UserShape';
 

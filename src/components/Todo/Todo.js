@@ -1,7 +1,7 @@
 import React from 'react';
 import { User } from '../User';
 import './Todo.scss';
-import { TodoProptype } from '../propTypes/TodoPropType';
+import { TodoShape } from '../propTypes/TodoShape';
 
 export const Todo = ({ title, completed, user }) => (
   <li className="todo">
@@ -15,4 +15,4 @@ export const Todo = ({ title, completed, user }) => (
   </li>
 );
 
-Todo.propTypes = TodoProptype;
+Todo.propTypes = TodoShape;
