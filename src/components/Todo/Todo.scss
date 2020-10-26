@@ -1,0 +1,28 @@
+.todo {
+  height: 64px;
+  width: 50%;
+
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+
+  border: 5px solid #f2f2f2;
+  border-radius: 10px;
+
+  & > p {
+    line-height: 40px;
+    
+    &:last-child {
+      width: 100px;
+    }
+  }
+}
+
+.complete {
+  background-color: green;
+}
+
+.not-complete {
+  background-color: red;
+}

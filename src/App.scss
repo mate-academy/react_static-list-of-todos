@@ -1,1 +1,11 @@
-// styles go here
+.App {
+
+  & > h1 {
+    text-transform: uppercase;
+  }
+
+  &_table-info {
+   
+    padding: 0 20px;
+  }
+}
