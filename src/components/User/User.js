@@ -1,6 +1,6 @@
 import React from 'react';
 import './User.scss';
-import { userShape } from '../propTypes/userShape';
+import { UserShape } from '../propTypes/UserShape';
 
 export const User = ({ user }) => (
   <div className="user">
@@ -9,5 +9,5 @@ export const User = ({ user }) => (
 );
 
 User.propTypes = {
-  user: userShape.isRequired,
+  user: UserShape.isRequired,
 };

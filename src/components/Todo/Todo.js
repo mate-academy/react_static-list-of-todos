@@ -1,24 +1,25 @@
 import React from 'react';
 import './Todo.scss';
 import { User } from '../User';
-import { todoShape } from '../propTypes/todoShape';
+import { TodoShape } from '../propTypes/TodoShape';
 
-export const Todo = ({ todo }) => (
-  <div className="todo">
-    <div className="todo__info">
-      <p className="todo__task">{todo.title}</p>
-      <span>User :</span>
-      <User user={todo.user} />
+export const Todo = ({ todo }) => {
+  const statusModifier = todo.completed ? 'todo__status--completed' : '';
+
+  return (
+    <div className="todo">
+      <div className="todo__info">
+        <p className="todo__task">{todo.title}</p>
+        <span>User :</span>
+        <User user={todo.user} />
+      </div>
+      <div className={`todo__status ${statusModifier}`}>
+        <p>{todo.completed ? 'Done' : 'Just do it!'}</p>
+      </div>
     </div>
-    <div
-      className={`todo__status ${
-        todo.completed ? 'todo__status--completed' : ''}`}
-    >
-      <p>{todo.completed ? 'Done' : 'Just do it!'}</p>
-    </div>
-  </div>
-);
+  );
+};
 
 Todo.propTypes = {
-  todo: todoShape.isRequired,
+  todo: TodoShape.isRequired,
 };
