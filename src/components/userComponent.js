@@ -1,13 +1,11 @@
 import React from 'react';
 
-import { userNameProp } from './propTypesVars';
+import { userPropTypes } from './propTypesVars';
 
-export function User({ name }) {
-  return (
-    <b>
-      {name}
-    </b>
-  );
-}
+export const User = ({ name }) => (
+  <b>
+    {name}
+  </b>
+);
 
-User.propTypes = userNameProp;
+User.propTypes = userPropTypes.isRequired;

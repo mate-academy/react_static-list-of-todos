@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import { User } from './userComponent';
-import { userNameProp, taskTypes } from './propTypesVars';
+import { userPropTypes, taskPropTypes } from './propTypesVars';
 
 export function Todo({ task }) {
   const { title, completed, user } = task;
@@ -23,8 +22,6 @@ export function Todo({ task }) {
 }
 
 Todo.propTypes = {
-  task: PropTypes.shape({
-    ...taskTypes.isRequired,
-    user: PropTypes.shape(userNameProp).isRequired,
-  }.isRequired).isRequired,
-};
+  task: taskPropTypes.isRequired,
+  user: userPropTypes.isRequired,
+}.isRequired;
