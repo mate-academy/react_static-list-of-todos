@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { TodoListShape } from '../../shapes/TodoListShape';
 import { Todo } from '../Todo/Todo';
 
 export const TodoList = ({ todos }) => (
@@ -13,8 +13,8 @@ export const TodoList = ({ todos }) => (
     </thead>
     <tbody>
       {todos.map(todo => (
-        <tr>
-          <Todo key={todo.id} {...todo} />
+        <tr key={todo.id}>
+          <Todo {...todo} />
         </tr>
       ))}
     </tbody>
@@ -22,10 +22,4 @@ export const TodoList = ({ todos }) => (
 
 );
 
-TodoList.propTypes = {
-  todos: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number,
-    }),
-  ).isRequired,
-};
+TodoList.propTypes = TodoListShape;
