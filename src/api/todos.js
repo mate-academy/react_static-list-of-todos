@@ -178,7 +178,8 @@ const todos = [
   {
     userId: 2,
     id: 30,
-    title: 'nemo perspiciatis repellat ut dolor libero commodi blanditiis omnis',
+    title:
+      'nemo perspiciatis repellat ut dolor libero commodi blanditiis omnis',
     completed: true,
   },
   {
@@ -244,7 +245,8 @@ const todos = [
   {
     userId: 3,
     id: 41,
-    title: 'aliquid amet impedit consequatur aspernatur placeat eaque fugiat suscipit',
+    title:
+      'aliquid amet impedit consequatur aspernatur placeat eaque fugiat suscipit',
     completed: false,
   },
   {
@@ -328,7 +330,8 @@ const todos = [
   {
     userId: 3,
     id: 55,
-    title: 'voluptatum omnis minima qui occaecati provident nulla voluptatem ratione',
+    title:
+      'voluptatum omnis minima qui occaecati provident nulla voluptatem ratione',
     completed: true,
   },
   {
@@ -412,7 +415,8 @@ const todos = [
   {
     userId: 4,
     id: 69,
-    title: 'doloribus sint dolorum ab adipisci itaque dignissimos aliquam suscipit',
+    title:
+      'doloribus sint dolorum ab adipisci itaque dignissimos aliquam suscipit',
     completed: false,
   },
   {
@@ -460,7 +464,8 @@ const todos = [
   {
     userId: 4,
     id: 77,
-    title: 'maiores aut nesciunt delectus exercitationem vel assumenda eligendi at',
+    title:
+      'maiores aut nesciunt delectus exercitationem vel assumenda eligendi at',
     completed: false,
   },
   {
@@ -586,7 +591,8 @@ const todos = [
   {
     userId: 5,
     id: 98,
-    title: 'debitis accusantium ut quo facilis nihil quis sapiente necessitatibus',
+    title:
+      'debitis accusantium ut quo facilis nihil quis sapiente necessitatibus',
     completed: true,
   },
   {
@@ -670,7 +676,8 @@ const todos = [
   {
     userId: 6,
     id: 112,
-    title: 'consectetur impedit quisquam qui deserunt non rerum consequuntur eius',
+    title:
+      'consectetur impedit quisquam qui deserunt non rerum consequuntur eius',
     completed: false,
   },
   {
@@ -1048,7 +1055,8 @@ const todos = [
   {
     userId: 9,
     id: 175,
-    title: 'laudantium eius officia perferendis provident perspiciatis asperiores',
+    title:
+      'laudantium eius officia perferendis provident perspiciatis asperiores',
     completed: true,
   },
   {
@@ -1144,7 +1152,8 @@ const todos = [
   {
     userId: 10,
     id: 191,
-    title: 'temporibus atque distinctio omnis eius impedit tempore molestias pariatur',
+    title:
+      'temporibus atque distinctio omnis eius impedit tempore molestias pariatur',
     completed: true,
   },
   {
