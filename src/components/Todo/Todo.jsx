@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { User } from '../User';
 import './Todo.scss';
 
 export function Todo({ id, name, title, completed }) {
@@ -12,7 +13,9 @@ export function Todo({ id, name, title, completed }) {
       <tbody>
         <tr>
           <td className="list_id">{id}</td>
-          <td className="list_name">{name}</td>
+
+          <User name={name} />
+
           <td className="list_title">{title}</td>
           <td>
             {completed ? 'Completed' : 'In process'}
