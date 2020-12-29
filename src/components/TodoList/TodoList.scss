@@ -1,0 +1,53 @@
+.list {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  border-radius: 2px;
+  border: 1px solid #333;
+}
+
+.list_header,
+.list_item,
+.table {
+  width: 100%;
+}
+
+.list_header {
+  height: 30px;
+  color: #fff;
+  background: #000;
+}
+
+.list_id {
+  width: 50px;
+  text-align: center;
+}
+
+.list_name {
+  width: 180px;
+  text-align: left;
+}
+
+.list_title {
+  text-align: left;
+  width: 480px;
+  line-height: 1;
+  padding-right: 30px;
+}
+
+.list_completed {
+  text-align: left;
+}
+
+.list_item {
+  list-style: none;
+  border-bottom: 1px solid #333;
+}
+
+.todoCompleted {
+  background: #00800080;
+}
+
+.todoInProcess {
+  background: #ff000082;
+}
