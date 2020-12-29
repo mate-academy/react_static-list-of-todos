@@ -1,7 +1,7 @@
 import React from 'react';
-import './TodoList.scss';
-
 import PropTypes from 'prop-types';
+import { Todo } from '../Todo';
+import './TodoList.scss';
 
 export function TodoList({ lists }) {
   return (
@@ -18,24 +18,12 @@ export function TodoList({ lists }) {
       </table>
       {lists.map(list => (
         <li key={list.id} className="list_item">
-          <table className={`table
-            ${list.completed
-          ? 'todoCompleted'
-          : 'todoInProcess'
-        }`
-          }
-          >
-            <tbody>
-              <tr>
-                <td className="list_id">{list.id}</td>
-                <td className="list_name">{list.user.name}</td>
-                <td className="list_title">{list.title}</td>
-                <td>
-                  {list.completed ? 'Completed' : 'In process'}
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <Todo
+            id={list.id}
+            name={list.user.name}
+            title={list.title}
+            completed={list.completed}
+          />
         </li>
       ))}
     </ul>
