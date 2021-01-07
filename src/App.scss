@@ -1,1 +1,90 @@
-// styles go here
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background-image: radial-gradient(mintcream 0%, gray 100%);
+  user-select: none;
+}
+
+.App {
+  width: 500px;
+  margin: 50px auto;
+  border-radius: 20px;
+  border: solid 8px #2c3033;
+  background: white;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.4),
+    0 0 0 3px #2c3033;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px 10px 0 0;
+  background-image: linear-gradient(#687480 0%, #555b61 100%);
+  font-style: bold 18px/50px arial;
+  text-align: center;
+  color: white;
+  box-shadow: inset 0 -2px 3px 2px rgba(0,0,0,0.4),
+    0 2px 2px 2px rgba(0,0,0,0.4);
+}
+
+.footer {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+  background-image: linear-gradient(#687480 0%, #3b4755 100%);
+  font-style: bold 18px/50px arial;
+  text-align: center;
+  color: rgb(176, 164, 164);
+  box-shadow: inset 0 -2px 3px 2px rgba(0,0,0,0.4),
+    0 2px 2px 2px rgba(0,0,0,0.4);
+}
+
+h1 {
+  display: block;
+  width: 100%;
+  height: 90%;
+  border-bottom: dashed 2px #54687a;
+}
+
+.wrap-list {
+  padding: 5px 0;
+  box-shadow: inset 0 0 5px black;
+  border-radius: 0 0 10px 10px;
+  background-image: linear-gradient(transparent 97%, gray 100%);
+}
+
+.list {
+  list-style: none;
+  color: rgba(0,0,0,0.7);
+}
+
+.list li {
+  padding-left: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.list li:nth-child(odd) {
+  background: rgba(0,0,50,0.1);
+}
+
+.list li:hover {
+  background: #ddd;
+  color: rgb(103, 31, 35);
+}
