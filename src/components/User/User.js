@@ -8,3 +8,5 @@ User.propTypes = {
     name: PropTypes.string.isRequired,
   }).isRequired,
 };
+
+export default User;
