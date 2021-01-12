@@ -13,12 +13,6 @@ function TodoList({ todoList }) {
   );
 }
 
-TodoList.propTypes = {
-  todos: PropTypes.arrayOf(
-    TypeTodo,
-  ).isRequired,
-};
-
 TodoList.propTypes = PropTypes.arrayOf(
   TypeTodo.isRequired,
 ).isRequired;
