@@ -17,6 +17,9 @@ TodoList.propTypes = {
       name: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       completed: PropTypes.bool.isRequired,
+      user: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+      }).isRequired,
     }).isRequired,
   ).isRequired,
 };
