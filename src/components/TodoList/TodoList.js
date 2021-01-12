@@ -14,9 +14,9 @@ function TodoList({ preparedTodos }) {
 TodoList.propTypes = {
   tasks: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.string,
-      title: PropTypes.string,
-      completed: PropTypes.bool,
+      name: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      completed: PropTypes.bool.isRequired,
     }).isRequired,
   ).isRequired,
 };
