@@ -1,0 +1,11 @@
+.card__task-status {
+  font-weight: bold;
+}
+
+.card__task-status--completed {
+  color: green;
+}
+
+.card__task-status--not-completed {
+  color: red;
+}
