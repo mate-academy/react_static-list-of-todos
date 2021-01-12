@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import User from '../User/User';
 
-function TodoItem(props) {
+function TodoItem({ title, user, completed }) {
   return (
     <>
+      <User user={user} />
       <p>
-        <strong>  User: </strong>
-        {props.user.name}
         <strong>  Task: </strong>
-        {props.title}
+        {title}
         <strong>  Status: </strong>
-        {props.completed ? 'Done' : 'In the process'}
+        {completed ? 'Done' : 'In the process'}
       </p>
     </>
   );
