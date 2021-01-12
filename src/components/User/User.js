@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const User = ({ user }) => (
-  <td>{user.name}</td>
+  <i>
+    {user.name}
+  </i>
 );
 
 User.propTypes = {

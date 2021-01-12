@@ -3,11 +3,19 @@ import PropTypes from 'prop-types';
 import User from '../User/User';
 
 const Todo = ({ title, completed, user }) => (
-  <>
+  <p>
+    <strong>User:</strong>
+    &ensp;
     <User user={user} />
-    <td>{title}</td>
-    <td>{completed ? 'Done' : 'Doing...'}</td>
-  </>
+    &emsp;
+    <strong>Task:</strong>
+    &ensp;
+    {title}
+    &emsp;
+    <strong>Status:</strong>
+    &ensp;
+    {completed ? 'Done.' : 'In progress...'}
+  </p>
 );
 
 Todo.propTypes = {

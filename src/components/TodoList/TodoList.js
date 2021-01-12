@@ -3,22 +3,13 @@ import PropTypes from 'prop-types';
 import Todo from '../Todo/Todo';
 
 const TodoList = ({ tasksList }) => (
-  <table>
-    <thead>
-      <tr>
-        <th scope="column">User</th>
-        <th scope="column">Title</th>
-        <th scope="column">Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      {tasksList.map(task => (
-        <tr key={task.id}>
-          <Todo {...task} />
-        </tr>
-      ))}
-    </tbody>
-  </table>
+  <ul>
+    {tasksList.map(task => (
+      <li key={task.id}>
+        <Todo {...task} />
+      </li>
+    ))}
+  </ul>
 );
 
 TodoList.propTypes = {

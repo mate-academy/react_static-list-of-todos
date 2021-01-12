@@ -14,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <h1>Static list of todos</h1>
+      <TodoList tasksList={preparedTodos} />
       <p>
         <span>Todos: </span>
         {todos.length}
@@ -23,7 +24,6 @@ function App() {
         <span>Users: </span>
         {users.length}
       </p>
-      <TodoList tasksList={preparedTodos} />
     </div>
   );
 }
