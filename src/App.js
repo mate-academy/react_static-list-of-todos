@@ -6,7 +6,8 @@ import todos from './api/todos';
 import users from './api/users';
 
 const preparedTodos = todos.map(item => ({
-  ...item, user: users.find(user => user.id === item.userId),
+  ...item,
+  user: users.find(user => user.id === item.userId),
 }));
 
 function App() {
