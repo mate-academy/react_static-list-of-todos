@@ -1,1 +1,27 @@
-// styles go here
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  padding: 0 15px;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(103, 104, 103, 0.774);
+  border-bottom-left-radius: 20px;
+
+  &__info {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+}

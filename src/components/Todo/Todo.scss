@@ -1,0 +1,16 @@
+.card {
+  padding: 0 15px;
+}
+
+.done {
+  background: hsl(157, 21%, 71%);
+  text-align: right;
+
+  & h2 {
+    text-decoration: line-through;
+  }
+}
+
+.todo {
+  background: hsl(10, 66%, 76%);
+}
