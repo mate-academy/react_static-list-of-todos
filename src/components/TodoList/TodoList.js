@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TodoItem from '../TodoItem/TodoItem';
+import { TodoItem, ItemTypes } from '../TodoItem/TodoItem';
 
 function TodoList({ preparedTodos }) {
   return (
@@ -13,14 +13,7 @@ function TodoList({ preparedTodos }) {
 
 TodoList.propTypes = {
   tasks: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      completed: PropTypes.bool.isRequired,
-      user: PropTypes.shape({
-        name: PropTypes.string.isRequired,
-      }).isRequired,
-    }).isRequired,
+    ItemTypes.isRequired,
   ).isRequired,
 };
 

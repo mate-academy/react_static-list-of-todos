@@ -1,16 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function User({ user }) {
+export function User({ user }) {
   return (
     <p>{user.name}</p>
   );
 }
 
-User.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-  }).isRequired,
-};
+export const UserType = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+});
 
-export default User;
+User.propTypes = UserType.isRequired;

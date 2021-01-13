@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import User from '../User/User';
+import { User, UserType } from '../User/User';
 
-function TodoItem({ title, user, completed }) {
+export function TodoItem({ title, user, completed }) {
   return (
     <>
       <User user={user} />
@@ -16,12 +16,10 @@ function TodoItem({ title, user, completed }) {
   );
 }
 
-TodoItem.propTypes = {
+export const ItemTypes = PropTypes.shape({
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-  }).isRequired,
-};
+  user: UserType.isRequired,
+});
 
-export default TodoItem;
+TodoItem.propTypes = ItemTypes.isRequired;
