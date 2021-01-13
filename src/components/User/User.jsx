@@ -1,16 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { UserType } from '../types';
 
 function User({ data }) {
   return (
-    <span>
+    <>
       {data.name}
-    </span>
+    </>
   );
 }
 
 User.propTypes = {
-  data: PropTypes.string.isRequired,
+  data: UserType.isRequired,
 };
 
 export default User;

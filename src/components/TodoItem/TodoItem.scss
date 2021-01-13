@@ -1,0 +1,11 @@
+.row {
+  &__task {
+    padding: 10px 5px;
+    text-transform: capitalize;
+  }
+
+  &__name {
+    text-align: center;
+    font-style: italic;
+  }
+}

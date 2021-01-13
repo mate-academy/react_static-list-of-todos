@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 
-export const typeTodoItem = PropTypes.shape({
+export const UserType = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+});
+
+export const TypeTodoItem = PropTypes.shape({
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
-  user: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-  }).isRequired,
+  user: UserType.isRequired,
 });

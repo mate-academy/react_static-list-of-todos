@@ -1,25 +1,26 @@
 import React from 'react';
 import User from '../User/User';
-import { typeTodoItem } from '../types';
+import { TypeTodoItem } from '../types';
+import './TodoItem.scss';
 
 function TodoItem({ title, completed, user }) {
   return (
-    <>
-      <tr>
-        <td>
-          <User data={user} />
-        </td>
-        <td>
-          {title}
-        </td>
-        <td>
-          {completed ? 'Done' : 'In progress'}
-        </td>
-      </tr>
-    </>
+    <tr className="row table__row">
+      <td className="row__task">
+        {title}
+      </td>
+
+      <td className="row__status">
+        {completed ? 'Done' : 'In progress'}
+      </td>
+
+      <td className="row__name">
+        <User data={user} />
+      </td>
+    </tr>
   );
 }
 
-TodoItem.propTypes = typeTodoItem.isRequired;
+TodoItem.propTypes = TypeTodoItem.isRequired;
 
 export default TodoItem;
