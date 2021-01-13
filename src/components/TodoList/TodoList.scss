@@ -9,23 +9,4 @@
 .list {
   padding-left: 0;
   box-sizing: border-box;
-
-  &__item {
-    display: grid;
-    grid-template-columns: 200px 550px 100px;
-    padding: 1rem;
-    padding-bottom: 0;
-    background-color: rgb(245,245,245);
-
-    transition: 0.5s;
-    cursor: pointer;
-
-    &:nth-child(even) {
-      background-color: rgb(235,235,235);
-    }
-
-    &:hover {
-      background-color: rgb(195, 195, 195);
-    }
-  }
 }

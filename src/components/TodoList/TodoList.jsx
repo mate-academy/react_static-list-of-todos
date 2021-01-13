@@ -13,9 +13,7 @@ export const TodoList = ({ todos }) => (
     </div>
     <ul className="list">
       {todos.map(todo => (
-        <li className="list__item" key={todo.id}>
-          <Todo {...todo} />
-        </li>
+        <Todo {...todo} key={todo.id} />
       ))}
     </ul>
   </div>

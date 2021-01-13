@@ -6,12 +6,11 @@ import './Todo.scss';
 import { User } from '../User';
 
 export const Todo = ({ title, completed, user }) => (
-  <>
+  <li className="list__item">
     <User {...user} />
     <span>{title}</span>
     <span>{completed ? 'completed' : 'uncompleted'}</span>
-    <br />
-  </>
+  </li>
 );
 
 Todo.propTypes = {
