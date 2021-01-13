@@ -25,4 +25,4 @@ export const Todo = ({ title, completed, user }) => (
   </div>
 );
 
-Todo.propTypes = TodoShape;
+Todo.propTypes = TodoShape.isRequired;

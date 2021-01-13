@@ -12,4 +12,4 @@ export const TodoList = ({ todos }) => (
   </>
 );
 
-TodoList.propTypes = TodoListShape;
+TodoList.propTypes = TodoListShape.isRequired;
