@@ -1,6 +1,5 @@
 import React from 'react';
-import { UserType } from '../propTypes/UserType'
-
+import { UserType } from '../propTypes/UserType';
 
 export const User = ({ name }) => (
   <div className="user-name">
@@ -8,5 +7,4 @@ export const User = ({ name }) => (
   </div>
 );
 
-
-User.propType = UserType;
+User.propTypes = UserType;

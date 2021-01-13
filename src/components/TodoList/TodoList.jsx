@@ -4,18 +4,18 @@ import { TodoType } from '../propTypes/TodoType';
 import { Todo } from '../Todo';
 import './TodoList.scss';
 
-export const TodoList = ({newTodos}) => (
-  <div className='list'>
-   <header className='list__header'>
-     <div className ='list__title'>User</div>
-     <div className ='list__title'>Task</div>
-     <div className ='list__title'>status</div>
-   </header>
+export const TodoList = ({ newTodos }) => (
+  <div className="list">
+    <header className="list__header">
+      <div className="list__title">User</div>
+      <div className="list__title">Task</div>
+      <div className="list__title">status</div>
+    </header>
     {
       newTodos.map(todo => (
-      <Todo {...todo} key={todo.id} />))
+        <Todo {...todo} key={todo.id} />))
     }
   </div>
 );
 
-TodoList.propType = PropTypes.arrayOf(TodoType).isRequered;
+TodoList.propTypes = PropTypes.arrayOf(TodoType).isRequered;
