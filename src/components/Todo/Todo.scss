@@ -1,7 +1,8 @@
 .card {
   padding: 0 15px;
   background: hsl(10, 73%, 71%);
-
+  transition: .3s ease-out;
+  
   &:hover {
     filter: brightness(120%);
   }
