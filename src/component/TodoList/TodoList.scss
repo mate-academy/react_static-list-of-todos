@@ -1,0 +1,16 @@
+.todo {
+  &__list {
+    list-style: none;
+    box-shadow: 4px 5px 15px #5e4890;
+    border-radius: 15px;
+    padding: 25px 60px;
+    margin-top: 15px;
+  }
+
+  &__item {
+    @media (max-width: 900px) {
+      padding: 14px;
+      border-bottom: 3px solid indianred;
+    }
+  }
+}

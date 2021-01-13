@@ -1,1 +1,38 @@
 // styles go here
+$mainWidth: 100%;
+$mainHeight: 150px;
+$mainShadow : 4px 5px 15px;
+$mainMargin : 40px;
+$radius: 15px;
+$BGPurpleColor:#5e4890;
+$BGOrangeColor:#f4b73f;
+$BGGreenColor:#69dc89;
+$BGRedColor:#f97751;
+
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  padding: 30px;
+  font-family: "Mulish", sans-serif;
+  font-size: 20px;
+}
+
+.App__title {
+  font-size: 50px;
+  color: #5e4890;
+  text-align: center;
+  padding: 20px 0;
+  text-shadow: 0 4px 3px rgba(0,0,0,0.4),
+    0 8px 13px rgba(0,0,0,0.1),
+    0 18px 23px rgba(0,0,0,0.1);
+}
+
+.App__info {
+  text-align: center;
+}
