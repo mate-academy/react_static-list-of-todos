@@ -14,10 +14,6 @@ export const Todo = ({ task }) => (
   </>
 );
 
-Todo.defaultProps = {
-  task: {},
-};
-
 Todo.propTypes = {
-  task: TaskType,
+  task: TaskType.isRequired,
 };

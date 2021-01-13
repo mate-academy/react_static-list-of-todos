@@ -4,7 +4,7 @@ import { Todo } from '../Todo';
 import { TaskType } from '../../types';
 import './TodoList.scss';
 
-export const TodoList = ({ content }) => (
+export const TodoList = ({ todos }) => (
   <table className="table">
     <thead>
       <tr className="table__header">
@@ -14,11 +14,9 @@ export const TodoList = ({ content }) => (
       </tr>
     </thead>
     <tbody>
-      {content.map(todo => (
+      {todos.map(todo => (
         <tr key={todo.id} className="table__row">
-          <Todo
-            task={todo}
-          />
+          <Todo task={todo} />
         </tr>
       ))}
     </tbody>
@@ -26,9 +24,9 @@ export const TodoList = ({ content }) => (
 );
 
 TodoList.defaultProps = {
-  content: [],
+  todos: [],
 };
 
 TodoList.propTypes = {
-  content: PropTypes.arrayOf(TaskType),
+  todos: PropTypes.arrayOf(TaskType),
 };
