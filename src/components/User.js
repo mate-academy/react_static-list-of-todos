@@ -10,4 +10,4 @@ export const User = ({ name }) => (
   </div>
 );
 
-User.propTypes = UserShape;
+User.propTypes = UserShape.isRequired;
