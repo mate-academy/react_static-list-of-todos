@@ -14,7 +14,7 @@ function TodoList({ todoList }) {
 }
 
 TodoList.propTypes = PropTypes.arrayOf(
-  TypeTodo.isRequired,
+  TypeTodo,
 ).isRequired;
 
 export default TodoList;

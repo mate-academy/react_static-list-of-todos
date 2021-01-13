@@ -27,6 +27,6 @@ function Todo({ title, completed, user: { name } }) {
   );
 }
 
-Todo.propTypes = TypeTodo.isRequired;
+Todo.propTypes = TypeTodo;
 
 export default Todo;
