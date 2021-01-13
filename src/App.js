@@ -21,15 +21,15 @@ function App() {
         <div className="header__info">
           <span>
             Todos left:
-            {todos.length - doneTasksNumber}
+            {` ${todos.length - doneTasksNumber}`}
           </span>
           <span>
             Todos accomplished:
-            {doneTasksNumber}
+            {` ${doneTasksNumber}`}
           </span>
           <span>
             People involved:
-            {users.length}
+            {` ${users.length}`}
           </span>
         </div>
       </div>

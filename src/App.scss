@@ -18,10 +18,14 @@ body {
   align-items: center;
   background-color: rgba(103, 104, 103, 0.774);
   border-bottom-left-radius: 20px;
+  box-shadow: 0 5px 5px black;
 
   &__info {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.2em;
   }
 }
