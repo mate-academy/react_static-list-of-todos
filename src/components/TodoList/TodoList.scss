@@ -1,0 +1,33 @@
+.todo-list {
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+
+  &__item {
+    $color: #d4d4d4;
+    padding: 5px 20px;
+
+    background-color: lighten($color, 10%);
+    &:nth-child(even) {
+      background-color: $color;
+    }
+
+    &:hover {
+      background-color: darken($color, 10%);
+    }
+  }
+
+  &__user {
+    font-weight: bold;
+  }
+
+  &__status {
+    &._n {
+      color: red;
+    }
+    &._y {
+      color: green;
+    }
+  }
+
+}
