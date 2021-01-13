@@ -1,7 +1,7 @@
 import React from 'react';
 import './Todo.scss';
-import PropTypes from 'prop-types';
 import { User } from '../User/User';
+import { typeTodo } from '../../types';
 
 export const Todo = ({ title, completed, user }) => (
   <div className="card">
@@ -20,10 +20,4 @@ export const Todo = ({ title, completed, user }) => (
   </div>
 );
 
-Todo.propTypes = {
-  title: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired,
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-  }).isRequired,
-};
+Todo.propTypes = typeTodo;
