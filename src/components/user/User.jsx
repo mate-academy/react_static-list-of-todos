@@ -5,7 +5,7 @@ import './User.scss';
 
 export const User = ({ name }) => (
   <p className="user-name">
-    <span><strong>{name}</strong></span>
+    <span>{name}</span>
   </p>
 );
 

@@ -6,7 +6,7 @@ export const Todo = ({ title, completed, user }) => (
   <div className="user-info">
     <p>
       <span className="task-handler handler">{`Task: `}</span>
-      <span>{`${title}`}</span>
+      <span>{title}</span>
     </p>
     <p>
       <span className="state-handler handler">{`Done: `}</span>
