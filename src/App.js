@@ -11,22 +11,14 @@ const preparedTodos = todos
     user: users.find(user => user.id === todo.userId),
   }));
 
-const doneTasksNumber = todos.filter(todo => (todo.completed === true)).length;
-
 function App() {
   return (
     <div className="App">
       <div className="header">
         <h1>TODO list</h1>
         <div className="header__info">
-          <span>
-            Todos left:
-            {` ${todos.length - doneTasksNumber}`}
-          </span>
-          <span>
-            Todos accomplished:
-            {` ${doneTasksNumber}`}
-          </span>
+          <span className="header__todo" />
+          <span className="header__done" />
           <span>
             People involved:
             {` ${users.length}`}
@@ -39,9 +31,20 @@ function App() {
   );
 }
 
+function counter() {
+  const headerInfoTodo = document.querySelector('.header__todo');
+  const headerInfoDone = document.querySelector('.header__done');
+  const doneItems = document.querySelectorAll('.done').length;
+  const todoItems = todos.length - doneItems;
+
+  headerInfoTodo.innerText = `Todos left: ${todoItems}`;
+  headerInfoDone.innerText = `Todos accomplished: ${doneItems}`;
+}
+
 function checker() {
   const container = document.querySelector('ul');
 
+  counter();
   container.addEventListener('click', (e) => {
     const item = e.target.closest('.todo__item');
 
@@ -51,6 +54,7 @@ function checker() {
 
     e.target.closest('.card').classList.toggle('done');
     item.querySelector('.todotext').classList.toggle('donetext');
+    counter();
   });
 }
 
