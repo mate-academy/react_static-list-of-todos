@@ -8,7 +8,7 @@ import { TodoType } from '../../types';
 export const TodoList = ({ todos }) => (
   <ul>
     {todos.map(todo => (
-      <li key={todo.id}>
+      <li key={todo.id} className="todo__item">
         <Todo {...todo} />
       </li>
     ))}

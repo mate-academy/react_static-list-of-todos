@@ -10,13 +10,11 @@ export const Todo = (
     user,
   },
 ) => (
-  <div className={`card ${completed ? 'done' : 'todo'}`}>
+  <div className={`card ${completed ? 'done' : ''}`}>
     <h2>
       {title}
     </h2>
-    <span>
-      <i>{completed ? 'done by' : 'todo for'}</i>
-    </span>
+    <span className={`todotext ${completed ? 'donetext' : ''}`} />
     <span>
       <User {...user} />
     </span>

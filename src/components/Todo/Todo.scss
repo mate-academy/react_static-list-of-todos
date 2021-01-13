@@ -1,5 +1,22 @@
 .card {
   padding: 0 15px;
+  background: hsl(10, 73%, 71%);
+
+  &:hover {
+    filter: brightness(120%);
+  }
+}
+
+.todotext::after {
+  content: "todo for";
+  color: hsl(0, 67%, 25%);
+  font-weight: 700;
+}
+
+.donetext::after {
+  content: "done by";
+  color: whitesmoke;
+  font-weight: normal;
 }
 
 .done {
@@ -9,8 +26,4 @@
   & h2 {
     text-decoration: line-through;
   }
-}
-
-.todo {
-  background: hsl(10, 66%, 76%);
 }
