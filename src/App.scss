@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 15px;
+  padding: 25px;
 
   font-family: Arial, Helvetica, sans-serif;
 
@@ -11,20 +11,20 @@
     display: flex;
     justify-content: space-between;
 
-    width: 800px;
-    margin: 10px;
+    width: 675px;
+    margin: 15px;
     padding: 15px;
 
-    border: 1px solid black;
+    border: 1px solid blueviolet;
     border-radius: 8px;
 
-    font-size: 16px;
+    font-size: 14px;
     background-color: blanchedalmond;
   }
 
   &__done {
     color: green;
-    font-weight: 700;
+    font-weight: 500;
   }
 
   &__not-done {
