@@ -1,6 +1,6 @@
 import React from 'react';
 import './User.scss';
-import PropTypes from 'prop-types';
+import { UserType } from '../types';
 
 function User({ user }) {
   return (
@@ -11,7 +11,5 @@ function User({ user }) {
 export default User;
 
 User.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-  }).isRequired,
+  user: UserType.isRequired,
 };

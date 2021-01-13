@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { TaskType } from '../types';
 import User from './User';
 import './Todo.scss';
 
@@ -21,11 +21,5 @@ function Todo({ task }) {
 export default Todo;
 
 Todo.propTypes = {
-  task: PropTypes.shape({
-    userId: PropTypes.number.isRequired,
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired,
-    user: PropTypes.object.isRequired,
-  }).isRequired,
+  task: TaskType.isRequired,
 };

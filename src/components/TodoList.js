@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { TaskType } from '../types';
 import Todo from './Todo';
 
 function TodoList({ preparedTasks }) {
@@ -13,13 +14,7 @@ function TodoList({ preparedTasks }) {
 }
 
 TodoList.propTypes = {
-  preparedTasks: PropTypes.arrayOf(
-    PropTypes.shape({
-      userId: PropTypes.number.isRequired,
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
+  preparedTasks: PropTypes.arrayOf(TaskType.isRequired).isRequired,
 };
 
 export default TodoList;
