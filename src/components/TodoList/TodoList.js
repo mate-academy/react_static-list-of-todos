@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TypeTodo from '../../types';
+import { TypeTodo } from '../../types';
 import Todo from '../Todo/Todo';
 
 function TodoList({ todoList }) {

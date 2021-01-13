@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { TypeUser } from '../../types';
 
 function User({ name }) {
   return (
@@ -9,8 +9,6 @@ function User({ name }) {
   );
 }
 
-User.propTypes = {
-  name: PropTypes.string.isRequired,
-};
+User.propTypes = TypeUser;
 
 export default User;

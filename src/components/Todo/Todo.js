@@ -2,7 +2,7 @@ import React from 'react';
 import './Todo.css';
 import classNames from 'classnames';
 import User from '../User/User';
-import TypeTodo from '../../types';
+import { TypeTodo } from '../../types';
 
 function Todo({ title, completed, user: { name } }) {
   return (
