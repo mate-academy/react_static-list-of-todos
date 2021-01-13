@@ -13,9 +13,9 @@ const Todo = ({ title, completed, user }) => (
     <span className="todo__item-title">
       Status:
     </span>
-    {completed === false
-      ? ' false'
-      : ' true'}
+    {completed
+      ? ' finished'
+      : ' not finished'}
     <br />
     <span className="todo__item-title">
       User:
