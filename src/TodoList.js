@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Todo } from './Todo';
-import { Types } from './type';
+import { TodoShape } from './type';
 
 export const TodoList = ({ todos }) => (
   <>
@@ -14,5 +14,5 @@ export const TodoList = ({ todos }) => (
 );
 
 TodoList.propTypes = {
-  todos: PropTypes.arrayOf(Types).isRequired,
+  todos: PropTypes.arrayOf(TodoShape).isRequired,
 };

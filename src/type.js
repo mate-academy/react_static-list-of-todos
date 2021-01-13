@@ -24,7 +24,7 @@ export const UserTypes = PropTypes.shape({
   })),
 });
 
-export const Types = PropTypes.shape({
+export const TodoShape = PropTypes.shape({
   userId: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
