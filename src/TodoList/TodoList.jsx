@@ -2,20 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TodoItem } from '../TodoItem';
 
-export const TodoList = ({ preparedTodos }) => (
-  preparedTodos.map(
-    item => (<TodoItem key={item.id} {...item} />),
+export const TodoList = ({ todos }) => (
+  todos.map(
+    todo => (
+      <div key={todo.id}>
+        <TodoItem {...todo} />
+      </div>
+    ),
   )
 );
 
 TodoList.propTypes = {
-  preparedTodos: PropTypes.arrayOf(
+  todos: PropTypes.arrayOf(
     PropTypes.shape({
-      item: PropTypes.string.isRequired,
-      id: PropTypes.string.isRequired,
-      userId: PropTypes.string.isRequired,
-      completed: PropTypes.string.isRequired,
-      user: PropTypes.array.isRequired,
+      id: PropTypes.number.isRequired,
+      userId: PropTypes.number.isRequired,
+      completed: PropTypes.bool.isRequired,
+      user: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+      }).isRequired,
     }).isRequired,
   ),
 };

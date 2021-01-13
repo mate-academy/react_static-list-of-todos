@@ -6,14 +6,14 @@ import users from './api/users';
 
 import { TodoList } from './TodoList';
 
-const preparedTodos = todos.map(toDo => ({
-  ...toDo, user: users.find(user => user.id === toDo.userId),
+const preparedTodos = todos.map(todo => ({
+  ...todo, user: users.find(user => user.id === todo.userId),
 }));
 
 function App() {
   return (
     <div className="App">
-      <TodoList preparedTodos={preparedTodos} />
+      <TodoList todos={preparedTodos} />
     </div>
   );
 }
