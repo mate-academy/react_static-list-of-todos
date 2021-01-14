@@ -4,7 +4,7 @@ import './todo.scss';
 import { TypeTodoItem } from '../types';
 
 const Todo = ({ title, completed, user }) => (
-  <>
+  <li>
     <span className="todo__item">
       <span className="todo__item-title">ToDo: </span>
       {title}
@@ -23,7 +23,7 @@ const Todo = ({ title, completed, user }) => (
     {' '}
     <User {...user} />
     <hr />
-  </>
+  </li>
 );
 
 Todo.propTypes = TypeTodoItem;
