@@ -1,6 +1,6 @@
 import React from 'react';
 import './Todo.scss';
-import TodoTypes from '../Type/Type';
+import { TodoType } from '../Type/Type';
 import { User } from '../User/User';
 
 export const Todo = ({ title, completed, user }) => (
@@ -12,9 +12,10 @@ export const Todo = ({ title, completed, user }) => (
       <User {...user} />
     </td>
     {completed
-      ? <td className="good">well done</td>
-      : <td className="bad">false</td>}
+      ? <td className="completed">well done</td>
+      : <td className="not__completed">false</td>
+    }
   </tr>
 );
 
-Todo.propTypes = TodoTypes;
+Todo.propTypes = TodoType;

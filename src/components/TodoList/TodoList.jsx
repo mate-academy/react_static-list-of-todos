@@ -1,6 +1,7 @@
 import React from 'react';
 import './TodoList.scss';
-import TodoListTypes from '../Type/Type';
+import PropTypes from 'prop-types';
+import { TodoType } from '../Type/Type';
 import { Todo } from '../Todo/Todo';
 
 function TodoList({ preparedTodos }) {
@@ -24,6 +25,8 @@ function TodoList({ preparedTodos }) {
   );
 }
 
-TodoList.propTypes = TodoListTypes;
+TodoList.propTypes = {
+  preparedTodos: PropTypes.arrayOf(TodoType).isRequired,
+};
 
 export default TodoList;
