@@ -7,7 +7,7 @@ import { TodoList } from './components/TodoList/TodoList';
 
 const preparedTodos = todos.map(todo => ({
   ...todo,
-  userName: users.find(user => user.id === todo.userId).name,
+  user: users.find(user => user.id === todo.userId),
 }));
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
       </p>
 
       <div className="wrapper">
-        <TodoList todoProps={preparedTodos} />
+        <TodoList todos={preparedTodos} />
       </div>
     </div>
   );
