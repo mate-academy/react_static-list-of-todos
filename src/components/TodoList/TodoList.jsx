@@ -1,21 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Todo } from '../Todo';
-
+import { TodoType } from '../../types';
 import './TodoList.scss';
 
-export const TodoList = ({ listOfTodos }) => (
+export const TodoList = ({ todos }) => (
   <ul className="todo-list">
-    {listOfTodos.map(todoOfUser => (
+    {todos.map(todo => (
       <li
-        key={todoOfUser.id}
+        key={todo.id}
         className="todo-list__item"
       >
-        <Todo {...todoOfUser} />
+        <Todo {...todo} />
       </li>
     ))}
   </ul>
 );
-TodoList.propTypes = {
-  listOfTodos: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+
+TodoList.propTypes = TodoType.isRequired;

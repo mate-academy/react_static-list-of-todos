@@ -1,11 +1,13 @@
 .todo {
   display: flex;
   justify-content: space-between;
+
   &__state {
     position: relative;
     width: 4em;
     white-space: nowrap;
     margin-left: var(--checkbox-position);
+
     &:before {
       content: "";
       position: absolute;
@@ -17,6 +19,7 @@
       transform: translateY(-50%);
     }
   }
+
   &__state--done::before {
     background: url("../../images/done.png")no-repeat;
     background-size: cover;

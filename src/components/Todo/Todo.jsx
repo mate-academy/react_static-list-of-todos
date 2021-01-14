@@ -1,21 +1,26 @@
 import React from 'react';
 import classNames from 'classnames';
 import { User } from '../User';
+import { TodoType } from '../../types';
 import './Todo.scss';
 
-export const Todo = ({ ...todoOfUser }) => (
+export const Todo = ({ user, title, completed }) => (
   <>
-    <User {...todoOfUser.user} />
+    <User {...user} />
     <div className="todo">
       <p className="todo__title">
-        {todoOfUser.title}
+        {title}
       </p>
-      <p className={classNames('todo__state', {
-        'todo__state--done': todoOfUser.completed === true,
-      })}
+      <p className={classNames(
+        'todo__state', {
+          'todo__state--done': completed,
+        },
+      )}
       >
-        {todoOfUser.completed === true ? 'Done' : 'Not done'}
+        {completed === true ? 'Done' : 'Not done'}
       </p>
     </div>
   </>
 );
+
+Todo.propTypes = TodoType.isRequired;
