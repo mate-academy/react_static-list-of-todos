@@ -1,0 +1,26 @@
+.list {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 100px;
+    padding: 20px;
+
+    font-weight: 700;
+    color: white;
+
+    background-color: #4f5cd6;
+    border-radius: 10px;
+
+    &--completed {
+      color: #0ef10e;
+    }
+
+    &--not-completed {
+      color: #f54242;
+    }
+
+    &:hover {
+      background-color: #0018c9;
+    }
+  }
+}
