@@ -1,24 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import './Todo.scss';
+import { TypeTodo } from '../../types';
 
-export const Todo = ({ todo }) => {
-  let result;
+export const Todo = ({ todo }) => (
+  <>
+    {todo.title}
+    {' '}
+    is
+    {' '}
+    {todo.completed ? <span className="todo--complete">completed</span>
+      : <span className="todo--uncomplete">in progress</span>}
+  </>
+);
 
-  todo.completed ? result = <span style={{ color: 'blue' }}>completed</span>
-    : result = <span style={{ color: 'red' }}>in progress</span>;
-
-  return (
-    <>
-      {todo.title}
-      {' '}
-      is
-      {' '}
-      {result}
-    </>
-  );
-};
-
-Todo.propTypes = { todo: PropTypes.shape({
-  title: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired,
-}).isRequired };
+Todo.propTypes = TypeTodo;

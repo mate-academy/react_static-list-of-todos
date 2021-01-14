@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Todo } from '../Todo';
 import { User } from '../User';
-// import { TypeTodo } from '../../types';
+import { TypeTodoList } from '../../types';
 
-export const TodoList = ({ puzzled }) => (
+export const TodoList = ({ todos }) => (
   <ol>
-    {puzzled.map(task => (
+    {todos.map(task => (
       <>
         <li key={task.id}>
           <User name={task.user.name} />
@@ -19,13 +18,4 @@ export const TodoList = ({ puzzled }) => (
   </ol>
 );
 
-TodoList.propTypes = {
-  puzzled: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      user: PropTypes.shape({
-        name: PropTypes.string.isRequired,
-      }),
-    }),
-  ).isRequired,
-};
+TodoList.propTypes = TypeTodoList;

@@ -25,7 +25,7 @@ function App() {
         {users.length}
       </p>
 
-      <TodoList puzzled={preparedTodos} />
+      <TodoList todos={preparedTodos} />
     </div>
   );
 }
