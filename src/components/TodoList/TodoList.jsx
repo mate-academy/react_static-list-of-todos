@@ -4,7 +4,7 @@ import { TodoType } from '../propTypes/TodoType';
 import { Todo } from '../Todo';
 import './TodoList.scss';
 
-export const TodoList = ({ newTodos }) => (
+export const TodoList = ({ todos }) => (
   <div className="list">
     <header className="list__header">
       <div className="list__title">User</div>
@@ -12,10 +12,12 @@ export const TodoList = ({ newTodos }) => (
       <div className="list__title">status</div>
     </header>
     {
-      newTodos.map(todo => (
+      todos.map(todo => (
         <Todo {...todo} key={todo.id} />))
     }
   </div>
 );
 
-TodoList.propTypes = PropTypes.arrayOf(TodoType).isRequered;
+TodoList.propTypes = {
+  todos: PropTypes.arrayOf(TodoType).isRequired,
+};

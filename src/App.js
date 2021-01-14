@@ -24,7 +24,7 @@ function App() {
       </p>
 
       <div className="List">
-        <TodoList newTodos={preparedTodos} />
+        <TodoList todos={preparedTodos} />
       </div>
     </div>
   );
