@@ -1,29 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { User } from '../User';
 
 import { TodoTypes } from '../../types';
 
-export const Todo = ({
-  title,
-  completed,
-  user,
-}) => (
+export const Todo = ({ items }) => (
   <tr>
-    <td>{title}</td>
+    <td>{items.title}</td>
     <td>
-      {completed
+      {items.completed
         ? 'Is completed ✔'
         : 'Is not completed ❌'
       }
     </td>
     <td>
-      <User name={user.name} />
+      <User user={items.user} />
     </td>
   </tr>
 );
 
 Todo.propTypes = {
-  title: TodoTypes.title.isRequired,
-  completed: TodoTypes.completed.isRequired,
-  user: TodoTypes.user.isRequired,
+  items: PropTypes.shape(TodoTypes).isRequired,
 };

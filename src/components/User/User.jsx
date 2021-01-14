@@ -1,10 +1,12 @@
 import React from 'react';
 import { TodoTypes } from '../../types';
 
-export const User = ({ name }) => (
+export const User = ({ user }) => (
   <>
-    {name}
+    {user.name}
   </>
 );
 
-User.propTypes = TodoTypes.user;
+User.propTypes = {
+  user: TodoTypes.user.isRequired,
+};
