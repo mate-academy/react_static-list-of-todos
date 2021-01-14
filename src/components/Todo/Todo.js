@@ -1,6 +1,7 @@
 import React from 'react';
 import { TodoType } from '../../types';
 import './Todo.scss';
+import { User } from '../User';
 
 export function Todo({ title, user, completed }) {
   return (
@@ -11,7 +12,7 @@ export function Todo({ title, user, completed }) {
       <br />
       {`Status: ${completed ? 'finished' : 'unfinished'}`}
       <br />
-      {`User: ${user}`}
+      <User {...user} />
     </li>
   );
 }
