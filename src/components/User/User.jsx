@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { TodoTypes } from '../../types';
 
 export const User = ({ user }) => (
@@ -8,5 +9,5 @@ export const User = ({ user }) => (
 );
 
 User.propTypes = {
-  user: TodoTypes.user.isRequired,
+  user: PropTypes.shape(TodoTypes.user).isRequired,
 };
