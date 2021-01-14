@@ -1,0 +1,33 @@
+.table {
+  border-collapse: separate;
+  text-align: center;
+
+  &__header {
+    padding: 10px 20px;
+
+    font-size: 18px;
+    color: white;
+    background-color: #afcde7;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+  }
+
+  &__row {
+    background: #d8e6f3;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+
+    &--user {
+      background: #afcde7;
+      color: white;
+      padding: 10px 20px;
+    }
+
+    &--task {
+      padding: 10px 20px;
+      text-align: left;
+    }
+  }
+}

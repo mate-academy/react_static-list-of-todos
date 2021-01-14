@@ -1,1 +1,11 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  padding-left: 40px;
+  padding-right: 40px;
+
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 14px;
+}
