@@ -15,7 +15,7 @@ function TodoItem({ title, completed, user }) {
       </td>
 
       <td className="row__name">
-        <User data={user} />
+        <User user={user} />
       </td>
     </tr>
   );
