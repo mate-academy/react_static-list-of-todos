@@ -1,0 +1,22 @@
+.list {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid red;
+    padding: 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &--done {
+      border-color: green;
+    }
+  }
+
+  &__result {
+    align-self: flex-end;
+  }
+}
