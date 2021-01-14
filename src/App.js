@@ -25,7 +25,7 @@ function App() {
           {users.length}
         </p>
       </div>
-      <TodoList list={fullList} />
+      <TodoList todos={fullList} />
     </div>
   );
 }

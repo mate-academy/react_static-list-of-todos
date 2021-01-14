@@ -1,21 +1,28 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './Todo.scss';
-import { listType } from '../../types';
+import { UserType } from '../../types';
 import { User } from '../User/User';
 
-export const Todo = ({ title, completed, user }) => (
+export const Todo = ({ todo }) => (
   <div className="Todo">
     <div className="Todo__info">
-      {title}
-      { completed
+      {todo.title}
+      { todo.completed
         ? <div className="Todo__process">done</div>
         : <div className="Todo__process--not">not</div>
       }
     </div>
 
-    <User {...user} />
+    <User user={todo.user} />
   </div>
 );
 
-Todo.propTypes = listType;
+Todo.propTypes = {
+  todo: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
+    user: UserType.isRequired,
+  }).isRequired,
+};
