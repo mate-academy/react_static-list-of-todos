@@ -1,5 +1,5 @@
 import React from 'react';
-import { checkPropTypesUser } from '../checkPropTypes/checkPropTypesUser';
+import { typeUser } from '../Types/typeTodos';
 
 export const User = ({ name }) => (
   <p className="list__name">
@@ -8,4 +8,4 @@ export const User = ({ name }) => (
   </p>
 );
 
-User.propTypes = checkPropTypesUser;
+User.propTypes = typeUser;
