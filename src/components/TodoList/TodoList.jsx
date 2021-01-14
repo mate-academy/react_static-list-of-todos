@@ -5,7 +5,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Todo from '../Todo';
 import { ListShape } from '../../Types';
 
-const TodoList = ({ list }) => (
+const TodoList = ({ todos }) => (
   <>
     <Container>
       <Row>
@@ -23,9 +23,9 @@ const TodoList = ({ list }) => (
               </tr>
             </thead>
             <tbody>
-              {list.map(e => (
-                <tr key={e.id}>
-                  <Todo user={e.user} title={e.title} completed={e.completed} todoId={e.id} />
+              {todos.map(todo => (
+                <tr key={todo.id}>
+                  <Todo {...todo} />
                 </tr>
               ))}
             </tbody>
