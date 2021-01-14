@@ -14,7 +14,7 @@ function TodoList({ preparedTasks }) {
 }
 
 TodoList.propTypes = {
-  preparedTasks: PropTypes.arrayOf(UserTask).isRequired,
+  preparedTasks: PropTypes.arrayOf(UserTask.isRequired).isRequired,
 };
 
 export default TodoList;

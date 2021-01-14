@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserTypes } from '../types';
+import { UserTask } from '../types';
 import User from './User';
 import './Todo.scss';
 
@@ -21,6 +21,8 @@ function Todo({ task }) {
   );
 }
 
-Todo.propTypes = UserTypes.isRequired;
+Todo.propTypes = {
+  task: UserTask.isRequired,
+};
 
 export default Todo;
