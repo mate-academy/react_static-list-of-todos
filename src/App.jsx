@@ -5,15 +5,10 @@ import todos from './api/todos';
 import users from './api/users';
 import { TodoList } from './components/TodoList';
 
-const preparedTodos = [...todos];
-
-preparedTodos.forEach((item) => {
-  users.forEach((user) => {
-    if (item.userId === user.id) {
-      item.user = user; // eslint-disable-line no-param-reassign
-    }
-  });
-});
+const preparedTodos = todos.map(todo => ({
+  ...todo,
+  user: users.find(user => todo.userId === user.id),
+}));
 
 function App() {
   return (
