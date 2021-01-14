@@ -1,0 +1,17 @@
+.list {
+  width: 800px;
+  padding: 10px;
+  margin: 0 auto;
+  
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background-color: gray;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    font-family: sans-serif;
+    text-transform: uppercase;
+  }
+}
