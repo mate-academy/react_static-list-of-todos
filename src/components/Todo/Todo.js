@@ -1,4 +1,6 @@
 import React from 'react';
+import classNames from 'classnames';
+
 import { TodoType } from '../../types';
 import { User } from '../User';
 import './Todo.scss';
@@ -10,11 +12,11 @@ export const Todo = (
     user,
   },
 ) => (
-  <div className={`card ${completed ? 'done' : ''}`}>
+  <div className={classNames('card', { done: completed })}>
     <h2>
       {title}
     </h2>
-    <span className={`todotext ${completed ? 'donetext' : ''}`} />
+    <span className={classNames('todotext', { donetext: completed })} />
     <span>
       <User {...user} />
     </span>
