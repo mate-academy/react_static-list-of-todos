@@ -1,0 +1,29 @@
+table {
+  width: 70%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+th,
+td {
+  padding: 0 25px;
+  width: 33%;
+}
+
+th {
+  text-align: left;
+  height: 60px;
+
+  background-color: rgba(216, 214, 214, 0.822);
+  border: 1px solid rgba(128, 128, 128, 0.596);
+}
+
+td {
+  border: 1px solid rgba(128, 128, 128, 0.274);
+}
+
+tr {
+  background-color:rgba(216, 214, 214, 0.336);
+  height: 40px;
+  border: 1px solid rgba(141, 189, 174, 0.575);
+}
