@@ -7,7 +7,13 @@ const Todo = ({ todo }) => (
   <li className="item" key={todo.id}>
     <h2>{`Task: ${todo.title}`}</h2>
     <User user={todo.user} />
-    <p>{`status: ${todo.completed ? 'complete' : 'incopmlete'}`}</p>
+    <p>
+      status:
+
+      <span className={todo.completed ? 'complete' : 'incopmlete'}>
+        {` ${todo.completed ? 'complete' : 'incopmlete'}`}
+      </span>
+    </p>
   </li>
 );
 
