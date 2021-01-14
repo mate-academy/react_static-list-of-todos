@@ -3,11 +3,12 @@ import './Todo.scss';
 import User from '../User';
 import { UserShape } from '../../Types';
 
-const Todo = ({ user, title, completed }) => (
+const Todo = ({ user, title, completed, todoId }) => (
   <>
+    <th>{todoId}</th>
     <User {...user} />
     <th>{title}</th>
-    <th colSpan="4">
+    <th>
       {completed
         ? <span className="spanGreen"> Done!</span>
         : <span className="spanRed"> in progress</span>}

@@ -15,6 +15,7 @@ const TodoList = ({ list }) => (
             <thead>
               <tr>
                 <th>#id</th>
+                <th>#idTodo</th>
                 <th>Name</th>
                 <th>User name</th>
                 <th>User Todo</th>
@@ -24,7 +25,7 @@ const TodoList = ({ list }) => (
             <tbody>
               {list.map(e => (
                 <tr key={e.id}>
-                  <Todo user={e.user} title={e.title} completed={e.completed} />
+                  <Todo user={e.user} title={e.title} completed={e.completed} todoId={e.id} />
                 </tr>
               ))}
             </tbody>
