@@ -29,5 +29,5 @@ export const TodoType = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
-  user: PropTypes.arrayOf(userTypes).isRequired,
+  user: PropTypes.objectOf(userTypes).isRequired,
 };

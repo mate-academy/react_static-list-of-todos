@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TodoType } from '../Types/type';
 import { User } from '../User/User';
 import './Todo.scss';
 
@@ -29,5 +28,3 @@ Todo.propTypes = {
     name: PropTypes.string.isRequired,
   }).isRequired,
 };
-
-Todo.propTypes = TodoType;
