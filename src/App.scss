@@ -1,1 +1,22 @@
-// styles go here
+.todo {
+  &__title {
+    background: lightcoral;
+  }
+
+  &__mark {
+    background: red;
+  }
+
+  &__user {
+    text-align: center;
+    background: lightcoral;
+  }
+
+  &__done {
+    background: lightgreen;
+  }
+
+  &__mark-done {
+    background: green;
+  }
+}
