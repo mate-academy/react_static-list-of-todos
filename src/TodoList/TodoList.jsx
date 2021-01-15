@@ -5,9 +5,9 @@ import { TodoItem } from '../TodoItem';
 export const TodoList = ({ todos }) => (
   todos.map(
     todo => (
-      <div key={todo.id}>
-        <TodoItem {...todo} />
-      </div>
+      <>
+        <TodoItem {...todo} key={todo.id} />
+      </>
     ),
   )
 );
