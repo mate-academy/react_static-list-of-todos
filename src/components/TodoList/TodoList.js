@@ -2,7 +2,7 @@ import React from 'react';
 import { TypeOfTodos } from '../../types';
 import { Todo } from '../Todo/Todo';
 
-export const TodoList = ({ list }) => (
+export const TodoList = ({ tasks }) => (
   <table>
     <thead>
       <tr>
@@ -12,7 +12,7 @@ export const TodoList = ({ list }) => (
       </tr>
     </thead>
     <tbody>
-      {list.map(task => (
+      {tasks.map(task => (
         <tr key={task.id}>
           <Todo task={task} />
         </tr>

@@ -1,12 +1,5 @@
 import PropTypes from 'prop-types';
 
-export const TypeOfTodos = PropTypes.arrayOf(PropTypes.shape({
-  userId: PropTypes.number.isRequired,
-  id: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired,
-})).isRequired;
-
 export const TypeOfUser = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
@@ -30,3 +23,11 @@ export const TypeOfUser = PropTypes.shape({
     bs: PropTypes.string.isRequired,
   })).isRequired,
 }).isRequired;
+
+export const TypeOfTodos = PropTypes.arrayOf(PropTypes.shape({
+  userId: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
+  user: TypeOfUser,
+})).isRequired;

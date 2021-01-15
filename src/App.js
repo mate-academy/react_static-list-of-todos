@@ -23,7 +23,7 @@ function App() {
         <span>Users: </span>
         {users.length}
       </p>
-      <TodoList list={listOfTasks} />
+      <TodoList tasks={listOfTasks} />
     </div>
   );
 }

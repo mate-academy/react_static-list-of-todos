@@ -4,15 +4,11 @@ import { User } from '../User/User';
 
 export const Todo = ({ task }) => (
   <>
-    <td style={{ background: task.completed ? 'lightgreen' : 'lightcoral' }}>
+    <td className={task.completed ? 'todo__title-yes' : 'todo__title-no'}>
       {task.title}
     </td>
-    <td style={{ background: task.completed ? 'green' : 'red' }} />
-    <td style={{
-      textAlign: 'center',
-      background: task.completed ? 'lightgreen' : 'lightcoral',
-    }}
-    >
+    <td className={task.completed ? 'todo__done-yes' : 'todo__done-no'} />
+    <td className={task.completed ? 'todo__user-yes' : 'todo__user-no'}>
       <User user={task.user} />
     </td>
   </>

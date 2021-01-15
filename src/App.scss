@@ -1,1 +1,27 @@
-// styles go here
+.todo {
+  &__title-no {
+    background: lightcoral;
+  }
+
+  &__title-yes {
+    background: lightgreen;
+  }
+
+  &__done-no {
+    background: red;
+  }
+
+  &__done-yes {
+    background: green;
+  }
+
+  &__user-no {
+    text-align: "center";
+    background: lightcoral;
+  }
+
+  &__user-yes {
+    text-align: "center";
+    background: lightgreen;
+  }
+}
