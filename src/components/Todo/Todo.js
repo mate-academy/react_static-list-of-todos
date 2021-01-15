@@ -1,29 +1,25 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import User from '../User/User';
+import { TaskType } from '../Types/Types';
 
-const Todo = ({ title, completed, user }) => (
+const Todo = ({ task }) => (
   <p>
     <strong>User:</strong>
     &ensp;
-    <User user={user} />
+    <User user={task.user} />
     &emsp;
     <strong>Task:</strong>
     &ensp;
-    {title}
+    {task.title}
     &emsp;
     <strong>Status:</strong>
     &ensp;
-    {completed ? 'Done.' : 'In progress...'}
+    {task.completed ? 'Done.' : 'In progress...'}
   </p>
 );
 
 Todo.propTypes = {
-  title: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired,
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-  }).isRequired,
+  task: TaskType.isRequired,
 };
 
 export default Todo;
