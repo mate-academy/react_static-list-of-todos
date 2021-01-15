@@ -1,12 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Todo.scss';
 
-import { TodoTypes } from '../../types';
+import { UserTypes } from '../../types';
 import { User } from '../User/User';
 
 export const Todo = ({ title, completed, user }) => (
   <tr>
-    <td className="cell"><User user={user} /></td>
+    <User userData={user} />
     <td className="cell">{title}</td>
     <td
       style={{ backgroundColor: `${completed ? 'greenyellow' : 'red'}` }}
@@ -17,4 +18,8 @@ export const Todo = ({ title, completed, user }) => (
   </tr>
 );
 
-Todo.propTypes = TodoTypes;
+Todo.propTypes = {
+  title: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
+  user: UserTypes.isRequired,
+};
