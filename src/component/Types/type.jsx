@@ -26,7 +26,7 @@ export const userTypes = PropTypes.shape({
 
 export const TodoType = {
   userId: PropTypes.number.isRequired,
-  id: PropTypes.number,isRequired,
+  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
   user: PropTypes.arrayOf(userTypes).isRequired,
