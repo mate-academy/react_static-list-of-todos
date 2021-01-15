@@ -1,27 +1,22 @@
 .todo {
-  &__title-no {
+  &__title {
     background: lightcoral;
   }
 
-  &__title-yes {
-    background: lightgreen;
-  }
-
-  &__done-no {
+  &__mark {
     background: red;
   }
 
-  &__done-yes {
-    background: green;
-  }
-
-  &__user-no {
-    text-align: "center";
+  &__user {
+    text-align: center;
     background: lightcoral;
   }
 
-  &__user-yes {
-    text-align: "center";
+  &__done {
     background: lightgreen;
+  }
+
+  &__mark-done {
+    background: green;
   }
 }
