@@ -8,9 +8,7 @@ export const TodoList = ({ todos }) => (
     {todos.map(item => (
       <li className="todo__item" key={item.id}>
         <Todo
-          title={item.title}
-          user={item.user}
-          completed={item.completed}
+          {...item}
         />
       </li>
     ))}
@@ -18,5 +16,5 @@ export const TodoList = ({ todos }) => (
 );
 
 TodoList.defaultProps = {
-  todos: 0,
+  todos: [],
 };

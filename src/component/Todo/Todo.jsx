@@ -4,15 +4,10 @@ import { User } from '../User/User';
 import './Todo.scss';
 
 export const Todo = ({ title, completed, user }) => {
-  const toUpperWord = title.replace(
-    /((?:^|[.?!])+\s*)(.)/g,
-    (m, tail, ch) => tail + ch.toUpperCase(),
-  );
-
   return (
     <div className="todo__info">
       <div className="todo__title">
-        {toUpperWord}
+        {title}
       </div>
       <div className="todo__status status">
         {completed
