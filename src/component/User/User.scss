@@ -1,0 +1,16 @@
+.user {
+  font-size: 18px;
+  font-weight: bold;
+  color: gray;
+  transition: all ease-in-out 0.4s;
+  cursor: pointer;
+  text-align: right;
+
+  &:hover {
+    color: #f97751;
+  }
+
+  @media (max-width: 900px) {
+    text-align: center;
+  }
+}
