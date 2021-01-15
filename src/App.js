@@ -6,6 +6,11 @@ import users from './api/users';
 
 import { TodoList } from './components/TodoList';
 
+const preparedTodos = todos.map(todo => ({
+  ...todo,
+  user: users.find(user => user.id === todo.userId),
+}));
+
 function App() {
   return (
     <div className="App">
@@ -20,14 +25,9 @@ function App() {
         {users.length}
       </p>
 
-      <TodoList preparedTodos={preparedTodos} />
+      <TodoList todos={preparedTodos} />
     </div>
   );
 }
-
-let preparedTodos = todos.map(todo => ({
-  ...todo,
-  user: users.find(user => user.id === todo.userId),
-}));
 
 export default App;

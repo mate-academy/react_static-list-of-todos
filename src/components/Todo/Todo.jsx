@@ -1,9 +1,14 @@
 import React from 'react';
-import { TodoTypes } from '../../types';
+import PropTypes from 'prop-types';
+
+import { User } from '../User';
+import { UserType } from '../../types';
 import './Todo.scss';
 
 export const Todo = ({ todo }) => (
   <>
+    <User user={todo.user} />
+
     <p className="title">
       {todo.title}
     </p>
@@ -14,4 +19,10 @@ export const Todo = ({ todo }) => (
   </>
 );
 
-Todo.propTypes = TodoTypes.isRequired;
+Todo.propTypes = {
+  todo: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
+    user: UserType.isRequired,
+  }).isRequired,
+};
