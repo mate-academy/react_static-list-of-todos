@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Todo } from '../Todo';
-import { TitleTypes, CompletedTypes, UserTypes } from '../../types';
+import { TodoType } from '../../types';
 
 export const TodoList = ({ tasks }) => (
   <table>
@@ -26,11 +26,5 @@ export const TodoList = ({ tasks }) => (
 );
 
 TodoList.propTypes = {
-  tasks: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: UserTypes,
-      title: TitleTypes,
-      completed: CompletedTypes,
-    }).isRequired,
-  ).isRequired,
+  tasks: PropTypes.arrayOf(TodoType).isRequired,
 };
