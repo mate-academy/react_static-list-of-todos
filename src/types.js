@@ -11,9 +11,3 @@ export const TodoesTypes = PropTypes.shape({
 export const userType = PropTypes.shape({
   name: PropTypes.string.isRequired,
 });
-
-export const TodoType = {
-  title: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired,
-  user: userType.isRequired,
-};

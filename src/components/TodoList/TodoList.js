@@ -4,12 +4,12 @@ import { TodoesTypes } from '../../types';
 import { Todo } from '../Todo';
 import './TodoList.scss';
 
-export const TodoList = ({ todosWithUsers }) => (
+export const TodoList = ({ todos }) => (
   <ul className="list">
-    {todosWithUsers.map(todo => <Todo {...todo} key={todo.id} />)}
+    {todos.map(todo => <Todo {...todo} key={todo.id} />)}
   </ul>
 );
 
 TodoList.propTypes = {
-  todosWithUsers: PropTypes.arrayOf(TodoesTypes).isRequired,
+  todos: PropTypes.arrayOf(TodoesTypes).isRequired,
 };
