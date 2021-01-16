@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { TodoType } from '../../types';
+import { UserType } from '../../types';
 
-export const User = ({ user }) => (
+export const User = ({ name }) => (
   <td>
-    {user.name}
+    {name}
   </td>
 );
 
 User.propTypes = {
-  user: TodoType.user.isRequired,
+  name: UserType.name.isRequired,
 };
