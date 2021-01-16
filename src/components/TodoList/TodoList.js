@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Todo } from './Todo';
-import { TodoTypes } from '../types';
+import { Todo } from '../Todo';
+import { TodoTypes } from '../../types';
 
 export const TodoList = ({ todos }) => (
   <table>
