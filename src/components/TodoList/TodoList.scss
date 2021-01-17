@@ -1,0 +1,12 @@
+.todo-list {
+  padding: 0;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: -1px;
+    min-height: 30px;
+    border: 1px solid #fff;
+    background-color: #cfcfcf;
+  }
+}
