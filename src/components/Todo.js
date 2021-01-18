@@ -9,7 +9,7 @@ export const Todo = ({ todo }) => (
       {todo.title}
       {' '}
       -
-      {todo.completed ? <span>Completed</span> : <span>In process</span>}
+      <span>{todo.completed ? 'Completed' : 'In process"}</span>
     </p>
   </div>
 );
