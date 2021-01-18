@@ -8,4 +8,6 @@ export const User = ({ user }) => (
   </div>
 );
 
-User.propTypes = UserType;
+User.propTypes = {
+  user: PropTypes.shape(UserType).isRequired,
+  };
