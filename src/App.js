@@ -12,7 +12,8 @@ const preparedTodos = todos.map(todo => ({
 
 function App() {
   return (
-    <>
+    <div className="App">
+      <h1>Static list of todos</h1>
       <p className="items-summary">
         <span>Todos: </span>
         {todos.length}
@@ -23,7 +24,7 @@ function App() {
         {users.length}
       </p>
       <TodoList todos={preparedTodos} />
-    </>
+    </div>
   );
 }
 

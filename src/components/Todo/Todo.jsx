@@ -12,7 +12,7 @@ export const Todo = ({
     <User name={user} />
     <p>
       Task is
-      {completed || 'not '}
+      {completed || ' not '}
       completed.
     </p>
     {completed ? (
