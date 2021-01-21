@@ -1,0 +1,29 @@
+.Todo {
+  margin-top: 10px;
+  padding: 10px;
+  height: 60px;
+  border: 2px solid rgb(143, 75, 143);
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px 2px grey;
+  background-color: rgb(250, 212, 250);
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__process {
+    background-color: rgb(18, 199, 42);
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: inset 1px 1px 3px black;
+
+    &--not {
+      @extend .Todo__process;
+      background-color: rgb(255, 115, 0);
+    }
+  }
+}

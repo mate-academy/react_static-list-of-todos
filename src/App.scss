@@ -1,1 +1,14 @@
-// styles go here
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(235, 243, 227);
+
+  &__subtitle {
+    display: flex;
+    justify-content: space-around;
+    max-width: 400px;
+    width: 100%;
+    color: rgb(112, 68, 155);
+  }
+}
