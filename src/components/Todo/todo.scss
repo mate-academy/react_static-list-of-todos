@@ -1,0 +1,35 @@
+.taskDescription {
+  text-align: left;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+
+.stateDone,
+.stateExecution {
+  position: absolute;
+  width: 35%;
+
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  padding-right: 20px;
+
+  font-family: Arial, sans-serif;
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 150px;
+
+  backdrop-filter: blur(1px);
+  border-radius: 20px;
+}
+
+.stateDone {
+  background: linear-gradient(90deg, transparent, #2be007a2);
+}
+
+.stateExecution {
+  background: linear-gradient(90deg, transparent, #e0d107a2);
+}
