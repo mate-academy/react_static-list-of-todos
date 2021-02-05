@@ -1,1 +1,26 @@
 // styles go here
+.container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.userName,
+.title,
+.completed {
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  background-color: lightgrey;
+}
+
+li:nth-child(odd) {
+  background-color: white;
+}
