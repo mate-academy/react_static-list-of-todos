@@ -1,0 +1,15 @@
+.todo {
+  margin-right: 25px;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__completeness {
+    color: #513002;
+
+    &_completed {
+      color: #f6s5c;
+    }
+  }
+}

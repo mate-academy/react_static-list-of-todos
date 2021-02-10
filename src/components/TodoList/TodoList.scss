@@ -1,0 +1,11 @@
+.list {
+  padding: 0;
+
+  &__item {
+    background-color: black;
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    row-gap: 20px;
+  }
+}
