@@ -1,0 +1,30 @@
+.condition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50px;
+}
+
+.condition--completed {
+
+  &:before {
+    color: #0d750d;
+    width: 100px;
+    content: "done";
+  }
+}
+
+.condition--uncompleted {
+
+  &:before {
+    color: #c41d1d;
+    width: 100px;
+    content: "incomplete";
+  }
+}
+
+.todo__task {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
