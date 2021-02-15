@@ -2,17 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { User } from './User';
 
-export function Todo({ title, completed, user }) {
-  return (
-    <>
-      <div>
-        <User {...user} />
-        <p>{title}</p>
-        <p>{completed ? 'true' : 'false'}</p>
-      </div>
-    </>
-  );
-}
+export const Todo = ({ title, completed, user }) => (
+  <>
+    <div>
+      <User {...user} />
+      <td>
+        <div className="title">{title}</div>
+      </td>
+      <td>
+        <div className="completed">
+          {completed ? 'Completed' : 'In progress'}
+        </div>
+      </td>
+    </div>
+  </>
+);
 
 Todo.propTypes = {
   id: PropTypes.number.isRequired,
@@ -22,5 +26,3 @@ Todo.propTypes = {
     name: PropTypes.string,
   }).isRequired,
 };
-
-export default Todo;
