@@ -1,1 +1,25 @@
-// styles go here
+table {
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  th,
+  td {
+    text-align: center;
+  }
+  th {
+    text-align: center;
+    padding: 10px;
+  }
+  tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+
+  tr:hover {
+    background-color: #ccc;
+  }
+}
+
+.userName,
+.title,
+.completed {
+  padding: 20px;
+}
