@@ -12,8 +12,7 @@ export function TodoList({ todos }) {
         <div
           key={todo.id}
           className={classNames(`row`,
-            { even: todo.id % 2 === 0 },
-            { odd: todo.id % 2 !== 0 })}
+            { even: todo.id % 2 === 0 })}
         >
           <Todo {...todo} />
         </div>
