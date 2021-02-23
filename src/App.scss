@@ -1,1 +1,31 @@
-// styles go here
+li {
+  list-style-type: none;
+  border: 2px solid black;
+  padding: 2rem 1rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 8px 4px 4px black;
+}
+
+.container {
+  margin: 0 5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.active_li {
+  background-color: #ffebcd;
+}
+
+.completed_li {
+  background-color: #98fb98;
+}
+
+.title {
+  font-weight: 300;
+  text-transform: uppercase;
+}
