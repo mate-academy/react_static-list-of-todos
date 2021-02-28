@@ -1,0 +1,20 @@
+.userContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 5px;
+  background-color: gold;
+  margin-bottom: 5px;
+
+  .userName {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18px;
+    padding-right: 10px;
+  }
+  img {
+    width: 25px;
+    padding-left: 5px;
+    margin-right: 10px;
+  }
+}
