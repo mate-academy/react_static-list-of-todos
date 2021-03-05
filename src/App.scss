@@ -1,1 +1,14 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app__title {
+  background: linear-gradient(#e66465, #9198e5);
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
