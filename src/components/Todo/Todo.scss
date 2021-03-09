@@ -1,0 +1,26 @@
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 15px;
+  border: 3px solid;
+
+  &--completed {
+    border-color: darkgreen;
+    background: lightgreen;
+  }
+
+  &--uncompleted {
+    border-color: darkred;
+    background: lightpink;
+  }
+
+  &__status {
+    flex-basis: 100px;
+  }
+
+  &__name {
+    flex-grow: 1;
+  }
+}
