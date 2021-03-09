@@ -7,7 +7,7 @@ export const TodoList = ({ todos }) => (
   <ul>
     {todos.map(todo => (
       <li key={todo.id}>
-        <Todo {...todo} />
+        <Todo todo={todo} />
       </li>
     ))}
   </ul>
