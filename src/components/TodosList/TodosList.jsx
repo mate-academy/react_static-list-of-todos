@@ -9,7 +9,7 @@ export const TodosList = ({ preparedTodos }) => (
     {preparedTodos.map(todo => (
       <li
         className={classNames('TodosItem',
-          { 'TodosItem--done': todo.completed === true })}
+          { 'TodosItem--done': todo.completed })}
         key={todo.id}
       >
         <TodosItem {...todo} />
@@ -24,7 +24,9 @@ TodosList.propTypes = {
       id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
       completed: PropTypes.bool.isRequired,
-      user: PropTypes.object,
+      user: PropTypes.shape({
+        name: PropTypes.string,
+      }),
     }).isRequired,
   ).isRequired,
 };

@@ -5,7 +5,7 @@ import './TodosItem.scss';
 export const TodosItem = ({ title, completed, user }) => (
   <>
     <i>{title}</i>
-    <p>{completed ? ('done') : ('to do')}</p>
+    <p>{completed ? 'done' : 'to do'}</p>
     <strong>{user.name}</strong>
   </>
 );
