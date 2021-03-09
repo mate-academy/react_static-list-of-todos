@@ -22,9 +22,5 @@ export function Todo({
 Todo.propTypes = {
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
-  user: TypeUser,
-};
-
-Todo.defaultProps = {
-  user: {},
+  user: TypeUser.isRequired,
 };

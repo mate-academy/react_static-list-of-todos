@@ -22,5 +22,4 @@ export const TypeUser = PropTypes.shape({
   phone: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
   website: PropTypes.string.isRequired,
-
 });
