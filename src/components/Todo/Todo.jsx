@@ -1,31 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { User } from '../User';
+import { UserTypes, TodoTypes } from '../../types';
 
-export const Todo = ({
-  title,
-  completed,
-  user,
-}) => (
+export const Todo = ({ todo }) => (
   <>
     <h1>
-      {title}
+      {todo.title}
     </h1>
     <span>
-      {completed === true ? 'true' : 'false'}
+      {todo.completed === true ? 'true' : 'false'}
     </span>
-    <User user={user} />
+    <User user={todo.user} />
   </>
 );
 
 Todo.propTypes = {
-  title: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired,
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
+  todo: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
+    TodoTypes,
+    user: PropTypes.shape({ UserTypes }),
   }),
+
 };
 
 Todo.defaultProps = {
-  user: null,
+  todo: null,
 };
