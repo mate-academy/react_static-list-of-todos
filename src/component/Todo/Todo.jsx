@@ -11,14 +11,14 @@ export const Todo = ({ title, completed, user }) => (
       {completed ? 'completely completed' : 'completed, but not all'}
     </p>
     <p>
-      <User {...user} />
+      <User user={user} />
     </p>
   </>
 );
 
 Todo.propTypes = {
   title: PropTypes.string.isRequired,
-  completed: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
   user: PropTypes.shape({
     name: PropTypes.string.isRequired,
   }).isRequired,
