@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { User } from '../User';
-import { UserTypes, TodoTypes } from '../../types';
+import { TodoType } from '../../types';
 
 export const Todo = ({ todo }) => (
   <>
@@ -16,12 +16,7 @@ export const Todo = ({ todo }) => (
 );
 
 Todo.propTypes = {
-  todo: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired,
-    TodoTypes,
-    user: PropTypes.shape({ UserTypes }),
-  }),
+  todo: PropTypes.shape(TodoType),
 
 };
 
