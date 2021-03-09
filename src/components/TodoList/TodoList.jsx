@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import './TodoList.scss';
-import Todo from '../Todo';
+import { Todo } from '../Todo';
 
-export default function TodoList({ preparedTodos }) {
+export function TodoList({ preparedTodos }) {
   const allList = preparedTodos.map(todo => (
     <Todo key={todo.id} {...todo} />
   ));

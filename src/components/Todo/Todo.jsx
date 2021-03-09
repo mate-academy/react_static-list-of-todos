@@ -2,9 +2,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import './Todo.scss';
 
-import User from '../User';
+import { TypeUser } from '../../types';
+import { User } from '../User';
 
-export default function Todo({
+export function Todo({
   title,
   completed,
   user,
@@ -21,9 +22,7 @@ export default function Todo({
 Todo.propTypes = {
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-  }),
+  user: TypeUser,
 };
 
 Todo.defaultProps = {

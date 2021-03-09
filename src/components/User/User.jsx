@@ -1,8 +1,9 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+
+import { TypeUser } from '../../types';
 import './User.scss';
 
-export default function User({ user }) {
+export function User({ user }) {
   return (
     <>
       <h3 className="app__name">{user.name}</h3>
@@ -11,9 +12,7 @@ export default function User({ user }) {
 }
 
 User.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-  }),
+  user: TypeUser,
 };
 
 User.defaultProps = {
