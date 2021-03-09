@@ -23,3 +23,13 @@ export const TypeUser = PropTypes.shape({
   username: PropTypes.string.isRequired,
   website: PropTypes.string.isRequired,
 });
+
+export const TypeTodoList = PropTypes.arrayOf(
+  PropTypes.shape({
+    completed: PropTypes.bool.isRequired,
+    title: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    userId: PropTypes.number.isRequired,
+    user: TypeUser,
+  }),
+);

@@ -1,9 +1,8 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import './TodoList.scss';
 
 import { Todo } from '../Todo';
-import { TypeUser } from '../../types';
+import { TypeTodoList } from '../../types';
 
 export function TodoList({ todos }) {
   const renderedList = todos.map((todo) => {
@@ -27,13 +26,5 @@ export function TodoList({ todos }) {
 }
 
 TodoList.propTypes = {
-  todos: PropTypes.arrayOf(
-    PropTypes.shape({
-      completed: PropTypes.bool.isRequired,
-      title: PropTypes.string.isRequired,
-      id: PropTypes.number.isRequired,
-      userId: PropTypes.number.isRequired,
-      user: TypeUser,
-    }),
-  ).isRequired,
+  todos: TypeTodoList.isRequired,
 };

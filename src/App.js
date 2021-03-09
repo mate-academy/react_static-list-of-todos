@@ -17,7 +17,7 @@ export function App() {
     <div className="App">
       <h1 className="app__title">Static list of todos</h1>
       {
-        !todos.length || <TodoList todos={todosList} />
+        todos.length && <TodoList todos={todosList} />
       }
       <p>
         <span>Todos: </span>
