@@ -9,14 +9,14 @@ export function Todo({ title, completed, user }) {
   return (
     <p>
       <span className="todo">
-        {title[0].toUpperCase() + title.slice(1)}
+        {`${title[0].toUpperCase() + title.slice(1)} - `}
         <span
           className={classNames({
             todo__completed: completed,
             todo__uncompleted: !completed,
           })}
         >
-          {` - ${completed ? '✔' : '✘'}`}
+          {`${completed ? '✔' : '✘'}`}
         </span>
       </span>
       <br />

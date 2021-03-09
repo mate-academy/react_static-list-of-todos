@@ -9,7 +9,11 @@ export function TodoList({ todos }) {
     <ul>
       {todos.map(todo => (
         <li key={todo.id} className="todoList__item">
-          <Todo {...todo} />
+          <Todo
+            title={todo.title}
+            completed={todo.completed}
+            user={todo.user}
+          />
         </li>
       ))}
     </ul>
