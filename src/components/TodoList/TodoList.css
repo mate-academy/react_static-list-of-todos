@@ -1,0 +1,13 @@
+ul {
+  padding: 0;
+}
+
+.todoList__item {
+  margin: 10px;
+  padding: 0 10px;
+
+  border: 2px solid #b6d5ee;
+  border-radius: 20px;
+  background-color: azure;
+  list-style-type: none;
+}
