@@ -1,13 +1,24 @@
 import React from 'react';
 import './App.scss';
+import { TodoList } from './components/TodoList';
 
-import todos from './api/todos';
-import users from './api/users';
+import { todos } from './api/todos';
+import { users } from './api/users';
 
-function App() {
+const preperadTodos = todos.map(todo => ({
+  ...todo,
+  user: users.find(
+    user => todo.userId === user.id,
+  ),
+}));
+
+export function App() {
   return (
     <div className="App">
-      <h1>Static list of todos</h1>
+      <h1 className="app__title">Static list of todos</h1>
+      {
+        todos.length && <TodoList todos={preperadTodos} />
+      }
       <p>
         <span>Todos: </span>
         {todos.length}
@@ -20,5 +31,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
