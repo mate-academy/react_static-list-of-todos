@@ -1,6 +1,6 @@
 import React from 'react';
 import { User } from './User';
-import { todoType } from '../types';
+import { TodoType } from '../types';
 
 export const Todo = ({ title, completed, user }) => (
   <>
@@ -10,4 +10,4 @@ export const Todo = ({ title, completed, user }) => (
   </>
 );
 
-Todo.propTypes = todoType;
+Todo.propTypes = TodoType;

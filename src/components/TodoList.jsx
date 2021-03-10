@@ -4,18 +4,16 @@ import classNames from 'classnames';
 import { Todo } from './Todo';
 
 export const TodoList = ({ preparedTodos }) => (
-  <>
-    <ul>
-      {preparedTodos.map(todo => (
-        <li
-          key={todo.id}
-          className={classNames('info', { completed: todo.completed })}
-        >
-          <Todo {...todo} />
-        </li>
-      ))}
-    </ul>
-  </>
+  <ul>
+    {preparedTodos.map(todo => (
+      <li
+        key={todo.id}
+        className={classNames('info', { completed: todo.completed })}
+      >
+        <Todo {...todo} />
+      </li>
+    ))}
+  </ul>
 );
 
 TodoList.propTypes = {

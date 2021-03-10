@@ -1,5 +1,5 @@
 import React from 'react';
-import { userType } from '../types';
+import { UserType } from '../types';
 
 export const User = ({ user }) => (
   <>
@@ -8,5 +8,5 @@ export const User = ({ user }) => (
 );
 
 User.propTypes = {
-  user: userType.isRequired,
+  user: UserType.isRequired,
 };
