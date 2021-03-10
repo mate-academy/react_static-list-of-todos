@@ -1,7 +1,6 @@
 import React from 'react';
 import { TodoType } from '../TodoType/TodoType';
 import { User } from '../User/User';
-import { UserType } from '../UserType/UserType';
 
 export default function Todo({ todo }) {
   return (
@@ -19,10 +18,9 @@ export default function Todo({ todo }) {
 
 Todo.propTypes = {
   todo: TodoType,
-  user: UserType,
+
 };
 
 Todo.defaultProps = {
-  user: null,
   todo: null,
 };

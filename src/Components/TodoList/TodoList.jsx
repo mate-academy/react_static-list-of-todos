@@ -3,8 +3,8 @@ import React from 'react';
 import Todo from '../Todo/Todo';
 import { TodoType } from '../TodoType/TodoType';
 
-export default function TodoList({ preparedTodos }) {
-  const todoList = preparedTodos.map(todo => (
+export default function TodoList({ todos }) {
+  const todoList = todos.map(todo => (
     <Todo key={todo.id} todo={todo} />
   ));
 
@@ -16,9 +16,9 @@ export default function TodoList({ preparedTodos }) {
 }
 
 TodoList.propTypes = {
-  preparedTodos: PropTypes.arrayOf(TodoType),
+  todos: PropTypes.arrayOf(TodoType),
 };
 
 TodoList.defaultProps = {
-  preparedTodos: [],
+  todos: [],
 };
