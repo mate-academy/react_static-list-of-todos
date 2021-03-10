@@ -5,7 +5,7 @@ import { TodoList } from './components/TodoList';
 import { todos } from './api/todos';
 import { users } from './api/users';
 
-const todosList = todos.map(todo => ({
+const preperadTodos = todos.map(todo => ({
   ...todo,
   user: users.find(
     user => todo.userId === user.id,
@@ -17,7 +17,7 @@ export function App() {
     <div className="App">
       <h1 className="app__title">Static list of todos</h1>
       {
-        todos.length && <TodoList todos={todosList} />
+        todos.length && <TodoList todos={preperadTodos} />
       }
       <p>
         <span>Todos: </span>

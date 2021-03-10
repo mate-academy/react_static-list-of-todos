@@ -1,15 +1,12 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import './Todo.scss';
 
-import { TypeUser } from '../../types';
+import { TodoType } from '../../types';
 import { User } from '../User';
 
-export function Todo({
-  title,
-  completed,
-  user,
-}) {
+export function Todo(props) {
+  const { title, completed, user } = props.todo;
+
   return (
     <li className="app__item">
       <h2>{title}</h2>
@@ -20,7 +17,5 @@ export function Todo({
 }
 
 Todo.propTypes = {
-  title: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired,
-  user: TypeUser.isRequired,
+  todo: TodoType.isRequired,
 };

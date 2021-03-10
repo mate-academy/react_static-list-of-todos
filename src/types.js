@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const TypeUser = PropTypes.shape({
+export const UserType = PropTypes.shape({
   address: PropTypes.shape({
     city: PropTypes.string.isRequired,
     geo: PropTypes.shape({
@@ -24,12 +24,10 @@ export const TypeUser = PropTypes.shape({
   website: PropTypes.string.isRequired,
 });
 
-export const TypeTodoList = PropTypes.arrayOf(
-  PropTypes.shape({
-    completed: PropTypes.bool.isRequired,
-    title: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired,
-    userId: PropTypes.number.isRequired,
-    user: TypeUser,
-  }),
-);
+export const TodoType = PropTypes.shape({
+  completed: PropTypes.bool.isRequired,
+  title: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  userId: PropTypes.number.isRequired,
+  user: UserType,
+});
