@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { User } from '../User';
-import UserType from '../../UserType';
+import { UserType } from '../../UserType';
 
 export const Todo = ({ todo }) => (
   <>

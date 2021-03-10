@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const UserType = {
+export const UserType = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string,
   email: PropTypes.string,
@@ -22,5 +22,3 @@ const UserType = {
     bs: PropTypes.string.isRequired,
   }),
 };
-
-export default UserType;
