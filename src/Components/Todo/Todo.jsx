@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import User from '../User';
+import { User } from '../User/User';
+import { UserType } from '../UserType/UserType';
 
 export default function Todo({ title, user, completed }) {
   return (
@@ -19,9 +20,7 @@ export default function Todo({ title, user, completed }) {
 Todo.propTypes = {
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-  }),
+  user: UserType,
 };
 
 Todo.defaultProps = {
