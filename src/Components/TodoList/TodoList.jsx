@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Todo from '../Todo/Todo';
+import { TodoType } from '../TodoType/TodoType';
 
 export default function TodoList({ preparedTodos }) {
   const todoList = preparedTodos.map(todo => (
-    <Todo key={todo.id} {...todo} />
+    <Todo key={todo.id} todo={todo} />
   ));
 
   return (
@@ -15,11 +16,7 @@ export default function TodoList({ preparedTodos }) {
 }
 
 TodoList.propTypes = {
-  preparedTodos: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-    }),
-  ),
+  preparedTodos: PropTypes.arrayOf(TodoType),
 };
 
 TodoList.defaultProps = {

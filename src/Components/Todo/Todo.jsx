@@ -1,28 +1,28 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import { TodoType } from '../TodoType/TodoType';
 import { User } from '../User/User';
 import { UserType } from '../UserType/UserType';
 
-export default function Todo({ title, user, completed }) {
+export default function Todo({ todo }) {
   return (
     <li>
       <h2>
-        {title}
+        {todo.title}
       </h2>
       <p>
-        {completed.toString()}
+        {todo.completed.toString()}
       </p>
-      <User user={user} />
+      <User user={todo.user} />
     </li>
   );
 }
 
 Todo.propTypes = {
-  title: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired,
+  todo: TodoType,
   user: UserType,
 };
 
 Todo.defaultProps = {
-  user: {},
+  user: null,
+  todo: null,
 };
