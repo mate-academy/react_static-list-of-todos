@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.scss';
-
 import todos from './api/todos';
 import users from './api/users';
 import { TodosList } from './components/TodosList';

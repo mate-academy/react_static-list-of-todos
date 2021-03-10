@@ -1,8 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import { TodosItem } from '../TodosItem';
-import { UserType } from '../../types';
+import { TodoType } from '../../types';
 import './TodosList.scss';
 
 export const TodosList = ({ preparedTodos }) => (
@@ -20,14 +20,7 @@ export const TodosList = ({ preparedTodos }) => (
 );
 
 TodosList.propTypes = {
-  preparedTodos: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      completed: PropTypes.bool.isRequired,
-      user: UserType,
-    }).isRequired,
-  ).isRequired,
+  preparedTodos: PropTypes.arrayOf(TodoType).isRequired,
 };
 
 TodosItem.defaultProps = {
