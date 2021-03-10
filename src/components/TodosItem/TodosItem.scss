@@ -1,0 +1,13 @@
+.TodosItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  border: 3px solid grey;
+
+  &--done {
+    background-color: grey;
+  }
+}
