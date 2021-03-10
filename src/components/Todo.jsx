@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { User } from './User';
-import { TodoType } from '../types';
+import { UserType } from '../types';
 
 export const Todo = ({ title, completed, user }) => (
   <>
@@ -10,4 +11,8 @@ export const Todo = ({ title, completed, user }) => (
   </>
 );
 
-Todo.propTypes = TodoType;
+Todo.propTypes = {
+  title: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
+  user: UserType.isRequired,
+};

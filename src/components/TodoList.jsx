@@ -2,25 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Todo } from './Todo';
+import { TodoType } from '../types';
 
-export const TodoList = ({ preparedTodos }) => (
+export const TodoList = ({ todos }) => (
   <ul>
-    {preparedTodos.map(todo => (
+    {todos.map(todo => (
       <li
         key={todo.id}
         className={classNames('info', { completed: todo.completed })}
       >
-        <Todo {...todo} />
+        <Todo
+          title={todo.title}
+          completed={todo.completed}
+          user={todo.user}
+        />
       </li>
     ))}
   </ul>
 );
 
 TodoList.propTypes = {
-  preparedTodos: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      completed: PropTypes.bool.isRequired,
-    }).isRequired,
-  ).isRequired,
+  todos: PropTypes.arrayOf(TodoType).isRequired,
 };
