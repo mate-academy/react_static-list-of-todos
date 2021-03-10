@@ -5,9 +5,9 @@ import { TodosItem } from '../TodosItem';
 import { TodoType } from '../../types';
 import './TodosList.scss';
 
-export const TodosList = ({ preparedTodos }) => (
+export const TodosList = ({ todos }) => (
   <ul className="TodosList">
-    {preparedTodos.map(todo => (
+    {todos.map(todo => (
       <li
         className={classNames('TodosItem',
           { 'TodosItem--done': todo.completed })}
@@ -20,7 +20,7 @@ export const TodosList = ({ preparedTodos }) => (
 );
 
 TodosList.propTypes = {
-  preparedTodos: PropTypes.arrayOf(TodoType).isRequired,
+  todos: PropTypes.arrayOf(TodoType).isRequired,
 };
 
 TodosItem.defaultProps = {
