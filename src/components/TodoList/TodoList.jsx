@@ -11,7 +11,7 @@ export const TodoList = ({ preparedTodos }) => (
           todo={todo}
         />
       ))
-    ) : 'Congrads! All your todos are finished'}
+    ) : 'Congrats! All your todos are finished'}
   </ul>
 );
 
