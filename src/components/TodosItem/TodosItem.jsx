@@ -3,25 +3,29 @@ import PropTypes from 'prop-types';
 import './TodosItem.scss';
 import { UserType } from '../../types';
 
-export const TodosItem = ({ title, completed, user }) => (
+export const TodosItem = ({ todo }) => (
   <>
-    <i>{title}</i>
-    <p>{completed ? 'done' : 'to do'}</p>
-    <strong>{user.name}</strong>
+    <i>{todo.title}</i>
+    <p>{todo.completed ? 'done' : 'to do'}</p>
+    <strong>{todo.user.name}</strong>
   </>
 );
 
 TodosItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired,
-  user: UserType,
+  todo: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
+    user: UserType,
+  }),
 };
 
 TodosItem.defaultProps = {
-  user: {
-    phone: null,
-    username: null,
-    website: null,
-    company: null,
+  todo: {
+    user: {
+      phone: null,
+      username: null,
+      website: null,
+      company: null,
+    },
   },
 };

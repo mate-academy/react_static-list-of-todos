@@ -13,7 +13,7 @@ export const TodosList = ({ preparedTodos }) => (
           { 'TodosItem--done': todo.completed })}
         key={todo.id}
       >
-        <TodosItem {...todo} />
+        <TodosItem todo={todo} />
       </li>
     ))}
   </ul>
