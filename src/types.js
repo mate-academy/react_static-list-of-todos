@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const userType = PropTypes.shape({
+export const UserType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
@@ -24,10 +24,10 @@ export const userType = PropTypes.shape({
   }),
 });
 
-export const todoType = PropTypes.shape({
+export const TodoType = PropTypes.shape({
   userId: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
-  user: userType,
+  user: UserType,
 });

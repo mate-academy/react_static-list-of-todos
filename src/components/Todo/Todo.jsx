@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './Todo.css';
-import { userType } from '../../types';
+import { UserType } from '../../types';
 import { User } from '../User';
 
 export function Todo({ title, completed, user }) {
@@ -28,5 +28,5 @@ export function Todo({ title, completed, user }) {
 Todo.propTypes = {
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
-  user: userType.isRequired,
+  user: UserType.isRequired,
 };
