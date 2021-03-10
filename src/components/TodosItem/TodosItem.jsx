@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './TodosItem.scss';
+import { UserType } from '../../types';
 
 export const TodosItem = ({ title, completed, user }) => (
   <>
@@ -13,11 +14,14 @@ export const TodosItem = ({ title, completed, user }) => (
 TodosItem.propTypes = {
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
-  user: PropTypes.shape({
-    name: PropTypes.string,
-  }),
+  user: UserType,
 };
 
 TodosItem.defaultProps = {
-  user: { name: 'Unknown' },
+  user: {
+    phone: null,
+    username: null,
+    website: null,
+    company: null,
+  },
 };

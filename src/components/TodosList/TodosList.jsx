@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { TodosItem } from '../TodosItem';
+import { UserType } from '../../types';
 import './TodosList.scss';
 
 export const TodosList = ({ preparedTodos }) => (
@@ -24,9 +25,16 @@ TodosList.propTypes = {
       id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
       completed: PropTypes.bool.isRequired,
-      user: PropTypes.shape({
-        name: PropTypes.string,
-      }),
+      user: UserType,
     }).isRequired,
   ).isRequired,
+};
+
+TodosItem.defaultProps = {
+  user: {
+    phone: null,
+    username: null,
+    website: null,
+    company: null,
+  },
 };
