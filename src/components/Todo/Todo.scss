@@ -1,0 +1,22 @@
+.todoItem {
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+
+  background-color: cornsilk;
+
+  &__title {
+    flex-basis: 40vw;
+    min-width: 300px;
+  }
+
+  &__isCompleted {
+    display: flex;
+    flex-basis: 5vw;
+    min-width: 50px;
+  }
+
+  &:hover {
+    background-color: darkgray;
+  }
+}
