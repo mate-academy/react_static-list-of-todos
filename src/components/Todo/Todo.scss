@@ -1,0 +1,38 @@
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+
+  border-bottom: 1px solid #ededed;
+
+  &__column {
+    display: flex;
+    align-items: center;
+  }
+
+  &__status {
+    display: flex;
+    margin-right: 15px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 15px;
+      height: 15px;
+
+      border: 2.5px solid #d3d3d3;
+      border-radius: 50%;
+    }
+
+    &--completed {
+      &::before {
+        border: 2.5px solid #7cfc00;
+      }
+    }
+  }
+
+  &__user {
+    font-size: 14px;
+    color: #a9a9a9;
+  }
+}
