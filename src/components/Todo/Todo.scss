@@ -1,0 +1,28 @@
+.condition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50px;
+}
+
+.condition--completed {
+  background-color: #b5d4a7;
+
+  &:before {
+    content: "1";
+  }
+}
+
+.condition--uncompleted {
+  background-color: #e6b8af;
+
+  &:before {
+    content: "0";
+  }
+}
+
+.todo__task {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
