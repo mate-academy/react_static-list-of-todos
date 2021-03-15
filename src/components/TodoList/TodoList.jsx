@@ -1,19 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Todo from '../Todo/Todo';
+import './TodoList.scss';
 
-function TodoList({ preparedTodos }) {
+function TodoList({ todos }) {
   return (
-    <div>
+    <ul className="list">
       {
-        (preparedTodos.map(todo => <Todo todoItem={todo} key={todo.id} />))
+        (todos.map(
+          todo => <li key={todo.id}><Todo todoItem={todo} /></li>,
+        ))
       }
-    </div>
+    </ul>
   );
 }
 
 TodoList.propTypes = {
-  preparedTodos: PropTypes.arrayOf(
+  todos: PropTypes.arrayOf(
     PropTypes.object.isRequired,
   ).isRequired,
 };
