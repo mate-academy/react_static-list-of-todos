@@ -1,0 +1,18 @@
+.list {
+  border: 2px solid burlywood;
+  padding: 20px;
+  margin: 10px;
+  background-color: aliceblue;
+}
+
+.list__item {
+  list-style: none;
+  padding: 10px;
+  border: 3px solid antiquewhite;
+  margin: 20px;
+}
+
+.list,
+.list__item {
+  border-radius: 10px;
+}

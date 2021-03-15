@@ -1,1 +1,10 @@
 // styles go here
+* {
+  box-sizing: border-box;
+}
+
+.App__header,
+.App__todos__count,
+.App__users__count {
+  margin-left: 30px;
+}

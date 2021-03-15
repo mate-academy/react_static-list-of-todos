@@ -1,0 +1,11 @@
+.item__container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.item__completed {
+  display: grid;
+  justify-content: end;
+}
