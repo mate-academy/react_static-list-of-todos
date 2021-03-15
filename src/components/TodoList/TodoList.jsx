@@ -4,11 +4,11 @@ import Todo from '../Todo/Todo';
 
 function TodoList({ preparedTodos }) {
   return (
-    <>
+    <div>
       {
         (preparedTodos.map(todo => <Todo todoItem={todo} key={todo.id} />))
       }
-    </>
+    </div>
   );
 }
 

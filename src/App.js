@@ -6,12 +6,12 @@ import todos from './api/todos';
 import users from './api/users';
 
 const preparedTodos = todos.map((todo) => {
-  const a = {
+  const itemOfNewListofTodos = {
     ...todo,
     user: users[todo.userId - 1],
   };
 
-  return a;
+  return itemOfNewListofTodos;
 });
 
 function App() {
@@ -19,13 +19,15 @@ function App() {
     <div className="App">
       <h1>Static list of todos</h1>
       <p>
-        <span>Todos: </span>
-        {todos.length}
+        <span>
+          {`Todos: ${todos.length}`}
+        </span>
       </p>
 
       <p>
-        <span>Users: </span>
-        {users.length}
+        <span>
+          {`Users: ${users.length}`}
+        </span>
       </p>
       <TodoList
         preparedTodos={preparedTodos}
