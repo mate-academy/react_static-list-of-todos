@@ -1,0 +1,11 @@
+.table {
+  margin: 0 auto;
+  background-color: #e0eda6;
+  border: 3px dashed green;
+
+  &__header {
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+  }
+}
