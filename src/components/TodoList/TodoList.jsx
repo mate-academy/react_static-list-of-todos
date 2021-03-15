@@ -2,12 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Todo from '../Todo/Todo';
 
-function TodoList({ ...props }) {
+function TodoList({ preparedTodos }) {
   return (
     <>
       {
-        ({ ...props }
-          .preparedTodos.map(todo => <Todo todoItem={todo} key={todo.id} />))
+        (preparedTodos.map(todo => <Todo todoItem={todo} key={todo.id} />))
       }
     </>
   );

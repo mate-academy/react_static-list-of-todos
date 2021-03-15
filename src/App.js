@@ -5,16 +5,16 @@ import TodoList from './components/TodoList/TodoList';
 import todos from './api/todos';
 import users from './api/users';
 
+const preparedTodos = todos.map((todo) => {
+  const a = {
+    ...todo,
+    user: users[todo.userId - 1],
+  };
+
+  return a;
+});
+
 function App() {
-  const preparedTodos = todos.map((todo) => {
-    const a = {
-      ...todo,
-      user: users[todo.userId - 1],
-    };
-
-    return a;
-  });
-
   return (
     <div className="App">
       <h1>Static list of todos</h1>

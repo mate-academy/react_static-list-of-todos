@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import './Todo.scss';
 import User from '../User/User';
 
-function Todo(props) {
+function Todo({ todoItem }) {
   return (
     <div className="todoItem">
       <div className="todoItem__title">
-        {props.todoItem.title}
+        {todoItem.title}
       </div>
       <div className="todoItem__isCompleted">
-        {props.todoItem.completed ? 'true' : 'false'}
+        {todoItem.completed ? 'true' : 'false'}
       </div>
-      <User user={props.todoItem.user} />
+      <User user={todoItem.user} />
     </div>
   );
 }
