@@ -1,0 +1,19 @@
+.item {
+  list-style: none;
+  padding: 0;
+  cursor: pointer;
+
+  transition: color, transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1, 0.9);
+  }
+
+  &__completed {
+    color: green;
+  }
+
+  &__uncompleted {
+    color: red;
+  }
+}
