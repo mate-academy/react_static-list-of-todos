@@ -1,1 +1,18 @@
-// styles go here
+.App__heading {
+  margin: 0;
+  padding-left: 50px;
+
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 35px;
+  color: green;
+}
+
+.App__wrapper {
+  display: flex;
+  margin: 0 10px 0 50px;
+}
+
+.App__element {
+  font-family: inherit;
+  padding-right: 20px;
+}
