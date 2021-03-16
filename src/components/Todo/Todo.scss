@@ -1,0 +1,32 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ece2d0;
+
+  &__task {
+    font-style: italic;
+  }
+
+  &__user {
+    font-style: italic;
+  }
+
+  &__status {
+    padding: 10px;
+    margin: 30px;
+    border-radius: 10px;
+    height: 50px;
+    color: white;
+    line-height: 50px;
+
+    &_completed {
+      background-color: green;
+    }
+
+    &_uncompleted {
+      background-color: red;
+    }
+  }
+}
