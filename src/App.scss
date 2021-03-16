@@ -1,1 +1,22 @@
-// styles go here
+.App {
+  margin-left: 50px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.listBlock {
+  margin-bottom: 10px;
+  border: 2px solid lightskyblue;
+  border-radius: 10px;
+  padding: 0 20px 20px;
+}
+
+.user {
+  font-size: 24px;
+  font-weight: 700;
+  color: darkslateblue;
+  text-decoration-line: underline;
+}
