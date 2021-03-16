@@ -1,0 +1,19 @@
+.info {
+  background-color: lightcoral;
+}
+
+.info-completed {
+  background-color: lightgreen;
+}
+
+.todo-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 20px;
+  height: 120px;
+
+  border-bottom: 1px solid;
+}
