@@ -1,0 +1,12 @@
+.list {
+  &__title {
+    font-size: 25px;
+  }
+
+  &__completed {
+    color: red;
+    font-weight: 700;
+    font-style: italic;
+    margin-left: 10px;
+  }
+}

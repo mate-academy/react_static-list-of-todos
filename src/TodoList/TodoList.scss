@@ -1,0 +1,14 @@
+.list {
+  &__item {
+    color: red;
+    font-size: 30px;
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  &__description {
+    color: black;
+    font-size: 16px;
+    font-style: normal;
+  }
+}
