@@ -3,22 +3,6 @@ import PropTypes from 'prop-types';
 
 import { User } from '../User';
 
-function checkStatus(status) {
-  if (status) {
-    return (
-      <span role="img" aria-label="done">
-        &#9989;
-      </span>
-    );
-  }
-
-  return (
-    <span role="img" aria-label="notDone">
-      &#10060;
-    </span>
-  );
-}
-
 export const Todo = ({ title, completed, user }) => (
   <>
     <User name={user.name} />
@@ -26,7 +10,7 @@ export const Todo = ({ title, completed, user }) => (
     <span>
       Status:
       {' '}
-      {checkStatus(completed)}
+      <span>{(completed) ? '✅' : '❌'}</span>
     </span>
   </>
 );
