@@ -1,0 +1,9 @@
+.completed {
+  color: green;
+  font-size: 20px;
+}
+
+.uncompleted {
+  color: red;
+  font-size: 20px;
+}
