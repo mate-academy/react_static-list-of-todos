@@ -1,0 +1,24 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+
+    margin-bottom: 20px;
+    padding: 20px;
+
+    font-size: 32px;
+    line-height: 50px;
+    background-color: rgb(245, 218, 239);
+    border-radius: 5px;
+    box-shadow: 5px 6px 7px -1px #473c4c;
+
+    & > span::first-letter {
+      text-transform: capitalize;
+    }
+  }
+}
