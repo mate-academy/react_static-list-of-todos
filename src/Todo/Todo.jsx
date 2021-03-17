@@ -4,30 +4,30 @@ import { User } from '../User';
 
 import './Todo.scss';
 
-export const Todo = ({
-  title,
-  completed,
-  user,
-}) => (
+export const Todo = ({ todo }) => (
   <>
     <span className="list__title">
-      {title}
+      {todo.title}
     </span>
     <span className="list__completed">
-      {completed ? '✔' : '✘'}
+      {todo.completed ? '✔' : '✘'}
     </span>
-    <User userName={user.name} />
+    <User userName={todo.user.name} />
   </>
 );
 
 Todo.propTypes = {
-  title: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired,
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
+  todo: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
+    user: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+    }),
   }),
 };
 
 Todo.defaultProps = {
-  user: null,
+  todo: {
+    user: null,
+  },
 };
