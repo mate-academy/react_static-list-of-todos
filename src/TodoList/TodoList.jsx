@@ -9,7 +9,7 @@ export const TodoList = ({ todos }) => (
     {todos.map(todo => (
       <li className="list__item" key={todo.id}>
         <span className="list__description">
-          <Todo todo={todo} />
+          <Todo {...todo} />
         </span>
       </li>
     ))}
@@ -21,5 +21,9 @@ TodoList.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
     }),
-  ).isRequired,
+  ),
+};
+
+TodoList.defaultProps = {
+  todos: [],
 };

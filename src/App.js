@@ -9,17 +9,13 @@ import users from './api/users';
 const preparedTodos = todos.map(
   todo => ({
     ...todo,
-    user: users.find(user => user.id === todo.userId),
+    user: users.find(({ id }) => id === todo.userId),
   }),
 );
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Static list of todos</h1>
-      <TodoList todos={preparedTodos} />
-    </div>
-  );
-}
-
-export default App;
+export const App = () => (
+  <div className="App">
+    <h1>Static list of todos</h1>
+    <TodoList todos={preparedTodos} />
+  </div>
+);
