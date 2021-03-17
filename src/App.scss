@@ -1,1 +1,13 @@
-// styles go here
+.app__header,
+.app__todos,
+.app__users {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app__header {
+  text-transform: uppercase;
+  color: purple;
+}
