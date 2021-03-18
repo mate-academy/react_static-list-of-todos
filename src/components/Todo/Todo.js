@@ -1,7 +1,7 @@
 import React from 'react';
 import { TypeTodo } from '../../types';
 import { User } from '../User';
-import { CompletedTask } from '../CompletedTask';
+import { TaskStatus } from '../TaskStatus';
 import './Todo.scss';
 
 export const Todo = ({
@@ -13,7 +13,7 @@ export const Todo = ({
     {`task: ${title}`}
     <br />
     {`status: `}
-    <CompletedTask status={completed} />
+    <TaskStatus status={completed} />
     <br />
     <User {...user} />
   </>
