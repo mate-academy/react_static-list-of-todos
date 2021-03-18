@@ -1,10 +1,11 @@
 import React from 'react';
 import { UserType } from '../UserType/UserType';
+import './User.css';
 
 export function User({ user }) {
   return (
     <>
-      <h3>{user.name}</h3>
+      <span className="user">{user.name}</span>
     </>
   );
 }

@@ -5,19 +5,21 @@ import './Todo.css';
 
 export default function Todo({ todo }) {
   return (
-    <li>
-      <h2>
-        {todo.title}
+    <div className="container">
+      <User user={todo.user} />
+      <h2 className="title">
+        {
+          `: ${todo.title}`
+        }
       </h2>
       <p className={todo.completed ? 'completed' : 'uncompleted'}>
         {
           todo.completed
-            ? 'Completed'
-            : 'Not completed'
+            ? '✅'
+            : '❌'
         }
       </p>
-      <User user={todo.user} />
-    </li>
+    </div>
   );
 }
 
