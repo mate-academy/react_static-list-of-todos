@@ -1,5 +1,21 @@
 .list__container {
-  border: 2px solid red;
+  text-align: center;
+  border: 2px solid black;
   border-radius: 20px;
   margin-bottom: 15px;
+}
+
+.isToDo {
+  background: rgb(138, 37, 138);
+  border-radius: 20px;
+  &:hover {
+    background: rgb(228, 108, 228);
+  }
+}
+
+.isDone {
+  background: rgb(11, 133, 11);
+  &:hover {
+    background: rgb(98, 230, 98);
+  }
 }
