@@ -1,15 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { TypeTodo } from '../../types';
 import { User } from '../User';
+import { CompletedTask } from '../CompletedTask';
 import './Todo.scss';
-
-const CompletedTask = ({ status }) => (
-  status ? (
-    <span className="completed">completed</span>
-  ) : (
-    <span className="not-completed">not completed</span>
-  ));
 
 export const Todo = ({
   title,
@@ -25,9 +18,5 @@ export const Todo = ({
     <User {...user} />
   </>
 );
-
-CompletedTask.propTypes = {
-  status: PropTypes.bool.isRequired,
-};
 
 Todo.propTypes = TypeTodo;
