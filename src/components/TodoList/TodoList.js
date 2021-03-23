@@ -5,13 +5,11 @@ import { TodoType } from '../TodoType/TodoType';
 import './TodoList.css';
 
 export default function TodoList({ todos }) {
-  const todoList = todos.map(todo => (
-    <Todo key={todo.id} todo={todo} />
-  ));
-
   return (
     <ul className="list">
-      {todoList}
+      {todos.map(todo => (
+        <Todo key={todo.id} todo={todo} />
+      ))}
     </ul>
   );
 }

@@ -4,9 +4,7 @@ import './User.css';
 
 export function User({ user }) {
   return (
-    <>
-      <span className="user">{user.name}</span>
-    </>
+    <span className="user">{user.name}</span>
   );
 }
 
