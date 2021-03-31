@@ -4,6 +4,13 @@ import './App.scss';
 import todos from './api/todos';
 import users from './api/users';
 
+import { List } from './components/List';
+
+const tasksWithNames = todos.map(todo => ({
+  ...todo,
+  user: users.find(user => todo.userId === user.id).name,
+}));
+
 function App() {
   return (
     <div className="App">
@@ -17,6 +24,7 @@ function App() {
         <span>Users: </span>
         {users.length}
       </p>
+      <List tasks={tasksWithNames} />
     </div>
   );
 }
