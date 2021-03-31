@@ -2,6 +2,17 @@
   width: 50%;
   margin: 10px;
   padding: 20px 0;
-  background-color: thistle;
+  background-color: rgb(216, 175, 214);
+  border: 2px solid black;
   border-radius: 30px;
+}
+
+.done {
+  color: green;
+  text-transform: uppercase;
+}
+
+.do-it {
+  color: rgb(223, 26, 26);
+  text-transform: uppercase;
 }

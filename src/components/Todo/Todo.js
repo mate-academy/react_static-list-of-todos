@@ -9,14 +9,14 @@ export const Todo = ({ title, completed, user }) => (
     <User {...user} />
     {completed ? (
       <>
-        <p>{title}</p>
+        <p className="done">{title}</p>
         <p className="badge rounded-pill bg-success">
           DONE
         </p>
       </>
     ) : (
       <>
-        <p><i>{title}</i></p>
+        <p className="do-it">{title}</p>
         <p className="badge bg-danger">
           DO IT
         </p>
