@@ -1,0 +1,10 @@
+.toDosList {
+  max-width: max-content;
+  list-style: none;
+  font-weight: bold;
+
+  &__item {
+    margin: 15px 0;
+    border-bottom: 1px solid darkgrey;
+  }
+}

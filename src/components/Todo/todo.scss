@@ -1,0 +1,16 @@
+.toDosList {
+  font-weight: bold;
+
+  &__title {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  &__complited {
+    color: green;
+  }
+
+  &__notComplited {
+    color: red;
+  }
+}
