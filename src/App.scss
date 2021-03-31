@@ -1,1 +1,18 @@
-// styles go here
+.item {
+  margin: 10px 0;
+  background-color: rgb(241, 246, 247);
+  border: 1px solid rgb(196, 196, 196);
+  box-shadow: 0 2px 2px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+  &__name {
+    margin: 0 10px;
+  }
+  &__description {
+    margin: 10px 10px 0;
+    font-size: 20px;
+    color: red;
+  }
+}
+
+.complitedTodo {
+  color: green;
+}
