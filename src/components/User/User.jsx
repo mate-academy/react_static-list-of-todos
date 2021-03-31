@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './User.scss';
 
 export const User = ({ name }) => (
@@ -6,3 +7,7 @@ export const User = ({ name }) => (
     <h3>{name}</h3>
   </div>
 );
+
+User.propTypes = {
+  name: PropTypes.string.isRequired,
+}
