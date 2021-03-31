@@ -3,21 +3,35 @@ import './App.scss';
 
 import todos from './api/todos';
 import users from './api/users';
+import { TodoList } from './components/TodoList';
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Static list of todos</h1>
-      <p>
-        <span>Todos: </span>
-        {todos.length}
-      </p>
+  const preparedTodos = todos.map((todo) => {
+    const user = users.find(person => person.id === todo.userId);
+    const copyTodo = { ...todo };
 
-      <p>
-        <span>Users: </span>
-        {users.length}
-      </p>
-    </div>
+    copyTodo.user = user.name;
+
+    return copyTodo;
+  });
+
+  return (
+    <>
+      <div className="App positioned">
+        <h1 className="title is-2">Static list of todos</h1>
+        <p className="title is-4">
+          <span>Todos: </span>
+          {todos.length}
+        </p>
+
+        <p className="title is-4">
+          <span>Users: </span>
+          {users.length}
+        </p>
+      </div>
+
+      <TodoList todos={preparedTodos} />
+    </>
   );
 }
 
