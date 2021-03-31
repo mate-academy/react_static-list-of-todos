@@ -13,7 +13,7 @@ const preparedTodos = todos.map(item => ({
 export const App = () => (
   <div className="app">
     <h1>Static list of todos</h1>
-    <p className="add__todos">
+    <p className="app__todos">
       <span>Todos: </span>
       {todos.length}
     </p>
