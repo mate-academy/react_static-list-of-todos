@@ -1,0 +1,22 @@
+$margin: 50px;
+
+.todo_item {
+  margin: $margin;
+  padding: 10px;
+  border: 6px solid rgba(112, 82, 16, 0.84);
+  border-radius: 25px;
+  background-color: rgba(174, 194, 85, 0.46);
+  box-shadow: 5px 5px 15px rgb(7, 34, 190);
+  font-size: 20px;
+
+  &__completed {
+    color: green;
+    text-decoration: underline;
+
+  }
+
+  &__failed {
+    color: red;
+    text-decoration: underline;
+  }
+}
