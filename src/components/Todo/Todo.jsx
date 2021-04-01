@@ -13,9 +13,9 @@ export const Todo = ({
     {title}
     {' - '}
     {(completed)
-      ? <span>completed</span>
+      ? <span style={{ color: 'yellowgreen' }}>completed</span>
       : (
-        <span style={{ color: 'yellowgreen' }}>
+        <span style={{ color: 'red' }}>
           <strong>not completed</strong>
         </span>
       )
