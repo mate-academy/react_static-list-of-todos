@@ -6,19 +6,14 @@ import { TodoList } from './components/TodoList';
 import todos from './api/todos';
 import users from './api/users';
 
+const preparedTodos = todos.map(todo => (
+  {
+    ...todo,
+    user: users.find(client => client.id === todo.userId),
+  }
+));
+
 function App() {
-  const preparedTodos = todos.reduce((acc, cur) => {
-    const user = users.find(client => client.id === cur.userId);
-
-    return [
-      ...acc,
-      {
-        ...cur,
-        user,
-      },
-    ];
-  }, []);
-
   return (
     <div className="App">
       <h1 className="app__title">Static list of todos</h1>
