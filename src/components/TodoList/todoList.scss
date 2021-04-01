@@ -1,0 +1,12 @@
+.list {
+  list-style: none;
+
+  &__item {
+    width: 50%;
+    padding-block: 10px;
+    margin: 10px auto;
+    text-align: center;
+    background-color: rgb(204, 197, 197);
+    border-radius: 10px;
+  }
+}
