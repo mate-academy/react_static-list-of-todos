@@ -7,7 +7,7 @@ import { TodoList } from './components/TodoList';
 
 const preparedTodos = todos.map(todo => ({
   ...todo,
-  user: users.find(user => todo.userId === user.id).name,
+  user: users.find(user => todo.userId === user.id),
 }));
 
 export function App() {

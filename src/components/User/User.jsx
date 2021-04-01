@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 
 import './user.scss';
 
-export const User = ({ name }) => (
+export const User = ({ user }) => (
   <span className="user">
-    {name}
+    {user.name}
   </span>
 );
 
 User.propTypes = {
-  name: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
 };

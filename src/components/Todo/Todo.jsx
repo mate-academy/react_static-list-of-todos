@@ -6,9 +6,13 @@ import { User } from '../User';
 
 import './todo.scss';
 
-export const Todo = ({ user, title, completed }) => (
+export const Todo = ({
+  user,
+  title,
+  completed,
+}) => (
   <div className="todo_item">
-    <User name={user} />
+    <User user={user} />
     <div
       className={classNames(
         { todo_item__completed: completed },
@@ -23,7 +27,9 @@ export const Todo = ({ user, title, completed }) => (
 );
 
 Todo.propTypes = {
-  user: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }),
 };
