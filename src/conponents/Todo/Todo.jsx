@@ -10,7 +10,7 @@ export const Todo = ({
   completed,
 }) => (
   <>
-    <User name={user} />
+    <User {...user} />
     <p className="todo__title">
       {title}
       {' - '}
@@ -23,7 +23,9 @@ export const Todo = ({
 );
 
 Todo.propTypes = {
-  user: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
 };
