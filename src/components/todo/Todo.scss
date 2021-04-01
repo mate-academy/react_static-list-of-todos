@@ -1,0 +1,30 @@
+.container {
+  box-sizing: border-box;
+  display: grid;
+  width: 300px;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-shadow: 10px 5px 5px black;
+  border-radius: 50%;
+  background-color: whitesmoke;
+
+  &____completed {
+    color: green;
+
+  }
+
+  &__not-completed {
+    color: red;
+    
+  }
+
+  &__title {
+    font-size: medium;
+    font-style: italic;
+  }
+  
+}
