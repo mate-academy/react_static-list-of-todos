@@ -5,7 +5,7 @@ import './App.scss';
 import todos from './api/todos';
 import users from './api/users';
 
-const preparedTodos = [...todos].map((todo) => {
+const preparedTodos = todos.map((todo) => {
   const currentUser = users.find(person => person.id === todo.userId);
 
   return {
