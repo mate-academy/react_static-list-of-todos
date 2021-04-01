@@ -1,0 +1,22 @@
+.todo__status {
+  color: red;
+
+  &--completed {
+    color: green;
+  }
+}
+
+.todo__title {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.todo__title::first-letter {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: 400;
+}
+
+.todo__title::after {
+  content: ".";
+}
