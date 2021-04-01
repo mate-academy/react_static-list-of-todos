@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const User = ({ name }) => (
+export const User = ({ user }) => (
   <span>
-    {name.toUpperCase()}
+    {user.name.toUpperCase()}
   </span>
 );
 
 User.propTypes = {
-  name: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
 };
