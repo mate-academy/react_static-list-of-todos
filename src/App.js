@@ -6,14 +6,10 @@ import users from './api/users';
 import { TodoList } from './components/TodoList';
 
 function App() {
-  const preparedTodos = todos.map((todo) => {
-    const user = users.find(person => person.id === todo.userId);
-    const copyTodo = { ...todo };
-
-    copyTodo.user = user.name;
-
-    return copyTodo;
-  });
+  const preparedTodos = todos.map(todo => ({
+    ...todo,
+    user: users.find(person => person.id === todo.userId),
+  }));
 
   return (
     <>

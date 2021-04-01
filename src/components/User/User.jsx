@@ -1,12 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './user.scss';
+import { UserType } from '../../types';
 
-export const User = ({ username }) => (
+export const User = ({ user }) => (
   <p className="user">
     User:
-    { username }
+    { user.name }
   </p>
 );
 
-User.propTypes = PropTypes.string.isRequired;
+User.propTypes = UserType.isRequired;

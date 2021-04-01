@@ -5,7 +5,7 @@ import { TodoType } from '../../types';
 
 export const Todo = ({ title, completed, user }) => (
   <div className="box">
-    <User username={user} />
+    <User user={user} />
     <div className="todo">
       <p className="title is-2">{title}</p>
       <img
