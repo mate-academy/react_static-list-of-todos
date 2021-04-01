@@ -9,14 +9,14 @@ export const Todo = ({
   completed,
   user,
 }) => (
-  <div className="conteiner">
+  <div className="container">
     <User user={user.name} />
     Task:
-    <p className="conteiner__title">{title}</p>
+    <p className="container__title">{title}</p>
     Result:
     {
-     (completed) ? <h3 className="conteiner__done">Done</h3>
-       : <h3 className="conteiner__no">No</h3>
+     (completed) ? <h3 className="container____completed">Done</h3>
+       : <h3 className="container__not-completed">No</h3>
     }
   </div>
 );
@@ -26,7 +26,7 @@ const TodoType = PropTypes.shape({
   completed: PropTypes.bool,
   user: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
     }),
   ),
 });

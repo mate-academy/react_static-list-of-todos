@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import { Todo } from '../todo';
 
 export const TodoList = ({ preparedTodos }) => (
-  preparedTodos.map(ele => (
-    <div key={ele.id}>
-      <Todo {...ele} />
+  preparedTodos.map(todo => (
+    <div key={todo.id}>
+      <Todo {...todo} />
     </div>
   ))
 );

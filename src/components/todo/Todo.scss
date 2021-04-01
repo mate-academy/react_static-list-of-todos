@@ -1,4 +1,4 @@
-.conteiner {
+.container {
   box-sizing: border-box;
   display: grid;
   width: 300px;
@@ -12,12 +12,12 @@
   border-radius: 50%;
   background-color: whitesmoke;
 
-  &__done {
+  &____completed {
     color: green;
 
   }
 
-  &__no {
+  &__not-completed {
     color: red;
     
   }
