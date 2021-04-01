@@ -23,8 +23,12 @@ export const Todo = ({
 
 const TodoType = PropTypes.shape({
   title: PropTypes.string.isRequired,
-  user: PropTypes.string.isRequired,
   completed: PropTypes.bool,
+  user: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }),
+  ),
 });
 
 Todo.propTypes = TodoType.isRequired;
