@@ -7,9 +7,7 @@ export const User = ({ user }) => (
 );
 
 User.propTypes = {
-  user: PropTypes.objectOf(
-    PropTypes.shape({
+  user: PropTypes.shape({
       name: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
+    }).isRequired,
 };
