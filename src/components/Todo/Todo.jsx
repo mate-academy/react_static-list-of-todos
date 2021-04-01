@@ -8,10 +8,10 @@ export const Todo = ({
   title,
   completed,
 }) => (
-  <div className="toDosList">
-    <User name={user} />
+  <div className="todo-list">
+    <User user={user} />
     <br></br>
-    <span className="toDosList__title">
+    <span className="todo-list__title">
       {' '}
       <strong>Task:</strong>
       {' '}
@@ -19,9 +19,9 @@ export const Todo = ({
     </span>
     {' - '}
     {(completed)
-      ? <span className="toDosList__complited">completed</span>
+      ? <span className="todo-list__complited">completed</span>
       : (
-        <span className="toDosList__notComplited">
+        <span className="todo-list__notComplited">
           not completed
         </span>
       )
@@ -30,7 +30,9 @@ export const Todo = ({
 );
 
 Todo.propTypes = {
-  user: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }),
 };
