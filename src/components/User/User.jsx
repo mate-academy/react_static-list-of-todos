@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { UserType } from '../../types';
 
 export const User = ({ name }) => (
   <>
@@ -9,4 +9,4 @@ export const User = ({ name }) => (
   </>
 );
 
-User.propTypes = PropTypes.string.isRequired;
+User.propTypes = UserType.isRequired;

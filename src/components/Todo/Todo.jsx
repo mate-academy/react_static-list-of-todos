@@ -5,7 +5,7 @@ import { TodoType } from '../../types';
 
 export const Todo = ({ user, title, completed }) => (
   <>
-    <User name={user} />
+    <User name={user.name} />
     <p className="todo-item__title">
       {title}
     </p>
