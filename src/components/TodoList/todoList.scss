@@ -1,0 +1,10 @@
+.list {
+  list-style: none;
+
+  &__item {
+    width: 40%;
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+    background-color: lavender;
+  }
+}
