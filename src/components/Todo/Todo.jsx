@@ -5,7 +5,7 @@ import { User } from '../User';
 
 export const Todo = ({ title, completed, user }) => (
   <div className="item todoList__item">
-    <User name={user.name} />
+    <User user={user} />
     <p
       className={classNames('item__description', { complitedTodo: completed })}
     >

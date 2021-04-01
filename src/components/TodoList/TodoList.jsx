@@ -5,9 +5,9 @@ import { Todo } from '../Todo';
 export const TodoList = ({ list }) => (
   <div className="todoList">
     {list.map(todo => (
-      <>
-        <Todo key={todo.id} {...todo} />
-      </>
+      <React.Fragment key={todo.id}>
+        <Todo {...todo} />
+      </React.Fragment>
     ))}
   </div>
 );
