@@ -8,7 +8,7 @@ import { TodoList } from './components/TodoList';
 
 const tasksWithNames = todos.map(todo => ({
   ...todo,
-  user: users.find(user => todo.userId === user.id).name,
+  user: users.find(user => todo.userId === user.id),
 }));
 
 function App() {
