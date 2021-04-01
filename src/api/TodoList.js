@@ -1,10 +1,16 @@
-// import React from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Todo } from './Todo';
 import './Styles.scss';
 
 export const TodoList = ({ todos }) => (
-  todos.map(a => Todo(a))
+  todos.map(todo => (
+    <Todo
+      title={todo.title}
+      completed={todo.completed}
+      user={todo.user}
+    />
+  ))
 );
 
 TodoList.propTypes = { todos: PropTypes.arrayOf(

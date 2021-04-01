@@ -8,8 +8,7 @@ export const Todo = ({ title, completed, user }) => (
     <ul>
       <li className="title">{title}</li>
       <li className={completed ? 'completed' : 'uncompleted'}>
-        {(completed) ? ('C') : ('Unc')}
-        omplited
+        {(completed) ? ('Complited') : ('Uncomplited')}
       </li>
       <li><User user={user} /></li>
     </ul>

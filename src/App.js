@@ -5,10 +5,14 @@ import todos from './api/todos';
 import users from './api/users';
 import { TodoList } from './api/TodoList';
 
-const preparedTodos = todos.map((a) => {
-  const result = a;
+const preparedTodos = todos.map((todo) => {
+  const result = todo;
 
-  result.user = users.find(u => u.id === a.userId).name;
+  if (users.find(u => u.id === todo.userId).name !== undefined) {
+    result.user = users.find(u => u.id === todo.userId).name;
+  } else {
+    result.user = 'unknown user';
+  }
 
   return result;
 });
