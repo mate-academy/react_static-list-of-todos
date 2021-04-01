@@ -6,5 +6,7 @@ export const User = ({ user }) => (
 )
 
 User.propTypes = {
-  user: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired
+  }),
 }

@@ -6,7 +6,7 @@ import users from './api/users';
 
 import { TodoList } from './components/TodoList';
 
-const tasksWithNames = todos.map(todo => ({
+const tasksWithUsers = todos.map(todo => ({
   ...todo,
   user: users.find(user => todo.userId === user.id),
 }));
@@ -24,7 +24,7 @@ function App() {
         <span>Users: </span>
         {users.length}
       </p>
-      <TodoList tasks={tasksWithNames} />
+      <TodoList tasks={tasksWithUsers} />
     </div>
   );
 }
