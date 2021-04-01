@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Card.scss';
+import { User } from '../User'
 
 export const Card = ({ title, completed, user }) =>(
   <div className='card'>
-    <h2 className='taskName'>{user}</h2>
+    <User user={user} />
     <p className='taskDescription'>{title}</p>
     {completed
     ?
