@@ -1,0 +1,9 @@
+.todo-item__completed {
+  &--true {
+    color: green;
+  }
+
+  &--false {
+    color: red;
+  }
+}
