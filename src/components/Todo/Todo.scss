@@ -1,0 +1,27 @@
+.todo-list__item {
+  margin: 20px;
+  width: 600px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  border: 2px gray solid;
+  border-radius: 20px;
+
+  &__title {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  &__status {
+    color: red;
+    font-size: 60px;
+
+    &--completed {
+      color: green;
+    }
+  }
+}
