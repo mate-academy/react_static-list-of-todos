@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './user.scss';
 
-export function User({name}) {
+export function User({ name }) {
   return (
-    <div class="name">
+    <div className="name">
       <strong>{name}</strong>
     </div>
   );
@@ -12,4 +12,4 @@ export function User({name}) {
 
 User.propTypes = {
   name: PropTypes.string.isRequired,
-}
+};
