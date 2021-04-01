@@ -1,0 +1,29 @@
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+}
+
+.user {
+  color: black;
+}
+
+.title {
+  font-size: 20px;
+  color: black;
+}
+
+.completed {
+  color: green;
+}
+
+.uncompleted {
+  color: red;
+  text-decoration: underline;
+}
+
+.frame {
+  background-color: lightgoldenrodyellow;
+  margin: 5px;
+  border: 3px solid red;
+  border-radius: 0 30px 0 0;
+}
