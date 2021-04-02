@@ -13,10 +13,10 @@ export const TodoList = ({ todoList }) => (
   </ul>
 );
 
-const propShapeOfId = PropTypes.shape({
+const todoShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
 });
 
 TodoList.propTypes = {
-  todoList: PropTypes.arrayOf(propShapeOfId).isRequired,
+  todoList: PropTypes.arrayOf(todoShape).isRequired,
 };

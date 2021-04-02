@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { User } from '../User';
 
-export const Todo = ({ user, title, completed }) => (
+export const Todo = ({ title, completed, user }) => (
   <>
     {(completed)
       ? (
         <div className="todo-list__item-wrapper todo-list__item-wrapper--green">
           <>
-            <User name={user} />
+            <User {...user} />
             <p>{title}</p>
             <span
               className="todo-list__completed todo-list__completed--green"
@@ -21,7 +21,7 @@ export const Todo = ({ user, title, completed }) => (
       : (
         <div className="todo-list__item-wrapper todo-list__item-wrapper--red">
           <>
-            <User name={user} />
+            <User {...user} />
             <p>{title}</p>
             <span
               className="todo-list__completed todo-list__completed--red"
@@ -35,8 +35,12 @@ export const Todo = ({ user, title, completed }) => (
   </>
 );
 
+const userShape = {
+  name: PropTypes.string.isRequired,
+};
+
 Todo.propTypes = {
-  user: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
+  user: PropTypes.shape(userShape).isRequired,
 };
