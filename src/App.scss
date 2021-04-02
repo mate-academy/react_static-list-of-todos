@@ -1,1 +1,25 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif, Arial;
+  margin: 0;
+  color: #4c3535;
+}
+
+.todo-app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 15px;
+  text-align: center;
+
+  &__subheading {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  &__heading {
+    font-size: 60px;
+  }
+}
