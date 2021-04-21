@@ -1,19 +1,17 @@
 import React from 'react';
 import { TodoList } from './components/TodoList';
-import { Todo } from './components/Todo';
+
 import './App.scss';
 
 import todos from './api/todos';
 import users from './api/users';
 
-const preparedTodos = todos.map((todo) => {
-  const objUser = users.find(user => user.id === todo.userId);
-
-  return {
+const preparedTodos = todos.map(todo => (
+  {
     ...todo,
-    user: objUser,
-  };
-});
+    user: users.find(user => user.id === todo.userId),
+  }
+));
 
 function App() {
   return (
@@ -22,9 +20,7 @@ function App() {
       <ul>
         <TodoList preparedTodos={preparedTodos} />
       </ul>
-      <ul>
-        <Todo todos={todos} />
-      </ul>
+
       <p>
         <span>Todos: </span>
         {todos.length}

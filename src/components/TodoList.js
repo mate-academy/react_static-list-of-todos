@@ -1,28 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Todo } from './Todo';
 
 export const TodoList = ({ preparedTodos }) => (
   <>
-    {preparedTodos.map(preparedTodo => (
-      <li key={preparedTodo.id}>
-        <p>{preparedTodo.title}</p>
-        <p>{preparedTodo.completed}</p>
-        <p>{preparedTodo.user.id}</p>
-        <p>{preparedTodo.user.name}</p>
-        <p>{preparedTodo.user.email}</p>
-        <p>{preparedTodo.user.address.street}</p>
-        <p>{preparedTodo.user.address.suite}</p>
-        <p>{preparedTodo.user.address.city}</p>
-        <p>{preparedTodo.user.address.zipcode}</p>
-        <p>{preparedTodo.user.address.geo.lat}</p>
-        <p>{preparedTodo.user.address.geo.lng}</p>
-        <p>{preparedTodo.user.phone}</p>
-        <p>{preparedTodo.user.website}</p>
-        <p>{preparedTodo.user.company.name}</p>
-        <p>{preparedTodo.user.company.catchPhrase}</p>
-        <p>{preparedTodo.user.company.bs}</p>
-      </li>
-    ))}
+    <Todo todos={preparedTodos} />
   </>
 );
 
