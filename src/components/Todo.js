@@ -2,24 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { User } from './User';
 
-import users from '../api/users';
-
-export const Todo = ({ todos }) => (
+export const Todo = ({ todo }) => (
   <>
-    {todos.map(todo => (
-      <li key={todo.id}>
-        {todo.title}
-        {todo.completed}
-        <User users={users} />
-      </li>
-    ))}
+    {todo.title}
+    {todo.completed}
+    <User user={todo.user} />
   </>
 );
 
 Todo.propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
+  todo: PropTypes.shape({
     completed: PropTypes.bool.isRequired,
     title: PropTypes.string.isRequired,
-  }).isRequired).isRequired,
+    user: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
 };
