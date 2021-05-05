@@ -1,9 +1,11 @@
 # React static list of TODOs
+
 - Replace `<your_account>` with your Github username in the
-  [DEMO LINK](https://<your_account>.github.io/react_static-list-of-todos/)
+  [DEMO LINK](https://Vasilkoff.github.io/react_static-list-of-todos/)
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
 
 ## Task
+
 By using [todos.js](./src/api/todos.js) and [users.js](./src/api/users.js) as
 modules to your React application, create and display a list of all the TODO
 items. Alongside each item display information about the user it belongs to.
