@@ -1,0 +1,16 @@
+.todo-item {
+  font-size: 18px;
+  padding: 0.75em 1em;
+  margin: 1em;
+  border: 2px solid antiquewhite;
+  border-radius: 1em;
+
+  &__title {
+    margin-left: 0.5em;
+  }
+
+  &__checkbox:checked + &__title {
+    text-decoration-line: line-through;
+    color: #888;
+  }
+}
