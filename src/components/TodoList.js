@@ -3,13 +3,10 @@ import PropTypes from 'prop-types';
 import { Todo } from './Todo';
 
 export const TodoList = ({ todos }) => (
-  <ul>
+  <ul className="todo-list">
     { todos.map(todo => (
       <Todo
-        key={todo.id}
-        title={todo.title}
-        completed={todo.completed}
-        user={todo.user}
+        {...todo}
       />
     ))}
   </ul>
