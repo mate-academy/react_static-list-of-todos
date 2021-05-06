@@ -1,1 +1,48 @@
 // styles go here
+.app-title {
+  text-align: center;
+  font-size: 25px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: dimgray;
+  text-transform: uppercase;
+}
+.todo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.complete,
+.not-complete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.todo-title {
+  font-size: 16px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: dimgray;
+}
+
+.todo-user {
+  font-size: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: dimgray;
+  text-transform: uppercase;
+}
+
+.complete {
+  background: lightgreen;
+}
+.not-complete {
+  background: lightcoral;
+}
