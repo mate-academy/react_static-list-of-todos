@@ -1,0 +1,27 @@
+@import '../Todo/Todo.scss';
+
+.todolist {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 10px;
+  background-color: silver;
+  padding: 10px;
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: cornflowerblue;
+    list-style: none;
+    width: 500px;
+    height: 400px;
+    border: 3px solid black;
+    padding-bottom: 50px;
+  }
+  
+  .todo {
+
+  }
+}
+

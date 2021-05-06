@@ -1,0 +1,22 @@
+@import '../User/User.scss';
+
+.card {
+
+  .todo {
+    background-color: lightseagreen;
+    text-align: center;
+
+    &__title {
+      font-weight: 100;
+    }
+
+    &__status {
+      font-weight: 100;
+    }
+  }
+
+  .user {
+  
+  }
+}
+
