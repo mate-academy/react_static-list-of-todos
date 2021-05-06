@@ -1,0 +1,22 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  text-align: center;
+  font-size: 25px;
+  &__name {
+    font-size: 30px;
+    font-weight: bold;
+
+  }
+
+  &__phone {
+    font-style: italic;
+  }
+
+  &__email {
+    text-decoration: underline;
+  }
+
+}

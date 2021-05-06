@@ -1,0 +1,53 @@
+.card {
+
+  .todo {
+    background-color: rgb(216, 216, 173);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 2px 20px;
+    flex-grow: 1;
+    align-items: center;
+    letter-spacing: 1px;
+
+    &__title {
+      font-size: 25px;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+
+    }
+
+    &__is-completed {
+      position: relative;
+      font-size: 20px;
+      font-weight: bold;
+      left: -20px;
+
+      &::after {
+
+        position: absolute;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        content: "";
+        left: 120%;
+        bottom: -20%;
+        width: 30px;
+        height: 30px;
+      }
+
+      &--true::after {
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg");
+      }
+
+      &--false::after {
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/5f/Icon_Simple_Error.png");
+      }
+    }
+  }
+
+  .user {
+    background-color: rgb(199, 175, 175);
+    flex-grow: 4;
+  }
+}

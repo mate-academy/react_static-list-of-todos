@@ -4,6 +4,17 @@ import './App.scss';
 import todos from './api/todos';
 import users from './api/users';
 
+import { TodoList } from './components/TodoList';
+
+const preparedTodos = users.map((user) => {
+  const obj = {};
+
+  obj.user = user;
+  obj.todos = todos.filter(todo => user.id === todo.userId);
+
+  return obj;
+});
+
 function App() {
   return (
     <div className="App">
@@ -12,12 +23,13 @@ function App() {
         <span>Todos: </span>
         {todos.length}
       </p>
-
       <p>
         <span>Users: </span>
         {users.length}
       </p>
+      <TodoList preparedList={preparedTodos} />
     </div>
+
   );
 }
 
