@@ -1,0 +1,24 @@
+@import "../Todo/Todo.scss";
+
+.todos-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0 ;
+
+  .card {
+    display: flex;
+    border: 1px solid #000;
+    margin: 20px 0;
+    box-shadow: 0 0 20px rgb(82, 82, 82);
+    background-color: rgb(216, 225, 225);
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+    width: 700px;
+    min-height: 300px;
+    padding: 10px 15px;
+  }
+}
