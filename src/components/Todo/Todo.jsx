@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 
 import { User } from '../User';
 
-export const Todo = ({ user, todo }) => (
+export const Todo = ({ user, title, completed }) => (
   <>
     <div className="todo">
-      <span className="todo__title">{todo.title}</span>
+      <span className="todo__title">{title}</span>
       <span className={
-        `todo__is-completed todo__is-completed--${
-          todo.completed ? 'true' : 'false'
+        `todo__status todo__status${completed && '--completed'
         }`
       }
       >
@@ -17,16 +16,14 @@ export const Todo = ({ user, todo }) => (
       </span>
     </div>
     <div className="user">
-      <User user={user} />
+      <User {...user} />
     </div>
   </>
 );
 
 Todo.propTypes = {
-  todo: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired,
-  }).isRequired,
+  title: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
   user: PropTypes.shape({
     name: PropTypes.string.isRequired,
     phone: PropTypes.string.isRequired,

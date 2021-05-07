@@ -2,24 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './User.scss';
 
-export const User = ({ user }) => (
+export const User = ({ name, phone, email }) => (
   <>
-    <div className="user__name">{user.name}</div>
-    <div className="user__phone">{user.phone}</div>
-    <div className="user__email">{user.email}</div>
+    <div className="user__name">{name}</div>
+    <div className="user__phone">{phone}</div>
+    <div className="user__email">{email}</div>
   </>
 );
 
 User.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    phone: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-  }).isRequired,
+  name: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
 };
-
-// User.defaultProps = {
-//   user: PropTypes.shape({
-//     email: '<< No contain email >>',
-//   }),
-// };

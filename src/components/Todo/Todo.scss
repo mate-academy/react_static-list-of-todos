@@ -18,7 +18,7 @@
 
     }
 
-    &__is-completed {
+    &__status {
       position: relative;
       font-size: 20px;
       font-weight: bold;
@@ -27,6 +27,7 @@
       &::after {
 
         position: absolute;
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/5f/Icon_Simple_Error.png");
         background-size: 30px;
         background-repeat: no-repeat;
         content: "";
@@ -36,18 +37,14 @@
         height: 30px;
       }
 
-      &--true::after {
+      &--completed::after {
         background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg");
-      }
-
-      &--false::after {
-        background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/5f/Icon_Simple_Error.png");
       }
     }
   }
 
   .user {
     background-color: rgb(199, 175, 175);
-    flex-grow: 4;
+    flex-grow: 2;
   }
 }

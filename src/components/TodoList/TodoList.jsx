@@ -5,14 +5,11 @@ import { Todo } from '../Todo';
 export const TodoList = ({ preparedList }) => (
   <ul className="todos-list">
     {
-      preparedList.map(obj => obj.todos.map(todo => (
+      preparedList.map(todo => (
         <li className="card" key={todo.id}>
-          <Todo
-            user={obj.user}
-            todo={todo}
-          />
+          <Todo {...todo} />
         </li>
-      )))
+      ))
     }
   </ul>
 );
@@ -20,12 +17,7 @@ export const TodoList = ({ preparedList }) => (
 TodoList.propTypes = {
   preparedList: PropTypes.arrayOf(
     PropTypes.shape({
-      user: PropTypes.object.isRequired,
-      todos: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.number.isRequired,
-        }),
-      ).isRequired,
+      id: PropTypes.number.isRequired,
     }).isRequired,
   ).isRequired,
 };
