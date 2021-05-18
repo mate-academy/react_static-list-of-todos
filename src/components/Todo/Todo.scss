@@ -1,0 +1,31 @@
+.todo {
+  display: grid;
+  grid-template-columns: 1fr 5fr 2fr;
+
+  height: 40px;
+  margin-bottom: 3px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  &-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: lightcoral;
+    &__completed {
+      background-color: lightgreen;
+    }
+  }
+
+  &-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    background-color: lightslategrey;
+
+  }
+}
