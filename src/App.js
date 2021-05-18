@@ -1,17 +1,34 @@
 import React from 'react';
 import './App.scss';
 
+import TodoList from './components/TodoList/TodoList';
+
 import todos from './api/todos';
 import users from './api/users';
+
+const preparedTodos = todos.map((todo) => {
+  const todoCopy = { ...todo };
+
+  users.forEach((user) => {
+    if (user.id === todo.userId) {
+      todoCopy.user = user;
+    }
+  });
+
+  return todoCopy;
+});
 
 function App() {
   return (
     <div className="App">
       <h1>Static list of todos</h1>
-      <p>
-        <span>Todos: </span>
+      <div>
+        <span>
+          Todos:
+          <TodoList preparedTodos={preparedTodos} />
+        </span>
         {todos.length}
-      </p>
+      </div>
 
       <p>
         <span>Users: </span>
