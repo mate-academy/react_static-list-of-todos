@@ -1,0 +1,22 @@
+.todo_list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.todo_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  height: 100px;
+  background-color: #db9cff;
+  border: 3px solid purple;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
