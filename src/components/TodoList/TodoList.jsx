@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// eslint-disable-next-line
-import { Todo } from '../Todo/';
+import { Todo } from '../Todo';
 
 import './TodoList.scss';
 

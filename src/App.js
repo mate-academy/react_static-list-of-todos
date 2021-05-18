@@ -1,6 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line
-import { TodoList } from './components/TodoList/';
+import { TodoList } from './components/TodoList';
 import './App.scss';
 
 import todos from './api/todos';

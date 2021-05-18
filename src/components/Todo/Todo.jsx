@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// eslint-disable-next-line
-import { User } from '../User/';
+import { User } from '../User';
 
 import './Todo.scss';
 
