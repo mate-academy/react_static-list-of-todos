@@ -15,11 +15,9 @@ export function Todo({ title, completed, user }) {
 
 Todo.propTypes = {
   title: PropTypes.string.isRequired,
-  user: PropTypes.objectOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-    }),
-  ).isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
   completed: PropTypes.bool,
 };
 
