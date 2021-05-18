@@ -6,9 +6,7 @@ import './User.scss';
 const User = function({ name }) {
   return (
     <p className="userName">
-      Name:
-      {' '}
-      {name}
+      {`Name: ${name}`}
     </p>
   );
 };

@@ -11,16 +11,10 @@ const Todo = function({ title, completed }) {
   return (
     <>
       <span>
-        Task:
-        {title}
-        {' '}
-        ---
-        {' '}
+        {`Task: ${title} --- `}
       </span>
       <span className={status}>
-        {' '}
         {`${completed}`}
-        {' '}
       </span>
     </>
   );
