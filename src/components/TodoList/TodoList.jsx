@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 import Todo from '../Todo/Todo';
 import User from '../User/User';
 
+import './TodoList.scss';
+
 const TodoList = function({ preparedTodos }) {
   return (
-    <ul>
+    <ul className="TodoList">
       {preparedTodos.map(prepTodo => (
-        <li key={prepTodo.id}>
+        <li className="Todo" key={prepTodo.id}>
           <Todo {...prepTodo} />
           <br />
           <User {...prepTodo.user} />

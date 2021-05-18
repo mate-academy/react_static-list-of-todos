@@ -1,16 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './Todo.scss';
+
 const Todo = function({ title, completed }) {
+  const statusBool = completed;
+
+  const status = statusBool ? 'finished' : 'unfinished';
+
   return (
     <>
-      Task:
-      {' '}
-      {title}
-      {' - '}
-      Status:
-      {' '}
-      {`${completed}`}
+      <span>
+        Task:
+        {title}
+        {' '}
+        ---
+        {' '}
+      </span>
+      <span className={status}>
+        {' '}
+        {`${completed}`}
+        {' '}
+      </span>
     </>
   );
 };
