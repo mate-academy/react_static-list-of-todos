@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Todo } from './Todo';
+// eslint-disable-next-line
+import { Todo } from '../Todo/';
+
+import './TodoList.scss';
 
 export const TodoList = ({ todos }) => (
-  <ul>
+  <ul className="todoList">
     {todos.map(todo => (
-      <li key={todo.id}>
+      <li key={todo.id} className="todoList__item">
         <Todo {...todo} />
       </li>
     ))}
