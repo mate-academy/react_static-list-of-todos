@@ -1,1 +1,38 @@
-// styles go here
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  &__listItem {
+    display: flex;
+    justify-content: space-between;
+
+    width: 675px;
+    margin: 15px;
+    padding: 15px;
+
+    border: 1px solid blueviolet;
+    border-radius: 8px;
+
+    font-size: 14px;
+    background-color: blanchedalmond;
+  }
+
+  &__done {
+    color: green;
+    font-weight: 500;
+  }
+
+  &__not-done {
+    color: red;
+    font-weight: 700;
+  }
+
+  &__user-name {
+    padding: 10px 0;
+  }
+}
