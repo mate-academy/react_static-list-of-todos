@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Todo } from '../Todo';
-import users from '../../api/users';
 
-export const TodoList = ({ todos }) => (
+export const TodoList = ({ todoList }) => (
   <ul>
-    {todos.map(todo => (
+    {todoList.map(todo => (
       <li key={todo.id}>
         <Todo
           title={todo.title}
           completed={todo.completed}
-          user={users.find(user => user.id === todo.userId)}
+          user={todo.user}
         />
       </li>
     ))}
@@ -18,9 +17,13 @@ export const TodoList = ({ todos }) => (
 );
 
 TodoList.propTypes = {
-  todos: PropTypes.arrayOf(),
+  todoList: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }),
+  ),
 };
 
 TodoList.defaultProps = {
-  todos: [],
+  todoList: [],
 };

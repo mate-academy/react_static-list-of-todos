@@ -3,15 +3,17 @@ import PropTypes from 'prop-types';
 import { User } from '../User';
 
 export const Todo = ({ title, completed, user }) => (
-  <p>
+  <div>
     <h2>{title}</h2>
     <b>{` ${completed} `}</b>
     <User {...user} />
-  </p>
+  </div>
 );
 
 Todo.propTypes = {
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
-  user: PropTypes.objectOf().isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
 };
