@@ -11,11 +11,10 @@ function findUser(userId) {
 }
 
 const preparedTodos = todos.map((todo) => {
-  const copy = { ...todo };
-
-  todos.forEach((elem) => {
-    copy.user = findUser(elem.userId);
-  });
+  const copy = {
+    ...todo,
+    user: findUser(todo.userId),
+  };
 
   return copy;
 });
