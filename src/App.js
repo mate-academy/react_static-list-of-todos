@@ -7,13 +7,10 @@ import todos from './api/todos';
 import users from './api/users';
 
 const preparedTodos = todos.map((todo) => {
-  const todoCopy = { ...todo };
-
-  users.forEach((user) => {
-    if (user.id === todo.userId) {
-      todoCopy.user = user;
-    }
-  });
+  const todoCopy = {
+    ...todo,
+    user: users.find(user => user.id === todo.userId),
+  };
 
   return todoCopy;
 });
