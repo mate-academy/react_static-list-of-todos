@@ -1,0 +1,32 @@
+.App {
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    padding-bottom: 20px;
+
+    background-color: rgb(235, 235, 235);
+    border-radius: 25px;
+
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+
+    text-align: center;
+  }
+
+  &__title {
+    color: rgb(177, 38, 38);
+  }
+
+  &__completed {
+    color: green;
+  }
+
+  &__in-work {
+    color: red;
+  }
+
+  &__name {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+}
