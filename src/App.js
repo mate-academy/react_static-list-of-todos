@@ -1,8 +1,18 @@
 import React from 'react';
 import './App.scss';
+import TodoList from './components/TodoList';
 
 import todos from './api/todos';
 import users from './api/users';
+
+const preparedTodos = todos.map((todo) => {
+  const copy = {
+    ...todo,
+    user: users.find(({ id }) => id === todo.userId),
+  };
+
+  return copy;
+});
 
 function App() {
   return (
@@ -10,7 +20,7 @@ function App() {
       <h1>Static list of todos</h1>
       <p>
         <span>Todos: </span>
-        {todos.length}
+        <TodoList {...preparedTodos} />
       </p>
 
       <p>
