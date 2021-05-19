@@ -1,0 +1,20 @@
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+.boolean {
+  text-transform: capitalize;
+  text-align: right;
+  font-weight: bold;
+  font-size: 15px;
+
+  &__true {
+    color: green;
+  }
+
+  &__false {
+    color: red;
+  }
+}
