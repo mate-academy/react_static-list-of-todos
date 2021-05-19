@@ -1,0 +1,16 @@
+.card {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+    background-color: #f0ffff;
+  }
+
+  &__success {
+    color: #0c0;
+  }
+
+  &__failed {
+    color: #f60;
+  }
+}
