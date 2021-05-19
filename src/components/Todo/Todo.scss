@@ -1,8 +1,9 @@
 .Todo {
   background-color: rgb(247, 240, 240);
   padding: 10px;
-  margin: 20px;
+  margin: 30px auto;
   border-radius: 20px;
+  max-width: 800px;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
   &__title {
     text-align: center;
