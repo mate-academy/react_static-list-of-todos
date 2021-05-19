@@ -1,29 +1,25 @@
 import React from 'react';
 import './Todo.scss';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import User from '../User/User';
 
-function Todo({ todo, user }) {
+function Todo({ completed, title, user }) {
   return (
     <div className="todo">
-      {/* eslint-disable-next-line max-len */}
-      <div className={`todo-status ${todo.completed && 'todo-status__completed'}`}>
-        {todo.completed ? '✔' : '❌' }
+      <div className={classNames('todo-status', { completed })}>
+        {completed ? '✔' : '❌' }
       </div>
-      <div className="todo-title">{todo.title}</div>
+      <div className="todo-title">{title}</div>
       <User user={user} />
     </div>
   );
 }
 
 Todo.propTypes = {
-  todo: PropTypes.shape({
-    completed: PropTypes.bool.isRequired,
-    title: PropTypes.string.isRequired,
-  }).isRequired,
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-  }).isRequired,
+  completed: PropTypes.bool.isRequired,
+  title: PropTypes.string.isRequired,
+  user: PropTypes.shape({}).isRequired,
 };
 
 export default Todo;

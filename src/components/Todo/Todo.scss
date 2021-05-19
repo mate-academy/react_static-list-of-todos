@@ -13,9 +13,6 @@
     align-items: center;
 
     background-color: lightcoral;
-    &__completed {
-      background-color: lightgreen;
-    }
   }
 
   &-title {
@@ -28,4 +25,8 @@
     background-color: lightslategrey;
 
   }
+}
+
+.completed {
+  background-color: lightgreen;
 }
