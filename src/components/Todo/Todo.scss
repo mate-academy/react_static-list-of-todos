@@ -1,0 +1,12 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+
+  &__completed {
+    width: 100px;
+
+  }
+}
