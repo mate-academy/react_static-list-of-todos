@@ -6,8 +6,8 @@ import PropTypes from 'prop-types';
 export const TodoList = ({ todos }) => (
   <ul className="todoList">
     {todos.map(todo => (
-      <li className="userCard">
-         <Todo {...todo} key={todo.id} />
+      <li className="userCard" key={todo.id}>
+         <Todo {...todo} />
       </li>
     ))}
   </ul>
