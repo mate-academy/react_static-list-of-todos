@@ -9,13 +9,12 @@ const preparedTodos = todos.map(todo => (
   {
     ...todo,
     user: users.find(user => todo.userId === user.id),
-  }
-));
+  }));
 
 function App() {
   return (
     <div className="App">
-      <TodoList tasks={preparedTodos} />
+      <TodoList todos={preparedTodos} />
     </div>
   );
 }
