@@ -3,10 +3,12 @@ import {Todo} from '../Todo/Todo'
 import './TodoList.scss'
 import PropTypes from 'prop-types';
 
-export const TodoList = ({ preparedTodos }) => (
+export const TodoList = ({ todos }) => (
   <ul className="todoList">
-    {preparedTodos.map(todo => (
-      <Todo {...todo} key={todo.id} />
+    {todos.map(todo => (
+      <li className="userCard">
+         <Todo {...todo} key={todo.id} />
+      </li>
     ))}
   </ul>
 )

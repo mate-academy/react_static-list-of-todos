@@ -4,11 +4,11 @@ import './Todo.scss'
 import PropTypes from 'prop-types';
 
 export const Todo = ({ title, completed, user}) => (
-  <li className="userCard">
+  <>
     <User {...user}/>
     <p className="todoTitle">● {title}</p>
     <span className="todoStatus">{`Status: ${completed ? '✔' : '✘'}`}</span>
-  </li>
+  </>
 )
 
 Todo.propTypes = {
