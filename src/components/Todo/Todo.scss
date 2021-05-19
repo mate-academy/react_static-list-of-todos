@@ -1,0 +1,21 @@
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &--checked {
+    background-image: url('../../images/done.jpg');
+  }
+  &--cross {
+    background-image: url('../../images/not-done.jpg');
+  }
+}
