@@ -1,0 +1,11 @@
+.name {
+  padding: 5px;
+  transition: 0.5s;
+
+  &:hover {
+    background-color: pink;
+    cursor: pointer;
+    font-style: italic;
+    border-radius: 10px;
+  }
+}
