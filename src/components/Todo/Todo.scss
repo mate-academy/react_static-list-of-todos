@@ -1,0 +1,22 @@
+.Todo {
+  border: 1px solid lightgrey;
+  padding: 10px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    font-weight: 600;
+  }
+
+  &__completed {
+    margin-left: 10px;
+    &--true {
+      color: rgb(79, 180, 53);
+    }
+
+    &--false {
+      color: rgb(230, 68, 63);
+    }
+  }
+}
