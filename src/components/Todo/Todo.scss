@@ -3,14 +3,11 @@
   border: 3px solid grey;
   border-radius: 10px;
 
-  &__status {
+  &__completed-todo {
+    color: yellowgreen;
+  }
 
-    &_completed {
-      color: yellowgreen;
-    }
-
-    &_notCompleted {
-      color: red;
-    }
+  &__uncompleted-todo {
+    color: red;
   }
 }

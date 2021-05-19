@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { User } from '../User';
 
 import './Todo.scss';
@@ -13,15 +14,13 @@ export const Todo = ({
     <h2>{title}</h2>
     <p>
       <span><b>STATUS: </b></span>
-      {completed ? (
-        <span className="todo-info__status_completed">
-          completed
-        </span>
-      ) : (
-        <span className="todo-info__status_notCompleted">
-          not completed
-        </span>
-      )}
+      <span className={classNames({
+        'todo-info__completed-todo': completed,
+        'todo-info__uncompleted-todo': !completed,
+      })}
+      >
+        {completed ? 'completed' : 'not completed'}
+      </span>
     </p>
     <User {...user} />
   </div>
