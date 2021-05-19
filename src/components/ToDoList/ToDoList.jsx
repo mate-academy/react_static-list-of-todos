@@ -1,23 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './ToDoList.scss';
-import { ToDo } from '../ToDo';
+import './TodoList.scss';
+import { Todo } from '../Todo/Todo';
 
-export function ToDoList({ usersTodo }) {
+export function TodoList({ Todos }) {
   return (
     <section className="users">
       <h1 className="users-title">Todos list</h1>
-      {usersTodo.map(todo => (
+      {Todos.map(todo => (
         <div className="users-info" key={todo.id}>
-          <ToDo {...todo} />
+          <Todo {...todo} />
         </div>
       ))}
     </section>
   );
 }
 
-ToDoList.propTypes = {
-  usersTodo: PropTypes.arrayOf(
+TodoList.propTypes = {
+  Todos: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
     }),

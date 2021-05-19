@@ -1,25 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './ToDo.scss';
-import { User } from '../User';
+import './Todo.scss';
+import { User } from '../User/User';
 
-export const ToDo = ({ title, completed, user }) => (
+export const Todo = ({ title, completed, user }) => (
   <div className="user">
-    <h1 className="user-title">
+    <h2 className="user-title">
       {title}
-
-    </h1>
+    </h2>
     <p className="user-info">
       <b>Status:</b>
-      {completed ? ' Completed' : ' In progress' }
+      {completed ? ' Completed' : ' In progress'}
     </p>
-    <User user={user} />
+    <User {...user} />
   </div>
 
 );
 
-ToDo.propTypes = {
+Todo.propTypes = {
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
-  user: PropTypes.shape().isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { ToDoList } from './components/ToDoList';
+import { TodoList } from './components/TodoList/TodoList';
 
 import todos from './api/todos';
 import users from './api/users';
@@ -13,7 +13,7 @@ const prepearedTodos = todos.map(todo => ({
 function App() {
   return (
     <main className="main">
-      <ToDoList usersTodo={prepearedTodos} />
+      <TodoList Todos={prepearedTodos} />
     </main>
   );
 }

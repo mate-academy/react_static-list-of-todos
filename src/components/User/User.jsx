@@ -2,16 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './User.scss';
 
-export const User = ({ user }) => (
+export const User = ({ name }) => (
   <p className="user-name">
-    <b>User:</b>
-    {' '}
-    {user.name}
+    <b>{`User: ${name}`}</b>
   </p>
 );
 
 User.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-  }).isRequired,
+  name: PropTypes.string.isRequired,
 };
