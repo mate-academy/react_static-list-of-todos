@@ -1,8 +1,24 @@
 import React from 'react';
+
+import { TodoList } from './components/TodoList';
 import './App.scss';
 
 import todos from './api/todos';
 import users from './api/users';
+
+function findUser(userId) {
+  return users.find(user => user.id === userId);
+}
+
+const preparedTodos = todos.map((todo) => {
+  const copy = { ...todo };
+
+  todos.forEach((elem) => {
+    copy.user = findUser(elem.userId);
+  });
+
+  return copy;
+});
 
 function App() {
   return (
@@ -17,6 +33,8 @@ function App() {
         <span>Users: </span>
         {users.length}
       </p>
+
+      <TodoList prepared={preparedTodos} />
     </div>
   );
 }
