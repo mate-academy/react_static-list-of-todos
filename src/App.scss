@@ -1,1 +1,15 @@
-// styles go here
+body { 
+  box-sizing: border-box;
+  background-color: rgb(215, 221, 233);
+}
+
+.app {
+  width: 50vw;
+  padding-left: 100px;
+}
+
+.h1 {
+  font-size: 20px;
+  padding: 50px 20px 0;
+  color: rgb(50, 50, 50);
+}
