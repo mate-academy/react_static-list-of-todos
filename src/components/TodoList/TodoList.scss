@@ -1,3 +1,11 @@
+.todoInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+  background-color: #cd4d31;
+}
+
 .todoList {
   display: flex;
   flex-direction: column;

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 function Todo({title, completed, user}) {
   return (
-    <li className="todoInfo">
+    <>
       <User {...user}/>
       <p className="todoTitle">
         <span>Task: {title}</span>
@@ -14,7 +14,7 @@ function Todo({title, completed, user}) {
       <span className="todoCompleted">
          {completed ? '➖' : '➕'}
       </span>
-    </li>
+    </>
   )
 }
 

@@ -6,9 +6,12 @@ import PropTypes from 'prop-types';
 function TodoList({todos}) {
   return (
     <ul className="todoList">
-      {todos.map(todo => (
-        <Todo {...todo} key={todo.id}/>
-      ))}
+        {todos.map(todo => (
+          <li className="todoInfo">
+            <Todo {...todo} key={todo.id}/>
+          </li>
+        ))}
+
     </ul>
   )
 }
