@@ -7,8 +7,8 @@ function TodoList({todos}) {
   return (
     <ul className="todoList">
         {todos.map(todo => (
-          <li className="todoInfo">
-            <Todo {...todo} key={todo.id}/>
+          <li className="todoInfo" key={todo.id}>
+            <Todo {...todo} />
           </li>
         ))}
 
