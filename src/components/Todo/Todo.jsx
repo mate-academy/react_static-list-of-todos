@@ -15,12 +15,7 @@ export function Todo({ title, completed, user }) {
 
 Todo.propTypes = {
   title: PropTypes.string.isRequired,
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-  }).isRequired,
-  completed: PropTypes.bool,
-};
-
-Todo.defaultProps = {
-  completed: false,
+  completed: PropTypes.bool.isRequired,
+  // eslint-disable-next-line
+  user: PropTypes.object.isRequired,
 };
