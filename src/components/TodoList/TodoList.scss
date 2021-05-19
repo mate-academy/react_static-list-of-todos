@@ -1,0 +1,11 @@
+
+.List {
+
+  &__item {
+    border: 5px solid blue;
+    border-radius: 5px;
+    list-style: none;
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
+}
