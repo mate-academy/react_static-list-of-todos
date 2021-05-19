@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <h1>Static list of todos</h1>
 
-      <TodoList prepared={preparedTodos} />
+      <TodoList todos={preparedTodos} />
 
       <p>
         <span>Todos: </span>
