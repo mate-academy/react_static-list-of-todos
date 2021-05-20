@@ -10,7 +10,7 @@ export const Todo = ({ title, completed, user }) => (
       <User {...user} />
     </div>
     <span className="status">
-      {`Status: ${completed ? 'complited' : 'in progress'}`}
+      {`Status: ${completed ? 'completed' : 'in progress'}`}
     </span>
   </>
 );
