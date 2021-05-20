@@ -19,6 +19,6 @@ export const Todo = ({ title, completed, user }) => (
 
 Todo.propTypes = {
   title: PropTypes.string.isRequired,
-  completed: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
   user: PropTypes.shape({ name: PropTypes.string.isRequired }).isRequired,
 };
