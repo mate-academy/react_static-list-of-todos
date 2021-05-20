@@ -7,14 +7,14 @@ export const TodoList = ({ todos }) => (
     <h1>TodoList</h1>
     {todos.map(todo => (
       <li key={todo.id} className="todo">
-        <Todo todo={todo} />
+        <Todo {...todo} />
       </li>
     ))}
   </ul>
 );
 
 const TypeTodo = PropTypes.shape({
-  is: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
 });
 
 TodoList.propTypes = {
