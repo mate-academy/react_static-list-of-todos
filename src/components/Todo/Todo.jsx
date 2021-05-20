@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { User } from '../User/User';
 import './Todo.scss';
 
@@ -7,8 +8,9 @@ export const Todo = ({ title, completed, user }) => (
   <>
     <User {...user} />
     <p className="todo__title">{title}</p>
-    <span className={completed
-      ? 'todo__complited' : 'todo__not-complited'}
+    <span className={classNames('todo__item', {
+      done: completed,
+    })}
     >
       { completed ? 'complited' : 'not complited' }
     </span>

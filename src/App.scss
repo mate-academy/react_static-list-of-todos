@@ -5,4 +5,11 @@ body {
 .app {
   background-color: #efefef;
   font-family: sans-serif;
+
+  &__title {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 72px;
+  }
 }

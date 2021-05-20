@@ -5,11 +5,11 @@
     text-transform: uppercase;
   }
 
-  &__complited {
-    color: #555300;
-  }
-
-  &__not-complited {
+  &__item {
     color: red;
   }
+}
+
+.done {
+  color: #555300;
 }
