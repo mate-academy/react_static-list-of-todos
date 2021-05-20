@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import TodoList from './components/TodoList';
+import TodoList from './components/TodoList/TodoList';
 
 import todos from './api/todos';
 import users from './api/users';
@@ -26,8 +26,8 @@ function App() {
 
       <span>Todos: </span>
 
-      {preparedTodos.map(el => (
-        <TodoList {...el} />
+      {preparedTodos.map(todo => (
+        <TodoList {...todo} key={todo.id} />
       ))}
 
     </div>
