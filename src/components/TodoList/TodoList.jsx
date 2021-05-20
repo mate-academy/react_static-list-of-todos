@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import User from '../User/User';
+import { User } from '../User/User';
 
-const TodoList = ({ prepTodos }) => (
+export const TodoList = ({ prepTodos }) => (
   <ul>
     {prepTodos.map(task => (
       <User {...task} key={task.id} />
@@ -10,20 +10,22 @@ const TodoList = ({ prepTodos }) => (
   </ul>
 );
 
+const TypeTasks = PropTypes.shape({
+  title: PropTypes.string.isRequired,
+  completed: PropTypes.string.isRequired,
+});
+
+const TypeTodos = PropTypes.shape({
+  fullName: PropTypes.string.isRequired,
+  tasks: TypeTasks,
+});
+
 TodoList.propTypes = {
   prepTodos: PropTypes.arrayOf(
-    PropTypes.shape({
-      fullName: PropTypes.string.isRequired,
-      tasks: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        completed: PropTypes.string.isRequired,
-      }),
-    }),
+    TypeTodos,
   ),
 };
 
 TodoList.defaultProps = {
   prepTodos: [],
 };
-
-export default TodoList;

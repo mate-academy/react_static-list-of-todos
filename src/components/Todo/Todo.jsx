@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Todo = ({ title, completed }) => (
+export const Todo = ({ title, completed }) => (
   <>
     <li>
       <strong>{title}</strong>
@@ -20,5 +20,3 @@ Todo.propTypes = {
   title: PropTypes.string.isRequired,
   completed: PropTypes.string.isRequired,
 };
-
-export default Todo;

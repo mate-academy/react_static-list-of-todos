@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Todo from '../Todo/Todo';
+import { Todo } from '../Todo/Todo';
 import './User.scss';
 
-const User = ({ fullName, tasks }) => (
+export const User = ({ fullName, tasks }) => (
   <>
     <li>
       <h2 className="name">{fullName}</h2>
@@ -17,19 +17,19 @@ const User = ({ fullName, tasks }) => (
   </>
 );
 
+const TypeTasks = PropTypes.shape({
+  title: PropTypes.string.isRequired,
+  completed: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+});
+
 User.propTypes = {
   fullName: PropTypes.string.isRequired,
   tasks: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      completed: PropTypes.string.isRequired,
-      id: PropTypes.number.isRequired,
-    }),
+    TypeTasks,
   ),
 };
 
 User.defaultProps = {
   tasks: [],
 };
-
-export default User;
