@@ -9,9 +9,20 @@ export const Todo = ({ title, completed, user }) => (
       {title}
     </h2>
     {completed
-      ? <span className="Todo__status Todo__status--done">completed </span>
-      // eslint-disable-next-line max-len
-      : <span span className="Todo__status Todo__status--not-done">not completed </span>
+      ? (
+        <span
+          className="Todo__status Todo__status--done"
+        >
+          completed
+        </span>
+      )
+      : (
+        <span
+          className="Todo__status Todo__status--not-done"
+        >
+          not completed
+        </span>
+      )
     }
     <User {...user} />
   </div>
