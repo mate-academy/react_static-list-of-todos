@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Todo } from '../Todo';
 
 import './TodoList.scss';
@@ -15,9 +15,9 @@ export const TodoList = ({ todos }) => (
 );
 
 TodoList.propTypes = {
-  todos: propTypes.arrayOf(
-    propTypes.shape({
-      id: propTypes.number.isRequired,
+  todos: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
     }),
   ).isRequired,
 };

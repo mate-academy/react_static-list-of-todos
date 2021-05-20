@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import './User.scss';
 
@@ -8,5 +8,5 @@ export const User = ({ name }) => (
 );
 
 User.propTypes = {
-  name: propTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
