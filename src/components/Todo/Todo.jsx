@@ -7,14 +7,10 @@ export const Todo = ({ title, completed, user }) => (
   <>
     <User {...user} />
     <p className="todos-input__title">
-      Task
-      {': '}
-      {title}
+      {`Task: ${title}`}
     </p>
     <p>
-      Status:
-      {' '}
-      {completed ? 'Done!' : 'In process...'}
+      {`status: ${completed ? 'Done!' : 'In process...'}`}
     </p>
   </>
 
