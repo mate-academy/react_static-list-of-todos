@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const User = ({ name }) => (
-  <h1>{name}</h1>
+  <h2>{name}</h2>
 );
 
 User.propTypes = {
