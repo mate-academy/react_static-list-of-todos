@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Todo } from './Todo';
 
 export const TodoList = ({ prepared }) => (
@@ -10,3 +11,11 @@ export const TodoList = ({ prepared }) => (
     ))}
   </ul>
 );
+
+TodoList.propTypes = {
+  prepared: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }),
+  ),
+};
