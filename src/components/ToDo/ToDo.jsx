@@ -4,17 +4,18 @@ import './Todo.scss';
 import { User } from '../User/User';
 
 export const Todo = ({ title, completed, user }) => (
-  <div className="user">
-    <h2 className="user-title">
-      {title}
-    </h2>
-    <p className="user-info">
-      <b>Status:</b>
-      {completed ? ' Completed' : ' In progress'}
-    </p>
-    <User {...user} />
+  <div className="users-info">
+    <div className="user">
+      <h2 className="user-title">
+        {title}
+      </h2>
+      <p className="user-info">
+        <b>Status:</b>
+        {completed ? ' Completed' : ' In progress'}
+      </p>
+      <User {...user} />
+    </div>
   </div>
-
 );
 
 Todo.propTypes = {
