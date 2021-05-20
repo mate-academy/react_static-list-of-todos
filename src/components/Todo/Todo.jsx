@@ -8,7 +8,7 @@ export const Todo = ({ title, completed }) => (
       <br />
       <br />
       <span>
-        {`completed: ${completed}`}
+        {`completed: ${completed ? 'Yes' : 'No'}`}
       </span>
     </li>
     <br />

@@ -8,11 +8,7 @@ import users from './api/users';
 const preparedTodos = users.map(user => ({
   fullName: user.name,
   id: user.id,
-  tasks: todos.filter(task => task.userId === user.id).map(task => ({
-    title: task.title,
-    completed: task.completed ? 'Yes' : 'No',
-    id: task.id,
-  })),
+  tasks: todos.filter(task => task.userId === user.id),
 }));
 
 function App() {

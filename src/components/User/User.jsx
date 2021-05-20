@@ -19,7 +19,7 @@ export const User = ({ fullName, tasks }) => (
 
 const TypeTasks = PropTypes.shape({
   title: PropTypes.string.isRequired,
-  completed: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
   id: PropTypes.number.isRequired,
 });
 
