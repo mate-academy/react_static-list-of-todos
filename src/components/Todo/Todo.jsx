@@ -6,25 +6,27 @@ import './todo.scss';
 export const Todo = ({
   title,
   completed,
-  users,
+  user,
 }) => (
   <>
     <h2 className="title">
       {title}
     </h2>
-    <p className="boolean">
+    <p className="status">
       {completed ? (
-        <span className="boolean__true">True</span>
+        <span className="status__true">True</span>
       ) : (
-        <span className="boolean__false">False</span>
+        <span className="status__false">False</span>
       )}
     </p>
-    <User {...users} />
+    <User {...user} />
   </>
 );
 
 Todo.propTypes = {
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
-  users: PropTypes.shape().isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
 };

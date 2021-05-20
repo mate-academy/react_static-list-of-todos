@@ -9,7 +9,3 @@ export const User = ({ name }) => (
     </p>
   </>
 );
-
-User.propTypes = {
-  name: PropTypes.string.isRequired,
-};
