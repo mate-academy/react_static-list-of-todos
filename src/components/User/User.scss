@@ -1,3 +1,5 @@
-.userName {
-  text-transform: uppercase;
+.user {
+  &__name {
+    text-transform: uppercase;
+  }
 }

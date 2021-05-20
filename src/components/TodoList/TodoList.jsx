@@ -4,9 +4,9 @@ import { Todo } from '../Todo/Todo';
 import './TodoList.scss';
 
 export const TodoList = ({ todosArr }) => (
-  <ul className="todoList">
+  <ul className="todo__list">
     {todosArr.map(task => (
-      <li className="listItem" key={task.id}>
+      <li className="todo__list-item" key={task.id}>
         <Todo {...task} />
       </li>
     ))}

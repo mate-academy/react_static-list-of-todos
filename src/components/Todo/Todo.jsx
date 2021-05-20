@@ -6,9 +6,11 @@ import './Todo.scss';
 export const Todo = ({ title, completed, user }) => (
   <>
     <User {...user} />
-    <p className="todoTitle">{title}</p>
-    <span className="todoStatus">
-      {`${completed ? 'complited' : 'not complited'}`}
+    <p className="todo__title">{title}</p>
+    <span className={completed
+      ? 'todo__complited' : 'todo__not-complited'}
+    >
+      { completed ? 'complited' : 'not complited' }
     </span>
   </>
 );

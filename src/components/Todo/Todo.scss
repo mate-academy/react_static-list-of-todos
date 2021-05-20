@@ -1,9 +1,15 @@
-.todoTitle {
-  font-style: italic;
-  font-size: 14px;
-}
+.todo {
+  &__title {
+    font-style: italic;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
 
-.todoStatus {
-  text-transform: uppercase;
-  color: #555300;
+  &__complited {
+    color: #555300;
+  }
+
+  &__not-complited {
+    color: red;
+  }
 }
