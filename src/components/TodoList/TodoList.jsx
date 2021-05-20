@@ -19,7 +19,3 @@ TodoList.propTypes = {
     id: PropTypes.number.isRequired,
   })).isRequired,
 };
-
-// TodoList.defaultProps = {
-//   todos: [],
-// };

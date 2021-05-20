@@ -7,7 +7,7 @@ import './Todo.scss';
 export const Todo = ({ title, completed, user }) => (
   <div className="todoCard">
     <h2>{title}</h2>
-    <p>{completed}</p>
+    <p>{`Completed: ${completed}`}</p>
     <User {...user} />
   </div>
 );
