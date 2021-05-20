@@ -23,9 +23,5 @@ const TypeTodos = PropTypes.shape({
 TodoList.propTypes = {
   prepTodos: PropTypes.arrayOf(
     TypeTodos,
-  ),
-};
-
-TodoList.defaultProps = {
-  prepTodos: [],
+  ).isRequired,
 };
