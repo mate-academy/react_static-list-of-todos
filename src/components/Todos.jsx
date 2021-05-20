@@ -7,7 +7,7 @@ function Todo({ title, completed, user }) {
   return (
   <>
     <h3>Title: {title}</h3>
-    <p>{completed ? 'Copmleted' : 'Uncompleted'}</p>
+    <p>State: <i>{completed ? 'Done' : 'Not done'}</i></p>
     <User {...user}/>
   </>
   );
