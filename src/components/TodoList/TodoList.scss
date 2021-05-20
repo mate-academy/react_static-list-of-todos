@@ -1,0 +1,24 @@
+.data-list {
+  color: rgba(27, 19, 19, 0.73);
+  list-style: none;
+}
+
+.data-li {
+  width: 50%;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 10px 10px 7px grey;
+  }
+}
+
+.data-task {
+  color: rgba(1, 22, 4, 0.73);
+  font-family: serif;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: none;
+}
