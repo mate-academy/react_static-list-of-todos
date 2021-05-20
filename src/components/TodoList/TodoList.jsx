@@ -1,23 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { User } from '../User/User';
+import { Todo } from '../Todo/Todo';
 
 export const TodoList = ({ todos }) => (
   <ul>
     {todos.map(task => (
-      <User {...task} key={task.id} />
+      <Todo {...task} key={task.id} />
     ))}
   </ul>
 );
 
-const TypeTasks = PropTypes.shape({
-  title: PropTypes.string.isRequired,
-  completed: PropTypes.string.isRequired,
+const TypeGeo = PropTypes.shape({
+  lat: PropTypes.string.isRequired,
+  lng: PropTypes.string.isRequired,
+});
+
+const TypeAddress = PropTypes.shape({
+  street: PropTypes.string.isRequired,
+  suite: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired,
+  zipcode: PropTypes.string.isRequired,
+  geo: TypeGeo,
+});
+
+const TypeUser = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  address: TypeAddress,
 });
 
 const TypeTodos = PropTypes.shape({
-  fullName: PropTypes.string.isRequired,
-  tasks: TypeTasks,
+  userId: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
+  user: TypeUser,
 });
 
 TodoList.propTypes = {
