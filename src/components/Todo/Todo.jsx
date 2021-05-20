@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { User } from '../User/User';
 
 export const Todo = ({ title, completed, user, id }) => (
-  <li className="todo">
+  <>
     <h2 className="todo__title">
       {`${id}. ${title}`}
     </h2>
@@ -12,7 +12,7 @@ export const Todo = ({ title, completed, user, id }) => (
       {`Status: ${completed ? 'Completed' : 'In progress'}`}
     </p>
     <User {...user} />
-  </li>
+  </>
 );
 
 Todo.propTypes = {
