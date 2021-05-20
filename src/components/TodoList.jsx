@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Todo } from './Todo';
 
-export const TodoList = ({ prepared }) => (
-  <ul className="ul">
-    {prepared.map(element => (
-      <li key={element.id} className="li">
-        <Todo {...element} />
+export const TodoList = ({ todos }) => (
+  <ul className="list">
+    {todos.map(todo => (
+      <li key={todo.id} className="item">
+        <Todo {...todo} />
       </li>
     ))}
   </ul>
 );
 
 TodoList.propTypes = {
-  prepared: PropTypes.arrayOf(
+  todos: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
     }),

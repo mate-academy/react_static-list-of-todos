@@ -6,18 +6,10 @@ import './App.scss';
 import todos from './api/todos';
 import users from './api/users';
 
-function findUser(userId) {
-  return users.find(user => user.id === userId);
-}
-
-const preparedTodos = todos.map((todo) => {
-  const copy = {
-    ...todo,
-    user: findUser(todo.userId),
-  };
-
-  return copy;
-});
+const preparedTodos = todos.map(todo => ({
+  ...todo,
+  user: users.find(user => user.id === todo.userId),
+}));
 
 function App() {
   return (
@@ -33,7 +25,7 @@ function App() {
         {users.length}
       </p>
 
-      <TodoList prepared={preparedTodos} />
+      <TodoList todos={preparedTodos} />
     </div>
   );
 }
