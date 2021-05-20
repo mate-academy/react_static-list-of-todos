@@ -3,9 +3,9 @@ import './App.scss';
 
 import todos from './api/todos';
 import users from './api/users';
-import { TodoList } from './components/TodoList/TodoList';
+import { TodoList } from './components/TodoList';
 
-const preparedTodos = [...todos].map(todoItem => (
+const preparedTodos = todos.map(todoItem => (
   {
     ...todoItem,
     user: users.find(person => person.id === todoItem.userId),

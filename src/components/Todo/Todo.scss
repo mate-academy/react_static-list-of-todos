@@ -1,0 +1,45 @@
+$colorFinished: purple;
+$colorUnfinished: crimson;
+
+.todo-block {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 25px;
+  align-items: center;
+  transition: 0.3s;
+  min-height: 30px;
+  cursor: pointer;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: indigo solid 1px;
+  }
+
+  &:hover {
+    background-color: $colorUnfinished;
+  }
+
+  &:hover > * {
+    color: white;
+  }
+}
+
+.doneBlock {
+
+  &:hover {
+    background-color: $colorFinished;
+  }
+}
+
+.emptyCheckbox {
+  color: $colorUnfinished;
+}
+
+.done {
+  color: $colorFinished;
+}
