@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { User } from '../User/User';
 
-export const TodoList = ({ prepTodos }) => (
+export const TodoList = ({ todos }) => (
   <ul>
-    {prepTodos.map(task => (
+    {todos.map(task => (
       <User {...task} key={task.id} />
     ))}
   </ul>
@@ -21,7 +21,7 @@ const TypeTodos = PropTypes.shape({
 });
 
 TodoList.propTypes = {
-  prepTodos: PropTypes.arrayOf(
+  todos: PropTypes.arrayOf(
     TypeTodos,
   ).isRequired,
 };
