@@ -1,0 +1,30 @@
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  background-color: #ddd;
+}
+
+.completed {
+  border: 4px solid yellowgreen;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
+
+  & > .todo-title {
+    color: green;
+  }
+}
+
+.not-completed {
+  border: 2px solid red;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
+
+  & > .todo-title {
+    color: red;
+  }
+}
