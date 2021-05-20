@@ -12,7 +12,7 @@ export const Todo = ({ title, completed, user }) => (
       done: completed,
     })}
     >
-      { completed ? 'complited' : 'not complited' }
+      { completed ? 'completed' : 'not completed' }
     </span>
   </>
 );

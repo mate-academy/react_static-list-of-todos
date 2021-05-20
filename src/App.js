@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="app">
       <h1 className="app__title">ToDo list</h1>
-      <TodoList todosArr={preparedTodos} />
+      <TodoList todos={preparedTodos} />
     </div>
   );
 }
