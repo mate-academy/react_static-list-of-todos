@@ -5,13 +5,17 @@ import { User } from '../User/User';
 import { Todo } from '../Todo/Todo';
 import './TodoList.scss';
 
-export const TodoList = ({ todo }) => (
-  <div className="todo-list">
-    <User {...todo} />
-    <Todo {...todo} />
-  </div>
+export const TodoList = ({ preparedTodos }) => (
+  <>
+    {preparedTodos.map(todo => (
+      <div className="todo-list">
+        <User {...todo} />
+        <Todo {...todo} key={todo.id} />
+      </div>
+    ))}
+  </>
 );
 
 TodoList.propTypes = {
-  todo: PropType.shape().isRequired,
+  preparedTodos: PropType.shape().isRequired,
 };

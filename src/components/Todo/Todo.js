@@ -9,7 +9,7 @@ export const Todo = ({ title, completed }) => (
       {title}
     </div>
     <div className="todo__completed">
-      {completed}
+      {(completed === true) ? 'completed' : 'no completed'}
     </div>
   </div>
 );
