@@ -1,0 +1,16 @@
+.user {
+  &-passive {
+    background-color: red;
+    border-radius: 50%;
+  }
+
+  &-active {
+    background-color: green;
+    border-radius: 50%;
+  }
+
+  &-title {
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+}
