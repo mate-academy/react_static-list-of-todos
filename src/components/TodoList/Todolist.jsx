@@ -3,21 +3,21 @@ import PropTypes from 'prop-types';
 import Todo from '../Todo/Todo';
 import './TodoList.scss';
 
-const TodoList = ({ lists }) => (
+const TodoList = ({ todos }) => (
   <ul className="List">
-    {lists.map(list => (
+    {todos.map(todo => (
       <li
         className="List__item"
-        key={list.id}
+        key={todo.id}
       >
-        <Todo {...list} />
+        <Todo {...todo} />
       </li>
     ))}
   </ul>
 );
 
 TodoList.propTypes = {
-  lists: PropTypes.arrayOf(
+  todos: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
     }),
