@@ -5,4 +5,5 @@ export const TodoShape = PropTypes.shape({
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
   user: UserShape.isRequired,
+  id: PropTypes.number.isRequired,
 });
