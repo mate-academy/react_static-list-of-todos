@@ -1,18 +1,22 @@
 import React from 'react';
-import { User } from '../User';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { User } from '../User';
 import { TypeUser } from '../Types/TypeUser';
 import './Todo.scss';
 
 export const Todo = ({ title, completed, user }) => (
-    <div className="todo-item">
-      <div className="todo-title">
+    <div className="todo">
+      <div className="todo__title">
         {title}
       </div>
-      <div className="todo-status">
+      <User {...user}/>
+      <div className={classNames(
+        'todo__status',
+        {'todo__status--completed': completed === true })}
+      >
         Status: {completed ? 'completed' : 'not completed'}
       </div>
-      <User user={user}/>
     </div>
   );
 

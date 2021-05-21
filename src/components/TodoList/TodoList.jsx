@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './TodoList.scss';
 
 export const TodoList = ({ todos }) => (
-    <div className="todos-list">
+    <div className="todos">
       {todos.map(todo => ( 
         <Todo {...todo} key={todo.id} />
         ))}
