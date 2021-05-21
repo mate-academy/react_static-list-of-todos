@@ -3,19 +3,24 @@ import './TodoList.css';
 import PropTypes from 'prop-types';
 import User from '../User/User';
 
-const TodoList = ({ completed, title, user }) => (
-  <div className="todo">
-    <div className="title">
-      {title}
+const TodoList = ({ todoList }) => (
+  todoList.map(todo => (
+    <div className="todo">
+      <div className="title">
+        {todo.title}
+      </div>
+      <div className="todo-status">
+        {todo.completed
+          ? 'Completed'
+          : (
+            <div className="todo-status todo-status-uncompleted">
+              Uncompleted
+            </div>
+          )}
+      </div>
+      <User {...todo.user} />
     </div>
-
-    <div className="todo-status">
-      {completed ? 'Completed' : 'Uncompleted'}
-    </div>
-
-    <User {...user} />
-
-  </div>
+  ))
 );
 
 TodoList.propTypes = {

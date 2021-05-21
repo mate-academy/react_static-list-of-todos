@@ -26,9 +26,7 @@ function App() {
 
       <span>Todos: </span>
 
-      {preparedTodos.map(todo => (
-        <TodoList {...todo} key={todo.id} />
-      ))}
+      <TodoList todoList={preparedTodos} />
 
     </div>
   );
