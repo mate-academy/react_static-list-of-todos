@@ -13,7 +13,7 @@ const preparedTodos = todos.map(todo => ({
 function App() {
   return (
     <div className="App">
-      <h2>Static list of todos</h2>
+      <h1>Static list of todos</h1>
       <p>
         <span>Todos: </span>
         {todos.length}

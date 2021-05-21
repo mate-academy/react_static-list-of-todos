@@ -6,7 +6,7 @@ export const User = ({ user }) => {
   const { name } = user;
 
   return (
-    <h1 className="name">{name}</h1>
+    <h3 className="name">{name}</h3>
   );
 };
 
