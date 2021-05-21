@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Todo } from '../Todo/Todo';
-import { TypeTodos } from '../../types';
+import { TypeTodo } from '../../types';
 
 export const TodoList = ({ todos }) => (
   <ul>
     {todos.map(task => (
-      <Todo {...task} key={task.id} />
+      <li key={task.id}><Todo {...task} /></li>
     ))}
   </ul>
 );
 
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(
-    TypeTodos,
+    TypeTodo,
   ).isRequired,
 };

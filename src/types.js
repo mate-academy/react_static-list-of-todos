@@ -21,7 +21,7 @@ export const TypeUser = PropTypes.shape({
   address: TypeAddress,
 });
 
-export const TypeTodos = PropTypes.shape({
+export const TypeTodo = PropTypes.shape({
   userId: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,

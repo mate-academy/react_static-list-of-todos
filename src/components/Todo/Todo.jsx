@@ -5,15 +5,14 @@ import { TypeUser } from '../../types';
 
 export const Todo = ({ title, completed, user }) => (
   <>
-    <li>
-      <User {...user} />
+    <User {...user} />
 
-      <h2>{title}</h2>
+    <h2>{title}</h2>
 
-      <span>
-        {`completed: ${completed ? 'Yes' : 'No'}`}
-      </span>
-    </li>
+    <span>
+      {`completed: ${completed ? 'Yes' : 'No'}`}
+    </span>
+
     <br />
     <br />
   </>
