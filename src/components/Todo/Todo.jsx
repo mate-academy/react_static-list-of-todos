@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import './Todo.scss';
 
@@ -12,7 +13,11 @@ export function Todo({ title, completed, user }) {
       <p className="todo__title">
         Execution status:
       </p>
-      <p className={completed ? 'todo__completed' : 'todo__inprogress'}>
+      <p className={classNames({
+        todo__completed: completed,
+        todo__inprogress: !completed,
+      })}
+      >
         {completed ? 'completed' : 'in progress'}
       </p>
 

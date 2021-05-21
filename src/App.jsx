@@ -14,7 +14,10 @@ const preparedTodos = todos.map(todo => ({
 
 function App() {
   return (
-    <TodoList todos={preparedTodos} />
+    <div>
+      <h1 className="title">Static list of todos</h1>
+      <TodoList todos={preparedTodos} />
+    </div>
   );
 }
 
