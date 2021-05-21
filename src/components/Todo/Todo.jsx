@@ -8,7 +8,7 @@ export function Todo({ title, completed, user }) {
   return (
     <div className="task">
       <h2 className="task__title">{title}</h2>
-      <p className="task__state">{completed ? 'done' : 'doesn\'t finish'}</p>
+      <p className="task__state">{completed ? 'done' : 'didn\'t finish'}</p>
       <User user={user} />
     </div>
   );

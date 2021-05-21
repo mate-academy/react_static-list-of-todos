@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 
 const CompanyType = PropTypes.shape({
   name: PropTypes.string.isRequired,
-  bs: PropTypes.string,
 });
 
 export const UserType = PropTypes.shape({
