@@ -1,12 +1,10 @@
 import React from 'react';
 import { ToDo } from './ToDo';
 
-export function TodoList({ preparedTodos }) {
+export function TodoList({ todos }) {
   return (
-    preparedTodos.map(todo => (
-      <div>
-        <ToDo todo={todo} key={todo.id} />
-      </div>
+    todos.map(todo => (
+      <ToDo todo={todo} key={todo.id} />
     ))
   );
 }

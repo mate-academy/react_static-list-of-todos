@@ -4,17 +4,6 @@ import { PropTypes } from 'prop-types';
 import { User } from './User';
 
 export function ToDo({ todo }) {
-  let isCompleted;
-  let isCompletedClass;
-
-  if (todo.completed) {
-    isCompletedClass = 'completed';
-    isCompleted = 'is completed';
-  } else {
-    isCompletedClass = 'not-completed';
-    isCompleted = 'is NOT completed';
-  }
-
   return (
     <div className="card">
       {todo.id}
@@ -27,12 +16,13 @@ export function ToDo({ todo }) {
       Execution:
       <User user={todo.user} />
       {' '}
-      <span className={isCompletedClass}>
-        Task
+      <span className={todo.completed ? 'completed' : 'not-completed'}>
+        Task is
         {' '}
-        {isCompleted}
+        {todo.completed ? '' : 'NOT'}
+        {' '}
+        colmpeted
       </span>
-
     </div>
   );
 }
