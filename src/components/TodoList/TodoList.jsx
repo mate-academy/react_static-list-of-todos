@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './TodoList.scss';
 
 import { Todo } from '../Todo/Todo';
 
 export const TodoList = ({ todos }) => (
-  <ul>
+  <ul className="list">
     {todos.map(todo => (
-      <li key={todo.id}>
+      <li className="list__item" key={todo.id}>
         <Todo {...todo} />
       </li>
     ))}
