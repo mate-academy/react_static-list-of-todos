@@ -1,34 +1,20 @@
 import React from 'react';
 import './TodoList.css';
 import PropTypes from 'prop-types';
-import User from '../User/User';
+import Todo from '../Todo/Todo';
 
 const TodoList = ({ todoList }) => (
   todoList.map(todo => (
-    <div className="todo">
-      <div className="title">
-        {todo.title}
-      </div>
-      <div className="todo-status">
-        {todo.completed
-          ? 'Completed'
-          : (
-            <div className="todo-status todo-status-uncompleted">
-              Uncompleted
-            </div>
-          )}
-      </div>
-      <User {...todo.user} />
+    <div className="todo-list" key={todo.id}>
+      <Todo {...todo} />
     </div>
   ))
 );
 
 TodoList.propTypes = {
-  completed: PropTypes.bool.isRequired,
-  title: PropTypes.string.isRequired,
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-  }).isRequired,
+  todoList: PropTypes.arrayOf(
+    PropTypes.shape().isRequired,
+  ).isRequired,
 };
 
 export default TodoList;

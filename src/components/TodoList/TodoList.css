@@ -1,4 +1,4 @@
-.todo {
+.todo-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,19 +11,4 @@
   border-radius: 10px;
   margin: 25px;
 
-}
-
-.todo-status {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  width: 150px;
-  height: 25px;
-  border-radius: 5px;
-  background-color: green;
-}
-
-.todo-status-uncompleted {
-  background-color: #aaa;
 }
