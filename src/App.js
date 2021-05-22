@@ -5,14 +5,10 @@ import TodoList from './components/TodoList';
 import todos from './api/todos';
 import users from './api/users';
 
-const preparedTodos = todos.map((todo) => {
-  const copy = {
-    ...todo,
-    user: users.find(({ id }) => id === todo.userId),
-  };
-
-  return copy;
-});
+const preparedTodos = todos.map(todo => ({
+  ...todo,
+  user: users.find(({ id }) => id === todo.userId),
+}));
 
 function App() {
   return (
