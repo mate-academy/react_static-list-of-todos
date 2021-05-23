@@ -3,18 +3,18 @@ import PropTypes from 'prop-types';
 
 import './User.scss';
 
-export function User({ username }) {
+export function User({ user }) {
   return (
     <span>
-      {username}
+      {user}
     </span>
   );
 }
 
 User.defaultProps = {
-  username: 'He Who Must Not Be Named',
+  user: 'He Who Must Not Be Named',
 };
 
 User.propTypes = {
-  username: PropTypes.string,
+  user: PropTypes.string,
 };

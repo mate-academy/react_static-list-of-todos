@@ -19,7 +19,7 @@ export function TodoList({ todos }) {
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(
     PropTypes.shape({
-      userId: PropTypes.number.isRequired,
+      id: PropTypes.number.isRequired,
     }),
   ).isRequired,
 };
