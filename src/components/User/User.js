@@ -1,15 +1,13 @@
 import React from 'react';
+import './User.scss';
 import PropTypes from 'prop-types';
-import './User.css';
 
-const User = ({ user }) => (
-  <div className="user">{user.name}</div>
+export const User = ({ name }) => (
+  <p className="UserName">
+    {name}
+  </p>
 );
 
 User.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-  }).isRequired,
+  name: PropTypes.string.isRequired,
 };
-
-export default User;
