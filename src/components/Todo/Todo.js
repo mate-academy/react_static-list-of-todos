@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 import './Todo.scss';
 
-const taskManager = (param, task1, task2) => (param ? task1 : task2);
+import { User } from '../User';
 
-export const Todo = ({ title, completed }) => (
+export const Todo = ({ title, completed, user }) => (
   <>
+    <User {...user} />
     <span>{title}</span>
-    <span className={taskManager(completed, 'todo-completed', 'todo-uncompleted')}>
-      {taskManager(completed, 'completed', 'in progress')}
+    <span className={classNames(completed ? 'todo-completed' : 'todo-uncompleted')}>
+      {completed ? 'completed' : 'in progress'}
     </span>
   </>
 );
@@ -17,4 +19,7 @@ export const Todo = ({ title, completed }) => (
 Todo.propTypes = {
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
 };
