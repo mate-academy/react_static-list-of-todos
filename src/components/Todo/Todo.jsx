@@ -5,13 +5,15 @@ import PropTypes from 'prop-types';
 export const Todo = ({ title, completed, user }) => (
   <>
     <span className="todo">
-      <strong>Todos: </strong>
-      {`${title} - ${completed}`}
+      <strong>Todo: </strong>
+      {title}
+      {' - '}
+      {completed ? 'Completed' : 'Not completed'}
     </span>
     <br />
     <span className="user">
-      <strong>Users: </strong>
-      {user}
+      <strong>User: </strong>
+      {user.name}
     </span>
   </>
 );
@@ -19,5 +21,7 @@ export const Todo = ({ title, completed, user }) => (
 Todo.propTypes = {
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
-  user: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string,
+  }).isRequired,
 };

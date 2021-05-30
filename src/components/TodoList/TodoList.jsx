@@ -3,18 +3,18 @@ import './TodoList.scss';
 import PropTypes from 'prop-types';
 import { Todo } from '../Todo/Todo';
 
-export const TodoList = ({ todo }) => (
+export const TodoList = ({ todos }) => (
   <ul>
-    {todo.map(event => (
-      <li className="list" key={event.id}>
-        <Todo {...event} />
+    {todos.map(todo => (
+      <li className="list" key={todo.id}>
+        <Todo {...todo} />
       </li>
     ))}
   </ul>
 );
 
 TodoList.propTypes = {
-  todo: PropTypes.arrayOf(
+  todos: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
     }),
@@ -22,5 +22,5 @@ TodoList.propTypes = {
 };
 
 TodoList.defaultProps = {
-  todo: [],
+  todos: [],
 };

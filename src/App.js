@@ -5,15 +5,13 @@ import users from './api/users';
 import { TodoList } from './components/TodoList';
 
 function findUser(userId) {
-  const u = users.find(user => user.id === userId);
-
-  return u.name;
+  return users.find(user => user.id === userId);
 }
 
-const preparedTodos = todos.map(each => (
+const preparedTodos = todos.map(todo => (
   {
-    ...each,
-    user: findUser(each.userId),
+    ...todo,
+    user: findUser(todo.userId),
   }
 ));
 
@@ -21,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <h1>Static list of todos</h1>
-      <TodoList todo={preparedTodos} />
+      <TodoList todos={preparedTodos} />
     </div>
   );
 }
