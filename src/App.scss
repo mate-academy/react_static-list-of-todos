@@ -1,1 +1,12 @@
-// styles go here
+.App {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' sans-serif;
+    align-items: center;
+}
+
+.App h1 {
+    text-align: center; 
+    background-color: cornflowerblue;
+    border-radius: 20px;
+}

@@ -1,0 +1,23 @@
+.todo {
+  width: 400px;
+  background-color: antiquewhite;
+  border-bottom: 3px;
+  border-radius: 2px;
+  border-style: solid;
+  border-color: burlywood;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+p {
+  margin: 8px;
+  padding: 2px;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+}
