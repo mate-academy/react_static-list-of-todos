@@ -1,11 +1,8 @@
 .todos-list {
-  position: relative;
-  padding: 20px;
   list-style: none;
 }
 
 .todos-list li {
   margin: 10px;
   display: inline-flex;
-  border-radius: 2px;
 }
