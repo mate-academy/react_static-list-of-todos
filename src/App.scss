@@ -1,1 +1,17 @@
-// styles go here
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.app__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.app__info {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
