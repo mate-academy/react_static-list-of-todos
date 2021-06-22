@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export const Todo = ({ title, completed }) => (
   <>
-    {title}
+    <span className={`${completed ? 'green' : 'red'}`}>{title}</span>
     {' --- '}
     <span className="color">{`${completed}`}</span>
   </>
