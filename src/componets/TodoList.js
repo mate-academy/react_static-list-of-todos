@@ -1,26 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { User } from './User';
+import { Todo } from './Todo';
 
-export const TodoList = ({ users }) => (
+export const TodoList = ({ todos }) => (
   <ul>
-    {users.map(user => (
-      <li key={user.id}>
-        <User {...user} />
+    {todos.map(todo => (
+      <li key={todo.id}>
+        <Todo {...todo} />
       </li>
     ))}
   </ul>
 );
 
 TodoList.propTypes = {
-  users: PropTypes.arrayOf(
+  todos: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
     }),
-  ),
-};
-
-TodoList.defaultProps = {
-  users: [],
+  ).isRequired,
 };
