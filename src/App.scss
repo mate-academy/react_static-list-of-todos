@@ -1,1 +1,26 @@
-// styles go here
+.name-style {
+  color: rgb(0, 217, 255);
+  font-weight: bold;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.color {
+  &__boolean {
+    color: blue;
+  }
+
+  &__true {
+    color: green;
+  }
+  
+  &__false {
+    color: red;
+  }
+
+  &__boolean,
+  &__true,
+  &__false {
+    font-weight: bold;
+  }
+}
