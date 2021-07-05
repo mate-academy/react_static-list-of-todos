@@ -1,0 +1,13 @@
+.box {
+  margin: 0 auto;
+}
+
+.box__header {
+  background-color: rgb(41, 201, 36);
+}
+
+.box__cell {
+  padding: 20px;
+  border: 1px solid rgb(19, 129, 46);
+  text-align: center;
+}
