@@ -1,0 +1,30 @@
+.Todo {
+  padding: 15px;
+  border: 1px solid #6390d4;
+  background-color: #9fe0e2;
+  border-radius: 8px;
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &__title {
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__status {
+    color: red;
+
+    &--completed {
+      color: green;
+    }
+  }
+}
