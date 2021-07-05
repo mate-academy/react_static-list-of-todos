@@ -1,0 +1,13 @@
+.todo--completed {
+  background-color: rgba(23, 134, 29, 0.932);
+}
+
+.todo--noCompleted {
+  background-color: rgba(129, 23, 23, 0.932);
+}
+
+.todo {
+  width: 500px;
+  padding: 10px;
+  border-radius: 20px;
+}
