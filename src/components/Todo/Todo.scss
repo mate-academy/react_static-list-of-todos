@@ -1,0 +1,34 @@
+.todo {
+  height: 64px;
+
+  display: flex;
+  text-align: center;
+  align-items: center;
+
+  border: 5px solid #f2f2f2;
+  border-radius: 10px;
+
+  transition: 0.3s;
+
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+
+    height: 56px;
+  }
+
+  & > p {
+    padding-left: 10px;
+    width: 33%;
+  }
+}
+
+.complete {
+  background-color: #48c774;
+}
+
+.not-complete {
+  background-color: #ffdd57;
+}
