@@ -1,1 +1,20 @@
-// styles go here
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  color: #c4b9bb;
+  font-size: 18px;
+}
+
+.App {
+  width: 800px;
+  margin: 0 auto;
+
+  &__title {
+    text-align: center;
+    margin: 20px 0;
+  }
+}
