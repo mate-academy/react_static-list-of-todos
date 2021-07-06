@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+.todo {
+  align-items: center;
+
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  &__status-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__status {
+    display: block;
+    margin: 0;
+    width: 300px;
+    padding: 20px 10px;
+    text-align: center;
+    line-height: 100%;
+    font-weight: bold;
+    font-size: 20px;
+
+    &--true {
+      background-color: #d1e8e2;
+    }
+
+    &--false {
+      background-color: #b96d70;
+    }
+  }
+}

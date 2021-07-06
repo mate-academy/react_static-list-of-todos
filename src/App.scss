@@ -1,1 +1,19 @@
-// styles go here
+body {
+  background-color: #d1e8e2;
+  color: #116466;
+  font-family: Arial, Helvetica, sans-serif;
+}
+  
+.App {
+  max-width: 80vw;
+  margin: 50px auto;
+  &__head {
+    text-align: center;
+    font-weight: 600;
+  }
+
+  &__count {
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
