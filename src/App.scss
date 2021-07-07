@@ -1,1 +1,39 @@
-// styles go here
+* {
+  box-sizing:  border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+  padding: 20px;
+}
+
+.app {
+
+  &__task {
+    display: flex;
+    justify-content:  space-between;
+    padding: 30px;
+  }
+
+  &__title {
+    cursor: pointer;
+    width: 320px;
+    transition:  transform 0.5s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__completed {
+    color: green;
+  }
+  
+  &__not-completed {
+    color: red;
+  }
+}
+
