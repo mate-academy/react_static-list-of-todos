@@ -1,1 +1,43 @@
 // styles go here
+* {
+  font-family: Georgia, serif;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__list {
+    display: grid;
+    row-gap: 20px;
+  }
+
+  &__task {
+    padding: 10px;
+    background-color: pink;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 0 5px rgb(189, 187, 187);
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__status {
+    font-style: italic;
+    margin-top: 10px;
+    color: rgb(58, 58, 58);
+  }
+
+  &__name {
+    margin-top: 5px;
+    color: rgb(58, 58, 58);
+  }
+}
