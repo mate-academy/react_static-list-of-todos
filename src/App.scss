@@ -1,1 +1,39 @@
-// styles go here
+body {
+  background-color: #e2f1f8;
+}
+
+.App {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  &__list {
+    display: grid;
+    row-gap: 20px;
+  }
+
+  &__task {
+    padding: 10px;
+    background-color: #0288d1;
+    border-radius: 0 25px 25px 0;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 0 10px #005b9f;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__status {
+    font-style: italic;
+    margin-top: 10px;
+  }
+
+  &__name {
+    text-align: right;
+  }
+}
