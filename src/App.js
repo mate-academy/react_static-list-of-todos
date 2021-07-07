@@ -3,22 +3,15 @@ import './App.scss';
 
 import todos from './api/todos';
 import users from './api/users';
+import { TodoList } from './components/TodoList/TodoList';
+import { readyTodosList } from './components/ReadyTodosList';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Static list of todos</h1>
-      <p>
-        <span>Todos: </span>
-        {todos.length}
-      </p>
+const readyList = readyTodosList(todos, users);
 
-      <p>
-        <span>Users: </span>
-        {users.length}
-      </p>
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <TodoList readyTodos={readyList} />
+  </div>
+);
 
 export default App;

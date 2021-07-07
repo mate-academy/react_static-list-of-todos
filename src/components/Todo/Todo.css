@@ -1,0 +1,17 @@
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: bold;
+  height: 200px;
+  border-radius: 10%;
+}
+
+.todo--true {
+  background-color: green;
+}
+
+.todo--false {
+  background-color: red;
+}
