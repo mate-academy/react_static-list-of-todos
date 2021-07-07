@@ -1,0 +1,24 @@
+.todo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10%;
+  align-items: center;
+  margin: 2%;
+  width: 80%;
+  border: 1px solid #7c95f9;
+  border-radius: 8px;
+  background-color: #7c95f9;
+  color: #fff;
+}
+
+.todo__title {
+  padding-left: 5%;
+}
+
+.todo__green {
+  color: lightgreen;
+}
+
+.todo__yellow {
+  color: yellow;
+}
