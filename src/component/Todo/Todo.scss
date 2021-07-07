@@ -1,0 +1,27 @@
+.todo {
+  border-radius: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: #342525;
+
+  &--done {
+    background-color: #71e571;
+  }
+
+  &--not-done {
+    background-color: #fcb857;
+  }
+
+  &__key-word {
+    font-style: normal;
+  }
+
+  &__description {
+    font-style: italic;
+    font-size: 18px;
+  }
+}
