@@ -1,0 +1,17 @@
+.todo__list {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fill, 250px);
+  justify-content: center;
+}
+
+.todo__item {
+  padding: 10px;
+  background-color: wheat;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.item:hover {
+  background-color: #fff;
+}
