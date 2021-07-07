@@ -1,0 +1,9 @@
+table {
+  margin: 50px auto;
+  border-collapse: collapse;
+}
+
+th {
+  text-align:center;
+  border: 1px solid black;
+}
