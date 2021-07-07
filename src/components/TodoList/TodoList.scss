@@ -1,0 +1,44 @@
+.list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
+  
+
+  padding: 20px;
+  background-color: rgb(10, 194, 207);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+
+  font-weight: 500;
+  font-size: 18px;
+
+  transition: background-color 0.4s;
+
+  &:hover {
+    background-color: rgb(10, 241, 229);
+  }
+}
+
+.item {
+  &__input {
+    flex-basis: 10%;
+    margin-right: 35px;
+
+    width: 15px;
+    height: 15px;
+
+    text-align: center;
+
+    &:checked {
+      filter: hue-rotate(240deg);
+    }
+  }
+
+  &__description {
+    text-align: center;
+
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+  }
+}

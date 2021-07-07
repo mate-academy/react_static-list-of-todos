@@ -1,1 +1,37 @@
-// styles go here
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Lucida Sans Unicode", sans-serif;
+  color: black;
+}
+
+body,
+ul,
+input,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  padding: 20px 80px;
+  background-color: rgb(255, 255, 255);
+
+  &__title {
+    margin-bottom: 30px;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+  }
+
+  &__statistics {
+    text-align: center;
+  }
+}
