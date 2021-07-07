@@ -1,0 +1,11 @@
+.todo-content {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: max-content;
+  align-items: center;
+  text-align: center;
+}
+
+.nameOfTodo {
+  text-align: start;
+}
