@@ -1,0 +1,27 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+
+  &__state {
+    position: relative;
+    width: 4em;
+    white-space: nowrap;
+    margin-left: var(--checkbox-position);
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      left: calc(var(--checkbox-position) * -1);
+      top: 50%;
+      border: 3px solid #fff;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__state--done::before {
+    background: url("../../images/done.png")no-repeat;
+    background-size: cover;
+  }
+}
