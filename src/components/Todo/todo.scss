@@ -1,0 +1,27 @@
+.box {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(184, 231, 184);
+  border-radius: 10px;
+  margin-bottom: 5px;
+  padding: 5px;
+  color: rgb(66, 66, 66);
+}
+
+.noCompleted {
+  background-color: rgb(255, 181, 181);
+}
+
+.litleBox {
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+}
+
+.yes {
+  background-color: green;
+}
+
+.no {
+  background-color: red;
+}

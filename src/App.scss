@@ -1,1 +1,23 @@
 // styles go here
+
+body {
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+p, ul, li {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+
+.App {
+  background-color: #fff;
+  border-radius: 10px;
+  text-transform: uppercase;
+  padding: 10px;
+}
