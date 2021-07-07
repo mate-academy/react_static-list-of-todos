@@ -1,1 +1,21 @@
-// styles go here
+body {
+  background-color: black;
+  color: wheat;
+  font-family:  Arial, sans-serif;
+}
+
+.progress {
+  margin-right: 50px;
+
+  &__complete {
+    color: green;
+  }
+
+  &__not-complete {
+    color: red;
+  }
+}
+
+.user {
+  font-weight: 900;
+}
