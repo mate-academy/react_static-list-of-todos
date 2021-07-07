@@ -1,0 +1,23 @@
+.list {
+  &__item {
+    display: flex;
+    margin: 10px 40px 10px 0;
+    padding: 5px;
+    justify-content: space-between;
+  
+    color: white;
+    background-color: #30539c;
+    border: 2px solid #ffa445;
+    border-radius: 10px;
+    list-style-type: none;
+  }
+
+  &__name,
+  &__title,
+  &__completed {
+    &:hover {
+      color: #ffa445;
+      cursor: pointer;
+    }
+  }
+}

@@ -3,6 +3,12 @@ import './App.scss';
 
 import todos from './api/todos';
 import users from './api/users';
+import { TodosList } from './components/TodoList/TodosList';
+
+const preparedTodos = todos.map(todo => ({
+  ...todo,
+  user: users.find(user => user.id === todo.userId),
+}));
 
 function App() {
   return (
@@ -17,6 +23,8 @@ function App() {
         <span>Users: </span>
         {users.length}
       </p>
+
+      <TodosList todosList={preparedTodos} />
     </div>
   );
 }
