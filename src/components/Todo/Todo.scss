@@ -1,0 +1,21 @@
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid black;
+  align-items: center;
+  text-align: center;
+}
+
+.active {
+  color: green;
+}
+
+.disable {
+  color: red;
+}
+
+.card:hover {
+  background-color: aliceblue;
+}
