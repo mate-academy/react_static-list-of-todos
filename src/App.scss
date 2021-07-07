@@ -1,1 +1,9 @@
-// styles go here
+li {
+  list-style: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
