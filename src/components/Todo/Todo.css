@@ -1,0 +1,7 @@
+.todo__status-false {
+  color: red;
+}
+
+.todo__status-true {
+  color: green;
+}
