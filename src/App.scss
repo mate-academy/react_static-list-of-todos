@@ -1,1 +1,16 @@
-// styles go here
+.app {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container {
+  width: 200px;
+  padding: 10px;
+  background-color: bisque;
+  margin-bottom: 40px;
+}
+
+.username {
+  font-style: italic;
+}
