@@ -5,11 +5,13 @@ import './App.scss';
 import todos from './api/todos';
 import users from './api/users';
 
-const preparedTodos = [...todos.map((todo) => {
-  todo.user = users.find(user => user.id === todo.userId);
+const preparedTodos = todos.map(todo => (
+  {
+    ...todo,
+    user: users.find(user => user.id === todo.userId),
+  }
 
-  return todo;
-})];
+));
 
 function App() {
   return (

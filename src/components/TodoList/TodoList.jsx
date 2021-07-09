@@ -10,4 +10,4 @@ export const TodoList = (props) => (
       </li>
     ))}
   </ul>
-)
+);
