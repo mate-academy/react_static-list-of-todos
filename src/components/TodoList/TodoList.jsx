@@ -6,14 +6,21 @@ import './Todolist.css';
 const TodoList = ({ todos }) => (
   todos.map(todo => (
     <div className="todo-list" key={todo.id}>
-      <Todo {...todo} />
+      <Todo todo={todo} />
     </div>
   ))
 );
 
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(
-    PropTypes.shape().isRequired,
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      completed: PropTypes.bool.isRequired,
+      user: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        id: PropTypes.number.isRequired,
+      }),
+    }).isRequired,
   ).isRequired,
 };
 

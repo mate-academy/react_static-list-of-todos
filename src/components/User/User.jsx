@@ -2,14 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './User.css';
 
-function User({ name }) {
+function User({ user }) {
   return (
-    <div className="userName">{name}</div>
+    <div className="userName">{user.name}</div>
   );
 }
 
 User.propTypes = {
-  name: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default User;

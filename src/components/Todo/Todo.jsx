@@ -3,18 +3,18 @@ import PropTypes from 'prop-types';
 import User from '../User/User';
 import './Todo.css';
 
-function Todo({ title, completed, user }) {
+function Todo({ todo }) {
   return (
     <>
       <div>
         <div className="todoTitle">
-          {title}
+          {todo.title}
         </div>
         <div className="completed">
-          {completed ? 'completed' : 'no-completed'}
+          {todo.completed ? 'completed' : 'no-completed'}
         </div>
         <div>
-          <User {...user} />
+          <User user={todo.user} />
         </div>
 
       </div>
@@ -24,9 +24,14 @@ function Todo({ title, completed, user }) {
 }
 
 Todo.propTypes = {
-  title: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired,
-  user: PropTypes.shape().isRequired,
+  todo: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
+    user: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+    }).isRequired,
+  }).isRequired,
 };
 
 export default Todo;
