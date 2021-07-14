@@ -1,1 +1,15 @@
-// styles go here
+html {
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
+.title {
+  text-align: center;
+  color: #344334;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
