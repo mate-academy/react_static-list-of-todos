@@ -1,0 +1,13 @@
+.todo-item {
+  max-width: 300px;
+  min-width: 300px;
+  list-style: none;
+  background-color: aqua;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  padding: 20px;
+
+  &__head {
+    text-align: center;
+  }
+}
