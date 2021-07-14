@@ -11,11 +11,9 @@ const preparedTodos = todos.map(value => ({
 
 export function App() {
   return (
-    <>
-      <div className="App">
-        <h1>Static list of todos</h1>
-        <TodoList todos={preparedTodos} />
-      </div>
-    </>
+    <div className="App">
+      <h1>Static list of todos</h1>
+      <TodoList todos={preparedTodos} />
+    </div>
   );
 }
