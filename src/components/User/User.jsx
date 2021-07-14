@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import './User.scss'
 
 export function User({ name }) {
-  console.log(name)
   return (
     <div className='user-name'>
       <span className='name-item'>
