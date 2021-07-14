@@ -5,10 +5,14 @@ import { User } from '../User';
 
 export function Todo({ title, completed, user }) {
   const status = completed === false ? 'Status: planned' : 'Status: done';
+
   return (
     <div>
-      <User {...user}/>
-      <div className='title'>Plan: {title}</div>
+      <User {...user} />
+      <div className="title">
+        Plan:
+        {title}
+      </div>
       <div>
         {status}
       </div>

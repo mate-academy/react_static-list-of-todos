@@ -5,14 +5,14 @@ import { Todo } from '../Todo';
 
 export function TodoList({ todos }) {
   return (
-    <ul className='data-list'>
+    <ul className="data-list">
       {todos.map(el => (
-        <li className='data-li' key={el.id}>
+        <li className="data-li" key={el.id}>
           <Todo {...el} />
         </li>
       ))}
     </ul>
-  )
+  );
 }
 
 TodoList.propTypes = {
@@ -20,5 +20,5 @@ TodoList.propTypes = {
     PropTypes.shape({
       userId: PropTypes.number.isRequired,
     }),
-  ),
+  ).isRequired,
 };
