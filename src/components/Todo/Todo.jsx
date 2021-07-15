@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import './Todo.scss';
 import { User } from '../User/User';
 import { TodoPropTypes } from './TodoPropTypes';
@@ -10,7 +11,7 @@ export const Todo = ({ id, title, completed, user }) => (
     </h3>
     <p
       className={
-      completed ? 'Todo__compiled' : 'Todo__in-process'
+        classNames(completed ? 'Todo__compiled' : 'Todo__in-process')
       }
       key={completed}
     >
