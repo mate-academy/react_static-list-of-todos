@@ -1,0 +1,27 @@
+.Todo {
+  width: 300px;
+  padding: 20px;
+  border: 1.5px solid black;
+  border-radius: 10px;
+  margin: 20px;
+  background-color: rgb(209, 209, 209);
+  transition: 0.5s;
+
+  &__title {
+    font-size: 26px;
+  }
+  &__compiled {
+    font-weight: 800;
+    color:green;
+  }
+  &__in-process {
+    font-weight: 800;
+    color:orange;
+  }
+  &:hover {
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: rgb(190, 190, 190);
+    transform: scale(1.03);
+  }
+}

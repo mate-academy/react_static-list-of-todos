@@ -1,1 +1,11 @@
-// styles go here
+.App {
+  &__title {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+  }
+  &__container {
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+}
