@@ -1,15 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Todo } from '../Todo/Todo';
-// eslint-disable-next-line import/no-cycle
-import { preparedTodos } from '../App';
 
-export const TodoList = () => (
+export const TodoList = ({ todos }) => (
   <>
-    {preparedTodos.map(item => (
+    {todos.map(item => (
       <Todo
         key={item.id}
-        task={item}
+        {...item}
       />
     ))}
   </>
 );
+
+TodoList.propTypes = {
+  todos: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      completed: PropTypes.bool.isRequired,
+    }),
+  ).isRequired,
+};

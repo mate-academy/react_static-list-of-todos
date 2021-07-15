@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './User.scss';
 
-export const User = ({ user }) => (
+export const User = ({ name }) => (
   <span className="user">
     {'User: '}
-    {user}
+    {name}
   </span>
 );
 
 User.propTypes = {
-  user: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };

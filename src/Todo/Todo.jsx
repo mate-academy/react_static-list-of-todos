@@ -3,23 +3,21 @@ import PropTypes from 'prop-types';
 import { User } from '../User/User';
 import './Todo.scss';
 
-export const Todo = ({ task }) => (
+export const Todo = ({ title, completed, user }) => (
   <div className="todo">
-    <span className="todo__title">{task.title}</span>
+    <span className="todo__title">{title}</span>
     <span className="todo__status">
       {'Status: '}
-      {task.completed ? 'completed' : 'in proggres'}
+      {completed ? 'completed' : 'in proggres'}
     </span>
-    <User
-      user={task.user}
-    />
+    <User {...user} />
   </div>
 );
 
 Todo.propTypes = {
-  task: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired,
-    user: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
   }).isRequired,
 };
