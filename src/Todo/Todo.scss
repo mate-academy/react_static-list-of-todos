@@ -1,0 +1,23 @@
+.todo {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 420px;
+  border: 1px solid;
+  border-radius: 3px;
+  background: oldlace;
+}
+
+.todo__title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.todo__title:first-letter {
+  text-transform: uppercase;
+}
+
+.todo__status {
+  font-weight: 600;
+}
