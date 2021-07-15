@@ -1,5 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import classNames from 'classnames';
 import { User } from '../User';
 import './Todo_Styles.scss';
 
@@ -8,8 +9,8 @@ export const Todo = ({ title, completed, user }) => (
     <h2 className="title">
       {title}
     </h2>
-    <p className={completed ? 'completed' : 'notCompleted'}>
-      {completed ? 'It is done' : 'It is not done yet'}
+    <p className={classNames(completed ? 'completed' : 'notCompleted')}>
+      {classNames(completed ? 'It is done' : 'It is not done yet')}
     </p>
     <User userName={user.name} />
   </>
