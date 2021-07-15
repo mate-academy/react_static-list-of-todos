@@ -1,0 +1,19 @@
+body {
+  background-color:rgb(255,240,219);
+}
+
+.title {
+  text-transform: capitalize;
+}
+
+.completed {
+  color: rgb(8, 201, 8);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.notCompleted {
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  font-size: 20px;
+}
