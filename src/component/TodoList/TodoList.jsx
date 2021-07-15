@@ -12,7 +12,7 @@ export const TodoList = ({ todos, users }) => (
         className={`todo__item ${todo.completed ? 'complete' : ''}`}
       >
         <Todo {...todo} />
-        <User {...users.find(item => item.id === todo.userId)} />
+        <User {...users.find(user => user.id === todo.userId)} />
       </div>
     ))}
   </div>
