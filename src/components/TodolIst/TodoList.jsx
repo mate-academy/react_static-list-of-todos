@@ -4,12 +4,12 @@ import { Todo } from '../Todo/Todo';
 import './TodoList.scss';
 import { TodoPropTypes } from '../Todo/TodoPropTypes';
 
-export const TodoList = props => (
+export const TodoList = ({ DataName }) => (
   <div className="TodoList">
-    {props.props.map(x => <Todo key={x.id} {...x} />)}
+    {DataName.map(item => <Todo key={item.id} {...item} />)}
   </div>
 );
 
 TodoList.propTypes = {
-  props: PropTypes.arrayOf(PropTypes.shape(TodoPropTypes)).isRequired,
+  DataName: PropTypes.arrayOf(PropTypes.shape(TodoPropTypes)).isRequired,
 };

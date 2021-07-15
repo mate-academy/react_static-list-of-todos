@@ -5,24 +5,17 @@ import todos from './api/todos';
 import users from './api/users';
 import { TodoList } from './components/TodolIst/TodoList';
 
-const DataName = [];
-
-todos.map(y => users.map(x => (x.id === y.userId)
-  && DataName.push(
-    {
-      id: y.id,
-      name: x.name,
-      title: y.title,
-      completed: y.completed,
-    },
-  )));
+const preparedTodos = todos.map(item => ({
+  ...item,
+  user: users.find(user => user.id === item.userId),
+}));
 
 function App() {
   return (
     <div className="App">
       <h1 className="App__title">Static list of todos</h1>
       <div className="App__container">
-        <TodoList props={DataName} />
+        <TodoList DataName={preparedTodos} />
       </div>
     </div>
   );
