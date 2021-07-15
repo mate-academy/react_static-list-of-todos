@@ -1,6 +1,6 @@
 
 import React from 'react';
-import PropTypes from 'prop-types';
+import { TodoListProps } from '../../Props';
 
 import Todo from '../Todo/Todo';
 import './TodoList.scss';
@@ -14,9 +14,7 @@ const TodoList = ({ todos }) => (
 );
 
 TodoList.propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-  })).isRequired,
+  todos: TodoListProps.isRequired,
 };
 
 export default TodoList;

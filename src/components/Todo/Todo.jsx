@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './Todo.scss';
 import User from '../User/User';
+import { TodoListProps } from '../../Props';
 
 const Todo = ({ title, completed, person }) => (
   <li className="todo-item">
@@ -19,16 +19,6 @@ const normalaizeHead = (str) => {
   return result[0] + str.slice(1);
 };
 
-Todo.defaultProps = {
-  person: null,
-};
-
-Todo.propTypes = {
-  title: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired,
-  person: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-  }),
-};
+Todo.propTypes = { ...TodoListProps };
 
 export default Todo;
