@@ -20,8 +20,10 @@ todos.map(y => users.map(x => (x.id === y.userId)
 function App() {
   return (
     <div className="App">
-      <h1>Static list of todos</h1>
-      <TodoList props={DataName} />
+      <h1 className="App__title">Static list of todos</h1>
+      <div className="App__container">
+        <TodoList props={DataName} />
+      </div>
     </div>
   );
 }
