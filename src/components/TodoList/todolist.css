@@ -1,0 +1,18 @@
+.toDoList {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.toDoList__item {
+  width: 200px;
+  flex-shrink: 0;
+  background-color: red;
+  padding: 20px;
+}
+
+.doneTask {
+  background-color: green;
+}
