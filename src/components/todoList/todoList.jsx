@@ -8,11 +8,6 @@ import { Todo } from '../todo/todo';
 export const TodoList = () => (
   todos.map(todo => (
     <div className="todo__item" key={todo.id}>
-      <p>
-        Title:
-        {' '}
-        {todo.title}
-      </p>
       <Todo todo={todo} />
       <User {...users.find(user => user.id === todo.userId)} />
     </div>
