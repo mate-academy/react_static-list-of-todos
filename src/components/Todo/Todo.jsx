@@ -1,8 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './Todo.scss';
 import { User } from '../User/User';
+import { TodoListType } from '../../types';
+
 
 export const Todo = ({
   title,
@@ -18,8 +19,8 @@ export const Todo = ({
     </div>
     <div className={
       classNames('todo-card__status', {
-        completed: completed === true,
-        uncompleted: completed === false,
+        completed: completed,
+        uncompleted: !completed,
       })
     }
     >
@@ -28,8 +29,4 @@ export const Todo = ({
   </div>
 );
 
-Todo.propTypes = {
-  title: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired,
-  user: PropTypes.shape().isRequired,
-};
+Todo.propTypes = {TodoListType};
