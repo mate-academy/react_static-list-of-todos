@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import './Todo.scss';
 import { User } from '../User/User';
-import { TodoListType } from '../../types';
+import { TodoType } from '../../types';
 
 
 export const Todo = ({
@@ -29,4 +29,4 @@ export const Todo = ({
   </div>
 );
 
-Todo.propTypes = {TodoListType};
+Todo.propTypes = {TodoType};

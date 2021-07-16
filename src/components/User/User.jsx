@@ -1,6 +1,6 @@
 import React from 'react';
 import './User.scss';
-import { TodoListType } from '../../types';
+import PropTypes from 'prop-types';
 
 export const User = ({ user }) => (
   <span className="name">
@@ -8,4 +8,8 @@ export const User = ({ user }) => (
   </span>
 );
 
-User.propTypes = {TodoListType};
+User.propTypes = {
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
+};
