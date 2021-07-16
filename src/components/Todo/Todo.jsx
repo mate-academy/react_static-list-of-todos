@@ -9,8 +9,13 @@ export const Todo = ({ title, completed, user }) => (
     <h2 className="title">
       {title}
     </h2>
-    <p className={classNames(completed ? 'completed' : 'notCompleted')}>
-      {classNames(completed ? 'It is done' : 'It is not done yet')}
+    <p
+      className={classNames({
+        completed,
+        notCompleted: !completed,
+      })}
+    >
+      {completed ? 'It is done' : 'It is not done yet'}
     </p>
     <User userName={user.name} />
   </>
