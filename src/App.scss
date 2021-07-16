@@ -1,1 +1,14 @@
-// styles go here
+html {
+  font-family: Robot, sans-serif;
+}
+
+body {
+  background-color: tomato;
+}
+
+.todo__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
