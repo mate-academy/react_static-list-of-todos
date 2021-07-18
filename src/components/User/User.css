@@ -1,0 +1,12 @@
+.user-name {
+  width: max-content;
+  padding: 3px;
+  border: 1px solid grey;
+  border-radius: 2px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.user-name:hover {
+  background-color: rgb(166, 183, 219);
+}
