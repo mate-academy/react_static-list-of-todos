@@ -1,0 +1,11 @@
+.todo {
+  margin-bottom: 30px;
+}
+
+.tick {
+  color: rgba(2, 194, 2, 0.88);
+}
+
+.cross {
+  color: red;
+}
