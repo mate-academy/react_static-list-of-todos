@@ -1,0 +1,22 @@
+.todo {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+  border: 1px solid;
+  border-radius: 3px;
+  background: rgb(221, 203, 170);
+}
+
+.todo__title:first-letter {
+  text-transform: uppercase;
+}
+
+.todo__completed {
+  color: green;
+}
+
+.todo__in-proggres {
+  color: red;
+}
