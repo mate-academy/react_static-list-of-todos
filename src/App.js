@@ -4,21 +4,16 @@ import './App.scss';
 import todos from './api/todos';
 import users from './api/users';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Static list of todos</h1>
-      <p>
-        <span>Todos: </span>
-        {todos.length}
-      </p>
+import { TodoList } from './components/todolist';
 
-      <p>
-        <span>Users: </span>
-        {users.length}
-      </p>
-    </div>
-  );
-}
+const preparedTodos = todos.map((task) => {
+  const newTask = { ...task };
+
+  newTask.user = users.find(person => person.id === task.userId).name;
+
+  return newTask;
+});
+
+const App = () => <TodoList preparedTodos={preparedTodos} />;
 
 export default App;
