@@ -1,0 +1,17 @@
+.todoBoard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4px;
+  justify-content: center;
+
+}
+
+.taskCard {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 1px solid rgb(212, 197, 197);
+  border-radius: 5px;
+  box-shadow: 2px 4px 5px rgb(238, 174, 174);
+  padding: 0 10px;
+}
