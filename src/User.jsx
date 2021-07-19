@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const User = ({ name }) => (
+export const User = ({ user }) => (
   <h2 className="user">
-    {name}
+    {user.name}
   </h2>
 );
 
 User.propTypes = {
-  name: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
 };
