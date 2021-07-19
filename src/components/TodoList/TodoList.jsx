@@ -8,7 +8,7 @@ export function TodoList({ todos }) {
     <ul>
       {todos.map(el => (
         <li key={el.id}>
-          <Todo todo={el} />
+          <Todo {...el} />
         </li>
       ))}
     </ul>
