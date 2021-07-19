@@ -2,7 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 import { User } from '../User/User';
 import './Todo.scss';
-import { template } from '../objFit';
+import { userTemplate } from '../objFit';
 
 export const ToDo = ({ toDo }) => (
   <>
@@ -19,6 +19,6 @@ ToDo.propTypes = {
   toDo: propTypes.shape({
     title: propTypes.string.isRequired,
     completed: propTypes.bool.isRequired,
-    user: template,
+    user: userTemplate,
   }).isRequired,
 };

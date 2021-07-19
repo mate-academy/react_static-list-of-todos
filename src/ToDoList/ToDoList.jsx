@@ -2,22 +2,24 @@ import React from 'react';
 import propTypes from 'prop-types';
 import { ToDo } from '../Todo/Todo';
 import './ToDoList.scss';
-import { template } from '../objFit';
+import { userTemplate } from '../objFit';
 
-export const ToDoList = ({ toDos }) => (
+export const ToDoList = ({ todos }) => (
   <ul>
-    {toDos.map(item => (
-      <li className="ToDo" key={item.id}><ToDo toDo={item} /></li>
+    {todos.map(todo => (
+      <li className="ToDo" key={todo.id}>
+        <ToDo toDo={todo} />
+      </li>
     ))}
   </ul>
 );
 
 ToDoList.propTypes = {
-  toDos: propTypes.arrayOf(propTypes.shape({
+  todos: propTypes.arrayOf(propTypes.shape({
     completed: propTypes.bool.isRequired,
     id: propTypes.number.isRequired,
     title: propTypes.string.isRequired,
     userId: propTypes.number.isRequired,
-    user: template,
+    user: userTemplate,
   })).isRequired,
 };

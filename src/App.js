@@ -5,17 +5,17 @@ import { ToDoList } from './ToDoList/ToDoList';
 import todos from './api/todos';
 import users from './api/users';
 
-const preparedTodos = todos.map((item) => {
-  const newItem = { ...item };
+const preparedTodos = todos.map((todo) => {
+  const todoCopy = { ...todo };
 
-  newItem.user = users.find(person => person.id === item.userId);
+  todoCopy.user = users.find(person => person.id === todo.userId);
 
-  return newItem;
+  return todoCopy;
 });
 
 function App() {
   return (
-    <ToDoList toDos={preparedTodos} />
+    <ToDoList todos={preparedTodos} />
   );
 }
 

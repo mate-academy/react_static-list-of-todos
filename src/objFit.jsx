@@ -1,6 +1,6 @@
 import propTypes from 'prop-types';
 
-export const template = propTypes.shape({
+export const userTemplate = propTypes.shape({
   id: propTypes.number.isRequired,
   name: propTypes.string.isRequired,
   username: propTypes.string.isRequired,
