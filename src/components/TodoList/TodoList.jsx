@@ -11,8 +11,7 @@ export function TodoList({ todos }) {
           <Todo
             title={todo.title}
             status={todo.status}
-            userId={todo.userId}
-            userName={todo.userName}
+            user={todo.user}
           />
         </div>
       ))}

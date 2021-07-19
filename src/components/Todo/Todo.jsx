@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import { User } from '../User';
 
-export function Todo({ title, status, userId, userName }) {
+export function Todo({ title, status, user }) {
   return (
     <>
       <h2 className="card__title">{title}</h2>
       <p>{status}</p>
-      <User id={userId} name={userName} />
+      <User user={user} />
     </>
   );
 }
@@ -16,8 +16,9 @@ export function Todo({ title, status, userId, userName }) {
 Todo.propTypes = {
   title: PropTypes.string.isRequired,
   status: PropTypes.string,
-  userId: PropTypes.number.isRequired,
-  userName: PropTypes.number.isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 Todo.defaultProps = {

@@ -6,12 +6,12 @@ import users from './api/users';
 import { TodoList } from './components/TodoList/TodoList';
 
 const preparedTodos = todos.map((todo) => {
-  const newTodo = { ...todo };
+  const todoCopy = { ...todo };
 
-  newTodo.userName = users.find(user => user.id === todo.userId).name;
-  newTodo.status = `Status: ${todo.completed ? 'completed' : 'in progress'}`;
+  todoCopy.user = users.find(user => user.id === todo.userId);
+  todoCopy.status = `Status: ${todo.completed ? 'completed' : 'in progress'}`;
 
-  return newTodo;
+  return todoCopy;
 });
 
 function App() {
