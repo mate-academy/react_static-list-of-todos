@@ -12,11 +12,15 @@ export function TodoList({ todos }) {
       {todos.map(todo => (
         <li
           className={classNames('toDoList__item', {
-            doneTask: todo.completed === true,
+            doneTask: todo.completed,
           })}
           key={todo.id}
         >
-          <Todo {...todo} />
+          <Todo
+            title={todo.title}
+            completed={todo.completed}
+            user={todo.user}
+          />
         </li>
       ))}
     </ul>

@@ -13,7 +13,7 @@ export function Todo({ title, completed, user }) {
         Status:
         {completed ? ` Done` : ` In progress`}
       </p>
-      <User {...user} key={user.id} />
+      <User name={user.name} key={user.id} />
     </>
   );
 }
@@ -22,6 +22,7 @@ Todo.propTypes = {
   title: propTypes.string.isRequired,
   completed: propTypes.bool.isRequired,
   user: propTypes.shape({
+    name: propTypes.string.isRequired,
     id: propTypes.number.isRequired,
   }).isRequired,
 };
