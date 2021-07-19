@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import users from '../../api/users';
 
-function User({ id }) {
+export function User({ id }) {
   return (
     <p>
       {`User:  ${users.find(user => user.id === id).name}`}
@@ -14,5 +14,3 @@ function User({ id }) {
 User.propTypes = {
   id: PropTypes.number.isRequired,
 };
-
-export default User;
