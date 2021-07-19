@@ -1,5 +1,6 @@
 import React from 'react';
 import { User } from '../User/User';
+import { TodoPropTypes } from '../TodoPropTypes';
 import './Todo.css';
 import classNames from 'classnames';
 
@@ -29,3 +30,5 @@ export const Todo = ({title, completed, user, id}) => {
     </React.Fragment>
   );
 }
+
+Todo.propTypes = TodoPropTypes;

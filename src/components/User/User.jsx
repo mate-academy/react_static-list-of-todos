@@ -1,5 +1,6 @@
 import React from 'react';
 import './User.css';
+import { UserPropTypes } from '../TodoPropTypes';
 
 export const User = ({name}) => {
   return (
@@ -10,3 +11,5 @@ export const User = ({name}) => {
       </span>
     </React.Fragment>
 )};
+
+User.propTypes = UserPropTypes;
