@@ -1,23 +1,21 @@
 import React from 'react';
 import './App.scss';
+import { TodoList } from './Components/TodoList';
 
 import todos from './api/todos';
 import users from './api/users';
 
+const preparedTodos = todos.map(task => ({
+  ...task,
+  user: users.find(person => person.id === task.userId).name,
+}));
+
 function App() {
   return (
-    <div className="App">
-      <h1>Static list of todos</h1>
-      <p>
-        <span>Todos: </span>
-        {todos.length}
-      </p>
-
-      <p>
-        <span>Users: </span>
-        {users.length}
-      </p>
-    </div>
+    <>
+      <h1 className="todoListTitle">Static list of todos</h1>
+      <TodoList preparedTodos={preparedTodos} />
+    </>
   );
 }
 
