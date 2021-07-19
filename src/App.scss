@@ -1,1 +1,28 @@
 // styles go here
+.status {
+  color: yellowgreen;
+
+  &-no {
+    color: red;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  color: green;
+}
+
+.user {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+}
+
+.list {
+  list-style: none;
+  background-color: peachpuff;
+  border: 1 px solid wheat;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+}
