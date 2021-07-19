@@ -16,7 +16,7 @@ export const Todo = ({ title, completed, user }) => (
     </span>
     <span className="todo__item">
       <strong className="todo__title">Name: </strong>
-      <User {...user} />
+      <User name={user.name} />
     </span>
 
   </div>
