@@ -1,0 +1,8 @@
+.todosList {
+  padding: 0;
+  margin: 30px;
+}
+
+.todosList__item {
+  list-style: none;
+}
