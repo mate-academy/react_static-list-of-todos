@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import users from '../../api/users';
-
-export function User({ id }) {
+export function User({ id, name }) {
   return (
     <p>
-      {`User:  ${users.find(user => user.id === id).name}`}
+      {`User: ${name}`}
     </p>
   );
 }
 
 User.propTypes = {
   id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
 };

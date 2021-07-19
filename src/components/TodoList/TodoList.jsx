@@ -3,12 +3,17 @@ import PropTypes from 'prop-types';
 
 import { Todo } from '../Todo/Todo';
 
-export function TodoList({ preparedTodos }) {
+export function TodoList({ todos }) {
   return (
     <div className="todo-list">
-      {preparedTodos.map(todo => (
+      {todos.map(todo => (
         <div key={todo.id} className="todo-list__card card">
-          <Todo title={todo.title} status={todo.status} userId={todo.userId} />
+          <Todo
+            title={todo.title}
+            status={todo.status}
+            userId={todo.userId}
+            userName={todo.userName}
+          />
         </div>
       ))}
     </div>
@@ -16,7 +21,7 @@ export function TodoList({ preparedTodos }) {
 }
 
 TodoList.propTypes = {
-  preparedTodos: PropTypes.arrayOf(
+  todos: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
     }),
