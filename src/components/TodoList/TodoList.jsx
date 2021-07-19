@@ -6,7 +6,7 @@ import { Table } from 'react-bootstrap';
 import User from '../User/User';
 import Todo from '../Todo/Todo';
 
-export default function TodoList({ todos, users }) {
+export default function TodoList({ prepearedTodos }) {
   return (
     <div>
       <Table striped bordered hover>
@@ -18,11 +18,11 @@ export default function TodoList({ todos, users }) {
             <th>Username</th>
           </tr>
         </thead>
-        {todos.map((todo, id) => (
+        {prepearedTodos.map(todo => (
           <tbody key={todo.id}>
             <tr>
-              <Todo {...todo} />
-              <User {...users.find(member => member.id === todo.userId)} />
+              <Todo todo={todo} />
+              <User name={todo.user.username} />
             </tr>
           </tbody>
         ))}
@@ -32,14 +32,7 @@ export default function TodoList({ todos, users }) {
 }
 
 TodoList.propTypes = {
-  todos: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      completed: PropTypes.bool.isRequired,
-      userId: PropTypes.number.isRequired,
-    }),
-  ).isRequired,
-  users: PropTypes.arrayOf(
+  prepearedTodos: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
     }),

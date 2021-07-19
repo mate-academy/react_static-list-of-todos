@@ -3,24 +3,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Todo.css';
 
-export default function Todo({ id, title, completed }) {
+export default function Todo({ todo }) {
   return (
     <>
       <td>
-        {id}
+        {todo.id}
       </td>
       <td>
-        {title.toUpperCase()}
+        {`${todo.title}`.toUpperCase()}
       </td>
-      <td className={!completed && 'not-completed'}>
-        {completed ? 'Completed' : 'Not compleated yet!'}
+      <td className={!todo.completed && 'not-completed'}>
+        {todo.completed ? 'Completed' : 'Not compleated yet!'}
       </td>
     </>
   );
 }
 
 Todo.propTypes = {
-  id: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired,
+  todo: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      completed: PropTypes.bool.isRequired,
+    }),
+  ).isRequired,
 };
