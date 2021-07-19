@@ -1,0 +1,10 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  margin: 0 auto;
+  padding: 0;
+  height: 30em;
+  max-width: 50%;
+}
