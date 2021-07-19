@@ -4,10 +4,12 @@ import { Todo } from '../Todo/Todo';
 
 export const TodoList = ({ todos }) => (
   <>
-    {todos.map(item => (
+    {todos.map(todo => (
       <Todo
-        key={item.id}
-        {...item}
+        key={todo.id}
+        title={todo.title}
+        completed={todo.completed}
+        user={todo.user}
       />
     ))}
   </>

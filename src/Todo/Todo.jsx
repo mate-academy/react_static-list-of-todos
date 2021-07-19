@@ -15,7 +15,7 @@ export const Todo = ({ title, completed, user }) => (
       {'Status: '}
       {completed ? 'completed' : 'in proggres'}
     </p>
-    <User {...user} />
+    <User name={user.name} />
 
   </div>
 );
