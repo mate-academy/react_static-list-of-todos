@@ -25,7 +25,7 @@ function App() {
         <span>Users: </span>
         {users.length}
       </p>
-      <TodoList todoList={preparedTodos} />
+      <TodoList todos={preparedTodos} />
     </div>
   );
 }

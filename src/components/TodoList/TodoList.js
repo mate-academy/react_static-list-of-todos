@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Todo, TypeTodo } from '../Todo';
 import './TodoList.scss';
 
-export const TodoList = ({ todoList }) => (
+export const TodoList = ({ todos }) => (
   <ol className="todoList">
-    {todoList.map(todo => (
+    {todos.map(todo => (
       <li key={todo.id} className="todoList__item">
         <Todo
           title={todo.title}
@@ -18,7 +18,7 @@ export const TodoList = ({ todoList }) => (
 );
 
 TodoList.propTypes = {
-  todoList: PropTypes.arrayOf(
+  todos: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,
       ...TypeTodo,
