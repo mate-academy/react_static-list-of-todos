@@ -2,7 +2,7 @@ import React from 'react';
 import { TodoPropsType } from '../types';
 import './Todo.scss';
 
-export const Todo = ({ title, status, user }) => (
+export const Todo = ({ title, completed, user }) => (
   <div className="todo">
     <span className="todo__title">
       Todo:
@@ -10,7 +10,7 @@ export const Todo = ({ title, status, user }) => (
     </span>
     <span className="todo__status">
       Status:
-      {status ? 'Completed' : 'In progress'}
+      {completed ? 'Completed' : 'In progress'}
     </span>
     <span className="todo__user">
       User:
