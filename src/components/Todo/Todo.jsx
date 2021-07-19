@@ -5,8 +5,6 @@ import PropTypes from 'prop-types';
 import { TodoType } from '../../types';
 import { User } from '../User';
 
-import './Todo.scss';
-
 export const Todo = ({ todo }) => (
   <tr className={
     classNames('list', {

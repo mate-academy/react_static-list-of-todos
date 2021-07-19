@@ -5,8 +5,6 @@ import { Table, Container } from 'react-bootstrap';
 import { TodoType } from '../../types';
 import { Todo } from '../Todo';
 
-import './TodoList.scss';
-
 export const TodoList = ({ todos }) => (
   <Container>
     <Table striped bordered hover>
