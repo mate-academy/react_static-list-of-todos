@@ -3,7 +3,8 @@ html {
 }
 
 body,
-h3 {
+h3,
+p {
   margin: 0;
 }
 
@@ -11,6 +12,7 @@ h3 {
   margin: 0 auto;
 
   &__title {
+    padding: 10px 0 20px;
     text-align: center;
   }
 }

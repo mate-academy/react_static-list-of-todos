@@ -6,7 +6,7 @@ import { TodoList } from './components/TodoList';
 
 import './App.scss';
 
-const todosList = todos.map(
+const preparedTodos = todos.map(
   item => ({
     ...item,
     user: users.find(person => (person.id === item.userId)),
@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <h1 className="App__title">Static list of todos</h1>
-      <TodoList todos={todosList} />
+      <TodoList todos={preparedTodos} />
     </div>
   );
 }
