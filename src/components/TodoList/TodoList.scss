@@ -1,0 +1,15 @@
+.todoList {
+  color: blue;
+
+  &__item {
+    margin: 0  auto 20px;
+    border: 5px solid yellowgreen;
+    border-radius: 20px;
+    width: 40%;
+    padding: 0 20px;
+    background-color: antiquewhite;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
