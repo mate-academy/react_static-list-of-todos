@@ -11,8 +11,7 @@ export const Todo = ({ task }) => (
     </p>
     <p className="taskCard__status">
       Status:
-      {' '}
-      {`${task.completed ? 'finished' : 'in progress'}`}
+      {` ${task.completed ? 'finished' : 'in progress'}`}
     </p>
     <User task={task} />
   </>
