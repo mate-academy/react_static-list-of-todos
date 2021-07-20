@@ -3,7 +3,7 @@ import './App.scss';
 
 import todos from './api/todos';
 import users from './api/users';
-import { TodoList } from './components/TodoList';
+import { TodoList } from './components/TodoList/TodoList';
 
 const preparedTodos = todos.map(todo => ({
   ...todo,
@@ -24,18 +24,7 @@ function App() {
         {users.length}
       </p>
 
-      <table className="table table-bordered table-success table-hover">
-        <thead>
-          <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Title</th>
-            <th scope="col">Completed</th>
-            <th scope="col">User</th>
-          </tr>
-        </thead>
-
-        <TodoList prepared={preparedTodos} />
-      </table>
+      <TodoList prepared={preparedTodos} />
     </div>
   );
 }
