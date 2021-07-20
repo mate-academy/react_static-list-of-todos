@@ -13,7 +13,7 @@ export function Todo({ title, completed, user }) {
             : 'not completed'
         }
       </p>
-      <User user={user} />
+      <User {...user} />
     </>
   );
 }

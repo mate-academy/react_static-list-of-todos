@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Todo } from '../Todo/Todo';
-import { todosTypes } from '../../types';
+import { TodosTypes } from '../../types';
 
 export function TodoList({ todos }) {
   return (
     <ul>
-      {todos.map(el => (
-        <li key={el.id}>
-          <Todo {...el} />
+      {todos.map(todo => (
+        <li key={todo.id}>
+          <Todo {...todo} />
         </li>
       ))}
     </ul>
@@ -22,7 +22,7 @@ TodoList.defaultProps = {
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(
     PropTypes.shape(
-      todosTypes,
+      TodosTypes,
     ),
   ),
 };
