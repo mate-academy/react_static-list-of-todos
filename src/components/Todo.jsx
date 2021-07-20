@@ -2,22 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { User } from './User';
 
-export const Todo = ({ title, completed, user }) => (
+export const Todo = ({ todo }) => (
   <>
     <h2>
-      {`Title: ${title}`}
+      {`Title: ${todo.title}`}
     </h2>
-    {`Completed status: ${completed ? 'YES' : 'NOT NOW'}`}
+    {`Completed status: ${todo.completed ? 'YES' : 'NOT NOW'}`}
     <p>
-      <User {...user} />
+      <User user={todo.user} />
     </p>
   </>
 );
 
 Todo.propTypes = {
-  title: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired,
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
+  todo: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
+    user: PropTypes.shape().isRequired,
   }).isRequired,
 };
