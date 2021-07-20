@@ -1,0 +1,14 @@
+.card {
+  max-width: 300px;
+  background-color: #eee;
+  border: 1px solid #000;
+  border-radius: 30%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    max-width: 80%;
+    align-self: center;
+  }
+}

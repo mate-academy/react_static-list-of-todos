@@ -12,3 +12,6 @@ items. Alongside each item display information about the user it belongs to.
 1. Create a component `TodoList` accepting an array of `preparedTodos` and displaying them as a list
 1. Create a component `Todo` accepting a `todo` object and displaying its `title`, `completed` status and `User`
 1. Create a component `User` accepting a `user` object and displaying its name with some styling
+
+
+
