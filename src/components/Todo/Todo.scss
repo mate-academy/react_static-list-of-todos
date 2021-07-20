@@ -1,0 +1,44 @@
+.todo {
+  border: solid dimgray;
+  border-radius: 24px;
+  padding: 8px;
+  text-align: center;
+  height: 300px;
+  transition: transform 0.3s;
+  background-color: rgb(236, 235, 235);
+
+  &:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+      box-shadow:  4px 4px 8px 4px rgba(34, 60, 80, 0.2);;
+  }
+}
+
+.taskTitle {
+  font-size: 24px;
+  padding-bottom: 24px;
+}
+
+.completed {
+  padding: 8px;
+  background-color: lightgreen;
+  border-radius: 24px;
+  border: solid 2px rgb(53, 121, 53);
+
+  &:hover {
+    cursor: pointer;
+    box-shadow:  4px 4px 8px 4px rgba(21, 131, 45, 0.2);;
+  }
+}
+
+.notCompleted {
+  padding: 8px;
+  background-color: lightpink;
+  border-radius: 24px;
+  border: solid 2px rgb(226, 23, 40);
+
+  &:hover {
+    cursor: pointer;
+    box-shadow:  4px 4px 8px 4px rgba(131, 33, 33, 0.2);;
+  }
+}
