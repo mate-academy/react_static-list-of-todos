@@ -1,1 +1,13 @@
-// styles go here
+.not-completed {
+  background-color: rgb(255, 123, 123);
+}
+
+.completed {
+  background-color: rgb(205, 255, 164);
+}
+
+thead tr:nth-child(n) {
+  font-size: 25px;
+  color: rgb(43, 42, 42);
+  background-color: rgb(143, 143, 143);
+}
