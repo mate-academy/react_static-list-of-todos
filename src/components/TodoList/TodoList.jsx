@@ -3,16 +3,21 @@ import PropTypes from 'prop-types';
 import { Todo } from '../Todo/Todo';
 import './TodoList.css';
 
-export const TodosList = ({ preparedTodos }) => (
+export const TodosList = ({ todos }) => (
   <ul className="container">
-    {preparedTodos.map(todo => (
+    {todos.map(todo => (
       <li key={todo.id} className="card">
-        <Todo {...todo} />
+        <Todo
+          title={todo.title}
+          completed={todo.completed}
+          user={todo.user}
+          id={todo.id}
+        />
       </li>
     ))}
   </ul>
 );
 
 TodosList.propTypes = {
-  preparedTodos: PropTypes.arrayOf(PropTypes.object).isRequired,
+  todos: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

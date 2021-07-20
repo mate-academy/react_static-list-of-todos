@@ -6,7 +6,7 @@ export const Todo = ({ title, completed, user }) => (
   <>
     <p>{title}</p>
     <p>{`Status: ${completed ? 'done' : 'in progress'}`}</p>
-    <User {...user} />
+    <User name={user.name} />
   </>
 );
 
