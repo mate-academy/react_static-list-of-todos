@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Todo } from '../Todo';
-import { todoShape } from '../../shapes';
+import { TodoShape } from '../../shapes';
 
 export const TodoList = ({ todos }) => (
   <div>
     {todos.map(todo => (
       <span key={todo.id}>
-        <Todo todoObj={todo} />
+        <Todo todoGroup={todo} />
       </span>
     ))}
   </div>
 );
 
 TodoList.propTypes = {
-  todos: PropTypes.arrayOf(todoShape).isRequired,
+  todos: PropTypes.arrayOf(TodoShape).isRequired,
 };

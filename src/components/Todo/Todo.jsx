@@ -1,16 +1,16 @@
 import React from 'react';
 import { User } from '../User';
-import { todoShape } from '../../shapes';
+import { TodoShape } from '../../shapes';
 
-export const Todo = ({ todoObj }) => (
+export const Todo = ({ todoGroup }) => (
   <>
     <div className="item">
-      <h3>{todoObj.title}</h3>
-      <p>{todoObj.completed ? 'Completed.' : 'Not completed.'}</p>
-      <User currentUser={todoObj.user.name} />
+      <h3>{todoGroup.title}</h3>
+      <p>{todoGroup.completed ? 'Completed.' : 'Not completed.'}</p>
+      <User currentUser={todoGroup.user.name} />
     </div>
   </>
 );
 Todo.propTypes = {
-  todoObj: todoShape.isRequired,
+  todoGroup: TodoShape.isRequired,
 };
