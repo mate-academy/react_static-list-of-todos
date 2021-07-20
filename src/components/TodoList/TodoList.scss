@@ -1,0 +1,15 @@
+.todosList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+
+  &__item {
+    list-style: none;
+    width: 250px;
+  }
+}
+
+.nav {
+  display: flex;
+}

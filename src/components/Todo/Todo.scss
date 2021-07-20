@@ -1,0 +1,17 @@
+.todo {
+  border-radius: 8px;
+  border: 1px solid grey;
+  padding: 10px;
+  min-height: 140px;
+
+  &__title {
+    color: red;
+  }
+  &__name {
+    color:green
+  }
+
+  &__item {
+    margin-bottom: 5px;
+  }
+}
