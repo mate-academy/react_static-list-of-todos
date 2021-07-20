@@ -1,7 +1,7 @@
 import React from 'react';
 import './Todo.scss';
 import PropTypes from 'prop-types';
-import { User } from '../User/User';
+import { User } from '../User';
 
 export const Todo = ({ title, completed, user }) => (
   <div className="todo">

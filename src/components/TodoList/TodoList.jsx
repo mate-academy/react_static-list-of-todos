@@ -1,7 +1,7 @@
 import React from 'react';
 import './TodoList.scss';
 import PropTypes from 'prop-types';
-import { Todo } from '../Todo/Todo';
+import { Todo } from '../Todo';
 
 export const TodoList = ({ todos }) => (
   <div className="nav">
@@ -20,5 +20,17 @@ export const TodoList = ({ todos }) => (
 );
 
 TodoList.propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.object).isRequired,
+  todos: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      completed: PropTypes.bool.isRequired,
+      user: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+      }).isRequired,
+    }),
+  ),
+};
+
+TodoList.defaultProps = {
+  todos: [],
 };
