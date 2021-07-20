@@ -14,7 +14,7 @@ export const Todo = ({ todo }) => (
         ? 'completed'
         : 'not completed'}`}
     </p>
-    <User todo={todo} />
+    <User todo={todo.user} />
   </>
 );
 

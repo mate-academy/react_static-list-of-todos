@@ -4,7 +4,7 @@ import './user.scss';
 
 export const User = ({ todo }) => (
   <p className="user-name">
-    <i>{todo.user}</i>
+    <i>{`User: ${todo.name}`}</i>
   </p>
 );
 

@@ -9,7 +9,7 @@ import { TodoList } from './components/todolist';
 const preparedTodos = todos.map((todo) => {
   const todoCopy = { ...todo };
 
-  todoCopy.user = users.find(person => person.id === todo.userId).name;
+  todoCopy.user = users.find(person => person.id === todo.userId);
 
   return todoCopy;
 });
