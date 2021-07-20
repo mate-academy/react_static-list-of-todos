@@ -11,7 +11,7 @@ export const Todo = ({ title, completed, user }) => (
       {completed
         ? <p className="completed">Status: Completed!</p>
         : <p className="notCompleted">Status: Not completed yet</p>}
-      <User {...user} />
+      <User name={user.name} />
     </div>
   </>
 );

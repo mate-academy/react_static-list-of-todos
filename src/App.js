@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <TodoList preparedTodos={preparedTodos} />
+        <TodoList todos={preparedTodos} />
       </div>
     </>
   );
