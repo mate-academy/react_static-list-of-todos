@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { User } from '../User/User';
+import { User } from '../User';
 import { TodoPropTypes } from '../TodoPropTypes';
 import './Todo.css';
 

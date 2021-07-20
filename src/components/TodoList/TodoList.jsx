@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { TodoPropTypes } from '../TodoPropTypes';
-import { Todo } from '../Todo/Todo';
+import { Todo } from '../Todo';
 
 export const TodoList = function TodoList({ tasks }) {
   return (
