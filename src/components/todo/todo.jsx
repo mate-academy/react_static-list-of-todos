@@ -1,21 +1,21 @@
 import React from 'react';
-import { TypesOfTodoList } from '../../types/type';
+import { TodoListType } from '../../types/type';
 import { User } from '../user';
 import './todo.scss';
 
-export const Todo = ({ task }) => (
+export const Todo = ({ todo }) => (
 
   <>
-    <h1 className="title">{task.title}</h1>
+    <h1 className="title">{todo.title}</h1>
     <p className="status">
       Status:
       {' '}
-      {`${task.completed
+      {`${todo.completed
         ? 'completed'
         : 'not completed'}`}
     </p>
-    <User task={task} />
+    <User todo={todo} />
   </>
 );
 
-Todo.propTypes = TypesOfTodoList.isRequired;
+Todo.propTypes = TodoListType.isRequired;

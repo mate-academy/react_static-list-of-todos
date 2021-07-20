@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const TypesOfTodoList = PropTypes.shape({
+export const TodoListType = PropTypes.shape({
   userId: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,

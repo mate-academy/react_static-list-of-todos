@@ -6,14 +6,14 @@ import users from './api/users';
 
 import { TodoList } from './components/todolist';
 
-const preparedTodos = todos.map((task) => {
-  const newTask = { ...task };
+const preparedTodos = todos.map((todo) => {
+  const todoCopy = { ...todo };
 
-  newTask.user = users.find(person => person.id === task.userId).name;
+  todoCopy.user = users.find(person => person.id === todo.userId).name;
 
-  return newTask;
+  return todoCopy;
 });
 
-const App = () => <TodoList preparedTodos={preparedTodos} />;
+const App = () => <TodoList todos={preparedTodos} />;
 
 export default App;
