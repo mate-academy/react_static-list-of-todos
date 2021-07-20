@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Todo } from './Todo';
-import { todoShape } from '../shapes';
+import { Todo } from '../Todo';
+import { todoShape } from '../../shapes';
 
 export const TodoList = ({ todos }) => (
   <div>
