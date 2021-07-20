@@ -11,7 +11,9 @@ export const Todo = ({ id, title, completed, user }) => (
     ) : (
       <td className="not-completed">needs to complete 𐄂</td>
     )}
-    <td><User {...user} /></td>
+    <td>
+      <User name={user.name} />
+    </td>
   </>
 );
 
