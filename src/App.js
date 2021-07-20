@@ -17,19 +17,35 @@ export const preparedTodos = todos.map(
 
 function App() {
   return (
-    <div className="App">
-      <div className="container">
+    <div className="App container">
+      <div>
         <TodoList tasks={preparedTodos} />
       </div>
-      <p>Static list of todos</p>
-      <p>
-        <span>Todos: </span>
-        {todos.length}
-      </p>
-      <p>
-        <span>Users: </span>
-        {users.length}
-      </p>
+      <div className="card">
+        <div className="card-body">
+          <p className="fw-bold text-uppercase">Static list of todos</p>
+          <p>
+            <p>
+              Todos:
+              {' '}
+              <span className="badge bg-secondary">
+                {todos.length}
+              </span>
+            </p>
+
+          </p>
+          <p>
+            <p>
+              Users:
+              {' '}
+              <span className="badge bg-secondary">
+                {users.length}
+              </span>
+            </p>
+          </p>
+        </div>
+
+      </div>
     </div>
   );
 }

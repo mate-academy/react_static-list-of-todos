@@ -5,7 +5,9 @@ import { UserPropTypes } from '../TodoPropTypes';
 export const User = function User({ name }) {
   return (
     <React.Fragment>
-      {'User name: '}
+      <span className="text-muted">
+        {'User name: '}
+      </span>
       <span className="user">
         {name}
       </span>

@@ -8,8 +8,10 @@ export const Todo = function Todo({ title, completed, user, id }) {
   return (
     <React.Fragment key={id}>
       <span className="ms-2 me-auto">
-        {'Action: '}
-        <p className="fw-bold">
+        <span className="text-muted">
+          {'Task: '}
+        </span>
+        <p className="fw-bold text-uppercase">
           {'"'}
           {title}
           {'"'}
@@ -23,10 +25,10 @@ export const Todo = function Todo({ title, completed, user, id }) {
       'btn', 'btn-primary')}
       >
         <span className="badge bg-secondary rounded-pill">
-          {'Action '}
+          {'Task '}
         </span>
         <span className="completionStatus">
-          {completed ? 'is already completed' : 'is not completed yet'}
+          {completed ? ' is already completed' : ' is not completed yet'}
         </span>
         {' '}
       </p>
