@@ -2,7 +2,7 @@ import React from 'react';
 import './User.css';
 import { UserPropTypes } from '../TodoPropTypes';
 
-export const User = ({name}) => {
+export const User = function User({ name }) {
   return (
     <React.Fragment>
       {'User name: '}
@@ -10,6 +10,7 @@ export const User = ({name}) => {
         {name}
       </span>
     </React.Fragment>
-)};
+  );
+};
 
 User.propTypes = UserPropTypes;

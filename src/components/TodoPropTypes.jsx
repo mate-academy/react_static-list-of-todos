@@ -1,11 +1,11 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 
 export const TodoPropTypes = PropTypes.shape({
-    userId: PropTypes.number.isRequired,
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired,
+  userId: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
+  user: PropTypes.string.isRequired,
 });
 
 export const UserPropTypes = PropTypes.shape({
@@ -16,12 +16,12 @@ export const UserPropTypes = PropTypes.shape({
   address: PropTypes.shape({
     street: PropTypes.string,
     suite: PropTypes.string,
-      city: PropTypes.string,
-      zipcode: PropTypes.string,
-      geo: PropTypes.shape({
-        lat: PropTypes.string,
-        lng: PropTypes.string,
-      }),
+    city: PropTypes.string,
+    zipcode: PropTypes.string,
+    geo: PropTypes.shape({
+      lat: PropTypes.string,
+      lng: PropTypes.string,
+    }),
   }),
   phone: PropTypes.string,
   website: PropTypes.string,

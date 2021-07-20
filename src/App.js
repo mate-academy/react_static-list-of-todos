@@ -1,6 +1,8 @@
 import React from 'react';
-import './App.scss';
+
 import { TodoList } from './components/TodoList/TodoList';
+
+import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import todos from './api/todos';
@@ -16,10 +18,9 @@ export const preparedTodos = todos.map(
 function App() {
   return (
     <div className="App">
-
-      <p>
-        <TodoList actions={preparedTodos} />
-      </p>
+      <div className="container">
+        <TodoList tasks={preparedTodos} />
+      </div>
       <p>Static list of todos</p>
       <p>
         <span>Todos: </span>
