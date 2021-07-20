@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TodoList } from './components/TodoList/TodoList';
+import { TodoList } from './components/TodoList';
 
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';

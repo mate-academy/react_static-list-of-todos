@@ -12,11 +12,8 @@ export const Todo = function Todo({ title, completed, user, id }) {
           {'Task: '}
         </span>
         <p className="fw-bold text-uppercase">
-          {'"'}
-          {title}
-          {'"'}
+          {`"${title}"`}
         </p>
-        {' '}
       </span>
 
       <p className={classNames((completed
@@ -30,7 +27,6 @@ export const Todo = function Todo({ title, completed, user, id }) {
         <span className="completionStatus">
           {completed ? ' is already completed' : ' is not completed yet'}
         </span>
-        {' '}
       </p>
 
       <p>
