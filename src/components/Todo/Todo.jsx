@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { User } from '../User/User';
+import { User } from '../User';
 
 export const Todo = ({ title, completed, user, id }) => (
   <>
@@ -14,7 +14,7 @@ export const Todo = ({ title, completed, user, id }) => (
     </span>
     <span className="list-inline-item">
       <strong>Name: </strong>
-      <User {...user} />
+      <User name={user.name} />
     </span>
   </>
 );

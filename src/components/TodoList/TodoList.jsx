@@ -6,7 +6,12 @@ export const TodoList = ({ todos }) => (
   <ul className="list-group">
     {todos.map(todo => (
       <li className="list-group-item list-inline" key={todo.id}>
-        <Todo {...todo} />
+        <Todo
+          title={todo.title}
+          completed={todo.completed}
+          user={todo.user}
+          id={todo.id}
+        />
       </li>
     ))}
   </ul>
