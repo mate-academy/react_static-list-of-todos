@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cn from 'classnames';
 import { Todo } from '../Todo';
-import { PreparedTodosType } from '../../types/PreparedTodosType';
+import { PreparedTodos } from '../../types/PreparedTodos';
 import './TodoList.scss';
 
 export const TodoList = ({ listOfTodods }) => (
-  <ul className={
-    classNames('todos-list', 'content__list')}
-  >
+  <ul className={cn('todos-list', 'content__list')}>
     {listOfTodods.map(todo => (
       <li key={todo.id} className="todos-list__card">
         <Todo {...todo} />
@@ -19,5 +17,5 @@ export const TodoList = ({ listOfTodods }) => (
 );
 
 TodoList.propTypes = {
-  listOfTodods: PropTypes.arrayOf(PreparedTodosType).isRequired,
+  listOfTodods: PropTypes.arrayOf(PreparedTodos).isRequired,
 };

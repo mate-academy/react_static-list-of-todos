@@ -1,7 +1,7 @@
 import React from 'react';
-import classNames from 'classnames';
+import cn from 'classnames';
 import { User } from '../User';
-import { PreparedTodosType } from '../../types/PreparedTodosType';
+import { PreparedTodos } from '../../types/PreparedTodos';
 
 export const Todo = ({
   title,
@@ -13,14 +13,13 @@ export const Todo = ({
       {title}
     </h3>
     <p className="todos-list__status">
-      {'Status is:'}
-      {' '}
-      <span className={classNames(
-        'todos-list__complete', {
+      {'Status is: '}
+      <span className={cn('todos-list__complete',
+        {
           iscompleted: completed,
           uncompleted: !completed,
-        },
-      )}
+        })
+      }
       >
         {completed ? 'completed' : 'not completed'}
       </span>
@@ -29,4 +28,4 @@ export const Todo = ({
   </>
 );
 
-Todo.propTypes = PreparedTodosType.isRequired;
+Todo.propTypes = PreparedTodos.isRequired;
