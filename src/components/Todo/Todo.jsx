@@ -6,8 +6,7 @@ export const Todo = ({ title, completed, user }) => (
     <h2 className="card__title">{title}</h2>
     <p className="card__status">
       <strong>Status:</strong>
-      {' '}
-      {`${completed ? `done` : `in progress`}`}
+      {`${completed ? ` done` : ` in progress`}`}
     </p>
     <span className="card__user">
       <strong>User:</strong>
@@ -20,5 +19,7 @@ export const Todo = ({ title, completed, user }) => (
 Todo.propTypes = {
   title: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
-  user: PropTypes.shape().isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
 };
