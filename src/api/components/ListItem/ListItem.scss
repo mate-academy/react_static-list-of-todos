@@ -1,0 +1,18 @@
+.todoItem {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.todoItem--completed {
+  color: green;
+}
+
+.todoItem--completed::after {
+  content: ' ✔';
+}
+
+.todoItem--notdone {
+  color: red;
+}
+
+.todoItem--notdone::after {
+  content: ' ❌';
+}
