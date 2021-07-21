@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { ToDoList } from './api/components/ToDoList/ToDoList';
+import { ToDoList } from './api/components/ToDoList';
 import todos from './api/todos';
 import users from './api/users';
 

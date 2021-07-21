@@ -3,20 +3,22 @@ import PropTypes from 'prop-types';
 import './ListItem.scss';
 import { User } from '../User/User';
 
-export const ListItem = ({ user, title, completed }) => (
+export const ListItem = ({ toDo }) => (
   <>
-    <User name={user} />
-    <th className={completed
+    <User name={toDo.user} />
+    <th className={toDo.completed
       ? 'todoItem todoItem--completed'
       : 'todoItem todoItem--notdone'}
     >
-      {title}
+      {toDo.title}
     </th>
   </>
 );
 
 ListItem.propTypes = {
-  user: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  completed: PropTypes.bool.isRequired,
+  toDo: PropTypes.shape({
+    user: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
+  }).isRequired,
 };

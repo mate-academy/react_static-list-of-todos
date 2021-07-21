@@ -5,7 +5,7 @@ import { ListItem } from '../ListItem/ListItem';
 export const ToDoList = ({ tasks }) => (
   tasks.map(task => (
     <tr className="list__item" key={task.id}>
-      <ListItem {...task} />
+      <ListItem toDo={task} />
     </tr>
   )));
 
