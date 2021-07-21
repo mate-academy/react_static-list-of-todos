@@ -1,1 +1,12 @@
-// styles go here
+table, th, td {
+  width: max-content;
+  border: 2px solid lightgray;
+  border-collapse: collapse;
+  border-spacing: 15px;
+
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+}
