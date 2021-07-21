@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Todo.scss';
+import { User } from '../User';
 
 export const Todo = ({ title, completed, user }) => (
   <li className="card">
@@ -9,9 +11,7 @@ export const Todo = ({ title, completed, user }) => (
       {`${completed ? ` done` : ` in progress`}`}
     </p>
     <span className="card__user">
-      <strong>User:</strong>
-      {' '}
-      {user}
+      <User user={user} />
     </span>
   </li>
 );

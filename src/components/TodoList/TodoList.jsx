@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Todo } from '../Todo';
+import './TodoList.scss';
 
 export const TodoList = ({ todos }) => (
 
@@ -10,7 +11,7 @@ export const TodoList = ({ todos }) => (
         <Todo
           title={todo.title}
           completed={todo.completed}
-          user={todo.user.name}
+          user={todo.user}
         />
       </React.Fragment>
     ))}
