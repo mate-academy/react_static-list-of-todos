@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import todos from './api/todos';
 import users from './api/users';
 
-const sortedTodos = todos.map(todo => ({
+const preparedTodos = todos.map(todo => ({
   ...todo,
   user: users.find(user => user.id === todo.userId),
 }));
@@ -14,7 +14,7 @@ const sortedTodos = todos.map(todo => ({
 function App() {
   return (
     <div className="App">
-      <TodoList todos={sortedTodos} />
+      <TodoList todos={preparedTodos} />
     </div>
   );
 }
