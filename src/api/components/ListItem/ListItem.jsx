@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './ListItem.scss';
-import { User } from '../User/User';
+import { User } from '../User';
 
 export const ListItem = ({ toDo }) => (
   <>

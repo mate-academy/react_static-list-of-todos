@@ -1,6 +1,6 @@
 import React from 'react';
 import ProptTypes from 'prop-types';
-import { ListItem } from '../ListItem/ListItem';
+import { ListItem } from '../ListItem';
 
 export const ToDoList = ({ tasks }) => (
   tasks.map(task => (
@@ -10,5 +10,9 @@ export const ToDoList = ({ tasks }) => (
   )));
 
 ToDoList.ProptTypes = {
-  id: ProptTypes.number.isRequired,
+  tasks: ProptTypes.arrayOf({
+    task: ProptTypes.shape({
+      id: ProptTypes.number.isRequired,
+    }).isRequired,
+  }).isRequired,
 };
