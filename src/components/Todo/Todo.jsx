@@ -2,24 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { User } from '../User';
 
-export const Todo = ({ todoVar }) => (
+export const Todo = ({ todo }) => (
   <>
     <div>
       <span>
-        <User user={todoVar.user} />
+        <User user={todo.user} />
       </span>
       <span>
-        {todoVar.completed ? ' has completed ' : ' hasnt completed '}
+        {todo.completed ? ' has completed ' : ' hasnt completed '}
       </span>
       <span>
-        {todoVar.title}
+        {todo.title}
       </span>
     </div>
   </>
 );
 
 Todo.propTypes = {
-  todoVar: PropTypes.shape({
+  todo: PropTypes.shape({
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     completed: PropTypes.bool.isRequired,
@@ -30,5 +30,5 @@ Todo.propTypes = {
   }),
 };
 Todo.defaultProps = {
-  todoVar: [],
+  todo: [],
 };

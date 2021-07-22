@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Todo } from '../Todo';
 
-export const TodoList = ({ todoVariable }) => (
+export const TodoList = ({ todos }) => (
   <ul>
-    {todoVariable.map(todo => (
-      <li className="list-group-item">
-        <Todo todoVar={todo} />
+    {todos.map(todo => (
+      <li key={todo.id} className="list-group-item">
+        <Todo todo={todo} />
       </li>
     ))}
   </ul>
 );
 
 TodoList.propTypes = {
-  todoVariable: PropTypes.arrayOf(
+  todos: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
