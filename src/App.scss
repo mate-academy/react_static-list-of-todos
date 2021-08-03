@@ -1,1 +1,13 @@
-// styles go here
+.title {
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.title::first-letter {
+  text-transform: uppercase;
+  color: red;
+}
+
+.name strong {
+  color: blue;
+}
