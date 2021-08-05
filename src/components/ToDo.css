@@ -1,0 +1,25 @@
+.todo-list {
+  list-style-type: none;
+}
+
+.table-header {
+  font-weight: bold;
+  background-color: rgb(220, 224, 222);
+}
+
+.table-item {
+  font-size: 18px;
+}
+
+.todo-table {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.completed .table-item {
+  background-color: rgb(88, 224, 117);
+}
+
+.non-completed .table-item {
+  background-color: rgb(219, 94, 94);
+}
