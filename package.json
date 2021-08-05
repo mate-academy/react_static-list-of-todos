@@ -9,9 +9,10 @@
   "dependencies": {
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
+    "props-type": "^1.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "^3.4.1"
   },
   "devDependencies": {
     "@mate-academy/eslint-config-react": "*",
@@ -20,7 +21,7 @@
     "gh-pages": "^2.2.0",
     "husky": "^4.0.10",
     "lint-staged": "^9.5.0",
-    "stylelint": "^13.0.0"
+    "stylelint": "^13.13.1"
   },
   "scripts": {
     "start": "react-scripts start",
