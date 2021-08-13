@@ -5,7 +5,7 @@ const TodoList = ({ preparedTodos }) => (
     {preparedTodos.map(todo => (
       <li key= {todo.id}>
         {todo}
-       </li>
+      </li>
     ))}
   </ul>
 );
