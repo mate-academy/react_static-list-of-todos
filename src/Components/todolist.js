@@ -1,11 +1,10 @@
 import React from 'react';
-import prepareTodos from './App';
 
-const TodoList = () => (
+const TodoList = ({ preparedTodos }) => (
   <ul>
-    {prepareTodos.map(todos1 => (
-      <li key= {todos1.id}>
-        {todos1}
+    {preparedTodos.map(todo => (
+      <li key= {todo.id}>
+        {todo}
        </li>
     ))}
   </ul>

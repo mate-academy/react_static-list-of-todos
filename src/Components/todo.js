@@ -1,9 +1,8 @@
 import React from 'react';
-import todos from './api/todos';
 import User from './user';
 
 const Todo = ({ title, completed }) => (
-  <User />,
+  <User user={...User} />,
   {title},
   {completed}
 );
