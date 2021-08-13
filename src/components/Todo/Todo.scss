@@ -1,0 +1,9 @@
+.todo-item {
+  width: max-content;
+  padding: 5px 10px;
+  border-left: 4px solid #b7241b;
+
+  &--complete {
+    border-color: #96d800;
+  }
+}
