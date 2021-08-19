@@ -1,0 +1,7 @@
+.done {
+  background-color: rgb(172, 255, 161);
+}
+
+.didNotDone {
+  background-color: rgb(255, 161, 161);
+}
