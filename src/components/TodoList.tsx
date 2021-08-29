@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { Todo } from '../types/Todo';
-import { TodoItem } from './TodoItem';
+import { TodoInfo } from './TodoInfo';
 
 type Props = {
   todos: Todo[];
@@ -21,7 +21,7 @@ export const TodoList: React.FC<Props> = ({ todos }) => (
         )}
         key={todo.id}
       >
-        <TodoItem {...todo} />
+        <TodoInfo {...todo} />
       </div>
     ))}
   </div>
