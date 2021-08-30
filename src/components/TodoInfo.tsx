@@ -2,14 +2,18 @@ import React from 'react';
 import { Todo } from '../types/Todo';
 import { UserInfo } from './UserInfo';
 
-export const TodoInfo: React.FC<Partial<Todo>> = ({
-  title,
-  completed,
-  user,
-}) => (
-  <>
-    <UserInfo {...user} />
-    <td>{title}</td>
-    <td>{completed ? 'Done' : 'Undone'}</td>
-  </>
-);
+interface Props {
+  todo: Todo;
+}
+
+export const TodoInfo: React.FC<Props> = ({ todo }) => {
+  const { user, title, completed } = todo;
+
+  return (
+    <>
+      <UserInfo {...user} />
+      <td>{title}</td>
+      <td>{completed ? 'Done' : 'Undone'}</td>
+    </>
+  );
+};

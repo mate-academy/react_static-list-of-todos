@@ -20,7 +20,7 @@ export const TodoList: React.FC<Props> = ({ todos }) => (
         className={todo.completed ? 'table__item--done' : 'table__item--undone'}
         key={todo.id}
       >
-        <TodoInfo {...todo} />
+        <TodoInfo todo={todo} />
       </tr>
     ))}
   </table>
