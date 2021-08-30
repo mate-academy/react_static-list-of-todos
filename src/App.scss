@@ -1,1 +1,12 @@
-// styles go here
+body,
+div,
+p,
+ul {
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
