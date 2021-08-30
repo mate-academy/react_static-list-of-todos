@@ -30,7 +30,7 @@ export const TodoInfo: React.FC<Props> = (props) => {
         />
       </div>
       {user && (
-        <UserInfo {...user} />
+        <UserInfo userInfo={user} />
       )}
     </>
   );
