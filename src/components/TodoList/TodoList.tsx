@@ -3,9 +3,9 @@ import { Todo } from '../../types/Todo';
 import { TodoInfo } from '../TodoInfo';
 import './TodoList.scss';
 
-type Props = {
+interface Props {
   todos: Todo[]
-};
+}
 
 export const TodoList: React.FC<Props> = ({ todos }) => (
   <table className="todo-table">
@@ -19,12 +19,12 @@ export const TodoList: React.FC<Props> = ({ todos }) => (
       </tr>
     </thead>
     <tbody>
-      {todos?.map(todo => (
+      {todos.map(todo => (
         <tr
           className={todo.completed ? 'todo-table__body-row--done' : 'todo-table__body-row--undone'}
           key={todo.id}
         >
-          <TodoInfo {...todo} />
+          <TodoInfo todo={todo} />
         </tr>
       ))}
     </tbody>
