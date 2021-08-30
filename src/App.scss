@@ -1,12 +1,15 @@
 body,
 div,
 p,
-ul {
+ul,
+h2 {
   margin: 0;
+  padding: 0;
 }
 
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 24px;
 }

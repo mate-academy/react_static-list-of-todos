@@ -3,10 +3,12 @@
   justify-content: space-between;
   align-items: center;
   row-gap: 16px;
+  column-gap: 8px;
 
   &__title {
     font-size: 24px;
     color: #000;
+    margin: 16px 0;
     text-transform: capitalize;
   }
 
@@ -16,9 +18,9 @@
 
   &__status {
     display: inline-block;
+    flex-shrink: 0;
     height: 16px;
     width: 16px;
-    margin-left: 8px;
     background-color: #f00;
     border: 1px solid #000;
 
