@@ -5,15 +5,22 @@ import { UserInfo } from '../UserInfo';
 
 import './TodoInfo.scss';
 
-type Props = Pick<Todo, 'title' | 'completed' | 'user'>;
+type Props = {
+  todoItem: Todo;
+};
 
 export const TodoInfo: React.FC<Props> = (props) => {
-  const { title, completed, user } = props;
+  const { todoItem } = props;
+  const { title, completed, user } = todoItem;
 
   return (
-    <div className="todo-info">
-      <p className="todo-info__title">
-        {title}
+    <>
+      <div className="todo-info">
+        <a className="todo-info__link" href="/">
+          <h2 className="todo-info__title">
+            {title}
+          </h2>
+        </a>
         <span className={classNames(
           'todo-info__status',
           {
@@ -21,12 +28,10 @@ export const TodoInfo: React.FC<Props> = (props) => {
           },
         )}
         />
-      </p>
-
+      </div>
       {user && (
         <UserInfo {...user} />
       )}
-
-    </div>
+    </>
   );
 };

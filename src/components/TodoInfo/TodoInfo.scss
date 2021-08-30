@@ -1,14 +1,17 @@
 .todo-info {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   row-gap: 16px;
 
   &__title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     font-size: 24px;
+    color: #000;
     text-transform: capitalize;
+  }
+
+  &__link {
+    text-decoration: none;
   }
 
   &__status {
