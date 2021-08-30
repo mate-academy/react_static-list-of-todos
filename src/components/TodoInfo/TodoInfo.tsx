@@ -1,13 +1,18 @@
 import React from 'react';
 
-import { PreparedTodo } from '../../types/PreparedTodo';
+import { Todo } from '../../types/Todo';
 
-export const TodoInfo: React.FC<PreparedTodo> = ({
-  title,
-  completed,
-}) => (
-  <>
-    <td>{title}</td>
-    <td>{completed ? 'Done' : 'Undone'}</td>
-  </>
-);
+interface Props {
+  todo: Todo
+}
+
+export const TodoInfo: React.FC<Props> = ({ todo }) => {
+  const { title, completed } = todo;
+
+  return (
+    <>
+      <td>{title}</td>
+      <td>{completed ? 'Done' : 'Undone'}</td>
+    </>
+  );
+};

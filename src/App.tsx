@@ -4,9 +4,9 @@ import { TodoList } from './components/TodoList/TodoList';
 import todos from './api/todos';
 
 import users from './api/users';
-import { PreparedTodo } from './types/PreparedTodo';
+import { Todo } from './types/Todo';
 
-const preparedTodosArr: PreparedTodo[] = todos.map(todo => {
+const preparedTodos: Todo[] = todos.map(todo => {
   const user = users.find(person => person.id === todo.userId) || null;
 
   return { ...todo, user };
@@ -14,7 +14,7 @@ const preparedTodosArr: PreparedTodo[] = todos.map(todo => {
 
 const App: React.FC = () => (
   <div className="App">
-    <TodoList preparedTodos={preparedTodosArr} />
+    <TodoList Todos={preparedTodos} />
   </div>
 );
 

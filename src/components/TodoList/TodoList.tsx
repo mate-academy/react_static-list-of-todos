@@ -1,13 +1,14 @@
 import React from 'react';
+import classNames from 'classnames';
 import { UserInfo } from '../UserInfo/UserInfo';
-import { PreparedTodo } from '../../types/PreparedTodo';
+import { Todo } from '../../types/Todo';
 import { TodoInfo } from '../TodoInfo/TodoInfo';
 
-type Props = {
-  preparedTodos: PreparedTodo[]
-};
+interface Props {
+  Todos: Todo[]
+}
 
-export const TodoList : React.FC<Props> = ({ preparedTodos }) => (
+export const TodoList : React.FC<Props> = ({ Todos }) => (
   <table className="table table-striped table-dark">
     <thead>
       <tr>
@@ -20,10 +21,17 @@ export const TodoList : React.FC<Props> = ({ preparedTodos }) => (
       </tr>
     </thead>
     <tbody>
-      {preparedTodos.map(preparedTodo => (
-        <tr key={preparedTodo.id} className={preparedTodo.completed ? 'table-success' : ''}>
-          <UserInfo {...preparedTodo.user} />
-          <TodoInfo {...preparedTodo} />
+      {Todos.map(todo => (
+        <tr
+          key={todo.id}
+          className={classNames(
+            {
+              'table-success': todo.completed,
+            },
+          )}
+        >
+          { todo.user ? <UserInfo user={todo.user} /> : null}
+          <TodoInfo todo={todo} />
         </tr>
       ))}
     </tbody>
