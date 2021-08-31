@@ -1,1 +1,57 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.list {
+  &_title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &_row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 40px;
+    overflow: hidden;
+
+    background: #e9ff20;
+
+    &--done {
+      box-shadow: inset 0 0 15px #20ff63;
+    }
+  }
+
+  &_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+
+    font-size: 18px;
+
+    &-title {
+      align-items: start;
+    }
+
+    &--true {
+      background: #20ff63;
+    }
+  }
+}

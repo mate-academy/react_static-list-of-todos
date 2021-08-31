@@ -1,6 +1,6 @@
 # React static list of TODOs
 - Replace `<your_account>` with your Github username in the
-  [DEMO LINK](https://<your_account>.github.io/react_static-list-of-todos/)
+  [DEMO LINK](https://dmytromykoliv.github.io/react_static-list-of-todos/)
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
 
 ## Task
@@ -18,5 +18,4 @@ list.
 4. Create a `TodoInfo` component accepting a `todo` object and use it in the 
    list to render `title`, `completed` status and `User`
 
-Hint: You can add only the props you use to the `User` interface. `Todo` 
-interface should have a `user` property that could be a `User` or `null`. 
+Hint: You can add only the props you use to the `User` interface. `Todo` interface should have a `user` property that could be a `User` or `null`. 
