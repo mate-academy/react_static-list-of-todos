@@ -4,6 +4,8 @@ import { TodoInfo } from '../TodoInfo/todo_info';
 import { UserInfo } from '../UserInfo/user_info';
 import { Todo } from '../Type/Todo';
 
+import './todo_list.scss';
+
 type Props = {
   preTodo: Todo[];
 };
