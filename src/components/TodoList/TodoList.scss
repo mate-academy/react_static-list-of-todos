@@ -1,0 +1,18 @@
+.list {
+  &__item {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+  }
+
+  &__item--done {
+    background-color: aquamarine;
+  }
+
+  &__item-failed {
+    background-color: #ff8080;
+  }
+}
