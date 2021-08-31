@@ -24,6 +24,7 @@ ul {
     overflow: hidden;
 
     background: #e9ff20;
+    box-shadow: inset 0 0 15px #ff5420;
 
     &--done {
       box-shadow: inset 0 0 15px #20ff63;
@@ -37,6 +38,7 @@ ul {
     color: #fff;
 
     background: rgb(160, 160, 116);
+    box-shadow: none;
   }
 
   &_item {
