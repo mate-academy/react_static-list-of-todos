@@ -1,1 +1,67 @@
-// styles go here
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.todo {
+  width: 25%;
+  border-radius: 10px;
+  border: solid black 2px;
+  padding: 10px;
+  background-color: azure;
+  margin-bottom: 10px;
+
+  &__body {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: azure;
+  }
+
+  &__title {
+    display: block;
+    width: fit-content;
+    font-weight: bold;
+    font-size: larger;
+    background-color: 204, 255, 255;
+    border-radius: 4px;
+    padding: 4px;
+    &:hover {
+      background-color: rgb(255, 255, 255);
+      transform: scale(1.1, 1.1);
+      transition: 300ms ease-in-out;
+      border: solid azure 4px;
+      position: relative;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+
+.active {
+  background-color: rgba(73, 233, 73, 0.582);
+}
+
+.criterium__field {
+  &--email {
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  &--name {
+    font-style: italic;
+    font-size: larger;
+  }
+  font-size: smaller;
+}
+
+.user {
+  &__info {
+  margin-bottom: 10px;
+  }
+}
