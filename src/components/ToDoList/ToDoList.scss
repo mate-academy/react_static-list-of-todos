@@ -1,0 +1,35 @@
+.ToDo {
+  background-color: #fff;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+
+  &__header{
+    text-align: center;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__list-item {
+    display: flex;
+    padding: 20px 50px;
+    margin: 20px;
+    justify-content: space-between;
+
+    border: 1px solid rgb(153, 144, 144);
+    border-radius: 2px;
+    transition: 0.3s;
+
+    &:hover {
+      transform: translateY(5px);
+      border-radius: 10px;
+      border: 1px solid black;
+    }
+  }
+}
+
+.active {
+  background-color: green;
+}
