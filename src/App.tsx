@@ -8,7 +8,7 @@ export const preparedTodos = todos.map((todo) => {
   const user = users.find(({ id }) => id === todo.userId);
   const copy = {
     ...todo,
-    user: user || null,
+    user,
   };
 
   return copy;

@@ -3,17 +3,19 @@ import './UserInfo.scss';
 import { User } from '../../types/User';
 
 type Props = {
-  user: User | null,
+  user: User;
 };
 
 const UserInfo: React.FC<Props> = ({ user }) => {
   return (
     <div className="user-info">
-      {user
-        ? (`Name: ${user.name}`) : null }
+      {user && (
+        `Name: ${user.name}`
+      )}
       <br />
-      {user
-        ? (`Email: ${user.email}`) : null }
+      {user && (
+        `Email: ${user.email}`
+      )}
     </div>
   );
 };

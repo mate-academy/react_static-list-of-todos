@@ -7,18 +7,24 @@ type Props = {
   todo: Todo,
 };
 
-const TodoInfo: React.FC<Props> = ({ todo }) => (
-  <div
-    className={classNames('todo-info', { done: todo.completed })}
-  >
-    TASK:&nbsp;
-    {todo.title}
-    <br />
-    {todo.completed
-      ? ('DONE')
-      : ('NOT DONE')}
-    <UserInfo user={todo.user} />
-  </div>
-);
+const TodoInfo: React.FC<Props> = (props) => {
+  const { todo } = props;
+
+  return (
+    <div
+      className={classNames('todo-info', { done: todo.completed })}
+    >
+      TASK:&nbsp;
+      {todo.title}
+      <br />
+      {todo.completed
+        ? ('DONE')
+        : ('NOT DONE')}
+      {todo.user
+        ? (<UserInfo user={todo.user} />)
+        : null}
+    </div>
+  );
+};
 
 export default TodoInfo;
