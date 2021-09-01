@@ -1,16 +1,17 @@
 import React from 'react';
 import classNames from 'classnames';
-import { TodoInfo } from '../TodoInfo/todo_info';
-import { UserInfo } from '../UserInfo/user_info';
+import { TodoInfo } from '../TodoInfo/TodoInfo';
 import { Todo } from '../Type/Todo';
 
-import './todo_list.scss';
+import './TodoList.scss';
 
 type Props = {
-  preTodo: Todo[];
+  todos: Todo[];
 };
 
-export const TodoList: React.FC<Props> = ({ preTodo }) => {
+export const TodoList: React.FC<Props> = (props) => {
+  const { todos } = props;
+
   return (
     <>
       <li className="list_title list_row">
@@ -20,17 +21,15 @@ export const TodoList: React.FC<Props> = ({ preTodo }) => {
         <div className="list_item">Title</div>
         <div className="list_item">Completed</div>
       </li>
-      {preTodo.map((ell) => (
+      {todos.map((todo) => (
         <li
-          key={ell.id}
+          key={todo.id}
           className={classNames(
             'list_row',
-            { 'list_row--done': ell.completed === true },
+            { 'list_row--done': todo.completed },
           )}
         >
-          {ell.user ? <UserInfo user={ell.user} /> : null}
-
-          <TodoInfo element={ell} />
+          <TodoInfo element={todo} />
         </li>
       ))}
     </>
