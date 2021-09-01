@@ -10,8 +10,8 @@ export const UserInfo: React.FC<Props> = (props) => {
   const { name, email } = user;
 
   return (
-    <>
+    <span>
       {`Responsible: ${name}. Email: ${email}`}
-    </>
+    </span>
   );
 };
