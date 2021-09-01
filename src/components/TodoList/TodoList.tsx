@@ -5,10 +5,10 @@ import { Todo } from '../../types/Todo';
 import { TodoInfo } from '../TodoInfo/TodoInfo';
 
 interface Props {
-  Todos: Todo[]
+  todos: Todo[];
 }
 
-export const TodoList : React.FC<Props> = ({ Todos }) => (
+export const TodoList: React.FC<Props> = ({ todos }) => (
   <table className="table table-striped table-dark">
     <thead>
       <tr>
@@ -21,16 +21,14 @@ export const TodoList : React.FC<Props> = ({ Todos }) => (
       </tr>
     </thead>
     <tbody>
-      {Todos.map(todo => (
+      {todos.map(todo => (
         <tr
           key={todo.id}
-          className={classNames(
-            {
-              'table-success': todo.completed,
-            },
-          )}
+          className={classNames({
+            'table-success': todo.completed,
+          })}
         >
-          { todo.user ? <UserInfo user={todo.user} /> : null}
+          {todo.user ? <UserInfo user={todo.user} /> : null}
           <TodoInfo todo={todo} />
         </tr>
       ))}
