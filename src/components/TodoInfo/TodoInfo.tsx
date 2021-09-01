@@ -6,7 +6,8 @@ interface Props {
   toDo: PreparedToDos;
 }
 
-const TodoInfo: React.FC<Props> = ({ toDo }) => {
+const TodoInfo: React.FC<Props> = (props) => {
+  const { toDo } = props;
   const { title, completed } = toDo;
 
   return (
