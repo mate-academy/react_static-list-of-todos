@@ -8,18 +8,22 @@ type Props = {
   todoList: Todo[],
 };
 
-export const TodoList: React.FC<Props> = ({ todoList }) => (
-  <div className="TodoList">
-    <h1 className="TodoList__title">Todo List</h1>
-    {todoList.map(todoItem => {
-      const todoNormalized: Omit<Todo, 'id'> = { ...todoItem };
+export const TodoList: React.FC<Props> = (props) => {
+  const { todoList } = props;
 
-      return (
-        <TodoItem
-          key={todoItem.id}
-          todo={todoNormalized}
-        />
-      );
-    })}
-  </div>
-);
+  return (
+    <div className="TodoList">
+      <h1 className="TodoList__title">Todo List</h1>
+      {todoList.map(todoItem => {
+        const todoNormalized: Omit<Todo, 'id'> = { ...todoItem };
+
+        return (
+          <TodoItem
+            key={todoItem.id}
+            todo={todoNormalized}
+          />
+        );
+      })}
+    </div>
+  );
+};

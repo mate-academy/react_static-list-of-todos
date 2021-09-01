@@ -7,7 +7,8 @@ type Props = {
   userInfo: Omit<User, 'id'>
 };
 
-export const UserInfo: React.FC<Props> = ({ userInfo }) => {
+export const UserInfo: React.FC<Props> = (props) => {
+  const { userInfo } = props;
   const { name, email } = userInfo;
 
   return (

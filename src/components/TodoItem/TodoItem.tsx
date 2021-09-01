@@ -11,7 +11,8 @@ type Props = {
   todo: Omit<Todo, 'id'>
 };
 
-export const TodoItem: React.FC<Props> = ({ todo }) => {
+export const TodoItem: React.FC<Props> = (props) => {
+  const { todo } = props;
   const { title, completed, user } = todo;
   const userInfo = user as Omit<User, 'id'>;
 
