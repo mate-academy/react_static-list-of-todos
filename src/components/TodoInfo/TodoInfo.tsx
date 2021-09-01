@@ -1,6 +1,6 @@
 type Props = {
-  title: string,
-  status: boolean,
+  title: string;
+  status: boolean;
 };
 
 export const TodoInfo: React.FC<Props> = ({ title, status }) => (

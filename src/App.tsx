@@ -6,10 +6,10 @@ import users from './api/users';
 import { TodoList } from './components/TodoList/TodoList';
 import { Todo } from './types/types';
 
-const preparedTodos: Todo[] = [];
+let preparedTodos: Todo[] = [];
 
-todos.forEach(todo => {
-  preparedTodos.push({
+preparedTodos = todos.map(todo => {
+  return ({
     user: users.find(userFromArray => userFromArray.id === todo.userId) || null,
   });
 });

@@ -7,7 +7,7 @@ import { UserInfo } from '../UserInfo/UserInfo';
 import './TodoList.scss';
 
 type Props = {
-  todosArray: Todo[],
+  todosArray: Todo[];
 };
 
 export const TodoList: React.FC<Props> = ({ todosArray }) => (
@@ -31,6 +31,7 @@ export const TodoList: React.FC<Props> = ({ todosArray }) => (
               })}
               key={todo.user.id}
             >
+
               <UserInfo
                 name={todo.user.name}
                 username={todo.user.username}
@@ -43,7 +44,19 @@ export const TodoList: React.FC<Props> = ({ todosArray }) => (
               />
             </tr>
           )
-          : null;
+          : (
+            <tr
+              className={classNames('tbody__row', {
+                tbody__done: todos[index].completed,
+              })}
+            >
+
+              <TodoInfo
+                title={todos[index].title}
+                status={todos[index].completed}
+              />
+            </tr>
+          );
       })}
     </tbody>
   </table>
