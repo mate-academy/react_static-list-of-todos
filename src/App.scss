@@ -1,1 +1,17 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
