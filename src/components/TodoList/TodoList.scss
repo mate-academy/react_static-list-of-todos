@@ -1,0 +1,23 @@
+.todo-list {
+  list-style: none;
+  padding: 0;
+
+  &__item {
+    height: 48px;
+    border: rgb(111, 144, 235) solid 1px;
+    border-radius: 8px;
+
+    margin-bottom: 4px;
+  }
+
+  &__article {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+  }
+
+  .complete {
+    background-color: rgb(158, 212, 158);
+  }
+}
