@@ -6,7 +6,7 @@ export const TodoInfo: React.FC<Todo> = ({
   completed,
   id,
 }) => (
-  <div className={completed ? 'active todo__body' : 'todo__body'}>
+  <div className={`todo__body ${completed ? 'active' : ''}`}>
     <span className="criterium__field">
       Title:&nbsp;
       <span className="todo__title">
