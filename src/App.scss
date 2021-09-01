@@ -1,1 +1,23 @@
-// styles go here
+// normalise
+
+body {
+  margin: 0;
+}
+
+ul, h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+//app
+
+.todoApp {
+  font-family: Helvetica, sans-serif;
+  color: rgb(56, 56, 56);
+}
+
+
