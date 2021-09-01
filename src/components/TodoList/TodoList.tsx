@@ -1,23 +1,9 @@
 import classNames from 'classnames';
 import { UserInfo } from '../UserInfo';
 import { TodoInfo } from '../TodoInfo';
+import { PreparedTodo } from '../../types/PreparedTodo/PreparedTodo';
 
 import './TodoList.scss';
-
-interface User {
-  id: number;
-  name: string;
-  username: string;
-  email: string;
-}
-
-interface PreparedTodo {
-  userId: number;
-  id: number;
-  title: string;
-  completed: boolean;
-  user: User | null;
-}
 
 type Props = {
   todos: PreparedTodo[];

@@ -1,9 +1,8 @@
+import { PreparedTodo } from '../../types/PreparedTodo';
+
 import './TodoInfo.scss';
 
-type Props = {
-  title: string;
-  completed: boolean;
-};
+type Props = PreparedTodo;
 
 export const TodoInfo: React.FC<Props> = (props) => {
   const {
