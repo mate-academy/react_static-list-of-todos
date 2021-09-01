@@ -1,0 +1,20 @@
+.task-table {
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: stretch;
+    margin: 10px;
+    height: 70px;
+
+    &--true {
+      background-color: #b5d1c4;
+      box-shadow: 0px 0px 14px 0px rgba(35, 59, 47, 0.12) inset;
+    }
+
+    &--false {
+      background-color: #eec8c8;
+      box-shadow: 0px 0px 14px 0px rgba(49, 28, 28, 0.12) inset;
+    }
+  }
+}

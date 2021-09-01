@@ -1,0 +1,9 @@
+.task {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  justify-items: center;
+
+  &__title {
+    text-align: center;
+  }
+}

@@ -1,0 +1,10 @@
+.user {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  justify-items: start;
+
+  &__id {
+    justify-self: start;
+    padding-left: 50px;
+  }
+}
