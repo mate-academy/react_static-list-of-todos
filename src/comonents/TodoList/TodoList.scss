@@ -1,0 +1,38 @@
+.main {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.card {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  color: #47bb88;
+  border-radius: 40%;
+  transition: 0.3s;
+  background-color: #913637;
+
+  &__active {
+    background-color: #2d752b;
+  }
+
+  &__name {
+    font-size: 30px;
+    color: black;
+  }
+
+  &__username {
+    color: #fff;
+  }
+
+  &:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+  }
+}
+
