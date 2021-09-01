@@ -1,16 +1,15 @@
 import React from 'react';
-import { User } from '../../types/User';
 import { UserInfo } from '../UserInfo/UserInfo';
+import { PreparedTodo } from '../../types/PreparedTodo';
 import './TodoInfo.scss';
 
 type Props = {
-  title: string,
-  completed: boolean,
-  user: User | null,
+  todoData: PreparedTodo;
 };
 
 export const TodoInfo: React.FC<Props> = (props) => {
-  const { title, completed, user } = props;
+  const { todoData } = props;
+  const { title, completed, user } = todoData;
   const statusInfo = completed ? 'Completed' : 'Work in progress...';
 
   return (
