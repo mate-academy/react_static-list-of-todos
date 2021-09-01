@@ -4,7 +4,7 @@ import { UserInfo } from '../UserInfo';
 import './TodoInfo.scss';
 
 type Props = {
-  todo: Todo,
+  todo: Todo;
 };
 
 export const TodoInfo: React.FC<Props> = (props) => {
@@ -14,16 +14,14 @@ export const TodoInfo: React.FC<Props> = (props) => {
   return (
     <>
       {user && (
-        <>
-          <UserInfo user={user} />
-          <div className="todo__title">
-            {title}
-          </div>
-          <div className="todo__status">
-            {completed ? 'Done' : 'In progress'}
-          </div>
-        </>
+        <UserInfo user={user} />
       )}
+      <div className="todo__title">
+        {title}
+      </div>
+      <div className="todo__status">
+        {completed ? 'Done' : 'In progress'}
+      </div>
     </>
   );
 };
