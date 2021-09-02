@@ -6,11 +6,11 @@ type Props = {
 
 export const UserInfo: React.FC<Props> = (props) => {
   const { user } = props;
-  const { name, email } = user;
+  const { username, name, email } = user;
 
   return (
     <>
-      <td>{name}</td>
+      <td>{username}</td>
       <td>{name}</td>
       <td>{email}</td>
     </>
