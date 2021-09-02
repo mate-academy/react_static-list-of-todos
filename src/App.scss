@@ -2,14 +2,14 @@
   margin: 0;
 }
 
-.todos-title {
-  text-align: center;
-}
-
 body {
   background-color: khaki;
 }
 $row-height: 40px;
+
+.todos-title {
+  text-align: center;
+}
 
 .grid {
   display: grid;
