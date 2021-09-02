@@ -4,7 +4,7 @@ import './App.scss';
 import todos from './api/todos';
 import users from './api/users';
 
-import { TodoList } from './components/TodoList/TodoList';
+import { TodoList } from './components/TodoList';
 
 const preparedTodos = todos.map(todo => {
   const user = users.find(userObj => userObj.id === todo.userId) || null;

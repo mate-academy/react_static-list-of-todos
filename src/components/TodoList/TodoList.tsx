@@ -2,9 +2,8 @@ import React from 'react';
 
 import './TodoList.scss';
 
-import { Todo } from '../../types/Todo';
-import { UserInfo } from '../UserInfo/UserInfo';
-import { TodoInfo } from '../TodoInfo/TodoInfo';
+import { UserInfo } from '../UserInfo';
+import { TodoInfo } from '../TodoInfo';
 
 type Props = {
   todos: Todo[];

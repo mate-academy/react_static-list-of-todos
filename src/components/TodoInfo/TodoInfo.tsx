@@ -2,8 +2,6 @@ import React from 'react';
 
 import './TodoInfo.scss';
 
-import { Todo } from '../../types/Todo';
-
 type Props = {
   todo: Todo;
 };
