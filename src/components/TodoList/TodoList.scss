@@ -1,0 +1,30 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  &__item {
+    padding: 0 10px;
+    border: 1px solid transparent;
+
+    border-radius: 10px;
+
+    background-color: yellow;
+    transition: transform 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+      border: 1px solid green;
+    }
+
+    &_done {
+      background-color: lawngreen;
+    }
+  }
+}
