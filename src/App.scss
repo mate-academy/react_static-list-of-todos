@@ -16,21 +16,22 @@ $row-height: 40px;
   grid-template-columns: repeat(5, 1fr);
   margin-bottom:2px;
   background-color: peru;
-  height: $row-height;
+  min-height: $row-height;
   align-items: center;
-  padding-left: 10px;
+  padding: 10px;
+  gap: 10px;
+  list-style-type: none;
+  @media (max-width: 400px) {
+    display: block;
+  }
 }
 
 .completed {
-  padding-left: 10px;
   background-color: green;
-  line-height: $row-height;
 }
 
 .working {
-  padding-left: 10px;
   background-color: red;
-  line-height: $row-height;
 }
 
 .title {

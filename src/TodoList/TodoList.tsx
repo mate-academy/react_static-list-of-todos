@@ -11,12 +11,15 @@ export const TodoList: React.FC<PropsUser> = (props) => {
     <>
       { arrayTodos.map(preparedTodo => {
         const { todo, user } = preparedTodo;
+        const { completed } = todo;
+
+        const status = completed ? 'grid completed' : 'grid working';
 
         return (
-          <div key={todo.id} className="grid">
+          <ul key={todo.id} className={status}>
             <UserInfo user={user} />
             <TodoInfo check={todo} />
-          </div>
+          </ul>
         );
       })}
     </>
