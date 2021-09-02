@@ -12,8 +12,8 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
   return (
     <>
       {user && <UserInfo user={user} />}
-      <div className="todos-row-item">{title}</div>
-      <div className="todos-row-item--done">{completed && ('Done')}</div>
+      <div>{title}</div>
+      <div>{completed && ('Done')}</div>
     </>
   );
 };
