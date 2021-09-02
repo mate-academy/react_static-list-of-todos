@@ -9,12 +9,13 @@ type Props = {
 
 const UserInfo: React.FC<Props> = (props) => {
   const { user } = props;
+  const { name, username, email } = user;
 
   return (
     <>
-      <div className="username">{user.name}</div>
-      <div>{user.username}</div>
-      <div>{user.email}</div>
+      <div className="username">{name}</div>
+      <div>{username}</div>
+      <div>{email}</div>
     </>
   );
 };

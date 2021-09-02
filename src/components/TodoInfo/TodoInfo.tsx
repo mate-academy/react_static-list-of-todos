@@ -8,12 +8,13 @@ type Props = {
 
 const TodoInfo: React.FC<Props> = (props) => {
   const { todo } = props;
+  const { completed, title } = todo;
 
   return (
     <>
-      <div>{todo.title}</div>
+      <div>{title}</div>
       <div className="status">
-        {(todo.completed) ? (
+        {(completed) ? (
           'complete'
         ) : ('in procces')}
       </div>
