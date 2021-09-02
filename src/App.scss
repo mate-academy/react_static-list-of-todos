@@ -1,1 +1,38 @@
-// styles go here
+* {
+  margin: 0;
+}
+
+.todos-title {
+  text-align: center;
+}
+
+body {
+  background-color: khaki;
+}
+$row-height: 40px;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-bottom:2px;
+  background-color: peru;
+  height: $row-height;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.completed {
+  padding-left: 10px;
+  background-color: green;
+  line-height: $row-height;
+}
+
+.working {
+  padding-left: 10px;
+  background-color: red;
+  line-height: $row-height;
+}
+
+.title {
+  grid-column: 3/ 5;
+}
