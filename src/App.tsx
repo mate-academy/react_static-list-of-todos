@@ -15,9 +15,6 @@ const preparedTodos: Todo[] = todos
     };
   });
 
-// eslint-disable-next-line no-console
-console.log(preparedTodos);
-
 const App: React.FC = () => (
   <div className="App">
     <h1>Static list of todos</h1>

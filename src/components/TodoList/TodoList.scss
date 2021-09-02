@@ -1,7 +1,7 @@
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 5px;
+  gap: 10px;
 
   margin: 0;
   padding: 0;
@@ -10,6 +10,7 @@
 
   &__item {
     padding: 0 10px;
+    border: 1px solid transparent;
 
     border-radius: 10px;
 
@@ -19,7 +20,7 @@
 
     &:hover {
       transform: scale(1.1);
-      border: 1px solid black;
+      border: 1px solid green;
     }
 
     &_done {
