@@ -1,6 +1,5 @@
 import React from 'react';
 import { UserInfo } from '../userInfo/userInfo';
-// import { Props } from '../../App';
 
 type Props = {
   todo: Todo;
