@@ -5,8 +5,9 @@ import todosFromServer from './api/todos';
 import usersFromServer from './api/users';
 
 import { TodoList } from './components/TodoList';
+import { PreparedTodo } from './types/PreparedTodo';
 
-const preparedTodos = todosFromServer.map(todo => {
+const preparedTodos: PreparedTodo[] = todosFromServer.map(todo => {
   const user = usersFromServer.find(person => person.id === todo.userId) || null;
   const preparedTodo = { ...todo, user };
 

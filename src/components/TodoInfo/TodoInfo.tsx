@@ -2,13 +2,16 @@ import { PreparedTodo } from '../../types/PreparedTodo';
 
 import './TodoInfo.scss';
 
-type Props = PreparedTodo;
+type Props = {
+  todo: PreparedTodo;
+};
 
 export const TodoInfo: React.FC<Props> = (props) => {
+  const { todo } = props;
   const {
     title,
     completed,
-  } = props;
+  } = todo;
 
   return (
     <ul className="todoInfo">
