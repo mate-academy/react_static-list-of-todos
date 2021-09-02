@@ -1,1 +1,10 @@
-// styles go here
+* {
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  text-align: center;
+}
