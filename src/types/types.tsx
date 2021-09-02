@@ -6,5 +6,8 @@ export interface User {
 }
 
 export interface Todo {
-  user: User | null,
+  user: User | null;
+  title: string;
+  completed: boolean;
+  id: number;
 }

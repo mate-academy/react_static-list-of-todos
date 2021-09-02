@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import todos from '../../api/todos';
 import { Todo } from '../../types/types';
 import { TodoInfo } from '../TodoInfo/TodoInfo';
 import { UserInfo } from '../UserInfo/UserInfo';
@@ -7,10 +6,10 @@ import { UserInfo } from '../UserInfo/UserInfo';
 import './TodoList.scss';
 
 type Props = {
-  todosArray: Todo[];
+  todos: Todo[];
 };
 
-export const TodoList: React.FC<Props> = ({ todosArray }) => (
+export const TodoList: React.FC<Props> = ({ todos }) => (
   <table className="table">
     <thead className="thead">
       <tr className="thead__row">
@@ -22,41 +21,29 @@ export const TodoList: React.FC<Props> = ({ todosArray }) => (
       </tr>
     </thead>
     <tbody className="tbody">
-      {todosArray.map((todo, index) => {
-        return todo.user !== null
-          ? (
-            <tr
-              className={classNames('tbody__row', {
-                tbody__done: todos[index].completed,
-              })}
-              key={todo.user.id}
-            >
+      {todos.map((todo) => {
+        return (
+          <tr
+            className={classNames('tbody__row', {
+              tbody__done: todo.completed,
+            })}
+            key={todo.id}
+          >
 
+            {todo.user && (
               <UserInfo
                 name={todo.user.name}
                 username={todo.user.username}
                 email={todo.user.email}
               />
+            )}
 
-              <TodoInfo
-                title={todos[index].title}
-                status={todos[index].completed}
-              />
-            </tr>
-          )
-          : (
-            <tr
-              className={classNames('tbody__row', {
-                tbody__done: todos[index].completed,
-              })}
-            >
-
-              <TodoInfo
-                title={todos[index].title}
-                status={todos[index].completed}
-              />
-            </tr>
-          );
+            <TodoInfo
+              title={todo.title}
+              status={todo.completed}
+            />
+          </tr>
+        );
       })}
     </tbody>
   </table>
