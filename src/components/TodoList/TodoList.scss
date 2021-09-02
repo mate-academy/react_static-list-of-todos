@@ -1,0 +1,23 @@
+.todo {
+  border: 3px solid #000;
+  border-collapse: collapse;
+  text-align: center;
+
+  &__head {
+    background-color: rgb(98, 107, 230);
+  }
+
+  &__body--completed {
+    background-color: rgb(37, 211, 95);
+  }
+
+  &__body--failed {
+    background-color: rgb(190, 88, 88);
+  }
+}
+
+th,
+td {
+  padding: 18px;
+  border: 1px solid #000;
+}
