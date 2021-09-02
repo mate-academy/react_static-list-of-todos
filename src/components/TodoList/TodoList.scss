@@ -1,0 +1,15 @@
+.list {
+  &__item {
+    display: flex;
+    padding: 15px;
+    border: 1px solid rgb(12, 1, 1);
+  }
+
+  &__item--completed {
+    background-color: rgb(21, 245, 88);
+  }
+
+  &__item--uncompleted {
+    background-color: #ce4c4c;
+  }
+}

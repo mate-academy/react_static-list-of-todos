@@ -1,1 +1,19 @@
-// styles go here
+body {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+}
+
+.App {
+  &__title {
+    text-align: center;
+  }
+}
