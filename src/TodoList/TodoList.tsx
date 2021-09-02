@@ -1,7 +1,6 @@
 import { UserInfo } from '../UserInfo/UserInfo';
 
 import { TodoInfo } from '../TodoInfo/TodoInfo';
-import { todos } from '../api/todos';
 
 import { PropsUser } from '../type';
 
@@ -10,13 +9,13 @@ export const TodoList: React.FC<PropsUser> = (props) => {
 
   return (
     <>
-      { arrayTodos.map((preparedTodo, i) => {
-        const { uniqueKey, user } = preparedTodo;
+      { arrayTodos.map(preparedTodo => {
+        const { todo, user } = preparedTodo;
 
         return (
-          <div key={uniqueKey} className="grid">
+          <div key={todo.id} className="grid">
             <UserInfo user={user} />
-            <TodoInfo check={todos[i]} />
+            <TodoInfo check={todo} />
           </div>
         );
       })}

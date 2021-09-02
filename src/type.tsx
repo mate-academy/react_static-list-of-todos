@@ -40,7 +40,7 @@ export interface User {
 }
 
 export interface UserArray {
-  uniqueKey:number,
+  todo: Todo,
   user: User | null,
 }
 
