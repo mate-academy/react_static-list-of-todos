@@ -6,11 +6,10 @@ import users from './api/users';
 
 import { TodoList } from './components/TodoList';
 
-const preparedTodos = todos.map(todo => {
-  const user = users.find(userObj => userObj.id === todo.userId) || null;
-
-  return { user, ...todo };
-});
+const preparedTodos = todos.map(todo => ({
+  ...todo,
+  user: users.find(userObj => userObj.id === todo.userId) || null,
+}));
 
 const App: React.FC = () => (
   <div className="App">

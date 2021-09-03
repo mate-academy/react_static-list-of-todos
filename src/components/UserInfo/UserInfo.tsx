@@ -12,10 +12,10 @@ export const UserInfo: React.FC<Props> = ({ user }) => {
   return (
     <div className="user">
       <p className="user__name">
-        {user !== null ? name : 'Unknown name'}
+        {user ? name : 'Unknown name'}
       </p>
       <p className="user__email">
-        {user !== null ? email : 'Unknown email'}
+        {user ? email : 'Unknown email'}
       </p>
     </div>
   );

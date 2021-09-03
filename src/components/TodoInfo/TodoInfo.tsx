@@ -12,8 +12,7 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
   return (
     <div className="todo">
       <p className="todo__title">
-        {title}
-        {' '}
+        {`${title} `}
       </p>
       <p className="todo__status">
         {completed ? 'Task Completed!' : 'Task is not completed yet!'}
