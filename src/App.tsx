@@ -5,14 +5,10 @@ import { TodoList } from './components/TodoList';
 
 import './App.scss';
 
-const preparedTodos = todos.map((todo) => {
-  const user = users.find(({ id }) => id === todo.userId);
-
-  return {
-    ...todo,
-    user,
-  };
-});
+const preparedTodos = todos.map(todo => ({
+  ...todo,
+  user: users.find(({ id }) => id === todo.userId),
+}));
 
 const App: React.FC = () => (
   <div className="App">
