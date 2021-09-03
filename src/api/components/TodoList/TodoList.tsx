@@ -15,8 +15,8 @@ export const TodoList: React.FC<Props> = (props) => {
 
   return (
     <div>
-      {todos.map((todo) => (
-        <ul>
+      <ul>
+        {todos.map((todo) => (
           <li
             key={todo.id}
             className={classNames('card', { completed: todo.completed })}
@@ -24,8 +24,8 @@ export const TodoList: React.FC<Props> = (props) => {
             {todo.user && <UserInfo user={todo.user} />}
             {todo.user && <TodoInfo todo={todo} />}
           </li>
-        </ul>
-      ))}
+        ))}
+      </ul>
     </div>
   );
 };
