@@ -13,7 +13,7 @@ export const TodoList: React.FC<PropsUser> = (props) => {
         const { todo, user } = preparedTodo;
         const { completed } = todo;
 
-        const status = completed ? 'grid completed' : 'grid working';
+        const status = completed ? 'list completed' : 'list working';
 
         return (
           <ul key={todo.id} className={status}>

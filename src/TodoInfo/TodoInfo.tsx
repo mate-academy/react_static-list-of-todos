@@ -6,7 +6,7 @@ export const TodoInfo: React.FC<PropsTodo> = (checking) => {
 
   return (
     <>
-      <li className="title">
+      <li className="list__title">
         {title}
       </li>
       <li>

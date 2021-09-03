@@ -1,3 +1,5 @@
+$row-height: 40px;
+
 * {
   margin: 0;
 }
@@ -5,13 +7,7 @@
 body {
   background-color: khaki;
 }
-$row-height: 40px;
-
-.todos-title {
-  text-align: center;
-}
-
-.grid {
+.list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   margin-bottom:2px;
@@ -24,6 +20,9 @@ $row-height: 40px;
   @media (max-width: 400px) {
     display: block;
   }
+  &__title {
+    grid-column: 3/ 5;
+  }
 }
 
 .completed {
@@ -34,6 +33,7 @@ $row-height: 40px;
   background-color: red;
 }
 
-.title {
-  grid-column: 3/ 5;
+.todos-title {
+  text-align: center;
 }
+
