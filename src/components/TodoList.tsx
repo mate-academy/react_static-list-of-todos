@@ -11,9 +11,9 @@ export const TodoList: React.FC<Props> = (props) => {
   const { todos } = props;
 
   return (
-    <div className="list-group">
+    <ul className="list-group">
       {todos.map(todo => (
-        <div
+        <li
           className={classNames(
             {
               'list-group-item': true,
@@ -25,8 +25,8 @@ export const TodoList: React.FC<Props> = (props) => {
           key={todo.id}
         >
           <TodoInfo todoItem={todo} />
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
