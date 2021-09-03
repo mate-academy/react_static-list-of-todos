@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import todos from '../../api/todos';
 import { UserInfo } from '../UserInfo/UserInfo';
 import { TodoInfo } from '../TodoInfo/TodoInfo';
 
@@ -9,11 +8,11 @@ type Props = {
 
 export const TodoList:React.FC<Props> = ({ todosArray }) => (
   <>
-    {todosArray.map((todo, index) => (
+    {todosArray.map((todo) => (
       todo.user && (
         <div
           className={classNames('item', {
-            item_true: todos[index].completed,
+            item_true: todo.completed,
           })}
           key={todo.user.id}
         >
