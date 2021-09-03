@@ -12,6 +12,16 @@ export const TodoList: React.FC<Props> = (props) => {
 
   return (
     <ul className="todoList">
+      <div className="titleBLock">
+        <div className="leftSeparatorBlock">
+          <p className="nameTitle">name</p>
+          <p className="emailTitle">email</p>
+        </div>
+        <div className="rightSeparatorBlock">
+          <p className="taskName">task name</p>
+          <p className="taskStatusTitle">task status</p>
+        </div>
+      </div>
       {
         preparedTodos.map((todo) => {
           const { user } = todo;
