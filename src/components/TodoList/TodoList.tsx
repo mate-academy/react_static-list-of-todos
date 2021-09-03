@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import './TodoList.scss';
 
 import { UserInfo } from '../UserInfo';
@@ -12,11 +13,12 @@ export const TodoList: React.FC<Props> = ({ todos }) => (
   <ul className="list">
     {todos.map(todo => (
       <li
-        className={
-          todo.completed
-            ? 'list__item list__item--done'
-            : 'list__item'
-        }
+        className={classNames(
+          'list__item',
+          {
+            'list__item--done': todo.completed,
+          },
+        )}
         key={todo.id}
       >
         {todo.user && <UserInfo user={todo.user} />}
