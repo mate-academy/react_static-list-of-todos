@@ -1,0 +1,22 @@
+.todoList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.todoItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 100px;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 25px 0;
+  border: 1px solid dodgerblue;
+  border-radius: 25px;
+  transition: transform 0.2s linear;
+
+  &:hover {
+    transform: scale(1.04);
+    font-weight: bold;
+  }
+}
