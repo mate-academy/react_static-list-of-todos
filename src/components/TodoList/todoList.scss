@@ -1,0 +1,8 @@
+.todoList {
+  &:nth-of-type(even) {
+    background-color: blue;
+  }
+  &:nth-of-type(odd) {
+    background-color: green;
+  }
+}
