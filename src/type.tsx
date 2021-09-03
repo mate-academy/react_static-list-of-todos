@@ -9,34 +9,28 @@ export type PropsTodo = {
   check: Todo
 };
 
-interface First {
-  lat: string,
-  lng: string,
-}
-
-interface Second {
-  street: string,
-  suite: string,
-  city: string,
-  zipcode: string,
-  geo: First
-}
-
-interface Third {
-  name: string,
-  catchPhrase: string,
-  bs: string,
-}
-
 export interface User {
   id: number,
   name: string,
   username: string,
   email: string,
-  address: Second,
+  address: {
+    street: string,
+    suite: string,
+    city: string,
+    zipcode: string,
+    geo: {
+      lat: string,
+      lng: string,
+    },
+  },
   phone: string,
   website: string,
-  company: Third,
+  company: {
+    name: string,
+    catchPhrase: string,
+    bs: string,
+  },
 }
 
 export interface UserArray {
