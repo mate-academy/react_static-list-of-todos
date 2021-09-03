@@ -1,9 +1,15 @@
-type Props = Pick<User, 'name' | 'username' | 'email'>;
+type Props = {
+  prop: User;
+};
 
-export const UserInfo: React.FC<Props> = ({ name, username, email }) => (
-  <>
-    <p>{name}</p>
-    <p>{username}</p>
-    <p>{email}</p>
-  </>
-);
+export const UserInfo: React.FC<Props> = ({ prop }) => {
+  const { name, username, email } = prop;
+
+  return (
+    <>
+      <p>{name}</p>
+      <p>{username}</p>
+      <p>{email}</p>
+    </>
+  );
+};

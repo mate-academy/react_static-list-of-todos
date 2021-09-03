@@ -9,29 +9,20 @@ type Props = {
 
 export const TodoList:React.FC<Props> = ({ todosArray }) => (
   <>
-    {todosArray.map((todo, index) => {
-      return todo.user !== null
-        ? (
-          <div
-            className={classNames('item', {
-              item_true: todos[index].completed,
-            })}
-            key={todo.user.id}
-          >
-            <br />
-            <UserInfo
-              name={todo.user.name}
-              username={todo.user.username}
-              email={todo.user.email}
-            />
-            <TodoInfo
-              title={todos[index].title}
-              status={todos[index].completed}
-            />
-            <br />
-          </div>
-        )
-        : null;
-    })}
+    {todosArray.map((todo, index) => (
+      todo.user && (
+        <div
+          className={classNames('item', {
+            item_true: todos[index].completed,
+          })}
+          key={todo.user.id}
+        >
+          <br />
+          <UserInfo prop={todo.user} />
+          <TodoInfo todo={todo} />
+          <br />
+        </div>
+      )
+    ))}
   </>
 );

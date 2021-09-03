@@ -1,11 +1,14 @@
 type Props = {
-  title: string;
-  status: boolean;
+  todo: Todo;
 };
 
-export const TodoInfo: React.FC<Props> = ({ title, status }) => (
-  <>
-    <p>{title}</p>
-    <p className="item_true__status">{status ? 'Yes' : 'No'}</p>
-  </>
-);
+export const TodoInfo: React.FC<Props> = ({ todo }) => {
+  const { title, completed } = todo;
+
+  return (
+    <>
+      <p>{title}</p>
+      <p className="item_true__status">{completed ? 'Yes' : 'No'}</p>
+    </>
+  );
+};
