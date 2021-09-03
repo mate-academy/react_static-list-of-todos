@@ -14,12 +14,12 @@ export const TodoInfo: React.FC<Props> = (props) => {
       {user && (
         <UserInfo user={user} />
       )}
-      <div className="todo__title">
+      <td className="todo__title">
         {title}
-      </div>
-      <div className="todo__status">
+      </td>
+      <td className="todo__status">
         {completed ? 'done' : 'undone'}
-      </div>
+      </td>
     </>
   );
 };

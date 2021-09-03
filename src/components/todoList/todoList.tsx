@@ -12,18 +12,18 @@ export const TodoList: React.FC<Props> = (props) => {
   const { todos } = props;
 
   return (
-    <div className="table">
-      <div className="table__header">
-        <div className="table__header-title">Name</div>
-        <div className="table__header-title">UserName</div>
-        <div className="table__header-title">Email</div>
-        <div className="table__header-title">Title</div>
-        <div className="table__header-title">Status</div>
-      </div>
+    <table className="table">
+      <thead className="table__header">
+        <th className="table__header-title">Name</th>
+        <th className="table__header-title">UserName</th>
+        <th className="table__header-title">Email</th>
+        <th className="table__header-title">Title</th>
+        <th className="table__header-title">Status</th>
+      </thead>
 
-      <div className="table__body">
+      <tbody className="table__body">
         {todos.map((todo: Todo) => (
-          <div
+          <tr
             className={classNames(
               'table__body-item',
               {
@@ -33,9 +33,9 @@ export const TodoList: React.FC<Props> = (props) => {
             key={todo.id}
           >
             <TodoInfo todo={todo} />
-          </div>
+          </tr>
         ))}
-      </div>
-    </div>
+      </tbody>
+    </table>
   );
 };
