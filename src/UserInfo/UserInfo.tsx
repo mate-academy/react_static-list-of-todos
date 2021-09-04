@@ -9,12 +9,12 @@ export const UserInfo: React.FC<UserCheck> = (props) => {
 
   return (
     <>
-      <li>
+      <p>
         {user ? user.name : 'Name isn\'t defined'}
-      </li>
-      <li>
+      </p>
+      <p>
         {user ? user.email : 'Email isn\'t defined'}
-      </li>
+      </p>
     </>
   );
 };

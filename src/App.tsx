@@ -8,12 +8,11 @@ import { todos } from './api/todos';
 const preparedTodos = todos.map(todo => {
   const { userId } = todo;
   const userLink = users.find(user => user.id === userId) || null;
-  const finishEl = {
+
+  return {
     user: userLink,
     todo,
   };
-
-  return finishEl;
 });
 const App: React.FC = () => {
   return (

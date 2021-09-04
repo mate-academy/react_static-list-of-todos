@@ -6,12 +6,12 @@ export const TodoInfo: React.FC<PropsTodo> = (checking) => {
 
   return (
     <>
-      <li className="list__title">
+      <p className="list__title">
         {title}
-      </li>
-      <li>
+      </p>
+      <p>
         {completed ? 'completed' : 'working'}
-      </li>
+      </p>
     </>
   );
 };

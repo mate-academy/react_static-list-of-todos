@@ -7,19 +7,28 @@ $row-height: 40px;
 body {
   background-color: khaki;
 }
+
+ul {
+  padding: 0;
+}
+
 .list {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin-bottom:2px;
-  background-color: peru;
-  min-height: $row-height;
-  align-items: center;
-  padding: 10px;
-  gap: 10px;
-  list-style-type: none;
+  &__item{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom:2px;
+    background-color: peru;
+    min-height: $row-height;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    list-style-type: none;
+  }
+
   @media (max-width: 400px) {
     display: block;
   }
+
   &__title {
     grid-column: 3/ 5;
   }
@@ -36,4 +45,3 @@ body {
 .todos-title {
   text-align: center;
 }
-

@@ -8,20 +8,20 @@ export const TodoList: React.FC<PropsUser> = (props) => {
   const { arrayTodos } = props;
 
   return (
-    <>
+    <ul className="list">
       { arrayTodos.map(preparedTodo => {
         const { todo, user } = preparedTodo;
         const { completed } = todo;
 
-        const status = completed ? 'list completed' : 'list working';
+        const status = completed ? 'list__item completed' : 'list__item working';
 
         return (
-          <ul key={todo.id} className={status}>
+          <li key={todo.id} className={status}>
             <UserInfo user={user} />
             <TodoInfo check={todo} />
-          </ul>
+          </li>
         );
       })}
-    </>
+    </ul>
   );
 };
