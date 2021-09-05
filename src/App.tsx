@@ -1,12 +1,19 @@
 import React from 'react';
+import users from './api/users';
+import todos from './api/todos';
+// eslint-disable-next-line import/no-cycle
+import { TodoList } from './components/TodoList';
 import './App.scss';
 
-// import todos from './api/todos';
-// import users from './api/users';
+const preparedTodos: Todo[] = todos.map(item1 => {
+  const user = users.find(item2 => item2.id === item1.userId) || null;
+
+  return { ...item1, user };
+});
 
 const App: React.FC = () => (
   <div className="App">
-    <h1>Static list of todos</h1>
+    <TodoList preparedTodos={preparedTodos} />
   </div>
 );
 
