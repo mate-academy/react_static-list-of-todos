@@ -12,13 +12,17 @@ export const TodoList: React.FC<Props> = (props) => {
   const { preparedTodos } = props;
 
   return (
-    <>
+    <ul className="todoList">
       {preparedTodos.map(todo => (
-        <ul key={todo.id} className="todoList">
+        <li key={todo.id}>
           <TodoInfo todo={todo} />
-          <li className="userInfo">{!todo.user ? 'null' : <UserInfo user={todo.user} />}</li>
-        </ul>
+          {todo.user && (
+            <p className="userInfo">
+              <UserInfo user={todo.user} />
+            </p>
+          )}
+        </li>
       ))}
-    </>
+    </ul>
   );
 };

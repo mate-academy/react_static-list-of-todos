@@ -9,10 +9,7 @@ export const UserInfo: React.FC<Props> = (props) => {
 
   return (
     <>
-      {'My name is: '}
-      {name}
-      {' and my email is: '}
-      {email}
+      {`My name is: ${name} and my email is: ${email}`}
     </>
   );
 };

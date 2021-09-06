@@ -11,8 +11,8 @@ export const TodoInfo: React.FC<Props> = (props) => {
 
   return (
     <>
-      <li>{title}</li>
-      <li>{completed ? 'true' : 'false'}</li>
+      <p>{title}</p>
+      <p>{completed ? 'true' : 'false'}</p>
     </>
   );
 };
