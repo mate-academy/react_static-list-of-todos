@@ -1,0 +1,14 @@
+.todoInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskStatus {
+  display: inline;
+  min-width: 100px;
+}
+
+.taskName {
+  margin-right: 50px;
+}

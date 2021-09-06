@@ -1,0 +1,66 @@
+.todoList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.todoItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 100px;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 25px 0;
+  border: 1px solid dodgerblue;
+  border-radius: 25px;
+  transition: transform 0.2s linear;
+
+  &:hover {
+    transform: scale(1.04);
+    font-weight: bold;
+  }
+}
+
+.titleBLock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 100px;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 25px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.leftSeparatorBlock {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.rightSeparatorBlock {
+  display: flex;
+  justify-content: space-around;
+  padding-right: 15px;
+}
+
+.nameTitle {
+  display: inline;
+  margin: 0;
+}
+
+.emailTitle {
+  display: inline;
+  margin: 0;
+}
+
+.taskName {
+  display: inline;
+  margin: 0;
+}
+
+.taskStatusTitle {
+  display: inline;
+  margin: 0;
+
+}
