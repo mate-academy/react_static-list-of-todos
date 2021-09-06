@@ -1,9 +1,10 @@
 .item {
   padding-left: 20px;
   margin-top: 10px;
-  background-color: rgb(226, 124, 124);
+  background-color: rgb(250, 124, 124);
+  border-radius: 10px;
 }
 
-.item_true {
+.completed {
   background-color: rgb(112, 248, 112);
 }

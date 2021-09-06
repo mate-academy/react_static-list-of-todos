@@ -9,10 +9,10 @@ type Props = {
 export const TodoList:React.FC<Props> = ({ todosArray }) => (
   <>
     {todosArray.map((todo) => (
-      todo.user && (
+      (
         <div
           className={classNames('item', {
-            item_true: todo.completed,
+            completed: todo.completed,
           })}
           key={todo.user.id}
         >
