@@ -1,1 +1,10 @@
-// styles go here
+.item {
+  padding-left: 20px;
+  margin-top: 10px;
+  background-color: rgb(250, 124, 124);
+  border-radius: 10px;
+}
+
+.completed {
+  background-color: rgb(112, 248, 112);
+}
