@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import './todoList.scss';
+import './TodoList.scss';
 import { TodoInfo } from '../todoInfo/TodoInfo';
 
 type Props = {

@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 import todos from './api/todos';
 import users from './api/users';
-import { TodoList } from './components/todoList';
+import { TodoList } from './components/todoList/Index';
 
 const preparedTodos = todos.map(todo => ({
   ...todo,
