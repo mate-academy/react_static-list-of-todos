@@ -8,7 +8,7 @@ interface User {
 }
 
 interface Todo {
-  user: User | Null;
+  user: User | null;
   userId: number;
   id: number;
   title: string;

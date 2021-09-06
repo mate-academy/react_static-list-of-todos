@@ -7,21 +7,21 @@ type Props = {
 };
 
 export const TodoList:React.FC<Props> = ({ todosArray }) => (
-  <>
+  <div>
     {todosArray.map((todo) => (
       (
         <div
           className={classNames('item', {
             completed: todo.completed,
           })}
-          key={todo.user.id}
+          key={todo.id}
         >
           <br />
-          <UserInfo prop={todo.user} />
-          <TodoInfo todo={todo} />
+          {todo.user && <UserInfo prop={todo.user} />}
+          {todo.user && <TodoInfo todo={todo} />}
           <br />
         </div>
       )
     ))}
-  </>
+  </div>
 );
