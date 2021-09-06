@@ -14,9 +14,9 @@ const TodoInfo: React.FC<Props> = (props) => {
     <>
       <div>{title}</div>
       <div className="status">
-        {(completed) ? (
-          'completed'
-        ) : ('in procces')}
+        {(completed)
+          ? 'completed'
+          : 'in procces'}
       </div>
     </>
   );

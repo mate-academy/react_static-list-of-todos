@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import { Todo } from '../../types/Todo';
 import TodoInfo from '../TodoInfo/TodoInfo';
 import UserInfo from '../UserInfo/UserInfo';
@@ -14,20 +15,22 @@ const TodoList: React.FC<Props> = (props) => {
 
   return (
     <ul className="todo-list">
-      {
-        todos.map(todo => (
-          <li key={todo.id} className="todo-list__item">
-            <article className={`todo-list__article ${todo.completed ? 'complete' : ''}`}>
-              {
-                (todo.user !== null) ? (<UserInfo user={todo.user} />) : (
-                  <p>User not found</p>
-                )
-              }
-              <TodoInfo todo={todo} />
-            </article>
-          </li>
-        ))
-      }
+      {todos.map(todo => (
+        <li key={todo.id} className="todo-list__item">
+          <article
+            className={classNames('todo-list__article', {
+              complete: todo.completed,
+            })}
+          >
+            {
+              (todo.user !== null) ? (<UserInfo user={todo.user} />) : (
+                <p>User not found</p>
+              )
+            }
+            <TodoInfo todo={todo} />
+          </article>
+        </li>
+      ))}
     </ul>
   );
 };
