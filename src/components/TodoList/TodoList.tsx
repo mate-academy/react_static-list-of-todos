@@ -4,7 +4,7 @@ import { UserInfo } from '../UserInfo';
 import { TodoInfo } from '../TodoInfo';
 
 type Props = {
-  preparedTodos:Todo[];
+  preparedTodos: Todo[];
 };
 
 export const TodoList: React.FC<Props> = (props) => {
@@ -26,7 +26,7 @@ export const TodoList: React.FC<Props> = (props) => {
         preparedTodos.map((todo) => {
           const { user } = todo;
 
-          if (user !== undefined) {
+          if (user) {
             return (
               <li className="todoItem">
                 <UserInfo key={user.id} user={user} />
@@ -35,7 +35,9 @@ export const TodoList: React.FC<Props> = (props) => {
             );
           }
 
-          throw new Error('No user in ToDo');
+          return (
+            <li className="todoItem" />
+          );
         })
       }
     </ul>

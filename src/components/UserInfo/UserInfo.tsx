@@ -2,7 +2,7 @@ import React from 'react';
 import './UseInfo.scss';
 
 type Props = {
-  user:User
+  user: User
 };
 
 export const UserInfo: React.FC<Props> = (props) => {
