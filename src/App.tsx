@@ -7,11 +7,11 @@ import { TodoList } from './components/TodoList';
 
 const preparedTodos: Todo[] = todos
   .map(todo => {
-    const newUser = users.find(user => user.id === todo.userId) || null;
+    const todoAuthor = users.find(user => user.id === todo.userId) || null;
 
     return {
       ...todo,
-      user: newUser,
+      user: todoAuthor,
     };
   });
 

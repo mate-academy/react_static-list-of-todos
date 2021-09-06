@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
-import { UserInfo } from '../../UserInfo';
-import { TodoInfo } from '../../TodoInfo';
+import { UserInfo } from '../UserInfo';
+import { TodoInfo } from '../TodoInfo';
 import './TodoList.scss';
 
 export type Props = {
@@ -26,7 +26,8 @@ export const TodoList: React.FC<Props> = (props) => {
         <li
           key={todo.id}
           className={classNames(
-            'cards__item', { cards__item_done: (todo.user ? todo.completed : '') },
+            'cards__item',
+            { cards__item_done: (todo.user && todo.completed) },
           )}
         >
           {todo.user && <UserInfo user={todo.user} />}
