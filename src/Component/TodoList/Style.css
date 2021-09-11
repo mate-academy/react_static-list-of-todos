@@ -1,0 +1,27 @@
+.page {
+  padding: 10px;
+}
+
+.list {
+  list-style: none;
+  border: 2px solid brown;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.list-item:nth-child(1) {
+  border: 1px solid black;
+  background-color: aquamarine;
+  padding: 5px 30px 5px 80px;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+}

@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.list-item:nth-child(odd) {
+  background-color: aqua;
+}
