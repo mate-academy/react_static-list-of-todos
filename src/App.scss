@@ -1,1 +1,28 @@
-// styles go here
+.list {
+  display: block;
+  font-size: 25px;
+  background-color: rgb(139, 139, 139);
+  list-style: none;
+}
+
+.completed {
+  background-color: rgb(62, 143, 38);
+}
+
+.uncomplited {
+  background-color: rgb(158, 61, 61);
+}
+
+.user {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.userTitle,
+.userName,
+.userEmail {
+  display: inline-block;
+  margin: 30px;
+  color: aliceblue;
+  text-align: center;
+}
