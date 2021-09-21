@@ -1,0 +1,27 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: rgb(245, 245, 28);
+    margin-bottom: 3px;
+    border: 2px solid #f00;
+    border-radius: 10px;
+  }
+
+  &__item--active {
+    background-color: rgb(31, 243, 31);
+  }
+
+  &__item:hover {
+    background-color: #ff0;
+  }
+
+  &__item--active:hover {
+    background-color: #0f0;
+  }
+}
