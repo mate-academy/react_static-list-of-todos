@@ -8,8 +8,7 @@ type Props = {
 };
 
 export const UserInfo: React.FC<Props> = (props) => {
-  const { user } = props;
-  const { name, email } = user;
+  const { user: { name, email } } = props;
 
   return (
     <span className="user">

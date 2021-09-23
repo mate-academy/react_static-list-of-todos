@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.scss';
 
-// eslint-disable-next-line import/no-cycle
 import { TodoList } from './components/TodoList';
 import todos from './api/todos';
 import users from './api/users';

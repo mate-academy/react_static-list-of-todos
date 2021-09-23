@@ -1,8 +1,6 @@
 import React from 'react';
 
-// eslint-disable-next-line import/no-cycle
 import { UserInfo } from './UserInfo';
-// eslint-disable-next-line import/no-cycle
 import { TodoInfo } from './TodoInfo';
 
 type Props = {
@@ -15,9 +13,11 @@ export const TodoList: React.FC<Props> = (props) => {
   return (
     <ul className="list">
       {preparedTodos.map(item => (
-        <li className={
-          `list ${item.completed ? 'list completed' : 'list uncomplited'}`
-        }
+        <li
+          key={item.id}
+          className={
+            `list ${item.completed ? 'list completed' : 'list uncomplited'}`
+          }
         >
           <span className="userInfo">
             {item.user && (
