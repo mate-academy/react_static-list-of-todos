@@ -1,0 +1,43 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    padding: 10px;
+    background-color: #e4ff00;
+    margin-bottom: 3px;
+    border: 2px solid #c8c8c8;
+    border-radius: 10px;
+
+    &--done {
+      background-color: #7cff00;
+      animation: shimmering-color 2s ease infinite;
+    }
+  }
+
+  &__item:hover {
+    background-color: #ff0;
+  }
+
+  &__item--done:hover {
+    background-color: #09ff00;
+  }
+}
+
+@keyframes shimmering-color {
+  0% {
+    background-color: #e4ff00;
+  }
+
+  50% {
+    background-color: #7cff00;
+  }
+
+  100% {
+    background-color: #e4ff00;
+  }
+}
