@@ -1,1 +1,59 @@
-// styles go here
+body {
+  margin: 0;
+  color: #444;
+}
+
+.App {
+  background-image: linear-gradient(215deg, #c8f3d2, #f0f3bf);
+  background-attachment: fixed;
+  font-family: sans-serif;
+}
+
+.title {
+  margin: 0;
+  padding: 50px;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 900px;
+  margin: 0 auto;
+  background-color: #ccc;
+
+  &__field {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 15px 25px;
+
+    &--title {
+      background-color: #bbb;
+    }
+
+    &:nth-child(2n) {
+      background-color: #c5c5c5;
+    }
+  }
+
+  &__item {
+    list-style-type: none;
+    width: 200px;
+
+    &:nth-child(2) {
+      width: 240px;
+    }
+
+    &:nth-child(3) {
+      align-items: flex-end;
+      width: 380px;
+    }
+
+    &:last-child {
+      width: 46px;
+      text-align: center;
+    }
+  }
+}
