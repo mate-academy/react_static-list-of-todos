@@ -1,0 +1,12 @@
+thead {
+  background-color: cadetblue;
+}
+
+tr:nth-child(2n) {
+  background-color: #eee;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px black solid;
+}
