@@ -1,1 +1,47 @@
-// styles go here
+$row-height: 40px;
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: khaki;
+}
+
+ul {
+  padding: 0;
+}
+
+.list {
+  &__item{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom:2px;
+    background-color: peru;
+    min-height: $row-height;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    list-style-type: none;
+  }
+
+  @media (max-width: 400px) {
+    display: block;
+  }
+
+  &__title {
+    grid-column: 3/ 5;
+  }
+}
+
+.completed {
+  background-color: green;
+}
+
+.working {
+  background-color: red;
+}
+
+.todos-title {
+  text-align: center;
+}
