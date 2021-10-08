@@ -1,0 +1,23 @@
+//@at-root
+.todo-list {
+  width: 80vw;
+  margin: 0 auto;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    min-height: 50px;
+    margin-bottom: 10px;
+    background-color: rgb(240, 85, 111);
+
+    &--done {
+      background-color: yellowgreen;
+    }
+  }
+
+  span {
+    display: inline-block;
+    width: 25%;
+  }
+}
