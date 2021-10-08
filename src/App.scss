@@ -1,1 +1,22 @@
-// styles go here
+.todo {
+  &__title {
+    text-align: center;
+  }
+
+  &__legend {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 165px);
+    text-align: center;
+    justify-content: space-between;
+    min-height: 40px;
+    margin: 5px auto;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #ff4a4a;
+  }
+
+  &__legend-item {
+    width: 500px;
+  }
+}
