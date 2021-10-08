@@ -1,0 +1,32 @@
+body {
+  background-color: #82caf3;
+  margin: 0;
+  padding: 0;
+}
+
+.todoList {
+  margin: 0 auto;
+  padding: 0;
+  width: calc(100% - 150px);
+  
+  &__item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    min-height: 40px;
+    margin: 5px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #ffa600;
+
+    &--done {
+      background-color: #58f132;
+    }
+  }
+
+  &__userInfo {
+    display: block;
+    width: 500px;
+  }
+}
