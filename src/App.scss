@@ -1,1 +1,21 @@
-// styles go here
+.list {
+  display: block;
+  margin: 10px 20px;
+  font-size: 25px;
+  list-style: none;
+}
+
+.completed {
+  background-color: rgb(170, 255, 170);
+}
+
+.user {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.user__title, .user__complited, .user__name, .user__email {
+  display: inline-block;
+  margin: 30px;
+  text-align: center;
+}
