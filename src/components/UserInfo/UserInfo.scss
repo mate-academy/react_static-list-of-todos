@@ -1,0 +1,12 @@
+.User {
+  &__username {
+    font-weight: bold;
+    line-height: 120%;
+    margin: 0 0 15px;
+  }
+
+  &__email {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+  }
+}
