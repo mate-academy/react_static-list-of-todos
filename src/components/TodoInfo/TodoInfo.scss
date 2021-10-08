@@ -1,0 +1,15 @@
+.todoInfo {
+  border: 2px solid;
+  border-radius: 10px;
+  text-align: center;
+
+  &--true {
+    border-color: rgb(19, 78, 28);
+    background-color: rgb(149, 201, 160);
+  }
+
+  &--false {
+    border-color: rgb(112, 44, 44);
+    background-color: rgb(202, 140, 140);
+  }
+}
