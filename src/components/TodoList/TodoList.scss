@@ -1,0 +1,23 @@
+.todo-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 500px);
+  justify-content: center;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: 250px;
+
+  padding: 15px;
+  margin: 0;
+
+  border: 1px solid black;
+  border-radius: 16px;
+  list-style: none;
+}
