@@ -1,11 +1,7 @@
 import React from 'react';
+import { PreparedTodo } from '../types/PreparedTodo';
 
-type Props = {
-  title: string
-  completed: boolean
-};
-
-export const TodoInfo: React.FC<Props> = ({
+export const TodoInfo: React.FC<PreparedTodo> = ({
   title,
   completed,
 }) => (

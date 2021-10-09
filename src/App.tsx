@@ -6,10 +6,10 @@ import users from './api/users';
 import { TodoList } from './components/TodoList/TodoList';
 
 const preparedTodos = todos.map(todo => {
-  const user = users.find(todoUser => todo.userId === todoUser.id);
+  const user = users.find(todoUser => todo.userId === todoUser.id) || null;
 
   return {
-    user: (user !== undefined) ? user : null,
+    user,
     ...todo,
   };
 });
