@@ -1,1 +1,17 @@
-// styles go here
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+
+body,
+h1 {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  padding: 2vh;
+}
+
+.App {
+  background-color: rgba(74, 221, 160, 0.57);
+  text-align: center;
+}
