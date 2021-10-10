@@ -1,0 +1,19 @@
+.todos-flex-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  gap: 3px;
+}
+
+.todos-row {  
+  display: flex;  
+  gap: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  text-align: center;
+
+  &:hover {
+    background-color: aqua;
+  }
+};

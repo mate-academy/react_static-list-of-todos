@@ -1,0 +1,19 @@
+.todos-row-item {  
+  font-size: 16px;
+  padding: 5px;
+  flex-basis: 200px;  
+
+  &-head {    
+    color: blue;
+    font-size: 17px;
+    flex-basis: 200px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  &--done {
+    color: red;
+    font-size: 17px;
+    flex-basis: 100px;  
+  }
+}
