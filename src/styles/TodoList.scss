@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap");
+
+.todoList {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+
+  &__item {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 800px;
+    min-height: 50px;
+    margin: 5px auto;
+    border: 2px solid rgb(210, 180, 140);
+    border-radius: 5px;
+    background-color: rgba(255, 235, 205, 0.3);
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(101%);
+      background-color: rgba(255, 235, 205, 0.8);
+    }
+
+    &--completed {
+      background-color: rgba(144, 238, 144, 0.3);
+
+      &:hover {
+        background-color: rgba(144, 238, 144, 0.8);
+      }
+    }
+  }
+
+  &__userInfo {
+    display: block;
+    width: 100%;
+  }
+}
