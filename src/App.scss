@@ -1,1 +1,25 @@
-// styles go here
+body {
+  background-image: linear-gradient(45deg, #4ebd36, #7e7cf9);
+  background-attachment: fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  background-color: rgb(3, 7, 241);
+  color: white;
+}
+
+.table {
+  width: 600px;
+  height: 1000px;
+  border-color: yellow;
+  border-radius: 10px;
+}
+
+td {
+  text-align: center;
+}
