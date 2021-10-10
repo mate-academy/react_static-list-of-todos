@@ -20,4 +20,10 @@
   border: 1px solid black;
   border-radius: 16px;
   list-style: none;
+  transition: all 0.5s;
+
+  &:hover {
+    transform: scale(1.04);
+    background-color: #eee;
+  }
 }
