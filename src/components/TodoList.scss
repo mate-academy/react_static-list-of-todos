@@ -1,0 +1,31 @@
+.ListStyle {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  background-color: #555;
+  border: 1px solid #555;
+}
+
+.TodoStyle {
+  margin: 5px;
+  padding: 5px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+}
+
+.TodoTitle {
+  margin: 0 25px;
+  width: 600px;
+}
+
+.UserInfo {
+  margin: 0 25px;
+  width: 300px;
+}
+
+.TodoDone {
+  margin: 0 25px;
+  width: 100px;
+  background-color: #944;
+}
