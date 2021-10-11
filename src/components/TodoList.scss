@@ -1,0 +1,28 @@
+.todo-list {
+  max-width: 90%;
+  margin: 0 auto;
+
+  &__item {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    min-height: 50px;
+    border: 1px solid #000;
+    background-color: #e351eb;
+    transition: all 0.3s linear;
+    margin: 10px;
+    border-radius: 5px;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &--completed {
+      background-color: #b51cbd;
+    }
+    
+    span {
+      width: 25%;
+    }
+  }
+}
