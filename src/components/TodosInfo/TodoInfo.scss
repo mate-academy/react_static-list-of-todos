@@ -1,0 +1,10 @@
+.todo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    margin-top: 20px;
+  }
+}
