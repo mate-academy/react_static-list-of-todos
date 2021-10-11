@@ -1,0 +1,19 @@
+.item__user {
+  flex: auto;
+  text-align: center;
+}
+
+.item__title {
+  flex: 40% 0 0;
+  font-size: 20px;
+  text-align: left;
+  line-height: 100px;
+}
+
+.item__completed {
+  font-size: 20px;
+  color: green;
+  flex: auto;
+  text-align: center;
+  line-height: 100px;
+}

@@ -1,0 +1,14 @@
+.list {
+  width: 80%;
+  margin: 0 auto;
+  list-style: none;
+
+  &__item {
+    display: flex;
+    height: 100px;
+    margin-bottom: 20px;
+    background: linear-gradient(to top left, powderblue, pink);
+    border-radius: 25px;
+    box-shadow: 1px 1px 1px black;
+  }
+}
