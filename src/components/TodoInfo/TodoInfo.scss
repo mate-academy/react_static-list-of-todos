@@ -1,0 +1,31 @@
+.todo-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 16px;
+  column-gap: 8px;
+
+  &__title {
+    font-size: 24px;
+    color: #000;
+    margin: 16px 0;
+    text-transform: capitalize;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__status {
+    display: inline-block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #f00;
+    border: 1px solid #000;
+
+    &--finished {
+      background-color: #0f0;
+    }
+  }
+}

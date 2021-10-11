@@ -1,0 +1,29 @@
+.user-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+
+  &__item {
+    position: relative;
+    width: fit-content;
+    padding-bottom: 4px;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background-color: #aaa;
+      transform: skewX(-60deg);
+      left: 0;
+      bottom: 0;
+      transition: background-color 0.3s,;
+
+    }
+
+    &:hover::after {
+      background-color: #222;
+    }
+  }
+}
