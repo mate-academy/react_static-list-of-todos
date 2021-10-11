@@ -1,9 +1,7 @@
 import React from 'react';
+import { Todo } from '../types/Todo';
 
-type Props = {
-  status: boolean;
-  title: string;
-};
+type Props = Pick<Todo, 'title' | 'completed'>;
 
 export const TodoInfo: React.FC<Props> = props => (
   <>
@@ -13,7 +11,7 @@ export const TodoInfo: React.FC<Props> = props => (
     </span>
     <span>
       {'Status: '}
-      {props.status ? 'Completed' : 'In progress'}
+      {props.completed ? 'Completed' : 'In progress'}
     </span>
   </>
 );

@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import classNames from 'classnames';
 import { UserInfo } from './UserInfo';
 import { Todo } from '../types/Todo';
@@ -9,7 +9,7 @@ type Props = {
   todos: Todo[]
 };
 
-export const TodoList: React.FC<Props> = props => {
+export const TodoList: FC<Props> = props => {
   const { todos } = props;
 
   return (
@@ -32,7 +32,7 @@ export const TodoList: React.FC<Props> = props => {
             <UserInfo {...user} />
             <TodoInfo
               title={item.title}
-              status={item.completed}
+              completed={item.completed}
             />
           </li>
         );
