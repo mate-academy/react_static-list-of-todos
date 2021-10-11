@@ -3,9 +3,13 @@ import { Todo } from '../../types/Todo';
 import { TodoCard } from '../TodoCard';
 import './Todolist.scss';
 
-export const Todolist: React.FC<{ whatToDo: Todo[] }> = ({ whatToDo }) => (
+type Props = {
+  TodoList: Todo[]
+};
+
+export const Todolist: React.FC<Props> = ({ TodoList }) => (
   <ul className="todo-list">
-    {whatToDo.map((todo: Todo) => (
+    {TodoList.map((todo: Todo) => (
       <TodoCard todoCard={todo} key={todo.id} />
     ))}
   </ul>
