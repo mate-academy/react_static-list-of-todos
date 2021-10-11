@@ -1,0 +1,16 @@
+.list__user {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-size: 25px;
+  gap: 25px;
+}
+
+.list__name {
+  color: #629222;
+}
+
+.list__email {
+  color: #f00;
+  text-decoration: underline;
+}
