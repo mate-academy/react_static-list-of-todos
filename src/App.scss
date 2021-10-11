@@ -1,1 +1,50 @@
-// styles go here
+body {
+  margin: 0;
+  color: #444;
+  background-color: rgb(96, 191, 194);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 200px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 1000px;
+  margin: 0 auto;
+  background-color: rgb(153, 235, 153);
+
+  &__field {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 15px 25px;
+    border: 1px solid rgb(0, 0, 0);
+
+    &--title {
+      background-color: #bbb;
+    }
+  }
+
+  &__item {
+    list-style-type: none;
+    width: 200px;
+    color: black;
+
+    &:nth-child(3) {
+      align-items: flex-end;
+      width: 460px;
+    }
+
+    &:last-child {
+      width: 56px;
+      text-align: center;
+    }
+  }
+}
