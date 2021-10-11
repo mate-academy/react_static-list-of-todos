@@ -1,13 +1,23 @@
-import React from 'react';
+import todos from './api/todos';
+import users from './api/users';
+import { TodoList } from './components/TodoList';
+import { Todo } from './types/Todo';
 import './App.scss';
 
-// import todos from './api/todos';
-// import users from './api/users';
+const App: React.FC = () => {
+  const preparedTodos: Todo[] = todos.map((todo) => {
+    return {
+      ...todo,
+      user: users.find(({ id }) => id === todo.userId) || null,
+    };
+  });
 
-const App: React.FC = () => (
-  <div className="App">
-    <h1>Static list of todos</h1>
-  </div>
-);
+  return (
+    <div className="page">
+      <h1 className="page__heading">Static list of todos</h1>
+      <TodoList todos={preparedTodos} />
+    </div>
+  );
+};
 
 export default App;
