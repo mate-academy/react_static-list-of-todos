@@ -1,0 +1,25 @@
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    min-height: 50px;
+    background: darkgrey;
+
+    &--done {
+      background-color: green;
+    }
+  }
+}
+
+span {
+  display: inline-block;
+  width: 25%;
+}
