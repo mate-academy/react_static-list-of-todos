@@ -1,6 +1,7 @@
 import React from 'react';
+import { Todo } from './types/Todo';
 
-export const TodoInfo: React.FC<TodoInfo> = ({ completed, title }) => {
+export const TodoInfo: React.FC<Pick<Todo, 'title' | 'completed'>> = ({ completed, title }) => {
   return (
     <>
       <td>{title}</td>

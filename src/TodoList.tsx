@@ -1,12 +1,13 @@
 import React from 'react';
 import { TodoInfo } from './TodoInfo';
 import { UserInfo } from './UsetInfo';
+import { Todo } from './types/Todo';
 
 type Props = {
   todos: Todo[]
 };
 
-export const TodoList: React.FC<Props> = (props) => {
+export const TodoList: React.FC<Props> = ({ todos }) => {
   return (
     <table className="table">
       <thead>
@@ -19,7 +20,7 @@ export const TodoList: React.FC<Props> = (props) => {
         </tr>
       </thead>
       <tbody>
-        {props.todos.map(({
+        {todos.map(({
           id,
           title,
           completed,
@@ -27,11 +28,7 @@ export const TodoList: React.FC<Props> = (props) => {
         }) => {
           return (user && (
             <tr key={id}>
-              <UserInfo
-                name={user.name}
-                username={user.username}
-                email={user.email}
-              />
+              <UserInfo {...user} />
               <TodoInfo title={title} completed={completed} />
             </tr>
           ));
