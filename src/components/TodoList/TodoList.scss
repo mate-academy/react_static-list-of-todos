@@ -1,0 +1,29 @@
+body {
+  background-color: #d6d6d6;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-list {
+  margin: 0 auto;
+  width: 100%;
+  
+  &__item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    height: 36px;
+    margin: 5px;
+    background-color: #e6e6e6;
+
+    &--active {
+      background-color: #81a581;
+    }
+  }
+
+  &__user-info {
+    display: block;
+    width: 500px;
+  }
+}
