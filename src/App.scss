@@ -1,1 +1,9 @@
-// styles go here
+.title {
+  font-size: 50px;
+  text-align: center;
+}
+
+.list__item {
+  display: flex;
+  gap: 25px;
+}

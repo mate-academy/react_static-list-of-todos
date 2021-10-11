@@ -1,0 +1,13 @@
+.list__todo {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  font-size: 25px;
+  gap: 25px;
+}
+
+.list__title {
+  color: #333;
+}
