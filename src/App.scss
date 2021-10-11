@@ -1,1 +1,26 @@
-// styles go here
+body {
+  background-color: #eaf0ce ;
+  color: #3f334d;
+}
+
+.todo {
+  &__title {
+    text-align: center;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 22px;
+    width: calc(100% - 500px);
+    height: 50px;
+    margin: 0 auto;
+    border: 5px solid #574b60;
+    border-radius: 30px;
+
+    &-item {
+      width: 100%;
+    }
+  }
+}
