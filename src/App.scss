@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 
+body {
+  margin: 0;
+}
+
 .App {
   width: 100%;
   font-family: "Oswald", sans-serif;
@@ -12,4 +16,5 @@
 
 .article {
   text-align: center;
+  font-size: 50px;
 }

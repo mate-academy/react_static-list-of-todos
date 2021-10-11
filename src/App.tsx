@@ -11,7 +11,7 @@ const preparedTodos = todos.map(todo => ({
 }));
 const App: React.FC = () => (
   <div className="App">
-    <h1 className="article">Static list of todos</h1>
+    <div className="article">Static list of todos</div>
     <TodoList todos={preparedTodos} />
   </div>
 );
