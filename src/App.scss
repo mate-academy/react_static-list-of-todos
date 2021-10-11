@@ -1,1 +1,42 @@
-// styles go here
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin: 0, 20px;
+}
+
+.todo {
+  width: 80%;
+  margin: auto;
+  padding: 0;
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &__item {
+    margin-bottom: 5px;
+    column-gap: 20px;
+    display: grid;
+    text-align: center;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #caa;
+    line-height: 2em;
+  }
+
+  &__status--completed {
+    color: green;
+  }
+
+  &__status--In-procress {
+    color: #c00;
+  }
+}
