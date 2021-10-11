@@ -1,1 +1,38 @@
-// styles go here
+.todo {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+
+  &__list {
+    list-style-type: none;
+    padding: 0 40px;
+  }
+  &__item {
+    margin-bottom: 5px;
+    column-gap: 20px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    border: 1px solid black;
+    border-radius: 4px;
+    &:first-child:last-child {
+      padding-left: 5px;
+    }
+  }
+  &__status {
+    border-radius: 4px;
+  }
+  &__status--completed {
+    background-color: rgb(33, 114, 33);
+    padding: 30px;
+  }
+  &__status--notCompleted {
+    color: #fff;
+    background-color: rgb(128, 25, 25);
+    padding: 30px;
+  }
+  font-size: 20px;
+}
