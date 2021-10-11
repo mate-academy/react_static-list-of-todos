@@ -1,0 +1,14 @@
+.user {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+
+  &__name {
+    width: 50%;
+  }
+
+  &__email {
+    width: 50%;
+  }
+}
