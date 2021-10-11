@@ -1,1 +1,27 @@
-// styles go here
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-size: 18px;
+}
+  
+li {
+  list-style: none;
+}
+
+div,
+p,
+ul,
+li,
+h1 {
+  margin: 0;
+}
+
+.App {
+  margin: 0 10px;
+}
+
+.title {
+  text-align: center;
+  padding: 30px;
+  color: dimgray;
+}
