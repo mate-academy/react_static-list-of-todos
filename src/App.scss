@@ -1,1 +1,27 @@
-// styles go here
+body {
+  margin: unset;
+  width: 100%;
+}
+
+.todo {
+  &__title {
+    text-align: center;
+  }
+
+  &__legend {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightgreen;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &__legend-item {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
