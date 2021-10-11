@@ -1,0 +1,26 @@
+.page {
+  padding: 0 300px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.list-item:nth-child(1) {
+  padding: 5px 30px 5px 80px;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+}
