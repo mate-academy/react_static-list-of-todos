@@ -1,0 +1,11 @@
+.userInfo {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__item {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}

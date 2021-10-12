@@ -1,0 +1,18 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  background-color: grey;
+
+  &__title {
+    width: 200px;
+  }
+
+  &-status {
+    height: max-content;
+    background-color: red;
+
+    &--completed {
+      background-color: green;
+    }
+  }
+}
