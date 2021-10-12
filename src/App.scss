@@ -1,1 +1,20 @@
-// styles go here
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+body {
+  margin: 0;
+}
+
+.App {
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+
+.title {
+  text-align: center;
+}
+
+.article {
+  text-align: center;
+  font-size: 50px;
+}
