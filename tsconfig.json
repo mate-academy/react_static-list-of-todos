@@ -2,5 +2,5 @@
   "extends": "@mate-academy/students-ts-config",
   "include": [
     "./src/**/*.ts"
-, "src/App.tsx"  ]
+, "src/App.tsx", "src/types/User.tsx"  ]
 }

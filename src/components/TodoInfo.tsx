@@ -16,6 +16,8 @@ export const TodoInfo: React.FC<{ todo: Todo }> = ({ todo }) => (
       Is completed:
       {todo.completed ? 'true' : 'false'}
     </h4>
-    <UserInfo todoUser={todo.user} />
+    {todo.user && (
+      <UserInfo todoUser={todo.user} />
+    )}
   </>
 );
