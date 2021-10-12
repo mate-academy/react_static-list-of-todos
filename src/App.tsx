@@ -16,37 +16,7 @@ const App: React.FC = () => {
   });
 
   return (
-    <div className="todo-list">
-      <h1 className="todo-list__title">Static list of todos</h1>
-      <div className="container">
-        <span className="
-          todo-list__item
-          todo-list__item--firstline"
-        >
-          Name
-        </span>
-        <span className="
-          todo-list__item
-          todo-list__item--firstline"
-        >
-          Email
-        </span>
-        <span className="
-          todo-list__item
-          todo-list__item--firstline"
-        >
-          ToDo
-        </span>
-        <span className="
-          todo-list__item
-          todo-list__item--firstline"
-        >
-          Status
-        </span>
-      </div>
-
-      <TodoList todoLists={preparedTodos} />
-    </div>
+    <TodoList todos={preparedTodos} />
   );
 };
 

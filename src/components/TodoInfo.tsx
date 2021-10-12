@@ -2,16 +2,16 @@ import React from 'react';
 import { Todo } from '../types/todo';
 
 type Props = {
-  todoInfoList: Todo
+  todo: Todo
 };
 
-export const TodoInfo: React.FC<Props> = ({ todoInfoList }) => (
+export const TodoInfo: React.FC<Props> = ({ todo }) => (
   <>
     <span className="todoList__userInfo">
-      {todoInfoList.title}
+      {todo.title}
     </span>
     <span className="todoList__userInfo">
-      {todoInfoList.completed
+      {todo.completed
         ? 'Completed'
         : 'In progress'}
     </span>
