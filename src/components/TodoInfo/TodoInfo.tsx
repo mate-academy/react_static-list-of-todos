@@ -1,5 +1,5 @@
 import React from 'react';
-import { Todo } from "../../types/Todo";
+import { Todo } from '../../types/Todo';
 
 type Props = {
   todo: Todo;
@@ -7,6 +7,10 @@ type Props = {
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => (
   <>
-    TASK: {todo.title} {todo.completed ? 'DONE' : 'IN PROCESS'}
+    TASK:
+    {' '}
+    {todo.title}
+    {' '}
+    {todo.completed ? 'DONE' : 'IN PROCESS'}
   </>
 );
