@@ -5,16 +5,12 @@ type Props = {
   title: string;
 };
 
-export const TodoInfo: React.FC<Props> = props => {
-  const {
-    status,
-    title,
-  } = props;
-
-  return (
-    <>
-      <span>{title}</span>
-      <span>{status ? 'Completed' : 'Not completed'}</span>
-    </>
-  );
-};
+export const TodoInfo: React.FC<Props> = ({
+  status,
+  title,
+}) => (
+  <>
+    <span>{title}</span>
+    <span>{status ? 'Completed' : 'Not completed'}</span>
+  </>
+);
