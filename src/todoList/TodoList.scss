@@ -1,0 +1,18 @@
+.listItems {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    margin: 0.5% 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    color: rgb(52, 82, 93);
+    border: 1px solid rgb(156, 240, 255);
+    border-radius: 3%;
+    background-color: rgb(254, 255, 245);
+  }
+}
