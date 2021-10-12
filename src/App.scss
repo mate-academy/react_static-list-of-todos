@@ -14,10 +14,24 @@
   margin: auto;
   padding: 0;
 
-  &__list {
-    list-style-type: none;
-    padding: 0;
+  &__item {
+    margin-bottom: 5px;
+    column-gap: 20px;
+    display: grid;
+    text-align: center;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #caa;
+    line-height: 2em;
   }
+}
+
+.list {
+  width: 100%;
+  margin: auto;
+  padding: 0;
 
   &__item {
     margin-bottom: 5px;
@@ -32,11 +46,11 @@
     line-height: 2em;
   }
 
-  &__status--completed {
+  &__item--completed {
     color: green;
   }
 
-  &__status--In-procress {
+  &__item--progress {
     color: #c00;
   }
 }

@@ -21,7 +21,7 @@ const App: React.FC = () => (
         <div>Target</div>
         <div>Status</div>
       </h2>
-      <TodoList todos={preparedTodos} />
+      <TodoList list={preparedTodos} />
     </div>
   </div>
 );

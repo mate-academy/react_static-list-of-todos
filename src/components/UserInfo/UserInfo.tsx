@@ -1,13 +1,20 @@
 import React from 'react';
-import { Todo } from '../types/Todo';
 
-export const UserInfo: React.FC<Todo> = ({ ...todos }) => (
-  <>
-    <div className="todo__name">
-      {todos.user?.name}
-    </div>
-    <div className="todo_mail">
-      {todos.user?.email}
-    </div>
-  </>
-);
+import { User } from '../types/Users';
+
+type Props = {
+  user: User;
+};
+
+export const UserInfo: React.FC<Props> = ({ user }) => {
+  return (
+    <>
+      <p className="todo__name">
+        {user !== null ? user.name : 'Unknown name'}
+      </p>
+      <p className="todo_mail">
+        {user !== null ? user.email : 'No email'}
+      </p>
+    </>
+  );
+};
