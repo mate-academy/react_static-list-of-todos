@@ -1,6 +1,5 @@
 import React from 'react';
 import './TodoList.scss';
-import { TodoInfo } from './TodoInfo';
 import { GetInfo } from './GetInfo';
 import { Todo } from '../types/Type';
 
@@ -12,18 +11,18 @@ export const TodoList: React.FC<TodosUsers> = ({ todosUsers }) => (
   <>
     <div className="ListStyle">
       {todosUsers.map(todo => (
-        <div className="TodoStyle">
+        <div className="TodoStyle" key={todo.id}>
           <span className="TodoTitle">
             <GetInfo propsInfo={todo.title} />
           </span>
-          <span className="UserInfo">
+          <span className="Info">
             <GetInfo propsInfo={todo.user?.name || null} />
           </span>
-          <span className="UserInfo">
+          <span className="Info">
             <GetInfo propsInfo={todo.user?.email || null} />
           </span>
-          <span className="TodoDone">
-            <TodoInfo propsInfo={todo.completed} />
+          <span className="Info">
+            <GetInfo propsInfo={(todo.completed) ? 'done' : 'in process'} />
           </span>
         </div>
       ))}
