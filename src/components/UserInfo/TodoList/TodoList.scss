@@ -1,0 +1,12 @@
+.todo-list {
+  list-style-type: none;
+  &__item {
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: rgb(196, 163, 103);
+
+    &--done {
+      background-color: rgb(7, 160, 7);
+    }
+  }
+}
