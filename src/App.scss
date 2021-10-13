@@ -1,1 +1,43 @@
-// styles go here
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.todoList {
+  list-style: none;
+}
+
+.completed {
+  background-color: rgb(129, 240, 85);
+}
+
+.notCompleted {
+  background-color: rgb(241, 40, 40);
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 0 20px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  &__person {
+    font-size: 20px;
+  }
+}
