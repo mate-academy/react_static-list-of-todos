@@ -16,6 +16,7 @@ export const TodoList: React.FC<Props> = (props) => {
     <div className="list">
       {todos.map(todo => (
         <div
+          key={todo.id}
           className={classNames(
             'list__item',
             {
