@@ -16,13 +16,13 @@ export const TodoList: React.FC<Props> = ({ preparedTodos }) => (
       <td>title</td>
       <td>completed</td>
     </thead>
-    {preparedTodos.map(key => (
-      <tr>
-        {key.user && <UserInfo user={key.user} />}
+    {preparedTodos.map(todo => (
+      <tr key={todo.id}>
+        {todo.user && <UserInfo user={todo.user} />}
         <TodoInfo
-          id={key.id}
-          title={key.title}
-          completed={key.completed}
+          id={todo.id}
+          title={todo.title}
+          completed={todo.completed}
         />
       </tr>
     ))}
