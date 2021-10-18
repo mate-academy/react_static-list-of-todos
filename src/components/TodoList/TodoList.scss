@@ -1,0 +1,35 @@
+.TodoList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  list-style: square;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  
+  &__item {
+    position: relative;
+    display: block;
+    
+    padding: 8px;
+
+    border-radius: 4px;
+    box-shadow: 7px 8px 15px -3px rgba(0,0,0,0.59);
+
+    transition: scale 0.3s linear;
+
+    &--completed {
+      background-color: rgb(142, 247, 186);
+    }
+
+    &--notcompleted {
+      background-color: rgb(245, 133, 158);
+    }
+
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+}
