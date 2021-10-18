@@ -5,7 +5,7 @@ import todos from './api/todos';
 import users from './api/users';
 import { TodoList } from './components/TodoList/TodoList';
 
-export const preparedTodos = todos.map(todoItem => ({
+const preparedTodos = todos.map(todoItem => ({
   ...todoItem,
   user: users.find(user => user.id === todoItem.userId) || null,
 }));
