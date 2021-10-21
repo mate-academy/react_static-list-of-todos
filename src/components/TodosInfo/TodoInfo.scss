@@ -1,0 +1,15 @@
+.todo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  &__title {
+    width: 50%;
+  }
+
+  &__status {
+    width: 50%;
+  }
+}
