@@ -15,7 +15,7 @@ type Props = {
 export const TodoList: React.FC<Props> = ({ todos }) => (
   <ul className="list">
     {todos.map(todo => (
-      <li className={classNames('list__item', { completed: todo.completed })}>
+      <li key={todo.id} className={classNames('list__item', { completed: todo.completed })}>
         {todo.user && (
           <UserInfo person={todo.user} />
         )}
