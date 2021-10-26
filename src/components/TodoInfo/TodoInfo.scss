@@ -1,0 +1,12 @@
+.todo {
+  padding: 4px 8px;
+}
+
+.todo-state {
+  list-style-type: "☐";
+}
+
+.todo-state--done {
+  list-style-type: "☑";
+  color: grey;
+}
