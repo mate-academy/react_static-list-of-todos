@@ -1,0 +1,18 @@
+.Table {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+ 
+  th {
+    font-weight: bold;
+    padding: 5px;
+    background: #efe;
+    border: 1px solid #ddd;
+  }
+
+  td {
+    border: 1px solid #ddd;
+    padding: 5px;
+  }
+}
