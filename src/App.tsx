@@ -1,13 +1,29 @@
 import React from 'react';
 import './App.scss';
+import todos from './api/todos';
+import users from './api/users';
+import { Todo } from './types/Todo';
+import { PreparedTodo } from './types/PreparedTodo';
+import { TodoList } from './components/TodoList/TodoList';
 
-// import todos from './api/todos';
-// import users from './api/users';
+const preparedTodos: PreparedTodo[] = [];
 
-const App: React.FC = () => (
-  <div className="App">
-    <h1>Static list of todos</h1>
-  </div>
-);
+users.forEach(user => {
+  const index: number = todos.findIndex(todo => todo.userId === user.id);
+
+  if (index > 0) {
+    const todo: Todo = todos[index];
+
+    preparedTodos.push({ ...todo, user: { ...user } });
+  }
+});
+
+const App: React.FC = () => {
+  return (
+    <div className="App">
+      <TodoList todos={preparedTodos} />
+    </div>
+  );
+};
 
 export default App;
