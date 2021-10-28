@@ -1,21 +1,17 @@
 import React from 'react';
-import './App.scss';
 import todos from './api/todos';
 import users from './api/users';
-import { Todo } from './types/Todo';
 import { PreparedTodo } from './types/PreparedTodo';
 import { TodoList } from './components/TodoList/TodoList';
 
-const preparedTodos: PreparedTodo[] = [];
+const preparedTodos: PreparedTodo[] = todos.map(todo => {
+  const matchedUser = users.find(user => user.id === todo.userId);
 
-users.forEach(user => {
-  const index: number = todos.findIndex(todo => todo.userId === user.id);
-
-  if (index > 0) {
-    const todo: Todo = todos[index];
-
-    preparedTodos.push({ ...todo, user: { ...user } });
+  if (matchedUser) {
+    return { ...todo, user: { ...matchedUser } };
   }
+
+  return { ...todo, user: null };
 });
 
 const App: React.FC = () => {
