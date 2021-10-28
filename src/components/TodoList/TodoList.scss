@@ -1,0 +1,57 @@
+.TodoList {
+  padding: 20px 0 60px;
+  list-style-type: none;
+
+  position: relative;
+
+  li:not(:last-child) {
+    margin-bottom: 1px;
+  }
+
+  li:first-child{
+    margin-bottom: 0;
+  }
+
+  li {
+    display: grid;
+    grid-template-columns: 300px 1fr 100px;
+    align-items: center;
+
+    padding: 16px;
+  }
+
+  &_Header {
+    position: sticky;
+    top: 0;
+
+    font-weight: bold;
+    background-color: #0288d1;
+    color: #fff;
+  }
+
+  &_Item {
+    background-color: #e0e0e0;
+    transition: background-color .3s ease;
+
+    @media (any-hover: hover) {
+      &:hover{
+        background-color: #bdbdbd;
+      }
+    }
+
+    &--Done {
+      background-color: #80cbc4;
+
+      @media (any-hover: hover) {
+        &:hover{
+          background-color: #4db6ac;
+        }
+      }
+    }
+  }
+
+  &_Item-Status {
+    color: #004d40;
+    text-transform: uppercase;
+  }
+}
