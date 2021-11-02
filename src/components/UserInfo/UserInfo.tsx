@@ -1,8 +1,12 @@
 import React from 'react';
 import { User } from '../../types/User';
 
-export const UserInfo: React.FC<{ user: User }> = ({ user }) => (
+type Props = {
+  user: User,
+};
+
+export const UserInfo: React.FC<Props> = ({ user }) => (
   <span className="userInfo">
-    {` || ${user.name} (${user.email})`}
+    {`${user.name} (${user.email})`}
   </span>
 );

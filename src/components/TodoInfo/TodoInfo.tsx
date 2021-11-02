@@ -4,7 +4,11 @@ import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo/UserInfo';
 import './TodoInfo.scss';
 
-export const TodoInfo: React.FC<{ todo: Todo }> = ({ todo }) => (
+type Props = {
+  todo: Todo,
+};
+
+export const TodoInfo: React.FC<Props> = ({ todo }) => (
   <li
     className={classname(
       'todo',
