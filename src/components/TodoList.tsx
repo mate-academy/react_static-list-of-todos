@@ -20,7 +20,7 @@ export const TodoList:React.FC<Props> = ({ preparedTodos }) => (
     </thead>
     <tbody className="tableBody">
       {preparedTodos.map(todo => (
-        <tr>
+        <tr key={todo.id}>
           <TodoInfo todo={todo} />
           {todo.user && (<UserInfo user={todo.user} />)}
         </tr>
