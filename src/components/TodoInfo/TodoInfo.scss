@@ -1,0 +1,23 @@
+.Todo {
+  &__title {
+    font-size: 18px;
+    color: #000;
+    margin: 20px 0 0;
+  }
+
+  &__status {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 12px;
+    color: #fff;
+    padding: 10px;
+    background: #eba05b;
+    border-radius: 5px;
+
+    &--completed {
+      background: #6ae19a;
+    }
+  }
+}

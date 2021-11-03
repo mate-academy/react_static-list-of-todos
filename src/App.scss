@@ -1,1 +1,11 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  max-width: 1470px;
+  width: 100%;
+  margin: 0 auto;
+}
