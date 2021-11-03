@@ -1,10 +1,10 @@
 import React from 'react';
 import './UserInfo.scss';
 
-import { IUserInfo } from '../../types/Todos';
+import { UserInformation } from '../../types/Todos';
 
 type Props = {
-  user: IUserInfo;
+  user: UserInformation;
 };
 
 export const UserInfo: React.FC<Props> = ({ user }) => {

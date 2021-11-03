@@ -1,37 +1,37 @@
-export interface IPreparedTodos {
+export interface Todos {
   userId: number;
   id: number;
   title: string;
   completed: boolean;
-  user: IUserInfo | null;
+  user: UserInformation | null;
 }
 
-export interface IUserInfo {
+export interface UserInformation {
   id: number;
   name: string;
   username: string;
   email: string;
-  address: IUserAddressInfo;
+  address: UserAddressInfo;
   phone: string;
   website: string;
-  company: IUserCompanyInfo;
+  company: UserCompanyInfo;
 }
 
-interface IUserCompanyInfo {
+interface UserCompanyInfo {
   name: string;
   catchPhrase: string;
   bs: string;
 }
 
-interface IUserAddressInfo {
+interface UserAddressInfo {
   street: string;
   suite: string;
   city: string;
   zipcode: string;
-  geo: IGeolocationUserInfo;
+  geo: GeolocationUserInfo;
 }
 
-interface IGeolocationUserInfo {
+interface GeolocationUserInfo {
   lat: string;
   lng: string;
 }

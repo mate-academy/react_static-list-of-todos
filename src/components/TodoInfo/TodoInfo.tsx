@@ -2,11 +2,11 @@ import React from 'react';
 import classNames from 'classnames';
 import './TodoInfo.scss';
 
-import { IPreparedTodos } from '../../types/Todos';
+import { Todos } from '../../types/Todos';
 import { UserInfo } from '../UserInfo';
 
 type Props = {
-  todo: IPreparedTodos
+  todo: Todos
 };
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => {
