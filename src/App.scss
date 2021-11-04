@@ -1,1 +1,14 @@
-// styles go here
+.App {
+  padding: 10px;
+
+  background-color: #ebe8d6;
+
+  &__container {
+    width: 50vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
