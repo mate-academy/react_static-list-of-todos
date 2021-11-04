@@ -1,1 +1,32 @@
-// styles go here
+body {
+  background-color: #bdd99e;
+}
+
+.App {
+  margin: 0;
+  padding: 0;
+
+  &__title {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #01a668;
+  }
+}
+
+.todolist {
+  list-style: none;
+  padding: 0;
+
+  &__item {
+    padding: 10px;
+    border: 1px solid black;
+
+    &-done {
+      background-color: #29ab87;
+    }
+
+    &-undone {
+      background-color: #ff7f7f;
+    }
+  }
+}
