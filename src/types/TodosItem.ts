@@ -1,4 +1,4 @@
-import { User } from './User';
+import { User } from './typedefs';
 
 export interface TodosItem {
   user: User | null,

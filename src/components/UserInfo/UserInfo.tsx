@@ -1,16 +1,19 @@
+import React from 'react';
 import './UserInfo.scss';
 
-export const UserInfo = ({ ...user }) => (
+import { User } from '../../types/typedefs';
+
+export const UserInfo:React.FC<User> = ({ name, email, phone }) => (
   <div className="userInfo">
     <strong>
-      {`Assigned to: ${user.name}`}
+      {`Assigned to: ${name}`}
     </strong>
     <ul className="userInfo__contacts">
       <li>
-        {`e-mail: ${user.email}`}
+        {`e-mail: ${email}`}
       </li>
       <li>
-        {`call: ${user.phone}`}
+        {`call: ${phone}`}
       </li>
     </ul>
   </div>

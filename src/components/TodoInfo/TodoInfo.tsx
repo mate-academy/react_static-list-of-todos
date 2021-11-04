@@ -3,18 +3,18 @@ import './TodoInfo.scss';
 import { UserInfo } from '../UserInfo/UserInfo';
 import { TodosItem } from '../../types/TodosItem';
 
-export const TodoInfo: React.FC<TodosItem> = ({ ...toDoItem }) => (
-  <li className="todoInfo" key="toDoItem.id">
+export const TodoInfo: React.FC<TodosItem> = ({ title, completed, user }) => (
+  <li className="todoInfo">
     <h2>
-      {toDoItem.title}
+      {title}
     </h2>
     <strong>
       Status:
     </strong>
 
-    {toDoItem.completed
+    {completed
       ? ' Done'
       : ' In process'}
-    <UserInfo {...toDoItem.user} />
+    {user && <UserInfo {...user} />}
   </li>
 );
