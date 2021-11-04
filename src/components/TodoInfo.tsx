@@ -11,7 +11,7 @@ export const TodoInfo: React.FC<Props> = (props) => {
   const { title, completed, user } = todoItem;
 
   return (
-    <>
+    <div>
       <h2>
         {title}
       </h2>
@@ -23,6 +23,6 @@ export const TodoInfo: React.FC<Props> = (props) => {
       <p>
         {completed ? 'Done' : 'In progress'}
       </p>
-    </>
+    </div>
   );
 };

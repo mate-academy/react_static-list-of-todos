@@ -10,13 +10,13 @@ export const UserInfo: React.FC<Props> = (props) => {
   const { name, email } = user;
 
   return (
-    <>
+    <div>
       <p>
         {`User: ${name}`}
       </p>
       <p>
         {`Email: ${email}`}
       </p>
-    </>
+    </div>
   );
 };

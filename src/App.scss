@@ -20,13 +20,5 @@ body {
   &__item {
     padding: 10px;
     border: 1px solid black;
-
-    &-done {
-      background-color: #29ab87;
-    }
-
-    &-undone {
-      background-color: #ff7f7f;
-    }
   }
 }
