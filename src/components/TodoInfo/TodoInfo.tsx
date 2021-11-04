@@ -1,31 +1,38 @@
 import React from 'react';
+import classNames from 'classnames';
 import './TodoInfo.scss';
 import UserInfo from '../UserInfo';
-import { Result } from '../../react-app-env';
+import { User } from '../../typedefs';
 
-export const TodoInfo: React.FC<Result> = ({ ...whatTodo }) => {
+type Props = {
+  title:string;
+  completed:boolean,
+  user: User | null,
+};
+
+export const TodoInfo: React.FC<Props> = ({ title, completed, user }) => {
   return (
     <li className="list__item">
       <div>
         Task:&nbsp;
-        {whatTodo.title}
+        {title}
       </div>
       <div>
         Status:&nbsp;
-        <span style={whatTodo.completed
-          ? { color: 'green' }
-          : { color: 'orange' }}
+        <span className={classNames('status-color', {
+          green: completed,
+        })}
         >
-          {whatTodo.completed
+          {completed
             ? 'completed'
             : 'in progress...'}
         </span>
       </div>
-      {whatTodo.user
+      {user
         ? (
           <UserInfo
-            name={whatTodo.user.name}
-            email={whatTodo.user.email}
+            name={user.name}
+            email={user.email}
           />
         )
         : null}

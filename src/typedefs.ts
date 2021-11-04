@@ -1,5 +1,3 @@
-/// <reference types="react-scripts" />
-
 export interface User {
   id: number,
   name: string,

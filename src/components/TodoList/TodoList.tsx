@@ -1,16 +1,21 @@
 import React from 'react';
 import './TodoList.scss';
-import { Result } from '../../react-app-env';
+import { Result } from '../../typedefs';
 import TodoInfo from '../TodoInfo';
 
 type Props = {
-  todo: Result[],
+  todos: Result[],
 };
 
-export const TodoList: React.FC<Props> = ({ todo }) => (
+export const TodoList: React.FC<Props> = ({ todos }) => (
   <ul className="list">
-    {todo.map((whatTodo:Result) => (
-      <TodoInfo key={whatTodo.id} {...whatTodo} />
+    {todos.map((whatTodo:Result) => (
+      <TodoInfo
+        key={whatTodo.id}
+        title={whatTodo.title}
+        completed={whatTodo.completed}
+        user={whatTodo.user}
+      />
     ))}
   </ul>
 );

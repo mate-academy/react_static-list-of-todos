@@ -8,7 +8,7 @@ type Props = {
 
 export const UserInfo: React.FC<Props> = ({ name, email }) => {
   return (
-    <>
+    <div>
       <p>
         User:&nbsp;
         <b>
@@ -22,6 +22,6 @@ export const UserInfo: React.FC<Props> = ({ name, email }) => {
           {email}
         </a>
       </p>
-    </>
+    </div>
   );
 };
