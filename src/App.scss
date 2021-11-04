@@ -13,12 +13,40 @@ body {
   }
 }
 
-.todolist {
+.TodoList {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  &__item {
-    padding: 10px;
-    border: 1px solid black;
+.Todo {
+  padding: 10px;
+  margin: 20px;
+  width: 600px;
+  border: 2px solid #01a66f;
+  box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+  border-radius: 10px;
+  
+
+  background-color: #75ce9f;
+
+  &__title {
+    text-align: center;
+    color: #035956;
+  }
+
+  &__status {
+    text-align: center;
+    font-size: 18px;
+
+    &-done {
+      color: green;
+    }
+
+    &-inprogress {
+      color: red;
+    }
   }
 }

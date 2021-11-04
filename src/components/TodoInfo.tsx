@@ -1,27 +1,34 @@
 import React from 'react';
+import classNames from 'classnames';
 import { Todo } from '../types/Todo';
 import { UserInfo } from './UserInfo';
 
 type Props = {
-  todoItem: Todo;
+  todo: Todo;
 };
 
-export const TodoInfo: React.FC<Props> = (props) => {
-  const { todoItem } = props;
-  const { title, completed, user } = todoItem;
+export const TodoInfo: React.FC<Props> = ({ todo }) => {
+  const { title, completed, user } = todo;
 
   return (
     <div>
-      <h2>
+      <h2 className="Todo__title">
         {title}
       </h2>
       {user && (
-        <p>
+        <p className="Todo__user">
           <UserInfo user={user} />
         </p>
       )}
-      <p>
-        {completed ? 'Done' : 'In progress'}
+      <p className={classNames(
+        'Todo__status',
+        {
+          'Todo__status-done': todo.completed,
+          'Todo__status-inprogress': !todo.completed,
+        },
+      )}
+      >
+        {completed ? 'Done \u{1F44D}' : 'In progress \u{231B}'}
       </p>
     </div>
   );
