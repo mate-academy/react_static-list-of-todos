@@ -10,7 +10,7 @@ type TodosList = {
 export const TodoList: React.FC <TodosList> = ({ doList }) => (
   <ul className="toDoList">
     {doList.map(toDoItem => (
-      <TodoInfo {...toDoItem} key={toDoItem.id} />
+      <TodoInfo doItem={toDoItem} key={toDoItem.id} />
     ))}
   </ul>
 );
