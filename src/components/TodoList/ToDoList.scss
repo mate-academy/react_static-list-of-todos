@@ -1,0 +1,36 @@
+.list {
+  list-style: none;
+
+  &__item {
+    margin-bottom: 20px;
+    border-radius: 15px;
+    background-color: rgba($color: #ff58a6, $alpha: 0.3);
+    transition: 0.3s;
+
+    &:hover {
+      background-color: rgba($color: #ff58a6, $alpha: 0.45);
+    }
+
+    &-completed {
+      background-color: rgba($color: #28ff56, $alpha: 0.6);
+
+      &:hover {
+        background-color: rgba($color: #28ff56, $alpha: 0.85);
+      }
+    }
+
+    &::after {
+      content: "";
+      position: relative;
+      top: 12px;
+      display: block;
+      height: 1px;
+      border-radius: 4px;
+      background-color: #50505048;
+    }
+  }
+}
+
+.container {
+  padding: 10px 20px;
+}
