@@ -1,0 +1,14 @@
+.todo-info {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid gray;
+}
+
+.todo-info__task {
+  display: inline-block;
+}
+
+.todo-info__author {
+  color: gray;
+  margin-right: 5px;
+}
