@@ -12,11 +12,11 @@
 
 .isDone {
   background-color: rgb(0, 255, 0);
-  opacity: 50%;
+  opacity: 0.5;
   transition: 300ms;
 
   &:hover {
-    opacity: 100%;
+    opacity: 1;
   }
 }
 
