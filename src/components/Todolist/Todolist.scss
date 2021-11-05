@@ -3,9 +3,18 @@
   width: 700px;
   list-style: none;
   background-color: lightblue;
-}
 
-.TodoItem {
-  border: 1px solid black;
-  padding: 15px;
+  &__item {
+    border: 1px solid black;
+    padding: 1.5em;
+  }
+
+  &__title {
+    margin-bottom: 1em;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+  }
 }

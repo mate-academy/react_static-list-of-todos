@@ -1,16 +1,15 @@
 import { PreparedTodo } from '../../types/types';
 import { UserInfo } from '../UserInfo/UserInfo';
-import './TodoInfo.scss';
 
 export const TodoInfo: React.FC<PreparedTodo> = ({
   title,
   completed,
   user,
 }) => (
-  <div className="TodoInfo">
-    <h2>{title}</h2>
-    <div className="InfoContainer">
-      <p>
+  <div className="TodoList__content">
+    <h2 className="TodoList__title">{title}</h2>
+    <div className="TodoList__body">
+      <p className="TodoList__status">
         Completed:
         {completed ? 'yes' : 'no'}
       </p>
