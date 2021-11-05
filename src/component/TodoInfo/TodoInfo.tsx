@@ -1,6 +1,8 @@
 import { TodoFull } from '../../types/types';
 import { UserInfo } from '../UserInfo/UserInfo';
 
+import './TodoInfo.scss';
+
 type Props = {
   todo: TodoFull
 };
@@ -10,7 +12,7 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
 
   return (
     <>
-      <h2>{title}</h2>
+      <h2 className="todo-info__title">{title}</h2>
 
       {user && (
         <p>
@@ -18,8 +20,8 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
         </p>
       )}
 
-      <p>
-        {`Status: ${completed ? 'Completed' : 'In progress'}`}
+      <p className="todo-info__status">
+        {`${completed ? 'Completed✅' : 'In progress...⏳'}`}
       </p>
     </>
   );
