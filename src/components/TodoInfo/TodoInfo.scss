@@ -1,0 +1,24 @@
+.todoInfo {
+  list-style-type: none;
+  padding: 20px;
+  border: solid 1px rgb(22, 21, 26);
+
+  &__title {
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 30px;
+    color: rgb(22, 21, 26);
+  }
+
+  &__status {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  &__status--completed {
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position: right;
+    background-image: url(../../phptos/icons8-pass-96.png);
+  }
+}
