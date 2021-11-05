@@ -1,0 +1,11 @@
+.title {
+  text-transform: capitalize;
+
+  &__completed {
+
+    &::after {
+      color: rgb(0, 124, 10);
+      content: " ✔ ";
+    }
+  }
+}
