@@ -1,1 +1,22 @@
-// styles go here
+h3 {
+  margin: 0;
+}
+.item-todo {
+  box-sizing: border-box;
+  border: 3px solid rgb(218, 66, 66);
+  background-color: rgb(235, 166, 166);
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px;
+}
+.todo {
+  display: flex;
+  justify-content: space-between;
+}
+.todo-name {
+  max-width: 70%;
+}
+.todo-completed {
+  border: 3px solid rgb(30, 117, 59);
+  background-color: rgb(67, 139, 91);
+}
