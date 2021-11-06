@@ -15,4 +15,4 @@ export const TodoList: React.FC<Props> = ({ todos }) => (
       ))
     }
   </ul>
-)
+);

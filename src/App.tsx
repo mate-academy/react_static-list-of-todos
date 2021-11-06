@@ -11,10 +11,8 @@ const preparedTodos: TodoItems[] = todos.map((todo) => {
   return { user, ...todo };
 });
 
-const App: React.FC = () => (
-  <div className="App">
+export const App: React.FC = () => (
+  <div className="app">
     <TodoList todos={preparedTodos} />
   </div>
 );
-
-export default App;
