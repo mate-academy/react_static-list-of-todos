@@ -7,15 +7,19 @@ type Props = {
   item: TodoUserType;
 };
 
-export const TodoInfo: React.FC <Props> = ({ item }) => (
-  <li className="TodoInfo">
-    <h2 className="item-title">{item.title}</h2>
+export const TodoInfo: React.FC <Props> = ({ item }) => {
+  const { title, completed, user } = item;
 
-    <h3 className="item-completed">
-      {item.completed
-        ? '✅ 🏆 YOU DID IT! 🏆 ✅'
-        : '🔴 ❗️Just Do It❗️ 🔴'}
-    </h3>
-    {item.user && <UserInfo userInfo={item.user} />}
-  </li>
-);
+  return (
+    <li className="TodoInfo">
+      <h2 className="item-title">{title}</h2>
+
+      <h3 className="item-completed">
+        {completed
+          ? '✅ 🏆 YOU DID IT! 🏆 ✅'
+          : '🔴 ❗️Just Do It❗️ 🔴'}
+      </h3>
+      {user && <UserInfo userInfo={user} />}
+    </li>
+  );
+};
