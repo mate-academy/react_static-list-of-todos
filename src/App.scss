@@ -1,1 +1,15 @@
-// styles go here
+.page{
+  &__body {
+    background-color: lightblue;
+  }
+}
+
+.App {
+  margin: 0;
+  font-family:'Lucida Sans', sans-serif;
+  text-align: center;
+
+  &__title {
+    font-size: 50px;
+  }
+}
