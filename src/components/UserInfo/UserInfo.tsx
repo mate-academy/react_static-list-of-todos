@@ -9,8 +9,8 @@ export const UserInfo: React.FC<User> = ({
 }) => (
   <>
     <div className="App__list_names">
-      <p>{`${name}: `}</p>
-      <p className="App__list_username">{`${username}`}</p>
+      <span className="App__list_username">{`${username}`}</span>
+      <span>{`${name}`}</span>
     </div>
     <div className="App__list_contacts">
       <a href={`mailto:${email}`} className="App__list_email">{`${email}`}</a>
