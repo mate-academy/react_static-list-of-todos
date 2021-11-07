@@ -1,1 +1,13 @@
-// styles go here
+body {
+  margin: 0;
+}
+
+.App {
+  background-color: beige;
+  padding: 20px;
+  &__block {
+    text-align: center;
+    
+  }
+  
+}
