@@ -1,11 +1,11 @@
 import { Todo } from '../../types/Todo';
 import './TodoInfo.scss';
 
-type Props2 = {
+type Props = {
   taskInfo: Todo;
 };
 
-export const TodoInfo: React.FC<Props2> = ({ taskInfo }) => (
+export const TodoInfo: React.FC<Props> = ({ taskInfo }) => (
   <div className="Task">
     <div>
       <span className="Task__name">Task: </span>
