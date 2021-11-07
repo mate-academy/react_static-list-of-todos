@@ -1,0 +1,16 @@
+.Task {
+  &__name {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__status {
+    &--completed {
+      color: rgb(0, 184, 0);
+    }
+
+    &--not-completed {
+      color: rgb(209, 2, 2);
+    }
+  }
+}

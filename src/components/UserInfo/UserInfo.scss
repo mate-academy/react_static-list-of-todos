@@ -1,0 +1,10 @@
+.User {
+  &__name {
+    font-style: oblique;
+    text-decoration: underline;
+  }
+
+  &__email {
+    text-decoration: none;
+  }
+}

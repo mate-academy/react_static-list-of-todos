@@ -1,0 +1,16 @@
+.Tasklist {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &__item {
+    list-style: none;
+    border: 2px solid rgb(22, 161, 115);
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    line-height: 24px;
+
+    font-size: 18px;
+  }
+}
