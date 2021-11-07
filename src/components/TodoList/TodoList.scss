@@ -1,0 +1,27 @@
+.todo-list {
+  &__item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+    background: darken(#aeaeae, 5%);
+    border-radius: 10px;
+    padding: 40px 20px 40px;
+    box-shadow: 0px 0px 12px 5px red;
+    &--completed {
+      box-shadow: 0px 0px 12px 5px green;
+    }
+  }
+  &__title {
+    margin-bottom: 16px;
+  }
+  &__status {
+    color: darken(#f00, 20%);
+    margin-bottom: 16px;
+    &--completed {
+      color: green;
+    }
+  }
+}
