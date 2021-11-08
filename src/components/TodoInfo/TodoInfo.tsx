@@ -14,7 +14,11 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
     <li className="todo-info">
       <p>{title}</p>
       <p>{completed ? '✅' : '❌'}</p>
-      <p>{user ? <UserInfo user={user} /> : null}</p>
+      {user && (
+        <p>
+          <UserInfo user={user} />
+        </p>
+      )}
     </li>
   );
 };
