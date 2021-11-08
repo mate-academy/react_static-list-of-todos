@@ -1,0 +1,52 @@
+.App__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  gap: 10px;
+
+  &_item {
+    width: 550px;
+    background-color: rgba(105, 180, 240, 0.3);
+    border: 1px solid rgba(80, 180, 240, 0.3);
+    border-radius: 20px;
+    padding: 10px;
+    transition: background-color 0.5s;
+
+    &:hover {
+      background-color: rgba(105, 180, 240, 0.6);
+    }
+  }
+
+  &_title {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &_names {
+    display: flex;
+    gap: 5px;
+  }
+
+  &_username {
+    font-weight: bold;
+
+    &::after {
+      content: "|";
+      margin-left: 5px;
+    }
+  }
+
+  &_contacts {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+  }
+
+  &_email,
+  &_phone {
+    text-decoration: none;
+    color: rgb(0, 120, 200);
+  }
+}
