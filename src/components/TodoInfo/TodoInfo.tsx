@@ -4,7 +4,7 @@ import './TodoInfo.scss';
 import UserInfo from '../UserInfo';
 import { User } from '../../typedefs';
 
-type Props = {
+interface Props {
   title: string;
   completed: boolean,
   user: User | null,
