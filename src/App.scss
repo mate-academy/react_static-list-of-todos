@@ -1,1 +1,17 @@
-// styles go here
+.App {
+  padding: 10px;
+  background-color: rgb(137, 206, 154);
+  
+  &__container {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-family: sans-serif;
+  }
+}
