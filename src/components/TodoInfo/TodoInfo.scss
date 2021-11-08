@@ -1,0 +1,21 @@
+.todo {
+
+  &__title {
+    margin-top: 0;
+    text-transform: uppercase;
+    color: cadetblue;
+  }
+
+  &__info {
+    border-radius: 7px;
+    border: 2px solid gray;
+    padding: 15px;
+    margin: 10px;
+    background-color: darkkhaki;
+    text-align: center;
+  }
+
+  &__completed {
+    font-weight: bold;
+  }
+}
