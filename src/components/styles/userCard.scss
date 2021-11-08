@@ -33,19 +33,19 @@
   }
 
   &__title {
-    font-family: 'Roboto', sans-serif;
-    color:rgb(3, 97, 97);
+    font-family: "Roboto", sans-serif;
+    color: rgb(3, 97, 97);
     font-size: 24px;
     padding-right: 10px;
   }
 
   &__name {
     padding: 10px;
-    font-family: 'Roboto', sans-serif;
-    color:rgb(3, 97, 97);
+    font-family: "Roboto", sans-serif;
+    color: rgb(3, 97, 97);
 
     &::after {
-      content: '';
+      content: "";
       display: block;
       height: 1px;
       width: 100%;
@@ -55,11 +55,11 @@
 
   &__email {
     padding: 10px;
-    font-family: 'Roboto', sans-serif;
-    color:rgb(3, 97, 97);
+    font-family: "Roboto", sans-serif;
+    color: rgb(3, 97, 97);
 
     &::after {
-      content: '';
+      content: "";
       display: block;
       height: 1px;
       width: 100%;
