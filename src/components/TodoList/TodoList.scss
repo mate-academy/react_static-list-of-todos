@@ -1,0 +1,9 @@
+.list {
+  display: grid;
+
+  &__h1 {
+    font-size: 24px;
+    color: rgb(55, 54, 59);
+    margin: 10px auto 0;
+  }
+}
