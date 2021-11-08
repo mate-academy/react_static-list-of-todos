@@ -1,14 +1,17 @@
 import React from 'react';
-import { User } from '../type/User';
+import { Todo } from '../type/User';
+import { UserInfo } from './UserInfo';
 
 interface Props {
-  user: User;
+  todo: Todo;
 }
 
-export const TodoInfo:React.FC<Props> = ({ user }) => (
+export const TodoInfo:React.FC<Props> = ({ todo }) => (
   <>
-    {user?.name}
+    <strong>{todo.title}</strong>
     <br />
-    {user?.email}
+    <div className="user-name">
+      {todo.user && <UserInfo user={todo.user} /> }
+    </div>
   </>
 );

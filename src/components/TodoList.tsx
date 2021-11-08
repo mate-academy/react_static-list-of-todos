@@ -1,16 +1,16 @@
 import React from 'react';
-import { UserInfo } from './UserInfo';
+import { TodoInfo } from './TodoInfo';
 import { Todo } from '../type/User';
 
 interface Props {
-  todo: Todo[],
+  todos: Todo[],
 }
 
-export const TodoList: React.FC<Props> = ({ todo = [] }) => (
+export const TodoList: React.FC<Props> = ({ todos = [] }) => (
   <ul>
-    {todo.map(todoUser => (
+    {todos.map(todoUser => (
       <li key={todoUser.id} className="app">
-        <UserInfo todo={todoUser} />
+        {todoUser && <TodoInfo todo={todoUser} />}
         <br />
         {todoUser.completed ? 'Ready' : 'Not ready'}
       </li>
