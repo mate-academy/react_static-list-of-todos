@@ -8,10 +8,10 @@
     }
     background: darken(#aeaeae, 5%);
     border-radius: 10px;
-    padding: 40px 20px 40px;
-    box-shadow: 0px 0px 12px 5px red;
+    padding: 40px 20px;
+    box-shadow: 0 0 12px 5px red;
     &--completed {
-      box-shadow: 0px 0px 12px 5px green;
+      box-shadow: 0 0 12px 5px green;
     }
   }
   &__title {

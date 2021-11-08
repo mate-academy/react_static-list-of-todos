@@ -1,15 +1,15 @@
 import React from 'react';
-import { TodoItem } from '../../types';
+import { Todo } from '../../types';
 import { UserInfo } from '../UserInfo/UserInfo';
 import { UserInfoAbsent } from '../UserInfo/UserInfoAbsent';
 
-export type Props = {
-  todoItem: TodoItem;
-};
+interface Props {
+  todoItem: Todo;
+}
 
 export const TodoInfo: React.FC<Props> = ({ todoItem }) => {
   const {
-    title, completed, userRef, id,
+    title, completed, foundUser, id,
   } = todoItem;
 
   return (
@@ -18,7 +18,9 @@ export const TodoInfo: React.FC<Props> = ({ todoItem }) => {
       <strong className={`todo-list__status ${completed === true ? 'todo-list__status--completed' : ''}`}>
         {completed ? 'Done!' : 'In progress...'}
       </strong>
-      {userRef ? <UserInfo user={userRef} /> : <UserInfoAbsent />}
+      {foundUser
+        ? <UserInfo user={foundUser} />
+        : <UserInfoAbsent />}
     </li>
   );
 };

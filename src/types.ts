@@ -1,12 +1,12 @@
-export interface TodoItem {
+export interface Todo {
   userId: number;
   id: number;
   title: string;
   completed: boolean;
-  userRef: UserRef | null;
+  foundUser: User | null;
 }
 
-export interface UserRef {
+export interface User {
   id: number;
   name: string;
   email: string;
