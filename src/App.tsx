@@ -14,16 +14,16 @@ interface Todos {
   user: User | null,
 }
 
-const preparedTodos: Todos[] = todos.map(user => (
+const preparedTodos: Todos[] = todos.map(todo => (
   {
-    ...user,
-    user: users.find((item) => item.id === user.userId) || null,
+    ...todo,
+    user: users.find((item) => item.id === todo.userId) || null,
   }));
 
 const App: React.FC = () => (
   <div className="App">
     <h1>Static list of todos</h1>
-    <TodoList member={preparedTodos} />
+    <TodoList todo={preparedTodos} />
   </div>
 );
 

@@ -2,13 +2,13 @@ import React from 'react';
 import { User } from '../type/User';
 
 type TodoInfoOfUser = {
-  todo: User | null | undefined;
+  user: User | null | undefined;
 };
 
-export const TodoInfo:React.FC<TodoInfoOfUser> = ({ todo }) => (
+export const TodoInfo:React.FC<TodoInfoOfUser> = ({ user }) => (
   <>
-    {todo?.name}
+    {user?.name}
     <br />
-    {todo?.email}
+    {user?.email}
   </>
 );

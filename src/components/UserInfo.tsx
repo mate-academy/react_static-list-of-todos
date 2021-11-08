@@ -3,15 +3,15 @@ import { Todos } from '../type/User';
 import { TodoInfo } from './TodoInfo';
 
 type UserInfoMember = {
-  user: Todos;
+  todo: Todos;
 };
 
-export const UserInfo:React.FC<UserInfoMember> = ({ user }) => (
+export const UserInfo:React.FC<UserInfoMember> = ({ todo }) => (
   <>
-    <strong>{user.title}</strong>
+    <strong>{todo.title}</strong>
     <br />
     <div className="user-name">
-      <TodoInfo todo={user.user} />
+      <TodoInfo user={todo.user} />
     </div>
   </>
 );

@@ -3,14 +3,14 @@ import { UserInfo } from './UserInfo';
 import { Todos } from '../type/User';
 
 type TodoListMember = {
-  member: Todos[],
+  todo: Todos[],
 };
 
-export const TodoList: React.FC<TodoListMember> = ({ member = [] }) => (
+export const TodoList: React.FC<TodoListMember> = ({ todo = [] }) => (
   <ul>
-    {member.map(todoUser => (
+    {todo.map(todoUser => (
       <li key={todoUser.id} className="app">
-        <UserInfo user={todoUser} />
+        <UserInfo todo={todoUser} />
         <br />
         {todoUser.completed ? 'Ready' : 'Not ready'}
       </li>
