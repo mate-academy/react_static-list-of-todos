@@ -1,10 +1,5 @@
-.todoList {
-  list-style: none;
-}
-
-.todoInfo {
-  max-width: 400px;
-  margin: 10px auto;
-  padding: 10px 20px;
-  text-align: center;
+.App {
+  &__title {
+    text-align: center;
+  }
 }
