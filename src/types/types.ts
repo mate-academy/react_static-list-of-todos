@@ -5,7 +5,7 @@ export interface User {
   phone: string;
 }
 
-export interface Todos {
+export interface Todo {
   id: number;
   user: User | null;
   title: string;
