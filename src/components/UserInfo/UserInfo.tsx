@@ -1,8 +1,8 @@
-import { UserType } from '../types';
+import { User } from '../types';
 import './UserInfo.scss';
 
-export type Props = {
-  user: UserType;
+export interface Props {
+  user: User;
 };
 
 export const UserInfo: React.FC<Props> = ({ user }) => {

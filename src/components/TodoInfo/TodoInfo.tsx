@@ -1,17 +1,15 @@
 import classNames from 'classnames';
-import users from '../../api/users';
 import { Todo } from '../types';
 import { UserInfo } from '../UserInfo/UserInfo';
 
 import './TodoInfo.scss';
 
-export type Props = {
+export interface Props {
   todo: Todo;
 };
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => {
-  const { title, completed, userId } = todo;
-  const foundUser = users.find(user => user.id === userId);
+  const { title, completed, user } = todo;
 
   return (
     <ul className={classNames('todoInfo', { 'todoInfo__status--completed': completed })}>
@@ -20,7 +18,7 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
         {completed ? 'completed' : 'in progress'}
       </li>
       <li>
-        {foundUser ? <UserInfo user={foundUser} /> : 'No one is assigned'}
+        {user ? <UserInfo user={user} /> : 'No one is assigned'}
       </li>
     </ul>
   );

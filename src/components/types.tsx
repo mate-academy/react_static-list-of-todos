@@ -3,10 +3,10 @@ export interface Todo {
   id: number,
   title: string,
   completed: boolean,
-  user: UserType | null,
+  user: User | null,
 }
 
-export interface UserType {
+export interface User {
   id: number,
   name: string,
   email: string,
