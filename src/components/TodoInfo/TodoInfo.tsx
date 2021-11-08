@@ -5,8 +5,8 @@ import UserInfo from '../UserInfo';
 import { User } from '../../typedefs';
 
 type Props = {
-  title:string;
-  completed:boolean,
+  title: string;
+  completed: boolean,
   user: User | null,
 };
 

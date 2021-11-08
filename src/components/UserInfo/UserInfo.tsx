@@ -1,10 +1,10 @@
 import React from 'react';
 import './UserInfo.scss';
 
-type Props = {
+interface Props {
   name: string,
   email: string,
-};
+}
 
 export const UserInfo: React.FC<Props> = ({ name, email }) => {
   return (

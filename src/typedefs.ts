@@ -12,10 +12,6 @@ export interface Todo {
   completed: boolean,
 }
 
-export interface Result {
-  userId: number,
-  id: number,
-  title: string,
-  completed: boolean,
+export interface Prepared extends Todo{
   user: User | null,
 }

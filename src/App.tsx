@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.scss';
-import { User, Todo, Result } from './typedefs';
+import { User, Todo, Prepared } from './typedefs';
 
 import todos from './api/todos';
 import users from './api/users';
 import TodoList from './components/TodoList';
 
-function createPreparedTodos(usersData: User[], todosData:Todo[]):Result[] {
+function createPreparedTodos(usersData: User[], todosData:Todo[]):Prepared[] {
   return todosData.map((todo:Todo) => (
     {
       ...todo,
