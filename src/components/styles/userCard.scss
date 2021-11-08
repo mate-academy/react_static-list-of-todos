@@ -1,0 +1,69 @@
+.userCard {
+
+  &__wrapper {
+    margin: 0 30vw;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    background-color: rgb(245, 235, 196);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 5px 5px rgb(202, 191, 128);
+      background-color: rgb(236, 223, 168);
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  &__title {
+    font-family: 'Roboto', sans-serif;
+    color:rgb(3, 97, 97);
+    font-size: 24px;
+    padding-right: 10px;
+  }
+
+  &__name {
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    color:rgb(3, 97, 97);
+
+    &::after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: rgb(112, 112, 112);
+    }
+  }
+
+  &__email {
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    color:rgb(3, 97, 97);
+
+    &::after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: rgb(112, 112, 112);
+    }
+  }
+}
