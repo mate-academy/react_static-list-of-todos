@@ -35,6 +35,6 @@ export interface TodoItem {
   completed: boolean,
 }
 
-export interface TodoItems extends TodoItem {
+export interface Todo extends TodoItem {
   user: User | null
 }
