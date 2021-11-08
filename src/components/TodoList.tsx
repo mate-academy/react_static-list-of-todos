@@ -1,12 +1,12 @@
 import React from 'react';
 import { UserInfo } from './UserInfo';
-import { Todos } from '../type/User';
+import { Todo } from '../type/User';
 
-type TodoListMember = {
-  todo: Todos[],
-};
+interface Props {
+  todo: Todo[],
+}
 
-export const TodoList: React.FC<TodoListMember> = ({ todo = [] }) => (
+export const TodoList: React.FC<Props> = ({ todo = [] }) => (
   <ul>
     {todo.map(todoUser => (
       <li key={todoUser.id} className="app">

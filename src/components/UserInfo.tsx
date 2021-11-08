@@ -1,17 +1,17 @@
 import React from 'react';
-import { Todos } from '../type/User';
+import { Todo } from '../type/User';
 import { TodoInfo } from './TodoInfo';
 
-type UserInfoMember = {
-  todo: Todos;
-};
+interface Props {
+  todo: Todo;
+}
 
-export const UserInfo:React.FC<UserInfoMember> = ({ todo }) => (
+export const UserInfo:React.FC<Props> = ({ todo }) => (
   <>
     <strong>{todo.title}</strong>
     <br />
     <div className="user-name">
-      <TodoInfo user={todo.user} />
+      {todo.user && <TodoInfo user={todo.user} /> }
     </div>
   </>
 );

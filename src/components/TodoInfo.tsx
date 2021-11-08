@@ -1,11 +1,11 @@
 import React from 'react';
 import { User } from '../type/User';
 
-type TodoInfoOfUser = {
-  user: User | null | undefined;
-};
+interface Props {
+  user: User;
+}
 
-export const TodoInfo:React.FC<TodoInfoOfUser> = ({ user }) => (
+export const TodoInfo:React.FC<Props> = ({ user }) => (
   <>
     {user?.name}
     <br />
