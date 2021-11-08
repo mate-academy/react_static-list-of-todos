@@ -10,6 +10,6 @@ export interface User {
   email: string,
 }
 
-export interface TodoFull extends Todo {
+export interface TodoWithUser extends Todo {
   user: User | null,
 }

@@ -1,11 +1,11 @@
-import { TodoFull } from '../../types/types';
+import { TodoWithUser } from '../../types/types';
 import { UserInfo } from '../UserInfo/UserInfo';
 
 import './TodoInfo.scss';
 
-type Props = {
-  todo: TodoFull
-};
+interface Props {
+  todo: TodoWithUser
+}
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => {
   const { title, completed, user } = todo;

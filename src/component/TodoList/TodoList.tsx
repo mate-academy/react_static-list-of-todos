@@ -1,13 +1,13 @@
 import classNames from 'classnames';
 
-import { TodoFull } from '../../types/types';
+import { TodoWithUser } from '../../types/types';
 import { TodoInfo } from '../TodoInfo/TodoInfo';
 
 import './TodoList.scss';
 
-type Props = {
-  todos: TodoFull[]
-};
+interface Props {
+  todos: TodoWithUser[]
+}
 
 export const TodoList: React.FC<Props> = ({ todos }) => (
   <ul className="todo-list">
