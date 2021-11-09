@@ -1,0 +1,18 @@
+.todoInfo {
+  width: 40vw;
+  padding: 0 20px 20px;
+  margin-bottom: 20px;
+  border: 2px solid rgb(33, 6, 184);
+  border-radius: 20px;
+  background-color: #aae9ee;
+  font-family: sans-serif;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__status {
+    font-weight: bold;
+    color: #2106b8;
+  }
+}

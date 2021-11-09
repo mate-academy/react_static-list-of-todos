@@ -1,0 +1,14 @@
+.userInfo {
+  margin-top: 15px;
+  width: 40vw;
+
+  &__contacts {
+    margin-top: 30px;
+    list-style: none;
+  }
+
+  &__assign {
+    font-weight: bold;
+    color: #2106b8;
+  }
+}
