@@ -4,13 +4,13 @@ import { TodoInfo } from '../TodoInfo/TodoInfo';
 import { TodosItem } from '../../types/TodosItem';
 
 type TodosList = {
-  doList: TodosItem[],
+  todos: TodosItem[],
 };
 
-export const TodoList: React.FC <TodosList> = ({ doList }) => (
+export const TodoList: React.FC <TodosList> = ({ todos }) => (
   <ul className="toDoList">
-    {doList.map(toDoItem => (
-      <TodoInfo doItem={toDoItem} key={toDoItem.id} />
+    {todos.map(todo => (
+      <TodoInfo doItem={todo} key={todo.id} />
     ))}
   </ul>
 );

@@ -4,12 +4,12 @@ import './UserInfo.scss';
 import { User } from '../../types/typedefs';
 
 type Props = {
-  userInfo: User,
+  user: User,
 };
 
 export const UserInfo:React.FC<Props> = (props) => {
-  const { userInfo } = props;
-  const { name, email, phone } = userInfo;
+  const { user } = props;
+  const { name, email, phone } = user;
 
   return (
     <div className="userInfo">

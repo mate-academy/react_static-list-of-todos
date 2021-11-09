@@ -23,7 +23,7 @@ export const TodoInfo: React.FC<Props> = (props) => {
       {completed
         ? ' Done'
         : ' In process'}
-      {user && <UserInfo userInfo={user} />}
+      {user && <UserInfo user={user} />}
     </li>
   );
 };
