@@ -2,23 +2,23 @@ import React from 'react';
 import classNames from 'classnames';
 
 import { TodoInfo } from '../TodoInfo/TodoInfo';
-import { TodoUser } from '../../types/types';
+import { TodoWithUser } from '../../types/types';
 import './TodoList.scss';
 
 type Props = {
-  todoList: TodoUser[]
+  todos: TodoWithUser[]
 };
 
-export const TodoList: React.FC<Props> = ({ todoList }) => (
+export const TodoList: React.FC<Props> = ({ todos }) => (
   <ul className="todo-list">
-    {todoList.map(todoCard => (
+    {todos.map(todo => (
       <li
         className={classNames('todo-list__block', {
-          done: todoCard.completed,
+          done: todo.completed,
         })}
-        key={todoCard.id}
+        key={todo.id}
       >
-        <TodoInfo todoInfo={todoCard} />
+        <TodoInfo todoInfo={todo} />
       </li>
     ))}
   </ul>

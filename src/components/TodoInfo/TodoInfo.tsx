@@ -1,10 +1,10 @@
 import React from 'react';
-import { TodoUser } from '../../types/types';
+import { TodoWithUser } from '../../types/types';
 import { UserInfo } from '../UserInfo/UserInfo';
 import './TodoInfo.scss';
 
 type Props = {
-  todoInfo: TodoUser
+  todoInfo: TodoWithUser
 };
 
 export const TodoInfo: React.FC<Props> = ({ todoInfo }) => {
