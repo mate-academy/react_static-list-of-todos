@@ -1,7 +1,13 @@
-import { PreparedTodo } from '../../types/types';
+import { User } from '../../types/types';
 import { UserInfo } from '../UserInfo/UserInfo';
 
-export const TodoInfo: React.FC<PreparedTodo> = ({
+type Props = {
+  title: string;
+  completed: boolean;
+  user: User | null;
+};
+
+export const TodoInfo: React.FC<Props> = ({
   title,
   completed,
   user,
@@ -13,7 +19,7 @@ export const TodoInfo: React.FC<PreparedTodo> = ({
         Completed:
         {completed ? 'yes' : 'no'}
       </p>
-      {user && <UserInfo {...user} />}
+      {user && <UserInfo name={user.name} email={user.email} />}
     </div>
   </div>
 );

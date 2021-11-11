@@ -15,7 +15,7 @@ const preparedTodos: PreparedTodo[] = todos.map((todo: Todo) => {
 
 const App: React.FC = () => (
   <div className="App">
-    <Todolist preparedTodos={preparedTodos} />
+    <Todolist todos={preparedTodos} />
   </div>
 );
 
