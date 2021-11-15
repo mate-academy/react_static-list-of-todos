@@ -1,6 +1,6 @@
-import { UserTypes } from './UserTypes';
+import { UserTypes } from './User';
 
-export interface TodoTypes {
+export interface Todo {
   user: UserTypes | null,
   userId: number,
   id: number,
