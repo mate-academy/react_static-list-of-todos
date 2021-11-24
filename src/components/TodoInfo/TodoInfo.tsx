@@ -16,9 +16,12 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
       <div className="TodoList__todo-info">
         <p className="TodoList__title">{todo.title}</p>
         <p
-          className={classNames('TodoList__status', {
-            'TodoList__status--finished': todo.completed,
-          })}
+          className={classNames(
+            'TodoList__status',
+            {
+              'TodoList__status--finished': todo.completed,
+            },
+          )}
         >
           {todo.completed && 'Completed'}
         </p>
