@@ -1,1 +1,21 @@
-// styles go here
+$main-bg: #dcf0ed;
+
+html {
+  font-size: 12px;
+  background-color: $main-bg;
+}
+
+body{
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 50px 0;
+}
