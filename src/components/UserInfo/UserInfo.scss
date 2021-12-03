@@ -1,0 +1,21 @@
+@import "../../utils/variables";
+
+.user {
+  background-color: $userInfoColor;
+  padding: 10px;
+  border-radius: 10px;
+
+  &__email {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    padding-top: 10px;
+
+    transition: color, letter-spacing, 0.5s;
+
+    &:hover {
+      color: blue;
+      letter-spacing: 5px;
+    }
+  }
+}
