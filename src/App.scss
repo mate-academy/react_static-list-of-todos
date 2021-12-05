@@ -1,1 +1,44 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+ul,
+li {
+  padding: 0;
+}
+
+.app {
+  padding: 40px 0;
+  background-color: rgb(70, 67, 67);
+
+  &__title {
+    position: relative;
+    margin: 0 auto;
+    max-width: 650px;
+    padding: 20px;
+    border: rgba(255, 255, 255, 0.59) ridge 6px;
+    border-radius: 2px;
+    text-align: center;
+    color: rgb(70, 67, 67);
+    background-color: rgba(255, 255, 255, 0.65);
+
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      bottom: 0;
+      left: 50%;
+      background-color: rgba(255, 255, 255, 0.55);
+      transform: translateY(113%);
+      height: 46px;
+      width: 4px;
+    }
+  }
+}
