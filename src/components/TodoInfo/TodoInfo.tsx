@@ -11,7 +11,10 @@ export const TodoInfo: React.FC<TodoWithUser> = ({ title, completed, user }) => 
   return (
     <>
       <h2 className="todo__title">{title}</h2>
-      <p className={classNames('todo__completed', { 'todo__completed--true': completed })}>
+      <p className={classNames('todo__completed', {
+        'todo__completed--true': completed,
+      })}
+      >
         {completedStatus}
       </p>
       {user && (
