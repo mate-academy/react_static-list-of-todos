@@ -1,0 +1,54 @@
+.label {
+  background: #ae5f75;
+  height: 80px;
+  display: block;
+  border-bottom: 1px solid #2c3e50;
+  color: #fff;
+  text-transform: capitalize;
+
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 35px 10px 10px;
+  box-sizing: border-box;
+
+  &__title {
+    font-size: 16px;
+    font-weight: 900;
+  }
+
+  &__email {
+    font-size: 12px;
+  }
+
+  &:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    right: 20px;
+    top: 30%;
+    transition: border 0.7s ease;
+  }
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.label__input:checked + .label {
+  background: #6d335c;
+  border-bottom: 1px solid #34495e;
+  color: #d37b79;
+
+  .label__email {
+    color: #f6bd66;
+  }
+}
+
+.label__input:checked + .label:before {
+  background: url("https://i.imgur.com/eoPQ05r.png") no-repeat center center;
+}
