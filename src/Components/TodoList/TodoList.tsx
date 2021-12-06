@@ -13,7 +13,7 @@ export const TodoList: React.FC<Props> = ({ preparedTodos }) => {
     <div>
       <ul>
         {preparedTodos.map(todo => (
-          <li className="listItem" key={todo.id}>
+          <li className="todoList" key={todo.id}>
             <TodoInfo todo={todo} />
           </li>
         ))}
