@@ -1,0 +1,16 @@
+.item {
+  position: relative;
+
+  &__title {
+    text-transform: capitalize;
+    padding: 15px;
+  }
+
+  &__status {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-bottom: 10px;
+  }
+}
