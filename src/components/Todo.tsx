@@ -4,13 +4,13 @@ import './Todo.scss';
 type Props = {
   completed:boolean,
   title:string,
-  avtor: string,
+  author: string,
 };
 
 export const Todo: React.FC<Props> = ({
   completed,
   title,
-  avtor,
+  author,
 }) => {
   return (
     <>
@@ -20,7 +20,7 @@ export const Todo: React.FC<Props> = ({
           {title}
         </div>
         <div className="label__email">
-          {avtor}
+          {author}
         </div>
       </label>
     </>
