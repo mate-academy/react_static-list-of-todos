@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { UserInfo } from '../UserInfo/UserInfo';
 import { Todo } from '../../types/todo';
 
-import './TodoInfo.scss';
+import './TodoItem.scss';
 
 type Props = {
   todo: Todo;
