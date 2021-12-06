@@ -1,9 +1,9 @@
 import { TodoInfo } from '../TodoInfo/TodoInfo';
-import { Props } from '../../types/Props';
+import { TodoWithUser } from '../../types/TodoWithUser';
 import './TodoList.scss';
 
 type Prop = {
-  preparedTodo: Props[],
+  preparedTodo: TodoWithUser[],
 };
 
 export const TodoList: React.FC<Prop> = ({ preparedTodo }) => (

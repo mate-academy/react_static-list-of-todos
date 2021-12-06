@@ -1,27 +1,24 @@
+import classNames from 'classnames';
 import { UserInfo } from '../UserInfo/UserInfo';
 
-import { Props } from '../../types/Props';
+import { TodoWithUser } from '../../types/TodoWithUser';
 
 import './TodoInfo.scss';
 
-export const TodoInfo: React.FC<Props> = ({ title, completed, user }) => (
-  <>
-    <h2 className="todo__title">{title}</h2>
-    {completed
-      ? (
-        <p className="todo__complited todo__complited--true">
-          Complited
-        </p>
-      )
-      : (
-        <p className="todo__complited todo__complited--false">
-          Not complited
-        </p>
+export const TodoInfo: React.FC<TodoWithUser> = ({ title, completed, user }) => {
+  const completedStatus = completed ? 'Completed' : 'Not completed';
+
+  return (
+    <>
+      <h2 className="todo__title">{title}</h2>
+      <p className={classNames('todo__completed', { 'todo__completed--true': completed })}>
+        {completedStatus}
+      </p>
+      {user && (
+        <div className="todo__user user">
+          <UserInfo {...user} />
+        </div>
       )}
-    {user && (
-      <div className="todo__user user">
-        <UserInfo {...user} />
-      </div>
-    )}
-  </>
-);
+    </>
+  );
+};

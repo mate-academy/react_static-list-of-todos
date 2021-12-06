@@ -5,7 +5,7 @@ import { TodoList } from './components/TodoList/TodoList';
 import todos from './api/todos';
 import users from './api/users';
 
-import { Props } from './types/Props';
+import { TodoWithUser } from './types/TodoWithUser';
 import { User } from './types/User';
 import { Todo } from './types/Todo';
 
@@ -22,7 +22,7 @@ function getPreparedTodo(arrOfTodo: Todo[], arrOfUsers: User[]) {
   });
 }
 
-const preparedTodo: Props[] = getPreparedTodo(todos, users);
+const preparedTodo: TodoWithUser[] = getPreparedTodo(todos, users);
 
 const App: React.FC = () => (
   <div className="app">

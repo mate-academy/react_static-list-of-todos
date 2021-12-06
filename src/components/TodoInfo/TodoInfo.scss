@@ -6,7 +6,7 @@
     grid-row: 1 / 2;
   }
 
-  &__complited {
+  &__completed {
     display: block;
     text-align: right;
     align-self: flex-end;
@@ -17,7 +17,7 @@
     grid-row: 2 / 3;
   }
 
-  &__complited--true {
+  &__completed--true {
     color: rgb(5, 82, 5);
   }
 
