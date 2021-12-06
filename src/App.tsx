@@ -9,15 +9,15 @@ import { Props } from './types/Props';
 import { User } from './types/User';
 import { Todo } from './types/Todo';
 
-function getPreparedTodo(tod: Todo[], us: User[]) {
-  const findUser = (t: Todo, u:User[]) => (
-    u.find(user => user.id === t.userId)
+function getPreparedTodo(arrOfTodo: Todo[], arrOfUsers: User[]) {
+  const findUser = (todo: Todo) => (
+    arrOfUsers.find(user => user.id === todo.userId)
   );
 
-  return tod.map(todo => {
+  return arrOfTodo.map(todo => {
     return {
       ...todo,
-      user: findUser(todo, us) || null,
+      user: findUser(todo) || null,
     };
   });
 }
