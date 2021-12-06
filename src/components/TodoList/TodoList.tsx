@@ -12,9 +12,23 @@ type Props = {
 export const TodoList: React.FC<Props> = ({ todos }) => (
   <div className="todo">
     <ul className="todo__list">
-      {todos.map(todo => (
-        <li className={classNames('todo__item', { failed: todo.completed === false })} key={Math.random()}>
-          <TodoInfo {...todo} />
+      {todos.map((
+        {
+          title, id, completed, user,
+        },
+      ) => (
+        <li
+          className={classNames(
+            'todo__item',
+            { failed: !completed },
+          )}
+          key={id}
+        >
+          <TodoInfo
+            title={title}
+            completed={completed}
+            user={user}
+          />
         </li>
       ))}
     </ul>
