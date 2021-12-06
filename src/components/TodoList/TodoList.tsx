@@ -17,11 +17,9 @@ export const TodoList: React.FC<Props> = ({ todos }) => (
           {
             todo.user
               ? (
-                <UserInfo
-                  user={todo.user}
-                />
+                <UserInfo user={todo.user} />
               )
-              : 'Noone'
+              : ''
           }
         </li>
       ))
