@@ -1,10 +1,8 @@
 import React from 'react';
+import { IUser } from '../types/IUser';
 import './Todo.scss';
 
-type Props = {
-  name:string,
-  email:string,
-};
+type Props = Pick<IUser, 'name' | 'email'>;
 
 export const User: React.FC<Props> = ({
   name,
