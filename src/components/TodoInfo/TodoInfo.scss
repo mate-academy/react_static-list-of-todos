@@ -1,0 +1,34 @@
+.TodoInfo {
+  box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 10px 0 10px 50px;
+  background-color: #fff;
+  position: relative;
+
+  &__title {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+
+  &__completed {
+    font-size: 16px;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 15px;
+    height: 100%;
+    background-color: #ffdee9;
+    top: 0;
+    left: 0;
+  }
+}
+
+.TodoInfoCompleted {
+  &::before {
+    background-color: #b5fffc;
+  }
+}
