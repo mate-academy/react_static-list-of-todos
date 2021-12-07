@@ -1,0 +1,15 @@
+.user {
+  display: flex;
+  gap: 30px;
+  color: #999;
+  font-size: 16px;
+
+  &__email {
+    text-transform: lowercase;
+  }
+
+  &__name {
+    color: #505ce6;
+    font-weight: bold;
+  }
+}
