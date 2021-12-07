@@ -1,0 +1,11 @@
+.todo {
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__status {
+    font-weight: bold;
+    color: #398564;
+  }
+}
