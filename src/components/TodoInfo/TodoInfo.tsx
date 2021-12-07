@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import './TodoInfo.scss';
 import { Todo } from '../../types/Todo';
 
@@ -7,20 +8,25 @@ type Props = {
   todo: TodoData,
 };
 
-export const TodoInfo: React.FC<Props> = ({ todo }) => (
-  <div className="todo">
-    { todo.completed
-      ? (
-        <div className="todo__status todo__status--completed">
-          Completed
-        </div>
-      ) : (
-        <div className="todo__status">
-          Not completed
-        </div>
+classNames({ foo: true }, { bar: true });
+
+export const TodoInfo: React.FC<Props> = ({ todo }) => {
+  const status = todo.completed ? 'Completed' : 'Not completed';
+
+  return (
+    <div className="todo">
+      <div className={classNames(
+        'todo__status',
+        {
+          'todo__status--completed': todo.completed,
+        },
       )}
-    <h2 className="todo__title">
-      {todo.title}
-    </h2>
-  </div>
-);
+      >
+        {status}
+      </div>
+      <h2 className="todo__title">
+        {todo.title}
+      </h2>
+    </div>
+  );
+};
