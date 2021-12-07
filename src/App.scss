@@ -1,1 +1,16 @@
-// styles go here
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(to left, #4b79a1, #283e51);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
