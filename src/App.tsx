@@ -3,20 +3,14 @@ import './App.scss';
 import { TodoList } from './components/TodoList';
 import usersFromServer from './api/users';
 import todosFromServer from './api/todos';
+import { IUser } from './types/IUser';
 
 const preparedTodos = todosFromServer.map((todo) => {
-  const userObj = usersFromServer.find((user) => user.id === todo.userId) || null;
-  let userEmailAndName: [string, string];
-
-  if (userObj !== null) {
-    userEmailAndName = [userObj.email, userObj.name];
-  } else {
-    userEmailAndName = ['no email', 'no name'];
-  }
+  const userObj: IUser | null = usersFromServer.find((user) => user.id === todo.userId) || null;
 
   const todoWithOwner = {
     ...todo,
-    author: userEmailAndName,
+    author: userObj,
   };
 
   return todoWithOwner;
