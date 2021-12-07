@@ -12,7 +12,7 @@ export const Todo: React.FC<Props> = ({
 }) => {
   return (
     <>
-      <input type="checkbox" className="label__input" checked={completed} />
+      <input type="checkbox" className="label__input" checked={completed} readOnly />
       <div className="label">
         <div className="label__title">
           {title}
