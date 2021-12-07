@@ -1,1 +1,23 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e8f4ea;
+}
+
+.title {
+  text-transform: uppercase;
+  color: #25523b;
+}
