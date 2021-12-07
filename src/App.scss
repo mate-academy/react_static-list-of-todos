@@ -1,1 +1,16 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+  background-color: rgb(185, 184, 184);
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 50px 0;
+}
