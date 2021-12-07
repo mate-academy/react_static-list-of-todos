@@ -1,23 +1,27 @@
 import React from 'react';
+import classNames from 'classnames';
 import { Todo } from '../../types/Todo';
+import { UserInfo } from '../UserInfo/UserInfo';
 
 import './TodoInfo.scss';
 
-type Props = {
-  todo: Todo;
-};
+type Props = Omit<Todo, 'id' | 'userId'>;
 
-export const TodoInfo: React.FC<Props> = ({ todo }) => {
+export const TodoInfo: React.FC<Props> = ({ title, completed, user }) => {
+  const status = completed ? 'Finished' : 'Still in work';
+
   return (
-    <div className="item">
-      <h2 className="item__title">{todo.title}</h2>
-      <span className="item__status">
-        {todo.completed ? (
-          <span className="item__status--finished">Finished</span>
-        ) : (
-          <span className="item__status--unfinished">Still in work</span>
-        )}
-      </span>
-    </div>
+    <>
+      <div className="item">
+        <h2 className="item__title">{title}</h2>
+        <span className={classNames('item__status', {
+          'item__status--finished': completed,
+        })}
+        >
+          {status}
+        </span>
+      </div>
+      {user && <UserInfo name={user?.name} email={user?.email} />}
+    </>
   );
 };

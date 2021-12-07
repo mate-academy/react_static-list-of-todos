@@ -12,13 +12,11 @@
   }
 
   &__status {
+    color: red;
+    font-size: 20px;
+
     &--finished {
       color: green;
-      font-size: 20px;
-    }
-
-    &--unfinished {
-      color: red;
       font-size: 20px;
     }
   }
