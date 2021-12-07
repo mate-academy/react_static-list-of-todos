@@ -1,1 +1,8 @@
-// styles go here
+.app {
+  &__title {
+    color: rgb(76, 77, 76);
+
+    text-align: center;
+    text-decoration: underline;
+  }
+}
