@@ -1,0 +1,15 @@
+.todoList {
+  background-color: white;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  list-style: none;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 5px 15px rgb(59, 58, 58);
+  transition: transform 0.3s;
+}
+
+.todoList:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
