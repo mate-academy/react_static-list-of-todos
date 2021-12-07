@@ -15,10 +15,12 @@ export const TodoList: React.FC<Props> = ({ todosList }) => (
           title={todo.title}
           completed={todo.completed}
         />
-        <UserInfo
-          name={todo.user?.name}
-          email={todo.user?.email}
-        />
+        {todo.user && (
+          <UserInfo
+            name={todo.user.name}
+            email={todo.user.email}
+          />
+        )}
       </li>
     ))}
   </ul>

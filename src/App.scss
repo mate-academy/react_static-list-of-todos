@@ -1,14 +1,9 @@
 // styles go here
 h1 {
-margin: 0;
-padding: 20px;
-color: rgb(77, 75, 75);
-text-align: center;
-}
-
-.App {
+  margin: 0;
+  padding: 20px;
   color: rgb(77, 75, 75);
-  background-color: rgb(246, 255, 196);
+  text-align: center;
 }
 
 ul {
@@ -17,5 +12,6 @@ ul {
 }
 
 body {
+  background-color: rgb(246, 255, 196);
   margin: 0;
 }

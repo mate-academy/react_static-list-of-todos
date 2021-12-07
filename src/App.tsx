@@ -5,15 +5,12 @@ import users from './api/users';
 import { TodoList } from './components/TodoList';
 import { TodoWithUser } from './types/TodoWithUser';
 
-const preparedTodos = JSON.parse(JSON.stringify(todos));
-
-/* eslint-disable no-param-reassign */
-
-preparedTodos.forEach((todo: TodoWithUser) => {
-  todo.user = (users.find(user => todo.userId === user.id))
-    ? todo.user = users.find(user => todo.userId === user.id)
-    : todo.user = null;
-});
+const preparedTodos = todos.map((todo: TodoWithUser) => ({
+  ...todo,
+  user: (users.find(user => todo.userId === user.id))
+    ? users.find(user => todo.userId === user.id)
+    : null,
+}));
 
 const App: React.FC = () => (
   <div className="App">
