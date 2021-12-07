@@ -1,0 +1,16 @@
+.todoContainer {
+  border: 1px solid darkgray;
+  border-radius: 10px;
+  padding: 0 20px;
+}
+
+.todoInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todoUser {
+  font-size: 20px;
+  color: darkgray;
+  margin-bottom: 10px;
+}
