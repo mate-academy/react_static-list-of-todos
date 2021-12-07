@@ -1,0 +1,23 @@
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid;
+
+  &__title {
+    display: inline-block;
+    width: 635px;
+    text-transform: uppercase;
+  }
+
+  &__status {
+    color: red;
+    font-size: 20px;
+
+    &--finished {
+      color: green;
+      font-size: 20px;
+    }
+  }
+}
