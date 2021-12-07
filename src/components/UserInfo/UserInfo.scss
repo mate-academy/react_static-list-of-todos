@@ -1,0 +1,15 @@
+.userInfo {
+  background-color: rgb(201, 169, 122);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+
+  &__name {
+    font-size: 25px;
+  }
+
+  &__email {
+    color:rgb(94, 93, 92)
+  }
+}
