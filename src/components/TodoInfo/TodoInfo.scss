@@ -1,0 +1,26 @@
+.todo {
+
+  &__info {
+    display: flex;
+    justify-content: space-between; 
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-size: 18px;
+    max-width: 360px;
+  }
+
+  &__progress {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+
+  &__image {
+    width: 40px;
+  }
+
+}
