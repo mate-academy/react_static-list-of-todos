@@ -1,13 +1,9 @@
 import React from 'react';
-import { IUser } from '../types/IUser';
+import { ITodo } from '../types/ITodo';
 import './Todo.scss';
 import { User } from './User';
 
-type Props = {
-  completed:boolean,
-  title:string,
-  author: IUser | null,
-};
+type Props = Omit<ITodo, 'userId' | 'id'>;
 
 export const Todo: React.FC<Props> = ({
   completed,
