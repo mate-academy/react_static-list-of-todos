@@ -12,13 +12,11 @@ type Props = {
 export const TodoList: React.FC<Props> = ({ preparedTodos }) => (
   <div className="todoList">
     <ul className="todoList__list">
-      <li>
-        {preparedTodos.map(todo => (
-          <li className="todoList__todoItem" key={todo.id}>
-            <TodoInfo todo={todo} />
-          </li>
-        ))}
-      </li>
+      {preparedTodos.map(todo => (
+        <li className="todoList__todoItem" key={todo.id}>
+          <TodoInfo todo={todo} />
+        </li>
+      ))}
     </ul>
   </div>
 );
