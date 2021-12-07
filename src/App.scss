@@ -1,1 +1,18 @@
-// styles go here
+.app {
+  background-color: #aed6dc;
+
+  &__container {
+    margin: 0 auto;
+    padding: 0 60px;
+    max-width: 1200px;
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #4a536b;
+  }
+  
+  &__title {
+    margin: 0 auto;
+    padding: 20px 0;
+    width: max-content;
+  }
+}
