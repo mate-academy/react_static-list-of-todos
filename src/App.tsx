@@ -6,17 +6,17 @@ import todosFromServer from './api/todos';
 
 const preparedTodos = todosFromServer.map((todo) => {
   const userObj = usersFromServer.find((user) => user.id === todo.userId) || null;
-  let userEmail;
+  let userEmailAndName: [string, string];
 
   if (userObj !== null) {
-    userEmail = userObj.email;
+    userEmailAndName = [userObj.email, userObj.name];
   } else {
-    userEmail = 'null';
+    userEmailAndName = ['no email', 'no name'];
   }
 
   const todoWithOwner = {
     ...todo,
-    user: userEmail,
+    author: userEmailAndName,
   };
 
   return todoWithOwner;

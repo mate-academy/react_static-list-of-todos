@@ -14,7 +14,7 @@ export const TodoList: React.FC<Props> = ({ todos = [] }) => (
         key={todo.id}
         completed={todo.completed}
         title={todo.title}
-        author={todo.user}
+        author={todo.author}
       />
     ))}
   </div>

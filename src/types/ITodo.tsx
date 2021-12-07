@@ -3,5 +3,5 @@ export type ITodo = {
   id: number,
   title: string,
   completed: boolean,
-  user: string,
+  author: [string, string],
 };
