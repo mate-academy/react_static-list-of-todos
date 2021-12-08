@@ -1,0 +1,53 @@
+$color-red: #db3434;
+$color-green: #2bb84a;
+$color-hover: rgba(5,56,107,0.3);
+$transition-time: 0.3s;
+
+.todoItem {
+  border-radius: 15px;
+  margin-bottom: 15px;
+  padding: 20px;
+  font-size: 16px;
+  list-style: none;
+  background-color: #2d8655;
+  box-shadow: 5px 5px 5px $color-hover;
+
+  transition: scale $transition-time, background-color $transition-time;
+
+  &:color-hover {
+    background-color: $color-hover;
+    transform: scale(1.1);
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__wrap {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  &__content {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  &__check {
+    width: 20px;
+    height: 20px;
+    margin-left: 30px;
+  }
+
+  &__status {
+    font-weight: bold;
+    color: $color-red;
+
+    &__completed {
+      color: $color-green;
+    }
+  }
+}
