@@ -1,1 +1,18 @@
-// styles go here
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.todoList_item {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.todoList_task{
+  display: flex;
+  align-items: center;  
+}
+
+.todoList_title {
+  text-transform: uppercase;
+}
