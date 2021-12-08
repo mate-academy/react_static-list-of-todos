@@ -11,16 +11,14 @@ export const TodoList: React.FC<Props> = ({ todos }) => {
   return (
     <div className="todoList">
       <ul className="todoList_list">
-        {todos.map((todo) => {
-          return (
-            <li className="todoList_item">
-              <TodoInfo todo={todo} />
-              {todo.user
-                ? <UserInfo user={todo.user} />
-                : <UserInfo user={{ name: 'User', email: 'Email' }} />}
-            </li>
-          );
-        })}
+        {todos.map((todo) => (
+          <li className="todoList_item" key={todo.id}>
+            <TodoInfo todo={todo} />
+            {todo.user
+              ? <UserInfo user={todo.user} />
+              : <UserInfo user={{ name: 'User', email: 'Email' }} />}
+          </li>
+        ))}
       </ul>
     </div>
   );
