@@ -5,10 +5,11 @@ import todos from './api/todos';
 import users from './api/users';
 import { TodoList } from './components/TodoList/TodoList';
 
-const preparedTodos = [...todos].map((el) => ({
+const preparedTodos = todos.map((el) => ({
   ...el,
-  user: users.find((user) => user.id
-  === el.userId) || null,
+  user: users.find(
+    (user) => user.id === el.userId,
+  ) || null,
 }));
 
 const App: React.FC = () => (
