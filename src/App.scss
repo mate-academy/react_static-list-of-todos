@@ -1,1 +1,25 @@
-// styles go here
+body,
+h1,
+h2,
+li,
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Handlee", cursive;
+}
+
+.App {
+  padding: 20px 30px;
+  background-color: cadetblue;
+  border-radius: 10px;
+  box-shadow: 0 0 10px grey;
+
+  &__caption {
+    text-align: center;
+    margin-bottom: 40px;
+    color: rgb(247, 202, 24);
+  }
+}
