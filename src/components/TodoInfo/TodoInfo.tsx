@@ -22,7 +22,7 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => (
         },
       )}
       >
-        {(todo.completed && 'Completed') || 'Not completed'}
+        {todo.completed ? 'Completed' : 'Not completed'}
       </p>
     </div>
   </div>
