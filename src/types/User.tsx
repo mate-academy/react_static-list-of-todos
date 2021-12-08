@@ -1,15 +1,15 @@
-interface Company {
+export interface Company {
   name: string,
   catchPhrase: string,
   bs: string,
 }
 
-interface Geo {
+export interface Geo {
   lat: string,
   lng: string,
 }
 
-interface Adress {
+export interface Adress {
   street: string,
   suite: string,
   city: string,
@@ -17,7 +17,7 @@ interface Adress {
   geo: Geo,
 }
 
-interface User {
+export interface User {
   id: number,
   name: string,
   username: string,
@@ -28,5 +28,3 @@ interface User {
   company: Company | null,
 
 }
-
-export default User;

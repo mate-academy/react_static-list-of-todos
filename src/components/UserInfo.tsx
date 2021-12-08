@@ -1,6 +1,6 @@
 import React from 'react';
 
-import User from '../types/User';
+import { User } from '../types/User';
 
 import './User.scss';
 
@@ -10,12 +10,12 @@ type Props = {
 
 const UserInfo: React.FC<Props> = ({ user }) => (
   <div className="list__user">
-    <div className="list__name">
+    <p className="list__name">
       {user.name}
-    </div>
-    <div className="list__email">
+    </p>
+    <p className="list__email">
       {user.email}
-    </div>
+    </p>
   </div>
 );
 

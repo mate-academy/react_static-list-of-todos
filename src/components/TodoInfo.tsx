@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ToDo from '../types/ToDo';
+import UserInfo from './UserInfo';
 
 import './ToDo.scss';
 
@@ -8,15 +9,21 @@ type Props = {
   todo: ToDo,
 };
 
-const TodoInfo: React.FC<Props> = ({ todo }) => (
-  <div className="list__todo">
-    <div className="list__title">
-      {todo.title}
+const TodoInfo: React.FC<Props> = ({ todo }) => {
+  const compStatus = todo.completed ? 'Done' : 'In process';
+
+  return (
+
+    <div className="list__todo">
+      {todo.user && <UserInfo user={todo.user} />}
+      <div className="list__title">
+        {todo.title}
+      </div>
+      <div className="list__status">
+        {compStatus}
+      </div>
     </div>
-    <div className="list__status">
-      {todo.completed ? 'Done' : 'In process'}
-    </div>
-  </div>
-);
+  );
+};
 
 export default TodoInfo;
