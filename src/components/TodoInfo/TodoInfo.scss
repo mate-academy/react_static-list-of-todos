@@ -1,0 +1,18 @@
+.todoItem {
+  display: inline-block;
+
+  padding: 20px;
+
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+
+  &__task-status {
+    color: #cf3f34;
+    text-align: end;
+
+    &--completed {
+      color: #839d83;
+    }
+  }
+}
