@@ -10,6 +10,11 @@
     font-size: 18px;
     max-width: 360px;
     width: 100%;
+
+    @media (max-width: 500px) {
+      font-size: 14px;
+      max-width: 200px;
+    }
   }
 
   &__progress {
