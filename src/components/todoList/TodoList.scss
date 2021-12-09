@@ -1,0 +1,27 @@
+.todo-list {
+  padding: 0 10px;
+  
+  &__list-item {
+    margin-bottom: 10px;
+
+    padding: 20px;
+    border-radius: 10px;
+    list-style: none;
+    background-color: lightgray;
+  }
+
+  &__list-item-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__complition-status {
+    &--done {
+      color: green;
+    }
+
+    &--in-process {
+      color: red;
+    }
+  }
+}
