@@ -7,7 +7,7 @@ interface Props {
 }
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => {
-  const complitionStatus = todo.completed
+  const completionStatus = todo.completed
     ? 'Done!'
     : 'In the process...';
   const condition = todo.completed
@@ -21,7 +21,7 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
       </p>
 
       <span className={`todo-list__complition-status--${condition}`}>
-        {complitionStatus}
+        {completionStatus}
       </span>
 
       {todo.user && <UserInfo user={todo.user} />}
