@@ -27,7 +27,12 @@ const prepareTodos = (todoArr: Todo[], userArr: User[]):PreparedTodo[] => {
   return prepeared;
 };
 
-const preparedTodos = prepareTodos(todos, users);
+const preparedTodos = todos.map(todo => {
+  return {
+    ...todo,
+    user: users.find(user => user.id === todo.userId),
+  };
+});
 
 const App: React.FC = () => (
   <div className="App">
