@@ -8,9 +8,11 @@ type Props = {
 export const UserInfo: React.FC<Props> = ({ user }) => {
   return (
     <>
-      {user
-        ? `${user.name} - ${user?.email}`
-        : null}
+      {user && (
+        <span>
+          {`${user.name} - ${user.email}`}
+        </span>
+      )}
     </>
   );
 };

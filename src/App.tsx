@@ -16,10 +16,12 @@ const prepareTodos = (todoArr: Todo[], userArr: User[]):PreparedTodo[] => {
     return user || null;
   };
 
-  todoArr.forEach((todo, index) => {
+  todoArr.map((todo, index) => {
     const user = findUserById(todo.id, userArr);
 
     prepeared[index] = { ...todo, user };
+
+    return prepeared[index];
   });
 
   return prepeared;

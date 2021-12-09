@@ -15,7 +15,9 @@ export const TodoList: React.FC<Props> = ({ prepared }) => (
         <li key={todo.id} className="todo--item">
           <TodoInfo todo={todo} />
           {todo.user && (
-            <span>' - '</span>
+            <span>
+              {' - '}
+            </span>
           )}
           <UserInfo user={todo.user} />
         </li>
