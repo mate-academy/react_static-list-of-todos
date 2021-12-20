@@ -8,7 +8,7 @@ type Props = {
 
 const TodoList: React.FC<Props> = ({ todos }) => {
   return (
-    <>
+    <ul className="App__list">
       {todos.map(todo => (
         <li key={todo.id} className="App__item">
           <TodoInfo
@@ -18,7 +18,7 @@ const TodoList: React.FC<Props> = ({ todos }) => {
           />
         </li>
       ))}
-    </>
+    </ul>
   );
 };
 
