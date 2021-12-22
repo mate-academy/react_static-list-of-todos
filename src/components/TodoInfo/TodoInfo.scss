@@ -1,0 +1,11 @@
+.TodoInfo {
+  &__title {
+    text-align: center;
+    margin: 10px;
+  }
+
+  &__completed {
+    text-align: center;
+    font-weight: bold;
+  }
+}
