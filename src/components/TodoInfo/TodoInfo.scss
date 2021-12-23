@@ -1,0 +1,17 @@
+.info {
+  text-align: center;
+
+  &__title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: rgb(8, 8, 160);
+  }
+
+  &__completed {
+    color: rgb(20, 139, 20);
+  }
+
+  &__noCompleted {
+    color: rgb(197, 27, 27);
+  }
+}
