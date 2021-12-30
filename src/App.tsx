@@ -44,12 +44,16 @@ const preparedTodos: Todo[] = todos.map(a => {
 });
 
 const UserInfo: React.FC<PropsUser> = ({ user }) => {
-  return (
-    <div className="fancyUser">
-      <span className="fancyUser__name">{user.name}</span>
-      <span className="fancyUser__email">{user.email}</span>
-    </div>
-  ) || null;
+  if (user !== null) {
+    return (
+      <div className="fancyUser">
+        <span className="fancyUser__name">{user.name}</span>
+        <span className="fancyUser__email">{user.email}</span>
+      </div>
+    );
+  }
+
+  return null;
 };
 
 const TodoInfo: React.FC<PropsItem> = ({ todo }) => (
