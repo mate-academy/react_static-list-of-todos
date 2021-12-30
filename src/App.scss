@@ -1,1 +1,27 @@
-// styles go here
+// .App {
+//   height: 200px;
+//   background-color: #0fe;
+// }
+
+.todo {
+  margin-top: 20px;
+  background-color: #0fe;
+
+  &__completion-status {
+    color: rgb(202, 33, 33);
+  }
+}
+
+.fancyUser {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  &__name {
+    color: #34e;
+  }
+
+  &__email {
+    color: yellow;
+  }
+}
