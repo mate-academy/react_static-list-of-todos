@@ -20,7 +20,7 @@ interface Todo {
   id: number,
   title: string,
   completed: boolean,
-  user?: User | null,
+  user?: User | null | undefined,
 }
 
 type PropsList = {
@@ -32,7 +32,7 @@ type PropsItem = {
 };
 
 type PropsUser = {
-  user: User | null;
+  user: User | null | undefined;
 };
 
 const preparedTodos: Todo[] = todos.map(a => {
@@ -44,7 +44,7 @@ const preparedTodos: Todo[] = todos.map(a => {
 });
 
 const UserInfo: React.FC<PropsUser> = ({ user }) => {
-  if (user !== null) {
+  if (user !== null && user !== undefined) {
     return (
       <div className="fancyUser">
         <span className="fancyUser__name">{user.name}</span>
