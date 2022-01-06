@@ -1,4 +1,8 @@
-import { PropsUser } from "../types/Types";
+import { User } from "../types/Types";
+
+type PropsUser = {
+  user: User | null;
+};
 
 export const UserInfo: React.FC<PropsUser> = ({ user }) => {
   return (

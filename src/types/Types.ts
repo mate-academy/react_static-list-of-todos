@@ -12,15 +12,3 @@ export interface Todo {
   completed: boolean,
   user: User | null ,
 }
-
-export type PropsList = {
-  listOfTodos: Todo[];
-};
-
-export type PropsItem = {
-  todo: Todo;
-};
-
-export type PropsUser = {
-  user: User | null;
-};

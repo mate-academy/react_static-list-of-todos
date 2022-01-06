@@ -1,5 +1,9 @@
-import { PropsItem } from "../types/Types";
+import { Todo } from "../types/Types";
 import { UserInfo } from "./UserInfo";
+
+type PropsItem = {
+  todo: Todo;
+};
 
 export const TodoInfo: React.FC<PropsItem> = ({ todo }) => (
   <div className="todo">
