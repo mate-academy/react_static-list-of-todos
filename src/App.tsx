@@ -1,82 +1,8 @@
 import React from 'react';
 import './App.scss';
 
-import todos from './api/todos';
-import users from './api/users';
-
-interface User {
-  id: number,
-  name: string,
-  username: string,
-  email: string,
-  address: object,
-  phone: string,
-  website: string,
-  company: object,
-}
-
-interface Todo {
-  userId: number,
-  id: number,
-  title: string,
-  completed: boolean,
-  user?: User | null | undefined,
-}
-
-type PropsList = {
-  listOfTodos: Todo[];
-};
-
-type PropsItem = {
-  todo: Todo;
-};
-
-type PropsUser = {
-  user: User | null | undefined;
-};
-
-const preparedTodos: Todo[] = todos.map(a => {
-  const item: Todo = { ...a };
-
-  item.user = users.find(b => b.id === item.userId) || null;
-
-  return item;
-});
-
-const UserInfo: React.FC<PropsUser> = ({ user }) => {
-  if (user !== null && user !== undefined) {
-    return (
-      <div className="fancyUser">
-        <span className="fancyUser__name">{user.name}</span>
-        <span className="fancyUser__email">{user.email}</span>
-      </div>
-    );
-  }
-
-  return null;
-};
-
-const TodoInfo: React.FC<PropsItem> = ({ todo }) => (
-  <div className="todo">
-    <h2 className="todo__title">{todo.title}</h2>
-    <span className="todo__completion-status">
-      {todo.completed
-        ? 'completion status: true'
-        : 'completion status: false'}
-    </span>
-    <UserInfo user={todo.user} />
-  </div>
-);
-
-const TodoList: React.FC<PropsList> = ({ listOfTodos }) => (
-  <ul>
-    {listOfTodos.map((todoItem: any) => (
-      <li key={todoItem.id}>
-        <TodoInfo todo={todoItem} />
-      </li>
-    ))}
-  </ul>
-);
+import { TodoList } from './components/TodoList';
+import { preparedTodos } from './components/PreparedTodos';
 
 const App: React.FC = () => (
   <div className="App">
@@ -86,3 +12,4 @@ const App: React.FC = () => (
 );
 
 export default App;
+
