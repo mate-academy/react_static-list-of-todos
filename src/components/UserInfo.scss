@@ -1,0 +1,16 @@
+.userInfo {
+  background-color: rgb(39, 35, 35);
+  border-radius: 20px;
+  padding-left: 20px;
+
+
+  &__name {
+    color: blanchedalmond;
+    padding-top: 10px;
+  }
+
+  &__email {
+    color: burlywood;
+    padding-bottom: 10px;
+  }
+}

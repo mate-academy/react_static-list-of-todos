@@ -1,0 +1,15 @@
+.todoTitle {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  align-items: center;
+
+  &__title {
+    font-weight: 100px;
+    text-transform: uppercase;
+  }
+
+  &__completed {
+    color: red;
+  }
+}
