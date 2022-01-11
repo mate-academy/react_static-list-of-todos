@@ -1,0 +1,11 @@
+.user {
+  background-color: #eee;
+  padding: 10px 0;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+
+  &__name {
+    margin-bottom: 10px;
+  }
+}
