@@ -1,0 +1,26 @@
+.todo {
+  margin: 10px;
+  border: 1px solid rgb(37, 35, 35);
+  padding: 20px;
+  border-radius: 10px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  &__title {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  &__status {
+    font-weight: bold;
+    color: red;
+    min-width: max-content;
+    &.done {
+      color: green;
+    }
+  }
+}
