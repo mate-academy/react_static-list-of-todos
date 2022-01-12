@@ -1,0 +1,22 @@
+.todo {
+  width: 800px;
+  border: 2px solid gold;
+  margin-bottom: 10px;
+  padding: 10px;
+
+  &__title {
+    font-size: 20px;
+  }
+
+  &__status {
+    &-completed {
+      color: greenyellow;
+      font-size: 20px;
+    }
+
+    &-notcompleted {
+      color: red;
+      font-size: 20px;
+    }
+  }
+}
