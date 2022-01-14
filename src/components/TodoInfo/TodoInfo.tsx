@@ -13,11 +13,11 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
   const { title, completed, user } = todo;
 
   return (
-    <li className="item">
+    <>
       <h2>{`Todo: ${title}`}</h2>
       <span
         className={classNames(
-          'item__status',
+          'status',
           {
             disable: completed,
           },
@@ -26,6 +26,6 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
         {completed ? 'completed' : 'uncompleted'}
       </span>
       {user && <UserInfo {...user} />}
-    </li>
+    </>
   );
 };

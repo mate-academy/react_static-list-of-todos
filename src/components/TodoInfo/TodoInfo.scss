@@ -1,11 +1,6 @@
-.item {
-  border: 1px solid yellowgreen;
-  margin: 10px;
-
-  &__status {
-    text-transform: uppercase;
-    color: red;
-  }
+.status {
+  text-transform: uppercase;
+  color: red;
 }
 
 .disable {

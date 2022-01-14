@@ -6,15 +6,13 @@ import users from './api/users';
 import { Todo } from './types/Todo';
 import { Todolist } from './components/TodoList';
 
-const preparedTodos: Todo[] = [];
-
-todos.forEach((todo) => {
+const preparedTodos: Todo[] = todos.map((todo) => {
   const ownerOfTodo = users.find(user => user.id === todo.userId) || null;
 
-  preparedTodos.push({
+  return {
     ...todo,
     user: ownerOfTodo,
-  });
+  };
 });
 
 const App: React.FC = () => (
