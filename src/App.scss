@@ -1,1 +1,15 @@
-// styles go here
+.App {
+
+  &__list {
+    padding: 20px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    column-gap: 10px;
+    row-gap: 15px;
+  }
+}
+
+#user {
+  font-size: 1rem;
+}
