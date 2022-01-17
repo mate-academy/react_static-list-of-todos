@@ -3,7 +3,7 @@ import './App.scss';
 
 import todos from './api/todos';
 import users from './api/users';
-import { TodoList } from './components/TodoList';
+import { TodoList } from './components/TodoList/TodoList';
 import { Todo } from './types/Todo';
 
 const preparedTodos = todos.map(todo => Object.assign(todo, {
