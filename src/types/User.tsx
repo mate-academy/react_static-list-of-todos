@@ -3,13 +3,13 @@ export interface User {
   name: string,
   username: string,
   email: string,
-  address: Adress,
+  address: Address,
   phone: string,
   website: string,
   company: Company,
 }
 
-interface Adress {
+interface Address {
   street: string,
   suite: string,
   city: string,
