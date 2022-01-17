@@ -15,7 +15,7 @@ export const TodoInfo:React.FC<PrepearedTodo> = ({
     </h3>
 
     <p className={classNames('todo__uncompleted', { todo__completed: completed })}>
-      {completed ? 'Complited' : 'Not complited'}
+      {completed ? 'Completed' : 'Not completed'}
     </p>
 
     {user && <UserInfo user={user} />}
