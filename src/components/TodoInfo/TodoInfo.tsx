@@ -13,6 +13,7 @@ export const TodoInfo:React.FC<Props> = ({ todo }) => (
     <input
       type="checkbox"
       checked={todo.completed}
+      readOnly
     />
     <h3
       style={{ display: 'inline-block' }}
