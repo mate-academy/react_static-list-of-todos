@@ -1,1 +1,14 @@
-// styles go here
+h1 {
+  margin-bottom: 50px;
+  text-decoration: underline;
+  color: darkslateblue;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-align: center;
+}
