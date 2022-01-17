@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { User } from '../../types/User';
 import { UserInfo } from '../UserInfo/UserInfo';
 
 type Props = {
@@ -18,15 +17,15 @@ export const ToDoInfo: React.FC<Props> = ({
     <h2 className="task__title">
       {title}
     </h2>
-    <p className="task__info">
+    <div className="task__info">
       <p className="task__status">
-        {'status - '}
+        {'completed - '}
         {String(completed)}
       </p>
       <UserInfo
         name={user?.name}
         email={user?.email}
       />
-    </p>
+    </div>
   </>
 );
