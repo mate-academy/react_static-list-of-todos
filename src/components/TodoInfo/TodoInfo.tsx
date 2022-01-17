@@ -11,10 +11,10 @@ export const TodoInfo:React.FC<Props> = ({ todo }) => {
   let message: string;
 
   if (todo.completed) {
-    completion = 'to_do__info_complete--done';
+    completion = 'to_do__info-complete--done';
     message = 'Completed';
   } else {
-    completion = 'to_do__info_complete--not_done';
+    completion = 'to_do__info-complete--not_done';
     message = 'Not completed';
   }
 
