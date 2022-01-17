@@ -1,22 +1,40 @@
-.to-do__info {
-  display: flex;
-  flex-direction: column;
+.to_do {
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info_name {
+    display: block;
+  }
+
+  &__info_complete {
+    display: block;
+
+    &--done {
+      color: rgb(21, 255, 0);
+      font-size: 30px;
+    }
+
+    &--not_done {
+      color: red;
+      font-size: 30px;
+    }
+  }
 }
 
-.to-do__info-name {
-  display: block;
-}
+// .to_do__info_complete--not_done {
+//   color: red;
+//   font-size: 30px;
+// }
 
-.to-do__info-complete {
-  display: block;
-}
+// .to_do__info-complete--done {
+//   color: rgb(21, 255, 0);
+//   font-size: 30px;
+// }
 
-.to_do__info-complete--done {
-  color: rgb(21, 255, 0);
-  font-size: 30px;
-}
-
-.to_do__info-complete--not_done {
-  color: red;
-  font-size: 30px;
-}
+// .to_do__info-complete--not-done {
+//   color: red;
+//   font-size: 30px;
+// }

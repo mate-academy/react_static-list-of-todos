@@ -11,15 +11,16 @@ export const UserInfo:React.FC<Props> = ({ user }) => {
 
     return (
       <div className="user-info">
-        User name:
-        {' '}
-        {user.name}
+        <span>
+          {`User name: ${user.name}`}
+        </span>
         <br />
-        User email:
-        {' '}
-        <a href={mail}>
-          {user.email}
-        </a>
+        <span>
+          {'User email: '}
+          <a href={mail}>
+            {user.email}
+          </a>
+        </span>
       </div>
     );
   }

@@ -6,31 +6,24 @@ type Props = {
   todo: PreparedTodo;
 };
 
-export const TodoInfo:React.FC<Props> = ({ todo }) => {
-  let completion: string;
-  let message: string;
+export const TodoInfo:React.FC<Props> = ({ todo }) => (
+  <div className="to_do__info">
+    <h2 className="to_do__info_title">
+      The goal:
+      {' '}
+      {todo.title}
+    </h2>
 
-  if (todo.completed) {
-    completion = 'to_do__info-complete--done';
-    message = 'Completed';
-  } else {
-    completion = 'to_do__info-complete--not_done';
-    message = 'Not completed';
-  }
+    <UserInfo user={todo.user} />
 
-  return (
-    <div className="to-do__info">
-      <h2 className="to-do__info-title">
-        The goal:
-        {' '}
-        {todo.title}
-      </h2>
-
-      <UserInfo user={todo.user} />
-
-      <span className={completion}>
-        {message}
+    {todo.completed ? (
+      <span className="to_do__info_complete--done">
+        Completed
       </span>
-    </div>
-  );
-};
+    ) : (
+      <span className="to_do__info_complete--not_done">
+        Not completed
+      </span>
+    )}
+  </div>
+);
