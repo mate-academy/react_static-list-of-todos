@@ -1,0 +1,14 @@
+.task {
+  &__title {
+    text-transform: capitalize;
+  }
+
+  &__status {
+    font-size: 16px;
+    color: blue;
+  }
+
+  &__ownerInfo {
+    opacity: 0.7;
+  }
+}
