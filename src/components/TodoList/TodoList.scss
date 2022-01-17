@@ -1,0 +1,44 @@
+.todo {
+  &_list {
+    padding: 0;
+  }
+
+  &_item {
+    border: 2px solid rgb(59, 59, 59);
+    margin: 10px auto ;
+    list-style: none;
+    width: 90%;
+    padding: 10px;
+    background-color: blanchedalmond;
+  }
+
+  &_name {
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  &_status {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+
+  &_completed-red {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+  }
+
+  &_completed-green {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: green;
+  }
+
+  &_title {
+    color: gray;
+    font-size: 18px;
+  }
+}
