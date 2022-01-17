@@ -1,1 +1,9 @@
-// styles go here
+body {
+  background-color: rgb(21, 148, 142);
+}
+
+.App {
+  &__title {
+    text-align: center;
+  }
+}
