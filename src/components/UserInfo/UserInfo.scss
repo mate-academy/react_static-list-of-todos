@@ -1,0 +1,9 @@
+.user-info {
+  font-size: 40px;
+
+  &__email--link {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+  }
+}
