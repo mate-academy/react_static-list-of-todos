@@ -1,0 +1,9 @@
+.user {
+  &__name {
+    font-weight: bold;
+  }
+
+  &__email {
+    text-decoration: underline;
+  }
+}

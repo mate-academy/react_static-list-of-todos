@@ -10,13 +10,11 @@ const preparedTodos: Todo[] = todos.map(todo => ({
   user: users.find(person => person.id === todo.userId) || null,
 }));
 
-const App: React.FC = () => {
-  // console.log(preparedTodos)
-  return (
-    <div className="App">
-      <TodoList preparedTodos={preparedTodos} />
-    </div>
-  );
-};
+const App: React.FC = () => (
+  <div className="App">
+    <TodoList preparedTodos={preparedTodos} />
+  </div>
+);
+
 
 export default App;
