@@ -1,0 +1,14 @@
+.user {
+  display: flex;
+  flex-direction: column;
+
+  &__name {
+    font-size: large;
+    font-weight: 700;
+  }
+
+  &__email {
+    color: indigo;
+  }
+}
+

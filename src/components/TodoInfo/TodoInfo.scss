@@ -1,0 +1,19 @@
+.todo {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+
+&__title {
+font-style: italic;
+}
+
+&__status-completed {
+  color: green;
+}
+
+&__status-notcompleted {
+  color: red;
+}
+
+}
