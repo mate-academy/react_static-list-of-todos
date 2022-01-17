@@ -1,0 +1,23 @@
+.todo {
+  &__title {
+    background-color: rgb(201, 170, 241);
+    padding: 10px 30px;
+    border: 2px solid darkslateblue;
+    border-radius: 100px;
+    color: rgb(1, 68, 131);
+
+  }
+
+  &__uncompleted {
+    background-color: rgba(245, 46, 46, 0.87);
+    border: 1px solid darkslateblue;
+    border-radius: 20px;
+    font-size: 16px;
+    padding: 3px;
+  }
+
+  &__completed {
+    background-color: rgba(46, 245, 89, 0.918);
+  }
+
+}
