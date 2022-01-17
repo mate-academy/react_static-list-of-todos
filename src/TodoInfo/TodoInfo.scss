@@ -1,0 +1,26 @@
+.todo {
+  display:  flex;
+  flex-direction: column;
+  min-width: 800px;
+  max-width: max-content;
+
+  border: 2px solid rgb(15, 139, 56);
+
+  &_list {
+    list-style: none;
+    padding-bottom: 50px;
+  }
+
+  &_user-name {
+    font-size: 18px;
+  }
+
+  &_user-email {
+    font-size: 18px;
+  }
+
+  &_completed {
+    color: saddlebrown;
+    font-size: 20px;
+  }
+}
