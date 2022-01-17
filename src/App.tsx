@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.scss';
+import './styles/App.scss';
 
 import todos from './api/todos';
 import users from './api/users';
@@ -15,9 +15,7 @@ const preparedTodos: Todo[] = todos.map(todo => ({
 const App: React.FC = () => (
   <div className="App">
     <h1>Static list of todos</h1>
-
     <TodoList todos={preparedTodos} />
-
   </div>
 );
 

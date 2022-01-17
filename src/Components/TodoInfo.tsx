@@ -7,9 +7,13 @@ type Props = {
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => (
   <>
-    {`task: ${todo.title}`}
+    <b>
+      {`task: ${todo.title}`}
+    </b>
     <br />
-    {`completed: ${todo.completed}`}
+    <span>
+      {`completed: ${todo.completed}`}
+    </span>
     <br />
     {todo.user && <UserInfo user={todo.user} />}
   </>

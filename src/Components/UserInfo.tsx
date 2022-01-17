@@ -10,6 +10,8 @@ export const UserInfo: React.FC<Props> = ({ user }) => (
       {`name: ${user.name}`}
     </span>
     <br />
-    {`email: ${user.email}`}
+    <span>
+      {`email: ${user.email}`}
+    </span>
   </>
 );
