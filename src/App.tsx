@@ -1,19 +1,13 @@
 import React from 'react';
-import './App.scss';
-
 import todos from './api/todos';
 import users from './api/users';
 import { Todo } from './types/Todo';
 import { Todolist } from './components/TodoList';
 
-const preparedTodos: Todo[] = todos.map((todo) => {
-  const ownerOfTodo = users.find(user => user.id === todo.userId) || null;
-
-  return {
-    ...todo,
-    user: ownerOfTodo,
-  };
-});
+const preparedTodos: Todo[] = todos.map((todo) => ({
+  ...todo,
+  user: users.find(user => user.id === todo.userId) || null,
+}));
 
 const App: React.FC = () => (
   <div className="App">
