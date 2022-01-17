@@ -9,7 +9,7 @@ import { PreparedTodo } from './types/Todo';
 
 const preparedTodos: PreparedTodo[] = todos.map(todo => ({
   ...todo,
-  user: users.find(user => todo.id === user.id) || null,
+  user: users.find(user => todo.userId === user.id) || null,
 }
 ));
 
