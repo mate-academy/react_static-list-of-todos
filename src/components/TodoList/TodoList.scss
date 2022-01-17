@@ -1,0 +1,14 @@
+.user {
+  border: 2px solid rgb(119, 138, 167);
+  border-radius: 20px;
+  padding: 20px;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  background-color: #f6f8ff;
+  width: 90%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  &__info {
+    color:rgb(5, 30, 53);
+  }
+}

@@ -1,0 +1,16 @@
+.todo {
+  &__completed {
+    text-transform: uppercase;
+    color: green;
+  }
+
+  &__not-completed {
+    text-transform: uppercase;
+    color: red;
+  }
+
+  &__title {
+    text-transform: uppercase;
+
+  }
+}
