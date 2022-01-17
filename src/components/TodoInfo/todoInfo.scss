@@ -1,0 +1,23 @@
+.todo {
+  width: 400px;
+  min-height: 150px;
+  border: 2px solid rgb(101, 122, 112);
+  margin: 10px 0 0 10px;
+  padding: 10px;
+
+  &__title {
+    font-size: 20px;
+  }
+
+  &__status {
+    &-completed {
+      color: rgb(30, 236, 40);
+      font-size: 30px;
+    }
+
+    &-notcompleted {
+      color: rgb(221, 46, 46);
+      font-size: 30px;
+    }
+  }
+}
