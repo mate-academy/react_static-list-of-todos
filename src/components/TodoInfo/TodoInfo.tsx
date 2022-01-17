@@ -1,17 +1,16 @@
 import React from 'react';
 import './TodoInfo.scss';
 import { UserInfo } from '../UserInfo/UserInfo';
-import { PreparedTodo } from '../../types/types';
 
 type Props = {
-  goal: PreparedTodo;
+  todo: PreparedTodo;
 };
 
-export const TodoInfo:React.FC<Props> = ({ goal }) => {
+export const TodoInfo:React.FC<Props> = ({ todo }) => {
   let completion: string;
   let message: string;
 
-  if (goal.completed) {
+  if (todo.completed) {
     completion = 'to_do__info_complete--done';
     message = 'Completed';
   } else {
@@ -24,10 +23,10 @@ export const TodoInfo:React.FC<Props> = ({ goal }) => {
       <h2 className="to-do__info-title">
         The goal:
         {' '}
-        {goal.title}
+        {todo.title}
       </h2>
 
-      <UserInfo user={goal.user} />
+      <UserInfo user={todo.user} />
 
       <span className={completion}>
         {message}

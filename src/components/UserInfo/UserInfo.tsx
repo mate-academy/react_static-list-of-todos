@@ -1,6 +1,4 @@
-// import { userInfo } from 'os';
 import React from 'react';
-import { User } from '../../types/types';
 import './UserInfo.scss';
 
 type Props = {
@@ -12,7 +10,7 @@ export const UserInfo:React.FC<Props> = ({ user }) => {
     const mail = `mailto:${user.email}`;
 
     return (
-      <div className="user_info">
+      <div className="user-info">
         User name:
         {' '}
         {user.name}
@@ -27,7 +25,7 @@ export const UserInfo:React.FC<Props> = ({ user }) => {
   }
 
   return (
-    <div className="user_info">
+    <div className="user-info">
       No user assigned
     </div>
   );
