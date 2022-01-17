@@ -12,10 +12,10 @@ const preparedTodos: Todo[] = todos.map(todo => ({
 }));
 
 const App: React.FC = () => (
-  <div className="App">
+  <p className="App">
     <h1 className="App__title">Static list of todos</h1>
     <TodosList todos={preparedTodos} />
-  </div>
+  </p>
 );
 
 export default App;
