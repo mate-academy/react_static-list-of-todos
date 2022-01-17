@@ -1,1 +1,16 @@
-// styles go here
+html {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  margin: -20px;
+  padding: 0;
+}
+
+.App {
+  background-color: rgb(241, 226, 206);
+
+  &__title {
+    text-align: center;
+  }
+}
