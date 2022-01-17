@@ -1,0 +1,11 @@
+.todoList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.todoItem {
+  list-style-type: none;
+  border: 3px solid rgb(0, 110, 255);
+  padding: 20px;
+}
