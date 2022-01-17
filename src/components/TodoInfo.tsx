@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React from 'react';
 
 import { UserInfo } from './UserInfo';
@@ -7,9 +8,11 @@ export const TodoInfo: React.FC<PreparedTodos> = ({
   completed,
   user,
 }) => (
-  <div className={`${completed
-    ? 'ui green card item'
-    : 'ui red card item'}`}
+  <div className={classNames(
+    'ui card',
+    { red: !completed },
+    { green: completed },
+  )}
   >
     <div className="content">
       <div className="header">
@@ -18,9 +21,16 @@ export const TodoInfo: React.FC<PreparedTodos> = ({
     </div>
     {user && <UserInfo {...user} />}
     <div className="extra content">
-      {completed
-        ? <button type="button" className="ui green button">Completed</button>
-        : <button type="button" className="ui red button">Uncompleted</button>}
+      <button
+        type="button"
+        className={classNames(
+          'ui button green',
+          { red: !completed },
+          { green: completed },
+        )}
+      >
+        {completed ? 'Completed' : 'Uncompleted'}
+      </button>
     </div>
   </div>
 );
