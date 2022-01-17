@@ -1,0 +1,22 @@
+.todo {
+  &__completed {
+    color: green;
+    font-size: 25px;
+  }
+
+  &__notCompleted {
+    color: red;
+    font-size: 25px;
+  }
+
+  &__item-box {
+    list-style: none;
+    border: 3px solid red;
+    padding: 10px;
+    border-radius: 10px;
+
+    &--complited {
+      border: 3px solid green;
+    }
+  }
+}

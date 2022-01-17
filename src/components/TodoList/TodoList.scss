@@ -1,0 +1,10 @@
+.todo {
+  &__list {
+    display: grid;
+    gap: 20px;
+  }
+
+  &__item {
+    list-style: none;
+  }
+}
