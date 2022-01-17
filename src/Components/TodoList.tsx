@@ -1,5 +1,4 @@
 import { Todo } from '../Types/Todo';
-import { UserInfo } from './UserInfo';
 import { TodoInfo } from './TodoInfo';
 
 type Props = {
