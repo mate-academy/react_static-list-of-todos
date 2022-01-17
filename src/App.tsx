@@ -7,16 +7,10 @@ import users from './api/users';
 import { Todo } from './Types/Todo';
 import { TodoList } from './Components/TodoList';
 
-const preparedTodos: Todo[] = [];
-
-todos.forEach(task => {
-  const todo: Todo = {
-    ...task,
-    user: users.find(user => task.userId === user.id) || null,
-  };
-
-  preparedTodos.push(todo);
-});
+const preparedTodos: Todo[] = todos.map(todo => ({
+  ...todo,
+  user: users.find(user => todo.userId === user.id) || null,
+}));
 
 const App: React.FC = () => (
   <div className="App">
