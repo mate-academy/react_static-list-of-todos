@@ -1,8 +1,5 @@
 import React from 'react';
-
-/* type Props = {
-  user: User;
-}; */
+import './UserInfo.scss';
 
 type User = {
   name: string;
@@ -11,6 +8,9 @@ type User = {
 
 export const UserInfo: React.FC<User> = ({ name, email }) => (
   <>
-    {`Name: ${name} - Email: ${email}`}
+    <span className="info">
+      {`Name: ${name}`}
+      {`Email: ${email}`}
+    </span>
   </>
 );

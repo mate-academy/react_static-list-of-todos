@@ -1,5 +1,6 @@
 import React from 'react';
 import { UserInfo } from '../userinfo/UserInfo';
+import './TodoInfo.scss';
 
 type Props = {
   todo: Todo;
@@ -9,8 +10,10 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => (
   <>
     {todo.user && (<UserInfo {...todo.user} />)}
     <br />
-    {`Todo: ${todo.title}`}
+    <span className="todo">{`Todo: ${todo.title}`}</span>
     <br />
-    { todo.completed ? 'Status: Complete' : 'Status: Not complete'}
+    {todo.completed
+      ? <span className="todo_completed--true">Complete</span>
+      : <span className="todo_completed--false">Not completed</span>}
   </>
 );
