@@ -3,29 +3,20 @@ import React from 'react';
 import { UserInfo } from '../UserInfo/UserInfo';
 
 type Props = {
-  title: string,
-  completed: boolean,
-  user: User | null,
+  toDo: ToDo,
 };
 
-export const ToDoInfo: React.FC<Props> = ({
-  title,
-  completed,
-  user,
-}) => (
+export const ToDoInfo: React.FC<Props> = ({ toDo }) => (
   <>
     <h2 className="task__title">
-      {title}
+      {toDo.title}
     </h2>
     <div className="task__info">
       <p className="task__status">
         {'completed - '}
-        {String(completed)}
+        {String(toDo.completed)}
       </p>
-      <UserInfo
-        name={user?.name}
-        email={user?.email}
-      />
+      <UserInfo user={toDo.user} />
     </div>
   </>
 );

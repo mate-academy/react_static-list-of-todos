@@ -1,18 +1,14 @@
 import React from 'react';
 
 type Props = {
-  name: string | undefined,
-  email: string | undefined,
+  user: User | null,
 };
 
-export const UserInfo: React.FC<Props> = ({
-  name = '',
-  email = '',
-}) => (
+export const UserInfo: React.FC<Props> = ({ user }) => (
   <p className="task__ownerInfo">
     {'Owner: '}
-    {name}
+    {user?.name}
     {' mail: '}
-    {email}
+    {user?.email}
   </p>
 );

@@ -10,8 +10,5 @@ interface ToDo {
   id: number,
   title: string,
   completed: boolean,
-}
-
-interface PreparedToDo extends ToDo {
   user: User | null,
 }
