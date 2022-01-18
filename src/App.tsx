@@ -13,7 +13,7 @@ const preparedTodos: Todo[] = todos.map((todo) => ({
 
 const App: React.FC = () => (
   <div className="App">
-    <TodoList preparedTodos={preparedTodos} />
+    <TodoList todos={preparedTodos} />
   </div>
 );
 

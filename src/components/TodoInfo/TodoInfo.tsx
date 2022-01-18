@@ -1,8 +1,6 @@
 import React from 'react';
 import { UserInfo } from '../UserInfo';
 
-import './TodoInfo.scss';
-
 export const TodoInfo: React.FC<Todo> = ({
   title,
   completed,
@@ -11,17 +9,13 @@ export const TodoInfo: React.FC<Todo> = ({
   <>
     <h1>{title}</h1>
 
-    <UserInfo
-      name={user
-        ? user.name
-        : 'No name'}
-      username={user
-        ? user.username
-        : 'No username'}
-      email={user
-        ? user.email
-        : 'No email'}
-    />
+    {user && (
+      <UserInfo
+        name={user.name}
+        username={user.username}
+        email={user.email}
+      />
+    )}
     <br />
     {completed
       ? <span><i>Well done</i></span>
