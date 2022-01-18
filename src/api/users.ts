@@ -22,6 +22,7 @@ const users = [
       bs: 'harness real-time e-markets',
     },
   },
+
   {
     id: 2,
     name: 'Ervin Howell',
