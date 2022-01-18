@@ -12,8 +12,8 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
       <UserInfo user={todo.user} />
       <p className="todo__title">{todo.title}</p>
       {todo.completed
-        ? <span className="todo__status-completed">Completed</span>
-        : <span className="todo__status-not">Not completed</span>}
+        ? <button className="ui green button" type="button">Completed</button>
+        : <button className="ui red button" type="button">Not completed</button>}
     </div>
   );
 };
