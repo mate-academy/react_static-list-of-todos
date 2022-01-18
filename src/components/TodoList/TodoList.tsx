@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { TodoInfo } from '../TodoInfo/TodoInfo';
-import { UserInfo } from '../UserInfo/UserInfo';
 
 import './TodoList.scss';
 
@@ -15,18 +14,9 @@ export const TodoList: React.FC<Props> = ({ todoList }) => {
       {todoList.map(todo => {
         return (
           <li key={todo.id} className="data__dataOfUser">
-            {todo.user && (
-              <div className="div">
-                <UserInfo
-                  name={todo.user.name}
-                  email={todo.user.email}
-                />
-              </div>
-            )}
 
             <TodoInfo
-              title={todo.title}
-              completed={todo.completed}
+              {...todo}
             />
           </li>
         );
