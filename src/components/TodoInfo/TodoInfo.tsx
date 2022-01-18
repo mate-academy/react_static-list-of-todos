@@ -4,7 +4,7 @@ import './TodoInfo.scss';
 
 import { UserInfo } from '../UserInfo';
 
-export const TodoInfo:React.FC<PrepearedTodo> = ({
+export const TodoInfo:React.FC<PreparedTodo> = ({
   title,
   completed,
   user,
@@ -14,8 +14,15 @@ export const TodoInfo:React.FC<PrepearedTodo> = ({
       {title}
     </h3>
 
-    <p className={classNames('todo__uncompleted', { todo__completed: completed })}>
-      {completed ? 'Completed' : 'Not completed'}
+    <p className={classNames(
+        'todo__uncompleted',
+        { todo__completed: completed }
+      )}
+    >
+      {completed
+        ? 'Completed'
+        : 'Not completed'
+      }
     </p>
 
     {user && <UserInfo user={user} />}

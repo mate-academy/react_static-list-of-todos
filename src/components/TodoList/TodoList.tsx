@@ -3,7 +3,7 @@ import './TodoList.scss';
 import { TodoInfo } from '../TodoInfo';
 
 type Props = {
-  todos: PrepearedTodo[];
+  todos: PreparedTodo[];
 };
 
 export const TodoList:React.FC<Props> = ({ todos }) => (

@@ -13,6 +13,6 @@ interface User {
   email: string,
 }
 
-interface PrepearedTodo extends Todo {
+interface PreparedTodo extends Todo {
   user: User | null,
 }
