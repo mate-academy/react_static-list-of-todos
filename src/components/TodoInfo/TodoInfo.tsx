@@ -15,13 +15,14 @@ export const TodoInfo:React.FC<PreparedTodo> = ({
     </h3>
 
     <p className={classNames(
-        'todo__uncompleted',
-        { todo__completed: completed }
-      )}
+      'todo__uncompleted',
+      { todo__completed: completed },
+    )}
     >
       {completed
         ? 'Completed'
         : 'Not completed'
+      // eslint-disable-next-line react/jsx-curly-newline
       }
     </p>
 
