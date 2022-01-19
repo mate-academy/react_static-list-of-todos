@@ -13,8 +13,6 @@ export const TodoList: React.FC<Props> = ({ todos }) => (
           title={todo.title}
           completed={todo.completed}
           user={todo.user}
-          userId={todo.userId}
-          id={todo.id}
         />
       </li>
     ))}

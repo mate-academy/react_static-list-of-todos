@@ -2,7 +2,7 @@ import React from 'react';
 import { UserInfo } from '../UserInfo';
 import './TodoInfo.scss';
 
-type Props = PreparedTodo;
+type Props = Omit<PreparedTodo, 'id' | 'userId'>;
 
 export const TodoInfo: React.FC<Props> = ({ title, completed, user }) => (
   <div className="content">
