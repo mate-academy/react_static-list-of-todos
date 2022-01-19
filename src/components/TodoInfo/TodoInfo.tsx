@@ -1,15 +1,11 @@
 import React from 'react';
 import { UserInfo } from '../UserInfo';
 
-type Props = {
-  title: string;
-  completed: boolean;
-  user: User | null;
-};
+type Props = PreparedTodo;
 
 export const TodoInfo: React.FC<Props> = ({ title, completed, user }) => (
   <div className="content">
-    <h2 className="todos">{title}</h2>
+    <h2 className="title">{title}</h2>
     <div className="card-footer">
       {completed
         ? <span className="card-footer-item complete">Status: Comleted</span>
