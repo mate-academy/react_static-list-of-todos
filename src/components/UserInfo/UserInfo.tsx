@@ -1,11 +1,10 @@
 import React from 'react';
 
 type Props = {
-  name: string;
-  email: string;
+  user: User;
 };
 
-export const UserInfo: React.FC<Props> = ({ name, email }) => (
+export const UserInfo: React.FC<Props> = ({ user: { name, email } }) => (
   <div className="
     card-footer-item
     is-flex
