@@ -4,16 +4,16 @@
   flex-direction: column;
   margin-bottom: 5px;
 
-&__title {
-font-style: italic;
-}
+  &__title {
+    font-style: italic;
+  }
 
-&__status-completed {
-  color: green;
-}
+  &__status-completed {
+    color: green;
+  }
 
-&__status-notcompleted {
-  color: red;
-}
+  &__status-notcompleted {
+    color: red;
+  }
 
 }
