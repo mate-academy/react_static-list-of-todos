@@ -16,10 +16,7 @@ interface Address {
   suite: string;
   city: string;
   zipcode: string
-  geo: {
-    lat: string;
-    lng: string;
-  };
+  geo: Geo;
 }
 
 interface Company {
@@ -34,4 +31,9 @@ interface Todo {
   title: string;
   completed: boolean;
   user: User | null;
+}
+
+interface Geo {
+  lat: string;
+  lng: string;
 }
