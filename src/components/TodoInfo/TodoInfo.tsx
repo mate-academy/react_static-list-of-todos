@@ -1,12 +1,12 @@
 import React from 'react';
 
 import { UserInfo } from '../UserInfo/UserInfo';
-import { TodoWithUsers } from '../../types/Todo';
+import { TodoWithUser } from '../../types/Todo';
 
 import './TodoInfo.scss';
 
 interface Props {
-  todoItem: TodoWithUsers;
+  todoItem: TodoWithUser;
 }
 
 export const TodoInfo: React.FC<Props> = ({ todoItem }) => (
@@ -20,7 +20,7 @@ export const TodoInfo: React.FC<Props> = ({ todoItem }) => (
     )}
 
     <p className="todo-info__stage">
-      {`${todoItem.completed ? 'Completed' : 'Wait...'}`}
+      {todoItem.completed ? 'Completed' : 'Wait...'}
     </p>
   </>
 );
