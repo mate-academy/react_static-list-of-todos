@@ -9,7 +9,7 @@ export const TodoInfo: React.FC<Props> = ({ title, completed, user }) => (
     <h2 className="title">{title}</h2>
     <div className="card-footer">
       {completed
-        ? <span className="card-footer-item complete">Status: Comleted</span>
+        ? <span className="card-footer-item complete">Status: Completed</span>
         : <span className="card-footer-item not-complete">Status: Not Completed</span>}
       {user
         ? <UserInfo name={user.name} email={user.email} />
