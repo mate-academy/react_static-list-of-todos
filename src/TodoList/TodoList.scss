@@ -1,0 +1,11 @@
+
+
+.todo {
+  border: 3px solid gray;
+
+  &-list {
+    display: grid;
+    row-gap: 50px;
+    width: 300px;
+  }
+}

@@ -1,0 +1,33 @@
+.card {
+  flex-direction: column;
+
+  &-content {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  &__notcompleted {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-bottom: 3px solid red;
+    color: red;
+  }
+  
+  &__completed {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: green;
+    border-bottom: 3px solid green;
+  }
+}
