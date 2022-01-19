@@ -1,5 +1,4 @@
 import React from 'react';
-import './UserInfo.scss';
 
 type Props = {
   name: string;
@@ -7,7 +6,12 @@ type Props = {
 };
 
 export const UserInfo: React.FC<Props> = ({ name, email }) => (
-  <div className="card-footer-item user__info">
+  <div className="
+    card-footer-item
+    is-flex
+    is-align-items-flex-start
+    is-flex-direction-column"
+  >
     <div>{`Name: ${name}`}</div>
     <div>{`Email: ${email}`}</div>
   </div>
