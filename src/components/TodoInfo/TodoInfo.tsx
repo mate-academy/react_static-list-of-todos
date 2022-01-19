@@ -14,7 +14,7 @@ export const TodoInfo: React.FC<Props> = ({ title, completed, user }) => (
         {' '}
         {completed ? '✔️' : '❌'}
       </p>
-      <UserInfo user={user} />
+      {user && <UserInfo user={user} />}
     </div>
   </div>
 
