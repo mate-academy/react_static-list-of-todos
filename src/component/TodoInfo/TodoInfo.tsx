@@ -6,7 +6,7 @@ type Props = {
 };
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => (
-  <div>
+  <li className={`list-group-item ${todo.completed ? 'active' : ''} `} key={todo.id}>
     <UserInfo user={todo.user} />
     <p>
       <strong>Task:</strong>
@@ -26,5 +26,5 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => (
           Not completed
         </span>
       )}
-  </div>
+  </li>
 );
