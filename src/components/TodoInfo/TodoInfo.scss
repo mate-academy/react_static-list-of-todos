@@ -1,7 +1,13 @@
 .todo-info {
   font-size: 40px;
 
+  &__task {
+    font-weight: bold;
+  }
+
   &__status {
+    font-weight: bold;
+
     &--completed {
       color: green;
     }

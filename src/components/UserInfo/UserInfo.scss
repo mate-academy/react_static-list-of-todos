@@ -1,3 +1,11 @@
 .user-info {
   font-size: 40px;
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__email {
+    font-weight: bold;
+  }
 }
