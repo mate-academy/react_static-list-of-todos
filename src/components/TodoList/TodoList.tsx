@@ -1,6 +1,7 @@
 import React from 'react';
-import { TodoInfo } from '../TodoInfo';
+import cn from 'classnames';
 
+import { TodoInfo } from '../TodoInfo';
 import './TodoList.scss';
 
 type Props = {
@@ -10,17 +11,17 @@ type Props = {
 export const TodoList: React.FC<Props> = ({ todos }) => (
   <ul className="todo-list">
     {todos.map(todo => (
-      <>
-        {todo.completed === true ? (
-          <li key={todo.id} className="todo-list__item todo-list__item--completed">
-            <TodoInfo todo={todo} />
-          </li>
-        ) : (
-          <li key={todo.id} className="todo-list__item">
-            <TodoInfo todo={todo} />
-          </li>
+      <li
+        key={todo.id}
+        className={cn(
+          {
+            'todo-list__item todo-list__item--completed': todo.completed,
+            'todo-list__item': !todo.completed,
+          },
         )}
-      </>
+      >
+        <TodoInfo todo={todo} />
+      </li>
     ))}
   </ul>
 );
