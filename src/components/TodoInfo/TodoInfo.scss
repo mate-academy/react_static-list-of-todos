@@ -1,0 +1,32 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 4px solid transparent;
+  border-radius: 10px;
+  background-color: #6D8299;
+
+  &-status {
+    border-color: #F4D19B;
+
+    h3 {
+      color: #F4D19B;
+    }
+
+    &--completed {
+      border-color: #9CC094;
+      background-color: #F6F6F6;
+
+      h3 {
+        color: #9CC094;
+      }
+    }
+  }
+
+  &__task {
+    font-size: 14px;
+  }
+}
+
