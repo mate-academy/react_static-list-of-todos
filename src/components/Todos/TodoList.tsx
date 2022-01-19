@@ -1,15 +1,17 @@
 import React from 'react';
 import { TodoInfo } from './TodoInfo';
 
+import './Todos.scss';
+
 type Props = {
-  preparedTodos: Todo[];
+  todos: Todo[];
 };
 
-export const TodoList: React.FC<Props> = ({ preparedTodos }) => (
-  <ul className="todos">
-    {preparedTodos.map(element => (
-      <li key={element.id} className="todos__list">
-        <TodoInfo todo={element} />
+export const TodoList: React.FC<Props> = ({ todos }) => (
+  <ul className="todo">
+    {todos.map(todo => (
+      <li key={todo.id} className="todo__list">
+        <TodoInfo todo={todo} />
       </li>
     ))}
   </ul>

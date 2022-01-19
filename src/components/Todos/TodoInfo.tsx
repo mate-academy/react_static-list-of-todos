@@ -12,8 +12,8 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => (
     <br />
     <span className="todo__status">
       {todo.completed
-        ? <div className="todos__list--completed">Completed</div>
-        : <div className="todos__list--not-completed">Not completed</div>}
+        ? <div className="todo__list--completed">Completed</div>
+        : <div className="todo__list--not-completed">Not completed</div>}
     </span>
   </>
 );
