@@ -9,11 +9,10 @@ export const TodoInfo:React.FC<Todo> = ({
 }) => (
   <>
     <h2 className="todo__title">{title}</h2>
-    {completed ? (
-      <h3 className="todo__condition-true">Is completed</h3>
-    ) : (
-      <h3 className="todo__condition-false">Is not completed</h3>
-    )}
+    {completed
+      ? <h3 className="todo__condition-true">Is completed</h3>
+      : <h3 className="todo__condition-false">Is not completed</h3>}
+
     {user && <UserInfo {...user} />}
   </>
 );
