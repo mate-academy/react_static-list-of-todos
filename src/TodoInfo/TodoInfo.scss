@@ -15,19 +15,19 @@
     font-weight: bold;
   }
 
-  &__completed {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    color: green;
-    border-bottom: 3px solid green;
-  }
-
   &__notcompleted {
     display: flex;
     text-align: center;
     justify-content: center;
     border-bottom: 3px solid red;
     color: red;
+  }
+  
+  &__completed {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: green;
+    border-bottom: 3px solid green;
   }
 }
