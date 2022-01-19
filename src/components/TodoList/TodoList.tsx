@@ -1,6 +1,6 @@
 import React from 'react';
 import { TodoInfo } from '../TodoInfo';
-import '../../App.scss';
+import './TodoList.scss';
 
 type Props = {
   todos: PreparedTodo[];

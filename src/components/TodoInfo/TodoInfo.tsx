@@ -1,5 +1,6 @@
 import React from 'react';
 import { UserInfo } from '../UserInfo';
+import './TodoInfo.scss';
 
 type Props = PreparedTodo;
 

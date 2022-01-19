@@ -1,4 +1,5 @@
 import React from 'react';
+import './UserInfo.scss';
 
 type Props = {
   name: string;
