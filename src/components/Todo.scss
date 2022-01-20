@@ -1,15 +1,12 @@
 .todo {
+  margin: 10px auto;
+  width: 600px;
+  border: 2px solid black;
+  padding: 5px;
+  list-style: none;
+
   &__title {
     font-size: 25px;
-    color: rgb(3, 18, 66);
-    text-decoration: underline;
-  }
-
-  &__list {
-    margin: 10px auto;
-    width: 600px;
-    border: 4px solid black;
-    padding: 5px;
-    list-style: none;
+    color: black;
   }
 }

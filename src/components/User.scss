@@ -1,11 +1,14 @@
 .user {
   background-color: wheat;
+  width: 400px;
 
   &__name {
     color: black;
     font-size: 30px;
   }
+
   &__email {
+
     &::after {
       content: "";
       display: block;
