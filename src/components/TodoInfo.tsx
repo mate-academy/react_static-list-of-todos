@@ -1,4 +1,4 @@
-// import classNames from 'classnames';
+import classNames from 'classnames';
 import { UserInfo } from './UserInfo';
 import './Todo.scss';
 
@@ -6,14 +6,14 @@ export const TodoInfo: React.FC<Todo> = ({
   title,
   completed,
   user,
-}) => {
-  return (
-    <div className="todo">
-      {user && (<UserInfo {...user} />)}
-      <p className="todo__title">{title}</p>
+}) => (
+  <div className="todo">
+    {user && (<UserInfo {...user} />)}
+    <p className="todo__title">{title}</p>
+    <span className={classNames('ui', 'button', { red: !completed, green: completed })}>
       {completed
-        ? <button className="ui green button" type="button">Completed</button>
-        : <button className="ui red button" type="button">Not completed</button>}
-    </div>
-  );
-};
+        ? 'Completed'
+        : 'Not completed'}
+    </span>
+  </div>
+);

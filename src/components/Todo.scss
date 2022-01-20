@@ -3,10 +3,13 @@
   width: 600px;
   border: 2px solid black;
   padding: 5px;
-  list-style: none;
 
   &__title {
     font-size: 25px;
     color: black;
+  }
+
+  &__list {
+    list-style: none;
   }
 }
