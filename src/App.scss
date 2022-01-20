@@ -1,1 +1,15 @@
-// styles go here
+.App {
+  background-color: bisque;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+
+  &__title {
+    margin: 20px;
+  }
+}
+
+body {
+  margin: 0;
+}
