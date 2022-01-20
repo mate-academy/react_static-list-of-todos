@@ -1,0 +1,19 @@
+.user {
+  background-color: wheat;
+  width: 400px;
+
+  &__name {
+    color: black;
+    font-size: 30px;
+  }
+
+  &__email {
+
+    &::after {
+      content: "";
+      display: block;
+      padding: 5px;
+      border-bottom: 1px solid blueviolet;
+    }
+  }
+}
