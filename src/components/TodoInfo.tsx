@@ -8,9 +8,14 @@ export const TodoInfo: React.FC<Todo> = ({
   user,
 }) => (
   <div className="todo">
-    {user && (<UserInfo {...user} />)}
+    {user && <UserInfo {...user} />}
     <p className="todo__title">{title}</p>
-    <span className={classNames('ui', 'button', { red: !completed, green: completed })}>
+    <span className={classNames(
+      'ui',
+      'button',
+      { red: !completed, green: completed },
+    )}
+    >
       {completed
         ? 'Completed'
         : 'Not completed'}
