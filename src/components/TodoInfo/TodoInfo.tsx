@@ -10,31 +10,19 @@ export const TodoInfo:React.FC<Todo> = ({
 }) => (
   <>
     <h2 className="todo__title">{title}</h2>
-    {completed
-      ? (
-        <h3
-          className={classNames(
-            'todo__condition',
-            {
-              'todo__condition-true': completed,
-            },
-          )}
-        >
-          Is completed
-        </h3>
-      )
-      : (
-        <h3
-          className={classNames(
-            'todo__condition',
-            {
-              'todo__condition-false': !completed,
-            },
-          )}
-        >
-          Is not completed
-        </h3>
+    <h3
+      className={classNames(
+        'todo__condition',
+        {
+          'todo__condition-true': completed,
+          'todo__condition-false': !completed,
+        },
       )}
+    >
+      {completed
+        ? <p>Is completed</p>
+        : <p>Is not completed</p>}
+    </h3>
 
     {user && <UserInfo {...user} />}
   </>
