@@ -6,7 +6,7 @@ import './TodoList.scss';
 export const TodoList: React.FC<{ todos: Todo[]; }> = ({ todos }) => (
   <div className="todoList">
     {todos.map(todo => (
-      <TodoInfo todo={todo} />
+      <TodoInfo todo={todo} key={todo.id} />
     ))}
   </div>
 );

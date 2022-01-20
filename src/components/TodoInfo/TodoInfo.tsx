@@ -9,7 +9,6 @@ export const TodoInfo: React.FC<{ todo: Todo; }> = ({ todo }) => (
     className={classname('todo-status', 'todo', {
       'todo-status--completed': todo.completed,
     })}
-    key={todo.id}
   >
     {todo.user && (
       <UserInfo user={todo.user} />
