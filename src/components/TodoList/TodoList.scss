@@ -1,0 +1,13 @@
+.to-do-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__item {
+    border: 2px solid rgb(88, 101, 219);
+    border-radius: 10px;
+    width: 300px;
+    list-style: none;
+    padding: 10px;
+  }
+}

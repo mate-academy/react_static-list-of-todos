@@ -1,0 +1,25 @@
+.to-do {
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info-name {
+    display: block;
+  }
+
+  &__info-complete {
+    display: block;
+
+    &--done {
+      color: rgb(21, 255, 0);
+      font-size: 30px;
+    }
+
+    &--not-done {
+      color: red;
+      font-size: 30px;
+    }
+  }
+}
