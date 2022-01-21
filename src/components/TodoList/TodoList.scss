@@ -1,15 +1,15 @@
-.todolist {
+.todo-list {
   list-style: decimal-leading-zero;
-}
 
-.todolist__todo {
-  margin-bottom: 20px;
-  padding: 0 10px;
+  &__todo {
+    margin-bottom: 20px;
+    padding: 0 10px;
 
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #000;
 
-  border: 2px solid black;
-  width: max-content;
+    border: 2px solid black;
+    width: max-content;
+  }
 }

@@ -1,6 +1,6 @@
 /// <reference types="react-scripts" />
 
-interface PreparedTodos {
+interface PreparedTodo {
   userId: number,
   id: number,
   title: string,
