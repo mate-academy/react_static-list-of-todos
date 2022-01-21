@@ -1,15 +1,15 @@
-.to_do {
+.to-do {
 
   &__info {
     display: flex;
     flex-direction: column;
   }
 
-  &__info_name {
+  &__info-name {
     display: block;
   }
 
-  &__info_complete {
+  &__info-complete {
     display: block;
 
     &--done {
@@ -17,24 +17,9 @@
       font-size: 30px;
     }
 
-    &--not_done {
+    &--not-done {
       color: red;
       font-size: 30px;
     }
   }
 }
-
-// .to_do__info_complete--not_done {
-//   color: red;
-//   font-size: 30px;
-// }
-
-// .to_do__info-complete--done {
-//   color: rgb(21, 255, 0);
-//   font-size: 30px;
-// }
-
-// .to_do__info-complete--not-done {
-//   color: red;
-//   font-size: 30px;
-// }

@@ -7,12 +7,12 @@ import { TodoList } from './components/TodoList/TodoList';
 const preparedTodos: PreparedTodo[] = todos.map((todo) => {
   const correctUser = users.find((user) => (user.id === todo.userId));
 
-  const prepared: PreparedTodo = {
+  const preparedTodo: PreparedTodo = {
     ...todo,
     user: correctUser || null,
   };
 
-  return prepared;
+  return preparedTodo;
 });
 
 const App: React.FC = () => (

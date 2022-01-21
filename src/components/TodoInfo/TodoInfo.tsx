@@ -1,5 +1,6 @@
 import React from 'react';
 import './TodoInfo.scss';
+import classNames from 'classnames';
 import { UserInfo } from '../UserInfo/UserInfo';
 
 type Props = {
@@ -7,8 +8,8 @@ type Props = {
 };
 
 export const TodoInfo:React.FC<Props> = ({ todo }) => (
-  <div className="to_do__info">
-    <h2 className="to_do__info_title">
+  <div className="to-do__info">
+    <h2 className="to-do__info-title">
       The goal:
       {' '}
       {todo.title}
@@ -17,11 +18,11 @@ export const TodoInfo:React.FC<Props> = ({ todo }) => (
     <UserInfo user={todo.user} />
 
     {todo.completed ? (
-      <span className="to_do__info_complete--done">
+      <span className="to-do__info-complete--done">
         Completed
       </span>
     ) : (
-      <span className="to_do__info_complete--not_done">
+      <span className="to-do__info-complete--not-done">
         Not completed
       </span>
     )}
