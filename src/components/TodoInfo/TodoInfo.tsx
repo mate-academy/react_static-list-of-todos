@@ -1,6 +1,5 @@
 import React from 'react';
 import './TodoInfo.scss';
-import classNames from 'classnames';
 import { UserInfo } from '../UserInfo/UserInfo';
 
 type Props = {
