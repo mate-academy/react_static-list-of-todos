@@ -1,6 +1,6 @@
 /// <reference types="react-scripts" />
 
-interface Todos {
+interface Todo {
   userId: number,
   id: number,
   title: string,

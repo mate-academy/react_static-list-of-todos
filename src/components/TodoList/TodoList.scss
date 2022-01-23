@@ -1,9 +1,9 @@
 .todo {
-  &_list {
+  &__list {
     padding: 0;
   }
 
-  &_item {
+  &__item {
     border: 2px solid rgb(59, 59, 59);
     margin: 10px auto ;
     list-style: none;
@@ -12,32 +12,32 @@
     background-color: blanchedalmond;
   }
 
-  &_name {
+  &__name {
     font-weight: 600;
     font-size: 20px;
   }
 
-  &_status {
+  &__status {
     display: flex;
     flex-direction: row;
     justify-content: end;
   }
 
-  &_completed-red {
+  &__completed-red {
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background-color: red;
   }
 
-  &_completed-green {
+  &__completed-green {
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background-color: green;
   }
 
-  &_title {
+  &__title {
     color: gray;
     font-size: 18px;
   }

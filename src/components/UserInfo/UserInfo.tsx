@@ -1,12 +1,12 @@
 import React from 'react';
 
 type UserProps = {
-  user: User | null,
+  user: User,
 };
 
 export const UserInfo: React.FC<UserProps> = ({ user }) => (
   <>
-    <p className="todo_name">{user?.name}</p>
-    <p className="">{`Email: ${user?.email}`}</p>
+    <p className="todo__name">{user.name}</p>
+    <p className="">{`Email: ${user.email}`}</p>
   </>
 );
