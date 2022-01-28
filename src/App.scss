@@ -1,1 +1,16 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Helvetica, sans-serif;
+  color: #eea;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+
+  background-color: #114;
+}

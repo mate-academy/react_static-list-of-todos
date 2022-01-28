@@ -1,0 +1,17 @@
+.item {
+  width: 60%;
+  list-style: none;
+  padding: 10px;
+  border: 3px solid #1d8348;
+  border-radius: 7px;
+  margin-top: 10px;
+
+  color: #1d8348;
+  background-color: #d5f5e3;
+}
+
+.active {
+  color: #e74c3c;
+  border-color: #e74c3c;
+  background-color: #fdedec;
+}
