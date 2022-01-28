@@ -1,13 +1,13 @@
 import React from 'react';
 
+import './App.scss';
+import { TodoList } from './components/TodoList/TodoList';
+import { TodoOfUser } from './types/Todo';
+
 import todos from './api/todos';
 import users from './api/users';
-import { PreparedTodo } from './types/PreparedTodo';
-import { TodoList } from './components/TodoList';
 
-import './App.scss';
-
-const preparedTodo: PreparedTodo[] = todos.map(todo => ({
+const preparedTodos: TodoOfUser[] = todos.map(todo => ({
   ...todo,
   user: users.find(user => todo.userId === user.id) || null,
 }));
@@ -15,7 +15,7 @@ const preparedTodo: PreparedTodo[] = todos.map(todo => ({
 const App: React.FC = () => (
   <div className="App">
     <h1>Static list of todos</h1>
-    <TodoList todos={preparedTodo} />
+    <TodoList preparedTodos={preparedTodos} />
   </div>
 );
 
