@@ -1,4 +1,8 @@
 // styles go here
+.page-title {
+  text-align: center;
+}
+
 .user-list {
   display: flex;
   flex-wrap: wrap;
@@ -23,5 +27,4 @@
   height: 100px;
   background-color: #e4cdcd;
   border-radius: 10px;
-
 }
