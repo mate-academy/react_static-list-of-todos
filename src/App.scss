@@ -1,1 +1,27 @@
 // styles go here
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+}
+
+.user-list-item {
+  margin: 0;
+  width: fit-content;
+}
+
+.user-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  height: 100px;
+  background-color: #e4cdcd;
+  border-radius: 10px;
+
+}
