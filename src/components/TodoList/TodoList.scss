@@ -1,0 +1,31 @@
+.todo {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-items: auto;
+
+  &__item {
+    display: inline-block;
+    width: 20%;
+    background-color: rgb(117, 194, 130);
+    border: 1px solid rgb(68, 153, 19);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  &__title {
+    font-size: 18px;
+  }
+  &__status {
+    display: block;
+    font-size: 14px;
+  }
+  &__author {
+    display: block;
+    font-size: 14px;
+  }
+}
