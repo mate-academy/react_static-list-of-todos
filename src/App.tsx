@@ -1,5 +1,4 @@
 import React from 'react';
-import { Todo } from './types/Todo';
 import TodoList from './components/TodoList';
 
 import './App.scss';
@@ -7,7 +6,7 @@ import './App.scss';
 import todos from './api/todos';
 import users from './api/users';
 
-const preparedTodos: Todo[] = todos
+const preparedTodos = todos
   .map(todo => {
     const user = users.find(u => u.id === todo.userId) || null;
 
