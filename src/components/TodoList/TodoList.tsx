@@ -9,9 +9,9 @@ type Props = {
 };
 
 const TodoList: React.FC<Props> = ({ preparedTodos }) => (
-  <ul className="Todo-list">
+  <ul className="todo-list">
     {preparedTodos.map(preparedTodo => (
-      <li className="Todo-list__item">
+      <li className="todo-list__item" key={preparedTodo.todo.title}>
         <TodoInfo preparedTodo={preparedTodo} />
       </li>
     ))}
