@@ -1,6 +1,6 @@
 # React static list of TODOs
 - Replace `<your_account>` with your Github username in the
-  [DEMO LINK](https://<your_account>.github.io/react_static-list-of-todos/)
+  [DEMO LINK](https://Pavlo-Khashchevskyi.github.io/react_static-list-of-todos/)
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
 
 ## Task
@@ -20,3 +20,4 @@ list.
 
 Hint: You can add only the props you use to the `User` interface. `Todo` 
 interface should have a `user` property that could be a `User` or `null`. 
+   

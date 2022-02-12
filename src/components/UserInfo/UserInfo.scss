@@ -1,0 +1,12 @@
+.user {
+  &__name {
+    color: black;
+    text-transform: uppercase;
+    font-size: 22px;
+  }
+
+  &__mail {
+    color: blue;
+    font-style: italic;
+  }
+}
