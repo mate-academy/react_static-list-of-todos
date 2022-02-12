@@ -4,7 +4,6 @@ import './App.scss';
 import todos from './api/todos';
 import users from './api/users';
 import { TodoList } from './components/TodoList/TodoList';
-// import { Todo, User } from './types';
 
 const App: React.FC = () => {
   const preparedTodoItems = todos.map((todo) => ({
