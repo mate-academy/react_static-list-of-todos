@@ -1,0 +1,8 @@
+.todo-list__title {
+  font-size: 28px;
+  color: black;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}

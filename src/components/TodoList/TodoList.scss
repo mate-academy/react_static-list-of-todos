@@ -1,0 +1,30 @@
+.todo-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  
+
+  &__item {
+    position: relative;
+    border: 2px solid #666;
+    width: 400px;
+    border-radius: 15px;
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &--done {
+      background-color: rgba(127, 192, 127, 0.623);
+    }
+
+    &--nodone {
+      background-color: rgba(247, 131, 131, 0.678);
+    }
+
+
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.541);
+    }
+  }
+}

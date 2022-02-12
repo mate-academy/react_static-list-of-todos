@@ -1,1 +1,21 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #999;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  margin: 0 auto;
+  max-width: 1690px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  &__title {
+    font-size: 60px;
+  }
+}
