@@ -6,7 +6,7 @@ import users from './api/users';
 import { Todo, User } from './types';
 import { TodoList } from './components/TodoList';
 
-const preparedTodos: Todo[] = [...todos].map((todo: Todo) => {
+const preparedTodos: Todo[] = todos.map((todo: Todo) => {
   const copy = { ...todo };
 
   copy.user = users
