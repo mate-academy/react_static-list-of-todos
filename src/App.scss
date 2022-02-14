@@ -1,1 +1,7 @@
-// styles go here
+.App {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  &__chapter{
+    text-transform: uppercase;
+  }
+}

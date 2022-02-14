@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.scss';
+import preparedTodos from './api/components/preparedTodos';
+import { TodoList } from './api/components/TodoList/TodoList';
 
-// import todos from './api/todos';
-// import users from './api/users';
-
-const App: React.FC = () => (
-  <div className="App">
-    <h1>Static list of todos</h1>
-  </div>
-);
+const App: React.FC = () => {
+  return (
+    <div className="App">
+      <h1 className="App__chapter">Static list of todos</h1>
+      <TodoList todos={preparedTodos} />
+    </div>
+  );
+};
 
 export default App;
