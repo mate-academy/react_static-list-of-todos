@@ -2,28 +2,24 @@ import { User } from '../../types';
 import './UserInfo.scss';
 
 export type Props = {
-  userItem: User | null;
+  userItem: User;
 };
 
 export const UserInfo: React.FC<Props> = ({ userItem }) => (
-
   <div className="todo__userInfo">
-    {(userItem) && (
-      <>
-        <p className="todo__userName">
-          <strong>
-            {'Author: '.toUpperCase()}
-          </strong>
-          {userItem.name}
-        </p>
-        <p className="todo__userEmail">
-          <strong>
-            {'Email: '.toUpperCase()}
-          </strong>
-          {userItem.email}
-        </p>
-      </>
-    )}
+    <>
+      <p className="todo__userName">
+        <strong>
+          {'Author: '}
+        </strong>
+        {userItem.name}
+      </p>
+      <p className="todo__userEmail">
+        <strong>
+          {'Email: '}
+        </strong>
+        {userItem.email}
+      </p>
+    </>
   </div>
-
 );
