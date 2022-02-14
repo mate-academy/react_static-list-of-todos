@@ -9,7 +9,8 @@ import users from './api/users';
 
 const preparedTodos = todos.map(todo => {
   return {
-    todo: { ...todo },
+    title: todo.title,
+    completed: todo.completed,
     user: users.find(user => user.id === todo.userId) || null,
   };
 });
