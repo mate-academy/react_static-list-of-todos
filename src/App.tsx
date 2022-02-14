@@ -1,5 +1,5 @@
 import React from 'react';
-import TodoList from './api/components/TodoList/TodoList';
+import { TodoList } from './api/components/TodoList/TodoList';
 import './App.scss';
 import todos from './api/todos';
 import users from './api/users';
@@ -11,11 +11,9 @@ const preparedTodos = todos.map(todo => {
   };
 });
 
-const App: React.FC = () => (
+export const App: React.FC = () => (
   <div className="App">
     <h1>Static list of todos</h1>
     <TodoList preparedTodos={preparedTodos} />
   </div>
 );
-
-export default App;

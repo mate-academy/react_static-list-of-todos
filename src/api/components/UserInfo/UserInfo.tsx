@@ -5,19 +5,15 @@ type Props = {
   user: User;
 };
 
-const UserInfo: React.FC<Props> = ({ user }) => (
+export const UserInfo: React.FC<Props> = ({ user }) => (
   <div className="userInfo">
-    <>
-      <p className="userInfo__name">
-        <strong>{'Name: '.toUpperCase()}</strong>
-        {user.name}
-      </p>
-      <p className="userInfo__email">
-        <strong>{'Email: '.toUpperCase()}</strong>
-        {user.email}
-      </p>
-    </>
+    <p className="userInfo__name">
+      <strong>{'Name: '}</strong>
+      {user.name}
+    </p>
+    <p className="userInfo__email">
+      <strong>{'Email: '.toUpperCase()}</strong>
+      {user.email}
+    </p>
   </div>
 );
-
-export default UserInfo;
