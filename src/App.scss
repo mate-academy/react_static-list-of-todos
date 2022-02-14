@@ -1,1 +1,30 @@
-// styles go here
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  padding: 10px;
+}
+
+.todoList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__progress {
+    margin-bottom: 10px;
+  }
+
+  &__task {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: purple;
+  }
+}
