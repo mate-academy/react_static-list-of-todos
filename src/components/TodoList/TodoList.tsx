@@ -4,17 +4,17 @@ import { UserInfo } from '../UserInfo/UserInfo';
 import { Todo } from '../../types/Todo';
 
 type Props = {
-  preparedTodos: Todo[]
+  todos: Todo[]
 };
 
-export const TodoList: React.FC<Props> = ({ preparedTodos }) => (
+export const TodoList: React.FC<Props> = ({ todos }) => (
   <ul className="App__list">
-    {preparedTodos.map(todo => (
+    {todos.map(todo => (
       <li key={todo.id}>
         <div className="task">
           <TodoInfo task={todo} />
 
-          <UserInfo user={todo.user || null} />
+          {todo.user && <UserInfo {...todo.user} />}
         </div>
       </li>
     ))}
