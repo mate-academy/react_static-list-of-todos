@@ -12,15 +12,14 @@ const TodoInfo: React.FC<Prop> = ({ todoshka }) => {
     title,
     completed,
     user,
-    id,
   } = todoshka;
 
   return (
-    <li key={id} className="todoInfo">
+    <>
       <h3>{`Task - ${title}`}</h3>
       <p>{`Completed - ${completed ? 'Yes' : 'No'}`}</p>
       {user && <UserInfo person={user} />}
-    </li>
+    </>
   );
 };
 

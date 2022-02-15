@@ -12,7 +12,7 @@ const TodoList: React.FC<Prop> = ({ preparedTodos }) => {
     <ul className="todoList">
       {preparedTodos.map((todo) => {
         return (
-          <li key={todo.id}>
+          <li key={todo.id} className="todoInfo">
             <TodoInfo todoshka={todo} />
           </li>
         );
