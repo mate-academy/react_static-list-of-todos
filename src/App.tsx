@@ -1,13 +1,32 @@
 import React from 'react';
 import './App.scss';
 
-// import todos from './api/todos';
-// import users from './api/users';
+import TodoList from './components/TodoList';
 
-const App: React.FC = () => (
-  <div className="App">
-    <h1>Static list of todos</h1>
-  </div>
+import todos from './api/todos';
+import users from './api/users';
+
+import { NewItem } from './components/interface/interface';
+
+type Props = {
+  preparedTodos: NewItem[];
+};
+
+const preparedTodos = todos.map((item) => {
+  const newItem: NewItem = {
+    ...item,
+    user: users.find((person) => person.id === item.userId) || null,
+  };
+
+  return newItem;
+}).sort((a, b) => {
+  return a.userId - b.userId;
+});
+
+const App: React.FC<Props> = () => (
+  <TodoList
+    preparedTodos={preparedTodos}
+  />
 );
 
 export default App;
