@@ -5,9 +5,10 @@ import { UserInfo } from '../UserInfo/UserInfo';
 import './TodoInfo.scss';
 
 export const TodoInfo: React.FC<Todo> = ({ title, completed, user }) => {
+  const nameOfClass = completed ? 'todo_completed--true' : 'todo_completed--false';
   const status = completed
-    ? <strong className="todo_completed--true">Complete</strong>
-    : <strong className="todo_completed--false">In process...</strong>;
+    ? <span className={nameOfClass}>Complete</span>
+    : <span className={nameOfClass}>In process...</span>;
 
   return (
     <div className="todo">

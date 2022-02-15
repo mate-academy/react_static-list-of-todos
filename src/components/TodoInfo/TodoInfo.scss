@@ -1,12 +1,12 @@
 .todo_completed {
   &--true {
-    font-weight: 400px;
+    font-weight: bold;
     font-size: 20px;
     color: #228515;
   }
 
   &--false {
-    font-weight: 400px;
+    font-weight: bold;
     font-size: 20px;
     color: #b60d0d;
   }
