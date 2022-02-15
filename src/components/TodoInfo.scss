@@ -1,0 +1,11 @@
+// styles go here
+.todoInfo {
+  border: 1px solid black;
+  margin: 10px auto;
+  max-width: 300px;
+  padding: 10px;
+  background-color: rgb(240, 240, 240);
+
+  display: flex;
+  flex-direction: column;
+}
