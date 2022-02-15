@@ -8,14 +8,10 @@ import { TodoList } from './components/TodoList/TodoList';
 
 const App: React.FC = () => {
   const createdTodo: Todo[] = todos.map(todo => {
-    const todoObject = {
-      id: todo.id,
-      title: todo.title,
-      completed: todo.completed,
+    return {
+      ...todo,
       user: users.find(user => (user.id === todo.userId)) || null,
     };
-
-    return todoObject;
   });
 
   return (
