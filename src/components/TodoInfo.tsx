@@ -19,7 +19,7 @@ const TodoInfo: React.FC<Prop> = ({ todoshka }) => {
     <li key={id} className="todoInfo">
       <h3>{`Task - ${title}`}</h3>
       <p>{`Completed - ${completed ? 'Yes' : 'No'}`}</p>
-      {user !== null && <UserInfo person={user} />}
+      {user && <UserInfo person={user} />}
     </li>
   );
 };
