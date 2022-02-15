@@ -1,11 +1,11 @@
 .todo_completed {
-  &--true {
+  &__true {
     font-weight: bold;
     font-size: 20px;
     color: #228515;
   }
 
-  &--false {
+  &__false {
     font-weight: bold;
     font-size: 20px;
     color: #b60d0d;
@@ -16,4 +16,13 @@
   padding: 20px;
   border-radius: 15px;
   border: 5px solid #000000;
+  box-shadow: 3px 5px 5px 2px #5a64699e;
+
+  &__true {
+    background-color: #20d3da;
+  }
+
+  &__false {
+    background-color: #888b89;
+  }
 }

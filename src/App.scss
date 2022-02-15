@@ -1,5 +1,10 @@
 // styles go here
+.App {
+  &__title {
+    text-align: center;
+  }
+}
+
 ul {
   padding: 10px;
 }
-
