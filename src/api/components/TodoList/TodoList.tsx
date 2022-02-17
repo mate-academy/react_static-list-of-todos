@@ -9,17 +9,15 @@ type Props = {
 
 export const TodoList: React.FC<Props> = ({ todos }) => (
   <ul className="todos">
-    {
-      todos.map(preparedTodo => (
-        <li key={preparedTodo.id} className="todos__item">
-          <TodoInfo
-            title={preparedTodo.title}
-            completed={preparedTodo.completed}
-            user={preparedTodo.user}
-          />
-        </li>
-      ))
-    }
+    { todos.map(preparedTodo => (
+      <li key={preparedTodo.id} className="todos__item">
+        <TodoInfo
+          title={preparedTodo.title}
+          completed={preparedTodo.completed}
+          user={preparedTodo.user}
+        />
+      </li>
+    ))}
   </ul>
 );
 
