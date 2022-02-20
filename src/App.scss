@@ -1,1 +1,8 @@
-// styles go here
+.app {
+  &__title {
+    text-align: center;
+    line-height: 90px;
+    height: 90px;
+    background-color: pink;
+  }
+}
