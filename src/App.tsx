@@ -7,7 +7,7 @@ import { TodoList } from './component/TodoList';
 
 const preparedTodos = todosFromServer.map(todo => ({
   ...todo,
-  user: usersFromServer.find(user => user.id === todo.userId),
+  user: usersFromServer.find(user => user.id === todo.userId) || null,
 }));
 
 const App: React.FC = () => (
