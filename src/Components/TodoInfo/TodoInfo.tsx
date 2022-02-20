@@ -1,6 +1,9 @@
 import React from 'react';
+import classNames from 'classnames';
 import { Todo } from '../../types';
 import UserInfo from '../UserInfo/UserInfo';
+
+import './TodoInfo.scss';
 
 type Props = Todo;
 
@@ -10,10 +13,16 @@ const TodoInfo: React.FC<Props> = ({
   user,
 }) => (
   <>
-    <h3 className={`${completed ? 'card__completed' : 'card__inprogress'}`}>
+    <h3 className={classNames(
+      {
+        info__completed: completed === true,
+        info__inprogress: completed === false,
+      },
+    )}
+    >
       {`${completed ? 'Copmleted' : 'Inprogress'}`}
     </h3>
-    <h2 className="card__title">{title}</h2>
+    <h2 className="todo-info__title">{title}</h2>
     {user && <UserInfo user={user} />}
   </>
 );
