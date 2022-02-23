@@ -1,4 +1,4 @@
-export const TodoList = () => {
+export const UserInfo = () => {
   return (
     <>
     </>

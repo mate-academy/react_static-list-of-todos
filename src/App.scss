@@ -20,12 +20,14 @@ h2 {
     padding: 18px;
 
     list-style: none;
-    border: 1px solid black;
-    border-radius: 10px;
-    transition: box-shadow 0.3s;
+    border: 2px solid rgba(24, 131, 173, 0.884);
+    border-radius: 25px;
+    transition: transform 1s;
 
     &:hover {
-      box-shadow: 0 0 16px #aaa;
+      z-index: 1;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgb(166, 231, 180);
     }
   }
 }
@@ -34,7 +36,6 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 
   &__link {
     text-decoration: none;
@@ -44,8 +45,12 @@ h2 {
     color: #000;
     margin: 16px 0;
     text-transform: capitalize;
+
+    &:hover {
+      text-shadow: 1px 1px 1px aqua ;
+    }
   }
-  
+
   &__status {
     display: inline-block;
     flex-shrink: 0;
@@ -69,22 +74,21 @@ h2 {
     position: relative;
     width: fit-content;
     padding-bottom: 4px;
-    cursor:pointer;
+    cursor: pointer;
 
     &::after {
       content: "";
       position: absolute;
-      height: 2px;
+      height: 3px;
       width: 100%;
-      background-color: #aaa;
-      transform: skewX(-60deg);
+      background-color: rgba(255, 255, 255, 0);
       left: 0;
       bottom: 0;
       transition: background-color 0.3s;
     }
 
     &:hover::after {
-      background-color: #222;
+      background-color: orange;
     }
   }
 }
