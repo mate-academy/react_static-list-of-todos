@@ -1,6 +1,6 @@
 # React static list of TODOs
 - Replace `<your_account>` with your Github username in the
-  [DEMO LINK](https://<your_account>.github.io/react_static-list-of-todos/)
+  [DEMO LINK](https://CCyrillus.github.io/react_static-list-of-todos/)
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
 
 ## Task
@@ -20,3 +20,20 @@ list.
 
 Hint: You can add only the props you use to the `User` interface. `Todo` 
 interface should have a `user` property that could be a `User` or `null`. 
+
+Импортируйте `todos` и `users`, добавьте пользователя к каждой задаче и отобразите их в
+список.
+
+1. Создайте массив `preparedTodos` на основе `todos`. Каждое подготовленное задание должно
+    иметь свойство `user` со ссылкой на пользователя из массива `users` или `null`, если
+    мы не можем найти применение `userId`. Он должен храниться в `App`.
+2. Создайте компонент `TodoList`, принимающий массив `preparedTodos` и
+    рендеринг их в виде списка
+3. Создайте компонент `UserInfo`, принимающий объект `user`, и используйте его для рендеринга.
+    `todo.user` в списке с некоторым стилем. (Покажите хотя бы `имя` и
+    `электронная почта` пользователя`)
+4. Создайте компонент `TodoInfo`, принимающий объект `todo`, и используйте его в
+    список для отображения `название`, `завершено` статус и `Пользователь`
+
+Подсказка: вы можете добавить в пользовательский интерфейс только те реквизиты, которые используете. `Тодо`
+Интерфейс должен иметь свойство `user`, которое может быть `User` или `null`.
