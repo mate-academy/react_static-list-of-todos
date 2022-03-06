@@ -1,1 +1,20 @@
-// styles go here
+body,
+h1 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  padding: 30px 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #c4c7d3;
+  color: #000000;
+
+  &__title {
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #e80f36;
+  }
+}
