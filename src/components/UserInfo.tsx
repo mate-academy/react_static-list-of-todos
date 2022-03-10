@@ -6,12 +6,14 @@ type Props = {
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
   <>
-    {user && (
-      <h2 className="name">
-        {user.name}
+    <h2 className="name">
+      {user?.name}
+      <span>
         {' - '}
-        {user.email}
-      </h2>
-    )}
+      </span>
+    </h2>
+    <h2 className="email">
+      {user?.email}
+    </h2>
   </>
 );

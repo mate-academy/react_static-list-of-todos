@@ -1,17 +1,15 @@
-import Todo from './Interfaces';
-
 type Props = {
-  todos: Todo[];
+  title: string;
+  completed: boolean;
 };
 
-export const TodoInfo: React.FC<Props> = ({ todos = [] }) => (
+export const TodoInfo: React.FC<Props> = ({ title, completed }) => (
   <>
-    {todos.map(todo => (
-      <p>
-        {todo.title}
-        ,
-        {todo.completed}
-      </p>
-    ))}
+    <h2 className="title">
+      {title}
+    </h2>
+    <h3 className="yes_no">
+      {completed}
+    </h3>
   </>
 );
