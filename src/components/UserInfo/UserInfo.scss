@@ -1,0 +1,27 @@
+.UserInfo {
+  text-align: center;
+  padding-bottom: 15px;
+
+  &__names {
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    font-size: 0.9em;
+  }
+
+  &__email {
+    display: block;
+    margin-bottom: 5px;
+
+    text-decoration: none;
+    color: #333;
+  }
+
+  &__website {
+    display: block;
+
+    text-decoration: none;
+    color: #333;
+  }
+}
