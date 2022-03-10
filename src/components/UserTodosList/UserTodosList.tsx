@@ -42,7 +42,7 @@ export const UserTodosList: React.FC = () => {
           <div key={user.id} className="UserTodosItem">
             <UserTodosItem
               user={user}
-              todos={preparedTodos}
+              todos={preparedTodos.filter(todo => todo.userId === user.id)}
             />
           </div>
         ))

@@ -12,15 +12,19 @@ type Props = {
 
 export const UserTodosItem: React.FC<Props> = ({ user, todos }) => (
   <>
-    <UserInfo
-      name={user.name}
-      username={user.username}
-      email={user.email}
-      website={user.website}
-    />
+    {user && (
+      <>
+        <UserInfo
+          name={user.name}
+          username={user.username}
+          email={user.email}
+          website={user.website}
+        />
 
-    <TodoList
-      todoList={todos.filter(todo => todo.userId === user.id)}
-    />
+        <TodoList
+          todoList={todos}
+        />
+      </>
+    )}
   </>
 );
