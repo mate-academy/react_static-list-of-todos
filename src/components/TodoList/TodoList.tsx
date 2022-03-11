@@ -1,6 +1,6 @@
 import React from 'react';
 import { TodoItem } from '../TodoItem';
-import { Todo } from '../../types/types';
+import { Todo } from '../../types/Todo';
 import './TodoList.scss';
 
 type Props = {

@@ -1,15 +1,12 @@
+import { Todo } from './Todo';
+
 export interface User {
   id: number;
   name: string;
   username: string;
   email: string;
   website: string;
+  todos?: Todo[],
 }
 
-export interface Todo {
-  userId: number;
-  id: number;
-  title: string;
-  completed: boolean;
-  user?: User;
-}
+export type UserRequired = Required<User>;

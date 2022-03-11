@@ -1,30 +1,25 @@
 import React from 'react';
 import './UserTodosItem.scss';
 
-import { Todo, User } from '../../types/types';
+import { UserRequired } from '../../types/User';
 import { TodoList } from '../TodoList';
 import { UserInfo } from '../UserInfo';
 
 type Props = {
-  user: User,
-  todos: Todo[],
+  user: UserRequired
 };
 
-export const UserTodosItem: React.FC<Props> = ({ user, todos }) => (
+export const UserTodosItem: React.FC<Props> = ({ user }) => (
   <>
-    {user && (
-      <>
-        <UserInfo
-          name={user.name}
-          username={user.username}
-          email={user.email}
-          website={user.website}
-        />
+    <UserInfo
+      name={user.name}
+      username={user.username}
+      email={user.email}
+      website={user.website}
+    />
 
-        <TodoList
-          todoList={todos}
-        />
-      </>
-    )}
+    <TodoList
+      todoList={user.todos}
+    />
   </>
 );
