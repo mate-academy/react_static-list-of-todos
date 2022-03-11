@@ -1,0 +1,10 @@
+.TodoList {
+  margin: 0;
+
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+  gap: 20px;
+}

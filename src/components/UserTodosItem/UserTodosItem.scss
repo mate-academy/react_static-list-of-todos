@@ -1,0 +1,10 @@
+.UserTodosItem {
+  margin-bottom: 20px;
+  padding: 20px 10px 30px;
+  border: 1px solid lightblue;
+  border-radius: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
