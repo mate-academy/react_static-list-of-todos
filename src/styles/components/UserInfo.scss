@@ -1,0 +1,15 @@
+.UserInfo {
+  text-align: center;
+
+  &__name {
+    padding-bottom: 5px;
+  }
+
+  &__link {
+    font-weight: 900;
+
+    &:hover {
+      border-bottom: 1px solid;
+    }
+  }
+}
