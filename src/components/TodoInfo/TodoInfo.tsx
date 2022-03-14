@@ -11,15 +11,19 @@ export const TodoInfo: React.FC<Props> = ({
 }) => (
   <div className="TodoInfo" data-check={completed}>
     <div className="TodoInfo__task">
-      {completed
-        ? <input type="checkbox" checked readOnly />
-        : <input type="checkbox" readOnly />}
+      <input type="checkbox" checked={completed} readOnly />
 
       <p className="TodoInfo__title">
         {title}
       </p>
     </div>
 
-    {user && <UserInfo name={user.name} email={user.email} website={user.website} />}
+    {user && (
+      <UserInfo
+        name={user.name}
+        email={user.email}
+        website={user.website}
+      />
+    )}
   </div>
 );
