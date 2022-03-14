@@ -1,0 +1,30 @@
+.todo {
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: lightcoral;
+    transition: transform 0.3s;
+
+    &-completed {
+      background-color: lightgreen;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
