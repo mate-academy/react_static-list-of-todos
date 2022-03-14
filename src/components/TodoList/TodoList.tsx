@@ -1,6 +1,5 @@
 import React from 'react';
 import { TodoInfo } from '../TodoInfo/TodoInfo';
-import { Todo } from '../../types/todo';
 
 import './TodoList.scss';
 import { UserInfo } from '../UserInfo/UserInfo';
