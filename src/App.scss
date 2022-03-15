@@ -1,1 +1,38 @@
-// styles go here
+.TodoList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #e8e3e1;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 500px;
+    margin-bottom: 30px;
+    &--g {
+      background-color: green;
+    }
+    &--r {
+      background-color: red;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 0 10px;
+  }
+
+  &__status {
+    font-size: 16px;
+  }
+
+  &__userInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+}
