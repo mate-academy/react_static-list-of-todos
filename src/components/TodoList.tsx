@@ -1,9 +1,9 @@
 import { Todo } from '../types/interfaces';
 import { TodoInfo } from './TodoInfo';
 
-export const TodoList: React.FC<Props> = ({ preparedTodos }) => (
+export const TodoList: React.FC<Props> = ({ todos }) => (
   <ul className="TodoList">
-    {preparedTodos.map((todo:Todo) => (
+    {todos.map((todo:Todo) => (
       <TodoInfo
         key={todo.id}
         title={todo.title}
@@ -15,5 +15,5 @@ export const TodoList: React.FC<Props> = ({ preparedTodos }) => (
 );
 
 type Props = {
-  preparedTodos: Todo[],
+  todos: Todo[],
 };
