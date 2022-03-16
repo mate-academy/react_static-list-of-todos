@@ -23,9 +23,11 @@ export const TodoInfo: React.FC<Props> = ({
       </b>
       {completed ? 'YES' : 'NO'}
     </p>
-    <UserInfo
-      name={user ? user.name : ''}
-      email={user ? user.email : ''}
-    />
+    {user && (
+      <UserInfo
+        name={user.name}
+        email={user.email}
+      />
+    )}
   </>
 );
