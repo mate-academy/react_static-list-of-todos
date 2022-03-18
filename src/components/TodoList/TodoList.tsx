@@ -18,8 +18,8 @@ export const TodoList: React.FC<Props> = ({ todos }) => (
         className="todo-list__list-item"
         key={todo.id}
       >
-        <UserInfo {...todo} />
-        <TodoInfo {...todo} />
+        <UserInfo user={todo.user} />
+        <TodoInfo title={todo.title} completed={todo.completed} />
       </li>
     ))}
   </ul>
