@@ -1,0 +1,51 @@
+.todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  &__title {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  &__progress {
+    color: #d1350d;
+    font-size: 1.1rem;
+    align-self: flex-start;
+    margin-top: 20px;
+
+    &::after {
+      display: inline-block;
+      content: "";
+      position: relative;
+      left: 10px;
+      width: 0.6em;
+      height: 0.6em;
+      border-radius: 50%;
+      background-color: #d1350d;
+    }
+
+    &--completed {
+      color: #5abb41;
+      font-weight: 500;
+
+      &::after {
+        background-color: #5abb41;
+      }
+    }
+  }
+
+  @media (max-width: 620px) {
+    width: 100%;
+    margin: 0;
+
+    &__title {
+      margin-bottom: 0.3em;
+    }
+
+    &__email {
+      margin-bottom: 0.6em;
+    }
+  }
+}

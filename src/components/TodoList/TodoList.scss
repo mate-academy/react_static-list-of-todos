@@ -1,0 +1,32 @@
+.todo-list__list {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+
+  &-item {
+    list-style: none;
+    border: 2px solid #051a1a80;
+    min-height: 150px;
+    width: 32%;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px 5px;
+
+    display: flex;
+    flex-direction: column;
+
+    @media(max-width: 1100px) {
+      width: 48%;
+    }
+
+    @media(max-width: 690px) {
+      width: 70%;
+    }
+
+    @media(max-width: 550px) {
+      width: 90%;
+    }
+  }
+}
