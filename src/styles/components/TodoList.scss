@@ -1,0 +1,10 @@
+.Todolist {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  width: max-content;
+
+  &__item {
+    margin-bottom: 15px;
+  }
+}
