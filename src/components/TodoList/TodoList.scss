@@ -1,0 +1,21 @@
+.Todo {
+  padding: 50px;
+  background-color: black;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+
+  &__item {
+    padding: 10px;
+
+    background-color: aquamarine;
+    border: 1px solid black;
+  }
+}
