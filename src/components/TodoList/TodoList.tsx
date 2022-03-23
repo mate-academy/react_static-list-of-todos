@@ -1,5 +1,6 @@
 import { Todo } from '../../types/Todo';
 import { TodoInfo } from '../TodoInfo/TodoInfo';
+import { UserInfo } from '../UserInfo/UserInfo';
 
 import './TodoList.scss';
 
@@ -13,6 +14,7 @@ export const TodoList: React.FC<Props> = ({ todos }) => (
       {todos.map(todo => (
         <li className="Todo__item" key={todo.id}>
           <TodoInfo todo={todo} />
+          {todo.user && <UserInfo user={todo.user} />}
         </li>
       ))}
     </ul>

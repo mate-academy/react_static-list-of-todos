@@ -1,7 +1,8 @@
 import { Todo } from '../../types/Todo';
-import { UserInfo } from '../UserInfo/UserInfo';
 
-type Props = { todo: Todo };
+type Props = {
+  todo: Todo
+};
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => (
   <>
@@ -12,7 +13,5 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => (
     <span>
       {`id: ${todo.id} | completed: ${todo.completed ? 'yes' : 'no'}`}
     </span>
-
-    <UserInfo user={todo.user} />
   </>
 );
