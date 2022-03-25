@@ -10,7 +10,15 @@ export const TodoList: React.FC<Props> = ({ listOfToDos }) => (
   <ul>
     {listOfToDos.map(item => (
       <li key={item.id}>
-        <UserInfo userData={item.user} />
+        {item.user && item.user
+          ? (
+            <UserInfo userData={item.user} />
+          )
+          : (
+            <p>
+              No user data
+            </p>
+          )}
         <TodoInfo
           title={item.title}
           completed={item.completed}
