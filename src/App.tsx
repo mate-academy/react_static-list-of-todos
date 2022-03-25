@@ -1,29 +1,22 @@
 import React from 'react';
 import './App.scss';
 
-import todos from './api/todos';
-import users from './api/users';
+import todosFromServer from './api/todos';
+import usersFromServer from './api/users';
 
 import { TodoList } from './components/TodoList/TodoList';
 
-import { Todo } from './types/Todo';
+import { Todo, TodoUser } from './types/Todo';
 import { User } from './types/User';
 
-const preparedTodos: Todo[] = [];
+function prepareTodos(todos: Todo[], users: User[]): TodoUser[] {
+  return todos.map(todo => ({
+    ...todo,
+    user: users.find(user => user.id === todo.userId) || null,
+  }));
+}
 
-todos.forEach(
-  todo => {
-    const obj = { ...todo };
-
-    const person: User | undefined = users.find(user => user.id === todo.userId);
-
-    Object.assign(obj, {
-      user: person,
-    });
-
-    preparedTodos.push(obj);
-  },
-);
+const preparedTodos = prepareTodos(todosFromServer, usersFromServer);
 
 const App: React.FC = () => (
   <div className="App">

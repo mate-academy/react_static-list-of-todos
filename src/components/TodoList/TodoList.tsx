@@ -1,12 +1,13 @@
-import { Todo } from '../../types/Todo';
+import { FC } from 'react';
+import { TodoUser } from '../../types/Todo';
 import { TodoInfo } from '../TodoInfo/TodoInfo';
 import { UserInfo } from '../UserInfo/UserInfo';
 
-type Props = {
-  todos: Todo[]
-};
+interface Props {
+  todos: TodoUser[]
+}
 
-export const TodoList: React.FC<Props> = ({ todos }) => (
+export const TodoList: FC<Props> = ({ todos }) => (
   <ul>
     {
       todos.map(todo => (
@@ -26,7 +27,6 @@ export const TodoList: React.FC<Props> = ({ todos }) => (
               />
             </div>
           )}
-
         </li>
       ))
     }

@@ -5,5 +5,8 @@ export interface Todo {
   id: number;
   title: string;
   completed: boolean;
-  user?: User | null;
+}
+
+export interface TodoUser extends Todo {
+  user: User | null
 }

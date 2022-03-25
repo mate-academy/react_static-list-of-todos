@@ -1,13 +1,18 @@
+import { FC } from 'react';
 import { User } from '../../types/User';
 
-type Props = {
-  title: string,
-  completed: boolean,
-  user: User | null | undefined,
-};
+interface Props {
+  title: string;
+  completed: boolean;
+  user: User | null;
+}
 
-export const TodoInfo: React.FC<Props> = ({ title, completed, user }) => (
-  <>
-    {`Title: ${title}, Completed: ${completed}, Username: ${user && user.username}, UserPhone: ${user && user.phone}`}
-  </>
-);
+export const TodoInfo: FC<Props> = ({ title, completed, user }) => {
+  const userInfo = user ? `Username: ${user.username}, UserPhone: ${user && user.phone}` : '';
+
+  return (
+    <>
+      {`Title: ${title}, Completed: ${completed}, ${userInfo}`}
+    </>
+  );
+};
