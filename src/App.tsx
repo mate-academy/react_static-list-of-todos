@@ -10,8 +10,9 @@ import { Todo, TodoUser } from './types/Todo';
 import { User } from './types/User';
 
 function prepareTodos(todos: Todo[], users: User[]): TodoUser[] {
-  return todos.map(todo => ({
+  return todos.map((todo, index: number) => ({
     ...todo,
+    index,
     user: users.find(user => user.id === todo.userId) || null,
   }));
 }

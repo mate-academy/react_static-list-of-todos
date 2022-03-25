@@ -8,5 +8,6 @@ export interface Todo {
 }
 
 export interface TodoUser extends Todo {
-  user: User | null
+  index: number;
+  user: User | null;
 }
