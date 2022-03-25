@@ -11,7 +11,7 @@ const preparedTodos: Todo[] = [];
 todos.forEach((currentToDo) => {
   const currentUser = users.find((user) => user.id === currentToDo.userId);
   const toDo: Todo = {
-    user: currentUser === undefined ? null : currentUser,
+    user: currentUser || null,
     ...currentToDo,
   };
 
