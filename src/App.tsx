@@ -1,10 +1,10 @@
 import React from 'react';
-import './styles/App.scss';
+import './App.scss';
 
-import todos from '../api/todos';
-import users from '../api/users';
-import { Todo } from '../types/Todo';
-import { TodoList } from './TodoList';
+import todos from './api/todos';
+import users from './api/users';
+import { Todo } from './types/Todo';
+import { TodoList } from './components/TodoList';
 
 const preparedTodos: Todo[] = [];
 
