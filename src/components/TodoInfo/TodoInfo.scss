@@ -1,0 +1,22 @@
+.todo__items-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.todo__complited {
+  background-color: green;
+  border: 1px solid black;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  &--not {
+    background-color: red;
+    border: 1px solid black;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+}
