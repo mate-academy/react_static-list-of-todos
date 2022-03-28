@@ -1,0 +1,36 @@
+.TodoInfo {
+  flex: 0.7;
+  display: flex;
+  gap: 20px;
+  margin-right: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: rgba(121, 46, 241, 0.2) 0px 2px 1px -1px,
+    rgba(121, 46, 241, 0.14) 0px 1px 1px 0px,
+    rgba(121, 46, 241, 0.12) 0px 1px 3px 0px;
+  transition: transform 300ms;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &__button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 22px;
+    color: #792ef1;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-size: 18px;
+    text-transform: capitalize;
+
+    &--completed {
+      text-decoration: line-through;
+    }
+  }
+}
