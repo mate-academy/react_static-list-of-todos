@@ -12,6 +12,6 @@ export interface Todo {
   completed: boolean;
 }
 
-export interface Todos extends Todo {
+export type Todos = Todo & {
   user?: User;
-}
+};

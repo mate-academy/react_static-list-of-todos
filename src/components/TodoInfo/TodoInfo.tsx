@@ -1,10 +1,14 @@
 import { FC } from 'react';
 import { MdRadioButtonUnchecked, MdOutlineCheckCircle } from 'react-icons/md';
 
-import { Todo } from '../../types';
 import './TodoInfo.scss';
 
-export const TodoInfo: FC<Todo> = ({ title, completed }) => {
+type Props = {
+  title: string;
+  completed: boolean;
+};
+
+export const TodoInfo: FC<Props> = ({ title, completed }) => {
   return (
     <div className="TodoInfo">
       <button
