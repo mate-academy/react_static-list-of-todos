@@ -1,0 +1,22 @@
+.UserInfo {
+  flex: 0.3;
+  text-align: left;
+
+  &__name {
+    color: #6e6666;
+    font-weight: normal;
+  }
+
+  &__email {
+    color: #000;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: none;
+    transition: color 300ms;
+    cursor: pointer;
+
+    &:hover {
+      color: #792ef1;
+    }
+  }
+}
