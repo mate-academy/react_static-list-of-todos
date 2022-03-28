@@ -1,8 +1,8 @@
-body {
+.container {
   margin: 10px;
 }
 
-ul {
+.todoList {
   display: grid;
   padding: 0;
 
@@ -10,19 +10,16 @@ ul {
   gap: 10px;
 
   list-style: none;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #999;
+  }
 }
-
-li {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-
-  border: 1px solid #000;
-  border-radius: 10px;
-  background-color: #999;
-}
-
-
-
