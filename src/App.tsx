@@ -1,12 +1,12 @@
-import React from 'react';
+import { FC } from 'react';
+
+import { TodoList } from './components/TodoList/TodoList';
+import { preapareTodos } from './api/data';
 import './App.scss';
 
-// import todos from './api/todos';
-// import users from './api/users';
-
-const App: React.FC = () => (
+const App: FC = () => (
   <div className="App">
-    <h1>Static list of todos</h1>
+    <TodoList todos={preapareTodos} />
   </div>
 );
 
