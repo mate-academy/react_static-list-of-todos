@@ -1,0 +1,14 @@
+.todo-list {
+  list-style-type: none;
+
+  &__item {
+    width: 50%;
+    padding: 1rem;
+    border: 1px solid;
+    border-radius: 1rem;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
