@@ -21,9 +21,8 @@ list.
 Hint: You can add only the props you use to the `User` interface. `Todo` 
 interface should have a `user` property that could be a `User` or `null`. 
 
-## REQUIREMENTS:
- - `list of todos` should contain `data-cy="todo-list"` attribute  
- - `preparedtodos` list should have `data-cy="prepared-todos"` attribute
+## REQUIREMENTS: 
+ - every item in `preparedtodos` list should have `data-cy="prepared-todos"` attribute
  - `Todo` items should have `data-cy="todo"` attribute
  - `TodoInfo` component title should have `data-cy="todo-title"` attribute
  - `name` of the `user` should have `data-cy="user-name"` attribute

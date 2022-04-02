@@ -9,11 +9,6 @@ describe('Page', () => {
     cy.visit('/');
   });
 
-  it('have title "Static list of todos"', () => {
-    cy.getByDataCy('todo-list')
-      .should('have.text', 'Static list of todos');
-  });
-
   it('consists of 200 posts', () => {
     cy.getByDataCy('prepared-todos')
       .should('have.length', todos.length);
