@@ -1,0 +1,29 @@
+.user {
+  display: grid;
+  gap: 10px;
+  border: 2px solid #e5e5;
+  border-radius: 10px;
+  padding: 10px;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  &__info {
+    list-style: none;
+    font-size: 16px;
+  }
+
+  &__text {
+    font-weight: bold;
+  }
+}
