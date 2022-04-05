@@ -14,7 +14,7 @@ export const TodoList: React.FC<Props> = ({ todos }) => (
       {todos.map(item => (
         <li key={item.id}>
           <div className="todoItem">
-            <TodoInfo todos={item} />
+            <TodoInfo todo={item} />
             {item.user && <UserInfo user={item.user} />}
           </div>
         </li>
