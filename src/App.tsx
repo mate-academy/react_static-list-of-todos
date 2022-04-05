@@ -7,10 +7,10 @@ import { Todo } from './types';
 import TodoList from './TodoList/TodoList';
 
 const App: React.FC = () => {
-  const preparedTodos: Array<Todo> = todos.map(e => {
+  const preparedTodos: Array<Todo> = todos.map(todo => {
     return {
-      ...e,
-      user: users.find(user => user.id === e.userId) || null,
+      ...todo,
+      user: users.find(user => user.id === todo.userId) || null,
     };
   });
 

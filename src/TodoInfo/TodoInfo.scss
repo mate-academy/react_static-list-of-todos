@@ -1,0 +1,24 @@
+.todoInfoCard {
+  width: 250px;
+  border-radius: 10%;
+  font-size: 19px;
+  margin: 10px;
+  box-sizing: content-box;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.todoInfoTitle {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: italic;
+}
+
+.completed {
+  background-color: #8fbc8f;
+  border: 2px solid #006400;
+}
+
+.notCompleted {
+  background-color: #fa8072;
+  border: 2px solid #dc143c;
+}
