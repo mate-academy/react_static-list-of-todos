@@ -4,13 +4,13 @@ import TodoInfo from '../TodoInfo/TodoInfo';
 import './TodoList.scss';
 
 type Props = {
-  preparedTodos: Todo[],
+  todos: Todo[],
 };
 
-const TodoList: React.FC<Props> = ({ preparedTodos }) => {
+const TodoList: React.FC<Props> = ({ todos }) => {
   return (
     <div className="TodoList">
-      {preparedTodos.map(todo => <TodoInfo key={todo.id} todo={todo} />)}
+      {todos.map(todo => <TodoInfo key={todo.id} todo={todo} />)}
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { User } from '../types';
 import './UserInfo.scss';
 
 type Props = {
-  user: User,
+  user: User | null,
 };
 
 const UserInfo: React.FC<Props> = ({ user }) => (
@@ -13,7 +13,7 @@ const UserInfo: React.FC<Props> = ({ user }) => (
         {user.username}
       </div>
       <div>
-        {user?.name}
+        {user.name}
       </div>
       <div className="userEmail">
         {user.email}

@@ -6,18 +6,18 @@ import users from './api/users';
 import { Todo } from './types';
 import TodoList from './TodoList/TodoList';
 
-const App: React.FC = () => {
-  const preparedTodos: Array<Todo> = todos.map(todo => {
-    return {
-      ...todo,
-      user: users.find(user => user.id === todo.userId) || null,
-    };
-  });
+const preparedTodos: Array<Todo> = todos.map(todo => {
+  return {
+    ...todo,
+    user: users.find(user => user.id === todo.userId) || null,
+  };
+});
 
+const App: React.FC = () => {
   return (
     <div className="App">
       <h1 className="title">Static list of todos</h1>
-      <TodoList preparedTodos={preparedTodos} />
+      <TodoList todos={preparedTodos} />
     </div>
   );
 };
