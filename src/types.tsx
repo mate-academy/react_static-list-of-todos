@@ -6,7 +6,6 @@ export type Todo = {
   user: User | null,
 };
 
-// export type User = typeof users[0] | null;
 export type User = {
   id: number,
   name: string,
