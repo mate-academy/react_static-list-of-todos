@@ -1,0 +1,30 @@
+.todo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    height: 100%;
+    border-radius: 10px;
+
+    &--false {
+      background-color: #e92d2d;
+    }
+
+    &--true {
+      background-color: #078b38;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
