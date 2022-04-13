@@ -1,1 +1,23 @@
-// styles go here
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.container {
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  margin: 50px auto;
+}
