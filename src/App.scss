@@ -1,1 +1,67 @@
 // styles go here
+@font-face {
+  font-family: "Roboto";
+  src: url();
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+}
+
+.page {
+  &__title {
+    margin: 24px 0;
+    text-align: center;
+  }
+}
+
+.todo {
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 24px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 16px;
+    width: 300px;
+    height: 250px;
+
+    border-radius: 24px;
+    background-color: lightcoral;
+
+    transition: .3s all ease-in;
+
+    &--completed {
+      background-color: lightgreen;
+    }
+
+    &--title {
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    &--status {
+      text-align: right;
+      font-weight: 600;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+p {
+  margin-bottom: 12px;
+}
