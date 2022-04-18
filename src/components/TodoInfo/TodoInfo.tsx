@@ -11,9 +11,7 @@ const TodoInfo: React.FC<Todo> = ({
   <>
     <div className="todoBlock">
       <strong>Todo name:</strong>
-      {' '}
-      {title}
-      {' '}
+      {` ${title} `}
     </div>
     <div className="todoBlock">
       <strong>Todo status:</strong>

@@ -4,20 +4,16 @@ import TodoInfo from '../TodoInfo/TodoInfo';
 import './TodoList.scss';
 
 type ListOfTodos = {
-  todosArray: Todo[],
+  todos: Todo[],
 };
 
-const TodoList: React.FC<ListOfTodos> = ({ todosArray }) => (
+const TodoList: React.FC<ListOfTodos> = ({ todos }) => (
   <ul className="todoList">
-    {todosArray.map(todoItem => {
-      return (
-        <>
-          <li className="todoItem" key={todoItem.id}>
-            <TodoInfo {...todoItem} />
-          </li>
-        </>
-      );
-    })}
+    {todos.map(todo => (
+      <li className="todoItem" key={todo.id}>
+        <TodoInfo {...todo} />
+      </li>
+    ))}
   </ul>
 );
 
