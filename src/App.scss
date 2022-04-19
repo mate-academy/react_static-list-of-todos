@@ -1,1 +1,21 @@
-// styles go here
+.name {
+  display: inline;
+  color: aqua;
+}
+
+.name > span {
+  color: black;
+}
+
+.email {
+  display: inline;
+  color: indianred;
+}
+
+.title {
+  color: gold;
+}
+
+.yes_no {
+  color: greenyellow;
+}
