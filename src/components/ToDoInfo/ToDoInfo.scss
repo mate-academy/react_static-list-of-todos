@@ -1,0 +1,25 @@
+.todo__items-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: normal;
+  font-size: 0.8em;
+  &--not {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+}
+
+.todo__completed {
+  background-color: lightblue;
+  width: 10px;
+  height: 20px;
+  &--not {
+    background-color: lightcoral;
+    width: 10px;
+    height: 80px;
+  }
+}
