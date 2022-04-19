@@ -4,7 +4,7 @@ import './App.scss';
 import todos from './api/todos';
 import users from './api/users';
 
-import { ToDoUsersAll } from './types/ToDoUsersAll';
+import { ToDoUsersAll } from './components/types/ToDoUsersAll';
 import { ToDoList } from './components/ToDoList/ToDoList';
 
 const preparedTodos: Array<ToDoUsersAll> = todos.map(todo => {
