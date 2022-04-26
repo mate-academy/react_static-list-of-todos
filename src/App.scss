@@ -1,1 +1,27 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+li,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Inconsolata", monospace;
+}
+
+.App {
+  padding: 30px 60px;
+  background-color: #444;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #1dfdd8;
+  }
+}
