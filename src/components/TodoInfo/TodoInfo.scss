@@ -1,0 +1,16 @@
+.todo-info {
+  &__title {
+    text-transform: capitalize;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  &__status {
+    margin-top: 0;
+  }
+  & .completed {
+    color: green;
+  }
+  & .not-completed {
+    color: red;
+  }
+}
