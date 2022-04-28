@@ -1,4 +1,4 @@
-@import '../../vars';
+@import "../../vars";
 
 .UserInfo {
   display: flex;
@@ -6,7 +6,7 @@
   flex-direction: column;
 
   min-width: max-content;
-  width: 200px;
+  width: 200;
   padding: 4px;
 
   color: $darkBlue;
@@ -14,13 +14,9 @@
   font-size: 16px;
   line-height: 100%;
 
-  border-radius: 4px;
-  background-color: $lightBlue;
-  box-shadow: 0px 0px 6px 2px $lightBlue;
   background-color: $pink;
-
   border-radius: 4px;
-  box-shadow: 0px 0px 6px 2px $pink;
+  box-shadow: 0 0 6px 2px $pink;
 
   &__property {
     margin: 0;
@@ -28,7 +24,7 @@
 
   &__highlighted {
     color: $pink;
-    padding: 2px 20px;
+    padding: 2px 20;
 
     text-transform: uppercase;
 
