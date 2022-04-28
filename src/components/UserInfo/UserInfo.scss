@@ -6,7 +6,7 @@
   flex-direction: column;
 
   min-width: max-content;
-  width: 200;
+  width: 250px;
   padding: 4px;
 
   color: $darkBlue;
@@ -24,7 +24,7 @@
 
   &__highlighted {
     color: $pink;
-    padding: 2px 20;
+    padding: 2px 20px;
 
     text-transform: uppercase;
 
