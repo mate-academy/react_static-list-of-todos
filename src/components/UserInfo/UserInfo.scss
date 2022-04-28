@@ -1,0 +1,34 @@
+@import "../../vars";
+
+.UserInfo {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+  min-width: max-content;
+  width: 250px;
+  padding: 4px;
+
+  color: $darkBlue;
+  text-align: center;
+  font-size: 16px;
+  line-height: 100%;
+
+  background-color: $pink;
+  border-radius: 4px;
+  box-shadow: 0 0 6px 2px $pink;
+
+  &__property {
+    margin: 0;
+  }
+
+  &__highlighted {
+    color: $pink;
+    padding: 2px 20px;
+
+    text-transform: uppercase;
+
+    background-color: $darkBlue;
+    border-radius: 4px;
+  }
+}
