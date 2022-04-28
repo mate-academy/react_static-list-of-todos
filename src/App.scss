@@ -1,1 +1,17 @@
-// styles go here
+@import './vars';
+
+body {
+  margin: 0;
+
+  background-color: $darkBlue;
+
+  user-select: none;
+}
+
+.App {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

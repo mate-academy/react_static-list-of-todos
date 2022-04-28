@@ -1,0 +1,38 @@
+@import '../../vars';
+
+.UserInfo {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+  min-width: max-content;
+  width: 200px;
+  padding: 4px;
+
+  color: $darkBlue;
+  text-align: center;
+  font-size: 16px;
+  line-height: 100%;
+
+  border-radius: 4px;
+  background-color: $lightBlue;
+  box-shadow: 0px 0px 6px 2px $lightBlue;
+  background-color: $pink;
+
+  border-radius: 4px;
+  box-shadow: 0px 0px 6px 2px $pink;
+
+  &__property {
+    margin: 0;
+  }
+
+  &__highlighted {
+    color: $pink;
+    padding: 2px 20px;
+
+    text-transform: uppercase;
+
+    background-color: $darkBlue;
+    border-radius: 4px;
+  }
+}
