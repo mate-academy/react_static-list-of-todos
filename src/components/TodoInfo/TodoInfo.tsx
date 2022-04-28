@@ -1,5 +1,5 @@
 import React from 'react';
-import { PreparedTodos } from "../Todolist/PreparedTodos";
+import { PreparedTodos } from '../Todolist/PreparedTodos';
 
 type Props = {
   todo: PreparedTodos,
@@ -10,12 +10,12 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
     <div className="TodoInfo">
       <input
         type="checkbox"
-        id="todo.id"
+        id={`todo-${todo.id}`}
         defaultChecked={todo.completed}
         className="TodoInfo__toggler"
       />
 
-      <label htmlFor="todo.id" className="TodoInfo__title">
+      <label htmlFor={`todo-${todo.id}`} className="TodoInfo__title">
         {todo.title.toUpperCase()}
       </label>
     </div>

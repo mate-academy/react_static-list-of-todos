@@ -1,5 +1,5 @@
 import React from 'react';
-import { User } from "../Todolist/PreparedTodos";
+import { User } from '../Todolist/PreparedTodos';
 
 type Props = {
   user: User | null;
