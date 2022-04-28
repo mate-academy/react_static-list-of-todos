@@ -1,1 +1,10 @@
 // styles go here
+.App {
+  background-color: rgb(193, 218, 195);
+
+  &__title {
+    font-family: sans-serif;
+    color: darkgreen;
+    text-align: center;
+  }
+}
