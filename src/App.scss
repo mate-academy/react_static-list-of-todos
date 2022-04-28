@@ -1,1 +1,25 @@
-// styles go here
+.container {
+  margin: 10px;
+}
+
+.todoList {
+  display: grid;
+  padding: 0;
+
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+
+  list-style: none;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #999;
+  }
+}
