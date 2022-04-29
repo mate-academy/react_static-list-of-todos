@@ -2,24 +2,18 @@ import { User } from '../types/User';
 import './User.scss';
 
 type Props = {
-  info: User;
+  info: User | null;
 };
 
-export const UserInfo: React.FC<Props> = ({
-  info: {
-    name,
-    username,
-    email,
-  },
-}) => (
+export const UserInfo: React.FC<Props> = ({ info }) => (
   <ul className="User">
     <li className="User__info">
       For
       {' '}
-      {name}
+      {info && info.name}
       {' '}
-      {username}
+      {info && info.username}
     </li>
-    <li className="User__email">{email}</li>
+    <li className="User__email">{info && info.email}</li>
   </ul>
 );
