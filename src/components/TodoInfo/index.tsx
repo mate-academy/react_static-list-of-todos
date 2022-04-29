@@ -1,7 +1,7 @@
 import classNames from 'classnames';
-import { User } from '../types/User';
-import { UserInfo } from './UserInfo';
-import './Todo.scss';
+import { User } from '../../types/User';
+import { UserInfo } from '../UserInfo';
+import './style.scss';
 
 type Props = {
   title: string;
@@ -16,6 +16,6 @@ export const TodoInfo: React.FC<Props> = ({ title, status, user }) => (
     >
       {status ? 'completed' : 'not completed'}
     </p>
-    <UserInfo info={user} />
+    {user && <UserInfo props={user} />}
   </>
 );
