@@ -20,3 +20,9 @@ list.
 
 Hint: You can add only the props you use to the `User` interface. `Todo` 
 interface should have a `user` property that could be a `User` or `null`. 
+
+## REQUIREMENTS:
+Todo `title` should have attribute `data-cy="title"`
+Todo `status` should have attribute `data-cy="status"`
+`Username` in  `UserInfo` component should have attribute `data-cy="username"`
+`Email` in `UserInfo` component should have attribute `data-cy="email"`
