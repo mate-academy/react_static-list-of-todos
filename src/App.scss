@@ -1,1 +1,44 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+.todo {
+
+  &_list {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 25px;
+    list-style-type: none;
+  }
+
+  &_item {
+    width: 300px;
+
+    background: grey;
+    border: 1px solid black;
+    border-radius: 50px;
+  }
+
+  &_title {
+    text-align: center;
+  }
+
+  &_checed {
+    text-align: center;
+  }
+}
+
+.user {
+  text-align: center;
+  &_mail {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    cursor: none;
+}}
