@@ -16,6 +16,8 @@
     border: 1px solid rgb(155, 154, 154);
     border-radius: 5px;
 
+    transition: box-shadow 0.3s;
+
     &:hover {
       box-shadow: 5px 5px 18px -4px rgb(155, 154, 154);
     }
