@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users } from '../../../types/interfaces';
+import { Users } from '../../types/interfaces';
 
 export const UserInfo: React.FC<Users> = ({ name, email }) => (
   <>
