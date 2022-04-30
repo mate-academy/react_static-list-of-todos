@@ -1,6 +1,6 @@
 import React from 'react';
 import { PreparedTodos } from '../../types/interfaces';
-import { UserInfo } from '../UserInfo';
+import { UserInfo } from '../UserInfo/UserInfo';
 import './TodoInfo.scss';
 
 export const TodoInfo: React.FC<PreparedTodos> = ({

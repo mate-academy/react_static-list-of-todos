@@ -1,5 +1,5 @@
 import React from 'react';
-import { TodoInfo } from '../TodoInfo';
+import { TodoInfo } from '../TodoInfo/TodoInfo';
 import { PreparedTodos } from '../../types/interfaces';
 import './TodoList.scss';
 

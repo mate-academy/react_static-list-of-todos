@@ -4,7 +4,7 @@ import { Users, PreparedTodos } from './types/interfaces';
 
 import todos from './api/todos';
 import users from './api/users';
-import { TodoList } from './components/TodoList';
+import { TodoList } from './components/TodoList/TodoList';
 
 export const preparedTodos: PreparedTodos[] = todos.map((item) => (
   {
