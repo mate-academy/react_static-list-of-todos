@@ -1,0 +1,27 @@
+.TodoInfo {
+  // border: 1px solid black;
+  list-style: none;
+  padding: 5px 20px;
+  margin: 20px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  color: white;
+
+  &--done {
+    background: linear-gradient(270deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: black;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
+  &__progress {
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    font-size: 15px;
+  }
+}
