@@ -1,0 +1,11 @@
+.toDoInfo {
+  border: 2px solid black;
+
+  &__completeFiedl_true {
+    background-color: green;
+  }
+}
+
+.isComplited {
+  background-color: green;
+}
