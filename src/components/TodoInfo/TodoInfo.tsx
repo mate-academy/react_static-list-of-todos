@@ -6,7 +6,7 @@ import { User } from '../../types/User';
 type Props = {
   title: string,
   completed: boolean,
-  user: User,
+  user: User | null,
 };
 
 export const TodoInfo: React.FC<Props> = ({

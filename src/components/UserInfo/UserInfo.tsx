@@ -3,7 +3,7 @@ import './UserInfo.scss';
 import { User } from '../../types/User';
 
 type Props = {
-  user: User,
+  user: User | null,
 };
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
@@ -11,12 +11,12 @@ export const UserInfo: React.FC<Props> = ({ user }) => (
     <div className="user-info__name">
       <strong>Name:</strong>
       {' '}
-      {user.name}
+      {user?.name}
     </div>
     <div className="user-info__email">
       <strong>Email:</strong>
       {' '}
-      {user.email}
+      {user?.email}
     </div>
   </div>
 );
