@@ -1,8 +1,8 @@
 import React from 'react';
 
 type Props = {
-  name: string | undefined,
-  email: string | undefined,
+  name?: string | null,
+  email?: string | null,
 };
 
 export const UserInfo: React.FC<Props> = ({ name, email }) => (
@@ -18,3 +18,8 @@ export const UserInfo: React.FC<Props> = ({ name, email }) => (
     </p>
   </>
 );
+
+UserInfo.defaultProps = {
+  name: null,
+  email: null,
+};

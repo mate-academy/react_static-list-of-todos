@@ -21,7 +21,11 @@ export const ToDoInfo: React.FC<Props> = ({
 
     <label>
       Done:
-      <input type="checkbox" checked={completed} className="item__checkbox" />
+      <input
+        type="checkbox"
+        defaultChecked={completed}
+        className="item__checkbox"
+      />
     </label>
 
     <UserInfo
