@@ -11,8 +11,8 @@
 
   list-style: none;
   transition: transform 0.3s;
-}
 
-.todoList:hover {
-  transform: scale(105%);
+  &:hover {
+    transform: scale(105%);
+  }
 }
