@@ -12,6 +12,8 @@ export const TodoList: React.FC<PreparedTodosList> = ({ preparedTodos }) => (
     {
       preparedTodos.map((elem) => (
         <TodoInfo
+          key={elem.id}
+          userId={elem.userId}
           id={elem.id}
           title={elem.title}
           completed={elem.completed}

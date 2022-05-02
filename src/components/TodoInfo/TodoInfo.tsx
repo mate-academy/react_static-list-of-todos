@@ -4,7 +4,6 @@ import { UserInfo } from '../UserInfo/UserInfo';
 import './TodoInfo.scss';
 
 export const TodoInfo: React.FC<PreparedTodos> = ({
-  id,
   title,
   completed,
   user,
@@ -12,13 +11,14 @@ export const TodoInfo: React.FC<PreparedTodos> = ({
   const classNameTodo = `TodoInfo ${completed ? 'TodoInfo--done' : ''}`;
 
   return (
-    <li key={id} className={classNameTodo}>
+    <li className={classNameTodo}>
       <h2 className="TodoInfo__title">{`Task: ${title}`}</h2>
       <p className="TodoInfo__progress">
         {(user === null)
           ? 'No user data'
           : (
             <UserInfo
+              id={user.id}
               name={user.name}
               email={user.email}
             />
