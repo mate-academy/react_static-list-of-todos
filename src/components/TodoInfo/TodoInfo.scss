@@ -1,0 +1,22 @@
+.todo {
+  padding: 20px ;
+  border: 1px solid black;
+  border-radius: 2px;
+  background-color: rgb(247, 165, 57);
+}
+
+.statusDone {
+  margin-top: 10px;
+  padding: 3px;
+  text-align: center;
+  background-color: #97ce68;
+  border-radius: 5px;
+}
+
+.statusInProgress {
+  margin-top: 10px;
+  padding: 3px;
+  text-align: center;
+  background-color: rgb(230, 74, 74);
+  border-radius: 5px;
+}
