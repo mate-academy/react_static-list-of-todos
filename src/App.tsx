@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.scss';
-
-// import todos from './api/todos';
-// import users from './api/users';
+import preparedTodos from './api/components/preparedTodos';
+import { TodoList } from './api/components/TodoList/TodoList';
 
 const App: React.FC = () => (
   <div className="App">
-    <h1>Static list of todos</h1>
+    <h1 className="App__chapter">Static list of todos</h1>
+    <TodoList todos={preparedTodos} />
   </div>
 );
 
