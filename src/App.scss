@@ -1,1 +1,22 @@
-// styles go here
+body,
+div,
+p,
+ul,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  background-color: rgba(221, 193, 233, 0.85);
+  box-sizing: border-box;
+}
+
+.previewTitle {
+  font-size: 40px;
+  text-align: center;
+}

@@ -1,0 +1,17 @@
+.item {
+  font-size: 25px;
+  padding-bottom: 5px;
+
+  &__status {
+    font-weight: 500;
+    color: rgb(77, 18, 18);
+  }
+
+  &__completed {
+    color: greenyellow;
+  }
+
+  &__notcompleted {
+    color: rgb(184, 15, 15);
+  }
+}
