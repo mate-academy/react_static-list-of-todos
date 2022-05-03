@@ -1,1 +1,35 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+div {
+  margin: 0;
+}
+
+body {
+  background-color: silver;
+}
+
+.App {
+  width: 100%;
+  margin: 0 auto;
+
+  &__title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+    margin: 40px;
+    color: #8a22e1;
+    box-sizing: content-box;
+    letter-spacing: 8px;
+    text-shadow: 2px 2px 2px #000;
+  }
+}

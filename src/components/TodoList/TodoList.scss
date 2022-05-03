@@ -1,0 +1,23 @@
+.todoList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  &__item {
+    width: 500px;
+    min-height: 200px;
+    list-style: none;
+    margin: 30px 20px;
+    padding: 30px;
+    border: 2px solid gray;
+    background-color: #888;
+    border-radius: 30%;
+    cursor: cell;
+    transition: all 0.5s;
+    
+    &:hover {
+      transform: scale(1.2, 1.3);
+      background-color: #aaa;
+    }
+  }
+}

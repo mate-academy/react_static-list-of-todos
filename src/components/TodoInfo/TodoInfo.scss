@@ -1,0 +1,26 @@
+.todo {
+
+  &__title {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-bottom: 1px solid black;
+  }
+
+  &__status {
+    font-size: 1rem;
+    border: 2px solid;
+    padding: 5px;
+
+    &--done {
+      border-color: green;
+      color: green;
+    }
+
+    &--undone {
+      border-color: red;
+      color: red;
+    }
+  }
+}
