@@ -1,0 +1,25 @@
+.todo-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 0 10px;
+
+    border: 1px solid rgb(155, 154, 154);
+    border-radius: 5px;
+
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 5px 5px 18px -4px rgb(155, 154, 154);
+    }
+  }
+}
