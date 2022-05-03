@@ -1,7 +1,4 @@
-.preparedTodos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  list-style: none;
+.TodoList {
+  margin: 0;
+  padding: 0;
 }
-

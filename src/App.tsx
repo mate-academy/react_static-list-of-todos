@@ -1,11 +1,10 @@
-import React from 'react';
 import './App.scss';
 import { Todo } from './components/types/Todo';
 
-import { TodoList } from './components/TodoList/TodoList';
-
 import todosFromServer from './api/todos';
 import usersFromServer from './api/users';
+
+import { TodoList } from './components/TodoList/TodoList';
 
 const preparedTodos: Todo[] = todosFromServer.map(todo => ({
   ...todo,
@@ -14,7 +13,7 @@ const preparedTodos: Todo[] = todosFromServer.map(todo => ({
 
 const App: React.FC = () => (
   <div className="App">
-    <h1>Static list of todos</h1>
+    <h1 className="App__title">Static list of todos</h1>
     <TodoList preparedTodos={preparedTodos} />
   </div>
 );
