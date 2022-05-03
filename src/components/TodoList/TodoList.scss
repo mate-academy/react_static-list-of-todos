@@ -1,0 +1,9 @@
+.List {
+  border: 5px solid darkmagenta;
+  border-radius: 12px;
+  max-width: 600px;
+
+  &__item {
+    list-style: none;
+  }
+}

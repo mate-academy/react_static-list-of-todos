@@ -1,0 +1,13 @@
+.User {
+  list-style: none;
+
+  &__name {
+    font-size: 20px;
+  }
+
+  &__email {
+    font-style: italic;
+    color: darkgreen;
+    margin-bottom: 15px;
+  }
+}
