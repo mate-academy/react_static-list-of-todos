@@ -1,25 +1,23 @@
 import React from 'react';
 
-type Props = {
-  name?: string | null,
-  email?: string | null,
-};
+import { User } from '../../types/User';
+
+type Props = Pick<User, 'name' | 'email'>;
 
 export const UserInfo: React.FC<Props> = ({ name, email }) => (
   <>
-    <p>
-      {'Responsible for implementation: '}
-      <strong>{name}</strong>
-    </p>
+    {name && (
+      <p>
+        {'Responsible for implementation: '}
+        <strong>{name}</strong>
+      </p>
+    )}
 
-    <p>
-      {'Contact Email: '}
-      <strong>{email}</strong>
-    </p>
+    {email && (
+      <p>
+        {'Contact Email: '}
+        <strong>{email}</strong>
+      </p>
+    )}
   </>
 );
-
-UserInfo.defaultProps = {
-  name: null,
-  email: null,
-};

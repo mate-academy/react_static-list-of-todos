@@ -1,12 +1,8 @@
 import React from 'react';
-import { User } from '../../types/User';
+import { ToDo } from '../../types/ToDo';
 import { UserInfo } from '../UserInfo/UserInfo';
 
-type Props = {
-  user: User | null,
-  title: string,
-  completed: boolean,
-};
+type Props = Pick<ToDo, 'user' | 'title' | 'completed'>;
 
 export const ToDoInfo: React.FC<Props> = ({
   user,
@@ -28,9 +24,11 @@ export const ToDoInfo: React.FC<Props> = ({
       />
     </label>
 
-    <UserInfo
-      name={user?.name}
-      email={user?.email}
-    />
+    {user && (
+      <UserInfo
+        name={user.name}
+        email={user.email}
+      />
+    )}
   </>
 );

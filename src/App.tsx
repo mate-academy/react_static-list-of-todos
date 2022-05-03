@@ -12,7 +12,7 @@ const list: ToDo[] = todos.map((toDo: Omit<ToDo, 'user'>) => ({
   ...toDo,
   user: users.find((user: User) => {
     return user.id === toDo.userId;
-  }) || null,
+  }),
 }
 ));
 

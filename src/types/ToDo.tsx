@@ -2,7 +2,7 @@ import { User } from './User';
 
 export interface ToDo {
   userId: number,
-  user: User | null,
+  user?: User,
   id: number,
   title: string,
   completed: boolean,
