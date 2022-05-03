@@ -1,1 +1,10 @@
-// styles go here
+body {
+  background-color: rgb(251, 249, 249);
+  color: #333;
+}
+
+.todo {
+  &__title {
+    text-align: center;
+  }
+}
