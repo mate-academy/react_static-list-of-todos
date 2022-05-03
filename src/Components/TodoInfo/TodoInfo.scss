@@ -1,0 +1,13 @@
+.todo {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid rgb(18, 120, 145);
+  border-radius: 30px;
+  padding-left: 10px;
+  cursor: pointer;
+
+  &__title {
+    color: rgb(26, 89, 68);
+  }
+}
