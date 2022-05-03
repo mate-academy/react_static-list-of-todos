@@ -17,12 +17,12 @@ export const TodoInfo: React.FC<Props> = ({
   <>
     <p className="todo-info">
       <div className="todo-info__item">
-        <span className="todo-info__title">Task:</span>
-        {` ${title}`}
+        <span className="todo-info__title">Task: </span>
+        {title}
       </div>
       <div className="todo-info__item">
-        <span className="todo-info__title">Status:</span>
-        {` ${status ? 'Done' : 'Not ready'}`}
+        <span className="todo-info__title">Status: </span>
+        {status ? 'Done' : 'Not ready'}
       </div>
     </p>
     <UserInfo user={user} />
