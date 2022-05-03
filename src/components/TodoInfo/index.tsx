@@ -6,7 +6,7 @@ import './style.scss';
 type Props = {
   title: string;
   status: boolean;
-  user: User | null;
+  user?: User;
 };
 export const TodoInfo: React.FC<Props> = ({ title, status, user }) => (
   <>
@@ -16,6 +16,6 @@ export const TodoInfo: React.FC<Props> = ({ title, status, user }) => (
     >
       {status ? 'completed' : 'not completed'}
     </p>
-    {user && <UserInfo props={user} />}
+    {user && <UserInfo user={user} />}
   </>
 );

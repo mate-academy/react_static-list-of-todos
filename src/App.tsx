@@ -9,7 +9,7 @@ import users from './api/users';
 
 const preparedTodos: Todos[] = todos.map(todo => ({
   ...todo,
-  user: users.find(user => user.id === todo.userId) || null,
+  user: users.find(user => user.id === todo.userId),
 }));
 
 const App: React.FC = () => (
