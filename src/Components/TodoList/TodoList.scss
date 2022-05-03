@@ -1,0 +1,27 @@
+.todo {
+  &__list {
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 30px;
+    gap: 30px;
+
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    height: 300px;
+
+    border: 3px solid black;
+    border-radius: 10px;
+  }
+}
+
+.container {
+  padding: 0 20px;
+}
