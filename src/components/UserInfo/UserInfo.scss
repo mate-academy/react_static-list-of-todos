@@ -1,0 +1,25 @@
+.user__info-title {
+  font-weight: bold;
+}
+
+.user__info-item {
+  margin-bottom: 20px;
+}
+
+.user__info-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-decoration: none;
+  color: orange;
+  height: 40px;
+
+  width: 80px;
+  background-color: rgb(25, 219, 93);
+  border-radius: 10px;
+
+  &:hover {
+    background-color: rgb(8, 146, 56);
+  }
+}
