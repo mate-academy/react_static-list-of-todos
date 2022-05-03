@@ -9,7 +9,7 @@ import './TodoInfo.scss';
 type Props = {
   title: string;
   completed: boolean;
-  user: User | null;
+  user?: User;
 };
 
 const TodoInfo: React.FC<Props> = ({
@@ -21,9 +21,11 @@ const TodoInfo: React.FC<Props> = ({
     <div className="todo-item__title">
       {title}
     </div>
-    <UserInfo
-      user={user}
-    />
+    {user && (
+      <UserInfo
+        user={user}
+      />
+    )}
     <div className={classNames(
       'todo-item__status',
       {
@@ -34,5 +36,13 @@ const TodoInfo: React.FC<Props> = ({
     />
   </>
 );
+
+TodoInfo.defaultProps = {
+  user: {
+    id: 0,
+    name: 'no name...',
+    email: 'no email',
+  },
+};
 
 export default TodoInfo;
