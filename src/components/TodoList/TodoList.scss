@@ -1,0 +1,24 @@
+.TodoList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+
+  &__items {
+    width: 300px;
+    height: max-content;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px 10px;
+    background-color: rgb(204, 255, 204);
+    transition: transform 0.3s;
+
+    &:hover {
+    transform: scale(1.05);
+    }
+  }
+}
