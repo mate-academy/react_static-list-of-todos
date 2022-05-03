@@ -1,1 +1,71 @@
-// styles go here
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  color: rgb(70, 70, 70);
+}
+
+body {
+  margin: 0 auto;
+  background-color: #eee;
+}
+
+.TodoList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.TodoList__Item {
+  text-align: center;
+  margin: 10px;
+  padding: 20px 40px;
+  background-color: rgb(255, 250, 250);
+  border: 2px solid lightgray;
+  border-radius: 20px;
+}
+
+.TodoList__Item--completed {
+  background-color: rgb(250, 255, 250);
+}
+
+.TodoInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.TodoInfo__title {
+  color: #000;
+  font-size: 20px;
+}
+
+.TodoInfo__status {
+  padding: 6px;
+  font-weight: 500;
+  border: 2px solid red;
+  border-radius: 10px;
+}
+
+.TodoInfo__status--completed {
+  border: 2px solid green;
+}
+
+.UserInfo {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.UserInfo__email {
+  text-transform: lowercase;
+  font-size: 12px;
+}
