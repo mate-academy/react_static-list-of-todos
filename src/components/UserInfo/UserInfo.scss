@@ -1,0 +1,21 @@
+.user-info {
+  text-align: center;
+
+  &__name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+  }
+
+  &__email {
+    font-weight: 600;
+    box-sizing: content-box;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  &__phone {
+    font-style: italic;
+    font-weight: 400;
+  }
+}
