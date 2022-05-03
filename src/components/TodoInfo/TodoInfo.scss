@@ -1,0 +1,16 @@
+.TodoInfo {
+  border: 2px solid darkmagenta;
+  border-radius: 8px;
+  padding-left: 10px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+
+  &__status {
+    font-size: 20px;
+    color: red;
+  }
+
+  &__active {
+    color: green;
+  }
+}
