@@ -3,17 +3,18 @@ import { PreparedTodos } from '../../types/interfaces';
 import { UserInfo } from '../UserInfo/UserInfo';
 import './TodoInfo.scss';
 
-export const TodoInfo: React.FC<PreparedTodos> = ({
-  title,
-  completed,
-  user,
-}) => {
-  const classNameTodo = `TodoInfo ${completed ? 'TodoInfo--done' : ''}`;
+type Props = {
+  elem: PreparedTodos,
+};
+
+export const TodoInfo: React.FC<Props> = ({ elem }) => {
+  const { title, completed, user } = elem;
+  const classNameTodo = `todoInfo ${completed ? 'todoInfo--done' : ''}`;
 
   return (
     <li className={classNameTodo}>
-      <h2 className="TodoInfo__title">{`Task: ${title}`}</h2>
-      <p className="TodoInfo__progress">
+      <h2 className="todoInfo__title">{`Task: ${title}`}</h2>
+      <p className="todoInfo__progress">
         {(user === null)
           ? 'No user data'
           : (
