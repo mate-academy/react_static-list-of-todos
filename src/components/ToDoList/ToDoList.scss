@@ -1,0 +1,21 @@
+.toDoList {
+  display: flex;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  gap: 30px;
+
+  align-items: center;
+  justify-content: center;
+
+  &__item {
+    list-style: none;
+
+    width: 400px;
+    // height: 300px;
+    gap: 30px;
+
+    // background-color: #363945;
+  }
+}

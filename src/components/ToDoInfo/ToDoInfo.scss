@@ -1,0 +1,20 @@
+.todoInfo {
+  border: 1px solid black;
+
+  border-radius: 5px;
+
+  transition: 0.3s transform;
+
+  cursor: pointer;
+
+  color: white;
+
+  height: 350px;
+  background-color: #798ea4;
+
+  padding-left: 10px;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
