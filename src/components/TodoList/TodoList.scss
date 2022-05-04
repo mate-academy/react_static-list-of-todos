@@ -1,0 +1,14 @@
+.todos {
+  font-family: Arial, Helvetica, sans-serif;
+
+  &__list {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 30px;
+  }
+
+  &__item {
+    list-style: none;
+  }
+}
