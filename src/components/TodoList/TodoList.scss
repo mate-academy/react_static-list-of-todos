@@ -1,0 +1,23 @@
+.todo {
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 30px;
+  }
+
+  &__item {
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+
+    box-shadow: -2px 1px 8px 2px #b7b7b7;
+
+    &--done {
+      background-color: #90ee90;
+    }
+  }
+}
