@@ -1,0 +1,19 @@
+.TodoInfo {
+  background-color: #e4e9be;
+  padding: 0 30px;
+  border: 2px solid #e6ba95;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--done {
+    background-color: #a2b38b;
+  }
+
+  &__progress {
+    display: flex;
+    gap: 10px;
+  }
+}
