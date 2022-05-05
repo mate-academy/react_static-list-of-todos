@@ -11,6 +11,6 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => (
     <br />
     {`Title: ${todo.title}`}
     <br />
-    {`Completed: ${todo.completed === true ? 'Yes' : 'No'}`}
+    {`Completed: ${todo.completed ? 'Yes' : 'No'}`}
   </div>
 );
