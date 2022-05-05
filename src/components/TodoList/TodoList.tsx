@@ -16,7 +16,6 @@ export const TodoList: React.FC<Props> = ({ todoes }) => (
             title={todo.title}
             completed={todo.completed}
             user={todo.user}
-
           />
         </li>
       ))
