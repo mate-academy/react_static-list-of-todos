@@ -21,15 +21,16 @@ export const TodoInfo: React.FC<Props> = ({
         {' '}
         {title}
       </div>
+
       <div className="todo-info__status">
         <strong>Status:</strong>
         {' '}
         {completed ? 'Completed' : 'Not completed'}
       </div>
 
-      <UserInfo
-        user={user}
-      />
+      {user && (
+        <UserInfo user={user} />
+      )}
     </div>
   );
 };
