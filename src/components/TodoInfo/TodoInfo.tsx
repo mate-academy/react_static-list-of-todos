@@ -25,6 +25,12 @@ export const TodoInfo: React.FC<Props> = ({
         {completed ? 'Yes' : 'No'}
       </div>
     </p>
-    <UserInfo user={user} />
+    {
+      (user === null)
+        ? 'No user data'
+        : (
+          <UserInfo user={user} />
+        )
+    }
   </>
 );
