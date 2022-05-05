@@ -8,7 +8,7 @@ import { User } from './User';
 import { FullTodo } from './FullTodo';
 import { TodoList } from './components/TodoList/TodoList';
 
-function prepared(
+function GetPreparedTodos(
   todos: Todo[],
   users : User[],
 ): FullTodo[] {
@@ -18,7 +18,7 @@ function prepared(
   }));
 }
 
-const preparedTodos = prepared(todosFromServer, usersFromServer);
+const preparedTodos = GetPreparedTodos(todosFromServer, usersFromServer);
 
 const App: React.FC = () => (
   <div className="App">
