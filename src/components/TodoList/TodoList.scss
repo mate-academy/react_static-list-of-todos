@@ -1,0 +1,13 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  display: block;
+
+  &__item {
+    &--active {
+      background-color: rgba(178, 248, 132, 0.5);
+    }
+  }
+}

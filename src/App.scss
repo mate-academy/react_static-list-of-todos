@@ -1,1 +1,7 @@
-// styles go here
+.app {
+  margin: 40px;
+
+  &__title {
+    text-align: center;
+  }
+}
