@@ -1,0 +1,26 @@
+.todoInfo {
+  list-style: none;
+  padding: 5px 20px;
+  margin: 20px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #0f0c29 0%, #302b63 50%, #f5320f 100%);
+  color: white;
+
+  &--done {
+    background: linear-gradient(270deg, #00f030 0%, #1cea94 100%);
+    color: black;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
+  &__status {
+    display: flex;
+    margin: 0;
+    gap: 20px;
+    font-size: 15px;
+  }
+}
