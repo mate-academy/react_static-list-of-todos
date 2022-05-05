@@ -1,0 +1,18 @@
+.toDo {
+  &List {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &Item {
+    margin: 20px 0;
+    padding: 0 20px;
+    border: 1px solid rgb(50, 50, 50);
+    background-color: rgba(255, 0, 0, 0.15);
+
+    &Active {
+      background-color: rgba(34, 255, 0, 0.15);
+    }
+  }
+}
