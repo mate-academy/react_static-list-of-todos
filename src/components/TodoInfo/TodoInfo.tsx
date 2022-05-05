@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { Todo } from '../types/Todo';
 import { UserInfo } from '../UserInfo/UserInfo';
 import './TodoInfo.scss';
@@ -6,24 +7,30 @@ export const TodoInfo: React.FC<Todo> = ({
   title,
   completed,
   user,
-}) => {
-  const classNameTodo = `TodoInfo ${completed ? 'TodoInfo--done' : ''}`;
+}) => (
+  <li
+    className={classNames(
+      'todoInfo',
+      {
+        ' todoInfo--done': completed === true,
+      },
+    )}
+  >
+    <h2 className="todoInfo__title">
+      {`Todo: ${title}`}
+    </h2>
 
-  return (
-    <li className={classNameTodo}>
-      <h2 className="TodoInfo__title">{`Todo: ${title}`}</h2>
-      <p className="TodoInfo__status">
-        {(user === null)
-          ? 'User not choosed'
-          : (
-            <UserInfo
-              id={user.id}
-              name={user.name}
-              email={user.email}
-            />
-          )}
-        {`Status: ${(completed) ? 'Done' : 'Not done'}`}
-      </p>
-    </li>
-  );
-};
+    <p className="todoInfo__status">
+      {(!user)
+        ? 'User not choosed'
+        : (
+          <UserInfo
+            id={user.id}
+            name={user.name}
+            email={user.email}
+          />
+        )}
+      {`Status: ${(completed) ? 'Done' : 'Not done'}`}
+    </p>
+  </li>
+);
