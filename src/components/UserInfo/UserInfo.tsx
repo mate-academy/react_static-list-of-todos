@@ -1,5 +1,5 @@
 import React from 'react';
-import { User } from '../../types/Todo';
+import { User } from '../../types/User';
 import './UserInfo.scss';
 
 type Props = {
@@ -7,12 +7,12 @@ type Props = {
 };
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
-  <p className="user__info">
-    <div className="user__info-item">
-      <span className="user__info-title">Assigned:</span>
+  <div className="user-info">
+    <p className="user-info__item">
+      <span className="user-info__title">Assigned:</span>
       {' '}
       {user?.name}
-    </div>
-    <a className="user__info-link" href={`mailto:${user?.email}`}>Email</a>
-  </p>
+    </p>
+    <a className="user-info__link" href={`mailto:${user?.email}`}>Email</a>
+  </div>
 );
