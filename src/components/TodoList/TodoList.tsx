@@ -12,15 +12,15 @@ type Props = {
 
 export const TodoList: React.FC<Props> = ({ props }) => (
   <ul className="list">
-    {props.map(a => (
+    {props.map(prop => (
       <li
         className={classNames(
           'list__item item',
-          { 'list__item--active': a.completed },
+          { 'list__item--active': prop.completed },
         )}
-        key={a.id}
+        key={prop.id}
       >
-        <TodoInfo todo={a} />
+        <TodoInfo todo={prop} />
       </li>
     ))}
   </ul>
