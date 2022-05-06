@@ -7,12 +7,12 @@ describe('UserInfo', () => {
   it('should have a correct name', () => {
     mount(<UserInfo user={users[0]} />);
     cy.getByDataCy('username')
-    .should('have.text', users[0].name);
+      .should('have.text', users[0].name);
   });
-  
+
   it('should have a correct email', () => {
     mount(<UserInfo user={users[0]} />);
     cy.getByDataCy('email')
-    .should('have.text', users[0].email);
+      .should('have.text', users[0].email);
   });
 });

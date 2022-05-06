@@ -7,6 +7,6 @@ describe('TodoList', () => {
   it('should have a correct length', () => {
     mount(<TodoList todos={todos} />);
     cy.get('li')
-    .should('have.length', todos.length);
+      .should('have.length', todos.length);
   });
 });
