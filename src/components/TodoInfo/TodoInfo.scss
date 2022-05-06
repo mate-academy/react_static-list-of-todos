@@ -1,0 +1,25 @@
+@import "../App/App.scss";
+
+.title {
+  background-color: #000;
+  color: $color-grey;
+  font-size: 25px;
+  text-align: center;
+  height: 150px;
+
+  &__strong {
+    font-size: 40px;
+  }
+}
+
+.completed {
+  background-color: $color-grey;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
+.user {
+  background-color: #000;
+  color: $color-grey;
+  padding-left: 10px;
+}
