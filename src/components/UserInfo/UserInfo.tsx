@@ -3,13 +3,17 @@ import { User } from '../../types/User';
 import './UserInfo.scss';
 
 type Props = {
-  user: User | null,
+  user: User,
 };
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
   <div className="user-info">
     <p className="user-info__item">
-      <span className="user-info__title">Assigned:</span>
+      <strong
+        className="user-info__title"
+      >
+        Assigned:
+      </strong>
       {' '}
       {user?.name}
     </p>

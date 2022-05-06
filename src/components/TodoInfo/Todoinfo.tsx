@@ -15,7 +15,7 @@ export const TodoInfo: React.FC<Props> = ({
   user,
 }) => (
   <>
-    <p className="todo-info">
+    <div className="todo-info">
       <div className="todo-info__item">
         <span className="todo-info__title">Task:</span>
         {' '}
@@ -26,7 +26,9 @@ export const TodoInfo: React.FC<Props> = ({
         {' '}
         {status ? 'Ready' : 'Not ready'}
       </div>
-    </p>
-    <UserInfo user={user} />
+    </div>
+    {user !== null
+      ? <UserInfo user={user} />
+      : 'information is absent'}
   </>
 );
