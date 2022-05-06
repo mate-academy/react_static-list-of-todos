@@ -1,1 +1,19 @@
-// styles go here
+@font-face {
+  font-family: "CyberFont";
+  src: url("./fonts/TERMINAT.TTF");
+}
+
+$base-color:rgb(0, 183, 255);
+$dark-color: rgb(0, 86, 121);
+
+html {
+  background-color: black;
+}
+
+.App {
+  font-family: "CyberFont", Courier, monospace;
+  text-transform: uppercase;
+  color: $base-color;
+  background-color: black;
+  padding: 100px;
+}
