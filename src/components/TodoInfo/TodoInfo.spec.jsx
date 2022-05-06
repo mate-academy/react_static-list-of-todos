@@ -4,13 +4,15 @@ import { TodoInfo } from './TodoInfo';
 import todos from '../../api/todos';
 
 describe('TodoInfo', () => {
-  it('todo should have a correct title', () => {
+  it('should have a correct title', () => {
     mount(<TodoInfo todo={todos[0]} />);
-    cy.get('h1').should('have.text', todos[0].title);
+    cy.getByDataCy('title')
+    .should('have.text', todos[0].title);
   });
 
-  it('todo should have a correct status', () => {
+  it('should have a correct status', () => {
     mount(<TodoInfo todo={todos[0]} />);
-    cy.get('p').should('have.text', 'Not completed!');
+    cy.getByDataCy('status')
+    .should('have.text', 'Not completed!');
   });
 });
