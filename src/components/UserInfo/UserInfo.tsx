@@ -3,7 +3,7 @@ import { User } from '../Types/Types';
 import './UserInfo.scss';
 
 type Props = {
-  userInfo: User | null,
+  userInfo: User,
 };
 
 export const UserInfo: React.FC<Props> = ({ userInfo }) => (

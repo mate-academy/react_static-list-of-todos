@@ -14,10 +14,10 @@ export const TodoList: React.FC<Props> = ({ commonData }) => {
   return (
     <ul className="list">
       {commonData.map(todoUser => (
-        <li className="item">
+        <li className="item" key={todoUser.id}>
           <h2 className="item__todo">{todoUser.title}</h2>
           <section className="item__user">
-            <UserInfo userInfo={todoUser.user} />
+            {todoUser.user && <UserInfo userInfo={todoUser.user} />}
           </section>
           <h2 className="item__done">
             <TodoInfo status={todoUser.completed} />

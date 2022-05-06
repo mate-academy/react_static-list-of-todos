@@ -6,7 +6,7 @@ import users from './api/users';
 import { TodoList } from './components/TodoList/TodoList';
 import { Todo } from './components/Types/Types';
 
-const preparedTodos = [...todos].map((todo) => {
+const preparedTodos = todos.map((todo) => {
   const todoCopy = {
     ...todo,
     user: users.find(user => user.id === todo.userId) || 'null',
