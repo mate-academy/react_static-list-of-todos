@@ -1,0 +1,32 @@
+.list {
+  padding: 20px;
+
+  & :hover {
+    transform: scale(1.01);
+    transition: transform 0.3s;
+  }
+}
+
+.item {
+  border: 1px solid rgb(2, 3, 38);
+  border-radius: 5px;
+  padding-left: 10px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  margin-bottom: 3px;
+
+  &__todo {
+    text-transform: uppercase;
+    grid-column: 1 / 2;
+  }
+
+  &__user {
+    grid-column: 2 / 3;
+  }
+
+  &__done {
+    display: flex;
+    justify-content: center;
+    grid-column: 3 / 4;
+  }
+}
