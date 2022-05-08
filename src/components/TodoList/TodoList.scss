@@ -1,0 +1,14 @@
+.todoList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  list-style: none;
+  
+  &__todo {
+    display: block;
+    padding: 16px;
+    border: 1px solid #e9e0d6;
+    border-radius: 2px;
+    background-color: #faf2e7;
+  }
+}

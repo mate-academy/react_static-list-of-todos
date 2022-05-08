@@ -1,0 +1,19 @@
+.todoInfo {
+  list-style: none;
+  line-height: 1.8em;
+
+  &__title {
+    color: #e25544;
+  }
+ 
+  &__title::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #e9e0d6;
+  }
+
+  &__state {
+    font-size: 0.8em;
+    color: #585858;
+  }
+}
