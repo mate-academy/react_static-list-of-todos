@@ -16,11 +16,11 @@ const TodoInfo: React.FC<Props> = ({ title, status, user }) => (
     </p>
     <p>
       status :
-      {status ? 'true' : 'false'}
+      {String(status) ? 'true' : 'false'}
     </p>
-    <p>
+    {user && (
       <UserInfo user={user} />
-    </p>
+    )}
   </>
 );
 
