@@ -1,1 +1,14 @@
-// styles go here
+.App {
+  background-color: azure;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: -1px -1px 3px gray;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.Header {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+}
