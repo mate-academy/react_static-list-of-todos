@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import './reset_styles/reset.scss';
 
 import todos from './api/todos';
 import users from './api/users';
