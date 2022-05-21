@@ -1,0 +1,48 @@
+.TodoInfo {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 200px;
+  justify-content: space-between;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lightgray;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__status {
+    display: flex;
+    margin: 5px 0;
+    gap: 5px;
+  }
+
+  &__status-title {
+    margin: 0;
+  }
+
+  &__userdata {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+    border-bottom: 1px solid #000;
+  }
+
+  &__userdata-header {
+    font-weight: 600;
+  }
+}
+
+.completed {
+  color: green;
+}
+
+.notcomleted {
+  color: red;
+}
