@@ -10,13 +10,18 @@ type Props = {
 export const TodoInfo: React.FC<Props> = ({ todo }) => (
   <>
     <div className="todoInfo">
-      <h2 className="todoInfo__title">
+      <h2
+        className="todoInfo__title"
+        data-cy="title"
+      >
         {todo.title}
       </h2>
-      <span className={classNames(
-        'todoInfo__status',
-        { 'todoInfo__status_not-completed': !todo.completed },
-      )}
+      <span
+        data-cy="status"
+        className={classNames(
+          'todoInfo__status',
+          { 'todoInfo__status_not-completed': !todo.completed },
+        )}
       >
         {todo.completed ? 'Completed' : 'Not completed'}
       </span>

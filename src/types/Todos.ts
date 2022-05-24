@@ -1,4 +1,4 @@
-import { User } from "./User";
+import { User } from './User';
 
 export interface Todos {
   userId: number,
@@ -6,4 +6,4 @@ export interface Todos {
   title: string,
   completed: boolean,
   user: User | null;
-};
+}

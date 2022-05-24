@@ -9,11 +9,7 @@ import { TodoList } from './components/TodoList';
 const preparedTodos = todos.map((todo) => {
   const findUser = users.find((user) => user.id === todo.userId);
 
-  if (findUser) {
-    return { ...todo, user: findUser };
-  }
-
-  return { ...todo, user: null };
+  return { ...todo, user: findUser || null };
 });
 
 const App: React.FC = () => (
