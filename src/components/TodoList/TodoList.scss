@@ -1,0 +1,24 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 20px 10px;
+}
+
+.todo {
+  font-family: sans-serif;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: rgb(253, 253, 253);
+  padding: 10px;
+  box-shadow: 1px 2px 5px rgb(139, 135, 135);
+
+  &__title {
+    margin: 5px;
+    border-bottom: 1px solid black;
+    text-align: center;
+  }
+
+  &--complete {
+    background-color: rgb(44, 212, 44);
+  }
+}
