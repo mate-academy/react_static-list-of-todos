@@ -1,1 +1,29 @@
-// styles go here
+body {
+  font-family: Roboto, sans-serif;
+  background-color: whitesmoke;
+}
+
+.title {
+  text-align: center;
+}
+
+.Todolist {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  font-size: 28px;
+}
+
+.item {
+  width: 300px;
+  height: 200px;
+  border: brown 3px solid;
+  border-radius: 5px;
+  padding: 15px;
+}
