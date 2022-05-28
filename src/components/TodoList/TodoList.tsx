@@ -25,7 +25,6 @@ export const TodoList: React.FC<Props> = ({ preparedTodos }) => (
         <TodoInfo
           title={todo.title}
           completed={todo.completed}
-          phone={todo.user?.phone || 'user not found'}
         />
       </li>
     ))}
