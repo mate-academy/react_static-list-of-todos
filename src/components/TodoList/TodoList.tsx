@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserInfo } from '../UserInfo/UserInfo';
+
 import { TodoInfo } from '../TodoInfo/TodoInfo';
 import { PreparedTodo } from '../../react-app-env';
 
@@ -18,14 +18,7 @@ export const TodoList: React.FC<Props> = ({ preparedTodos }) => (
           list-group-item-success"
         key={todo.id}
       >
-        <UserInfo
-          name={todo.user?.name || 'user not found'}
-          email={todo.user?.email || 'user not found'}
-        />
-        <TodoInfo
-          title={todo.title}
-          completed={todo.completed}
-        />
+        <TodoInfo todo={todo} />
       </li>
     ))}
   </ul>

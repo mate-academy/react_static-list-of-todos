@@ -1,18 +1,26 @@
 import React from 'react';
+import { UserInfo } from '../UserInfo/UserInfo';
+import { PreparedTodo } from '../../react-app-env';
 
 type Props = {
-  title: string,
-  completed: boolean
+  todo: PreparedTodo
 };
 
-export const TodoInfo: React.FC<Props> = ({ title, completed }) => (
+export const TodoInfo: React.FC<Props> = ({ todo }) => (
   <>
     <h3 data-cy="title">
-      {title}
+      {todo.title}
     </h3>
 
     <p data-cy="status">
-      {completed ? 'Completed' : 'Not completed'}
+      {todo.completed ? 'Completed' : 'Not completed'}
     </p>
+
+    {todo.user && (
+      <UserInfo
+        name={todo.user.name || 'user not found'}
+        email={todo.user.email || 'user not found'}
+      />
+    )}
   </>
 );
