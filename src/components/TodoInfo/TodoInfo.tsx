@@ -18,8 +18,8 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => (
 
     {todo.user && (
       <UserInfo
-        name={todo.user.name || 'user not found'}
-        email={todo.user.email || 'user not found'}
+        name={todo.user.name}
+        email={todo.user.email}
       />
     )}
   </>
