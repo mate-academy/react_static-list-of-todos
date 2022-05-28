@@ -1,6 +1,6 @@
 import React from 'react';
 import { FullTodo } from '../../react-app-env';
-import { User } from '../User/User';
+import UserInfo from '../UserInfo/UserInfo';
 
 // Create a `TodoInfo` component accepting a `todo` object and use it in the
 // list to render `title`, `completed` status and `User`
@@ -12,7 +12,9 @@ const TodoInfo: React.FC<Props> = ({ todo }) => (
   <>
     <h4 data-cy="title">{todo.title}</h4>
     <p data-cy="status">{todo.completed ? 'completed' : 'not completed'}</p>
-    <User user={todo.user} />
+    {todo.user && (
+      <UserInfo user={todo.user} />
+    )}
   </>
 );
 
