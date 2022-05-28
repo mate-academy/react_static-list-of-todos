@@ -1,6 +1,22 @@
-// Don't forget to import the React library
+import React from 'react';
+import { PrepArray } from '../../react-app-env';
+import { TodoInfo } from '../TodoInfo/TodoInfo';
+import { UserInfo } from '../UserInfo/UserInfo';
 
-// Create a `TodoList` component accepting an array of `preparedTodos` and
-// rendering them as a list
-
-// Add a default export statement for TodoInfo component to use it in the other files
+interface Props {
+  preparedTodos: PrepArray[];
+}
+export const TodoList: React.FC<Props> = ({ preparedTodos }) => (
+  <div className="content notification is-primary">
+    <ul>
+      {preparedTodos.map(item => (
+        <li className="box" key={item.id}>
+          {item.user && (
+            <UserInfo user={item.user} />
+          )}
+          <TodoInfo todo={item} />
+        </li>
+      ))}
+    </ul>
+  </div>
+);
