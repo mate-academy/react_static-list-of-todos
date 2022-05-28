@@ -11,7 +11,7 @@ type Props = {
 const TodoInfo: React.FC<Props> = ({ todo }) => (
   <>
     <h4 data-cy="title">{todo.title}</h4>
-    <p data-cy="status">{todo.completed}</p>
+    <p data-cy="status">{todo.completed ? 'completed' : 'not completed'}</p>
     <User user={todo.user} />
   </>
 );
