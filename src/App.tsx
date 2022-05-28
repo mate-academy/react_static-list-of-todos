@@ -19,9 +19,7 @@ const todos = preparedTodos(todosFromServer, usersFromServer);
 
 const App: React.FC = () => (
   <div className="App">
-    <ul>
-      <TodoList todos={todos} />
-    </ul>
+    <TodoList todos={todos} />
   </div>
 );
 
