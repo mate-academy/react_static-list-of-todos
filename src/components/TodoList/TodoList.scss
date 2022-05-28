@@ -1,0 +1,17 @@
+.TodoBlock {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__item {
+    box-sizing: border-box;
+    width: 30%;
+    padding: 20px;
+    margin: 10px;
+
+    background-color: aliceblue;
+    border: 1px dashed #acdc;
+    color: brown;
+  }
+}
