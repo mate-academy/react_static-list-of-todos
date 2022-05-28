@@ -7,7 +7,7 @@ import { TodoList } from './components/TodoList/TodoList';
 import { Todo, User, PreparedTodo } from './react-app-env';
 
 const App: React.FC = () => {
-  const prepareOrder = (
+  const prepareTodo = (
     todosList: Todo[],
     usersList: User[],
   ): PreparedTodo[] => {
@@ -17,7 +17,7 @@ const App: React.FC = () => {
     }));
   };
 
-  const preparedTodos: PreparedTodo[] = prepareOrder(todos, users);
+  const preparedTodos: PreparedTodo[] = prepareTodo(todos, users);
 
   return (
     <div className="App">
