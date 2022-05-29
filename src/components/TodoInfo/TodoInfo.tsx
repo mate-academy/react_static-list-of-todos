@@ -60,7 +60,7 @@ export const TodoInfo: React.FC<Props> = ({ todoWidthUser }) => {
       </div>
 
       <div className="todoUserInfo">
-        <UserInfo userInfo={user} />
+        {user && (<UserInfo userInfo={user} />)}
       </div>
     </li>
   );

@@ -6,11 +6,11 @@
     width: calc(100% - 42px);
     border-radius: 10px;
     border: 1px solid #1a76d2;
-    background-color: rgba(255, 0, 0, 0.1);
+    background-color: rgba(255, 0, 0, 0.3);
     cursor: pointer;
 
     &--done {
-      background-color: rgba(0, 255, 34, 0.1);
+      background-color: rgba(0, 255, 34, 0.3);
     }
   }
 

@@ -20,7 +20,7 @@ const App: React.FC = () => {
     }));
   };
 
-  const todosWidthUser = preparedTodo(todos, users);
+  const todosWidthUser: TodoWidthUser[] = preparedTodo(todos, users);
 
   return (
     <div className="App">

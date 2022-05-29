@@ -4,17 +4,17 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import MailIcon from '@mui/icons-material/Mail';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import Chip from '@mui/material/Chip';
+import { User } from '../../react-app-env';
 
-import { UserFromServer } from '../../react-app-env';
 import './UserInfo.scss';
 
 type Props = {
-  userInfo: UserFromServer;
+  userInfo: User;
 };
 
 export const UserInfo: React.FC<Props> = ({ userInfo }) => {
   const {
-    name,
+    username,
     phone,
     email,
     address,
@@ -26,7 +26,7 @@ export const UserInfo: React.FC<Props> = ({ userInfo }) => {
         className="userName"
         data-cy="username"
         icon={<AccountCircleIcon />}
-        label={name}
+        label={username}
         color="primary"
         variant="outlined"
       />
