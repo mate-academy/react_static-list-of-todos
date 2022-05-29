@@ -30,5 +30,5 @@ export interface User {
 }
 
 export interface FullTodo extends Todo {
-  user?: User;
+  user: User | null;
 }

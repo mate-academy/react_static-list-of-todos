@@ -14,7 +14,7 @@ const App: React.FC = () => {
   ): FullTodo[] => {
     return todos.map(todo => ({
       ...todo,
-      user: users.find(user => user.id === todo.userId),
+      user: users.find(user => user.id === todo.userId) || null,
     }));
   };
 
