@@ -1,6 +1,67 @@
-// Don't forget to import the React library
+import React from 'react';
+import Checkbox from '@mui/material/Checkbox';
+import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import FactCheckIcon from '@mui/icons-material/FactCheck';
+import Chip from '@mui/material/Chip';
+import classNames from 'classnames';
 
-// Create a `TodoInfo` component accepting a `todo` object and use it in the
-// list to render `title`, `completed` status and `User`
+import { UserInfo } from '../UserInfo';
+import { TodoWidthUser } from '../../react-app-env';
+import './TodoInfo.scss';
 
-// Add a default export statement for TodoInfo component to use it in the other files
+type Props = {
+  todoWidthUser: TodoWidthUser;
+};
+
+export const TodoInfo: React.FC<Props> = ({ todoWidthUser }) => {
+  const {
+    title,
+    completed,
+    user,
+  } = todoWidthUser;
+
+  return (
+    <li className={classNames(
+      'todoItemUser',
+      {
+        'todoItemUser--done': completed,
+      },
+    )}
+    >
+      <Chip
+        className="todoTitle"
+        data-cy="title"
+        icon={<MilitaryTechIcon />}
+        label={`Title: ${title}`}
+        color="primary"
+        variant="outlined"
+      />
+
+      <div className="todoCompletedTask">
+        <Chip
+          className="todoCompletedTaskIcon"
+          icon={<FactCheckIcon />}
+          label="Task Status:"
+          color="primary"
+          variant="outlined"
+        />
+
+        <Checkbox
+          className="todoCompletedTaskCheckbox"
+          checked={completed}
+          icon={<CheckCircleOutlineIcon />}
+          checkedIcon={<CheckCircleIcon />}
+          data-cy="status"
+          color="primary"
+          sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }}
+        />
+      </div>
+
+      <div className="todoUserInfo">
+        {user && (<UserInfo userInfo={user} />)}
+      </div>
+    </li>
+  );
+};

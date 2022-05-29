@@ -7,10 +7,18 @@
   "license": "GPL-3.0",
   "dependencies": {
     "@cypress/react": "^5.12.4",
-    "bulma": "^0.9.3",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.8.0",
+    "@mui/material": "^5.8.1",
+    "@mui/styled-engine-sc": "^5.8.0",
+    "@types/classnames": "^2.3.1",
+    "bulma": "^0.9.4",
+    "classnames": "^2.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "^4.0.3"
+    "react-scripts": "^4.0.3",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@cypress/webpack-dev-server": "^1.8.4",

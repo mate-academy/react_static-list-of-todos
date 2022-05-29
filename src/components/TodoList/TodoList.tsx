@@ -1,6 +1,24 @@
-// Don't forget to import the React library
+import React from 'react';
+import { TodoInfo } from '../TodoInfo';
+import { TodoWidthUser } from '../../react-app-env';
+import './TodoList.scss';
 
-// Create a `TodoList` component accepting an array of `preparedTodos` and
-// rendering them as a list
+type Props = {
+  todosWidthUser: TodoWidthUser[];
+};
 
-// Add a default export statement for TodoInfo component to use it in the other files
+export const TodoList: React.FC<Props> = ({ todosWidthUser }) => (
+  <div className="container">
+    <h1 className="mainTitle">
+      TODOLIST
+    </h1>
+
+    <ul className="todoListUser">
+      {todosWidthUser.map(todoWidthUser => (
+        <React.Fragment key={todoWidthUser.id}>
+          <TodoInfo todoWidthUser={todoWidthUser} />
+        </React.Fragment>
+      ))}
+    </ul>
+  </div>
+);

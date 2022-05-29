@@ -1,0 +1,19 @@
+$marginRight: 16px;
+
+.user {
+  &Name {
+    margin-right: $marginRight;
+  }
+
+  &Phone {
+    margin-right: $marginRight;
+  }
+
+  &Email {
+    margin-right: $marginRight;
+  }
+
+  &Address {
+    margin-right: $marginRight;
+  }
+}
