@@ -1,13 +1,13 @@
 # React static list of TODOs
 - Replace `<your_account>` with your Github username in the
-  [DEMO LINK](https://<your_account>.github.io/react_static-list-of-todos/)
-- Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
+  [DEMO LINK](https://volodya-leskiv>.github.io/react_static-list-of-todos/)
+
 
 ## Task
 Import `todos` and `users`, add a user to each todo and render them in the 
 list.
 
-1. Create a `preparedTodos` array basing on `todos`. Each prepared todo should
+1. Create a `  array basing on `todos`. Each prepared todo should
    have a `user` property with a link to a user from `users` array or `null`if
    we can't find a use by `userId`. It should be stored in the `App`.
 2. Create a `TodoList` component accepting an array of `preparedTodos` and 
