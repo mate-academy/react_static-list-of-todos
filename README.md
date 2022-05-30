@@ -7,7 +7,7 @@
 Import `todos` and `users`, add a user to each todo and render them in the 
 list.
 
-1. Create a `preparedTodos` array basing on `todos`. Each prepared todo should
+1. Create a `  array basing on `todos`. Each prepared todo should
    have a `user` property with a link to a user from `users` array or `null`if
    we can't find a use by `userId`. It should be stored in the `App`.
 2. Create a `TodoList` component accepting an array of `preparedTodos` and 
