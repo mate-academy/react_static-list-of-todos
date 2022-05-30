@@ -12,11 +12,11 @@ const TodoInfo: React.FC<Props> = ({ todo }) => (
       name={todo.user ? todo.user.name : null}
       email={todo.user ? todo.user.email : null}
     />
-    <p>
+    <p data-cy="title">
       Task:
       {todo.title}
     </p>
-    <p>
+    <p data-cy="status">
       Complited status:
       {todo.completed ? ' true' : ' false'}
     </p>

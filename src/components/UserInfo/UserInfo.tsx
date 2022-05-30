@@ -6,10 +6,10 @@ type Props = {
 };
 
 const UserInfo: React.FC<Props> = ({ name, email }) => (
-  <>
+  <React.Fragment data-cy="username">
     <h2>{name}</h2>
-    <p>{email}</p>
-  </>
+    <p data-cy="email">{email}</p>
+  </React.Fragment>
 );
 
 export default UserInfo;
