@@ -1,0 +1,14 @@
+.list{
+  &__block {
+    text-align: center;
+    border: 1px aquamarine solid;
+    font-weight: 600;
+    border-radius: 10px;
+    width: 400px;
+    padding: 25px;
+  }
+  &__info {
+    text-align: left;
+    list-style-type: none;
+  }
+}
