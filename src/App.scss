@@ -1,1 +1,21 @@
 // styles go here
+body {
+  margin: 0;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  border: 1px solid black;
+  background-color: rgb(222, 222, 222);
+}
+
+.list-link {
+  color: black;
+}
+
+.list-item {
+  border-bottom: 1px dashed black;
+  list-style: none;
+  padding-left: 10px;
+}
