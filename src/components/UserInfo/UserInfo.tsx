@@ -15,14 +15,14 @@ interface Props {
 }
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
-  <ul className="users">
+  <ul className="user">
     <li>
       {`User Name: ${user.name}`}
     </li>
-    <li>
+    <li data-cy="username">
       {`User userName: ${user.username}`}
     </li>
-    <li>
+    <li data-cy="email">
       {`User email: ${user.email}`}
     </li>
   </ul>
