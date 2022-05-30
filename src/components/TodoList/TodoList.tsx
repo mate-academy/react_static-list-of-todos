@@ -12,10 +12,10 @@ export const TodoList : React.FC<Props> = ({ prepearedTodos }) => (
       <li className="list__header" key={todo.id}>
         {`TODO ID:${todo.id}`}
         <ul>
-          <li className="list__item">
+          <li className="list__item" data-cy="title">
             {`TODO Title: ${todo.title}`}
           </li>
-          <li className="list__item">
+          <li className="list__item" data-cy="status">
             {`TODO Completed ${todo.completed}`}
           </li>
           <li className="list__item">
