@@ -1,7 +1,7 @@
 # React static list of TODOs
 - Replace `<your_account>` with your Github username in the
-  [DEMO LINK](https://<your_account>.github.io/react_static-list-of-todos/)
-- Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
+  [DEMO LINK](https://volodya-leskiv>.github.io/react_static-list-of-todos/)
+
 
 ## Task
 Import `todos` and `users`, add a user to each todo and render them in the 
