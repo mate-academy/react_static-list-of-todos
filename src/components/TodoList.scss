@@ -1,0 +1,17 @@
+.todo-list {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__item {
+    background-color: rgb(18, 20, 20);
+    width: 200px;
+    min-height: 200px;
+    border: 1px solid orange;
+    border-radius: 10px;
+    padding: 10px;
+  }
+}

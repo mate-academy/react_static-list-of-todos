@@ -1,0 +1,11 @@
+.todo {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+
+  &__title {
+    text-transform: uppercase;
+    color: rgb(2, 97, 126);
+    margin-bottom: 5px;
+  }
+}
