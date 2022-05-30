@@ -7,13 +7,13 @@ interface Props {
 }
 
 export const TodoList: React.FC<Props> = ({ todos }) => (
-  <ul>
+  <article>
     {todos.map(todo => (
       <React.Fragment key={todo.id}>
         <TodoInfo todo={todo} />
       </React.Fragment>
     ))}
-  </ul>
+  </article>
 );
 
 // Create a `TodoList` component accepting an array of `preparedTodos` and

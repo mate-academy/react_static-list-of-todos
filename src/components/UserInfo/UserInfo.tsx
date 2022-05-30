@@ -7,7 +7,6 @@ interface Props {
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
   <ul>
-    User
     <li data-cy="username">{user.name}</li>
     <li data-cy="email">{user.email}</li>
   </ul>
