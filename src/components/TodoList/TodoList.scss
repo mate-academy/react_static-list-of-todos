@@ -1,5 +1,10 @@
 .todoList {
   list-style: decimal-leading-zero;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
   &__item {
     margin-bottom: 20px;
@@ -10,6 +15,6 @@
     color: #000;
 
     border: 2px solid black;
-    width: max-content;
+    width: 450px;
   }
 }
