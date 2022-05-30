@@ -12,7 +12,9 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => (
     <ul>
       <strong>{`Todo ${todo.id}`}</strong>
       <li data-cy="title">{todo.title}</li>
-      <li data-cy="status">{`${todo.completed}`}</li>
+      <li data-cy="status">
+        {todo.completed ? 'Completed' : 'Not completed'}
+      </li>
       {todo.user && (
         <UserInfo user={todo.user} />
       )}
