@@ -11,13 +11,15 @@ export const Todolist: React.FC<Props> = ({ fulltodos }) => (
   <ul className="Todolist">
     {fulltodos.map(todo => (
       <li key={todo.id} className="item">
-        <UserInfo
-          name={todo.user?.name || 'Hello guest!'}
-          email={todo.user?.email || 'Hello guest'}
-        />
+        {todo.user
+          && (
+            <UserInfo
+              user={todo.user}
+            />
+          )}
+
         <TodoInfo
-          title={todo.title}
-          completed={todo.completed}
+          todo={todo}
         />
       </li>
     ))}

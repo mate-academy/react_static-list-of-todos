@@ -1,17 +1,16 @@
 import React from 'react';
 
 type Props = {
-  name: string;
-  email: string;
+  user: User,
 };
 
-export const UserInfo: React.FC<Props> = ({ name, email }) => (
+export const UserInfo: React.FC<Props> = ({ user }) => (
   <>
     <h2 className="name" data-cy="username">
-      {name}
+      {user.name}
     </h2>
     <p data-cy="email">
-      {`Email: ${email}`}
+      {`Email: ${user.email}`}
     </p>
   </>
 );
