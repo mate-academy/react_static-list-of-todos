@@ -16,12 +16,3 @@ export const TodoInfo: React.FC<TodoInfoProps> = ({ todo }) => (
     <User user={todo.user} />
   </>
 );
-
-// {
-//   post.user
-//     && (
-//       <UserInfo
-//         user={post.user}
-//       />
-//     )
-// }
