@@ -2,7 +2,7 @@ import React from 'react';
 import { User } from '../../react-app-env';
 
 interface Prop {
-  user: User | null
+  user: User
 }
 
 export const UserInfo:React.FC<Prop> = ({ user }) => (
