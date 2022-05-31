@@ -1,0 +1,16 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: wheat;
+
+  &__header {
+    font-weight: bold;
+    color: royalblue;
+  }
+
+  &__item {
+    font-size: 10px;
+    color: black;
+    font-weight: normal;
+  }
+}
