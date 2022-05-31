@@ -9,10 +9,10 @@ interface Props {
 
 export const TodoInfo: React.FC<Props> = ({ fullTodo }) => (
   <div className="todo-card">
-    <h3 className="todo-card__title">
+    <h3 className="todo-card__title" data-cy="title">
       {`Task: ${fullTodo.title}`}
     </h3>
-    <p className="todo-card__status">
+    <p className="todo-card__status" data-cy="status">
       Status:
       {fullTodo.completed ? ' completed' : ' not completed'}
     </p>
