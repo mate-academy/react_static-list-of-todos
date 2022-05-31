@@ -1,20 +1,20 @@
 import React from 'react';
 import './App.scss';
 
-import todos from './api/todos';
+import todo from './api/todos';
 import users from './api/users';
-import { Todo, User, Todos } from './react-app-env';
+import { PreparedTodo, User, Todo } from './react-app-env';
 
 import { TodoList } from './components/TodoList/TodoList';
 
-const prepareTodos = (user: User[], todo: Todos[]): Todo[] => {
-  return todo.map((el: Todos) => ({
-    ...el,
-    user: user.find((person: User) => (person.id === el.userId)) || null,
+const prepareTodos = (user: User[], todos: Todo[]): PreparedTodo[] => {
+  return todos.map((todoEl: Todo) => ({
+    ...todoEl,
+    user: user.find((person: User) => (person.id === todoEl.userId)) || null,
   }));
 };
 
-const preparedTodos: Todo[] = prepareTodos(users, todos);
+const preparedTodos: PreparedTodo[] = prepareTodos(users, todo);
 
 const App: React.FC = () => (
   <div className="App">

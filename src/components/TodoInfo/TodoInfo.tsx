@@ -1,16 +1,16 @@
 import React from 'react';
-import { Todo } from '../../react-app-env';
+import { PreparedTodo } from '../../react-app-env';
 import { UserInfo } from '../UserInfo/UserInfo';
 
 interface Props {
-  obj: Todo;
+  object: PreparedTodo;
 }
-export const TodoInfo: React.FC<Props> = ({ obj }) => (
+export const TodoInfo: React.FC<Props> = ({ object }) => (
   <>
-    {obj.user && (<UserInfo object={obj.user} />)}
-    <h3>{obj.title}</h3>
-    <h3 className={obj.completed ? 'task-status--comp' : 'task-status'}>
-      {obj.completed
+    {object.user && (<UserInfo object={object.user} />)}
+    <h3>{object.title}</h3>
+    <h3 className={object.completed ? 'task-status--comp' : 'task-status'}>
+      {object.completed
         ? 'completed!'
         : 'not completed'}
     </h3>

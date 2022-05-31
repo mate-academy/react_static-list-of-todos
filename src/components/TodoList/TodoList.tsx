@@ -1,9 +1,9 @@
 import React from 'react';
-import { Todo } from '../../react-app-env';
+import { PreparedTodo } from '../../react-app-env';
 import { TodoInfo } from '../TodoInfo/TodoInfo';
 
 interface Props {
-  prepTodos: Todo[];
+  prepTodos: PreparedTodo[];
 }
 
 export const TodoList: React.FC<Props> = ({ prepTodos }) => {
@@ -17,7 +17,7 @@ export const TodoList: React.FC<Props> = ({ prepTodos }) => {
             list-group-item-info"
           key={object.id}
         >
-          <TodoInfo obj={object} />
+          <TodoInfo object={object} />
         </li>
       ))}
     </ul>

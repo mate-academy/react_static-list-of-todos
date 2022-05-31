@@ -1,13 +1,13 @@
 /// <reference types="react-scripts" />
 
-export interface Todos {
+export interface Todo {
   userId: number,
   id: number,
   title: string,
   completed: boolean,
 }
 
-export interface Todo extends Todos {
+export interface PreparedTodo extends Todo {
   user: User | null;
 }
 
