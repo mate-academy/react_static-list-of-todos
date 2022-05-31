@@ -1,1 +1,31 @@
-// styles go here
+body {
+  margin: 0;
+
+  background-color: rgb(239, 198, 108);
+}
+
+ul,
+p,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  &__title {
+    display: inline-block;
+    padding: 10px;
+    margin-left: 28px;
+
+    font-size: 38px;
+    color: orangered;
+
+    border: 2px solid orangered;
+
+    &:hover {
+      border-color: transparent;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.user {
+  background-color: antiquewhite;
+  &__list {
+    list-style: none;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    color: crimson;
+  }
+
+  &__item {
+    color: rgb(101, 95, 95);
+    margin-bottom: 5px;
+  }
+}

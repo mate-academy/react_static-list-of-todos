@@ -1,0 +1,21 @@
+.todo-card {
+  width: 400px;
+  padding: 10px 20px;
+
+  background-color: bisque;
+
+  &__title {
+    margin-bottom: 10px;
+
+    font-size: 20px;
+    color: coral;
+  }
+
+  &__status {
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(45, 42, 42);
+  }
+}
