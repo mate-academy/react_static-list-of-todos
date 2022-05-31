@@ -1,0 +1,15 @@
+.todo-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__item {
+    margin-right: 20px;
+    margin-bottom: 40px;
+    list-style: none;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
