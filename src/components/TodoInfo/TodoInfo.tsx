@@ -19,4 +19,5 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
       <p>{todo.completed.toString()}</p>
       <p>{userInformation}</p>
     </>
-)};
+  );
+};
