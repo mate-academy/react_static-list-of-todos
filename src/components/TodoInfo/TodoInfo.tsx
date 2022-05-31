@@ -8,8 +8,12 @@ type Props = {
 
 export const TodoInfo: React.FC<Props> = ({ info }) => (
   <>
-    {info.user ? <UserInfo userProp={info.user} /> : ''}
-    <h2 data-cy="title">{info.title}</h2>
+    {info.user && (
+      <UserInfo userProp={info.user} />
+    )}
+    <h2 data-cy="title">
+      {info.title}
+    </h2>
     <span data-cy="status">
       {info.completed ? 'completed' : 'incompleted'}
     </span>
