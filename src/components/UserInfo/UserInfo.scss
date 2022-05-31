@@ -1,0 +1,13 @@
+.todo {
+  &__user__email {
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(0, 24, 245);
+  }
+
+  &__user__name {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+  }
+}

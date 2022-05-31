@@ -1,0 +1,24 @@
+.todo {
+  &__list {
+    list-style: none;
+    width: 500px;
+    background-color: lightslategrey;
+    border-radius: 40px;
+    padding: 10px;
+  }
+
+  &__list__item {
+    box-sizing: content-box;
+    width: 300px;
+    background-color: gray;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    transition: all 0.3s linear;
+
+    &:hover {
+      transform: scale(105%);
+    }
+  }
+}
