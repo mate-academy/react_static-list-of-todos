@@ -1,6 +1,22 @@
-// Don't forget to import the React library
+import { PrepTodo } from '../../types';
 
-// Create a `TodoInfo` component accepting a `todo` object and use it in the
-// list to render `title`, `completed` status and `User`
+interface Props {
+  todo: PrepTodo
+}
+export const TodoInfo: React.FC<Props> = ({ todo }) => {
+  let userInformation = '';
 
-// Add a default export statement for TodoInfo component to use it in the other files
+  if (todo.user) {
+    userInformation
+    = `${todo.user.name} ${todo.user.email}`;
+  } else {
+    userInformation = '';
+  }
+
+  return (
+    <>
+      <p>{todo.title}</p>
+      <p>{todo.completed.toString()}</p>
+      <p>{userInformation}</p>
+    </>
+)};
