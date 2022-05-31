@@ -1,1 +1,37 @@
-// styles go here
+body {
+  margin: 10px;
+}
+
+// .list {
+//   padding: 10px;
+//   background-color: #FF8B00;
+// }
+
+// .list__item {
+//   margin-bottom: 5px;
+//   padding: 0 10px;
+//   border: solid 1px black;
+//   border-radius: 8px;
+//   color: #086CA2;
+//   background-color: #FFBA00;
+// }
+
+// .list__item--completed {
+//   margin-bottom: 5px;
+//   padding: 0 10px;
+//   // border: solid 1px transparent;
+//   border-radius: 8px;
+//   color: rgb(176, 176, 176);
+//   background-color: #A65A00;
+// }
+.list-group-item {
+  margin-bottom: 5px;
+}
+
+.task-status {
+  color: red;
+}
+
+.task-status--comp {
+  color: rgb(60, 167, 60);
+}
