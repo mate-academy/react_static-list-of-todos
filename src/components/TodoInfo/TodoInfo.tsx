@@ -1,9 +1,9 @@
 import React from 'react';
-import { Todos } from '../../types/Todos';
+import { PrepearedTodos } from '../../types/Todos';
 import './TodoInfo.scss';
 
 interface Props {
-  todo: Todos;
+  todo: PrepearedTodos;
 }
 
 export const TodoInfo : React.FC<Props> = ({ todo }) => (

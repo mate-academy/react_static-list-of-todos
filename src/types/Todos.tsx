@@ -5,5 +5,12 @@ export interface Todos {
   id: number,
   title: string,
   completed: boolean,
-  user? : Users | null,
+}
+
+export interface PrepearedTodos {
+  userId : number,
+  id: number,
+  title: string,
+  completed: boolean,
+  user: Users | null,
 }
