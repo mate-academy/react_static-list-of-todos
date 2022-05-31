@@ -1,6 +1,7 @@
 import React from 'react';
 import { FullTodo } from '../../react-app-env';
 import { UserAdditionInfo } from '../UserAdditionInfo/UserAdditionInfo';
+import UserInfo from '../UserInfo/UserInfo';
 
 type Props = {
   todo: FullTodo;
@@ -8,9 +9,10 @@ type Props = {
 
 const TodoInfo: React.FC<Props> = ({ todo }) => (
   <>
+    <div>{todo.user && <UserInfo user={todo.user} />}</div>
     <div data-cy="title">{`TO DO: ${todo.title}`}</div>
     <div data-cy="status">{`STATUS: ${todo.completed}`}</div>
-    <div>{todo.user ? <UserAdditionInfo user={todo.user} /> : ''}</div>
+    {todo.user && <UserAdditionInfo user={todo.user} />}
   </>
 );
 
