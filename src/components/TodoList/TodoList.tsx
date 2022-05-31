@@ -1,6 +1,21 @@
-// Don't forget to import the React library
+import React from 'react';
+import { FullTodo } from '../../react-app-env';
+import TodoInfo from '../TodoInfo/TodoInfo';
 
-// Create a `TodoList` component accepting an array of `preparedTodos` and
-// rendering them as a list
+type Props = {
+  todos: FullTodo[];
+};
 
-// Add a default export statement for TodoInfo component to use it in the other files
+const TodoList: React.FC<Props> = ({ todos }) => (
+  <ul>
+    {todos.map(todo => (
+      <div key={todo.id} className="notification is-link is-light">
+        <li>
+          <TodoInfo todo={todo} />
+        </li>
+      </div>
+    ))}
+  </ul>
+);
+
+export default TodoList;
