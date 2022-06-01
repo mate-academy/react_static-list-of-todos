@@ -1,3 +1,17 @@
+import React from 'react';
+
+interface Props {
+  user: Users,
+}
+
+export const UserInfo: React.FC<Props> = ({ user }) => (
+  <div className="has-text-right">
+    <p>{`Name: ${user.name}`}</p>
+    <p data-cy="email">{`Email: ${user.email}`}</p>
+    <p>{`Company: ${user.company.name}`}</p>
+  </div>
+);
+
 // Don't forget to import the React library
 
 // Create a `UserInfo` component accepting a `user` object and use it to render

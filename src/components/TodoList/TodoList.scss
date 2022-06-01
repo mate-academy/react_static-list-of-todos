@@ -1,0 +1,11 @@
+.todo-main {
+  // background-color: aqua;
+  list-style: none;
+  padding: 5px;
+
+  &__list {
+    border: 1px solid black;
+    background-color: bisque;
+    margin: 10px;
+  }
+}
