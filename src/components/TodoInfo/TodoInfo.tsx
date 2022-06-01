@@ -8,9 +8,11 @@ type Props = {
 
 const TodoInfo: React.FC<Props> = ({ todo }) => (
   <>
-    <UserInfo
-      user={todo.user}
-    />
+    {todo.user && (
+      <UserInfo
+        user={todo.user}
+      />
+    )}
     <p data-cy="title">
       Task:
       {todo.title}
