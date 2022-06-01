@@ -9,10 +9,7 @@ type Props = {
 const TodoInfo: React.FC<Props> = ({ todo }) => (
   <>
     <UserInfo
-      user={todo.user ? todo.user : {
-        name: 'No name',
-        email: 'No email',
-      }}
+      user={todo.user}
     />
     <p data-cy="title">
       Task:

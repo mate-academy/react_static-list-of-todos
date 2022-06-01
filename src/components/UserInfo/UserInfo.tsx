@@ -1,17 +1,19 @@
 import React from 'react';
+import { User } from '../../react-app-env';
 
 type Props = {
-  user: {
-    name: string,
-    email: string,
-  }
+  user: User | null,
 };
 
 const UserInfo: React.FC<Props> = ({ user }) => (
-  <React.Fragment data-cy="username">
-    <h2>{user.name}</h2>
-    <p data-cy="email">{user.email}</p>
-  </React.Fragment>
+  <>
+    {user && (
+      <React.Fragment data-cy="username">
+        <h2>{user.name}</h2>
+        <p data-cy="email">{user.email}</p>
+      </React.Fragment>
+    )}
+  </>
 );
 
 export default UserInfo;
