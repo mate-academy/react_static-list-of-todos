@@ -1,0 +1,12 @@
+.todo-list{
+  list-style: none;
+  padding: 0;
+
+  &__item{
+    padding-left: 20px;
+    background-color: rgba($color: #259AED, $alpha: 0.2);
+    border: 1px solid #084876;
+    margin: 20px 0;
+    padding: 5px 10px;
+  }
+}
