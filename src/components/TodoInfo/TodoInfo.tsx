@@ -15,8 +15,8 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
 
   return (
     <div>
-      <h2>{`Task: ${title}`}</h2>
-      <p>
+      <h2 data-cy="title">{`Task: ${title}`}</h2>
+      <p data-cy="status">
         {completed
           ? ('Completed')
           : ('Not Completed')}

@@ -13,8 +13,8 @@ export const UserInfo: React.FC<Props> = ({ user }) => {
 
   return (
     <>
-      <p>{name}</p>
-      <p>{email}</p>
+      <p data-cy="username">{name}</p>
+      <p data-cy="email">{email}</p>
     </>
   );
 };
