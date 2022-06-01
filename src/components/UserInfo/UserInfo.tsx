@@ -5,10 +5,10 @@ interface Props {
 }
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
-  <div className="has-text-right">
+  <div>
     <p>{`Name: ${user.name}`}</p>
+    <p data-cy="username">{`User Name: ${user.username}`}</p>
     <p data-cy="email">{`Email: ${user.email}`}</p>
-    <p>{`Company: ${user.company.name}`}</p>
   </div>
 );
 
