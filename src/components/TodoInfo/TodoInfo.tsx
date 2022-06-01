@@ -1,7 +1,6 @@
 import React from 'react';
 import { PreparedTodo } from '../../types';
 import { UserInfo } from '../UserInfo';
-import './TodoInfo.scss';
 
 interface Props {
   todo: PreparedTodo,
