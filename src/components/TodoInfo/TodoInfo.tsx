@@ -22,10 +22,10 @@ export const TodoInfo: React.FC <Todo> = ({
   return (
     <>
       {user && (<UserInfo {...user} />)}
-      <div>{title}</div>
-      <div>
+      <h2 className="list__item-title">{title}</h2>
+      <p className="list__item-completed">
         {completed ? 'completed' : 'not completed'}
-      </div>
+      </p>
     </>
   );
 };

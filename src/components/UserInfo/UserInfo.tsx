@@ -10,16 +10,17 @@ export const UserInfo: React.FC <User> = ({
   email,
 }) => {
   return (
-    <div>
-      <h2>
-        User name is
+    <>
+      <h2 className="list__item-username">
+        Name:
         {' '}
         {name}
       </h2>
-      <p>
-        Email is
+      <h3 className="list__item-email">
+        Email:
+        {' '}
         {email}
-      </p>
-    </div>
+      </h3>
+    </>
   );
 };

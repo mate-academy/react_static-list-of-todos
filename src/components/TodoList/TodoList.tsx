@@ -1,27 +1,12 @@
 import React from 'react';
 import { TodoInfo } from '../TodoInfo/TodoInfo';
 
-type User = {
-  name: string,
-  email: string
-};
-
-interface Todo {
-  userId: number,
-  id: number,
-  title: string,
-  completed: boolean,
-  user: User | undefined;
-}
-
-type Props = {
-  todos: Todo[];
-};
+import { Props } from '../../types';
 
 export const TodoList: React.FC <Props> = ({ todos }) => (
-  <ul className="todo-list">
+  <ul className="list container__list">
     {todos.map(todo => (
-      <li key={todo.id} className="todo">
+      <li key={todo.id} className="list__item">
         <TodoInfo {...todo} />
       </li>
     ))}
