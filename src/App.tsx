@@ -12,7 +12,7 @@ function prepareTodos(
 ): PreparedTodos[] {
   return todoList.map(todo => ({
     ...todo,
-    user: usersList.find(user => user.id === todo.userId),
+    user: usersList.find(user => user.id === todo.userId) || null,
   }));
 }
 
@@ -21,7 +21,9 @@ export const preparedTodos: PreparedTodos[] = prepareTodos(todos, users);
 const App: React.FC = () => (
   <>
     <div className="App">
+      <h1>To-Do List</h1>
       <TodoList preparedToDos={preparedTodos} />
+      <hr />
     </div>
   </>
 );

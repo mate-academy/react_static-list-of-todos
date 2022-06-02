@@ -15,24 +15,17 @@ export const TodoList: React.FC<TodoListProps> = ({ preparedToDos }) => {
       <thead>
         <tr>
           <th scope="col">ID</th>
-          <th scope="col">TITLE</th>
+          <th scope="col">TO-DO TASK</th>
           <th scope="col">STATUS</th>
-          <th scope="col">USER</th>
+          <th scope="col">USER DETAILS</th>
         </tr>
       </thead>
       {preparedToDos.map(todo => (
-        <>
+        <React.Fragment key={todo.id}>
           <TodoInfo todo={todo} />
-        </>
+        </React.Fragment>
       ))}
     </table>
   );
 };
 // Add a default export statement for TodoInfo component to use it in the other files
-  // <ul className="ui list">
-  //   {preparedToDos.map(todo => (
-  //     <li key={todo.id}>
-  //       <TodoInfo todo={todo} />
-  //     </li>
-  //   ))}
-  // </ul>

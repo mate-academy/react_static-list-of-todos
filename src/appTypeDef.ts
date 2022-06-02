@@ -18,7 +18,7 @@ interface Address {
   geo: Geo;
 }
 
-interface Company {
+export interface Company {
   name: string;
   catchPhrase: string;
   bs: string;
@@ -36,5 +36,5 @@ export interface User {
 }
 
 export interface PreparedTodos extends Todo {
-  user?: User;
+  user?: User | null;
 }
