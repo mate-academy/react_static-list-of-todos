@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from '@cypress/react';
 import { TodoInfo } from './TodoInfo';
-import todos from '../../api/todos';
+import { todos } from '../../api/todos';
 
 describe('TodoInfo', () => {
   it('should have a correct title', () => {
