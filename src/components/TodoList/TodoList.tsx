@@ -10,13 +10,11 @@ interface Props {
 export const TodoList: React.FC<Props> = ({ preparedTodos }) => {
   return (
     <ul className="todo-list">
-      {preparedTodos.map((todo: PreparedTodo) => {
-        return (
-          <li key={todo.id} className="todo-list__item">
-            <TodoInfo todo={todo} />
-          </li>
-        );
-      })}
+      {preparedTodos.map(todo => (
+        <li key={todo.id} className="todo-list__item">
+          <TodoInfo todo={todo} />
+        </li>
+      ))}
     </ul>
   );
 };

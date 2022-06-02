@@ -7,22 +7,16 @@ interface Props {
 }
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => {
-  const {
-    title,
-    completed,
-    user,
-  } = todo;
-
   return (
     <div className="todo" data-cy="title">
-      <h2>{`Task: ${title}`}</h2>
+      <h2>{`Task: ${todo.title}`}</h2>
       <h3 data-cy="status">
-        {completed
+        {todo.completed
           ? ('Completed')
           : ('Not Completed')}
       </h3>
-      {user && (
-        <UserInfo user={user} />)}
+      {todo.user && (
+        <UserInfo user={todo.user} />)}
     </div>
   );
 };
