@@ -12,8 +12,8 @@ export const TodoInfo: React.FC<Props> = ({
 }) => {
   return (
     <>
-      <h1 className="item__title">{title}</h1>
-      <p className="item__status">
+      <h1 className="item__title" data-cy="title">{title}</h1>
+      <p className="item__status" data-cy="status">
         Status:
         {completed
           ? ' completed'
