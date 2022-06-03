@@ -14,8 +14,8 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
   } = todo;
 
   return (
-    <div className="todo" data-cy="title">
-      <h2>{`Task: ${title}`}</h2>
+    <div className="todo">
+      <h2 data-cy="title">{`Task: ${title}`}</h2>
       <h3 data-cy="status">
         {completed
           ? ('Completed')
