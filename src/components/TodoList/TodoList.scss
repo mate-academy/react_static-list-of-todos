@@ -1,0 +1,11 @@
+.todoList {
+  padding: 0;
+  width: 25%;
+
+  &Item {
+    background-color: rgb(247, 196, 28);
+    padding: 10px;
+    margin: 25px 0;
+    border: 1px dashed black;
+  }
+}
