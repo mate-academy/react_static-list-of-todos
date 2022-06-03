@@ -4,7 +4,6 @@ import './TodoInfo.scss';
 
 type Props = {
   todo: PreparedTodos;
-
 };
 
 export const TodoInfo: FC<Props> = ({ todo }) => {
