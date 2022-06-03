@@ -1,1 +1,31 @@
-// styles go here
+body {
+  margin: 0;
+}
+
+.card {
+  list-style-type: none;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.colorGreen {
+  color: green;
+}
+
+.colorRed {
+  color: red;
+}
+
+.colorBlue {
+  color: blue;
+}
