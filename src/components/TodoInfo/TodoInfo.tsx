@@ -1,30 +1,16 @@
 import React from 'react';
 import { UserInfo } from '../UserInfo/UserInfo';
+import { TodoInfoProps } from '../../types';
 
-type User = {
-  name: string,
-  email: string
-};
-
-interface Todo {
-  userId: number,
-  id: number,
-  title: string | undefined,
-  completed: boolean,
-  user: User | undefined;
-}
-
-export const TodoInfo: React.FC <Todo> = ({
-  title,
-  completed,
-  user,
+export const TodoInfo: React.FC <TodoInfoProps> = ({
+  todo,
 }) => {
   return (
     <>
-      {user && (<UserInfo {...user} />)}
-      <h2 className="list__item-title">{title}</h2>
+      {todo.user && (<UserInfo user={todo.user} />)}
+      <h2 className="list__item-title">{todo.title}</h2>
       <p className="list__item-completed">
-        {completed ? 'completed' : 'not completed'}
+        {todo.completed ? 'completed' : 'not completed'}
       </p>
     </>
   );

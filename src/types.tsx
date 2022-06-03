@@ -1,4 +1,4 @@
-export interface User {
+export type User = {
   id: number,
   name: string,
   username: string,
@@ -20,7 +20,7 @@ export interface User {
     catchPhrase: string,
     bs: string,
   },
-}
+};
 
 export interface Todo {
   userId: number,
@@ -29,10 +29,18 @@ export interface Todo {
   completed: boolean,
 }
 
-export interface TodoMapped extends Todo {
-  user: User | undefined;
+export interface Todos extends Todo {
+  user: User | undefined
 }
 
-export type Props = {
-  todos: TodoMapped[];
+export type ListProps = {
+  todos: Todos[]
+};
+
+export type TodoInfoProps = {
+  todo: Todos;
+};
+
+export type UserProps = {
+  user: User
 };

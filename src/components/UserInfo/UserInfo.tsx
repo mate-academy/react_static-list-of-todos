@@ -1,14 +1,10 @@
 import React from 'react';
 
-type User = {
-  name: string,
-  email: string
-};
+import { UserProps } from '../../types';
 
-export const UserInfo: React.FC <User> = ({
-  name,
-  email,
-}) => {
+export const UserInfo: React.FC <UserProps> = ({ user }) => {
+  const { name, email } = user;
+
   return (
     <>
       <h2 className="list__item-username">
