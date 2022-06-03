@@ -10,14 +10,14 @@ type Props = {
 export const TodoList: React.FC<Props> = ({ todosArray }) => (
   <ul>
     {todosArray.map(todo => (
-      <li>
-        <UserInfo
-          name={todo.user ? todo.user.name : 'Elvis has left the bilding'}
-          email={todo.user?.email || 'Nobody home'}
-        />
+      <li key={todo.id}>
+        {todo.user && (
+          <UserInfo
+            person={todo.user}
+          />
+        )}
         <TodoInfo
-          title={todo.title}
-          completed={todo.completed}
+          todo={todo}
         />
       </li>
     ))}
