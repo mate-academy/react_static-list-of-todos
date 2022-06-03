@@ -1,9 +1,9 @@
 import React from 'react';
-import { PreparedTodos } from '../../react-app-env';
+import { Todo } from '../../react-app-env';
 import { UserInfo } from '../UserInfo/UserInfo';
 
 interface Props {
-  todo :PreparedTodos,
+  todo: Todo,
 }
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => (

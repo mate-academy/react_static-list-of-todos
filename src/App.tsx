@@ -3,10 +3,10 @@ import './App.scss';
 
 import todos from './api/todos';
 import users from './api/users';
-import { PreparedTodos } from './react-app-env';
+import { Todo } from './react-app-env';
 import { TodoList } from './components/TodoList/TodoList';
 
-const preparedTodos: PreparedTodos[] = todos.map(todo => ({
+const preparedTodos: Todo[] = todos.map(todo => ({
   ...todo,
   user: users.find(person => todo.userId === person.id) || null,
 }));

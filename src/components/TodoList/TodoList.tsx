@@ -1,10 +1,10 @@
 import React from 'react';
-import { PreparedTodos } from '../../react-app-env';
+import { Todo } from '../../react-app-env';
 import { TodoInfo } from '../TodoInfo/TodoInfo';
 import './TodoList.scss';
 
 interface Props {
-  todos: PreparedTodos[],
+  todos: Todo[],
 }
 
 export const TodoList: React.FC<Props> = ({ todos }) => (
