@@ -1,6 +1,31 @@
-// Don't forget to import the React library
+import React from 'react';
+import classNames from 'classnames';
+import './TodoInfo.scss';
+import { UserInfo } from '../UserInfo';
+import { User } from '../../types/User';
 
-// Create a `TodoInfo` component accepting a `todo` object and use it in the
-// list to render `title`, `completed` status and `User`
+type Props = {
+  title: string;
+  completed: boolean;
+  user: User | null;
+};
 
-// Add a default export statement for TodoInfo component to use it in the other files
+export const TodoInfo: React.FC<Props> = ({ title, completed, user }) => (
+  <>
+    <p>{title}</p>
+    <p
+      className={classNames(
+        'todoStatus',
+        {
+          completed,
+        },
+      )}
+    >
+      {`Completed: ${completed}`}
+    </p>
+
+    {user && (
+      <UserInfo {...user} />
+    )}
+  </>
+);
