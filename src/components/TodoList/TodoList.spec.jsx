@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from '@cypress/react';
-import { TodoList } from './TodoList';
+import TodoList from './TodoList';
 import todos from '../../api/todos';
 
 describe('TodoList', () => {
