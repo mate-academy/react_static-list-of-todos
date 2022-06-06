@@ -1,6 +1,28 @@
-// Don't forget to import the React library
+import { PrepTodo } from '../../types';
+import { UserInfo } from '../UserInfo';
 
-// Create a `TodoInfo` component accepting a `todo` object and use it in the
-// list to render `title`, `completed` status and `User`
+import './styleTodoInfo.scss';
 
-// Add a default export statement for TodoInfo component to use it in the other files
+interface Props {
+  todo: PrepTodo
+}
+export const TodoInfo: React.FC<Props> = ({ todo }) => {
+  return (
+    <div className="todo-card">
+      <label>
+        <span className="todo-card__title">
+          {todo.title}
+        </span>
+        {todo.completed
+          ? <input type="checkbox" checked />
+          : <input type="checkbox" />}
+      </label>
+
+      <p className="todo-card__user">
+        {todo.user && (
+          <UserInfo user={todo.user} />
+        )}
+      </p>
+    </div>
+  );
+};
