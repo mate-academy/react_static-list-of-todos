@@ -8,14 +8,10 @@ export const UserInfo: React.FC <UserProps> = ({ user }) => {
   return (
     <>
       <h2 className="list__item-username">
-        Name:
-        {' '}
-        {name}
+        {`Name: ${name}`}
       </h2>
       <h3 className="list__item-email">
-        Email:
-        {' '}
-        {email}
+        {`Email: ${email}`}
       </h3>
     </>
   );

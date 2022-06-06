@@ -19,11 +19,9 @@ const prepareTodos = (users: User[], todos: Todo[]) => {
 export const preparedTodos = prepareTodos(usersFrom, todosFrom);
 
 const App: React.FC = () => (
-  <>
-    <div className="container">
-      <TodoList todos={preparedTodos} />
-    </div>
-  </>
+  <div className="container">
+    <TodoList todos={preparedTodos} />
+  </div>
 );
 
 export default App;
