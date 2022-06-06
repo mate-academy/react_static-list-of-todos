@@ -16,15 +16,12 @@ export const TodoList: React.FC<Props> = ({ fullTodos }) => (
 
         <li className="todo">
 
-          <UserInfo
-            name={todo.user ? todo.user.name : 'Unknown'}
-            email={todo.user ? todo.user.email : 'not email'}
-          />
+          {todo.user && (
+            <UserInfo user={todo.user} />
+          )}
 
-          <TodoInfo
-            title={todo.title}
-            completed={todo.completed}
-          />
+          <TodoInfo todo={todo} />
+
         </li>
       </div>
     ))}

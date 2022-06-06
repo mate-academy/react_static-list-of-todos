@@ -1,24 +1,25 @@
 import React from 'react';
 import './UserInfo.scss';
+import { User } from '../../react-app-env';
 
 interface Props {
-  name: string,
-  email: string,
+  user: User,
+
 }
 
-export const UserInfo: React.FC<Props> = ({ name, email }) => (
+export const UserInfo: React.FC<Props> = ({ user }) => (
   <>
     <div
       data-cy="username"
       className="name"
     >
-      {name}
+      {user.name}
     </div>
     <div
       data-cy="email"
       className="userEmail"
     >
-      {email}
+      {user.email}
     </div>
   </>
 );

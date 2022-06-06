@@ -1,21 +1,21 @@
 import React from 'react';
 import './TodoInfo.scss';
+import { PreparedTodo } from '../../react-app-env';
 
 interface Props {
-  title: string,
-  completed: boolean,
+  todo: PreparedTodo,
 }
 
-export const TodoInfo: React.FC<Props> = ({ title, completed }) => (
+export const TodoInfo: React.FC<Props> = ({ todo }) => (
   <>
-    <div data-cy="title">{title}</div>
+    <div data-cy="title">{todo.title}</div>
     <div
       data-cy="status"
-      className={`${completed
+      className={`${todo.completed
         ? 'Complected'
         : 'Complected-false'}`}
     >
-      {`Сompleted: ${completed}`}
+      {`Сompleted: ${todo.completed}`}
     </div>
   </>
 );
