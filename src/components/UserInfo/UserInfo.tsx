@@ -1,16 +1,18 @@
 import React from 'react';
-import { User } from '../../types';
+import { Company } from '../../types';
 
 interface Props {
-  user: User,
+  name: string,
+  email: string,
+  company: Company,
 }
 
-export const UserInfo: React.FC<Props> = ({ user }) => {
+export const UserInfo: React.FC<Props> = ({ name, email, company }) => {
   return (
     <ul>
-      <li data-cy="username">{user.name}</li>
-      <li data-cy="email">{user.email}</li>
-      <li>{`Company: ${user.company.name}`}</li>
+      <li data-cy="username">{name}</li>
+      <li data-cy="email">{email}</li>
+      <li>{`Company: ${company.name}`}</li>
     </ul>
   );
 };
