@@ -1,23 +1,28 @@
 import { PrepTodo } from '../../types';
+import { UserInfo } from '../UserInfo';
+
+import './styleTodoInfo.scss';
 
 interface Props {
   todo: PrepTodo
 }
 export const TodoInfo: React.FC<Props> = ({ todo }) => {
-  let userInformation = '';
-
-  if (todo.user) {
-    userInformation
-    = `${todo.user.name} ${todo.user.email}`;
-  } else {
-    userInformation = '';
-  }
-
   return (
-    <>
-      <p>{todo.title}</p>
-      <p>{todo.completed.toString()}</p>
-      <p>{userInformation}</p>
-    </>
+    <div className="todo-card">
+      <label>
+        <span className="todo-card__title">
+          {todo.title}
+        </span>
+        {todo.completed
+          ? <input type="checkbox" checked />
+          : <input type="checkbox" />}
+      </label>
+
+      <p className="todo-card__user">
+        {todo.user && (
+          <UserInfo user={todo.user} />
+        )}
+      </p>
+    </div>
   );
 };
