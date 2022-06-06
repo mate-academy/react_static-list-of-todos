@@ -5,3 +5,17 @@
 // `email` of the `user`)
 
 // Add a default export statement for UserInfo component to use it in the other files
+import React from 'react';
+import { User } from '../Types/types';
+
+type Props = {
+  user: User
+};
+
+export const UserInfo: React.FC<Props> = ({ user }) => (
+  <>
+    {`Name: ${user.name}`}
+    <br />
+    {`Email: ${user.email}`}
+  </>
+);
