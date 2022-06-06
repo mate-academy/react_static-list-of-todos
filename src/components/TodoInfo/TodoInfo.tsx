@@ -1,11 +1,12 @@
 import React from 'react';
 import { PreparedTodo } from '../../types';
+import { UserInfo } from '../UserInfo/UserInfo';
 
 type Props = {
   todo: PreparedTodo;
 };
 
-const TodoInfo: React.FC<Props> = ({ todo }) => (
+export const TodoInfo: React.FC<Props> = ({ todo }) => (
   <>
     <h2 data-cy="title">
       {todo.title}
@@ -16,12 +17,10 @@ const TodoInfo: React.FC<Props> = ({ todo }) => (
         : ('Not completed')}
     </p>
     <p>
-      {todo.userId}
+      {todo.user && <UserInfo user={todo.user} />}
     </p>
   </>
 );
-
-export default TodoInfo;
 // Create a `TodoInfo` component accepting a `todo` object and use it in the
 // list to render `title`, `completed` status and `User`
 

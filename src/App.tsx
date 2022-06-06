@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import { PreparedTodo } from './types';
-import TodoList from './components/TodoList/TodoList';
+import { TodoList } from './components/TodoList/TodoList';
 import todos from './api/todos';
 import users from './api/users';
 
