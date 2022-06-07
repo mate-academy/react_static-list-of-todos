@@ -2,7 +2,7 @@ import React from 'react';
 import { User } from '../../app.typedefs';
 
 interface Props {
-  user: User,
+  user: User | null,
 }
 
 export const UserInfo: React.FC<Props> = ({ user }) => {
