@@ -1,7 +1,28 @@
-// Don't forget to import the React library
+import { FC } from 'react';
+import { User } from '../../app.typedefs';
+import './UserInfo.scss';
 
-// Create a `UserInfo` component accepting a `user` object and use it to render
-// a `todo.user` in the list with some styling. (Show at least a `name` and an
-// `email` of the `user`)
+type UserType = {
+  user: User,
+};
 
-// Add a default export statement for UserInfo component to use it in the other files
+export const UserInfo: FC<UserType> = ({ user }) => {
+  const {
+    id,
+    username,
+    email,
+  } = user;
+
+  return (
+    <ul className="user-info" key={id}>
+      <li className="user-info__item" data-cy="username">
+        {`Username: ${username}`}
+      </li>
+      <li className="user-info__item" data-cy="email">
+        {`email: ${email}`}
+      </li>
+    </ul>
+  );
+};
+
+export default UserInfo;
