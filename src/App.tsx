@@ -6,7 +6,7 @@ import { PreparedTodo } from './types';
 import { TodoList } from './components/TodoList';
 
 const preparedTodos: PreparedTodo[] = todos.map((todo) => {
-  const user = users.find(person => person.id === todo.userId) || null;
+  const user = users.find(person => person.id === todo.userId) || undefined;
 
   return (
     {
