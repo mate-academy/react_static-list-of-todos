@@ -1,0 +1,15 @@
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+
+  &__item {
+    align-self: center;
+    text-align: center;
+    width: 1000px;
+    padding: 0 15px 5px;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%,
+    rgba(0, 212, 255, 1) 0%, rgba(89, 89, 116, 1) 100%);
+  }
+}
