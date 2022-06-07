@@ -1,0 +1,13 @@
+.user_info {
+  margin-left: 32px;
+  padding: 16px;
+  max-width: max-content;
+  list-style: none;
+
+  border: 2px solid pink;
+  background-color: lightgoldenrodyellow;
+
+  &__item {
+    text-decoration: none;
+  }
+}
