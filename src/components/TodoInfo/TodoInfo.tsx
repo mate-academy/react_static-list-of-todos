@@ -15,11 +15,11 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
 
   return (
     <div className="todo">
-      <h2 data-cy="title">{`Task: ${title}`}</h2>
+      <h2 data-cy="title">{title}</h2>
       <h3 data-cy="status">
         {completed
           ? ('Completed')
-          : ('Not completed')}
+          : ('Not completed!')}
       </h3>
       {user && (
         <UserInfo user={user} />
