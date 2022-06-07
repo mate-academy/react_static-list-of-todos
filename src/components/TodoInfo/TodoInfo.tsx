@@ -1,18 +1,14 @@
 import React from 'react';
-import { PreparedTodo } from '../../types';
+import { User } from '../../types';
 import { UserInfo } from '../UserInfo';
 
 type Props = {
-  todo: PreparedTodo;
+  title: string,
+  completed: boolean,
+  user: User | null,
 };
 
-export const TodoInfo: React.FC<Props> = ({ todo }) => {
-  const {
-    title,
-    completed,
-    user,
-  } = todo;
-
+export const TodoInfo: React.FC<Props> = ({ title, completed, user }) => {
   return (
     <div>
       <h2 data-cy="title">{`Task: ${title}`}</h2>
@@ -22,7 +18,10 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
           : ('Not Completed')}
       </p>
       {user && (
-        <UserInfo user={user} />
+        <UserInfo
+          name={user.name}
+          email={user.email}
+        />
       )}
     </div>
   );

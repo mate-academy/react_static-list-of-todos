@@ -6,7 +6,7 @@ export interface Todo {
 }
 
 export interface PreparedTodo extends Todo {
-  user: User | null;
+  user?: User;
 }
 
 export interface User {
