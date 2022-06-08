@@ -12,7 +12,7 @@ function prepareTodos(
 ): PreparedTodos[] {
   return todoList.map(todo => ({
     ...todo,
-    user: usersList.find(user => user.id === todo.userId) || null,
+    user: usersList.find(user => user.id === todo.userId),
   }));
 }
 

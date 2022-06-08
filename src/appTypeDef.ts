@@ -32,9 +32,9 @@ export interface User {
   address: Address;
   phone: string;
   website: string;
-  company: Company;
+  company: Company | null;
 }
 
 export interface PreparedTodos extends Todo {
-  user?: User | null;
+  user?: User | null | undefined;
 }

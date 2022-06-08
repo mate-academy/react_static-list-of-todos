@@ -13,6 +13,7 @@ export const TodoInfo: React.FC<TodoInfoProps> = ({ todo }) => {
     completed,
     user,
   } = todo;
+
   const todoStatus = completed
     ? 'Completed'
     : 'Pending';
@@ -25,9 +26,9 @@ export const TodoInfo: React.FC<TodoInfoProps> = ({ todo }) => {
       <td>
         <UserInfo
           id={todo.id}
-          name={user?.name}
-          email={user?.email}
-          company={user?.company.name}
+          name={user?.name || 'Unknown'}
+          email={user?.email || 'Unknown'}
+          company={user?.company?.name || 'Unknown'}
         />
       </td>
     </tr>

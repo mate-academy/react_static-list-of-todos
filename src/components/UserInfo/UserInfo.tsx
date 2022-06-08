@@ -2,14 +2,14 @@ import { FC } from 'react';
 
 interface UserInfoProps {
   id: number;
-  name: string | null | undefined;
-  email: string | null | undefined;
-  company: string | null | undefined;
+  name: string;
+  email: string;
+  company: string;
 }
 
 export const UserInfo: FC<UserInfoProps> = ({
   id,
-  name,
+  name = 'Unknown',
   email,
   company,
 }) => {
