@@ -8,16 +8,16 @@ import { TodoList } from './components/TodoList';
 
 const preparedTodos: PreparedTodos[] = todos.map(todo => (
   {
-  ...todo,
-  user: users.find(user => todo.userId === user.id) || null,
+    ...todo,
+    user: users.find(user => todo.userId === user.id) || null,
 
   }
-))
+));
 
 const App: React.FC = () => (
   <div className="App">
     <h1>Static list of todos</h1>
-    <TodoList todos={ preparedTodos } />
+    <TodoList todos={preparedTodos} />
   </div>
 );
 

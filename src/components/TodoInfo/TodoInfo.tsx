@@ -11,12 +11,17 @@ type Props = {
 
 // Add a default export statement for TodoInfo component to use it in the other files
 export const TodoInfo: FC<Props> = ({ todo }) => {
+  const {
+    title,
+    completed,
+  } = todo;
+
   return (
     <div className="todo__info">
-      <h2 data-cy="title">{todo.title}</h2>
+      <h2 data-cy="title">{title}</h2>
       <h3 data-cy="status">
         {
-          todo.completed
+          completed
             ? 'Progress is completed!'
             : 'Progress is not completed!'
         }

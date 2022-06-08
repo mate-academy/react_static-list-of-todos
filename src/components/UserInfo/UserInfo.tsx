@@ -11,14 +11,20 @@ type Props = {
 
 // Add a default export statement for UserInfo component to use it in the other files
 export const UserInfo: FC<Props> = ({ user }) => {
+  const {
+    id,
+    name,
+    email,
+  } = user;
+
   return (
-    <ul className="user__info" key={user.id}>
+    <ul className="user__info" key={id}>
       <li className="user__info-name" data-cy="username">
-        {`Username: ${user.name}`}
+        {`Username: ${name}`}
       </li>
 
       <li className="user__info-email" data-cy="email">
-        {`Email: ${user.email}`}
+        {`Email: ${email}`}
       </li>
     </ul>
   );
