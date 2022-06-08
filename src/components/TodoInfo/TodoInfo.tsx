@@ -1,23 +1,25 @@
 import React from 'react';
-import { PreparedTodo } from '../../types';
+import { User } from '../../types';
 import { UserInfo } from '../UserInfo/UserInfo';
 
 type Props = {
-  todo: PreparedTodo;
+  title: string;
+  user: User | null;
+  completed: boolean;
 };
 
-export const TodoInfo: React.FC<Props> = ({ todo }) => (
+export const TodoInfo: React.FC<Props> = ({ title, user, completed }) => (
   <>
     <h2 data-cy="title">
-      {todo.title}
+      {title}
     </h2>
     <p data-cy="status">
-      {todo.completed
+      {completed
         ? ('Completed')
         : ('Not completed')}
     </p>
     <p>
-      {todo.user && <UserInfo user={todo.user} />}
+      {user && <UserInfo user={user} />}
     </p>
   </>
 );

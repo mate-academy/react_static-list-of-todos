@@ -5,12 +5,19 @@ type Props = {
   user: User;
 };
 
-export const UserInfo: React.FC<Props> = ({ user }) => (
-  <ul>
-    <li>{user.name}</li>
-    <li>{user.email}</li>
-  </ul>
-);
+export const UserInfo: React.FC<Props> = ({ user }) => {
+  const {
+    name,
+    email,
+  } = user;
+
+  return (
+    <ul>
+      <li>{name}</li>
+      <li>{email}</li>
+    </ul>
+  );
+};
 
 // Create a `UserInfo` component accepting a `user` object and use it to render
 // a `todo.user` in the list with some styling. (Show at least a `name` and an
