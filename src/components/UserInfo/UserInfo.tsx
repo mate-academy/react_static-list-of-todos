@@ -14,9 +14,9 @@ export const UserInfo: React.FC<Props> = ({ user }) => {
 
   return (
     <div>
-      <h2>{name}</h2>
+      <h2 data-cy="username">{name}</h2>
       <p data-cy="email">{email}</p>
-      <p data-cy="username">{username}</p>
+      <p>{username}</p>
     </div>
   );
 };
