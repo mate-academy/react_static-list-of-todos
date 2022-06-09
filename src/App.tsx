@@ -10,7 +10,7 @@ const preparedTodos: Todo[] = todos.map(obj => {
   const foundUser = users.find(user => user.id === obj.userId);
   const temp:Todo = {
     ...obj,
-    user: foundUser === undefined ? null : foundUser,
+    user: foundUser || null,
   };
 
   return temp;
