@@ -1,15 +1,24 @@
 import React from 'react';
-import { TodoInfo, Todo } from '../TodoInfo';
+import { PreparedTodo } from '../../typedefs';
+import { TodoInfo } from '../TodoInfo';
 
 // Create a `TodoList` component accepting an array of `preparedTodos` and
 // rendering them as a list
 
-export const TodoList: React.FC<Todo[]> = (todoList: Todo[]) => {
-  const todoListArray:Todo[] = Object.values(todoList);
+type Props = {
+  todos: PreparedTodo[]
+};
 
+export const TodoList: React.FC<Props> = ({ todos }) => {
   return (
-    <div>
-      { todoListArray.map(todo => <TodoInfo {...todo} />) }
-    </div>
+    <ul>
+      {todos.map((todo: PreparedTodo) => {
+        return (
+          <li key={todo.id}>
+            <TodoInfo todo={todo} />
+          </li>
+        );
+      })}
+    </ul>
   );
 };

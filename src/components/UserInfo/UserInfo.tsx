@@ -1,22 +1,22 @@
 /* eslint-disable react/no-unused-prop-types */
 import React from 'react';
+import { User } from '../../typedefs';
 
 // Create a `UserInfo` component accepting a `user` object and use it to render
 // a `todo.user` in the list with some styling. (Show at least a `name` and an
 // `email` of the `user`)
-export interface User {
-  id: number;
-  name: string;
-  email: string;
-  username: string;
-}
+type Props = {
+  user: User
+};
 
-export const UserInfo: React.FC<User> = (user: User) => {
+export const UserInfo: React.FC<Props> = ({ user }) => {
+  const { name, email, username } = user;
+
   return (
     <div>
-      <h2>{`Name: ${user.name}`}</h2>
-      <p data-cy="email">{`E-mail: ${user.email}`}</p>
-      <p data-cy="username">{`Username: ${user.username}`}</p>
+      <h2>{name}</h2>
+      <p data-cy="email">{email}</p>
+      <p data-cy="username">{username}</p>
     </div>
   );
 };

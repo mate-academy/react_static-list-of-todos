@@ -4,22 +4,19 @@ import './App.scss';
 import todos from './api/todos';
 import users from './api/users';
 import { TodoList } from './components/TodoList';
-import { Todo } from './components/TodoInfo';
+import { PreparedTodo } from './typedefs';
 
-const preparedTodos: Todo[] = todos.map(obj => {
-  const foundUser = users.find(user => user.id === obj.userId);
-  const temp:Todo = {
-    ...obj,
-    user: foundUser || null,
+const preparedTodos: PreparedTodo[] = todos.map(todo => {
+  return {
+    ...todo,
+    user: users.find(user => user.id === todo.userId) || null,
   };
-
-  return temp;
 });
 
 const App: React.FC = () => (
   <div className="App">
     <h1>Static list of todos</h1>
-    <TodoList {...preparedTodos} />
+    <TodoList todos={preparedTodos} />
   </div>
 );
 
