@@ -5,7 +5,6 @@ import todos from './api/todos';
 import users from './api/users';
 
 import TodoList from './components/TodoList/TodoList';
-import { Props } from './types';
 
 const preparedTodos = todos.map(todo => {
   const properUser = users.find(user => user.id === todo.userId) || null;
@@ -16,7 +15,7 @@ const preparedTodos = todos.map(todo => {
   };
 });
 
-const App: React.FC<Props> = () => (
+const App: React.FC = () => (
   <div className="App">
     <h1 className="page-title">Static list of todos</h1>
     <TodoList todosList={preparedTodos} />
