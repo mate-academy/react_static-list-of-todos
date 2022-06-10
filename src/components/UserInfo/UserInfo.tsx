@@ -1,7 +1,29 @@
-// Don't forget to import the React library
+import React from 'react';
+import { UserInfoProps } from '../../types';
 
-// Create a `UserInfo` component accepting a `user` object and use it to render
-// a `todo.user` in the list with some styling. (Show at least a `name` and an
-// `email` of the `user`)
+const UserInfo: React.FC<UserInfoProps> = ({ user = {} }) => (
+  <>
+    <br />
+    {user !== null && (
+      <span>
+        <span data-cy="username">
+          {`Owner: ${user.username}`}
+          <br />
+          {`Real name: ${user.name}`}
+        </span>
+        <br />
+        <br />
+        <span data-cy="email">
+          {`Email: ${user.email}`}
+        </span>
+        <br />
+        {`Phone: ${user.phone
+          ? (user.phone).split(' ')[0]
+          : 'no phone number provided'}`}
+      </span>
+    )}
+    <br />
+  </>
+);
 
-// Add a default export statement for UserInfo component to use it in the other files
+export default UserInfo;
