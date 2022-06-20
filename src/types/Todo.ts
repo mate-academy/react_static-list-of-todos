@@ -1,7 +1,4 @@
-interface User {
-  name: string,
-  email: string,
-}
+import { User } from './User';
 
 export interface Todo {
   userId: number,

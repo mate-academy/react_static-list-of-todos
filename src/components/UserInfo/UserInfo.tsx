@@ -1,11 +1,10 @@
-type User = {
-  user: {
-    name: string,
-    email: string,
-  } | null,
+import { User } from '../../types/User';
+
+type Props = {
+  user: User | null,
 };
 
-export const UserInfo: React.FC<User> = ({ user }) => {
+export const UserInfo: React.FC<Props> = ({ user }) => {
   if (!user) {
     return null;
   }
