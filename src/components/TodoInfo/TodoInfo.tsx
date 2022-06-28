@@ -5,7 +5,7 @@ import UserInfo from '../UserInfo/UserInfo';
 const TodoInfo: React.FC<Todo> = ({
   title, completed, user,
 }) => (
-  <>
+  <p>
     <div data-cy="title">
       {`Title: ${title}`}
     </div>
@@ -21,7 +21,7 @@ const TodoInfo: React.FC<Todo> = ({
         />
       )}
     </div>
-  </>
+  </p>
 );
 
 export default TodoInfo;
