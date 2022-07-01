@@ -1,0 +1,29 @@
+.TodoInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px;
+
+  background-color: #ffb3b3;
+
+  border-radius: 10px;
+
+  &--done {
+    background-color: #b3ffb3;
+  }
+
+  &__title {
+    text-transform: capitalize;
+  }
+
+  &__status {
+    color: red;
+    &--done {
+      color: green;
+    }
+  }
+
+  &__line {
+    width: 100%;
+  }
+}
