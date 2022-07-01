@@ -14,7 +14,7 @@ const TodoList: React.FC<Props> = ({ todos = [] }) => (
         className={todo.completed
           ? 'list__item'
           : 'list__item list__item--not-ready'}
-        key={`mailto:${todo.id}`}
+        key={todo.id}
       >
         <TodoInfo todo={todo} />
       </li>
