@@ -1,10 +1,12 @@
 import React from 'react';
 import { mount } from '@cypress/react';
+// eslint-disable-next-line import/named
 import { UserInfo } from './UserInfo';
 import users from '../../api/users';
 
 describe('UserInfo', () => {
   it('should have a correct name', () => {
+    // eslint-disable-next-line react/jsx-filename-extension
     mount(<UserInfo user={users[0]} />);
     cy.getByDataCy('username')
       .should('have.text', users[0].name);
