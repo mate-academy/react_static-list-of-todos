@@ -1,7 +1,32 @@
-// Don't forget to import the React library
+import React from 'react';
 
-// Create a `UserInfo` component accepting a `user` object and use it to render
-// a `todo.user` in the list with some styling. (Show at least a `name` and an
-// `email` of the `user`)
+interface User {
+  name: string;
+  email: string;
+  username: string;
+}
 
-// Add a default export statement for UserInfo component to use it in the other files
+export const UserInfo: React.FC<User> = ({ name, email, username }) => (
+  <div className="todo-list__user">
+    <p className="todo-list__main">
+      <span className="todo-list__email">
+        Username:
+      </span>
+      {username}
+    </p>
+
+    <p className="todo-list__main" data-cy="username">
+      <span className="todo-list__email">
+        Name:
+      </span>
+      {name}
+    </p>
+
+    <p className="todo-list__main" data-cy="email">
+      <span className="todo-list__email">
+        Email:
+      </span>
+      {email}
+    </p>
+  </div>
+);

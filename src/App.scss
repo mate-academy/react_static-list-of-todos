@@ -1,1 +1,13 @@
 // styles go here
+body {
+  background-color: rgb(67, 67, 67);
+}
+
+.App__title {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+
+  color: white;
+  text-shadow: 2px 5px 5px black;
+}
