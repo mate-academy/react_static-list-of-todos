@@ -1,0 +1,18 @@
+li {
+  list-style-type: none;
+}
+
+.todo {
+  border-radius: 10px;
+  padding: 10px;
+  padding-right: 150px;
+  background-color: rgb(50, 135, 209);
+  margin-bottom: 40px;
+  transition: 0.5s;
+}
+
+.todo:hover {
+  background-color: rgb(28, 134, 226);
+  transform: translateY(-5px) scale(1) translateZ(0);
+  box-shadow: 6px 6px #989898, 12px 12px #6c6666;
+}
