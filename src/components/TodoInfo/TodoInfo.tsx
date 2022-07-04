@@ -9,8 +9,10 @@ type Props = {
 export const TodoInfo: React.FC<Props> = ({ preparedToDo }) => {
   return (
     <>
-      <h2>{preparedToDo.title}</h2>
-      <p>{preparedToDo.completed ? 'completed' : 'not completed'}</p>
+      <h2 data-cy="title">{preparedToDo.title}</h2>
+      <p data-cy="status">
+        {preparedToDo.completed ? 'completed' : 'not completed'}
+      </p>
       <UserInfo user={preparedToDo.user}>
         {preparedToDo.user ? '' : 'Unknown'}
       </UserInfo>
