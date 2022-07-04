@@ -1,6 +1,27 @@
-// Don't forget to import the React library
+import React from 'react';
+import { Todo } from '../../types/Todo';
+import UserInfo from '../UserInfo/UserInfo';
 
-// Create a `TodoInfo` component accepting a `todo` object and use it in the
-// list to render `title`, `completed` status and `User`
+const TodoInfo: React.FC<Todo> = ({
+  title, completed, user,
+}) => (
+  <p>
+    <div data-cy="title">
+      {`Title: ${title}`}
+    </div>
+    <div data-cy="status">
+      {`Completed: ${completed ? 'yes' : 'no'}`}
+    </div>
+    <div>
+      {user && (
+        <UserInfo
+          name={user.name}
+          username={user.username}
+          email={user.email}
+        />
+      )}
+    </div>
+  </p>
+);
 
-// Add a default export statement for TodoInfo component to use it in the other files
+export default TodoInfo;
