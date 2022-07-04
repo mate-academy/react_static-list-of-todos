@@ -1,19 +1,17 @@
 import React from 'react';
-import { PreparedToDo } from '../../types/preparedTodo';
-import { TodoInfo } from '../TodoInfo';
+import { PreparedToDo } from '../../types/PreparedToDo';
+import { TodoInfo } from '../TodoInfo/TodoInfo';
 
 type Props = {
-  preparedTodos: PreparedToDo[]
+  preparedTodos: PreparedToDo[];
 };
 
-export const TodoList: React.FC<Props> = ({ preparedTodos }) => {
-  return (
-    <ul>
-      {preparedTodos.map(preparedTodo => (
-        <li key={preparedTodo.id}>
-          <TodoInfo preparedToDo={preparedTodo} />
-        </li>
-      ))}
-    </ul>
-  );
-};
+export const TodoList: React.FC<Props> = ({ preparedTodos }) => (
+  <ul>
+    {preparedTodos.map(preparedToDo => (
+      <li key={preparedToDo.id}>
+        <TodoInfo preparedToDo={preparedToDo} />
+      </li>
+    ))}
+  </ul>
+);

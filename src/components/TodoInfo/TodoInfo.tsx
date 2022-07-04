@@ -1,6 +1,6 @@
 import React from 'react';
+import { PreparedToDo } from '../../types/PreparedToDo';
 import { UserInfo } from '../UserInfo/UserInfo';
-import { PreparedToDo } from '../../types/preparedTodo';
 
 type Props = {
   preparedToDo: PreparedToDo;
