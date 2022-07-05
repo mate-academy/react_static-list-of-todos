@@ -1,1 +1,21 @@
-// styles go here
+.todo {
+  text-align: center;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  &__item {
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    margin-bottom: 50px;
+    background-color: yellowgreen;
+    width: 50vh;
+  }
+}
