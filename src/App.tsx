@@ -7,16 +7,16 @@ import users from './api/users';
 
 import { TodoList } from './components/TodoList/TodoList';
 
-let currentUserIndex = 0;
+import User from './types/User';
+
+let currentUser: User;
 
 export const preparedTodos = todos.map((todo) => {
-  currentUserIndex = users[currentUserIndex].id === todo.userId
-    ? currentUserIndex
-    : users.findIndex((user) => user.id === todo.userId);
+  currentUser = users.find((user) => user.id === todo.userId) || currentUser;
 
   return {
     ...todo,
-    user: users[currentUserIndex] || null,
+    user: currentUser || null,
   };
 });
 

@@ -13,17 +13,17 @@ type Props = {
 };
 
 export const TodoInfo: React.FC<Props> = ({ title, completed, user }) => (
-  <div className={completed
-    ? 'TodoInfo TodoInfo--done'
-    : 'TodoInfo'}
+  <div className={`TodoInfo ${completed
+    ? 'TodoInfo--done'
+    : ''}`}
   >
     <h2 className="TodoInfo__title" data-cy="title">{`${title}`}</h2>
     <span>
       {'Status: '}
       <span
-        className={completed
-          ? 'TodoInfo__status TodoInfo__status--done'
-          : 'TodoInfo__status'}
+        className={`TodoInfo__status ${completed
+          ? 'TodoInfo__status--done'
+          : ''}`}
         data-cy="status"
       >
         {`${completed ? '' : 'Not'} completed!`}
@@ -32,7 +32,7 @@ export const TodoInfo: React.FC<Props> = ({ title, completed, user }) => (
 
     <hr className="TodoInfo__line" />
 
-    {user !== null
+    {user
       ? (
         <UserInfo
           name={user?.name}
