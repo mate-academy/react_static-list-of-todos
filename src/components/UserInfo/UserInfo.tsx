@@ -4,8 +4,8 @@ import { User } from '../../Type/Users';
 const UserInfo: React.FC<{ user: User }> = ({ user }) => {
   return (
     <div>
-      <p>{user.name}</p>
-      <p>{user.email}</p>
+      <p data-cy="username">{user.name}</p>
+      <p data-cy="email">{user.email}</p>
     </div>
   );
 };

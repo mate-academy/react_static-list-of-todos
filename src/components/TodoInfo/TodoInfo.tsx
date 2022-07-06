@@ -4,8 +4,8 @@ import { Todo } from '../../Type/Todos';
 const TodoInfo: React.FC<{ todo: Todo }> = ({ todo }) => {
   return (
     <div>
-      <p>{todo.title}</p>
-      <p>{todo.completed}</p>
+      <p data-cy="title">{todo.title}</p>
+      <p data-cy="status">{todo.completed}</p>
     </div>
   );
 };
