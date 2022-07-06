@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { mount } from '@cypress/react';
+// eslint-disable-next-line import/named
 import { UserInfo } from './UserInfo';
 import users from '../../api/users';
 
