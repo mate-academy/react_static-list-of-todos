@@ -16,7 +16,11 @@ const preparedToDos: PreparedToDo[] = todos.map(todo => ({
 const App: React.FC = () => (
   <div className="App">
     <h1>Static list of todos</h1>
-    <TodoList preparedTodos={preparedToDos} />
+    <div className="page">
+      <div className="page-content">
+        <TodoList preparedTodos={preparedToDos} />
+      </div>
+    </div>
   </div>
 );
 
