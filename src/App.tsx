@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
+import './reset.scss';
+import { TodoList } from './components/TodoList/TodoList';
 
 // import todos from './api/todos';
 // import users from './api/users';
 
 const App: React.FC = () => (
-  <div className="App">
-    <h1>Static list of todos</h1>
-  </div>
+  <TodoList />
 );
 
 export default App;
