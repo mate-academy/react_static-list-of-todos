@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { mount } from '@cypress/react';
-import { UserInfo } from './UserInfo';
+import UserInfo from './UserInfo';
 import users from '../../api/users';
 
 describe('UserInfo', () => {
