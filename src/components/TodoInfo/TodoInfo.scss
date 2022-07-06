@@ -1,0 +1,20 @@
+.todo-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(36, 208, 211, 0.392);
+  border: 5px solid transparent;
+  border-radius: 10px;
+}
+.todo-info-title {
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: red;
+}
+
+.todo-info-status {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: green;
+}
