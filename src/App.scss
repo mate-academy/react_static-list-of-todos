@@ -1,1 +1,13 @@
-// styles go here
+.app {
+  display: flex;
+  text-align: center;
+  justify-items: center;
+  margin: 0, auto;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  
+  &__title {
+    text-align: center;
+
+  }
+
+}

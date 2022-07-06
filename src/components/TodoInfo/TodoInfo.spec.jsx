@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { mount } from '@cypress/react';
-import { TodoInfo } from './TodoInfo';
+import TodoInfo from './TodoInfo';
 import todos from '../../api/todos';
 
 describe('TodoInfo', () => {
