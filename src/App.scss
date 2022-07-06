@@ -1,1 +1,26 @@
-// styles go here
+.todo {
+  margin: 20px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #000;
+  }
+
+  &__complete {
+    color: #f00;
+    font-size: 18px;
+  }
+}
