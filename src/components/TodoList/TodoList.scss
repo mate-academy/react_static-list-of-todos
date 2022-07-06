@@ -1,0 +1,21 @@
+.todo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+  list-style: none;
+
+  &__item {
+    padding: 10px;
+    background-color: rgb(184, 235, 209);
+    width: 700px;
+    border: 1px solid rgb(118, 166, 183);
+    border-radius: 8px;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
