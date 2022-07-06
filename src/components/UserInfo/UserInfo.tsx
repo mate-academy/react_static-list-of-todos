@@ -11,9 +11,9 @@ export const UserInfo: React.FC<Props> = ({ name, email }) => (
   <>
     <span className="userInfo">
       {' - '}
-      {name}
+      <span data-cy="username">{name}</span>
       {'  -  '}
-      {email}
+      <span data-cy="email">{email}</span>
     </span>
 
   </>
