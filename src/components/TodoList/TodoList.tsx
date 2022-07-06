@@ -12,7 +12,7 @@ const TodoList: React.FC<Props> = ({ todos }) => (
     {todos.map(el => (
       <div className="item">
         <UserInfo user={el.user} />
-        <div>{'-'.repeat(44)}</div>
+        <div>{'-'.repeat(60)}</div>
         <TodoInfo
           title={el.title}
           completed={el.completed}
