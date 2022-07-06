@@ -4,7 +4,7 @@ import { User } from '../../react-app-env';
 import './UserInfo.scss';
 
 type Props = {
-  user: User | null,
+  user: User | null | undefined,
 };
 
 const UserInfo: React.FC<Props> = ({ user }) => {
@@ -14,8 +14,12 @@ const UserInfo: React.FC<Props> = ({ user }) => {
 
   return (
     <>
-      <div className="user-info" data-cy="username">{`Name: ${user.name}`}</div>
-      <div className="user-info user-info__last" data-cy="email">{`Email: ${user.email}`}</div>
+      <div className="user-info" data-cy="username">
+        {`Name: ${user.name}`}
+      </div>
+      <div className="user-info user-info__last" data-cy="email">
+        {`Email: ${user.email}`}
+      </div>
     </>
   );
 };

@@ -7,8 +7,8 @@ export interface User {
 
 export interface Todo {
   userId: number,
-  id: number,
+  id?: number,
   title: string,
   completed: boolean,
-  user: User | null,
+  user?: User | null,
 }

@@ -1,12 +1,9 @@
 import React from 'react';
+import { Todo } from '../../react-app-env';
 
 import './TodoInfo.scss';
 
-type Props = {
-  title: string,
-  completed: boolean,
-  userId: number,
-};
+type Props = Todo;
 
 const TodoInfo: React.FC<Props> = ({ title, completed, userId }) => (
   <>
