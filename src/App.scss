@@ -1,1 +1,34 @@
 // styles go here
+.container {
+  text-align: center;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 30px;
+    align-items: center;
+    background-color: rgba($color: blue, $alpha: 0.7);
+  }
+
+  &__item {
+    text-align: center;
+    width: 500px;
+    padding: 10px;
+    margin-bottom: 30px;
+    list-style: none;
+
+    border-radius: 20px;
+    background-color: yellow;
+  }
+}
