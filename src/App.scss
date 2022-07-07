@@ -1,1 +1,20 @@
-// styles go here
+.appTitle {
+  text-align: center;
+}
+
+.todoList {
+  list-style: none;
+  font-size: 24px;
+}
+
+.todoItem {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: #ff9;
+  }
+}
