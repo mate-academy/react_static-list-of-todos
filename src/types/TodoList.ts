@@ -1,4 +1,4 @@
-import { User } from '../types/User';
+import { User } from './User';
 
 export interface ToDoListWithUser {
   userId: number;
