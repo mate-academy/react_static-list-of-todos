@@ -1,10 +1,5 @@
 import React from 'react';
-
-interface User {
-  name: string;
-  email: string;
-  username: string;
-}
+import { User } from '../../types/User';
 
 export const UserInfo: React.FC<User> = ({ name, email, username }) => (
   <div className="todo-list__user">

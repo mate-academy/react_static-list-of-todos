@@ -2,22 +2,8 @@
 import React from 'react';
 import { TodoInfo } from '../TodoInfo/TodoInfo';
 import { UserInfo } from '../UserInfo/UserInfo';
+import { ToDoListWithUser } from '../../types/TodoList';
 import './TodoList.scss';
-
-interface User {
-  id: number;
-  name: string;
-  username: string;
-  email: string;
-}
-
-interface ToDoListWithUser {
-  userId: number;
-  id: number;
-  title: string;
-  completed: boolean;
-  user?: User | null;
-}
 
 type Props = {
   props: ToDoListWithUser[];
