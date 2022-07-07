@@ -1,1 +1,30 @@
-// styles go here
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: lightgoldenrodyellow;
+  padding: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 48px;
+}
+
+.card {
+  border: 3px solid rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card__done {
+  background-color: rgb(123, 255, 123);
+}
+
+.card__not-done {
+  background-color: rgb(255, 112, 112);
+}
