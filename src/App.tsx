@@ -1,5 +1,7 @@
 import React from 'react';
-import './App.scss';
+
+import 'bulma/css/bulma.min.css';
+import { Heading } from 'react-bulma-components';
 
 import todos from './api/todos';
 import users from './api/users';
@@ -15,7 +17,9 @@ const preparedTodos = todos.map(todo => ({
 const App: React.FC = () => {
   return (
     <div className="App">
-      <h1>Static list of todos</h1>
+      <Heading className="mt-10" textAlign="center" textTransform="uppercase">
+        <h1 className="title">Static list of todos</h1>
+      </Heading>
       <TodoList todoList={preparedTodos} />
     </div>
   );
