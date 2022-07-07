@@ -1,1 +1,25 @@
-// styles go here
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__title {
+  margin: 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  border: 1px solid gray;
+
+  &__item {
+    border-bottom: 1px dashed grey;
+  }
+
+  &__mail {
+    color: rgb(101, 101, 220);
+  }
+}
