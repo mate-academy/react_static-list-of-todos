@@ -1,1 +1,13 @@
-// styles go here
+body,
+h1,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.App__title {
+  text-align: center;
+  padding: 5px;
+}
