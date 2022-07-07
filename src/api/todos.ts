@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 
-const todos = [
+import { Todos } from '../types/todos';
+
+const todos: Todos[] = [
   {
     userId: 1,
     id: 1,
