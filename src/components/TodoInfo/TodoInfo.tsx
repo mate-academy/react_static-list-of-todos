@@ -23,9 +23,9 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
       backgroundColor="primary"
       textColor="white"
     >
-      <div data-cy="">
-        <h2>{todo.title}</h2>
-        <b>{todo.completed ? 'compleated' : 'in progress'}</b>
+      <div>
+        <h2 data-cy="title">{todo.title}</h2>
+        <b data-cy="status">{todo.completed ? 'completed' : 'in progress'}</b>
       </div>
       { todo.user ? <UserInfo user={todo.user} /> : 'waiting for user info'}
     </Box>

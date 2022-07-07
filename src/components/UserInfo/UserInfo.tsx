@@ -28,8 +28,8 @@ export const UserInfo: React.FC<Props> = ({ user }) => {
   return (
     <Block backgroundColor="primary" textColor="white" style={{}}>
       <div data-cy="">
-        <i>{user.name}</i>
-        <p>{user.email}</p>
+        <i data-cy="username">{user.name}</i>
+        <p data-cy="email">{user.email}</p>
       </div>
     </Block>
   );
