@@ -1,1 +1,35 @@
-// styles go here
+.main_title {
+  padding-left: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.list {
+  margin: auto;
+  text-decoration: none;
+  width: 30%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  background-color: #fff;
+  border: 10px solid bisque;
+  transition: all 1s;
+
+  &:hover {
+    position: relative;
+    transform: scale(110%);
+  }
+}
+
+.title {
+  padding-right: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.status {
+  text-decoration: underline;
+}
