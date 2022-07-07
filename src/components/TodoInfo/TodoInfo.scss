@@ -1,0 +1,20 @@
+.todo__item {
+  padding: 5px;
+  text-align: center;
+  background-color: #dfd9d9;
+  border: 1px solid #000;
+
+  &--complete {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 25em;
+    background-color: #9f9;
+  }
+
+  &--uncomplete {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 25em;
+    background-color: #f99;
+  }
+}
