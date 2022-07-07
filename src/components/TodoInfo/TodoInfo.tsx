@@ -5,7 +5,12 @@ type Props = {
 };
 
 export const TodoInfo: React.FC<Props> = ({ todos }) => (
-  <div>
-    {todos.title}
-  </div>
+  <>
+    <div data-cy="title">
+      {todos.title}
+    </div>
+    <div hidden data-cy="status">
+      {todos.completed}
+    </div>
+  </>
 );
