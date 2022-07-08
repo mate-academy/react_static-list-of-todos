@@ -1,0 +1,10 @@
+.todoInfo{
+
+  &__true {
+    color: green;
+  }
+
+  &__false {
+    color: red;
+  }
+}
