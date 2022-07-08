@@ -5,10 +5,10 @@ type Props = {
   todo: Todo
 };
 
-const TodoInfo: React.FC <Props> = ({ todo }) => (
+export const TodoInfo: React.FC <Props> = ({ todo }) => (
   <>
 
-    <div className="content title is-3" data-cy="title">
+    <div className="card-content title is-3" data-cy="title">
       {todo.title}
       <br />
 

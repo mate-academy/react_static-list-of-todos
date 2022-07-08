@@ -1,18 +1,18 @@
 import React from 'react';
 import { Todo } from '../../type/Todo';
-import TodoInfo from '../TodoInfo/TodoInfo';
-import UserInfo from '../UserInfo/UserInfo';
+import { TodoInfo } from '../TodoInfo/TodoInfo';
+import { UserInfo } from '../UserInfo/UserInfo';
 import './TodoList.scss';
 
 type Props = {
   listTodoWithUser: Todo [];
 };
 
-const TodoList: React.FC <Props> = ({ listTodoWithUser }) => (
+export const TodoList: React.FC <Props> = ({ listTodoWithUser }) => (
   <>
     {listTodoWithUser.map(todo => (
       <div
-        className={`${todo.completed ? 'card card-content indicator-true' : 'card card-content indicator-fasle'}`}
+        className={`${todo.completed ? 'card indicator-true' : 'card indicator-fasle'}`}
         key={todo.id}
       >
         <UserInfo

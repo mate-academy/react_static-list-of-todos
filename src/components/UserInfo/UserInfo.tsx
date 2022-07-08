@@ -7,19 +7,23 @@ type Props = {
   user: User | null
 };
 
-const UserInfo: React.FC <Props> = ({ user, completed }) => (
-  <>
-    <div className="media">
-      <div className="media-content">
+export const UserInfo: React.FC <Props> = ({ user, completed }) => (
+  <div className="media">
+    <div className="media-content">
+      <div
+        className={`indicator ${completed
+          ? 'indicator--true'
+          : 'indicator--false'}`}
+      >
         <p
-          className={`${completed
-            ? 'title is-4 indicator indicator--true'
-            : 'title is-4  indicator indicator--false'}`}
+          className="title is-4 "
           data-cy="username"
         >
           {user?.name}
 
         </p>
+      </div>
+      <div className="card-content">
         <p className="subtitle is-6">{user?.username}</p>
         <a
           href="mailto:"
@@ -30,8 +34,9 @@ const UserInfo: React.FC <Props> = ({ user, completed }) => (
 
         </a>
       </div>
+
     </div>
-  </>
+  </div>
 );
 
 export default UserInfo;
