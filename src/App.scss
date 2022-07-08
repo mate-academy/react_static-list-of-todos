@@ -1,1 +1,9 @@
-// styles go here
+.App {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+
+  &__title {
+    text-align: center;
+  }
+}
