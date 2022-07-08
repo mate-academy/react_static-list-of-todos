@@ -1,28 +1,17 @@
 # React static list of TODOs
-- Replace `<your_account>` with your Github username in the
-  [DEMO LINK](https://<your_account>.github.io/react_static-list-of-todos/)
-- Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
+You are given an array `todosFromServer` and `usersFromServer`. Also there is
+a `todos` array where each `todo` has a corresponding user. In addition you
+have `Todo` and `User` interfaces already implemented in `./src/types/`. Split
+the `App` into components following the next rules:
 
-## Task
-Import `todos` and `users`, add a user to each todo and render them in the 
-list.
+- use the given markup (don't change class names, they are used in tests)
+- `TodoList` takes `todos` and renders one `TodoInfo` per each `todo` in the array
+- `TodoInfo` takes a `todo` and renders its details including `todo.user` with
+  `UserInfo` component if a todo has a user
+  - make sure `TodoInfo` has a `TodoInfo--completed` modifier for all completed todos
+- `UserInfo` takes a `user` and renders the details
 
-1. Create a `preparedTodos` array basing on `todos`. Each prepared todo should
-   have a `user` property with a link to a user from `users` array or `null`if
-   we can't find a use by `userId`. It should be stored in the `App`.
-2. Create a `TodoList` component accepting an array of `preparedTodos` and 
-   rendering them as a list
-3. Create a `UserInfo` component accepting a `user` object and use it to render
-   a `todo.user` in the list with some styling. (Show at least a `name` and an
-   `email` of the `user`)
-4. Create a `TodoInfo` component accepting a `todo` object and use it in the 
-   list to render `title`, `completed` status and user with `UserInfo` component
-
-Hint: You can add only the props you use to the `User` interface. `Todo` 
-interface should have a `user` property that could be a `User` or `null`. 
-
-## REQUIREMENTS:
-- Todo `title` should have attribute `data-cy="title"`
-- Todo `status` should have attribute `data-cy="status"`
-- `Username` in  `UserInfo` component should have attribute `data-cy="username"`
-- `Email` in `UserInfo` component should have attribute `data-cy="email"`
+## Instructions
+- Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
+- Open 1 more terminal and run tests with `npm test` to ensure your solutions is correct
+- Replace `<your_account>` with your Github username in the [DEMO LINK](https://<your_account>.github.io/react_static-list-of-todos/) and add it to PR description
