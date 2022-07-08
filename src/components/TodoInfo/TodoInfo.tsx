@@ -4,26 +4,32 @@ import './TodoInfo.scss';
 import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo/UserInfo';
 
-export const TodoInfo: React.FC<Todo> = ({
-  title,
-  completed,
-  user,
-}) => (
+type Props = {
+  todo: Todo,
+};
+
+export const TodoInfo: React.FC<Props> = ({ todo }) => (
   <>
     <div className="TodoInfo">
       <h2 className="TodoInfo__title" data-cy="title">
         {'Task: '}
-        {title}
+        {todo.title}
       </h2>
       <div className="TodoInfo__status" data-cy="status">
         <p className="TodoInfo__status-title">Status: </p>
-        <span className={completed === true ? 'completed' : 'notcomleted'}>
-          {!completed && 'not '}
+        <span className={todo.completed === true ? 'completed' : 'notcomleted'}>
+          {!todo.completed && 'not '}
           completed
         </span>
       </div>
       <span>
-        {user && (<UserInfo {...user} />)}
+        {todo.user && (
+          <UserInfo
+            name={todo.user.name}
+            email={todo.user.email}
+            id={todo.user.id}
+          />
+        )}
       </span>
     </div>
   </>
