@@ -12,11 +12,11 @@ type Props = {
 
 export const TodoInfo: React.FC<Props> = ({ title, completed, user }) => (
   <>
-    <span data-cy="title">
+    <div data-cy="title">
       {title}
-    </span>
+    </div>
     <span data-cy="status">
-      {completed}
+      {completed ? 'Mission completed!' : 'Not complete yet'}
     </span>
     {user ? (
       <UserInfo
