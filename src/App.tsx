@@ -11,7 +11,6 @@ const listTodoWithUser = todos.map(todo => ({
 
 const App: React.FC = () => (
   <div className="App">
-    {/* <h1>Static list of todos</h1> */}
     <TodoList listTodoWithUser={listTodoWithUser} />
   </div>
 );
