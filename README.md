@@ -15,8 +15,8 @@ list.
 3. Create a `UserInfo` component accepting a `user` object and use it to render
    a `todo.user` in the list with some styling. (Show at least a `name` and an
    `email` of the `user`)
-4. Create a `TodoInfo` component accepting a `todo` object and use it in the
-   list to render `title`, `completed` status and `User`
+4. Create a `TodoInfo` component accepting a `todo` object and use it in the 
+   list to render `title`, `completed` status and user with `UserInfo` component
 
 Hint: You can add only the props you use to the `User` interface. `Todo`
 interface should have a `user` property that could be a `User` or `null`.
