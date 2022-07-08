@@ -1,0 +1,31 @@
+.card {
+  box-sizing: border-box;
+  width: 500px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s;
+
+  &:hover {
+    transform: scale(1.02);
+
+  }
+
+}
+
+.indicator-true {
+  transition: all 0.25s;
+
+  &:hover {
+    background: #00b15c;
+  }
+}
+
+.indicator-fasle {
+  transition: all 0.25s;
+
+  &:hover {
+    background: #f54b35;
+  }
+}

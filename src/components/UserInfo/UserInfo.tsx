@@ -1,7 +1,42 @@
-// Don't forget to import the React library
+import React from 'react';
+import { User } from '../../type/User';
+import './UserInfo.scss';
 
-// Create a `UserInfo` component accepting a `user` object and use it to render
-// a `todo.user` in the list with some styling. (Show at least a `name` and an
-// `email` of the `user`)
+type Props = {
+  completed: boolean;
+  user: User | null
+};
 
-// Add a default export statement for UserInfo component to use it in the other files
+export const UserInfo: React.FC <Props> = ({ user, completed }) => (
+  <div className="media">
+    <div className="media-content">
+      <div
+        className={`indicator ${completed
+          ? 'indicator--true'
+          : 'indicator--false'}`}
+      >
+        <p
+          className="title is-4 "
+          data-cy="username"
+        >
+          {user?.name}
+
+        </p>
+      </div>
+      <div className="card-content">
+        <p className="subtitle is-6">{user?.username}</p>
+        <a
+          href="mailto:"
+          className="subtitle is-6"
+          data-cy="email"
+        >
+          {user?.email}
+
+        </a>
+      </div>
+
+    </div>
+  </div>
+);
+
+export default UserInfo;
