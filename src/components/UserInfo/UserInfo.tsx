@@ -5,7 +5,7 @@ type Props = {
   user: User | null;
 };
 
-const UserInfo: React.FC<Props | null> = ({ user }) => (
+export const UserInfo: React.FC<Props | null> = ({ user }) => (
   <>
     {user && (
       <div>
@@ -20,5 +20,3 @@ const UserInfo: React.FC<Props | null> = ({ user }) => (
     )}
   </>
 );
-
-export default UserInfo;
