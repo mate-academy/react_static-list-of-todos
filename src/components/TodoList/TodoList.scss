@@ -1,0 +1,19 @@
+.todos {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    padding: 5px;
+    border: 1px solid blueviolet;
+  }
+
+  &__assignee {
+    margin-bottom: 10px;
+  }
+}
