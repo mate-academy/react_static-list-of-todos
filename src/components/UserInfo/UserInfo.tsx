@@ -1,7 +1,15 @@
-// Don't forget to import the React library
+import React from 'react';
+import { Todo } from '../../types/Todo';
 
-// Create a `UserInfo` component accepting a `user` object and use it to render
-// a `todo.user` in the list with some styling. (Show at least a `name` and an
-// `email` of the `user`)
+export type Props = {
+  todo: Todo,
+};
 
-// Add a default export statement for UserInfo component to use it in the other files
+export const UserInfo: React.FC<Props> = ({ todo }) => (
+  <div className="ui block bottom attached header">
+    <p>{todo.user?.name || 'No User name info'}</p>
+    <div className="ui divider" />
+    <p>{todo.user?.phone || 'No User phone info'}</p>
+    <p>{todo.user?.email || 'No User email info'}</p>
+  </div>
+);
