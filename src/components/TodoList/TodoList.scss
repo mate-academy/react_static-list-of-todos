@@ -1,0 +1,14 @@
+.card {
+  display: inline-block;
+
+  &__item {
+    text-align: center;
+    border: 10px solid hsla(0,0%,100%,.5);
+    background: linear-gradient(to left, #f39c12, #ADF2F7);
+    background-clip: padding-box;
+    max-width: 15em;
+    padding: 1em;
+    margin: 1em auto 0;
+    font: 30px/1.5 Arial;
+  }
+}
