@@ -1,6 +1,4 @@
-import { User } from '../types/User';
-
-const users: User[] = [
+const users = [
   {
     id: 1,
     name: 'Leanne Graham',
