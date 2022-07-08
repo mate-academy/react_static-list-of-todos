@@ -1,15 +1,15 @@
 import React from 'react';
-import { Todo } from '../../types/Todo';
+import { User } from '../../types/User';
 
 export type Props = {
-  todo: Todo,
+  user: User,
 };
 
-export const UserInfo: React.FC<Props> = ({ todo }) => (
+export const UserInfo: React.FC<Props> = ({ user }) => (
   <div className="ui block bottom attached header">
-    <p>{todo.user?.name || 'No User name info'}</p>
+    <p>{user.name || 'No User name info'}</p>
     <div className="ui divider" />
-    <p>{todo.user?.phone || 'No User phone info'}</p>
-    <p>{todo.user?.email || 'No User email info'}</p>
+    <p>{user.phone || 'No User phone info'}</p>
+    <p>{user.email || 'No User email info'}</p>
   </div>
 );

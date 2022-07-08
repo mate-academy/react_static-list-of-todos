@@ -21,7 +21,7 @@ export const TodoCard: React.FC<Props> = ({ todo }) => (
       )}
     >
       <TodoInfo todo={todo} />
-      <UserInfo todo={todo} />
+      {todo.user ? <UserInfo user={todo.user} /> : null}
     </div>
   </div>
 );
