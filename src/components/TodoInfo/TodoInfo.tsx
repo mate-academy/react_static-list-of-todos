@@ -18,13 +18,12 @@ export const TodoInfo: React.FC<Todo> = ({
       <div className="TodoInfo__status" data-cy="status">
         <p className="TodoInfo__status-title">Status: </p>
         <span className={completed === true ? 'completed' : 'notcomleted'}>
-          {completed === true ? 'completed' : 'not completed'}
+          {!completed && 'not '}
+          completed
         </span>
       </div>
       <span>
-        {(user === null)
-          ? 'No user info'
-          : <UserInfo {...user} />}
+        {user && (<UserInfo {...user} />)}
       </span>
     </div>
   </>
