@@ -14,11 +14,13 @@ function getUser(userId: number): User | null {
   return foundUser || null;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const todos: Todo[] = todosFromServer.map(todo => ({
   ...todo,
   user: getUser(todo.userId),
 }));
+
+// eslint-disable-next-line no-console
+console.log(todos);
 
 const App: React.FC = () => (
   <div className="App">
