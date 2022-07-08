@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { mount } from '@cypress/react';
-// eslint-disable-next-line import/named
 import { TodoInfo } from './TodoInfo';
 import todos from '../../api/todos';
 

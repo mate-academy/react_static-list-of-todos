@@ -1,7 +1,7 @@
 import React from 'react';
 import './TodoList.scss';
 
-import TodoInfo from '../TodoInfo/TodoInfo';
+import { TodoInfo } from '../TodoInfo/TodoInfo';
 
 type Props = {
   todos: Todo[];
