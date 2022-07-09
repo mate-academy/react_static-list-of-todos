@@ -1,1 +1,13 @@
-// styles go here
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  font-size: 18px;
+
+  &__title {
+    font-size: 36px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
