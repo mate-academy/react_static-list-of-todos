@@ -3,7 +3,9 @@ import './App.scss';
 import { TodoList } from './components/TodoList/TodoList';
 import { Todo } from './types/Todo';
 
+// eslint-disable-next-line
 import todos from './api/todos';
+// eslint-disable-next-line
 import users from './api/users';
 
 const beforeTodo: Todo[] = todos.map(todo => ({
