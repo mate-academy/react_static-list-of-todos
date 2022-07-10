@@ -12,11 +12,11 @@ export const UserInfo: React.FC<Props> = ({ user }) => {
 
   return (
     <>
-      <div className="user-info" data-cy="username">
+      <div className="userInfo" data-cy="username">
         <b>Name: </b>
         {user.name}
       </div>
-      <div className="user-info user-info__last" data-cy="email">
+      <div className="userInfo" data-cy="email">
         <b>Email: </b>
         <a href={`mailto: ${user.email}`}>{user.email}</a>
       </div>

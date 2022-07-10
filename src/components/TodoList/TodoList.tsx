@@ -6,7 +6,7 @@ import { Todo } from '../../react-app-env';
 import './TodoList.scss';
 
 type Props = {
-  todos: Todo[]
+  todos: Todo[];
 };
 
 export const TodoList: React.FC<Props> = ({ todos }) => (
@@ -14,11 +14,7 @@ export const TodoList: React.FC<Props> = ({ todos }) => (
     {todos.map(todo => (
       <div className="card__item">
         <UserInfo user={todo.user} />
-        <TodoInfo
-          title={todo.title}
-          completed={todo.completed}
-          userId={todo.userId}
-        />
+        <TodoInfo todo={todo} />
       </div>
     ))}
   </div>

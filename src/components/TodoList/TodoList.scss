@@ -3,12 +3,13 @@
 
   &__item {
     text-align: center;
-    border: 10px solid hsla(0,0%,100%,.5);
-    background: linear-gradient(to left, #f39c12, #ADF2F7);
+    border: 10px solid rgba(255, 255, 255, 0.5);
+    background: linear-gradient(to left, rgb(243, 156, 18), rgb(171, 242, 247));
     background-clip: padding-box;
     max-width: 15em;
     padding: 1em;
     margin: 1em auto 0;
-    font: 30px/1.5 Arial;
+    font-size: 30px;
+    line-height: 1.5;
   }
 }
