@@ -1,5 +1,4 @@
 import React from 'react';
-import './TodoInfo.scss';
 
 type Props = {
   title: string;
@@ -7,13 +6,13 @@ type Props = {
 };
 
 export const TodoInfo: React.FC<Props> = ({ title, completed }) => (
-  <div className={!completed ? 'TodoInfo' : 'TodoInfo TodoInfo--completed'}>
-    <h2 data-cy="title" className="TodoInfo__title">
+  <>
+    <h2 data-cy="title">
       {title}
     </h2>
 
-    <p data-cy="status" className="TodoInfo__status">
+    <p data-cy="status">
       {completed ? ('Completed') : ('Not completed!')}
     </p>
-  </div>
+  </>
 );

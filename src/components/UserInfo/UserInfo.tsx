@@ -10,11 +10,11 @@ export const UserInfo: React.FC<Props> = ({ user }) => (
   <>
     {user && (
       <div className="UserInfo">
-        <p data-cy="username" className="UserInfo__title">
+        <p data-cy="username">
           {user.name}
         </p>
 
-        <p data-cy="email" className="UserInfo__email">
+        <p data-cy="email">
           {user.email}
         </p>
       </div>
