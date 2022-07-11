@@ -2,16 +2,27 @@ html {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
+.App__title {
+  text-align: center;
+}
+
+.TodoList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 50px;
+}
+
 .TodoInfo {
-  width: max-content;
-  padding: 8px;
-  margin: 12px 0;
+  width: 300px;
+  padding: 10px;
+  margin: 20px auto;
+
   border: 1px solid #000;
-  border-radius: 8px;
+  border-radius: 15px;
   background-color: antiquewhite;
 
   &__title {
-    margin: 4px 0;
+    margin: 10px 0;
     font-size: inherit;
     color: #f00;
   }
