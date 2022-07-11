@@ -6,6 +6,7 @@ import usersFromServer from './api/users';
 
 import { User } from './types/User';
 import { Todo } from './types/Todo';
+import { TodoList } from './components/TodoList';
 
 function getUser(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
@@ -18,9 +19,6 @@ const todos: Todo[] = todosFromServer.map(todo => ({
   ...todo,
   user: getUser(todo.userId),
 }));
-
-// eslint-disable-next-line no-console
-console.log(todos);
 
 const App: React.FC = () => (
   <div className="App">
@@ -59,6 +57,7 @@ const App: React.FC = () => (
         </a>
       </article>
     </section>
+    <TodoList todos={todos} />
   </div>
 );
 
