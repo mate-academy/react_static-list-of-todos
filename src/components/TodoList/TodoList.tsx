@@ -3,11 +3,15 @@ import { Todo } from '../../Type/Todos';
 import { TodoInfo } from '../TodoInfo/TodoInfo';
 import { UserInfo } from '../UserInfo/UserInfo';
 
-const TodoList: React.FC<{ list: Todo[] }> = ({ list }) => {
+type Prop = {
+  list: Todo[]
+};
+
+const TodoList: React.FC<Prop> = ({ list }) => {
   return (
     <ul>
       {list.map(todo => (
-        <li>
+        <li key={todo.id}>
           {todo.user && (
             <UserInfo user={todo.user} />
           )}
