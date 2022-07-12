@@ -8,7 +8,7 @@ Split the given `App` markup into component following the rules:
 
 - don't change CSS class names, they are used in tests;
 - `TodoList` takes the `todos` and renders one `TodoInfo` per `todo` in the array;
-- `TodoInfo` takes the `todo` and renders its details, including a `todo.user` with `UserInfo` component if the todo has a user;
+- `TodoInfo` takes a `todo` and renders its details, including a `todo.user` with `UserInfo` component if the todo has a user;
 - make sure that the `TodoInfo` has a `TodoInfo--completed` modifier for all completed todos;
 - `UserInfo` takes a `user` and renders the details.
 
