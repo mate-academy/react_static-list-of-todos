@@ -1,5 +1,7 @@
 # React Static List of TODOs
 
+> [React + Typescript cheatsheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript)
+
 You are given `todosFromServer` and `usersFromServer` arrays with the required data.
 
 A `todos` array is based on the `todosFromServer`, but each `todo` has a corresponding user attached. In addition, you have the `Todo` and `User` interfaces already implemented in `./src/types/`. 
