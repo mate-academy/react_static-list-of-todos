@@ -1,12 +1,15 @@
 .todo_title {
-  text-align: center
+  text-align: center;
 }
+  
 .todo_status {
-  font-weight: bold
+  font-weight: bold;
 }
+  
 .todo_status-green {
-  color: green
+  color: green;
 }
+  
 .todo_status-red {
-  color: red
+  color: red;
 }

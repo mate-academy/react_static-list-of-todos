@@ -1,1 +1,24 @@
-.todo{padding:30px;background:#bdbdbd}.todo_list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4, 1fr);gap:15px}.todo_item{box-sizing:border-box;border:1px solid black;border-radius:20px;display:flex;justify-content:space-between;flex-direction:column;padding:20px;background-color:#fff}
+.todo {
+  padding: 30px;
+  background: #bdbdbd;
+}
+  
+.todo_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+  
+.todo_item {
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #fff;
+}
