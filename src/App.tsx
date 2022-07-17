@@ -6,6 +6,7 @@ import usersFromServer from './api/users';
 
 import { User } from './types/User';
 import { Todo } from './types/Todo';
+import { TodoList } from './components/TodoList';
 
 function getUser(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
@@ -26,6 +27,9 @@ const App: React.FC = () => (
   <div className="App">
     <h1 className="App__title">Static list of todos</h1>
 
+    <TodoList todos={todos} />
+
+    {/*
     <section className="TodoList">
       <article className="TodoInfo TodoInfo--completed">
         <h2 className="TodoInfo__title">HTML</h2>
@@ -58,7 +62,7 @@ const App: React.FC = () => (
           Clementine Bauch
         </a>
       </article>
-    </section>
+    </section> */}
   </div>
 );
 
