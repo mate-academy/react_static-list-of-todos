@@ -13,7 +13,12 @@ export const preparedTodos: Todo[] = todos.map(todo => ({
 
 const App: React.FC = () => (
   <div className="App">
-    <h1 className="appTitle" data-cy="title">Static list of todos</h1>
+    <h1
+      className="appTitle"
+      data-cy="title"
+    >
+      Static list of todos
+    </h1>
     <TodoList todos={preparedTodos} />
   </div>
 );
