@@ -1,24 +1,25 @@
 import React from 'react';
-import UserInfo from '../UserInfo/UserInfo';
+import './TodoInfo.scss';
+import { UserInfo } from '../UserInfo/UserInfo';
 
 type Props = {
   todo: Todo;
 };
 
-const TodoInfo: React.FC<Props> = ({ todo }) => {
+export const TodoInfo: React.FC<Props> = ({ todo }) => {
   const { title, completed, user } = todo;
 
   return (
-    <div className="todo">
-      <p className="title" data-cy="title">
-        {title}
-      </p>
+    <div key={todo.id}>
+      <h4>{title}</h4>
 
-      <p className="status" data-cy="status">
-        {completed ? 'Done' : 'In progress'}
-      </p>
+      <UserInfo user={user} />
 
-      {user && <UserInfo user={user} />}
+      {
+        completed
+          ? <p className="todo--complete">Completed</p>
+          : <p className="todo--uncomplete">Not completed!</p>
+      }
     </div>
   );
 };
