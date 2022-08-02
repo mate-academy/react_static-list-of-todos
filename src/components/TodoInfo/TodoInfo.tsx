@@ -1,4 +1,3 @@
-// Add the required types and props
 import classNames from 'classnames';
 
 import { UserInfo } from '../UserInfo';
