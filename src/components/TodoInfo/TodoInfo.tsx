@@ -9,7 +9,7 @@ interface Props {
 export const TodoInfo: React.FC<Props> = ({ todo }) => {
   return (
     <article className={
-      todo.completed === true
+      todo.completed
         ? 'TodoInfo TodoInfo--completed'
         : 'TodoInfo'
     }
@@ -21,7 +21,6 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
         ? (
           <UserInfo
             user={todo.user}
-            key={todo.user?.id}
           />
         )
         : (<p>No user for this task</p>)}
