@@ -20,15 +20,10 @@ const todos: Todo[] = todosFromServer.map(todo => ({
   user: getUser(todo.userId),
 }));
 
-// eslint-disable-next-line no-console
-console.log(todos);
-
 const App: React.FC = () => (
   <div className="App">
     <h1 className="App__title">Static list of todos</h1>
-    <section className="TodoList">
-      <TodoList todos={todos} />
-    </section>
+    <TodoList todos={todos} />
   </div>
 );
 

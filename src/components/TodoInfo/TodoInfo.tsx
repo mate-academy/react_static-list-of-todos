@@ -12,8 +12,6 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => (
     <h2 className="TodoInfo__title">
       {todo.title}
     </h2>
-    {todo.user !== null
-      ? <UserInfo user={todo.user} />
-      : null}
+    {todo.user && (<UserInfo key={todo.userId} user={todo.user} />)}
   </article>
 );
