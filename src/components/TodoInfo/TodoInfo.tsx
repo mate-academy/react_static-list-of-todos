@@ -1,13 +1,13 @@
 import React from 'react';
 import { UserInfo } from '../UserInfo';
-import { Todo as TodoItem } from '../../types/Todo';
+import { Todo } from '../../types/Todo';
 import './TodoInfo.scss';
 
-interface Todo {
-  todo: TodoItem;
+interface Props {
+  todo: Todo;
 }
 
-export const TodoInfo: React.FC<Todo> = (props) => {
+export const TodoInfo: React.FC<Props> = (props) => {
   const { todo } = props;
 
   return (
@@ -24,7 +24,7 @@ export const TodoInfo: React.FC<Todo> = (props) => {
         {todo.title}
       </h2>
 
-      <UserInfo user={todo.user} />
+      {todo.user && <UserInfo user={todo.user} />}
     </article>
   );
 };
