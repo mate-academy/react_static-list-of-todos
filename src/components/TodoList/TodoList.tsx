@@ -10,7 +10,7 @@ export const TodoList: React.FC<Props> = ({ todos }) => (
   <ul>
     {todos.map((todo:Todo) => (
       <li
-        className="movie__item"
+        className="todo__item"
         key={todo.id}
       >
         <TodoInfo todo={todo} />
