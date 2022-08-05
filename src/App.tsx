@@ -11,7 +11,6 @@ import { TodoList } from './components/TodoList';
 function getUser(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
-  // if there is no user with a given userId
   return foundUser || null;
 }
 
@@ -20,25 +19,10 @@ const todos: Todo[] = todosFromServer.map(todo => ({
   user: getUser(todo.userId),
 }));
 
-// eslint-disable-next-line no-console
-console.log(todos);
-
 const App: React.FC = () => (
   <div className="App">
     <h1 className="App__title">Static list of todos</h1>
     <TodoList todos={todos} />
-
-    {/* // <section className="TodoList">
-
-    //   <article className="TodoInfo TodoInfo--completed">
-    //     <h2 className="TodoInfo__title">JS</h2>
-
-    //     <a className="UserInfo" href="mailto:Shanna@melissa.tv">
-    //       Ervin Howell
-    //     </a>
-    //   </article>
-    // </section>
-  // */}
   </div>
 );
 
