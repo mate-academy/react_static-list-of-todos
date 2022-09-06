@@ -14,6 +14,18 @@ Split the given `App` markup into component following the rules:
 - make sure that the `TodoInfo` has a `TodoInfo--completed` modifier for all completed todos;
 - `UserInfo` takes a `user` and renders the details.
 
+Вам даны массивы `todosFromServer` и `usersFromServer` с необходимыми данными.
+
+Массив `todos` основан на `todosFromServer`, но к каждому todo привязан соответствующий пользователь. Кроме того, у вас есть интерфейсы `Todo` и `User`, уже реализованные в `./src/types/`.
+
+Разделите данную разметку `App` на компоненты, следуя правилам:
+
+- не меняйте имена классов CSS, они используются в тестах;
+- `TodoList` берет `todos` и отображает один `TodoInfo` для каждого `todo` в массиве;
+- `TodoInfo` берет задачу и отображает ее детали, включая `todo.user` с компонентом `UserInfo`, если у задачи есть пользователь;
+- убедитесь, что у `TodoInfo` есть модификатор `TodoInfo--completed` для всех выполненных задач;
+- `UserInfo` берет `пользователя` и отображает детали.
+
 ## Instructions
 
 - Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
