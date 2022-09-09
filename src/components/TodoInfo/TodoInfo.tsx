@@ -1,13 +1,13 @@
 import React from 'react';
 import classNames from 'classnames';
 import { Todo } from '../../types/Todo';
-import { UserInfo } from '../UserInfo/UserInfo';
+import { UserInfo } from '../UserInfo';
 
-interface Prors {
+interface Props {
   todo: Todo;
 }
 
-export const TodoInfo: React.FC<Prors> = ({
+export const TodoInfo: React.FC<Props> = ({
   todo: {
     title,
     user,
