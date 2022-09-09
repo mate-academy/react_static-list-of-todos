@@ -7,10 +7,8 @@ type Props = {
 
 export const TodoList: React.FC<Props> = ({ Todos }) => (
   <section className="TodoList">
-    {
-      Todos.map((todoItem) => (
+    {Todos.map((todoItem) => (
         <TodoInfo todoFromServ={todoItem} key={todoItem.id} />
-      ))
-    }
+    ))}
   </section>
 );
