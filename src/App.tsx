@@ -6,13 +6,12 @@ import usersFromServer from './api/users';
 
 import { User } from './types/User';
 import { Todo } from './types/Todo';
-
 import { TodoList } from './components/TodoList/index';
 
 function getUser(userId: number): User | null {
-  const foundUser = usersFromServer.find(user => user.id === userId);
+  const foundedUser = usersFromServer.find(user => user.id === userId);
 
-  return foundUser || null;
+  return foundedUser || null;
 }
 
 export const todos: Todo[] = todosFromServer.map(todo => ({
