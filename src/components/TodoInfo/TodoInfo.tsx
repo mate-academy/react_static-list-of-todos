@@ -22,14 +22,8 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
     >
       <h2 className="TodoInfo__title">{title}</h2>
       {user
-        ? (
-          <UserInfo
-            user={user}
-          />
-        )
-        : (
-          'No user found'
-        )}
+        ? (<UserInfo user={user} />)
+        : ('No user found')}
 
     </article>
   );
