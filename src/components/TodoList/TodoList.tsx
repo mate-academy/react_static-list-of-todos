@@ -6,9 +6,7 @@ type TodoType = {
 };
 
 export const TodoList: React.FC<TodoType> = ({ todos }) => (
-  <>
-    <section className="TodoList">
-      {todos.map(task => <TodoInfo key={task.id} todo={task} />)}
-    </section>
-  </>
+  <section className="TodoList">
+    {todos.map(task => <TodoInfo key={task.id} todo={task} />)}
+  </section>
 );
