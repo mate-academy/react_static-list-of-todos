@@ -1,5 +1,6 @@
 # React Static List of TODOs
 
+
 > [React + Typescript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript)
 
 You are given `todosFromServer` and `usersFromServer` arrays with the required data.
