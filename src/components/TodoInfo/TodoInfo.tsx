@@ -1,19 +1,20 @@
-import { UserInfo } from '../UserInfo';
+import classNames from 'classnames';
 import { Todo } from '../../types/Todo';
+import { UserInfo } from '../UserInfo';
 
-export const TodoInfo: React.FC<Todo> = ({
-  title,
-  completed,
-  user,
-  id,
-}) => (
-  <article
-    className={completed === false
-      ? 'TodoInfo'
-      : 'TodoInfo TodoInfo--completed'}
-    key={id}
-  >
-    <h2 className="TodoInfo__title">{title}</h2>
-    {user && UserInfo(user)}
-  </article>
-);
+type Props = {
+  todo: Todo;
+};
+
+export const TodoInfo: React.FC<Props> = ({ todo }) => {
+  const { title, completed, user } = todo;
+
+  return (
+    <article
+      className={classNames('TodoInfo', { 'TodoInfo--completed': completed })}
+    >
+      <h2 className="TodoInfo__title">{title}</h2>
+      {user && <UserInfo user={user} />}
+    </article>
+  );
+};
