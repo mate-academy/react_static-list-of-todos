@@ -1,4 +1,13 @@
-// Add the required types and props
-export const TodoInfo = () => (
-  <>TodoInfo markup</>
+import { UserInfo } from '../UserInfo';
+import { Todo } from '../../types/Todo';
+
+type Props = {
+  todo: Todo;
+};
+
+export const TodoInfo: React.FC<Props> = ({ todo }) => (
+  <>
+    <h2 className="TodoInfo__title">{todo.title}</h2>
+    <UserInfo user={todo.user} />
+  </>
 );
