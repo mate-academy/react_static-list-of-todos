@@ -18,10 +18,14 @@ export const TodoInfo: React.FC<Todo> = ({
     <article className={TodoInfoClass}>
       <h2 className="TodoInfo__title">{title}</h2>
 
-      <UserInfo
-        name={user.name}
-        email={user.email}
-      />
+      {user
+        && (
+          <UserInfo
+            name={user.name}
+            email={user.email}
+            id={user.id}
+          />
+        )}
     </article>
   );
 };

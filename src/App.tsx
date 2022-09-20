@@ -6,6 +6,9 @@ import usersFromServer from './api/users';
 
 import { TodoList } from './components/TodoList';
 
+import { Todo } from './types/Todo';
+import { User } from './types/User';
+
 function getUser(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 

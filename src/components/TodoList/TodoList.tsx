@@ -15,8 +15,10 @@ export const TodoList: React.FC<Todos> = ({ todos }) => (
       <TodoInfo
         completed={el.completed}
         title={el.title}
-        user={el.user}
+        user={el.user || null}
         key={el.id}
+        id={el.id}
+        userId={el.userId}
       />
     ))}
   </section>
