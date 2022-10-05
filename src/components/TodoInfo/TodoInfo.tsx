@@ -1,5 +1,6 @@
 // Add the required types and props
 import React from 'react';
+import classNames from 'classnames';
 import { UserInfo } from '../UserInfo';
 import { Todo } from '../../types/Todo';
 
@@ -9,19 +10,20 @@ type TodoProp = {
 
 export const TodoInfo: React.FC<TodoProp> = ({ todo }) => {
   const {
-    id, userId, title, completed, user,
+    userId, title, completed, user,
   } = todo;
-  const isCompleted = completed
-    ? 'TodoInfo TodoInfo--completed'
-    : 'TodoInfo';
 
   return (
-    <article className={isCompleted} key={id}>
+    <article
+      className={classNames('TodoInfo', { 'TodoInfo--completed': completed })}
+    >
       <h2 className="TodoInfo__title">
         {title}
       </h2>
 
-      <UserInfo user={user} key={userId} />
+      {user && (
+        <UserInfo user={user} key={userId} />
+      )}
     </article>
   );
 };
