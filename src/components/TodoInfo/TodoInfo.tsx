@@ -1,4 +1,3 @@
-// Add the required types and props
 import React from 'react';
 import { Todo } from '../../types/Todo';
 
@@ -9,7 +8,11 @@ type Props = {
 };
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => {
-  const { title, completed, user } = todo;
+  const {
+    title,
+    completed,
+    user,
+  } = todo;
   const classInf = completed ? 'TodoInfo TodoInfo--completed' : 'TodoInfo';
 
   return (
