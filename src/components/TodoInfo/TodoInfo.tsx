@@ -10,16 +10,19 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
   const { title, completed, user } = todo;
 
   return (
-    <>
-      <article
-        className={cn('TodoInfo', {
-          'TodoInfo TodoInfo--completed': completed,
-        })}
-      >
-        <h2 className="TodoInfo__title">{title}</h2>
+    <article
+      className={cn(
+        'TodoInfo',
+        {
+        'TodoInfo TodoInfo--completed': completed,
+        },
+      )}
+    >
+      <h2 className="TodoInfo__title">{title}</h2>
 
-        {user && <UserInfo user={user} />}
-      </article>
-    </>
+      {user && (
+        <UserInfo user={user}/>
+      )}
+    </article>
   );
 };
