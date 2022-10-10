@@ -1,21 +1,22 @@
 import cx from 'classnames';
-import { User } from '../../types/User';
+import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo';
 
 type Props = {
-  title: string,
-  completed: boolean,
-  user: User | null
+  todo: Todo
 };
 
-export const TodoInfo: React.FC<Props> = ({ title, completed, user }) => {
-  const className = cx({
-    TodoInfo: true,
-    'TodoInfo--completed': completed,
-  });
+export const TodoInfo: React.FC<Props> = ({ todo }) => {
+  const { title, completed, user } = todo;
 
   return (
-    <article className={className}>
+    <article className={cx(
+      'TodoInfo',
+      {
+        'TodoInfo--completed': completed,
+      },
+    )}
+    >
       <h2 className="TodoInfo__title">
         {title}
       </h2>
@@ -23,9 +24,7 @@ export const TodoInfo: React.FC<Props> = ({ title, completed, user }) => {
       {user
         && (
           <UserInfo
-            key={user.id}
-            name={user.name}
-            email={user.email}
+            user={user}
           />
         )}
     </article>
