@@ -14,15 +14,13 @@ export const TodoInfo: React.FC<Props> = ({
     user,
   },
 }) => (
-  <>
-    <article className={classNames('TodoInfo', {
-      'TodoInfo--completed': completed,
-    })}
-    >
+  <article className={classNames('TodoInfo', {
+    'TodoInfo--completed': completed,
+  })}
+  >
 
-      <h2 className="TodoInfo__title">{title}</h2>
+    <h2 className="TodoInfo__title">{title}</h2>
 
-      <UserInfo user={user} />
-    </article>
-  </>
+    <UserInfo user={user} />
+  </article>
 );
