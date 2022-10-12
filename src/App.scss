@@ -6,13 +6,16 @@ html {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
+.TodoList {
+  list-style: none;
+}
+
 .TodoInfo {
-  width: max-content;
-  padding: 8px;
+  width: 50%;
+  padding: 12px;
   margin: 12px 0;
   border: 1px solid #000;
-  border-radius: 8px;
-  background-color: antiquewhite;
+  background-color: rgb(247, 244, 244);
 
   &__title {
     margin: 4px 0;
@@ -27,4 +30,6 @@ html {
 
 .UserInfo {
   font-style: italic;
+  text-decoration: none;
+  color: #000;
 }
