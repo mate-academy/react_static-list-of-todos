@@ -1,0 +1,9 @@
+.UserInfo {
+  font-style: italic;
+  text-decoration: none;
+  color: rgb(66, 41, 41);
+
+  &:hover {
+    color: rgb(100, 100, 100);
+  }
+}
