@@ -1,7 +1,5 @@
 import classNames from 'classnames';
-
 import { TodoInfo } from '../TodoInfo';
-
 import { Todo } from '../../types/Todo';
 
 type Props = {
@@ -13,13 +11,10 @@ export const TodoList: React.FC<Props> = ({ todos }) => (
     {todos.map((todo) => (
       <li
         key={todo.id}
-        className={classNames(
-          'message',
-          {
-            'is-danger': todo.completed,
-            'is-primary': !todo.completed,
-          },
-        )}
+        className={classNames('message', {
+          'is-primary': todo.completed,
+          'is-danger': !todo.completed,
+        })}
       >
         <TodoInfo todo={todo} />
       </li>
