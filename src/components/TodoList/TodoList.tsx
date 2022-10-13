@@ -5,8 +5,8 @@ import { TodoInfo } from '../TodoInfo';
 export const TodoList: React.FC<{ todos: Todo[] }> = ({ todos }) => (
   <ul className="TodoList">
     {todos.map(todo => (
-      <li>
-        <TodoInfo todo={todo} key={todo.id} />
+      <li key={todo.id}>
+        <TodoInfo todo={todo} />
       </li>
     ))}
   </ul>
