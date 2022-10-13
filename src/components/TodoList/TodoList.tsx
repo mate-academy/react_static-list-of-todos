@@ -8,9 +8,9 @@ interface Props {
 
 export const TodoList: React.FC<Props> = ({ todos }) => (
   <ul className="TodoList">
-    {todos.map((todoPer) => (
-      <li key={todoPer.id}>
-        <TodoInfo todo={todoPer} />
+    {todos.map((todoBlock) => (
+      <li key={todoBlock.id}>
+        <TodoInfo todo={todoBlock} />
       </li>
     ))}
   </ul>
