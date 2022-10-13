@@ -11,17 +11,25 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
   const { title, user, completed } = todo;
 
   return (
-    <article className={classNames(
-      'TodoInfo',
-      {
-        'TodoInfo--completed': completed,
-      },
-    )}
+    <div
+      className={classNames(
+        'card mb-3 TodoInfo w-100',
+        {
+          'text-bg-success TodoInfo--completed shadow': completed,
+          'text-bg-danger shadow': !completed,
+        },
+      )}
+      style={{ maxWidth: '25rem' }}
     >
-      <h2 className="TodoInfo__title">{title}</h2>
-
-      {user
-        && <UserInfo user={user} />}
-    </article>
+      <div className="card-body ">
+        <h5 className="card-title">
+          {user
+            && <UserInfo user={user} />}
+        </h5>
+        <p className="card-text TodoInfo__title">
+          {title}
+        </p>
+      </div>
+    </div>
   );
 };
