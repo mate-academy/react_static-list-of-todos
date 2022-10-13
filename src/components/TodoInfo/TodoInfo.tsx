@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo';
 import '../../App.scss';
@@ -12,11 +13,13 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
     completed,
     title,
     user,
-    id,
   } = todo;
 
   return (
-    <article key={id} className={`TodoInfo ${completed && 'TodoInfo--completed'}`}>
+    <article className={
+      classNames('TodoInfo', completed && 'TodoInfo--completed')
+    }
+    >
       <h2 className="TodoInfo__title">{title}</h2>
       {user && <UserInfo user={user} />}
     </article>
