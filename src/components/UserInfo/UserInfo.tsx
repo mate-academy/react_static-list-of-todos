@@ -1,5 +1,3 @@
-// Add the required types and prop
-// import { type } from 'os';
 import React from 'react';
 import { User } from '../../types/User';
 
