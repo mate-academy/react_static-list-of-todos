@@ -13,13 +13,12 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
   return (
     <div
       className={classNames(
-        'card mb-3 TodoInfo w-100',
+        'card mb-3 TodoInfo',
         {
           'text-bg-success TodoInfo--completed shadow': completed,
           'text-bg-danger shadow': !completed,
         },
       )}
-      style={{ maxWidth: '25rem' }}
     >
       <div className="card-body ">
         <h5 className="card-title">
