@@ -1,0 +1,9 @@
+.UserInfo {
+  color: white;
+  text-decoration: none;
+  transition: color 0.1s;
+
+  &:hover {
+    color: #07fcfd;
+  }
+}
