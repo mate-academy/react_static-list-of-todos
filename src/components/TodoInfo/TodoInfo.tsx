@@ -7,7 +7,6 @@ type Props = {
   title: string;
   completed: boolean;
   user: User | null;
-  id: number;
 };
 
 function capitalized(string: string): string {
