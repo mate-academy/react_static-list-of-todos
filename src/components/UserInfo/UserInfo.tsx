@@ -5,13 +5,15 @@ type Props = {
   user: User;
 };
 
-export const UserInfo: FC<Props> = ({
-  user: {
+export const UserInfo: FC<Props> = ({ user }) => {
+  const {
     name,
     email,
-  },
-}) => (
-  <a className="UserInfo" href={`mailto:${email}`}>
-    {name}
-  </a>
-);
+  } = user;
+
+  return (
+    <a className="UserInfo" href={`mailto:${email}`}>
+      {name}
+    </a>
+  );
+};

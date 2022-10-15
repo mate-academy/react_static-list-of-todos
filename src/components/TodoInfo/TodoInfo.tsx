@@ -3,8 +3,16 @@ import React from 'react';
 import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo';
 
-export const TodoInfo: React.FC<Todo> = ({
-  title, user, completed,
+type Props = {
+  todo: Todo;
+};
+
+export const TodoInfo: React.FC<Props> = ({
+  todo: {
+    title,
+    completed,
+    user,
+  },
 }) => (
   <article className={classNames(
     'TodoInfo',
