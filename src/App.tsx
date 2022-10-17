@@ -5,12 +5,19 @@ import todosFromServer from './api/todos';
 import usersFromServer from './api/users';
 
 import { Todo } from './types/Todo';
+import { User } from './types/User';
 
 import { TodoList } from './components/TodoList';
 
+function getUser(userId: number): User | null {
+  const foundUser = usersFromServer.find(user => user.id === userId);
+
+  return foundUser || null;
+}
+
 export const todos: Todo[] = todosFromServer.map(todo => ({
   ...todo,
-  user: usersFromServer.find(user => user.id === todo.userId) || null,
+  user: getUser(todo.userId),
 }));
 
 export const App: React.FC = () => (
