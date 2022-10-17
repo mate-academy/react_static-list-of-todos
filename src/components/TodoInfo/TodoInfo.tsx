@@ -1,4 +1,5 @@
 import { User } from '../../types/User';
+import { UserInfo } from '../UserInfo';
 
 type Props = {
   title: string,
@@ -14,9 +15,7 @@ export const TodoInfo: React.FC<Props> = ({ title, user, completed }) => (
   >
     <h2 className="TodoInfo__title">{title}</h2>
 
-    <a className="UserInfo" href={user?.email}>
-      {user?.name}
-    </a>
+    <UserInfo {...user} />
   </article>
 
 );
