@@ -1,4 +1,6 @@
 // Add the required types and props
 export const UserInfo = () => (
-  <>UserInfo markup</>
+  <a className="UserInfo" href="mailto:Sincere@april.biz">
+    TestUser
+  </a>
 );
