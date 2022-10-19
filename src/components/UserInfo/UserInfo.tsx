@@ -11,14 +11,9 @@ export const UserInfo: React.FC<Props> = ({ user }) => {
     email,
   } = user;
 
-  return !user
-    ? <span className="UserInfo">User name was not founded!</span>
-    : (
-      <a
-        className="UserInfo"
-        href={email && `mailto:${email}`}
-      >
-        { name && name }
-      </a>
-    );
+  return (
+    <a className="UserInfo" href={`mailto:${email}`}>
+      {name}
+    </a>
+  );
 };
