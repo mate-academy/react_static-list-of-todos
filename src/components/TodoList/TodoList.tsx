@@ -1,5 +1,5 @@
 import './TodoList.scss';
-// Add the required types and props
+
 import { TodoInfo } from '../TodoInfo';
 
 import { Todo } from '../../types/Todo';
