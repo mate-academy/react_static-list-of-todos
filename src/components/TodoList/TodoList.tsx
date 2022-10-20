@@ -3,12 +3,12 @@ import { TodoInfo } from '../TodoInfo';
 import { Todo } from '../../types/Todo';
 
 type Props = {
-  todosAr: Todo[],
+  todos: Todo[],
 };
 
-export const TodoList: React.FC<Props> = ({ todosAr }) => (
+export const TodoList: React.FC<Props> = ({ todos }) => (
   <section className="TodoList">
-    {todosAr.map((todo) => (
+    {todos.map((todo) => (
       <article
         className={classNames(
           'TodoInfo',
@@ -16,7 +16,13 @@ export const TodoList: React.FC<Props> = ({ todosAr }) => (
         )}
         key={todo.id}
       >
-        <TodoInfo {...todo} />
+        <TodoInfo
+          user={todo.user}
+          title={todo.title}
+          id={0}
+          userId={0}
+          completed={false}
+        />
       </article>
     ))}
 
