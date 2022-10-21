@@ -1,19 +1,37 @@
+import classNames from 'classnames';
+
 import { TodoInfo } from '../TodoInfo';
 import { Todo } from '../../types/Todo';
+
+import './TodoList.scss';
 
 type Props = {
   todos: Todo[];
 };
 
 export const TodoList:React.FC<Props> = ({ todos }) => (
-  <section className="TodoList">
-    {todos.map(todo => (
-      <article
-        className={`TodoInfo ${todo.completed ? 'TodoInfo--completed' : ''}`}
-        key={todo.id}
-      >
-        <TodoInfo todo={todo} />
-      </article>
-    ))}
-  </section>
+  <ul className="TodoList">
+    {todos.map(todo => {
+      const {
+        id,
+        completed,
+      } = todo;
+
+      return (
+        <li
+          className={
+            classNames(
+              'TodoInfo',
+              {
+                'TodoInfo--completed': completed,
+              },
+            )
+          }
+          key={id}
+        >
+          <TodoInfo todo={todo} />
+        </li>
+      );
+    })}
+  </ul>
 );

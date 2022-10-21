@@ -5,10 +5,19 @@ type PropsInfo = {
   todo: Todo;
 };
 
-export const TodoInfo:React.FC<PropsInfo> = ({ todo }) => (
-  <>
-    <h2 className="TodoInfo__title">{todo.title}</h2>
+export const TodoInfo:React.FC<PropsInfo> = ({ todo }) => {
+  const {
+    title,
+    user,
+  } = todo;
 
-    <UserInfo />
-  </>
-);
+  return (
+    <>
+      <h2 className="TodoInfo__title">{title}</h2>
+
+      {user && (
+        <UserInfo user={user} />
+      )}
+    </>
+  );
+};
