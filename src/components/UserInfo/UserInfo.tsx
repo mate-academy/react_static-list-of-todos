@@ -1,10 +1,10 @@
 import { User } from '../../types/User';
 
-type PropsUser = {
+type Props = {
   user: User;
 };
 
-export const UserInfo: React.FC<PropsUser> = ({ user }) => {
+export const UserInfo: React.FC<Props> = ({ user }) => {
   const { name, email } = user;
 
   return (
