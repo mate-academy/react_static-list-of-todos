@@ -2,9 +2,10 @@
 
 > [React + Typescript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript)
 
+
 You are given `todosFromServer` and `usersFromServer` arrays with the required data.
 
-A `todos` array is based on the `todosFromServer`, but each `todo` has a corresponding user attached. In addition, you have the `Todo` and `User` interfaces already implemented in `./src/types/`. 
+A `todos` array is based on the `todosFromServer`, but each `todo` has a corresponding user attached. In addition, you have the `Todo` and `User` interfaces already implemented in `./src/types/`.
 
 Split the given `App` markup into component following the rules:
 
@@ -13,10 +14,9 @@ Split the given `App` markup into component following the rules:
 - `TodoInfo` takes a `todo` and renders its details, including a `todo.user` with `UserInfo` component if the todo has a user;
 - make sure that the `TodoInfo` has a `TodoInfo--completed` modifier for all completed todos;
 - `UserInfo` takes a `user` and renders the details.
-
 ## Instructions
 
 - Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
 - Use the [React TypeScript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript).
 - Open one more terminal and run tests with `npm test` to ensure your solution is correct.
-- Replace `<your_account>` with your Github username in the [DEMO LINK](https://<your_account>.github.io/react_static-list-of-todos/) and add it to the PR description.
+- Replace `<your_account>` with your Github username in the [DEMO LINK](https://DragotaIV.github.io/react_static-list-of-todos/) and add it to the PR description.
