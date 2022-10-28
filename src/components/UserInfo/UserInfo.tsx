@@ -8,21 +8,15 @@ type Props = {
 export const UserInfo: React.FC<Props> = ({ user }) => (
   <>
     <h1 data-cy="username">
-      Name:
-      {' '}
-      {user?.name}
+      {`Name: ${user?.name}`}
     </h1>
 
     <div data-cy="email">
-      Email:
-      {' '}
-      {user?.email}
+      {`Email: ${user?.email}`}
     </div>
 
     <div data-cy="id">
-      User:
-      {' '}
-      {user?.id}
+      {`User: ${user?.id}`}
     </div>
   </>
 );

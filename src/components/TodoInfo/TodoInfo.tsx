@@ -5,18 +5,18 @@ type Props = {
   completed: boolean;
 };
 
-export const TodoInfo: React.FC<Props> = ({ title, completed }) => (
-  <>
-    <h1 data-cy="title">
-      Task:
-      {' '}
-      {title}
-    </h1>
+export const TodoInfo: React.FC<Props> = ({ title, completed }) => {
+  const todoStatus = completed === false ? 'Not done' : 'Done';
 
-    <div data-cy="status">
-      Status:
-      {' '}
-      {completed === false ? 'Not done' : 'Done'}
-    </div>
-  </>
-);
+  return (
+    <>
+      <h1 data-cy="title">
+        {`Task: ${title}`}
+      </h1>
+
+      <div data-cy="status">
+        {`Status: ${todoStatus}`}
+      </div>
+    </>
+  );
+};

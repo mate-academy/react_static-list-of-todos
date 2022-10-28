@@ -17,7 +17,7 @@ const App: React.FC = () => (
       <h1>Static list of todos</h1>
     </div>
 
-    <div className="list">
+    <div>
       <TodoList todos={preparedTodos} />
     </div>
   </>
