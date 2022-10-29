@@ -2,10 +2,13 @@
   text-align: center;
 }
 
-.done {
-  background-color: green;
-}
-
-.not {
+.TodoInfo {
   background-color: plum;
+  margin: 30px 90px;
+  padding: 10px;
+  border-radius: 10px;
+
+  &--completed {
+    background-color: green;
+  }
 }

@@ -12,7 +12,12 @@ export const TodoList: React.FC<Props> = ({ todos = [] }) => (
     {todos.map(({
       title, completed, userId, user,
     }) => (
-      <li key={userId} className={completed === true ? 'done' : 'not'}>
+      <li
+        key={userId}
+        className={completed
+          ? 'TodoInfo TodoInfo--completed'
+          : 'TodoInfo'}
+      >
         <UserInfo user={user} />
         <TodoInfo
           title={title}
