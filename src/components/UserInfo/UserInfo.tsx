@@ -2,21 +2,25 @@ import React from 'react';
 import { User } from '../../types/User';
 
 type Props = {
-  user: User | null;
+  user: User;
 };
 
-export const UserInfo: React.FC<Props> = ({ user }) => (
-  <>
-    <h1 data-cy="username">
-      {`Name: ${user?.name}`}
-    </h1>
+export const UserInfo: React.FC<Props> = ({ user }) => {
+  const { name, email, id } = user;
 
-    <div data-cy="email">
-      {`Email: ${user?.email}`}
-    </div>
+  return (
+    <>
+      <h1 data-cy="username">
+        {`Name: ${name}`}
+      </h1>
 
-    <div data-cy="id">
-      {`User: ${user?.id}`}
-    </div>
-  </>
-);
+      <div data-cy="email">
+        {`Email: ${email}`}
+      </div>
+
+      <div data-cy="id">
+        {`User: ${id}`}
+      </div>
+    </>
+  );
+};
