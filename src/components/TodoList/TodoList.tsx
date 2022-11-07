@@ -14,5 +14,3 @@ export const TodoList: React.FC<Props> = ({ todos }) => {
     </section>
   );
 };
-
-export default TodoList;

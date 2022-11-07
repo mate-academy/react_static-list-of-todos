@@ -14,5 +14,3 @@ export const UserInfo: React.FC<Props> = ({ user }) => {
     </a>
   );
 };
-
-export default UserInfo;
