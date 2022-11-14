@@ -1,4 +1,9 @@
-// Add the required types and props
-export const UserInfo = () => (
-  <>UserInfo markup</>
+interface Props {
+  name: string,
+};
+
+export const UserInfo: React.FC<Props> = ({ name }) => (
+  <a className="UserInfo" href="mailto:Sincere@april.biz">
+    {name}
+  </a>
 );
