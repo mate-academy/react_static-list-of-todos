@@ -9,9 +9,9 @@ interface Props {
 }
 
 export const TodoInfo: React.FC<Props> = ({
-   title,
-   user,
-  completed
+  title,
+  user,
+  completed,
 }) => (
   <article className={cn(
     'TodoInfo',
