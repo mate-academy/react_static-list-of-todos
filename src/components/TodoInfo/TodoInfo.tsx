@@ -4,15 +4,11 @@ import { UserInfo } from '../UserInfo';
 // Add the required types and props
 
 type Props = {
-  item: Todo
+  todo: Todo
 };
 
-export const TodoInfo: React.FC<Props> = ({ item }) => {
-  const {
-    completed,
-    title,
-    user,
-  } = item;
+export const TodoInfo: React.FC<Props> = ({ todo }) => {
+  const { completed, title, user } = todo;
 
   return (
     <article className={!completed
