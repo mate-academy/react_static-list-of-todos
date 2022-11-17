@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './userinfo.scss';
+import './UserInfo.scss';
 
 import { User } from '../../types/User';
 
