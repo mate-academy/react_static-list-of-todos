@@ -5,10 +5,7 @@ type Props = {
 };
 
 export const UserInfo: React.FC<Props> = ({ person }) => {
-  const {
-    name,
-    email,
-  } = person;
+  const { name, email } = person;
 
   return (
     <a className="UserInfo" href={`mailto:${email}`}>
