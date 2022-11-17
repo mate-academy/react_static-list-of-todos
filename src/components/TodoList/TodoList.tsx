@@ -7,14 +7,10 @@ interface Props {
 
 export const TodoList: React.FC<Props> = ({ todos }) => {
   return (
-    <ul>
-      <section className="TodoList">
-        { todos.map(item => (
-          <li key={item.id}>
-            <TodoInfo todo={item} />
-          </li>
-        )) }
-      </section>
-    </ul>
+    <section className="TodoList">
+      { todos.map(item => (
+        <TodoInfo key={item.id} todo={item} />
+      )) }
+    </section>
   );
 };
