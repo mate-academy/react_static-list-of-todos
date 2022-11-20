@@ -12,7 +12,7 @@ export const TodoList: React.FC<Props> = ({ todos }) => (
     <section className="TodoList">
       {todos.map(todo => (
         <li key={todo.id}>
-          <TodoInfo key={todo.id} todo={todo} />
+          <TodoInfo todo={todo} />
         </li>
       ))}
     </section>
