@@ -7,6 +7,7 @@ import { UserInfo } from '../UserInfo';
 type Props = {
   todo: Todo;
 };
+
 export const TodoInfo: React.FC<Props> = ({ todo }) => {
   const {
     title,
@@ -24,9 +25,7 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
       )}
     >
       <h2 className="TodoInfo__title">{title}</h2>
-      {(user !== null)
-        ? <UserInfo user={user} />
-        : ''}
+      {user && <UserInfo user={user} />}
     </article>
   );
 };

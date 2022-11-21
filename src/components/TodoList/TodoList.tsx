@@ -5,9 +5,10 @@ import { TodoInfo } from '../TodoInfo';
 type Props = {
   todos: Todo[];
 };
+
 export const TodoList: React.FC<Props> = ({ todos }) => {
   const todosArr = todos.map((todo: Todo) => (
-    <TodoInfo key={todo.id.toString()} todo={todo} />
+    <TodoInfo key={todo.id} todo={todo} />
   ));
 
   return (
