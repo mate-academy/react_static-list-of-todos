@@ -23,8 +23,9 @@ export const TodoList: React.FC<Props> = ({ todos = [] }) => (
       >
         <TodoInfo title={todo.title} />
 
-        {todo.user
-         && (<UserInfo name={todo.user.name} email={todo.user.email} />)}
+        {todo.user && (
+          <UserInfo user={todo.user} />
+        )}
 
       </article>
     ))}
