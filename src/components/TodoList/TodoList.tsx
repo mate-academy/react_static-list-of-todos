@@ -20,11 +20,15 @@ export const TodoList: React.FC<Props> = ({ todos = [] }) => (
             'TodoInfo--completed': todo.completed,
           },
         )}
-      >
-        <TodoInfo title={todo.title} />
+      > 
+        <h2 className="TodoInfo__title">
+          <TodoInfo title={todo.title} />
+        </h2>        
 
         {todo.user && (
-          <UserInfo user={todo.user} />
+          <a className="UserInfo" href={`#${todo.user.email}`}>
+            <UserInfo user={todo.user} />
+          </a>  
         )}
 
       </article>
