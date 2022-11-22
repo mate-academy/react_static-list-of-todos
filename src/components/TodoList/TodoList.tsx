@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import './TodoList.scss';
 
 import { Todo } from '../../types/Todo';
 import { TodoInfo } from '../TodoInfo/TodoInfo';
@@ -10,9 +11,9 @@ type Props = {
 };
 
 export const TodoList: React.FC<Props> = ({ todos = [] }) => (
-  <section className="TodoList">
+  <ul className="TodoList">
     {todos.map(todo => (
-      <article
+      <li
         key={todo.id}
         className={classNames(
           'TodoInfo',
@@ -20,18 +21,12 @@ export const TodoList: React.FC<Props> = ({ todos = [] }) => (
             'TodoInfo--completed': todo.completed,
           },
         )}
-      > 
-        <h2 className="TodoInfo__title">
-          <TodoInfo title={todo.title} />
-        </h2>        
-
+      >
+        <TodoInfo title={todo.title} />
         {todo.user && (
-          <a className="UserInfo" href={`#${todo.user.email}`}>
-            <UserInfo user={todo.user} />
-          </a>  
+          <UserInfo user={todo.user} />
         )}
-
-      </article>
+      </li>
     ))}
-  </section>
+  </ul>
 );
