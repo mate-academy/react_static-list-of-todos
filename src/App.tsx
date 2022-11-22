@@ -8,8 +8,8 @@ import { User } from './types/User';
 import { Todo } from './types/Todo';
 import { TodoList } from './components/TodoList';
 
-function getUser(userId: number): User | undefined {
-  return usersFromServer.find(user => user.id === userId);
+function getUser(userId: number): User | null {
+  return usersFromServer.find(user => user.id === userId) || null;
 }
 
 export const todos: Todo[] = todosFromServer.map(todo => ({
