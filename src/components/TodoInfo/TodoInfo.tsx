@@ -9,7 +9,11 @@ type Props = {
 };
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => {
-  const { completed, title, user } = todo;
+  const { 
+    completed, 
+    title, 
+    user,
+  } = todo;
 
   return (
     <article className={
@@ -19,7 +23,9 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
       )
     }
     >
-      <h2 className="TodoInfo__title">{title}</h2>
+      <h2 className="TodoInfo__title">
+        {title}
+      </h2>
 
       {user && (
         <UserInfo user={user} />
