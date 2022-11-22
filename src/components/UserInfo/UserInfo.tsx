@@ -12,10 +12,8 @@ export const UserInfo: React.FC<Proto> = ({ user }) => {
   } = user;
 
   return (
-    <>
-      <a className="UserInfo" href={`mailto:${email}`}>
-        {name}
-      </a>
-    </>
+    <a className="UserInfo" href={`mailto:${email}`}>
+      {name}
+    </a>
   );
 };
