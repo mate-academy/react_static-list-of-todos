@@ -2,23 +2,15 @@ import './UserInfo.scss';
 import { User } from '../../types/User';
 
 type Props = {
-  user: User | null
+  user: User
 };
 
 export const UserInfo:React.FC<Props> = ({ user }) => {
-  if (user) {
-    const { email, name } = user;
-
-    return (
-      <a className="UserInfo" href={email}>
-        {name}
-      </a>
-    );
-  }
+  const { email, name } = user;
 
   return (
-    <a className="UserInfo" href="Email is not defined">
-      User is not defined
+    <a className="UserInfo" href={`malito:${email}`}>
+      {name}
     </a>
   );
 };
