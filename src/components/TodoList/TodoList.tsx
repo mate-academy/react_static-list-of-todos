@@ -1,3 +1,4 @@
+import './TodoList.scss'
 import { TodoInfo } from '../TodoInfo';
 import { Todo } from '../../types/Todo';
 
@@ -7,13 +8,13 @@ type Props = {
 
 export const TodoList: React.FC<Props> = ({ todos }) => {
   return (
-    <main className="TodoList">
+    <ul className="TodoList">
       {todos.map((todo) => (
         <TodoInfo
           key={todo.id}
           todo={todo}
         />
       ))}
-    </main>
+    </ul>
   );
 };
