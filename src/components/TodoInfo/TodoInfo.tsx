@@ -8,19 +8,14 @@ interface Props {
 }
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => {
-  if (todo.completed === true) {
-    return (
-      <article className="TodoInfo TodoInfo--completed" key={todo.id}>
-        <h2 className="TodoInfo__title">{todo.title}</h2>
-        <UserInfo user={todo.user} />
-      </article>
-    );
-  }
+  const {
+    completed, id, title, user,
+  } = todo;
 
   return (
-    <article className="TodoInfo" key={todo.id}>
-      <h2 className="TodoInfo__title">{todo.title}</h2>
-      <UserInfo user={todo.user} />
+    <article className={`TodoInfo ${completed === true ? 'TodoInfo--completed' : ''} `} key={id}>
+      <h2 className="TodoInfo__title">{title}</h2>
+      <UserInfo user={user} />
     </article>
   );
 };
