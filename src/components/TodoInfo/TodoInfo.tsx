@@ -18,7 +18,7 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
   return (
     <article className={classNames(
       'TodoInfo',
-      { 'TodoInfo TodoInfo': completed },
+      { 'TodoInfo--completed': completed },
     )}
     >
       <h2 className="TodoInfo__title">{title}</h2>
