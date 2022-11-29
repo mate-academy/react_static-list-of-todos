@@ -5,8 +5,9 @@ type Props = {
   todo: Todo;
 };
 
-export const TodoInfo: React.FC<Props>
-= ({ todo }) => (
+export const TodoInfo: React.FC<Props> = ({
+  todo,
+}) => (
   <>
     <h2 className="TodoInfo__title">
       {todo.title}
