@@ -26,3 +26,4 @@ export const App: React.FC = () => (
     <TodoList todos={todos} />
   </div>
 );
+export default App;
