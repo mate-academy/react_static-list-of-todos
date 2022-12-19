@@ -9,12 +9,16 @@ type Props = {
 };
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => (
-  <article className={classNames(
-    'TodoInfo',
-    { 'TodoInfo--completed': todo.completed },
-  )}
+  <article
+    className={classNames(
+      'TodoInfo card text-bg-danger bg-gradient bg-opacity-50 shadow p-2 m-3',
+      { 'TodoInfo--completed bg-success': todo.completed },
+    )}
+    style={{
+      maxWidth: '18rem',
+    }}
   >
-    <h2 className="TodoInfo__title">{ todo.title }</h2>
+    <h2 className="TodoInfo__title fs-3 text-dark">{ todo.title }</h2>
 
     {todo.user && (
       <UserInfo user={todo.user} />

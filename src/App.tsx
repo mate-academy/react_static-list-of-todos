@@ -9,6 +9,8 @@ import { Todo } from './types/Todo';
 
 import { TodoList } from './components/TodoList/TodoList';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function getUser(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
@@ -23,7 +25,7 @@ export const todos: Todo[] = todosFromServer.map(todo => ({
 
 export const App: React.FC = () => (
   <div className="App">
-    <h1 className="App__title">Static list of todos</h1>
+    <h1 className="App__title fs-1 m-3 fw-bold">Static list of todos</h1>
     <TodoList todos={todos} />
   </div>
 );
