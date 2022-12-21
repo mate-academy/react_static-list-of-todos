@@ -1,4 +1,5 @@
 import { User } from '../../types/User';
+import './UserInfo.scss';
 
 type Props = {
   user: User;
@@ -6,7 +7,8 @@ type Props = {
 
 export const UserInfo: React.FC<Props> = ({ user }) => {
   const {
-    name, email,
+    name,
+    email,
   } = user;
 
   return (
