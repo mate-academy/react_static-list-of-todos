@@ -3,13 +3,17 @@ import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo/UserInfo';
 
 type Props = {
-  data: Todo;
+  todo: Todo;
 };
 
-export const TodoInfo: React.FC<Props> = ({ data }) => (
-  <>
-    <h2 className="TodoInfo__title">{data.title}</h2>
+export const TodoInfo: React.FC<Props> = ({ todo }) => {
+  const { title, user } = todo;
 
-    <UserInfo user={data.user} />
-  </>
-);
+  return (
+    <>
+      <h2 className="TodoInfo__title">{title}</h2>
+
+      {user && <UserInfo user={user} />}
+    </>
+  );
+};
