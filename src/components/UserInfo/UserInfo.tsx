@@ -2,14 +2,10 @@ import React from 'react';
 import { User } from '../../types/User';
 
 type Props = {
-  user: User | null;
+  user: User;
 };
 
 export const UserInfo: React.FC<Props> = ({ user }) => {
-  if (user === null) {
-    return null;
-  }
-
   const {
     name,
     email,
