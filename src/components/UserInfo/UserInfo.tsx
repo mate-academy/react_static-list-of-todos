@@ -6,16 +6,18 @@ type Props = {
 };
 
 export const UserInfo: React.FC<Props> = ({ user }) => {
+  if (user === null) {
+    return null;
+  }
+
   const {
     name,
     email,
-  } = user as User;
+  } = user;
 
   return (
-    <>
-      <a className="UserInfo" href={`mailto:${email}`}>
-        {name}
-      </a>
-    </>
+    <a className="UserInfo" href={`mailto:${email}`}>
+      {name}
+    </a>
   );
 };
