@@ -4,12 +4,20 @@ iframe {
 
 html {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #e1bee7;
+}
+
+.title {
+  text-align: center;
 }
 
 .TodoInfo {
-  width: max-content;
+  width: 400px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   padding: 8px;
-  margin: 12px 0;
+  margin-bottom: 12px;
   border: 1px solid #000;
   border-radius: 8px;
   background-color: antiquewhite;
