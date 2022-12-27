@@ -1,4 +1,5 @@
 import React from 'react';
+import './reset.css';
 import './App.scss';
 
 import todosFromServer from './api/todos';
