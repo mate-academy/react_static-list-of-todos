@@ -7,24 +7,114 @@ html {
 }
 
 .TodoInfo {
-  width: max-content;
-  padding: 8px;
+  width: 300px;
+  padding: 10px;
   margin: 12px 0;
   border: 1px solid #000;
   border-radius: 8px;
-  background-color: antiquewhite;
+  background: linear-gradient(45deg, #ff0, #db0042, #f23b59, #ec0707);
+  background-size: 800% 800%;
+  transition: transform 0.3s ease;
+
+  -webkit-animation: notcompleted 10s ease infinite;
+  -moz-animation: notcompletedd 10s ease infinite;
+  animation: notcompleted 10s ease infinite;
+
+  @-webkit-keyframes notcompleted {
+    0% {
+      background-position: 52% 0%;
+    }
+    50% {
+      background-position: 49% 100%;
+    }
+    100% {
+      background-position: 52% 0%;
+    }
+  }
+  @-moz-keyframes notcompleted {
+    0% {
+      background-position: 52% 0%;
+    }
+    50% {
+      background-position: 49% 100%;
+    }
+    100% {
+      background-position: 52% 0%;
+    }
+  }
+  @keyframes notcompleted {
+    0% {
+      background-position: 52% 0%;
+    }
+    50% {
+      background-position: 49% 100%;
+    }
+    100% {
+      background-position: 52% 0%;
+    }
+  }
+
+  &:hover {
+    transform: translateX(50px);
+  }
 
   &__title {
-    margin: 4px 0;
+    margin: 6px 0 30px;
     font-size: inherit;
-    color: #f00;
+    color: #fff;
   }
 
   &--completed &__title {
-    color: #080;
+    color: #000;
   }
 }
 
 .UserInfo {
   font-style: italic;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fac70b;
+}
+
+.completedColor {
+  background: linear-gradient(45deg, #67ff00, #1eb251, #10ee97, #5fd534);
+  background-size: 800% 800%;
+
+  -webkit-animation: completed 10s ease infinite;
+  -moz-animation: completed 10s ease infinite;
+  animation: completed 10s ease infinite;
+}
+
+@-webkit-keyframes completed {
+  0% {
+    background-position: 52% 0%;
+  }
+  50% {
+    background-position: 49% 100%;
+  }
+  100% {
+    background-position: 52% 0%;
+  }
+}
+@-moz-keyframes completed {
+  0% {
+    background-position: 52% 0%;
+  }
+  50% {
+    background-position: 49% 100%;
+  }
+  100% {
+    background-position: 52% 0%;
+  }
+}
+@keyframes completed {
+  0% {
+    background-position: 52% 0%;
+  }
+  50% {
+    background-position: 49% 100%;
+  }
+  100% {
+    background-position: 52% 0%;
+  }
 }
