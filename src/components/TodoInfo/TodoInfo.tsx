@@ -21,7 +21,12 @@ export const TodoInfo:React.FC<Props> = ({ todo }) => {
         {title}
       </h2>
 
-      {user && <UserInfo user={user} />}
+      {user && (
+        <div className="TodoInfo__user">
+          <p className="TodoInfo__text">Assigned to:</p>
+          <UserInfo user={user} />
+        </div>
+      )}
     </article>
   );
 };

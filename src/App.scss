@@ -6,25 +6,79 @@ html {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
+.TodoList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 48px;
+}
+
 .TodoInfo {
-  width: max-content;
-  padding: 8px;
-  margin: 12px 0;
-  border: 1px solid #000;
+  min-width: 200px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+
   border-radius: 8px;
-  background-color: antiquewhite;
+  background-color: #f9f9f9;
+
+  cursor: pointer;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   &__title {
-    margin: 4px 0;
     font-size: inherit;
-    color: #f00;
+    color: rgb(22, 21, 21);
+    text-transform: uppercase;
+    max-width: 50%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+
+  &__user {
+    width: max-content;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+  }
+
+  &__text {
+    padding: 8px;
   }
 
   &--completed &__title {
     color: #080;
   }
+
+  &--completed {
+    position: relative;
+    &::after {
+      content: "✓";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translate(-20%, 20%);
+      display: block;
+      width: 48px;
+      height: 48px;
+      background-color: #080;
+      border-radius: 50%;
+      font-size: 32px;
+      color: white;
+      text-align: center;
+    }
+  }
 }
 
 .UserInfo {
-  font-style: italic;
+  background-color: #e9e9e9;
+  padding: 8px;
+  border-radius: 8px;
+  &__email {
+    text-transform: lowercase;
+  }
 }
