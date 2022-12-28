@@ -1,6 +1,6 @@
 import React from 'react';
 import './TodoInfo.scss';
-import classNames from 'classnames';
+import cn from 'classnames';
 import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo';
 
@@ -9,7 +9,7 @@ type Props = {
 };
 
 export const TodoInfo:React.FC<Props> = ({ todo }) => (
-  <article className={classNames(
+  <article className={cn(
     'TodoInfo',
     {
       'TodoInfo--completed': todo.completed,
