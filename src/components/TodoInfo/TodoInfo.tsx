@@ -23,7 +23,6 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
           />
         )
       }
-
     </article>
   );
 };
