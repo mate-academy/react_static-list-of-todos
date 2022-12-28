@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import cn from 'classnames';
 import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo';
 import './TodoInfo.scss';
@@ -9,7 +9,7 @@ type Props = {
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => (
   <article
-    className={classNames(
+    className={cn(
       'TodoInfo',
       { 'TodoInfo--completed': todo.completed },
     )}
