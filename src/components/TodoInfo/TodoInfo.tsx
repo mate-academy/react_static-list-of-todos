@@ -3,25 +3,25 @@ import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo';
 
 type Todos = {
-  element: Todo;
+  todo: Todo;
 };
 
-export const TodoInfo: React.FC<Todos> = ({ element }) => (
+export const TodoInfo: React.FC<Todos> = ({ todo }) => (
   <article
     className={cn(
       'TodoInfo',
       {
-        'TodoInfo--completed': element.completed,
+        'TodoInfo--completed': todo.completed,
       },
     )}
   >
     <h2 className="TodoInfo__title">
-      {`${element.title}`}
+      {`${todo.title}`}
     </h2>
 
-    {element.user && (
+    {todo.user && (
       <UserInfo
-        user={element.user}
+        user={todo.user}
       />
     )}
   </article>
