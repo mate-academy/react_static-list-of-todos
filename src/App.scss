@@ -4,27 +4,39 @@ iframe {
 
 html {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  height: 100%;
+}
+
+h1 {
+  color: grey;
+  text-decoration: underline;
 }
 
 .TodoInfo {
-  width: max-content;
+  width: 350px;
   padding: 8px;
   margin: 12px 0;
-  border: 1px solid #000;
-  border-radius: 8px;
-  background-color: antiquewhite;
+  border-radius: 10px;
+  background-color: lightcoral;
 
   &__title {
     margin: 4px 0;
     font-size: inherit;
-    color: #f00;
+    color: rgb(180, 2, 2);
+  }
+
+  &--completed {
+    background-color: lightgreen;
   }
 
   &--completed &__title {
     color: #080;
+    text-decoration: line-through;
   }
 }
 
 .UserInfo {
-  font-style: italic;
+  text-decoration: none;
+  color: grey;
+  font-weight: 700;
 }
