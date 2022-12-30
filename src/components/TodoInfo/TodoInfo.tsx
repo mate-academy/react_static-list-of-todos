@@ -6,23 +6,31 @@ type Todos = {
   todo: Todo;
 };
 
-export const TodoInfo: React.FC<Todos> = ({ todo }) => (
-  <article
-    className={cn(
-      'TodoInfo',
-      {
-        'TodoInfo--completed': todo.completed,
-      },
-    )}
-  >
-    <h2 className="TodoInfo__title">
-      {`${todo.title}`}
-    </h2>
+export const TodoInfo: React.FC<Todos> = ({ todo }) => {
+  const {
+    title,
+    user,
+    completed,
+  } = todo;
 
-    {todo.user && (
-      <UserInfo
-        user={todo.user}
-      />
-    )}
-  </article>
-);
+  return (
+    <article
+      className={cn(
+        'TodoInfo',
+        {
+          'TodoInfo--completed': completed,
+        },
+      )}
+    >
+      <h2 className="TodoInfo__title">
+        {`${title}`}
+      </h2>
+
+      {user && (
+        <UserInfo
+          user={user}
+        />
+      )}
+    </article>
+  );
+};
