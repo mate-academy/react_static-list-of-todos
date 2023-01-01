@@ -18,7 +18,9 @@ html {
   min-width: 200px;
   padding: 16px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  gap: 24px;
 
   border-radius: 8px;
   background-color: #f9f9f9;
@@ -34,14 +36,12 @@ html {
     font-size: inherit;
     color: rgb(22, 21, 21);
     text-transform: uppercase;
-    max-width: 50%;
     font-weight: bold;
     display: flex;
     align-items: center;
   }
 
   &__user {
-    width: max-content;
     background-color: #f0f0f0;
     border-radius: 8px;
   }
@@ -59,9 +59,9 @@ html {
     &::after {
       content: "✓";
       position: absolute;
-      bottom: 0;
-      left: 0;
-      transform: translate(-20%, 20%);
+      top: 0;
+      right: 0;
+      transform: translate(40%, -40%);
       display: block;
       width: 48px;
       height: 48px;
@@ -70,6 +70,17 @@ html {
       font-size: 32px;
       color: white;
       text-align: center;
+    }
+  }
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+    &__title {
+      max-width: 50%;
+    }
+
+    &__user {
+      width: max-content;
     }
   }
 }
