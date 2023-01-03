@@ -7,6 +7,8 @@ type Todos = {
 };
 export const TodoList: React.FC<Todos> = ({ todos }) => (
   <section className="TodoList">
-    {todos.map(todo => (<TodoInfo key={todo.id} todo={todo} />))}
+    {todos.map(todo => (
+      <TodoInfo key={todo.id} todo={todo} />
+    ))}
   </section>
 );
