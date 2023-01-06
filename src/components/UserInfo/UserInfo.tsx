@@ -1,19 +1,19 @@
 import React from 'react';
+import { User } from '../../types/User';
 
 type Props = {
-  userName: string | undefined;
-  userEmail: string | undefined;
+  user: User;
 };
 
-export const UserInfo: React.FC<Props> = (props) => {
+export const UserInfo: React.FC<Props> = ({ user }) => {
   const {
-    userEmail,
-    userName,
-  } = props;
+    email,
+    name,
+  } = user;
 
   return (
-    <a className="UserInfo" href={`mailto:${userEmail}`}>
-      {userName}
+    <a className="UserInfo" href={`mailto:${email}`}>
+      {name}
     </a>
   );
 };
