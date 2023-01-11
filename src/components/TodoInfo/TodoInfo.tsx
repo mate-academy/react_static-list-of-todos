@@ -9,21 +9,16 @@ type ToDo = {
 export const TodoInfo: React.FC<ToDo> = ({ todo }) => {
   const { completed, user, title } = todo;
 
-  return (
-    <>
-      {user !== null ? (
-        <article className={classNames(
-          'TodoInfo',
-          {
-            'TodoInfo--completed': completed,
-          },
-        )}
-        >
-          <h2 className="TodoInfo__title">{title}</h2>
-          <UserInfo user={user} />
-        </article>
-      )
-        : null}
-    </>
+  return user && (
+    <li className={classNames(
+      'TodoInfo',
+      {
+        'TodoInfo--completed': completed,
+      },
+    )}
+    >
+      <h2 className="TodoInfo__title">{title}</h2>
+      <UserInfo user={user} />
+    </li>
   );
 };

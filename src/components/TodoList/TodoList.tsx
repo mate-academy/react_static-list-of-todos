@@ -6,7 +6,7 @@ type List = {
 };
 
 export const TodoList: React.FC<List> = ({ todos }) => (
-  <section className="TodoList">
+  <ul className="TodoList">
     {todos.map(todo => <TodoInfo todo={todo} />)}
-  </section>
+  </ul>
 );
