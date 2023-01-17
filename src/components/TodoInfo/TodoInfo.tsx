@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { Todo } from "../../types/Todo";
 import { UserInfo } from "../UserInfo";
 
@@ -5,12 +6,16 @@ interface TodoInfoProps {
   todo: Todo;
 }
 
-export const TodoInfo = ({ todo }: TodoInfoProps) => (
+export const TodoInfo = ({
+  todo: { completed, title, user },
+}: TodoInfoProps) => (
   <article
-    className={todo.completed ? "TodoInfo TodoInfo--completed" : "TodoInfo"}
+    className={classNames("TodoInfo", {
+      "TodoInfo--completed": completed,
+    })}
   >
-    <h2 className="TodoInfo__title">{todo.title}</h2>
+    <h2 className="TodoInfo__title">{title}</h2>
 
-    <UserInfo user={todo.user} />
+    <UserInfo user={user} />
   </article>
 );
