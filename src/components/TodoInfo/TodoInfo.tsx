@@ -7,7 +7,11 @@ type Props = {
 };
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => {
-  const { completed, user, title } = todo;
+  const {
+    completed,
+    user,
+    title,
+  } = todo;
 
   return user && (
     <li className={classNames(
