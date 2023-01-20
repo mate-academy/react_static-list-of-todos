@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-
+import classNames from 'classnames';
 import todosFromServer from './api/todos';
 import usersFromServer from './api/users';
 
@@ -24,37 +24,20 @@ export const App: React.FC = () => (
     <h1 className="App__title">Static list of todos</h1>
 
     <section className="TodoList">
-      <article className="TodoInfo TodoInfo--completed">
-        <h2 className="TodoInfo__title">HTML</h2>
+      {todos.map(todo => (
+        <article
+          className={classNames('TodoInfo', {
+            'TodoInfo--completed': todo.completed,
+          })}
+          key={todo.id}
+        >
+          <h2 className="TodoInfo__title">{todo.title}</h2>
 
-        <a className="UserInfo" href="mailto:Sincere@april.biz">
-          Leanne Graham
-        </a>
-      </article>
-
-      <article className="TodoInfo TodoInfo--completed">
-        <h2 className="TodoInfo__title">CSS</h2>
-
-        <a className="UserInfo" href="mailto:Sincere@april.biz">
-          Leanne Graham
-        </a>
-      </article>
-
-      <article className="TodoInfo TodoInfo--completed">
-        <h2 className="TodoInfo__title">JS</h2>
-
-        <a className="UserInfo" href="mailto:Shanna@melissa.tv">
-          Ervin Howell
-        </a>
-      </article>
-
-      <article className="TodoInfo">
-        <h2 className="TodoInfo__title">React</h2>
-
-        <a className="UserInfo" href="mailto:Nathan@yesenia.net">
-          Clementine Bauch
-        </a>
-      </article>
+          <a className="UserInfo" href={`mailto:${todo.user?.email}`}>
+            {todo.user?.name}
+          </a>
+        </article>
+      ))}
     </section>
   </div>
 );
