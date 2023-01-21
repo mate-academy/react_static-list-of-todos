@@ -1,6 +1,6 @@
-import { User } from "../../types/User";
+import { User } from '../../types/User';
 
-interface UserInfoType {
+export interface UserInfoType {
   user: User | null;
 }
 
