@@ -17,7 +17,7 @@ export const TodoInfo = ({ todo }: TodoInfoProps) => {
     >
       <h2 className="TodoInfo__title">{title}</h2>
 
-      <UserInfo user={user} />
+      {user && <UserInfo user={user} />}
     </article>
   );
 };

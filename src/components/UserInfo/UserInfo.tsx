@@ -1,17 +1,15 @@
 import { User } from '../../types/User';
 
 export interface UserInfoType {
-  user: User | null;
+  user: User;
 }
 
 export const UserInfo = ({ user }: UserInfoType) => {
-  if (user === null) {
-    return null;
-  }
+  const { email, name } = user;
 
   return (
-    <a className="UserInfo" href={`mailto:${user?.email}`}>
-      {user?.name}
+    <a className="UserInfo" href={`mailto:${email}`}>
+      {name}
     </a>
   );
 };
