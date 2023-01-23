@@ -7,7 +7,9 @@ type Props = {
 };
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => {
-  const { title, completed, user } = todo;
+  const {
+    title, completed, user,
+  } = todo;
 
   return (
     <>
@@ -16,14 +18,12 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
           'TodoInfo',
           { 'TodoInfo--completed': completed },
         )}
-        key={todo.id}
       >
         <h2 className="TodoInfo__title">
           {title}
         </h2>
         {user && <UserInfo user={user} />}
       </article>
-
     </>
   );
 };
