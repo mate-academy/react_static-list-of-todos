@@ -8,11 +8,10 @@ type Props = {
 };
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => {
-  const { title, completed, id } = todo;
+  const { title, completed } = todo;
 
   return (
     <article
-      key={id}
       className={classNames(
         'TodoInfo', { 'TodoInfo--completed': completed },
       )}
