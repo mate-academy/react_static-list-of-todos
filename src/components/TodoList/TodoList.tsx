@@ -6,20 +6,15 @@ type Props = {
 };
 
 export const TodoList: React.FC<Props> = ({ todos }) => (
-  <>
-    <section className="TodoList">
-      { todos.map(person => {
-        if (person.user != null) {
-          return (
-            <TodoInfo
-              title={person.title}
-              person={person.user}
-            />
-          );
-        }
-
-        return '';
-      })}
-    </section>
-  </>
+  <section className="TodoList">
+    { todos.map(person => (
+      person.user
+      && (
+        <TodoInfo
+          title={person.title}
+          person={person.user}
+        />
+      )
+    ))}
+  </section>
 );

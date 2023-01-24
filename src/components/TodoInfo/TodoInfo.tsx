@@ -7,14 +7,11 @@ type Propss = {
 };
 
 export const TodoInfo: React.FC<Propss> = ({ title, person }) => (
-  <>
-    <article className="TodoInfo TodoInfo--completed">
-      <h2 className="TodoInfo__title">{title}</h2>
-
-      <UserInfo
-        name={person.name}
-        email={person.email}
-      />
-    </article>
-  </>
+  <article className="TodoInfo TodoInfo--completed">
+    <h2 className="TodoInfo__title">{title}</h2>
+    <UserInfo
+      name={person.name}
+      email={person.email}
+    />
+  </article>
 );
