@@ -23,7 +23,7 @@ describe('TodoInfo', () => {
         user: user1,
       };
 
-      mount(<TodoInfo {...todo} />);
+      mount(<TodoInfo todo={todo} />);
     });
 
     it('should have a correct title', () => {
@@ -77,7 +77,7 @@ describe('TodoInfo', () => {
         user: user3,
       };
 
-      mount(<TodoInfo {...todo48} />);
+      mount(<TodoInfo todo={todo48} />);
 
       cy.get('.TodoInfo__title')
         .should('have.text', 'sit reprehenderit omnis quia');

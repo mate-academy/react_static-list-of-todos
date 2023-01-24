@@ -13,7 +13,7 @@ describe('UserInfo', () => {
       email: 'Sincere@april.biz',
     };
 
-    mount(<UserInfo {...user1} />);
+    mount(<UserInfo user={user1} />);
 
     cy.get('.UserInfo').should('have.text', 'Leanne Graham');
   });
@@ -26,7 +26,7 @@ describe('UserInfo', () => {
       email: 'Sincere@april.biz',
     };
 
-    mount(<UserInfo {...user1} />);
+    mount(<UserInfo user={user1} />);
 
     cy.get('.UserInfo').should('have.attr', 'href', 'mailto:Sincere@april.biz');
   });
@@ -39,7 +39,7 @@ describe('UserInfo', () => {
       email: 'Shanna@melissa.tv',
     };
 
-    mount(<UserInfo {...user2} />);
+    mount(<UserInfo user={user2} />);
 
     cy.get('.UserInfo')
       .should('have.text', 'Ervin Howell')
