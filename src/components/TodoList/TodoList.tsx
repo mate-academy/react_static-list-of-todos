@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import { Todo } from '../../types/Todo';
 import { TodoInfo } from '../TodoInfo';
 
@@ -10,13 +9,10 @@ export const TodoList: React.FC<Props> = ({ todos = [] }) => {
   return (
     <>
       {todos.map(todo => (
-        <Fragment
+        <TodoInfo
+          todo={todo}
           key={todo.id}
-        >
-          <TodoInfo
-            todo={todo}
-          />
-        </Fragment>
+        />
       ))}
     </>
   );

@@ -21,8 +21,6 @@ export const todos: Todo[] = todosFromServer.map(todo => ({
 }));
 
 export const App: React.FC = () => {
-  // console.log(todos);
-
   return (
     <div className="App">
       <h1 className="App__title">Static list of todos</h1>
