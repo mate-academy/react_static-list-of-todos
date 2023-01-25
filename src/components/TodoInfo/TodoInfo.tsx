@@ -1,5 +1,6 @@
 import { UserInfo } from '../UserInfo';
 import { Todo } from '../../types/Todo';
+import './TodoInfo.scss';
 
 type Props = {
   todoI: Todo;
