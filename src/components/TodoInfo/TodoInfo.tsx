@@ -15,10 +15,9 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => (
       'TodoInfo',
       { 'TodoInfo--completed': todo.completed },
     )}
-    key={todo.id}
   >
     <h2 className="TodoInfo__title">{todo.title}</h2>
-    {todo.user && <UserInfo user={todo.user} key={todo.userId} />}
+    {todo.user && <UserInfo user={todo.user} key={todo.user.id} />}
   </article>
 
 );
