@@ -11,7 +11,7 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => (
 
   <article className={classNames(
     'TodoInfo', {
-      'TodoInfo--completed': todo.completed === true,
+      'TodoInfo--completed': todo.completed,
     },
   )}
   >
@@ -19,7 +19,7 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => (
     {todo.user === null
       ? null
       : (
-        <UserInfo key={todo.userId} user={todo.user} />
+        <UserInfo user={todo.user} />
       )}
   </article>
 );
