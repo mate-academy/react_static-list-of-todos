@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { UserInfo } from '../UserInfo';
 import { Todo } from '../../types/Todo';
 import './TodoInfo.scss';
@@ -14,7 +15,12 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
   } = todo;
 
   return (
-    <article className={`TodoInfo ${completed ? 'TodoInfo--completed' : ''}`}>
+    <article
+      className={classNames(
+        'TodoInfo',
+        { 'Todo-Info--completed': completed },
+      )}
+    >
       <h2 className="TodoInfo__title">
         {title}
       </h2>
