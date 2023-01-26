@@ -3,15 +3,15 @@ import { Todo } from '../../types/Todo';
 import './TodoInfo.scss';
 
 type Props = {
-  todoI: Todo;
+  todo: Todo;
 };
 
-export const TodoInfo: React.FC<Props> = ({ todoI }) => {
+export const TodoInfo: React.FC<Props> = ({ todo }) => {
   const {
     title,
     user,
     completed,
-  } = todoI;
+  } = todo;
 
   return (
     <article className={`TodoInfo ${completed ? 'TodoInfo--completed' : ''}`}>
