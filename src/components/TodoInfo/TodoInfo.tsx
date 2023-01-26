@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
+import './TodoInfo.scss';
 import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo';
 
