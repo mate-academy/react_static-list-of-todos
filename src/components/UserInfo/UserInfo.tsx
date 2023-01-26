@@ -1,7 +1,6 @@
 import React from 'react';
 import { User } from '../../types/User';
 
-// Add the required types and props
 type Props = {
   user: User
 };
