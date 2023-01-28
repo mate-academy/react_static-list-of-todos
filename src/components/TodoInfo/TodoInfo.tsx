@@ -9,13 +9,19 @@ type Props = {
   todo: Todo;
 };
 
-export const TodoInfo: FC<Props> = ({ todo }) => (
+export const TodoInfo: FC<Props> = ({
+  todo: {
+    title,
+    user,
+    completed,
+  },
+}) => (
   <article
     className={classNames('TodoInfo', {
-      'TodoInfo--completed': todo.completed,
+      'TodoInfo--completed': completed,
     })}
   >
-    <h2 className="TodoInfo__title">{todo.title}</h2>
-    {todo.user && <UserInfo user={todo.user} />}
+    <h2 className="TodoInfo__title">{title}</h2>
+    {user && <UserInfo user={user} />}
   </article>
 );

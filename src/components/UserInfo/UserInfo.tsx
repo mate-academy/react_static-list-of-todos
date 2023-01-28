@@ -5,12 +5,17 @@ type Props = {
   user: User;
 };
 
-export const UserInfo: FC<Props> = ({ user }) => {
-  const link = `mailto:${user.email}`;
+export const UserInfo: FC<Props> = ({
+  user: {
+    name,
+    email,
+  },
+}) => {
+  const link = `mailto:${email}`;
 
   return (
     <a className="UserInfo" href={link}>
-      {user.name}
+      {name}
     </a>
   );
 };
