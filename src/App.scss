@@ -13,7 +13,7 @@ html {
   border: 1px solid #000;
   border-radius: 8px;
   background-color: antiquewhite;
-
+  
   &__title {
     margin: 4px 0;
     font-size: inherit;
@@ -27,4 +27,10 @@ html {
 
 .UserInfo {
   font-style: italic;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
