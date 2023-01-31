@@ -1,5 +1,3 @@
-/* eslint-disable max-len */
-
 export default [
   {
     userId: 1,
@@ -178,7 +176,7 @@ export default [
   {
     userId: 2,
     id: 30,
-    title: 'nemo perspiciatis repellat ut dolor libero commodi blanditiis omnis',
+    title: 'nemo perspiciatis repellat ut dolor libero commodi blanditiis omni',
     completed: true,
   },
   {
@@ -244,7 +242,7 @@ export default [
   {
     userId: 3,
     id: 41,
-    title: 'aliquid amet impedit consequatur aspernatur placeat eaque fugiat suscipit',
+    title: 'aliquid amet impedit consequatur aspernatur placeat eaque fugiat',
     completed: false,
   },
   {
@@ -328,7 +326,7 @@ export default [
   {
     userId: 3,
     id: 55,
-    title: 'voluptatum omnis minima qui occaecati provident nulla voluptatem ratione',
+    title: 'voluptatum omnis minima qui occaecati provident nulla voluptatem',
     completed: true,
   },
   {
@@ -412,7 +410,7 @@ export default [
   {
     userId: 4,
     id: 69,
-    title: 'doloribus sint dolorum ab adipisci itaque dignissimos aliquam suscipit',
+    title: 'doloribus sint dolorum ab adipisci itaque dignissimos aliquam sus',
     completed: false,
   },
   {
@@ -460,7 +458,7 @@ export default [
   {
     userId: 4,
     id: 77,
-    title: 'maiores aut nesciunt delectus exercitationem vel assumenda eligendi at',
+    title: 'maiores aut nesciunt delectus exercitationem vel assumenda eligen',
     completed: false,
   },
   {
@@ -586,7 +584,7 @@ export default [
   {
     userId: 5,
     id: 98,
-    title: 'debitis accusantium ut quo facilis nihil quis sapiente necessitatibus',
+    title: 'debitis accusantium ut quo facilis nihil quis sapiente necessitat',
     completed: true,
   },
   {
@@ -670,7 +668,7 @@ export default [
   {
     userId: 6,
     id: 112,
-    title: 'consectetur impedit quisquam qui deserunt non rerum consequuntur eius',
+    title: 'consectetur impedit quisquam qui deserunt non rerum consequuntur',
     completed: false,
   },
   {
@@ -1048,7 +1046,7 @@ export default [
   {
     userId: 9,
     id: 175,
-    title: 'laudantium eius officia perferendis provident perspiciatis asperiores',
+    title: 'laudantium eius officia perferendis provident perspiciatis asperi',
     completed: true,
   },
   {
@@ -1144,7 +1142,7 @@ export default [
   {
     userId: 10,
     id: 191,
-    title: 'temporibus atque distinctio omnis eius impedit tempore molestias pariatur',
+    title: 'temporibus atque distinctio omnis eius impedit tempore molestias',
     completed: true,
   },
   {
