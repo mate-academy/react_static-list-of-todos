@@ -8,15 +8,14 @@ import { User } from '../../types/User';
 
 // Add the required types and props
 
-function findPeople(user: User | null, userid:number) {
+function findPeople(user: User | null, userId: number) {
   return users
-    .find((people) => people.id === userid || people.name === user?.name);
+    .find((people) => people.id === userId || people.name === user?.name);
 }
 
 export const TodoInfo = ({ todo }: { todo: Todo }) => {
   const {
     userId,
-    // id,
     title,
     completed,
     user,
@@ -29,7 +28,7 @@ export const TodoInfo = ({ todo }: { todo: Todo }) => {
     }
     >
       <h2 className="TodoInfo__title">{title}</h2>
-      {userData === undefined ? null : <UserInfo user={userData} />}
+      {userData && <UserInfo user={userData} />}
     </article>
   );
 };
