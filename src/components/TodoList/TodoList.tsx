@@ -9,12 +9,6 @@ type TodoListProps = {
 
 export const TodoList:React.FC<TodoListProps> = ({ todos }) => (
   <ul>
-    {todos.map((todo) => {
-      return (
-        <li key={todo.id}>
-          <TodoInfo todo={todo} />
-        </li>
-      );
-    })}
+    {todos.map((todo) => <TodoInfo todo={todo} key={todo.id} />)}
   </ul>
 );
