@@ -6,11 +6,9 @@ type Props = {
   tasks: Todo[]
 };
 export const TodoList: React.FC<Props> = ({ tasks }) => (
-  <>
-    <section className="TodoList">
-      {tasks.map(task => (
-        <TodoInfo task={task} key={task.id} />
-      ))}
-    </section>
-  </>
+  <section className="TodoList">
+    {tasks.map(task => (
+      <TodoInfo task={task} key={task.id} />
+    ))}
+  </section>
 );
