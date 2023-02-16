@@ -1,13 +1,12 @@
-// Add the required types and props
 import classNames from 'classnames';
 import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo';
 
-type TodoTy = {
+type Props = {
   todo: Todo
 };
 
-export const TodoInfo: React.FC <TodoTy> = ({ todo }) => (
+export const TodoInfo: React.FC <Props> = ({ todo }) => (
   <article
     className={
       classNames(
@@ -17,7 +16,7 @@ export const TodoInfo: React.FC <TodoTy> = ({ todo }) => (
     }
   >
     <h2 className="TodoInfo__title">{todo.title}</h2>
+    {todo.user && <UserInfo user={todo.user} />}
 
-    <UserInfo user={todo.user} />
   </article>
 );

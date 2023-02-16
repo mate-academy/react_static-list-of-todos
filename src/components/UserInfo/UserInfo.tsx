@@ -1,8 +1,14 @@
-export const UserInfo = ({ ...user }) => (
+import { User } from '../../types/User';
+
+interface Props {
+  user: User
+}
+
+export const UserInfo: React.FC<Props> = ({ ...user }) => (
   <a
     className="UserInfo"
-    href={`mailto:${user.user?.email}`}
+    href={`mailto:${user.user.email}`}
   >
-    {user.user?.name}
+    {user.user.name}
   </a>
 );
