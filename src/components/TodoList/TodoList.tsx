@@ -5,7 +5,7 @@ interface ITodos {
   todos: Todo[];
 }
 
-export const TodoList = ({ todos }: ITodos) => {
+export const TodoList:React.FC<ITodos> = ({ todos }) => {
   return (
     <section className="TodoList">
       {todos.map((todo) => (

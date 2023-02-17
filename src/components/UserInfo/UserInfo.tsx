@@ -4,7 +4,7 @@ export interface UserInfoType {
   user: User;
 }
 
-export const UserInfo = ({ user }: UserInfoType) => {
+export const UserInfo:React.FC<UserInfoType> = ({ user }) => {
   const { email, name } = user;
 
   return (

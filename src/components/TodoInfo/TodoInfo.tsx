@@ -6,8 +6,12 @@ interface TodoInfoProps {
   todo: Todo;
 }
 
-export const TodoInfo = ({ todo }: TodoInfoProps) => {
-  const { completed, title, user } = todo;
+export const TodoInfo: React.FC<TodoInfoProps> = ({ todo }) => {
+  const {
+    completed,
+    title,
+    user,
+  } = todo;
 
   return (
     <article
