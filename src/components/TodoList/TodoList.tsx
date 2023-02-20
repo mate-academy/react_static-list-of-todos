@@ -10,7 +10,7 @@ type Props = {
 export const TodoList: React.FC<Props> = ({ todos = [] }) => (
   <ul className="TodoList">
     {todos.map(todo => (
-      <TodoInfo todoItem={todo} key={todo.id} />
+      <TodoInfo todo={todo} key={todo.id} />
     ))}
   </ul>
 );
