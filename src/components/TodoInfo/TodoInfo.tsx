@@ -7,7 +7,7 @@ type Props = {
 };
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => (
-  <li key={todo.id}>
+  <li>
     <article className={classNames(
       'TodoInfo',
       {
