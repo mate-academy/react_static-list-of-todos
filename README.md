@@ -18,14 +18,6 @@ Split the given `App` markup into component following the rules:
 
 Масив `todos` базується на `todosFromServer`, але до кожного `todo` приєднано відповідного користувача. Крім того, інтерфейси `Todo` і `User` вже реалізовані в `./src/types/`.
 
-Розділіть задану розмітку `App` на компоненти за правилами:
-
-- не змінювати імена класів CSS, вони використовуються в тестах;
-- `TodoList` бере `todos` і відображає один `TodoInfo` на `todo` в масиві;
-- `TodoInfo` приймає `todo` і відображає його деталі, включаючи `todo.user` з компонентом `UserInfo`, якщо у todo є користувач;
-- переконайтеся, що `TodoInfo` має модифікатор `TodoInfo--completed` для всіх завершених завдань;
-- `UserInfo` приймає `користувача` і відображає деталі.
-
 ## Instructions
 
 - Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).

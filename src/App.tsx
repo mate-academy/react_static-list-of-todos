@@ -10,6 +10,7 @@ import { TodoList } from './components/TodoList';
 
 function getUser(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
+
   return foundUser || null;
 }
 
@@ -23,7 +24,7 @@ export const App: React.FC = () => (
     <h1 className="App__title">Static list of todos</h1>
 
     <section className="TodoList">
-      <TodoList todos={todos}/>
+      <TodoList todos={todos} />
     </section>
   </div>
 );
