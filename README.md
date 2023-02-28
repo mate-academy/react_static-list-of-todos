@@ -14,9 +14,13 @@ Split the given `App` markup into component following the rules:
 - make sure that the `TodoInfo` has a `TodoInfo--completed` modifier for all completed todos;
 - `UserInfo` takes a `user` and renders the details.
 
+Вам надано масиви `todosFromServer` і `usersFromServer` з потрібними даними.
+
+Масив `todos` базується на `todosFromServer`, але до кожного `todo` приєднано відповідного користувача. Крім того, інтерфейси `Todo` і `User` вже реалізовані в `./src/types/`.
+
 ## Instructions
 
 - Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
 - Use the [React TypeScript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript).
 - Open one more terminal and run tests with `npm test` to ensure your solution is correct.
-- Replace `<your_account>` with your Github username in the [DEMO LINK](https://<your_account>.github.io/react_static-list-of-todos/) and add it to the PR description.
+- Replace `<your_account>` with your Github username in the [DEMO LINK](https://yevhenii-stanchenko.github.io/react_static-list-of-todos/) and add it to the PR description.
