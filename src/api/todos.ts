@@ -1202,3 +1202,6 @@ export default [
     completed: false,
   },
 ];
+
+export class Todo {
+}
