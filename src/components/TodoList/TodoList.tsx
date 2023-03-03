@@ -1,4 +1,18 @@
-// Add the required types and props
-export const TodoList = () => (
-  <>TodoList markup</>
-);
+import { TodoInfo } from '../TodoInfo';
+import { Todo } from '../../types/Todo';
+
+type TodosProp = {
+  todos: Todo[];
+};
+
+export const TodoList: React.FC<TodosProp> = ({ todos }) => {
+  return (
+    <ul>
+      {todos.map(todo => (
+        <li key={todo.id}>
+          <TodoInfo {...todo} />
+        </li>
+      ))}
+    </ul>
+  );
+};
