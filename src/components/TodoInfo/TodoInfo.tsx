@@ -1,3 +1,4 @@
+import './TodoInfo.scss';
 import classNames from 'classnames';
 
 import { UserInfo } from '../UserInfo';
