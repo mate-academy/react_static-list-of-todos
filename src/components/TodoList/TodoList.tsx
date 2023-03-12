@@ -1,7 +1,7 @@
+import React from 'react';
 import { TodoInfo } from '../TodoInfo';
 import todosFromServer from '../../api/todos';
 import usersFromServer from '../../api/users';
-
 import { User } from '../../types/User';
 import { Todo } from '../../types/Todo';
 
