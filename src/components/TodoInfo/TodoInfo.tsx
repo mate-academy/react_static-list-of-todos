@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { UserInfo } from '../UserInfo';
 import { Todo } from '../../types/Todo';
+import './TodoInfo.scss';
 
 interface TodoInfoProps {
   todo: Todo;
