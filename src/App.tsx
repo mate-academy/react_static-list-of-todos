@@ -1,6 +1,3 @@
-import React from 'react';
-import './App.scss';
-
 import todosFromServer from './api/todos';
 import usersFromServer from './api/users';
 
