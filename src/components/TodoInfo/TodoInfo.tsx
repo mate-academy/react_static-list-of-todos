@@ -11,6 +11,7 @@ type Props = {
 export const TodoInfo: React.FC<Props> = ({ todo }) => {
   const {
     title,
+    completed,
     user,
   } = todo;
 
@@ -18,7 +19,7 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
     <article className={classNames(
       'TodoInfo',
       {
-        'TodoInfo--completed': todo.completed,
+        'TodoInfo--completed': completed,
       },
     )}
     >
