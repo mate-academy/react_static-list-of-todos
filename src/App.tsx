@@ -2,13 +2,10 @@ import React from 'react';
 import './App.scss';
 
 import classNames from 'classnames';
-
 import todosFromServer from './api/todos';
 import usersFromServer from './api/users';
-
 import { User } from './types/User';
 import { Todo } from './types/Todo';
-
 import { UserInfo } from './components/UserInfo';
 
 function getUser(userId: number): User | null {
@@ -29,12 +26,14 @@ export const App: React.FC = () => (
 
     <section className="TodoList">
       {todos.map(todo => (
-        <article className={classNames(
-          'TodoInfo',
-          {
-            'TodoInfo--completed': todo.completed,
-          },
-        )}
+        <article
+          className={classNames(
+            'TodoInfo',
+            {
+              'TodoInfo--completed': todo.completed,
+            },
+          )}
+          key={todo.id}
         >
           <h2 className="TodoInfo__title">{todo.title}</h2>
 
