@@ -1,4 +1,3 @@
-// Add the required types and props
 import { TodoInfo } from '../TodoInfo';
 import { Todo } from '../../types/Todo';
 
@@ -8,11 +7,12 @@ type Todos = {
 export const TodoList = ({ todos } : Todos) => (
   <ul>
     {todos.map(todo => (
-      <article className={`TodoInfo ${todo.completed ? 'TodoInfo--completed' : ''}`}>
-        <li key={todo.id}>
-          <TodoInfo todo={todo} />
-        </li>
-      </article>
+      <li
+        key={todo.id}
+        className={`TodoInfo ${todo.completed ? 'TodoInfo--completed' : ''}`}
+      >
+        <TodoInfo todo={todo} />
+      </li>
     ))}
   </ul>
 
