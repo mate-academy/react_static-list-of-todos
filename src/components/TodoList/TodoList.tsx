@@ -16,22 +16,20 @@ const todos: Todo[] = todosFromServer.map(todo => ({
   user: getUser(todo.userId),
 }));
 
-export const TodoList: React.FC = () => {
-  return (
-    <section className="TodoList">
-      {todos.map(todo => (
-        <article
-          className={`TodoInfo ${todo.completed && 'TodoInfo--completed'}`}
-          key={todo.id}
-        >
-          <TodoInfo todos={todo} />
-          {todo.user && (
-            <a className="UserInfo" href={`mailto:${todo.user.email}`}>
-              {todo.user.name}
-            </a>
-          )}
-        </article>
-      ))}
-    </section>
-  );
-};
+export const TodoList: React.FC = () => (
+  <section className="TodoList">
+    {todos.map(todo => (
+      <article
+        className={`TodoInfo ${todo.completed && 'TodoInfo--completed'}`}
+        key={todo.id}
+      >
+        <TodoInfo todos={todo} />
+        {todo.user && (
+          <a className="UserInfo" href={`mailto:${todo.user.email}`}>
+            {todo.user.name}
+          </a>
+        )}
+      </article>
+    ))}
+  </section>
+);
