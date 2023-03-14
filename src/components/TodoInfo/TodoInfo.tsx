@@ -1,3 +1,6 @@
+import React from 'react';
+import './TodoInfo.scss';
+
 import classNames from 'classnames';
 import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo';
@@ -26,7 +29,8 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
         {title}
       </h2>
 
-      {user && (<UserInfo user={user} />)}
+      {user
+        && (<UserInfo user={user} />)}
     </article>
   );
 };
