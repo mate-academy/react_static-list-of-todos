@@ -1,18 +1,18 @@
 import classNames from 'classnames';
 import './TodoInfo.scss';
 import { Todo } from '../../types/Todo';
-import { UserInfo } from '../UserInfo/UserInfo';
+import { UserInfo } from '../UserInfo';
 
 type Props = {
-  todoCard: Todo;
+  todo: Todo,
 };
 
-export const TodoInfo: React.FC<Props> = ({ todoCard }) => {
+export const TodoInfo: React.FC<Props> = ({ todo }) => {
   const {
     title,
     completed,
     user,
-  } = todoCard;
+  } = todo;
 
   return (
     <article className={classNames(
@@ -22,13 +22,12 @@ export const TodoInfo: React.FC<Props> = ({ todoCard }) => {
       },
     )}
     >
+
       <h2 className="TodoInfo__title">
         {title}
       </h2>
 
-      {user && (
-        <UserInfo user={user} />
-      )}
+      {user && <UserInfo user={user} />}
     </article>
   );
 };
