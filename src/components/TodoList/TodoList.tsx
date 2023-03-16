@@ -7,9 +7,9 @@ type Props = {
 };
 
 export const TodoList: React.FC<Props> = ({ todos }) => (
-  <section className="TodoList">
+  <ul className="TodoList">
     {todos.map(todo => (
-      <article
+      <li
         className={classNames(
           'TodoInfo',
           {
@@ -22,7 +22,7 @@ export const TodoList: React.FC<Props> = ({ todos }) => (
           title={todo.title}
           user={todo.user}
         />
-      </article>
+      </li>
     ))}
-  </section>
+  </ul>
 );
