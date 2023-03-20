@@ -13,7 +13,6 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
   const {
     completed,
     title,
-    userId,
     user,
   } = todo;
 
@@ -29,7 +28,13 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
       <h2 className="TodoInfo__title">
         {title}
       </h2>
-      {user && <UserInfo key={userId} user={user} />}
+      {user
+      && (
+        <UserInfo
+          user={user}
+        />
+      )}
+
     </article>
   );
 };
