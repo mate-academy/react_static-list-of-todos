@@ -1,6 +1,6 @@
-// Add the required types and props
 import React from 'react';
 import { User } from '../../types/User';
+import './UserInfo.scss';
 
 type Props = {
   user: User
