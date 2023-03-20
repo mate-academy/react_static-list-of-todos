@@ -11,7 +11,6 @@ type Props = {
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => {
   const {
-    userId,
     title,
     completed,
     user,
@@ -25,8 +24,10 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
       },
     )}
     >
-      <h2 className="TodoInfo__title">{title}</h2>
-      {user && <UserInfo key={userId} user={user} />}
+      <h2 className="TodoInfo__title">
+        {title}
+      </h2>
+      {user && <UserInfo user={user} />}
     </article>
   );
 };
