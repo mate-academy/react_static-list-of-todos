@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
+import './TodoInfo.scss';
 
 import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo';
@@ -23,7 +24,9 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
       },
     )}
     >
-      <h2 className="TodoInfo__title">{title}</h2>
+      <h2 className="TodoInfo__title">
+        {title}
+      </h2>
 
       {user && (
         <UserInfo user={user} />
