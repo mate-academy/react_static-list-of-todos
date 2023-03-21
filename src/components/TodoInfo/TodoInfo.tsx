@@ -3,29 +3,15 @@ import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo';
 
 export const TodoInfo: React.FC<Todo> = ({
-  id,
-  userId,
   title,
-  completed,
   user,
 }) => (
-  <>
-    <div>
-      <p>
-        {id}
-      </p>
-      <p>
-        {userId}
-      </p>
-      <p>
-        {title}
-      </p>
-      <p>
-        {completed}
-      </p>
-      <p>
-        <UserInfo {...user} />
-      </p>
-    </div>
-  </>
+  <article className="TodoInfo TodoInfo--completed">
+    <h2 className="TodoInfo__title">
+      {title}
+    </h2>
+    <p>
+      <UserInfo {...user} />
+    </p>
+  </article>
 );

@@ -7,12 +7,11 @@ interface Props {
 }
 
 export const TodoList: React.FC<Props> = ({ todos = [] }) => (
-  <div>
+  <section className="TodoList">
     {todos.map((card) => (
       <div key={card.id}>
         <TodoInfo {...card} />
-        ;
       </div>
     ))}
-  </div>
+  </section>
 );
