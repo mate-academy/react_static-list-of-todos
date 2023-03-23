@@ -14,7 +14,7 @@ function getUser(userId: number): User | null {
   return foundUser || null;
 }
 
-export const todos: Todo[] = todosFromServer.map(todo => ({
+const todos: Todo[] = todosFromServer.map(todo => ({
   ...todo,
   user: getUser(todo.userId),
 }));
