@@ -6,6 +6,8 @@ import usersFromServer from './api/users';
 
 import { User } from './types/User';
 import { Todo } from './types/Todo';
+// eslint-disable-next-line import/no-duplicates
+import { TodoList } from './components/TodoList';
 
 function getUser(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
@@ -55,6 +57,8 @@ export const App: React.FC = () => (
           Clementine Bauch
         </a>
       </article>
+
+      <TodoList todoList={todos} />
     </section>
   </div>
 );
