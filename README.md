@@ -1,3 +1,9 @@
+1. user.id -> todos.id. every user -> multiple id of tasks
+2. User.info -> todoList -> todoInfo multiple
+- no change css classNames 
+- todoList -> (todo -> todoInfo per todo)
+user   { id name  email }
+todos {userId, id, title, completed: t/f user: {}}
 # React Static List of TODOs
 
 > [React + Typescript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript)
@@ -19,4 +25,4 @@ Split the given `App` markup into component following the rules:
 - Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
 - Use the [React TypeScript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript).
 - Open one more terminal and run tests with `npm test` to ensure your solution is correct.
-- Replace `<your_account>` with your Github username in the [DEMO LINK](https://<your_account>.github.io/react_static-list-of-todos/) and add it to the PR description.
+- Replace `<your_account>` with your Github username in the [DEMO LINK](https://serbinm.github.io/react_static-list-of-todos/) and add it to the PR description.
