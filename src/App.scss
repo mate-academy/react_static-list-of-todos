@@ -25,6 +25,12 @@ html {
   }
 }
 
+.TodoList {
+  &__item {
+    list-style: none;
+  }
+}
+
 .UserInfo {
   font-style: italic;
 }
