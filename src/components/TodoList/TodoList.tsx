@@ -9,9 +9,8 @@ export const TodoList: React.FC<Props> = ({ todos }) => (
   <section className="TodoList">
     <ul>
       {todos.map(todo => (
-        <li className="TodoList__item">
+        <li className="TodoList__item" key={todo.id}>
           <TodoInfo
-            key={todo.id}
             completed={todo.completed}
             title={todo.title}
             user={todo.user}
