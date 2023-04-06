@@ -1,16 +1,14 @@
-import { User } from '../../types/User';
-
 type Props = {
-  user: User | null;
+  email: string;
+  name: string;
 };
 // Add the required types and props
-export const UserInfo: React.FC<Props> = ({ user }) => {
+export const UserInfo: React.FC<Props> = ({ email, name }) => {
   return (
     <>
-      {
-        (user?.name && user?.email)
-          && <a className="UserInfo" href={`mailto:${user.email}`}>{user.name}</a>
-      }
+      <a className="UserInfo" href={`mailto:${email}`}>
+        {name}
+      </a>
     </>
   );
 };

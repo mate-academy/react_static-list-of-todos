@@ -7,8 +7,17 @@ type Props = {
 // Add the required types and props
 export const TodoList: React.FC<Props> = ({ todos }) => (
   <section className="TodoList">
-    {todos.map(todo => (
-      <TodoInfo key={todo.id} todo={todo} />
-    ))}
+    <ul>
+      {todos.map(todo => (
+        <li className="TodoList__item">
+          <TodoInfo
+            key={todo.id}
+            completed={todo.completed}
+            title={todo.title}
+            user={todo.user}
+          />
+        </li>
+      ))}
+    </ul>
   </section>
 );
