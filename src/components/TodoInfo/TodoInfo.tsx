@@ -10,7 +10,6 @@ type Props = {
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => {
   const {
-    id,
     title,
     completed,
     user,
@@ -18,7 +17,6 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
 
   return (
     <article
-      key={id}
       className={classNames(
         'TodoInfo',
         {
