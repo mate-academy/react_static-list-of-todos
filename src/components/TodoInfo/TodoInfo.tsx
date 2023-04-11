@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-
 import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo';
 
@@ -10,21 +9,16 @@ type Props = {
 export const TodoInfo: React.FC<Props> = ({ todo }) => {
   const { title, user, completed } = todo;
 
-  if (user === null) {
-    return null;
-  }
-
   return (
-    <article className={classNames(
-      'TodoInfo',
-      {
-        'TodoInfo--completed': completed,
-      },
-    )}
+    <article className={classNames('TodoInfo', {
+      'TodoInfo--completed': completed,
+    })}
     >
-      <h2 className="TodoInfo__title">{title}</h2>
+      <h2 className="TodoInfo__title">
+        {title}
+      </h2>
 
-      <UserInfo user={user} />
+      {user && <UserInfo user={user} />}
     </article>
   );
 };
