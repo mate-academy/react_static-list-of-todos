@@ -9,10 +9,8 @@ type Todos = {
 
 export const TodoList: React.FC<Todos> = ({ todos }) => (
   <section className="TodoList">
-    {todos.map(todo => {
-      return (
-        <TodoInfo todo={todo} key={todo.id} />
-      );
-    })}
+    {todos.map(todo => (
+      <TodoInfo todo={todo} key={todo.id} />
+    ))}
   </section>
 );
