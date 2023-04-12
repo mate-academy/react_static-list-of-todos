@@ -22,8 +22,6 @@ export const App: React.FC = () => (
   <div className="App">
     <h1 className="App__title">Static list of todos</h1>
 
-    <section className="TodoList">
-      <TodoList todolist={todos} />
-    </section>
+    <TodoList todolist={todos} />
   </div>
 );

@@ -9,7 +9,7 @@ type Props = {
 export const TodoInfo: React.FC<Props> = ({ todo }) => (
   <article className={classNames('TodoInfo',
     {
-      'TodoInfo--completed': !todo.completed,
+      'TodoInfo--completed': todo.completed,
     })}
   >
     <h2 className="TodoInfo__title">{todo.title}</h2>
