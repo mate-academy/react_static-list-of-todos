@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import classNames from 'classnames';
 import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo';
@@ -9,18 +8,13 @@ type Props = {
 
 export const TodoInfo: React.FC<Props> = ({ todo }) => {
   return (
-    <>
-      <article className={classNames(
-        'TodoInfo',
-        {
-          'TodoInfo--completed': todo.completed === true,
-        },
-      )}
-      >
-        <h2 className="TodoInfo__title">{todo.title}</h2>
+    <article className={classNames('TodoInfo', {
+      'TodoInfo--completed': todo.completed === true,
+    })}
+    >
+      <h2 className="TodoInfo__title">{todo.title}</h2>
 
-        <UserInfo user={todo.user} />
-      </article>
-    </>
+      <UserInfo user={todo.user} />
+    </article>
   );
 };
