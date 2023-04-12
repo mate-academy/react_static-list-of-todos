@@ -1,25 +1,24 @@
 import { Todo } from '../../types/Todo';
 
 interface Props {
-  todoProp: Todo;
+  todo: Todo;
 }
 
-export const TodoInfo: React.FC<Props> = ({ todoProp }) => {
+export const TodoInfo: React.FC<Props> = ({ todo }) => {
   const {
     title,
     user,
-  } = todoProp;
-
-  const userInfo = user && (
-    <a className="UserInfo" href={`mailto:${user?.email}`}>
-      {user?.name}
-    </a>
-  );
+  } = todo;
 
   return (
     <>
       <h2 className="TodoInfo__title">{title}</h2>
-      {userInfo}
+
+      {user && (
+        <a className="UserInfo" href={`mailto:${user?.email}`}>
+          {user?.name}
+        </a>
+      )}
     </>
   );
 };
