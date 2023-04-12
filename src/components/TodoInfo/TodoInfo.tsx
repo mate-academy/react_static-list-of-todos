@@ -17,14 +17,12 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
     <article className={classNames(
       'TodoInfo',
       {
-        'TodoInfo--completed': completed === true,
+        'TodoInfo--completed': completed,
       },
     )}
     >
       <h2 className="TodoInfo__title">{title}</h2>
-      {user && (
-        <UserInfo key={user.id} user={user} />
-      )}
+      {user && <UserInfo user={user} />}
     </article>
   );
 };
