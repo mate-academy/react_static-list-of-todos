@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import ClassNames from 'classnames';
 
 import todosFromServer from './api/todos';
 import usersFromServer from './api/users';
@@ -19,42 +20,50 @@ export const todos: Todo[] = todosFromServer.map(todo => ({
   user: getUser(todo.userId),
 }));
 
+type UserInfoProps = {
+  user: User | null;
+};
+
+const UserInfo: React.FC<UserInfoProps> = ({ user }) => (
+  <a className="UserInfo" href={`mailto:${user?.email}`}>
+    {user?.name}
+  </a>
+);
+
+type TodoInfoProps = {
+  todo: Todo;
+};
+
+const TodoInfo: React.FC<TodoInfoProps> = ({ todo }) => (
+  <article className={ClassNames('TodoInfo',
+    {
+      'TodoInfo--completed': !todo.completed,
+    })}
+  >
+    <h2 className="TodoInfo__title">{todo.title}</h2>
+
+    <UserInfo user={todo.user} />
+  </article>
+);
+
+type Props = {
+  todolist: Todo[];
+};
+
+const TodoList: React.FC<Props> = ({ todolist }) => {
+  return (
+    todolist.map(todo => (
+      <TodoInfo todo={todo} />
+    ))
+  );
+};
+
 export const App: React.FC = () => (
   <div className="App">
     <h1 className="App__title">Static list of todos</h1>
 
     <section className="TodoList">
-      <article className="TodoInfo TodoInfo--completed">
-        <h2 className="TodoInfo__title">HTML</h2>
-
-        <a className="UserInfo" href="mailto:Sincere@april.biz">
-          Leanne Graham
-        </a>
-      </article>
-
-      <article className="TodoInfo TodoInfo--completed">
-        <h2 className="TodoInfo__title">CSS</h2>
-
-        <a className="UserInfo" href="mailto:Sincere@april.biz">
-          Leanne Graham
-        </a>
-      </article>
-
-      <article className="TodoInfo TodoInfo--completed">
-        <h2 className="TodoInfo__title">JS</h2>
-
-        <a className="UserInfo" href="mailto:Shanna@melissa.tv">
-          Ervin Howell
-        </a>
-      </article>
-
-      <article className="TodoInfo">
-        <h2 className="TodoInfo__title">React</h2>
-
-        <a className="UserInfo" href="mailto:Nathan@yesenia.net">
-          Clementine Bauch
-        </a>
-      </article>
+      <TodoList todolist={todos} />
     </section>
   </div>
 );
