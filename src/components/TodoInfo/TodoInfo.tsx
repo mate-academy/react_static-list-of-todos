@@ -1,6 +1,5 @@
-// Add the required types and props
+// eslint-disable-next-line
 
-import React from 'react';
 import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo/UserInfo';
 

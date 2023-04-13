@@ -1,4 +1,4 @@
-// Add the required types and props
+// eslint-disable-next-line
 import { Todo } from '../../types/Todo';
 
 import { TodoInfo } from '../TodoInfo';
