@@ -8,25 +8,24 @@ type Props = {
   todo: Todo;
 };
 
-export const TodoInfo: React.FC<Props> = ({
-  todo: {
+export const TodoInfo: React.FC<Props> = ({ todo }) => {
+  const {
     title,
     completed,
     user,
-  },
-}) => (
+  } = todo;
 
-  <article
-    className={classNames('TodoInfo', {
-      'TodoInfo--completed': completed,
-    })}
-  >
-    <h2 className="TodoInfo__title">
-      {title}
-    </h2>
+  return (
+    <article
+      className={classNames('TodoInfo', {
+        'TodoInfo--completed': completed,
+      })}
+    >
+      <h2 className="TodoInfo__title">
+        {title}
+      </h2>
 
-    {user && (
-      <UserInfo user={user} />
-    )}
-  </article>
-);
+      {user && <UserInfo user={user} />}
+    </article>
+  );
+};
