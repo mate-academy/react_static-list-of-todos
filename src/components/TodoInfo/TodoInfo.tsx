@@ -7,7 +7,6 @@ interface Props {
   todo: Todo;
 }
 
-// Add the required types and props
 export const TodoInfo: React.FC<Props> = ({ todo }) => {
   const { title, user, completed } = todo;
 
