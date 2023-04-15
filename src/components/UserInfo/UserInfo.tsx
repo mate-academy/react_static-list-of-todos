@@ -1,6 +1,4 @@
-// Add the required types and props
 import React from 'react';
-// import { URLSearchParams } from 'url';
 import { User } from '../../types/User';
 
 interface UserInfoProps {
@@ -9,7 +7,7 @@ interface UserInfoProps {
 
 export const UserInfo: React.FC<UserInfoProps> = ({ user }) => {
   return (
-    <a className="UserInfo" href={`mailto:${user.email}`}>
+    <a className="UserInfo" href={`${user.email}`}>
       <p>
         mailto:
         {user.email}
