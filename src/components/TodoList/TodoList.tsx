@@ -8,9 +8,9 @@ type Props = {
 };
 
 export const TodoList: React.FC<Props> = ({ todos }) => (
-  <>
+  <ul className="TodoList">
     {todos.map(todo => (
       <TodoInfo todo={todo} />
     ))}
-  </>
+  </ul>
 );
