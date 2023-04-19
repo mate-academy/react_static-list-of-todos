@@ -10,6 +10,7 @@ import { TodoList } from './components/TodoList';
 
 function getUser(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
+
   return foundUser || null;
 }
 
