@@ -1,3 +1,4 @@
+/* eslint-disable import/no-named-as-default */
 import { TodoInfo } from '../TodoInfo';
 import { Todo } from '../../types/Todo';
 
