@@ -4,9 +4,9 @@ import { TodoInfoType } from '../../types/Todo';
 
 import { UserInfo } from '../UserInfo';
 
-export const TodoInfo: React.FC<TodoInfoType> = ({ todo }) => (
+export const TodoInfo: React.FC<TodoInfoType> = ({ todo: { title, user } }) => (
   <>
-  <h2 className="TodoInfo__title">{todo.title}</h2>
-  {todo.user && <UserInfo user={todo.user} />}
+    <h2 className="TodoInfo__title">{title}</h2>
+    {user && <UserInfo user={user} />}
   </>
 );

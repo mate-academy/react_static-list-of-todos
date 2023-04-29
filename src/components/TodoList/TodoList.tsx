@@ -7,16 +7,16 @@ export const TodoList:React.FC<TodoListType> = ({ todos }) => (
   <section className="TodoList">
     {todos.map(todo => (
       <article
-      className={classNames(
-        'TodoInfo',
-        {
-          'TodoInfo--completed': todo.completed,
-        },
-      )}
-      key={todo.id}
-    >
-      <TodoInfo todo={todo} />
-    </article>
+        className={classNames(
+          'TodoInfo',
+          {
+            'TodoInfo--completed': todo.completed,
+          },
+        )}
+        key={todo.id}
+      >
+        <TodoInfo todo={todo} />
+      </article>
     ))}
   </section>
 );
