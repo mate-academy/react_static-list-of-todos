@@ -8,7 +8,6 @@ type Props = {
   todo: Todo;
 };
 
-// Add the required types and props
 export const TodoInfo: React.FC<Props> = ({ todo }) => (
   <article className={classNames(
     'TodoInfo',
