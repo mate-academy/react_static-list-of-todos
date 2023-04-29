@@ -10,8 +10,8 @@ export interface Todo {
 
 export type TodoInfoType = {
   todo:Todo;
-}
+};
 
 export type TodoListType = {
   todos:Todo[];
-}
+};
