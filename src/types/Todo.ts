@@ -7,3 +7,11 @@ export interface Todo {
   completed: boolean,
   user: User | null,
 }
+
+export type TodoInfoType = {
+  todo:Todo;
+}
+
+export type TodoListType = {
+  todos:Todo[];
+}
