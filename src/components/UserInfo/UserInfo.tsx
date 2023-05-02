@@ -9,7 +9,7 @@ export const UserInfo: React.FC<TypeUser> = ({ user }) => {
 
   return (
     <a className="UserInfo" href={`mailto:${email}`}>
-      { name }
+      {name}
     </a>
   );
 };
