@@ -1,5 +1,5 @@
 import { Todo } from '../../types/Todo';
-import { UserInfo } from '../UserInfo';
+import { UserInfo } from '../UserInfo/UserInfo';
 
 interface TodoInfoProps {
   todo: Todo;
