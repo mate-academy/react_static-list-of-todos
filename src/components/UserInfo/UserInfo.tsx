@@ -1,8 +1,8 @@
 import { User } from '../../types/User';
 
-type UserInfoProps = {
+interface UserInfoProps {
   user: User,
-};
+}
 
 export const UserInfo: React.FC<UserInfoProps> = ({ user }) => {
   const { email, name } = user;

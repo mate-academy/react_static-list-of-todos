@@ -1,9 +1,9 @@
 import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo';
 
-type TodoListProps = {
+interface TodoListProps {
   todo: Todo,
-};
+}
 
 export const TodoInfo: React.FC<TodoListProps> = ({ todo }) => {
   const { completed, title, user } = todo;
