@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import { Todo } from '../../types/Todo';
+import { UserInfo } from '../UserInfo';
 
 interface TodoInfoProps {
   todoInfo: Todo
@@ -19,9 +20,7 @@ export const TodoInfo: React.FC<TodoInfoProps> = ({
     <article className={className}>
       <h2 className="TodoInfo__title">{title}</h2>
 
-      <a className="UserInfo" href="mailto:Sincere@april.biz">
-        Leanne Graham
-      </a>
+      {user ? <UserInfo user={user} /> : undefined}
     </article>
   );
 };
