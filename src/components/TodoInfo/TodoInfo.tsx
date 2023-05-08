@@ -4,7 +4,6 @@ import { Todo } from '../../types/Todo';
 import usersFromServer from '../../api/users';
 import { User } from '../../types/User';
 
-// Add the required types and props
 type Props = {
   todo: Todo,
 };
