@@ -21,10 +21,8 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
   );
 
   return (
-    <>
-      <article
-        className={className}
-      >
+    <div className={className}>
+      <article>
         <h2 className="TodoInfo__title">
           {title}
         </h2>
@@ -33,6 +31,6 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
           <UserInfo user={user} />
         )}
       </article>
-    </>
+    </div>
   );
 };
