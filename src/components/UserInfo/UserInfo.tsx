@@ -10,15 +10,12 @@ export const UserInfo: FC<UserInfoProps > = ({ user }) => {
 
   return (
     <>
-      {user
-      && (
-        <a
-          className="UserInfo"
-          href={`mailto:${email}`}
-        >
-          {name}
-        </a>
-      )}
+      <a
+        className="UserInfo"
+        href={`mailto:${email}`}
+      >
+        {name}
+      </a>
     </>
   );
 };
