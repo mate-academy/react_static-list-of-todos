@@ -3,16 +3,14 @@ import { Todo } from '../../types/Todo';
 import { TodoInfo } from '../TodoInfo';
 
 // Add the required types and props
-interface Props {
-  todos:Todo[];
+interface TodoListProps {
+  todos: Todo[];
 }
 
-export const TodoList: FC<Props> = (props) => {
-  const { todos: data } = props;
-
+export const TodoList: FC<TodoListProps> = ({ todos }) => {
   return (
     <section className="TodoList">
-      {data.map(todo => <TodoInfo key={todo.id} todo={todo} />)}
+      {todos.map(todo => <TodoInfo key={todo.id} todo={todo} />)}
     </section>
   );
 };

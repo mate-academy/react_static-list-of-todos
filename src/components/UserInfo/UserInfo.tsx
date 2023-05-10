@@ -1,20 +1,24 @@
 import { FC } from 'react';
 import { User } from '../../types/User';
 
-interface Props{
-  user:User | null;
+interface UserInfoProps{
+  user: User;
 }
 
-export const UserInfo: FC<Props > = ({ user }) => (
-  <>
-    {user
-    && (
-      <a
-        className="UserInfo"
-        href={`mailto:${user.email}`}
-      >
-        {user.name}
-      </a>
-    )}
-  </>
-);
+export const UserInfo: FC<UserInfoProps > = ({ user }) => {
+  const { email, name } = user;
+
+  return (
+    <>
+      {user
+      && (
+        <a
+          className="UserInfo"
+          href={`mailto:${email}`}
+        >
+          {name}
+        </a>
+      )}
+    </>
+  );
+};
