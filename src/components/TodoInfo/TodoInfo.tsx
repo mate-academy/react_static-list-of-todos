@@ -3,7 +3,7 @@ import { UserInfo } from '../UserInfo/UserInfo';
 import { Todo } from '../../types/Todo';
 
 export const TodoInfo:React.FC<{ todo: Todo }> = ({ todo }) => {
-  const userInfo = todo.user ? <UserInfo user={todo.user} /> : null;
+  const userInfo = todo.user && <UserInfo user={todo.user} />;
   const todoInfoClasses = `TodoInfo ${todo.completed ? 'TodoInfo--completed' : ''}`;
 
   return (
