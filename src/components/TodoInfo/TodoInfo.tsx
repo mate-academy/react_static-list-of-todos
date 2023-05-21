@@ -8,6 +8,7 @@ interface TodoInfoProps {
 export const TodoInfo: React.FC<TodoInfoProps> = ({ todo }) => {
   const {
     completed,
+
     title,
     user,
   } = todo;
