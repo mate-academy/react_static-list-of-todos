@@ -5,11 +5,11 @@ import { UserInfo } from '../UserInfo';
 // Add the required types and props
 
 type Props = {
-  todoWithUser: Todo;
+  todo: Todo;
 };
 
 export const TodoInfo: React.FC<Props> = ({
-  todoWithUser: {
+  todo: {
     title,
     completed,
     user,
