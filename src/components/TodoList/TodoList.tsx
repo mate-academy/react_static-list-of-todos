@@ -3,26 +3,14 @@ import { Todo } from '../../types/Todo';
 import { TodoInfo } from '../TodoInfo/TodoInfo';
 
 type Props = {
-  data: Todo[];
+  todos: Todo[];
 };
 
-export const TodoList: React.FC<Props> = ({ data }) => {
+export const TodoList: React.FC<Props> = ({ todos = [] }) => {
   return (
     <section className="TodoList">
-      {data.map(todoItem => {
-        if (todoItem.completed) {
-          return (
-            <article className="TodoInfo TodoInfo--completed" key={todoItem.id}>
-              <TodoInfo {...todoItem} />
-            </article>
-          );
-        }
-
-        return (
-          <article className="TodoInfo" key={todoItem.id}>
-            <TodoInfo {...todoItem} />
-          </article>
-        );
+      {todos.map((todo) => {
+        return <TodoInfo todo={todo} key={todo.id} />;
       })}
     </section>
   );
