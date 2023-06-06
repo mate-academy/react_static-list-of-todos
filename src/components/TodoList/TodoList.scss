@@ -1,0 +1,7 @@
+.TodoList {
+  display: grid;
+  justify-items: center;
+  justify-content: space-around;
+  grid-template-columns: repeat(auto-fit, 300px);
+  width: 100%;
+}

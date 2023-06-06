@@ -1,0 +1,26 @@
+.TodoInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  width: 250px;
+  padding: 10px 8px;
+  margin: 12px 0;
+  border: 1px solid #212a3e;
+  background-color: #f1f6f9;
+
+  &__title {
+    margin: 4px 0;
+    font-size: inherit;
+    color: #cd1818;
+    margin-bottom: 20px;
+
+    text-transform: capitalize;
+  }
+
+  &--completed &__title {
+    color: #116d6e;
+  }
+
+}
