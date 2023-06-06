@@ -1,6 +1,6 @@
 import { User } from './User';
 
-export interface ToDo {
+export interface Todo {
   userId: number;
   id: number;
   title: string;
