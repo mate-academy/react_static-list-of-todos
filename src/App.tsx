@@ -19,26 +19,54 @@ export const todos: Todo[] = todosFromServer.map(todo => ({
   user: getUser(todo.userId),
 }));
 
-export const App: React.FC = () => (
-  <div className="App">
-    <h1 className="App__title">Static list of todos</h1>
+interface TodoUser {
+  user: User;
+}
 
+const UserInfo: React.FC<TodoUser> = ({ user }) => {
+  const {
+    name,
+    email,
+  } = user;
+
+  return (
+    <a className="UserInfo" href={email}>
+      {name}
+    </a>
+  );
+};
+
+interface TodoInfoType {
+  todoInfo: Todo;
+}
+
+const TodoInfo: React.FC<TodoInfoType> = ({ todoInfo }) => {
+  const {
+    title,
+    user,
+  } = todoInfo;
+
+  if (!user) {
+    throw new Error('Cant find user');
+  }
+
+  return (
+    <article className="TodoInfo TodoInfo--completed">
+      <h2 className="TodoInfo__title">{title}</h2>
+
+      <UserInfo user={user} />
+    </article>
+  );
+};
+
+interface TodosList {
+  todosList: Todo[];
+}
+
+const TodoList: React.FC<TodosList> = ({ todosList }) => {
+  return (
     <section className="TodoList">
-      <article className="TodoInfo TodoInfo--completed">
-        <h2 className="TodoInfo__title">HTML</h2>
-
-        <a className="UserInfo" href="mailto:Sincere@april.biz">
-          Leanne Graham
-        </a>
-      </article>
-
-      <article className="TodoInfo TodoInfo--completed">
-        <h2 className="TodoInfo__title">CSS</h2>
-
-        <a className="UserInfo" href="mailto:Sincere@april.biz">
-          Leanne Graham
-        </a>
-      </article>
+      {todosList.map(todoItem => <TodoInfo todoInfo={todoItem} />)}
 
       <article className="TodoInfo TodoInfo--completed">
         <h2 className="TodoInfo__title">JS</h2>
@@ -56,5 +84,12 @@ export const App: React.FC = () => (
         </a>
       </article>
     </section>
+  );
+};
+
+export const App: React.FC = () => (
+  <div className="App">
+    <h1 className="App__title">Static list of todos</h1>
+    <TodoList todosList={todos} />
   </div>
 );
