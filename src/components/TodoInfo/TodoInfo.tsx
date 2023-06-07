@@ -15,12 +15,13 @@ export const TodoInfo: React.FC<TodoInfoType> = ({ todo }) => {
 
   const arcticleClassname = classNames(
     'TodoInfo',
+    'box',
     { 'TodoInfo--completed': completed },
   );
 
   return (
     <article className={arcticleClassname}>
-      <h2 className="TodoInfo__title">{title}</h2>
+      <h2 className="TodoInfo__title title is-4">{title}</h2>
       {user && <UserInfo user={user} />}
     </article>
   );
