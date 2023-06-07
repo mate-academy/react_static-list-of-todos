@@ -3,19 +3,15 @@ import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo';
 
 interface TodoInfoType {
-  todoInfo: Todo;
+  todo: Todo;
 }
 
-export const TodoInfo: React.FC<TodoInfoType> = ({ todoInfo }) => {
+export const TodoInfo: React.FC<TodoInfoType> = ({ todo }) => {
   const {
     title,
     user,
     completed,
-  } = todoInfo;
-
-  if (!user) {
-    throw new Error('Cant find user');
-  }
+  } = todo;
 
   const arcticleClassname = classNames(
     'TodoInfo',
@@ -25,8 +21,7 @@ export const TodoInfo: React.FC<TodoInfoType> = ({ todoInfo }) => {
   return (
     <article className={arcticleClassname}>
       <h2 className="TodoInfo__title">{title}</h2>
-
-      <UserInfo user={user} />
+      {user && <UserInfo user={user} />}
     </article>
   );
 };

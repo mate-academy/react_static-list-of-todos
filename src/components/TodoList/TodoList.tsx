@@ -2,14 +2,14 @@ import { Todo } from '../../types/Todo';
 import { TodoInfo } from '../TodoInfo';
 
 interface TodosList {
-  todosList: Todo[];
+  todos: Todo[];
 }
 
-export const TodoList: React.FC<TodosList> = ({ todosList }) => {
+export const TodoList: React.FC<TodosList> = ({ todos }) => {
   return (
     <section className="TodoList">
-      {todosList.map(todoItem => (
-        <TodoInfo todoInfo={todoItem} key={todoItem.id} />
+      {todos.map(todoItem => (
+        <TodoInfo todo={todoItem} key={todoItem.id} />
       ))}
     </section>
   );
