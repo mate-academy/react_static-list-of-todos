@@ -8,7 +8,9 @@ interface TodosList {
 export const TodoList: React.FC<TodosList> = ({ todosList }) => {
   return (
     <section className="TodoList">
-      {todosList.map(todoItem => <TodoInfo todoInfo={todoItem} />)}
+      {todosList.map(todoItem => (
+        <TodoInfo todoInfo={todoItem} key={todoItem.id} />
+      ))}
     </section>
   );
 };
