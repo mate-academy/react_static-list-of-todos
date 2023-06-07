@@ -7,12 +7,10 @@ interface Props{
 }
 
 // Add the required types and props
-export const TodoList:FC<Props> = ({ todos }) => {
-  return ((
-    <section className="TodoList">
-      {todos.map(todo => (
-        <TodoInfo key={todo.id} todo={todo} />
-      ))}
-    </section>
-  ));
-};
+export const TodoList:FC<Props> = ({ todos }) => (
+  <section className="TodoList">
+    {todos.map(todo => (
+      <TodoInfo key={todo.id} todo={todo} />
+    ))}
+  </section>
+);
