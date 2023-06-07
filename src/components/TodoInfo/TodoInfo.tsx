@@ -1,21 +1,20 @@
 import React from 'react';
 import classNames from 'classnames';
-
 import './TodoInfo.scss';
-
 import { Todo } from '../../types/Todo';
+
 import { UserInfo } from '../UserInfo';
 
 type Props = {
-  todoItem: Todo;
+  todo: Todo;
 };
 
-export const TodoInfo: React.FC<Props> = ({ todoItem }) => {
+export const TodoInfo: React.FC<Props> = ({ todo }) => {
   const {
     completed,
     title,
     user,
-  } = todoItem;
+  } = todo;
 
   return (
     <article

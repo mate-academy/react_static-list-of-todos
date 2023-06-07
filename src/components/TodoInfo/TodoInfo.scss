@@ -5,17 +5,19 @@
   justify-content: space-between;
 
   width: 250px;
-  padding: 10px 8px;
   margin: 12px 0;
   border: 1px solid #212a3e;
   background-color: #f1f6f9;
 
   &__title {
-    margin: 4px 0;
-    font-size: inherit;
+    margin: 0 0 20px;
+    padding: 10px 8px;
+    width: 100%;
+    background: #212a3e;
     color: #cd1818;
-    margin-bottom: 20px;
 
+    font-size: inherit;
+    text-align: center;
     text-transform: capitalize;
   }
 
