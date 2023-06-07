@@ -52,7 +52,7 @@ describe('TodoList', () => {
         },
       ];
 
-      mount(<TodoList todos={todos} />);
+      mount(<TodoList todoArr={todos} />);
     });
 
     it('should contain all the todos', () => {
@@ -67,7 +67,7 @@ describe('TodoList', () => {
 
   describe('', () => {
     it('should render no todos is received an empty array', () => {
-      mount(<TodoList todos={[]} />);
+      mount(<TodoList todoArr={[]} />);
 
       cy.get('.TodoInfo').should('not.exist');
     });
