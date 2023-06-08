@@ -6,8 +6,15 @@ interface Props{
   user: User,
 }
 
-export const UserInfo: FC<Props> = ({ user }) => (
-  <a className="UserInfo" href={`mailto:${user.email}`}>
-    {user.name}
-  </a>
-);
+export const UserInfo: FC<Props> = ({ user }) => {
+  const {
+    email,
+    name,
+  } = user;
+
+  return (
+    <a className="UserInfo" href={`mailto:${email}`}>
+      {name}
+    </a>
+  );
+};
