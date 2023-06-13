@@ -12,9 +12,7 @@ type Props = {
 export const TodoInfo: React.FC<Props> = ({
   todo: { title, completed, userId },
 }) => {
-  const user = userId
-    ? usersFromServer.find(usr => usr.id === userId)
-    : null;
+  const user = usersFromServer.find(usr => usr.id === userId);
 
   return (
     <article
