@@ -3,11 +3,11 @@ import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo';
 
 interface TodoInfoProps {
-  todoInfo: Todo
+  todo: Todo
 }
 
 export const TodoInfo: React.FC<TodoInfoProps> = ({
-  todoInfo: {
+  todo: {
     title, user, completed,
   },
 }) => {
