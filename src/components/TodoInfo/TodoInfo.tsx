@@ -15,10 +15,10 @@ type Props = {
 };
 
 export const TodoInfo: React.FC<Props> = ({ completed, title, user }) => (
-  <article className={classNames(
+  <li className={classNames(
     'TodoInfo',
     {
-      'TodoInfo--completed': completed === true,
+      'TodoInfo--completed': completed,
     },
   )}
   >
@@ -29,5 +29,5 @@ export const TodoInfo: React.FC<Props> = ({ completed, title, user }) => (
     <UserInfo
       user={user}
     />
-  </article>
+  </li>
 );
