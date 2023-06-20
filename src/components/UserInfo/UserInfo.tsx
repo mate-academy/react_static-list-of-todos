@@ -1,5 +1,3 @@
-// Add the required types and props
-
 import { User } from '../../types/User';
 
 type Props = {
@@ -7,9 +5,7 @@ type Props = {
 };
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
-  <>
-    <a className="UserInfo" href={user.email}>
-      {user.name}
-    </a>
-  </>
+  <a className="UserInfo" href={`mailto:${user.email}`}>
+    {user.name}
+  </a>
 );
