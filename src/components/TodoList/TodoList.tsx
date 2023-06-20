@@ -5,14 +5,10 @@ type Props = {
   todos: Todo[];
 };
 
-// Add the required types and props
 export const TodoList: React.FC<Props> = ({ todos }) => (
-  <div>
+  <section className="TodoList">
     {todos.map(todo => (
-      <section className="TodoList">
-        <TodoInfo todo={todo} key={todo.id} />
-      </section>
+      <TodoInfo todo={todo} key={todo.id} />
     ))}
-
-  </div>
+  </section>
 );
