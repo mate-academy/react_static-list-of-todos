@@ -1,6 +1,3 @@
-/* eslint-disable max-len */
-/* eslint-disable react/jsx-filename-extension */
-
 import React from 'react';
 import { mount } from '@cypress/react';
 import { TodoInfo } from './TodoInfo';
