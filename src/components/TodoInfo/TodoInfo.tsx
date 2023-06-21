@@ -7,17 +7,17 @@ type TodoItem = {
 };
 
 export const TodoInfo: React.FC<TodoItem> = ({ todo }) => (
-  <>
-    <article className={classNames(
-      'TodoInfo',
-      {
-        'TodoInfo--completed': todo.completed,
-      },
-    )}
-    >
-      <h2 className="TodoInfo__title">{todo.title}</h2>
-    </article>
+  <article className={classNames(
+    'TodoInfo',
+    {
+      'TodoInfo--completed': todo.completed,
+    },
+  )}
+  >
+    <h2 className="TodoInfo__title">{todo.title}</h2>
 
-    {todo.user !== null ? <UserInfo user={todo.user} /> : '' }
-  </>
+    {todo.user !== null
+      ? <UserInfo user={todo.user} />
+      : '' }
+  </article>
 );
