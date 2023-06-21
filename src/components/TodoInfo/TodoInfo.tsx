@@ -2,11 +2,11 @@ import classNames from 'classnames';
 import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo/UserInfo';
 
-type TodoItem = {
+type TodoProps = {
   todo: Todo;
 };
 
-export const TodoInfo: React.FC<TodoItem> = ({ todo }) => (
+export const TodoInfo: React.FC<TodoProps> = ({ todo }) => (
   <article className={classNames(
     'TodoInfo',
     {
@@ -16,8 +16,6 @@ export const TodoInfo: React.FC<TodoItem> = ({ todo }) => (
   >
     <h2 className="TodoInfo__title">{todo.title}</h2>
 
-    {todo.user !== null
-      ? <UserInfo user={todo.user} />
-      : '' }
+    {todo.user && <UserInfo user={todo.user} />}
   </article>
 );
