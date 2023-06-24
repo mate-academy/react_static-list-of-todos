@@ -1,4 +1,4 @@
-// Add the required types and props
+// Add the required props
 export const UserInfo = () => (
   <>UserInfo markup</>
 );
