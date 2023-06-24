@@ -3,14 +3,14 @@ import './App.scss';
 import todosFromServer from './api/todos.json';
 import usersFromServer from './api/users.json';
 
-function getUser(userId) {
+function getUserById(userId) {
   return usersFromServer.find(user => user.id === userId)
       || null;
 }
 
 export const todos = todosFromServer.map(todo => ({
   ...todo,
-  user: getUser(todo.userId),
+  user: getUserById(todo.userId),
 }));
 
 export const App = () => (
