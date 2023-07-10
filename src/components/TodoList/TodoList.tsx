@@ -7,12 +7,12 @@ type PropsTodoList = {
 };
 
 export const TodoList: React.FC<PropsTodoList> = ({ todos = [] }) => (
-  <div className="TodoList">
+  <article className="TodoList">
     { todos.map(todo => (
       <TodoInfo
         todo={todo}
         key={todo.id}
       />
     ))}
-  </div>
+  </article>
 );
