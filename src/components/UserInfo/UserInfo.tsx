@@ -1,4 +1,12 @@
 // Add the required types and props
-export const UserInfo = () => (
-  <>UserInfo markup</>
+import { User } from '../../types/User';
+
+export const UserInfo = ({ user }: { user: User }) => (
+  <a
+    key={user.id}
+    className="UserInfo"
+    href={`mailto:${user.email}`}
+  >
+    {user.name}
+  </a>
 );
