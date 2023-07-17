@@ -23,5 +23,5 @@ export const TodoInfo: React.FC<Props> = ({ todo }) => {
 
       <UserInfo user={user} />
     </article>
-  )
+  );
 };
