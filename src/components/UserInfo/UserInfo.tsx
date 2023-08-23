@@ -1,12 +1,13 @@
-import users from '../../api/users';
+import { User } from '../../types/User';
 
-export const UserInfo = ({ userId }: { userId: number }) => {
-  const currentUser = users.find(user => userId === user.id);
-
-  if (currentUser) {
+interface UserProps {
+  user: User | null
+}
+export const UserInfo: React.FC<UserProps> = ({ user }) => {
+  if (user !== null) {
     return (
-      <a className="UserInfo" href={`mailto:${currentUser.email}`}>
-        {currentUser.name}
+      <a className="UserInfo" href={`mailto:${user.email}`}>
+        {user.name}
       </a>
     );
   }
