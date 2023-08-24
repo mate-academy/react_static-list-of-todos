@@ -6,15 +6,10 @@ type TodoInfoProps = {
 };
 
 export const TodoInfo : React.FC<TodoInfoProps> = ({ todo }) => {
-  // const className = cn({
-  // 'TodoInfo': true,
-  // 'TodoInfo--completed': todo.completed,
-  // })
-
   let className = 'TodoInfo';
 
   if (todo.completed) {
-    className += ' TodoInfo--completed';
+    className += 'TodoInfo--completed';
   }
 
   return (
