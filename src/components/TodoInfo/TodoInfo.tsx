@@ -8,6 +8,6 @@ export const TodoInfo = ({ todo }: { todo: Todo }) => (
   >
     <h2 className="TodoInfo__title">{todo.title}</h2>
 
-    <UserInfo user={todo.user} />
+    {todo.user && <UserInfo user={todo.user} />}
   </article>
 );
