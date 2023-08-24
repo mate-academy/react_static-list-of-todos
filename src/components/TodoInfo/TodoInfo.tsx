@@ -2,12 +2,11 @@ import React from 'react';
 import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo';
 
-// Add the required types and props
-type PPP = {
+type TodoInfoProps = {
   todo: Todo;
 };
 
-export const TodoInfo: React.FC<PPP> = ({ todo }) => (
+export const TodoInfo: React.FC<TodoInfoProps> = ({ todo }) => (
   <article className={`TodoInfo
      ${todo.completed ? 'TodoInfo--completed' : ''}`}
   >
