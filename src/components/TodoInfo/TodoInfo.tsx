@@ -9,7 +9,7 @@ export const TodoInfo : React.FC<TodoInfoProps> = ({ todo }) => {
   let className = 'TodoInfo';
 
   if (todo.completed) {
-    className += 'TodoInfo--completed';
+    className += ' TodoInfo--completed';
   }
 
   return (
