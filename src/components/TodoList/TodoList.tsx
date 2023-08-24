@@ -7,6 +7,6 @@ type TodoListProps = {
 
 export const TodoList = ({ todos }: TodoListProps) => (
   <section className="TodoList">
-    {todos.map((todo) => <TodoInfo todo={todo} />)}
+    {todos.map((todo) => <TodoInfo key={todo.id} todo={todo} />)}
   </section>
 );
