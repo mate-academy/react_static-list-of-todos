@@ -5,27 +5,17 @@ type TodoProps = {
   todo: Todo,
 };
 
-export const TodoInfo = ({ todo }: TodoProps) => (
-  <>
-    {todo.completed
-      ? (
-        <>
-          <article className="TodoInfo TodoInfo--completed">
-            <h2 className="TodoInfo__title">{todo.title}</h2>
-            {todo.user
-              ? <UserInfo user={todo.user} key={todo.userId} />
-              : null }
-          </article>
-        </>
-      ) : (
-        <>
-          <article className="TodoInfo">
-            <h2 className="TodoInfo__title">{todo.title}</h2>
-            {todo.user
-              ? <UserInfo user={todo.user} key={todo.userId} />
-              : null }
-          </article>
-        </>
-      )}
-  </>
-);
+export const TodoInfo = ({ todo }: TodoProps) => {
+  const nameClass = todo.completed ? 'TodoInfo--completed' : '';
+
+  return (
+    <>
+      <article className={`TodoInfo ${nameClass}`}>
+        <h2 className="TodoInfo__title">{todo.title}</h2>
+        {todo.user
+          ? <UserInfo user={todo.user} key={todo.userId} />
+          : null}
+      </article>
+    </>
+  );
+};
