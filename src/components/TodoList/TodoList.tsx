@@ -1,25 +1,17 @@
 // import React from 'react';
-// import { TodoInfo } from '../TodoInfo/TodoInfo';
-// import { Todo } from '../../types/Todo';
-import Todos from '../../api/todos';
-import Users from '../../api/users';
+import { Todo } from '../../types/Todo';
+import { TodoInfo } from '../TodoInfo/TodoInfo';
 
-export const TodoList = () => (
+type ToDosType = {
+  todos: Todo[]
+};
+
+export const TodoList = ({ todos }: ToDosType) => (
 
   <section className="TodoList">
-    {Todos.map(task => {
-      const name = Users.find(user => user.id === task.userId);
-
+    {todos.map(todo => {
       return (
-        <article className={task.completed
-          ? 'TodoInfo TodoInfo--completed'
-          : 'TodoInfo'}
-        >
-          <h2 className="TodoInfo__title">{task.title}</h2>
-          <a className="UserInfo" href={`mailto:${name?.email}`}>
-            {name?.name}
-          </a>
-        </article>
+        <TodoInfo todo={todo} key={todo.id} />
       );
     })}
   </section>
