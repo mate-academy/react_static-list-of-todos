@@ -7,7 +7,6 @@ type TodoListType = {
 
 export const TodoList: React.FC<TodoListType> = ({ todos }) => (
   <section className="TodoList">
-    {console.log(todos)}
     {todos.map((todo) => (
       <TodoInfo key={todo.id} todo={todo} />
     ))}
