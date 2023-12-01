@@ -14,7 +14,7 @@ export const TodoInfo: React.FC<TodoObj> = ({ todo }) => {
     <article className={className}>
       <h2 className="TodoInfo__title">{todo.title}</h2>
 
-      {todo.user ? <UserInfo userinf={todo.user} /> : null}
+      {todo.user ? <UserInfo user={todo.user} /> : null}
     </article>
   );
 };
