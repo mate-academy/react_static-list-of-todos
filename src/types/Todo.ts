@@ -7,3 +7,4 @@ export interface Todo {
   completed: boolean,
   user: User | null,
 }
+
