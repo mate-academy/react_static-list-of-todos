@@ -1,6 +1,16 @@
 // Add the required types and props
-export const TodoList: React.FC = () => (
+import React from 'react';
+import { Todo } from '../../types/Todo';
+import { TodoInfo } from '../TodoInfo';
+
+interface TodosProps {
+  todos: Todo[];
+}
+
+export const TodoList: React.FC<TodosProps> = ({ todos }) => (
   <section>
-    <TodoInfo todos={todos} />
+    {todos.map((todo) => (
+      <TodoInfo todo={todo} />
+    ))}
   </section>
 );
