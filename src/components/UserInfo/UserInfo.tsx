@@ -1,4 +1,3 @@
-// Add the required types and props
 import { User } from '../../types/User';
 
 type Props = {
