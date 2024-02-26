@@ -3,8 +3,8 @@ import { Todo } from '../../types/Todo';
 
 export const TodoInfo = ({ todo }: Props) => {
   const todoClasses = todo.completed
-    ? 'ToDoInfo ToDoInfo--completed'
-    : 'ToDoInfo';
+    ? 'TodoInfo TodoInfo--completed'
+    : 'TodoInfo';
 
   return (
     <article className={todoClasses} key={todo.id}>
