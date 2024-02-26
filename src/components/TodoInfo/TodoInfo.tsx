@@ -1,2 +1,19 @@
-// Add the required types and props
-export const TodoInfo = () => <>TodoInfo markup</>;
+import { UserInfo } from '../UserInfo/UserInfo';
+import { Todo } from '../../types/Todo';
+
+export const TodoInfo = ({ todo }: Props) => {
+  const todoClasses = todo.completed
+    ? 'ToDoInfo ToDoInfo--completed'
+    : 'ToDoInfo';
+
+  return (
+    <article className={todoClasses} key={todo.id}>
+      <h2 className="TodoInfo__title">{todo.title}</h2>
+      {todo.user && <UserInfo user={todo.user} />}
+    </article>
+  );
+};
+
+type Props = {
+  todo: Todo;
+};
