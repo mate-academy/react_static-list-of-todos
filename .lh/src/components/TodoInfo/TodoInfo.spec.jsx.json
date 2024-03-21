@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/TodoInfo/TodoInfo.spec.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1711037261707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1711037261707,
+            "name": "Commit-0",
+            "content": "/* eslint-disable max-len */\n/* eslint-disable react/jsx-filename-extension */\n\nimport React from 'react';\nimport { mount } from '@cypress/react18';\nimport { TodoInfo } from './TodoInfo';\n\ndescribe('TodoInfo', () => {\n  describe('', () => {\n    beforeEach(() => {\n      const user1 = {\n        id: 1,\n        name: 'Leanne Graham',\n        username: 'Bret',\n        email: 'Sincere@april.biz',\n      };\n\n      const todo = {\n        userId: 1,\n        id: 1,\n        title: 'Learn HTML',\n        completed: true,\n        user: user1,\n      };\n\n      mount(<TodoInfo todo={todo} />);\n    });\n\n    it('should have a correct title', () => {\n      cy.get('.TodoInfo__title').should('have.text', 'Learn HTML');\n    });\n\n    it('should add TodoInfo--completed class for a completed todo', () => {\n      cy.get('.TodoInfo').should('have.class', 'TodoInfo--completed');\n    });\n\n    it('should have UserInfo', () => {\n      cy.get('.UserInfo').should('have.text', 'Leanne Graham');\n    });\n  });\n\n  describe('', () => {\n    it('should NOT add TodoInfo--completed class for not completed todo', () => {\n      const user2 = {\n        id: 2,\n        name: 'Ervin Howell',\n        username: 'Antonette',\n        email: 'Shanna@melissa.tv',\n      };\n\n      const completedTodo = {\n        userId: 2,\n        id: 10,\n        title: 'Learn CSS',\n        completed: false,\n        user: user2,\n      };\n\n      mount(<TodoInfo todo={completedTodo} />);\n\n      cy.get('.TodoInfo').should('not.have.class', 'TodoInfo--completed');\n    });\n\n    it('should work with the other todo', () => {\n      const user3 = {\n        id: 3,\n        name: 'Clementine Bauch',\n        username: 'Samantha',\n        email: 'Nathan@yesenia.net',\n      };\n\n      const todo48 = {\n        userId: 3,\n        id: 48,\n        title: 'sit reprehenderit omnis quia',\n        completed: true,\n        user: user3,\n      };\n\n      mount(<TodoInfo todo={todo48} />);\n\n      cy.get('.TodoInfo__title').should(\n        'have.text',\n        'sit reprehenderit omnis quia',\n      );\n\n      cy.get('.TodoInfo').should('have.class', 'TodoInfo--completed');\n      cy.get('.UserInfo').should('have.text', 'Clementine Bauch');\n    });\n  });\n});\n"
+        }
+    ]
+}
