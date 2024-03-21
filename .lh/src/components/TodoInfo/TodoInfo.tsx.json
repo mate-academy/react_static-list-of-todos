@@ -1,0 +1,106 @@
+{
+    "sourceFile": "src/components/TodoInfo/TodoInfo.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 22,
+            "patches": [
+                {
+                    "date": 1711013724797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711013731709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,5 @@\n // Add the required types and props\n-export const TodoInfo = () => <>\n-re</>;\n+export const TodoInfo = () =>\n+return (\n+  \n+);\n"
+                },
+                {
+                    "date": 1711013736856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,11 @@\n // Add the required types and props\n export const TodoInfo = () =>\n-return (\n-  \n+  return (\n+  <article className=\"TodoInfo TodoInfo--completed\">\n+  <h2 className=\"TodoInfo__title\">HTML</h2>\n+\n+  <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\">\n+    Leanne Graham\n+  </a>\n+  </article>\n );\n"
+                },
+                {
+                    "date": 1711013744363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+// Add the required types and props\n+export const TodoInfo = () =>{}\n+  return (\n+    <article className=\"TodoInfo TodoInfo--completed\">\n+    <h2 className=\"TodoInfo__title\">HTML</h2>\n+\n+    <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\">\n+      Leanne Graham\n+    </a>\n+    </article>\n+);\n"
+                },
+                {
+                    "date": 1711013786886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,13 @@\n // Add the required types and props\n-export const TodoInfo = () =>{}\n+export const TodoInfo = () => {\n   return (\n     <article className=\"TodoInfo TodoInfo--completed\">\n-    <h2 className=\"TodoInfo__title\">HTML</h2>\n+      <h2 className=\"TodoInfo__title\">HTML</h2>\n \n-    <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\">\n-      Leanne Graham\n-    </a>\n+      <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\">\n+        Leanne Graham\n+        //\n+      </a>\n     </article>\n-);\n-// Add the required types and props\n-export const TodoInfo = () =>\n-  return (\n-  <article className=\"TodoInfo TodoInfo--completed\">\n-  <h2 className=\"TodoInfo__title\">HTML</h2>\n-\n-  <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\">\n-    Leanne Graham\n-  </a>\n-  </article>\n-);\n+  );\n+}\n"
+                },
+                {
+                    "date": 1711013795501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n       <h2 className=\"TodoInfo__title\">HTML</h2>\n \n       <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\">\n         Leanne Graham\n-        //\n+        {/* user.name */}\n       </a>\n     </article>\n   );\n }\n"
+                },
+                {
+                    "date": 1711013807859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+// Add the required types and props\n+export const TodoInfo = () => {\n+  return (\n+    <article className=\"TodoInfo TodoInfo--completed\">\n+      <h2 className=\"TodoInfo__title\">HTML</h2>\n+\n+      <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\" >\n+        Leanne Graham\n+        {/* user.name */}\n+      </a>\n+    </article>\n+  );\n+}\n"
+                },
+                {
+                    "date": 1711013813184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,24 +3,11 @@\n   return (\n     <article className=\"TodoInfo TodoInfo--completed\">\n       <h2 className=\"TodoInfo__title\">HTML</h2>\n \n-      <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\" >\n+      <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\" href=\"\">\n         Leanne Graham\n         {/* user.name */}\n       </a>\n     </article>\n   );\n }\n-// Add the required types and props\n-export const TodoInfo = () => {\n-  return (\n-    <article className=\"TodoInfo TodoInfo--completed\">\n-      <h2 className=\"TodoInfo__title\">HTML</h2>\n-\n-      <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\">\n-        Leanne Graham\n-        {/* user.name */}\n-      </a>\n-    </article>\n-  );\n-}\n"
+                },
+                {
+                    "date": 1711013819070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   return (\n     <article className=\"TodoInfo TodoInfo--completed\">\n       <h2 className=\"TodoInfo__title\">HTML</h2>\n \n-      <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\" href=\"\">\n+      <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\" href=\"mailto:${\">\n         Leanne Graham\n         {/* user.name */}\n       </a>\n     </article>\n"
+                },
+                {
+                    "date": 1711013825822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   return (\n     <article className=\"TodoInfo TodoInfo--completed\">\n       <h2 className=\"TodoInfo__title\">HTML</h2>\n \n-      <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\" href=\"mailto:${\">\n+      <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\" {href=\"mailto:\">\n         Leanne Graham\n         {/* user.name */}\n       </a>\n     </article>\n"
+                },
+                {
+                    "date": 1711013836082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   return (\n     <article className=\"TodoInfo TodoInfo--completed\">\n       <h2 className=\"TodoInfo__title\">HTML</h2>\n \n-      <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\" {href=\"mailto:\">\n+      <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\" {href = \"mailto:\"${}}>\n         Leanne Graham\n         {/* user.name */}\n       </a>\n     </article>\n"
+                },
+                {
+                    "date": 1711013842895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   return (\n     <article className=\"TodoInfo TodoInfo--completed\">\n       <h2 className=\"TodoInfo__title\">HTML</h2>\n \n-      <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\" {href = \"mailto:\"${}}>\n+      <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\" {href = \"mailto:\"${user}}>\n         Leanne Graham\n         {/* user.name */}\n       </a>\n     </article>\n"
+                },
+                {
+                    "date": 1711013848425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   return (\n     <article className=\"TodoInfo TodoInfo--completed\">\n       <h2 className=\"TodoInfo__title\">HTML</h2>\n \n-      <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\" {href = \"mailto:\"${user}}>\n+      <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\" {href = \"mailto:\"${user.email}}>\n         Leanne Graham\n         {/* user.name */}\n       </a>\n     </article>\n"
+                },
+                {
+                    "date": 1711013857697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   return (\n     <article className=\"TodoInfo TodoInfo--completed\">\n       <h2 className=\"TodoInfo__title\">HTML</h2>\n \n-      <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\" {href = \"mailto:\"${user.email}}>\n+      {/* <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\" {href = \"mailto:\"${user.email}}> */}\n         Leanne Graham\n         {/* user.name */}\n       </a>\n     </article>\n"
+                },
+                {
+                    "date": 1711013863173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n   return (\n     <article className=\"TodoInfo TodoInfo--completed\">\n       <h2 className=\"TodoInfo__title\">HTML</h2>\n \n-      {/* <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\" {href = \"mailto:\"${user.email}}> */}\n+      <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\">\n+      {href = \"mailto:\"${user.email}}\n         Leanne Graham\n         {/* user.name */}\n       </a>\n     </article>\n"
+                },
+                {
+                    "date": 1711013896531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n // Add the required types and props\n+\n export const TodoInfo = () => {\n   return (\n     <article className=\"TodoInfo TodoInfo--completed\">\n       <h2 className=\"TodoInfo__title\">HTML</h2>\n \n       <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\">\n-      {href = \"mailto:\"${user.email}}\n+      {/* {href = \"mailto:\"${user.email}} */}\n         Leanne Graham\n         {/* user.name */}\n       </a>\n     </article>\n"
+                },
+                {
+                    "date": 1711013902118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n // Add the required types and props\n-\n+import {href = \"mailto:\"${user.email}}\n export const TodoInfo = () => {\n   return (\n     <article className=\"TodoInfo TodoInfo--completed\">\n       <h2 className=\"TodoInfo__title\">HTML</h2>\n"
+                },
+                {
+                    "date": 1711013907660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n // Add the required types and props\n-import {href = \"mailto:\"${user.email}}\n+import { user } from \n export const TodoInfo = () => {\n   return (\n     <article className=\"TodoInfo TodoInfo--completed\">\n       <h2 className=\"TodoInfo__title\">HTML</h2>\n"
+                },
+                {
+                    "date": 1711013914343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n // Add the required types and props\n-import { user } from \n+import { user } from '../../api'\n export const TodoInfo = () => {\n   return (\n     <article className=\"TodoInfo TodoInfo--completed\">\n       <h2 className=\"TodoInfo__title\">HTML</h2>\n"
+                },
+                {
+                    "date": 1711013919967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n // Add the required types and props\n-import { user } from '../../api'\n+import { user } from '../../api/users'\n+\n export const TodoInfo = () => {\n   return (\n     <article className=\"TodoInfo TodoInfo--completed\">\n       <h2 className=\"TodoInfo__title\">HTML</h2>\n"
+                },
+                {
+                    "date": 1711013927560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n // Add the required types and props\n import { user } from '../../api/users'\n \n-export const TodoInfo = () => {\n+export const TodoInfo = ({user}) => {\n   return (\n     <article className=\"TodoInfo TodoInfo--completed\">\n       <h2 className=\"TodoInfo__title\">HTML</h2>\n \n       <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\">\n-      {/* {href = \"mailto:\"${user.email}} */}\n+      {href = \"mailto:\"${user.email}}\n         Leanne Graham\n         {/* user.name */}\n       </a>\n     </article>\n"
+                },
+                {
+                    "date": 1711013938233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n   return (\n     <article className=\"TodoInfo TodoInfo--completed\">\n       <h2 className=\"TodoInfo__title\">HTML</h2>\n \n-      <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\">\n-      \n+      <a className=\"UserInfo\" {href = \"mailto:\"${user.email}}>\n+\n         Leanne Graham\n         {/* user.name */}\n       </a>\n     </article>\n"
+                },
+                {
+                    "date": 1711013952066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   return (\n     <article className=\"TodoInfo TodoInfo--completed\">\n       <h2 className=\"TodoInfo__title\">HTML</h2>\n \n-      <a className=\"UserInfo\" href = `mailto:\"${user.email}``>\n+      <a className=\"UserInfo\" href = `mailto:${user.email}``>\n \n         Leanne Graham\n         {/* user.name */}\n       </a>\n"
+                }
+            ],
+            "date": 1711013724797,
+            "name": "Commit-0",
+            "content": "// Add the required types and props\nexport const TodoInfo = () => <>\nre</>;\n"
+        }
+    ]
+}

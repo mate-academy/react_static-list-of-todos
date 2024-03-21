@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/App.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1710955516386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1710955523933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \n export const App: React.FC = () => (\n   <div className=\"App\">\n     <h1 className=\"App__title\">Static list of todos</h1>\n-    <TodoList \n+    <TodoList todos\n     <section className=\"TodoList\">\n       <article className=\"TodoInfo TodoInfo--completed\">\n         <h2 className=\"TodoInfo__title\">HTML</h2>\n \n"
+                },
+                {
+                    "date": 1710955529532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,60 @@\n+import React from 'react';\n+import './App.scss';\n+\n+import todosFromServer from './api/todos';\n+import usersFromServer from './api/users';\n+\n+import { User } from './types/User';\n+import { Todo } from './types/Todo';\n+\n+function getUser(userId: number): User | null {\n+  const foundUser = usersFromServer.find(user => user.id === userId);\n+\n+  // if there is no user with a given userId\n+  return foundUser || null;\n+}\n+\n+export const todos: Todo[] = todosFromServer.map(todo => ({\n+  ...todo,\n+  user: getUser(todo.userId),\n+}));\n+\n+export const App: React.FC = () => (\n+  <div className=\"App\">\n+    <h1 className=\"App__title\">Static list of todos</h1>\n+    <TodoList todos={todos /}\n+    <section className=\"TodoList\">\n+      <article className=\"TodoInfo TodoInfo--completed\">\n+        <h2 className=\"TodoInfo__title\">HTML</h2>\n+\n+        <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\">\n+          Leanne Graham\n+        </a>\n+      </article>\n+\n+      <article className=\"TodoInfo TodoInfo--completed\">\n+        <h2 className=\"TodoInfo__title\">CSS</h2>\n+\n+        <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\">\n+          Leanne Graham\n+        </a>\n+      </article>\n+\n+      <article className=\"TodoInfo TodoInfo--completed\">\n+        <h2 className=\"TodoInfo__title\">JS</h2>\n+\n+        <a className=\"UserInfo\" href=\"mailto:Shanna@melissa.tv\">\n+          Ervin Howell\n+        </a>\n+      </article>\n+\n+      <article className=\"TodoInfo\">\n+        <h2 className=\"TodoInfo__title\">React</h2>\n+\n+        <a className=\"UserInfo\" href=\"mailto:Nathan@yesenia.net\">\n+          Clementine Bauch\n+        </a>\n+      </article>\n+    </section>\n+  </div>\n+);\n"
+                }
+            ],
+            "date": 1710955516386,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport './App.scss';\n\nimport todosFromServer from './api/todos';\nimport usersFromServer from './api/users';\n\nimport { User } from './types/User';\nimport { Todo } from './types/Todo';\n\nfunction getUser(userId: number): User | null {\n  const foundUser = usersFromServer.find(user => user.id === userId);\n\n  // if there is no user with a given userId\n  return foundUser || null;\n}\n\nexport const todos: Todo[] = todosFromServer.map(todo => ({\n  ...todo,\n  user: getUser(todo.userId),\n}));\n\nexport const App: React.FC = () => (\n  <div className=\"App\">\n    <h1 className=\"App__title\">Static list of todos</h1>\n    \n    <section className=\"TodoList\">\n      <article className=\"TodoInfo TodoInfo--completed\">\n        <h2 className=\"TodoInfo__title\">HTML</h2>\n\n        <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\">\n          Leanne Graham\n        </a>\n      </article>\n\n      <article className=\"TodoInfo TodoInfo--completed\">\n        <h2 className=\"TodoInfo__title\">CSS</h2>\n\n        <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\">\n          Leanne Graham\n        </a>\n      </article>\n\n      <article className=\"TodoInfo TodoInfo--completed\">\n        <h2 className=\"TodoInfo__title\">JS</h2>\n\n        <a className=\"UserInfo\" href=\"mailto:Shanna@melissa.tv\">\n          Ervin Howell\n        </a>\n      </article>\n\n      <article className=\"TodoInfo\">\n        <h2 className=\"TodoInfo__title\">React</h2>\n\n        <a className=\"UserInfo\" href=\"mailto:Nathan@yesenia.net\">\n          Clementine Bauch\n        </a>\n      </article>\n    </section>\n  </div>\n);\n"
+        }
+    ]
+}
