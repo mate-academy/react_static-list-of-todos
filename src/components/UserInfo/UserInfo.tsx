@@ -1,13 +1,11 @@
-// Add the required types and props
 import React from 'react';
-import usersFromServer from '../../api/users';
+import { User } from '../../types/User';
 
-export const UserInfo: React.FC<{ userId: number }> = ({ userId }) => {
-  const user = usersFromServer.find((person) => person.id === userId);
-
-  return (
-    <a className="UserInfo" href={user?.email}>
-      {user?.name}
-    </a>
-  );
-};
+interface UserInfoProps {
+  user: User;
+}
+export const UserInfo: React.FC<UserInfoProps> = ({ user }) => (
+  <a className="UserInfo" href={`mailto:${user.email}`}>
+    {user.name}
+  </a>
+);

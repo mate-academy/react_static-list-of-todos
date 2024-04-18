@@ -3,21 +3,16 @@ import React from 'react';
 import { Todo } from '../../types/Todo';
 import { UserInfo } from '../UserInfo';
 
-interface TodoProps {
+interface TodoInfoProps {
   todo: Todo;
 }
 
-export const TodoInfo: React.FC<TodoProps> = ({ todo }) => {
-  const {completed, id, userId, title} = todo;
-  return (
-  <>
-    <article
-      className={`TodoInfo ${completed ? 'TodoInfo--completed' : ''}`}
-      key={id}
-    >
-      <h2 className="TodoInfo__title">{title}</h2>
-      <UserInfo userId={userId} />
-    </article>
-  </>
-  )
-};
+export const TodoInfo: React.FC<TodoInfoProps> = ({ todo }) => (
+  <article
+    className={`TodoInfo ${todo.completed ? 'TodoInfo--completed' : ''}`}
+    key={todo.title}
+  >
+    <h2 className="TodoInfo__title">{todo.title}</h2>
+    {todo.user && <UserInfo user={todo.user} />}
+  </article>
+);
