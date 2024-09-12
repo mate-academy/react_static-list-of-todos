@@ -1,6 +1,6 @@
 import React from 'react';
 import { Todo } from '../../types/Todo';
-// import cn from 'classnames';
+import cn from 'classnames';
 
 interface TodoListInterface {
   todoItems: Todo[];
@@ -10,7 +10,10 @@ export const TodoList: React.FC<TodoListInterface> = ({ todoItems }) => {
   return (
     <section className="TodoList">
       {todoItems.map(todo => {
-        const className = `TodoInfo ${todo.completed ? 'TodoInfo--completed' : ''}`;
+        const className = cn({
+          TodoInfo: true,
+          'TodoInfo--completed': todo.completed,
+        });
 
         return (
           <article key={todo.id} className={className}>
