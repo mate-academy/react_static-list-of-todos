@@ -6,6 +6,7 @@ import usersFromServer from './api/users';
 
 import { User } from './types/User';
 import { Todo } from './types/Todo';
+import { TodoList } from './components/TodoList';
 
 function getUser(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
@@ -18,30 +19,6 @@ export const todos: Todo[] = todosFromServer.map(todo => ({
   ...todo,
   user: getUser(todo.userId),
 }));
-
-interface TodoListInterface {
-  todoItems: Todo[];
-}
-
-export const TodoList: React.FC<TodoListInterface> = ({ todoItems }) => {
-  return (
-    <section className="TodoList">
-      {todoItems.map(todo => (
-        <article
-          key={todo.id}
-          className={
-            todo.completed ? 'TodoInfo TodoInfo--completed' : 'TodoInfo'
-          }
-        >
-          <h2 className="TodoInfo__title">{todo.title}</h2>
-          <a className="UserInfo" href={`mailto:${todo.user?.email}`}>
-            {todo.user?.name}
-          </a>
-        </article>
-      ))}
-    </section>
-  );
-};
 
 export const App: React.FC = () => (
   <div className="App">
