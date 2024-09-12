@@ -19,12 +19,14 @@ export const todos: Todo[] = todosFromServer.map(todo => ({
   user: getUser(todo.userId),
 }));
 
-export const App: React.FC = () => (
-  <div className="App">
-    <h1 className="App__title">Static list of todos</h1>
+interface TodoListInterface {
+  todoItems: Todo[];
+}
 
+export const TodoList: React.FC<TodoListInterface> = ({ todoItems }) => {
+  return (
     <section className="TodoList">
-      {todos.map(todo => (
+      {todoItems.map(todo => (
         <article
           key={todo.id}
           className={
@@ -38,5 +40,13 @@ export const App: React.FC = () => (
         </article>
       ))}
     </section>
+  );
+};
+
+export const App: React.FC = () => (
+  <div className="App">
+    <h1 className="App__title">Static list of todos</h1>
+
+    <TodoList todoItems={todos} />
   </div>
 );
