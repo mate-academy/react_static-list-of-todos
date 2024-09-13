@@ -3,27 +3,16 @@ import { Todo } from '../../types/Todo';
 import cn from 'classnames';
 import { UserInfo } from '../UserInfo';
 
-// Add the required types and props
-interface TodoInfoInterface {
-  todoInfoItems: Todo[];
-}
+export const TodoInfo: React.FC<{ todo: Todo }> = ({ todo }) => {
+  const className = cn({
+    TodoInfo: true,
+    'TodoInfo--completed': todo.completed,
+  });
 
-export const TodoInfo: React.FC<TodoInfoInterface> = ({ todoInfoItems }) => {
   return (
-    <>
-      {todoInfoItems.map(todo => {
-        const className = cn({
-          TodoInfo: true,
-          'TodoInfo--completed': todo.completed,
-        });
-
-        return (
-          <article key={todo.id} className={className}>
-            <h2 className="TodoInfo__title">{todo.title}</h2>
-            <UserInfo todo={todo} />
-          </article>
-        );
-      })}
-    </>
+    <article key={todo.id} className={className}>
+      <h2 className="TodoInfo__title">{todo.title}</h2>
+      {todo.user && <UserInfo user={todo.user} />}
+    </article>
   );
 };
