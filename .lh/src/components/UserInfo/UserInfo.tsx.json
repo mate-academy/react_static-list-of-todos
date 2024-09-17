@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/components/UserInfo/UserInfo.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1711017120728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711017127329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,8 @@\n // Add the required types and props\n export const UserInfo = () => {\n-return}\n+  return (\n+    <a className=\"UserInfo\" href={todo.user ? `mailto:${todo.user.email}` : '#'}>\n+\n+      {todo.user ? todo.user.name : null}\n+    ,\n+)}\n"
+                },
+                {
+                    "date": 1711017133452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,7 @@\n   return (\n     <a className=\"UserInfo\" href={todo.user ? `mailto:${todo.user.email}` : '#'}>\n \n       {todo.user ? todo.user.name : null}\n-    ,\n-)}\n+    </a>\n+  )\n+}\n"
+                },
+                {
+                    "date": 1711017714396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n // Add the required types and props\n-export const UserInfo = () => {\n+export const UserInfo: React.FC<Props> = () => {\n   return (\n     <a className=\"UserInfo\" href={todo.user ? `mailto:${todo.user.email}` : '#'}>\n \n-      {todo.user ? todo.user.name : null}\n+    {todo.user ? todo.user.name : null}\n     </a>\n   )\n }\n"
+                },
+                {
+                    "date": 1711017725452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n // Add the required types and props\n+type Props = {\n+  todo: Todo;\n+}\n \n-\n export const UserInfo: React.FC<Props> = () => {\n   return (\n     <a className=\"UserInfo\" href={todo.user ? `mailto:${todo.user.email}` : '#'}>\n \n"
+                },
+                {
+                    "date": 1711017732940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n // Add the required types and props\n+\n type Props = {\n   todo: Todo;\n }\n \n"
+                }
+            ],
+            "date": 1711017120728,
+            "name": "Commit-0",
+            "content": "// Add the required types and props\nexport const UserInfo = () => {\nreturn}\n"
+        }
+    ]
+}
