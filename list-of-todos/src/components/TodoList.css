@@ -1,0 +1,11 @@
+article {
+  text-align: center;
+  border: 1px solid grey;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+  background: white;
+}
+
+span {
+  text-decoration: underline;
+}
