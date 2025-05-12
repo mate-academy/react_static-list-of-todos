@@ -1,9 +1,15 @@
 {
   "extends": "@mate-academy/students-ts-config",
-  "include": [
-    "src"
-  ],
+  "include": ["src"],
   "compilerOptions": {
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "strict": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es5",
+    "types": ["react"],
+    "allowSyntheticDefaultImports": true,
     "sourceMap": false,
     "types": ["node", "cypress"]
   }
