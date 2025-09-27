@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 
 export default [
+  // eslint-disable-next-line prettier/prettier
   {
     userId: 1,
     id: 1,
