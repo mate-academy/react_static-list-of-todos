@@ -6,7 +6,9 @@ interface UserElement {
 }
 
 export const UserInfo = ({ user }: UserElement) => (
-  <>
-    <p>{user.name}</p>
-  </>
+  <div className="UserInfo">
+    <a href={`mailto:${user.email}`}>
+      {user.name}
+    </a>
+  </div>
 );
